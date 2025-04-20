@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import NavBar from '@/components/NavBar';
@@ -65,7 +64,7 @@ const BlogPost = () => {
       id: '2',
       title: 'Best Local Restaurants for Authentic Qatari Cuisine',
       excerpt: 'Taste the traditional flavors of Qatar at these local favorite dining spots.',
-      imageUrl: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=2574&auto=format&fit=crop',
+      imageUrl: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=800&auto=format&fit=crop',
       category: 'Food',
       date: 'April 10, 2025',
       slug: 'authentic-qatari-cuisine',
@@ -74,7 +73,7 @@ const BlogPost = () => {
       id: '3',
       title: 'Upcoming Cultural Events in Doha This Summer',
       excerpt: 'Mark your calendar for these exciting cultural festivals and events.',
-      imageUrl: 'https://images.unsplash.com/photo-1526285759704-71d51dd482ab?q=80&w=2670&auto=format&fit=crop',
+      imageUrl: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800&auto=format&fit=crop',
       category: 'Events',
       date: 'April 5, 2025',
       slug: 'summer-cultural-events',
@@ -83,7 +82,7 @@ const BlogPost = () => {
       id: '4',
       title: 'A Day at the Museum of Islamic Art',
       excerpt: 'Explore one of Doha\'s most iconic architectural landmarks and its world-class collections.',
-      imageUrl: 'https://images.unsplash.com/photo-1558227108-af6eec1a0bb4?q=80&w=2574&auto=format&fit=crop',
+      imageUrl: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?q=80&w=800&auto=format&fit=crop',
       category: 'Attractions',
       date: 'April 2, 2025',
       slug: 'museum-islamic-art',
