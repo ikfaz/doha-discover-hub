@@ -1,10 +1,11 @@
-
 import React, { useState } from 'react';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 import Newsletter from '@/components/Newsletter';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { Tabs, TabsContent } from "@/components/ui/tabs";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
+import GalleryHeader from '@/components/GalleryHeader';
+import GalleryTabs from '@/components/GalleryTabs';
 
 const Gallery = () => {
   const [currentCategory, setCurrentCategory] = useState('all');
@@ -103,73 +104,20 @@ const Gallery = () => {
     ? allPhotos 
     : allPhotos.filter(photo => photo.category === currentCategory);
 
-  const handleOpenLightbox = (url: string) => {
-    setSelectedImage(url);
-  };
-
   return (
     <div className="min-h-screen flex flex-col">
       <NavBar />
-      
-      {/* Header */}
-      <section className="bg-qatar-maroon text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold font-heading mb-6">Photo Gallery</h1>
-          <p className="text-xl max-w-3xl mx-auto">
-            Explore the beauty and diversity of Doha through our collection of photographs
-          </p>
-        </div>
-      </section>
+      <GalleryHeader />
       
       {/* Gallery */}
       <section className="py-16">
         <div className="content-container">
           {/* Category Tabs */}
           <Tabs defaultValue="all" className="mb-10">
-            <TabsList className="w-full justify-start mb-6 bg-qatar-sand/50">
-              <TabsTrigger 
-                value="all" 
-                onClick={() => setCurrentCategory('all')}
-                className="data-[state=active]:bg-qatar-maroon data-[state=active]:text-white"
-              >
-                All Photos
-              </TabsTrigger>
-              <TabsTrigger 
-                value="landmarks" 
-                onClick={() => setCurrentCategory('landmarks')}
-                className="data-[state=active]:bg-qatar-maroon data-[state=active]:text-white"
-              >
-                Landmarks
-              </TabsTrigger>
-              <TabsTrigger 
-                value="cityscapes" 
-                onClick={() => setCurrentCategory('cityscapes')}
-                className="data-[state=active]:bg-qatar-maroon data-[state=active]:text-white"
-              >
-                Cityscapes
-              </TabsTrigger>
-              <TabsTrigger 
-                value="culture" 
-                onClick={() => setCurrentCategory('culture')}
-                className="data-[state=active]:bg-qatar-maroon data-[state=active]:text-white"
-              >
-                Culture
-              </TabsTrigger>
-              <TabsTrigger 
-                value="experiences" 
-                onClick={() => setCurrentCategory('experiences')}
-                className="data-[state=active]:bg-qatar-maroon data-[state=active]:text-white"
-              >
-                Experiences
-              </TabsTrigger>
-              <TabsTrigger 
-                value="food" 
-                onClick={() => setCurrentCategory('food')}
-                className="data-[state=active]:bg-qatar-maroon data-[state=active]:text-white"
-              >
-                Food
-              </TabsTrigger>
-            </TabsList>
+            <GalleryTabs 
+              currentCategory={currentCategory}
+              setCurrentCategory={setCurrentCategory}
+            />
             
             {/* Photo Grid */}
             <TabsContent value={currentCategory} className="mt-0">
@@ -177,17 +125,17 @@ const Gallery = () => {
                 {photos.map((photo) => (
                   <div 
                     key={photo.id} 
-                    className="relative group overflow-hidden rounded-lg cursor-pointer"
-                    onClick={() => handleOpenLightbox(photo.url)}
+                    className="relative group overflow-hidden rounded-lg cursor-pointer transform transition-all duration-300 hover:scale-105"
+                    onClick={() => setSelectedImage(photo.url)}
                   >
                     <img
                       src={photo.url}
                       alt={photo.alt}
-                      className="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-110"
+                      className="w-full h-56 object-cover"
                     />
-                    <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-end transition-opacity duration-300">
-                      <div className="p-4 text-white">
-                        <p>{photo.caption}</p>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <div className="absolute bottom-0 p-4 text-white">
+                        <p className="text-sm font-medium">{photo.caption}</p>
                       </div>
                     </div>
                   </div>
