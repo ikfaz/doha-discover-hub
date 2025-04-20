@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -10,6 +9,7 @@ import BlogCard from '@/components/BlogCard';
 import PhotoGallery from '@/components/PhotoGallery';
 import Newsletter from '@/components/Newsletter';
 import { Diamond, Crown, Trophy } from 'lucide-react';
+import YouTubeVideoGrid from '@/components/YouTubeVideoGrid';
 
 const Index = () => {
   // Mock data
@@ -67,6 +67,19 @@ const Index = () => {
       url: 'https://images.unsplash.com/photo-1609924206923-4f36e22c94e4?q=80&w=2574&auto=format&fit=crop',
       alt: 'Desert Safari',
       caption: 'Desert Safari Experience',
+    },
+  ];
+
+  const recentVideos = [
+    {
+      id: 'NJaD4HZOGG0',
+      title: 'Exploring Doha\'s Cultural Districts',
+      description: 'Join me as I explore the rich cultural heritage and modern attractions in Doha\'s most vibrant neighborhoods.',
+    },
+    {
+      id: 'NJaD4HZOGG0',
+      title: 'Best Street Food in Doha',
+      description: 'Discover the most delicious street food options in Qatar\'s capital city.',
     },
   ];
 
@@ -133,7 +146,7 @@ const Index = () => {
       {/* Featured Video Section */}
       <section className="bg-gradient-to-b from-gray-50 to-white py-16">
         <div className="content-container">
-          <h2 className="section-title">Latest Video</h2>
+          <h2 className="section-title">Latest Videos</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div className="lg:col-span-2">
               <div className="rounded-2xl overflow-hidden shadow-2xl">
@@ -158,6 +171,12 @@ const Index = () => {
                 Subscribe on YouTube
               </Button>
             </div>
+          </div>
+
+          {/* More Recent Videos */}
+          <div className="mt-12">
+            <h3 className="text-2xl font-bold mb-6 text-qatar-maroon">More Recent Videos</h3>
+            <YouTubeVideoGrid videos={recentVideos} />
           </div>
         </div>
       </section>
