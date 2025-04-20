@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
@@ -11,7 +12,7 @@ const Gallery = () => {
   const [currentCategory, setCurrentCategory] = useState('all');
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   
-  // Mock gallery data
+  // Gallery data with categorized photos
   const allPhotos = [
     {
       id: '1',
@@ -67,7 +68,7 @@ const Gallery = () => {
       url: 'https://images.unsplash.com/photo-1526285759704-71d51dd482ab?q=80&w=2670&auto=format&fit=crop',
       alt: 'Cultural Festival',
       caption: 'Celebration of culture at a local festival',
-      category: 'events',
+      category: 'culture',
     },
     {
       id: '9',
@@ -88,13 +89,41 @@ const Gallery = () => {
       url: 'https://images.unsplash.com/photo-1528698827591-e19ccd7bc23d?q=80&w=2576&auto=format&fit=crop',
       alt: 'Shopping Mall',
       caption: 'World-class shopping experience in Doha',
-      category: 'lifestyle',
+      category: 'experiences',
     },
     {
       id: '12',
       url: 'https://images.unsplash.com/photo-1599946347371-68eb71b16afc?q=80&w=2670&auto=format&fit=crop',
       alt: 'National Museum of Qatar',
       caption: 'The stunning National Museum of Qatar',
+      category: 'landmarks',
+    },
+    {
+      id: '13',
+      url: 'https://images.unsplash.com/photo-1576485290814-1c72aa4bbb8e?q=80&w=2574&auto=format&fit=crop',
+      alt: 'Traditional Coffee Service',
+      caption: 'Arabic coffee service with dates - a symbol of Qatari hospitality',
+      category: 'culture',
+    },
+    {
+      id: '14',
+      url: 'https://images.unsplash.com/photo-1548794397-ebc0aa4a3275?q=80&w=2574&auto=format&fit=crop',
+      alt: 'Modern Architecture',
+      caption: 'Contemporary architectural designs in Doha',
+      category: 'cityscapes',
+    },
+    {
+      id: '15',
+      url: 'https://images.unsplash.com/photo-1551109359-8263cb477fde?q=80&w=2574&auto=format&fit=crop',
+      alt: 'Traditional Market',
+      caption: 'Colorful spices at the local market',
+      category: 'food',
+    },
+    {
+      id: '16',
+      url: 'https://images.unsplash.com/photo-1519885277449-12e839432506?q=80&w=2574&auto=format&fit=crop',
+      alt: 'Doha Port',
+      caption: 'Traditional dhows at Doha\'s historic port',
       category: 'landmarks',
     },
   ];
@@ -179,3 +208,4 @@ const Gallery = () => {
 };
 
 export default Gallery;
+
