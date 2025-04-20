@@ -9,16 +9,19 @@ import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Search } from 'lucide-react';
+import { Skeleton } from '@/components/ui/skeleton';
+import { Card, CardContent } from '@/components/ui/card';
 
 const Blog = () => {
   const [searchQuery, setSearchQuery] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
   
   const allPosts = [
     {
       id: '1',
       title: 'Top 10 Must-Visit Attractions in Doha',
       excerpt: 'Discover the most spectacular sights and experiences in Qatar\'s vibrant capital city.',
-      imageUrl: 'https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=800&auto=format&fit=crop',
+      imageUrl: 'https://images.unsplash.com/photo-1510382291698-79dd5a410d6e?w=800&auto=format&fit=crop',
       category: 'Attractions',
       date: 'April 15, 2025',
       slug: 'top-attractions-doha',
@@ -27,7 +30,7 @@ const Blog = () => {
       id: '2',
       title: 'Best Local Restaurants for Authentic Qatari Cuisine',
       excerpt: 'Taste the traditional flavors of Qatar at these local favorite dining spots.',
-      imageUrl: 'https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=800&auto=format&fit=crop',
+      imageUrl: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&auto=format&fit=crop',
       category: 'Food',
       date: 'April 10, 2025',
       slug: 'authentic-qatari-cuisine',
@@ -156,6 +159,17 @@ const Blog = () => {
     post.excerpt.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
+  // Select a featured post - using the desert adventure post
+  const featuredPost = allPosts.find(post => post.id === '8') || {
+    id: '8',
+    title: 'Desert Adventures: Exploring the Inland Sea',
+    excerpt: 'Journey to Qatar\'s spectacular natural wonder for an unforgettable desert experience.',
+    imageUrl: 'https://images.unsplash.com/photo-1528702748617-c64d49f918af?w=800&auto=format&fit=crop',
+    category: 'Adventures',
+    date: 'March 15, 2025',
+    slug: 'desert-adventures',
+  };
+
   const categories = [
     { name: 'Attractions', count: allPosts.filter(post => post.category === 'Attractions').length },
     { name: 'Food', count: allPosts.filter(post => post.category === 'Food').length },
@@ -236,40 +250,56 @@ const Blog = () => {
                 </div>
               </div>
               
-              <div className="bg-white shadow-md rounded-lg p-6 mb-8">
-                <h3 className="text-xl font-bold mb-4 text-qatar-maroon">Featured Post</h3>
-                <div className="space-y-4">
-                  <img 
-                    src="https://images.unsplash.com/photo-1592568787542-43e11a310fed?q=80&w=2574&auto=format&fit=crop" 
-                    alt="Featured Post" 
-                    className="rounded-md object-cover w-full h-40"
-                  />
-                  <h4 className="font-bold">Desert Adventure: Experiencing the Inland Sea</h4>
-                  <p className="text-sm text-gray-600">
-                    Journey to Qatar's spectacular natural wonder for an unforgettable desert experience.
-                  </p>
-                  <Link 
-                    to="/blog/desert-adventure" 
-                    className="text-qatar-maroon font-medium hover:text-qatar-gold transition-colors inline-flex items-center"
-                  >
-                    Read More
-                    <svg
-                      className="ml-1 w-4 h-4"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M9 5l7 7-7 7"
-                      ></path>
-                    </svg>
-                  </Link>
+              <Card className="shadow-md overflow-hidden mb-8">
+                <div className="p-6">
+                  <h3 className="text-xl font-bold mb-4 text-qatar-maroon">Featured Post</h3>
                 </div>
-              </div>
+                {isLoading ? (
+                  <div className="px-6 pb-6 space-y-4">
+                    <Skeleton className="w-full h-40" />
+                    <Skeleton className="w-3/4 h-4" />
+                    <Skeleton className="w-full h-16" />
+                    <Skeleton className="w-1/4 h-4" />
+                  </div>
+                ) : (
+                  <CardContent className="pt-0 space-y-4">
+                    <div className="aspect-video relative overflow-hidden rounded-md">
+                      <img 
+                        src={featuredPost.imageUrl} 
+                        alt={featuredPost.title} 
+                        className="object-cover w-full h-full transform hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                    <Badge className="bg-qatar-gold/10 text-qatar-gold hover:bg-qatar-gold/20">
+                      {featuredPost.category}
+                    </Badge>
+                    <h4 className="font-bold text-lg text-qatar-maroon">{featuredPost.title}</h4>
+                    <p className="text-sm text-gray-600">
+                      {featuredPost.excerpt}
+                    </p>
+                    <Link 
+                      to={`/blog/${featuredPost.slug}`} 
+                      className="text-qatar-maroon font-medium hover:text-qatar-gold transition-colors inline-flex items-center"
+                    >
+                      Read More
+                      <svg
+                        className="ml-1 w-4 h-4"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M9 5l7 7-7 7"
+                        ></path>
+                      </svg>
+                    </Link>
+                  </CardContent>
+                )}
+              </Card>
               
               <div className="bg-white shadow-md rounded-lg p-6">
                 <h3 className="text-xl font-bold mb-4 text-qatar-maroon">Follow Us</h3>
@@ -299,3 +329,4 @@ const Blog = () => {
 };
 
 export default Blog;
+
