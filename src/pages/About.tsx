@@ -1,3 +1,4 @@
+
 import React from 'react';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
@@ -6,6 +7,10 @@ import { Button } from '@/components/ui/button';
 import { Mail, Youtube } from 'lucide-react';
 
 const About = () => {
+  const handleContactClick = () => {
+    window.location.href = 'mailto:info@experiencedoha.com';
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
       <NavBar />
@@ -53,7 +58,11 @@ const About = () => {
                   <Youtube className="mr-2 h-4 w-4" />
                   YouTube Channel
                 </Button>
-                <Button variant="outline" className="border-qatar-maroon text-qatar-maroon hover:bg-qatar-maroon/10">
+                <Button 
+                  variant="outline" 
+                  className="border-qatar-maroon text-qatar-maroon hover:bg-qatar-maroon/10"
+                  onClick={handleContactClick}
+                >
                   <Mail className="mr-2 h-4 w-4" />
                   Contact Me
                 </Button>
