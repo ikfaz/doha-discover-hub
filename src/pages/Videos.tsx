@@ -1,10 +1,11 @@
+
 import React, { useState } from 'react';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 import Newsletter from '@/components/Newsletter';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from '@/components/ui/button';
-import { Youtube } from 'lucide-react';
+import { Youtube, ExternalLink } from 'lucide-react';
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/components/ui/use-toast";
 import { useYoutubeVideos } from '@/hooks/useYoutubeVideos';
@@ -12,6 +13,7 @@ import { useYoutubeVideos } from '@/hooks/useYoutubeVideos';
 const Videos = () => {
   const [currentCategory, setCurrentCategory] = useState('all');
   const [apiKey, setApiKey] = useState('');
+  const [loadedVideos, setLoadedVideos] = useState<string[]>([]);
   const { toast } = useToast();
   const { data: videos = [], isLoading, isError } = useYoutubeVideos();
 
@@ -28,6 +30,12 @@ const Videos = () => {
         title: "API Key Saved",
         description: "Your YouTube API key has been saved.",
       });
+    }
+  };
+
+  const handleVideoClick = (videoId: string) => {
+    if (!loadedVideos.includes(videoId)) {
+      setLoadedVideos(prev => [...prev, videoId]);
     }
   };
 
@@ -145,14 +153,33 @@ const Videos = () => {
                   {filteredVideos.map(video => (
                     <div key={video.videoId} className="bg-white rounded-lg shadow-md overflow-hidden">
                       <div className="relative pb-[56.25%] h-0">
-                        <iframe
-                          className="absolute top-0 left-0 w-full h-full"
-                          src={`https://www.youtube.com/embed/${video.videoId}`}
-                          title={video.title}
-                          frameBorder="0"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowFullScreen
-                        ></iframe>
+                        {loadedVideos.includes(video.videoId) ? (
+                          <iframe
+                            className="absolute top-0 left-0 w-full h-full"
+                            src={`https://www.youtube.com/embed/${video.videoId}?rel=0`}
+                            title={video.title}
+                            frameBorder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                            loading="lazy"
+                          ></iframe>
+                        ) : (
+                          <div 
+                            className="absolute top-0 left-0 w-full h-full bg-black cursor-pointer group"
+                            onClick={() => handleVideoClick(video.videoId)}
+                          >
+                            <img 
+                              src={video.thumbnailUrl} 
+                              alt={video.title}
+                              className="w-full h-full object-cover opacity-80 group-hover:opacity-60 transition-opacity"
+                            />
+                            <div className="absolute inset-0 flex items-center justify-center">
+                              <div className="bg-qatar-maroon/80 p-3 rounded-full group-hover:scale-110 transition-transform">
+                                <Youtube className="h-10 w-10 text-white" />
+                              </div>
+                            </div>
+                          </div>
+                        )}
                       </div>
                       <div className="p-6">
                         <h3 className="text-xl font-bold mb-2 text-qatar-maroon">{video.title}</h3>
@@ -160,6 +187,17 @@ const Videos = () => {
                         <div className="flex justify-between items-center text-sm text-gray-500">
                           <span>{video.date}</span>
                           <span className="capitalize">{video.category.replace('-', ' ')}</span>
+                        </div>
+                        <div className="mt-4">
+                          <Button 
+                            variant="outline" 
+                            size="sm" 
+                            className="w-full"
+                            onClick={() => window.open(`https://www.youtube.com/watch?v=${video.videoId}`, '_blank')}
+                          >
+                            <ExternalLink className="mr-2 h-4 w-4" />
+                            Watch on YouTube
+                          </Button>
                         </div>
                       </div>
                     </div>
@@ -192,6 +230,7 @@ const Videos = () => {
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
+                  loading="lazy"
                 ></iframe>
               </div>
               <div>

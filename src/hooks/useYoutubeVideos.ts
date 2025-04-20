@@ -8,6 +8,7 @@ interface YouTubeVideo {
   description: string;
   date: string;
   category: string;
+  thumbnailUrl: string; // Add thumbnail URL
 }
 
 // Sample data to use when API is not available
@@ -17,35 +18,40 @@ const mockVideos: YouTubeVideo[] = [
     title: 'Exploring Doha\'s Cultural Districts',
     description: 'Join us as we explore the rich cultural heritage and modern attractions in Doha\'s most vibrant neighborhoods.',
     date: 'April 15, 2025',
-    category: 'attractions'
+    category: 'attractions',
+    thumbnailUrl: 'https://i.ytimg.com/vi/NJaD4HZOGG0/hqdefault.jpg'
   },
   {
     videoId: 'NJaD4HZOGG0',
     title: 'Best Street Food in Doha',
     description: 'Discover the most delicious street food options in Qatar\'s capital city.',
     date: 'April 10, 2025',
-    category: 'food'
+    category: 'food',
+    thumbnailUrl: 'https://i.ytimg.com/vi/NJaD4HZOGG0/hqdefault.jpg'
   },
   {
     videoId: 'NJaD4HZOGG0',
     title: 'Qatar Cultural Festival 2025',
     description: 'Highlights from the annual cultural festival showcasing Qatar\'s rich traditions.',
     date: 'April 5, 2025',
-    category: 'events'
+    category: 'events',
+    thumbnailUrl: 'https://i.ytimg.com/vi/NJaD4HZOGG0/hqdefault.jpg'
   },
   {
     videoId: 'NJaD4HZOGG0',
     title: 'Living in Doha: An Expat\'s Guide',
     description: 'Essential tips for expatriates living in or moving to Doha, Qatar.',
     date: 'March 25, 2025',
-    category: 'expat-tips'
+    category: 'expat-tips',
+    thumbnailUrl: 'https://i.ytimg.com/vi/NJaD4HZOGG0/hqdefault.jpg'
   },
   {
     videoId: 'NJaD4HZOGG0',
     title: 'Luxury Shopping in Doha',
     description: 'Tour the most exclusive shopping destinations in Qatar\'s cosmopolitan capital.',
     date: 'March 15, 2025',
-    category: 'lifestyle'
+    category: 'lifestyle',
+    thumbnailUrl: 'https://i.ytimg.com/vi/NJaD4HZOGG0/hqdefault.jpg'
   }
 ];
 
@@ -119,7 +125,8 @@ const fetchYouTubeVideos = async (): Promise<YouTubeVideo[]> => {
           month: 'long',
           day: 'numeric'
         }),
-        category: category
+        category: category,
+        thumbnailUrl: item.snippet.thumbnails.high?.url || item.snippet.thumbnails.medium?.url || item.snippet.thumbnails.default?.url
       };
     });
   } catch (error) {
