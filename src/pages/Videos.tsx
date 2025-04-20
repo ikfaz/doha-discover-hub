@@ -81,7 +81,7 @@ const Videos = () => {
           <div className="mt-8">
             <Button 
               className="bg-qatar-gold hover:bg-qatar-gold/90 text-qatar-maroon font-bold"
-              onClick={() => window.open('https://www.youtube.com/channel/YourChannelID', '_blank')}
+              onClick={() => window.open('https://www.youtube.com/channel/UC-wTo4Yzj8H4KHid3QoFWGA', '_blank')}
             >
               <Youtube className="mr-2 h-5 w-5" />
               Subscribe to Our Channel
@@ -203,7 +203,7 @@ const Videos = () => {
                 </p>
                 <Button 
                   className="w-full bg-qatar-maroon hover:bg-qatar-maroon/90 text-white"
-                  onClick={() => window.open('https://www.youtube.com/playlist?list=PLyoutKkLobJaYLeqnVk8sXbwVtm0kzZ0d', '_blank')}
+                  onClick={() => window.open('https://www.youtube.com/channel/UC-wTo4Yzj8H4KHid3QoFWGA/playlists', '_blank')}
                 >
                   Watch Playlist
                 </Button>
