@@ -5,66 +5,31 @@ import Newsletter from '@/components/Newsletter';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from '@/components/ui/button';
 import { Youtube } from 'lucide-react';
+import { Input } from "@/components/ui/input";
+import { useToast } from "@/components/ui/use-toast";
+import { useYoutubeVideos } from '@/hooks/useYoutubeVideos';
 
 const Videos = () => {
   const [currentCategory, setCurrentCategory] = useState('all');
-  
-  // Updated video data with more specific details
-  const allVideos = [
-    {
-      id: 'NJaD4HZOGG0',
-      title: 'Exploring Doha\'s Cultural Districts',
-      description: 'Join me as I explore the rich cultural heritage and modern attractions in Doha\'s most vibrant neighborhoods.',
-      videoId: 'NJaD4HZOGG0',
-      category: 'attractions',
-      date: 'April 15, 2025',
-    },
-    {
-      id: 'AbcXYZ123',
-      title: 'Best Street Food in Doha',
-      description: 'Discover the most delicious street food options in Qatar\'s capital city.',
-      videoId: 'AbcXYZ123',
-      category: 'food',
-      date: 'April 10, 2025',
-    },
-    {
-      id: 'NJaD4HZOGG0',
-      title: 'Inside the National Museum of Qatar',
-      description: 'A tour of the architectural marvel that is the National Museum of Qatar.',
-      videoId: 'NJaD4HZOGG0',
-      category: 'attractions',
-      date: 'April 5, 2025',
-    },
-    {
-      id: 'NJaD4HZOGG0',
-      title: 'Qatar National Day Celebrations',
-      description: 'Experience the festivities and celebrations of Qatar National Day in Doha.',
-      videoId: 'NJaD4HZOGG0',
-      category: 'events',
-      date: 'April 2, 2025',
-    },
-    {
-      id: 'NJaD4HZOGG0',
-      title: 'Shopping at Souq Waqif',
-      description: 'Traditional shopping experience at Doha\'s historic Souq Waqif.',
-      videoId: 'NJaD4HZOGG0',
-      category: 'lifestyle',
-      date: 'March 28, 2025',
-    },
-    {
-      id: 'NJaD4HZOGG0',
-      title: 'Tips for Moving to Qatar',
-      description: 'Essential information for expatriates planning to move to Doha.',
-      videoId: 'NJaD4HZOGG0',
-      category: 'expat-tips',
-      date: 'March 25, 2025',
-    },
-  ];
+  const [apiKey, setApiKey] = useState('');
+  const { toast } = useToast();
+  const { data: videos = [], isLoading, isError } = useYoutubeVideos();
 
-  // Filter videos based on category
-  const videos = currentCategory === 'all' 
-    ? allVideos 
-    : allVideos.filter(video => video.category === currentCategory);
+  const filteredVideos = currentCategory === 'all' 
+    ? videos 
+    : videos.filter(video => video.category === currentCategory);
+
+  const handleApiKeySubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (apiKey) {
+      localStorage.setItem('youtube_api_key', apiKey);
+      window.location.reload(); // Reload to use the new API key
+      toast({
+        title: "API Key Saved",
+        description: "Your YouTube API key has been saved.",
+      });
+    }
+  };
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -88,6 +53,31 @@ const Videos = () => {
           </div>
         </div>
       </section>
+      
+      {/* API Key Input */}
+      {!localStorage.getItem('youtube_api_key') && (
+        <section className="bg-qatar-pearl py-8">
+          <div className="max-w-xl mx-auto px-4">
+            <form onSubmit={handleApiKeySubmit} className="space-y-4">
+              <h3 className="text-xl font-bold text-qatar-maroon">Enter YouTube API Key</h3>
+              <p className="text-sm text-gray-600 mb-4">
+                To automatically fetch videos from your channel, please enter your YouTube Data API key.
+                You can get one from the Google Cloud Console.
+              </p>
+              <div className="flex gap-4">
+                <Input
+                  type="password"
+                  value={apiKey}
+                  onChange={(e) => setApiKey(e.target.value)}
+                  placeholder="Enter your YouTube API key"
+                  className="flex-1"
+                />
+                <Button type="submit">Save Key</Button>
+              </div>
+            </form>
+          </div>
+        </section>
+      )}
       
       {/* Video Gallery */}
       <section className="py-16">
@@ -141,32 +131,43 @@ const Videos = () => {
             
             {/* Videos Grid */}
             <TabsContent value={currentCategory} className="mt-0">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {videos.map(video => (
-                  <div key={video.id} className="bg-white rounded-lg shadow-md overflow-hidden">
-                    <div className="relative pb-[56.25%] h-0">
-                      <iframe
-                        className="absolute top-0 left-0 w-full h-full"
-                        src={`https://www.youtube.com/embed/${video.videoId}`}
-                        title={video.title}
-                        frameBorder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                      ></iframe>
-                    </div>
-                    <div className="p-6">
-                      <h3 className="text-xl font-bold mb-2 text-qatar-maroon">{video.title}</h3>
-                      <p className="text-gray-600 text-sm mb-4">{video.description}</p>
-                      <div className="flex justify-between items-center text-sm text-gray-500">
-                        <span>{video.date}</span>
-                        <span className="capitalize">{video.category.replace('-', ' ')}</span>
+              {isLoading ? (
+                <div className="text-center py-12">
+                  <h3 className="text-xl font-medium text-gray-700">Loading videos...</h3>
+                </div>
+              ) : isError ? (
+                <div className="text-center py-12">
+                  <h3 className="text-xl font-medium text-gray-700">Error loading videos</h3>
+                  <p className="text-gray-500">Please check your API key and try again</p>
+                </div>
+              ) : (
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {filteredVideos.map(video => (
+                    <div key={video.videoId} className="bg-white rounded-lg shadow-md overflow-hidden">
+                      <div className="relative pb-[56.25%] h-0">
+                        <iframe
+                          className="absolute top-0 left-0 w-full h-full"
+                          src={`https://www.youtube.com/embed/${video.videoId}`}
+                          title={video.title}
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                        ></iframe>
+                      </div>
+                      <div className="p-6">
+                        <h3 className="text-xl font-bold mb-2 text-qatar-maroon">{video.title}</h3>
+                        <p className="text-gray-600 text-sm mb-4">{video.description}</p>
+                        <div className="flex justify-between items-center text-sm text-gray-500">
+                          <span>{video.date}</span>
+                          <span className="capitalize">{video.category.replace('-', ' ')}</span>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                ))}
-              </div>
+                  ))}
+                </div>
+              )}
               
-              {videos.length === 0 && (
+              {!isLoading && !isError && filteredVideos.length === 0 && (
                 <div className="text-center py-12">
                   <h3 className="text-xl font-medium text-gray-700 mb-2">No videos in this category yet</h3>
                   <p className="text-gray-500">Check back soon for new content</p>
