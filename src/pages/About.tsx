@@ -1,4 +1,3 @@
-
 import React from 'react';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
@@ -47,7 +46,10 @@ const About = () => {
               </p>
               
               <div className="flex flex-wrap gap-4 mt-8">
-                <Button className="bg-qatar-maroon hover:bg-qatar-maroon/90 text-white">
+                <Button 
+                  className="bg-qatar-maroon hover:bg-qatar-maroon/90 text-white"
+                  onClick={() => window.open('https://www.youtube.com/@ExperienceDoha', '_blank')}
+                >
                   <Youtube className="mr-2 h-4 w-4" />
                   YouTube Channel
                 </Button>
