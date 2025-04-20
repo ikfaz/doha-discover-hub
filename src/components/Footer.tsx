@@ -94,7 +94,12 @@ const Footer = () => {
               <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-qatar-gold transition-colors">
                 <Twitter size={20} />
               </a>
-              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="hover:text-qatar-gold transition-colors">
+              <a 
+                href="https://www.youtube.com/@ExperienceDoha" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="hover:text-qatar-gold transition-colors"
+              >
                 <Youtube size={20} />
               </a>
               <a href="mailto:info@experiencedoha.com" className="hover:text-qatar-gold transition-colors">
