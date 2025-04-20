@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Facebook, Instagram, Twitter, Youtube, Mail } from 'lucide-react';
@@ -35,7 +34,6 @@ const Footer = () => {
               <li><Link to="/videos" className="text-sm hover:text-qatar-gold transition-colors">Videos</Link></li>
               <li><Link to="/gallery" className="text-sm hover:text-qatar-gold transition-colors">Gallery</Link></li>
               <li><Link to="/contact" className="text-sm hover:text-qatar-gold transition-colors">Contact</Link></li>
-              <li><Link to="/privacy-policy" className="text-sm hover:text-qatar-gold transition-colors">Privacy Policy</Link></li>
             </ul>
           </div>
 
@@ -71,10 +69,17 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Social Media and Copyright */}
+        {/* Legal Links and Social Media */}
         <div className="mt-12 pt-8 border-t border-white/20">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex space-x-6 mb-4 md:mb-0">
+              <Link to="/privacy-policy" className="text-sm hover:text-qatar-gold transition-colors">Privacy Policy</Link>
+              <Link to="/terms-of-service" className="text-sm hover:text-qatar-gold transition-colors">Terms of Service</Link>
+              <Link to="/cookie-policy" className="text-sm hover:text-qatar-gold transition-colors">Cookie Policy</Link>
+            </div>
+            
+            {/* Social Media Links */}
+            <div className="flex space-x-6">
               <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-qatar-gold transition-colors">
                 <Facebook size={20} />
               </a>
@@ -90,9 +95,6 @@ const Footer = () => {
               <a href="mailto:info@experiencedoha.com" className="hover:text-qatar-gold transition-colors">
                 <Mail size={20} />
               </a>
-            </div>
-            <div className="text-sm text-white/80">
-              &copy; {new Date().getFullYear()} Experience Doha. All rights reserved.
             </div>
           </div>
         </div>
