@@ -10,7 +10,6 @@ import Newsletter from '@/components/Newsletter';
 import { Diamond, Crown, Trophy } from 'lucide-react';
 
 const Index = () => {
-  // Mock data
   const featuredBlogs = [
     {
       id: '1',
@@ -47,24 +46,28 @@ const Index = () => {
       url: 'https://images.unsplash.com/photo-1558227108-af6eec1a0bb4?q=80&w=2574&auto=format&fit=crop',
       alt: 'Museum of Islamic Art',
       caption: 'Museum of Islamic Art',
+      category: 'landmarks',
     },
     {
       id: '2',
       url: 'https://images.unsplash.com/photo-1577278689329-1914b6814d58?q=80&w=2670&auto=format&fit=crop',
       alt: 'Doha Skyline',
       caption: 'Doha Skyline at Night',
+      category: 'cityscapes',
     },
     {
       id: '3',
       url: 'https://images.unsplash.com/photo-1603864331039-7bbe48682bbd?q=80&w=2574&auto=format&fit=crop',
       alt: 'Souq Waqif',
       caption: 'Traditional Souq Waqif',
+      category: 'culture',
     },
     {
       id: '4',
       url: 'https://images.unsplash.com/photo-1609924206923-4f36e22c94e4?q=80&w=2574&auto=format&fit=crop',
       alt: 'Desert Safari',
       caption: 'Desert Safari Experience',
+      category: 'experiences',
     },
   ];
 
@@ -72,7 +75,6 @@ const Index = () => {
     <div className="min-h-screen flex flex-col">
       <NavBar />
       
-      {/* Hero Section with Parallax Effect */}
       <section className="relative h-[90vh] bg-qatar-maroon text-white overflow-hidden">
         <div className="absolute inset-0">
           <div 
@@ -104,7 +106,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Features Section */}
       <section className="bg-white py-16 relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1518005020951-eccb494ad742?q=80&w=2965')] bg-cover bg-fixed opacity-5"></div>
         <div className="content-container relative">
@@ -128,7 +129,6 @@ const Index = () => {
         </div>
       </section>
       
-      {/* Featured Blog Posts with Enhanced Design */}
       <section className="py-16 bg-qatar-pearl">
         <div className="content-container">
           <div className="flex justify-between items-center mb-8">
@@ -148,7 +148,6 @@ const Index = () => {
         </div>
       </section>
       
-      {/* Enhanced Photo Gallery */}
       <section className="bg-gradient-to-b from-white to-gray-50 py-16">
         <div className="content-container">
           <div className="flex justify-between items-center mb-8">
@@ -160,13 +159,10 @@ const Index = () => {
               View Full Gallery
             </Link>
           </div>
-          <div className="overflow-hidden rounded-2xl shadow-2xl">
-            <PhotoGallery photos={galleryPhotos} title="" />
-          </div>
+          <PhotoGallery photos={galleryPhotos} title="" />
         </div>
       </section>
       
-      {/* Newsletter Section with Enhanced Design */}
       <section className="py-16 bg-qatar-pearl">
         <div className="content-container max-w-5xl">
           <Newsletter />
