@@ -70,16 +70,16 @@ const Index = () => {
     <div className="min-h-screen flex flex-col">
       <NavBar />
       
-      <section className="relative h-[90vh] bg-qatar-maroon text-white overflow-hidden">
-        <div className="absolute inset-0">
-          <div 
-            className="absolute inset-0 bg-cover bg-center bg-fixed transform scale-105" 
-            style={{ 
-              backgroundImage: "url('https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=800&auto=format&fit=crop')",
-              filter: "brightness(0.5)",
-            }}
-          ></div>
-        </div>
+      <section
+        className="relative h-[90vh] bg-qatar-maroon text-white overflow-hidden"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(139,13,54,0.85),rgba(212,175,55,0.52)), url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1500&q=80')",
+          backgroundSize: "cover",
+          backgroundPosition: "center"
+        }}
+      >
+        <div className="absolute inset-0 bg-qatar-maroon/80"></div>
         <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center">
           <div className="max-w-3xl">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold font-heading mb-6 animate-fade-in">
@@ -103,23 +103,29 @@ const Index = () => {
       </section>
 
       <section className="bg-white py-16 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1518005020951-eccb494ad742?q=80&w=2965')] bg-cover bg-fixed opacity-5"></div>
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1455587734955-081b22074882?auto=format&fit=crop&w=1500&q=80')] bg-cover bg-fixed opacity-10"></div>
         <div className="content-container relative">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white/80 backdrop-blur-md p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-qatar-gold/20">
+            <div className="bg-white/90 backdrop-blur-md p-8 rounded-2xl shadow-lg hover:shadow-xl border border-qatar-gold/30 animate-fade-in">
               <Diamond className="w-12 h-12 text-qatar-gold mb-4" />
               <h3 className="text-2xl font-bold text-qatar-maroon mb-2">Premium Experiences</h3>
-              <p className="text-gray-600">Discover the finest attractions and hidden gems of Qatar's capital.</p>
+              <p className="text-gray-700">
+                Discover the finest attractions and hidden gems of Qatar's capital.
+              </p>
             </div>
-            <div className="bg-white/80 backdrop-blur-md p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-qatar-gold/20">
+            <div className="bg-white/90 backdrop-blur-md p-8 rounded-2xl shadow-lg hover:shadow-xl border border-qatar-gold/30 animate-fade-in">
               <Crown className="w-12 h-12 text-qatar-gold mb-4" />
               <h3 className="text-2xl font-bold text-qatar-maroon mb-2">Cultural Excellence</h3>
-              <p className="text-gray-600">Immerse yourself in the rich heritage and modern culture of Qatar.</p>
+              <p className="text-gray-700">
+                Immerse yourself in the rich heritage and modern culture of Qatar.
+              </p>
             </div>
-            <div className="bg-white/80 backdrop-blur-md p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-qatar-gold/20">
+            <div className="bg-white/90 backdrop-blur-md p-8 rounded-2xl shadow-lg hover:shadow-xl border border-qatar-gold/30 animate-fade-in">
               <Trophy className="w-12 h-12 text-qatar-gold mb-4" />
               <h3 className="text-2xl font-bold text-qatar-maroon mb-2">Curated Content</h3>
-              <p className="text-gray-600">Expert recommendations and insider tips for your Doha journey.</p>
+              <p className="text-gray-700">
+                Expert recommendations and insider tips for your Doha journey.
+              </p>
             </div>
           </div>
         </div>
