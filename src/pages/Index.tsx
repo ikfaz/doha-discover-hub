@@ -72,15 +72,24 @@ const Index = () => {
       
       <section
         className="relative h-[90vh] bg-qatar-maroon text-white overflow-hidden"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(139,13,54,0.85),rgba(212,175,55,0.52)), url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1500&q=80')",
-          backgroundSize: "cover",
-          backgroundPosition: "center"
-        }}
       >
-        <div className="absolute inset-0 bg-qatar-maroon/80"></div>
-        <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center">
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            backgroundImage:
+              "url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1500&q=80')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            filter: "grayscale(100%)",
+            opacity: 0.3,
+            zIndex: 0
+          }}
+        />
+        <div className="absolute inset-0" style={{
+          background: "linear-gradient(135deg, rgba(139,13,54,0.85) 65%, rgba(212,175,55,0.06) 100%)",
+          zIndex: 1
+        }} />
+        <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center" style={{zIndex:2}}>
           <div className="max-w-3xl">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold font-heading mb-6 animate-fade-in">
               ExperienceDoha.com
