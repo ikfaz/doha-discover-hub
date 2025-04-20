@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
@@ -13,7 +12,7 @@ const Videos = () => {
   // Mock video data
   const allVideos = [
     {
-      id: '1',
+      id: 'NJaD4HZOGG0',
       title: 'Exploring Doha\'s Cultural Districts',
       description: 'Join me as I explore the rich cultural heritage and modern attractions in Doha\'s most vibrant neighborhoods.',
       videoId: 'NJaD4HZOGG0',
@@ -21,7 +20,7 @@ const Videos = () => {
       date: 'April 15, 2025',
     },
     {
-      id: '2',
+      id: 'NJaD4HZOGG0',
       title: 'Best Street Food in Doha',
       description: 'Discover the most delicious street food options in Qatar\'s capital city.',
       videoId: 'NJaD4HZOGG0',
@@ -29,7 +28,7 @@ const Videos = () => {
       date: 'April 10, 2025',
     },
     {
-      id: '3',
+      id: 'NJaD4HZOGG0',
       title: 'Inside the National Museum of Qatar',
       description: 'A tour of the architectural marvel that is the National Museum of Qatar.',
       videoId: 'NJaD4HZOGG0',
@@ -37,7 +36,7 @@ const Videos = () => {
       date: 'April 5, 2025',
     },
     {
-      id: '4',
+      id: 'NJaD4HZOGG0',
       title: 'Qatar National Day Celebrations',
       description: 'Experience the festivities and celebrations of Qatar National Day in Doha.',
       videoId: 'NJaD4HZOGG0',
@@ -45,7 +44,7 @@ const Videos = () => {
       date: 'April 2, 2025',
     },
     {
-      id: '5',
+      id: 'NJaD4HZOGG0',
       title: 'Shopping at Souq Waqif',
       description: 'Traditional shopping experience at Doha\'s historic Souq Waqif.',
       videoId: 'NJaD4HZOGG0',
@@ -53,7 +52,7 @@ const Videos = () => {
       date: 'March 28, 2025',
     },
     {
-      id: '6',
+      id: 'NJaD4HZOGG0',
       title: 'Tips for Moving to Qatar',
       description: 'Essential information for expatriates planning to move to Doha.',
       videoId: 'NJaD4HZOGG0',
