@@ -32,15 +32,42 @@ const BlogCard: React.FC<BlogCardProps> = ({
   };
 
   const categoryClass = categoryColors[category.toLowerCase()] || 'bg-gray-100 text-gray-800';
+  
+  // Fallback image in case the provided URL fails to load
+  const fallbackImage = "https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?q=80&w=2670&auto=format&fit=crop";
+  
+  const [imgSrc, setImgSrc] = React.useState(imageUrl);
+  const [isLoading, setIsLoading] = React.useState(true);
+
+  // Handle image load error
+  const handleImageError = () => {
+    console.log(`Failed to load image: ${imageUrl}, using fallback`);
+    setImgSrc(fallbackImage);
+  };
+
+  // Handle image load success
+  const handleImageLoad = () => {
+    setIsLoading(false);
+  };
 
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden h-full card-hover">
       <Link to={`/blog/${slug}`}>
-        <img
-          src={imageUrl}
-          alt={title}
-          className="w-full h-48 object-cover"
-        />
+        <div className="relative w-full h-48 bg-gray-200">
+          {isLoading && (
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="w-8 h-8 border-4 border-qatar-gold border-t-transparent rounded-full animate-spin"></div>
+            </div>
+          )}
+          <img
+            src={imgSrc}
+            alt={title}
+            className="w-full h-full object-cover transition-opacity duration-300"
+            style={{ opacity: isLoading ? 0 : 1 }}
+            onError={handleImageError}
+            onLoad={handleImageLoad}
+          />
+        </div>
       </Link>
       <div className="p-6">
         <div className="flex items-center justify-between mb-3">
