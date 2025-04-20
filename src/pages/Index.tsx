@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -78,15 +77,15 @@ const Index = () => {
               "url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1500&q=80')",
             backgroundSize: "cover",
             backgroundPosition: "center",
-            filter: "grayscale(100%)",
-            opacity: 0.15,
+            filter: "grayscale(50%)",
+            opacity: 0.35,
             zIndex: 0,
           }}
         />
         <div
           className="absolute inset-0"
           style={{
-            background: "linear-gradient(135deg, rgba(212,175,55,0.06) 40%, rgba(212,175,55,0.03) 100%)",
+            background: "linear-gradient(135deg, rgba(212,175,55,0.12) 40%, rgba(212,175,55,0.06) 100%)",
             zIndex: 1,
           }}
         />
@@ -172,4 +171,3 @@ const Index = () => {
 };
 
 export default Index;
-
