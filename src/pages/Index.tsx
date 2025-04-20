@@ -5,7 +5,6 @@ import { AspectRatio } from '@/components/ui/aspect-ratio';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 import BlogCard from '@/components/BlogCard';
-import PhotoGallery from '@/components/PhotoGallery';
 import Newsletter from '@/components/Newsletter';
 import { Diamond, Crown, Trophy } from 'lucide-react';
 
@@ -37,37 +36,6 @@ const Index = () => {
       category: 'Events',
       date: 'April 5, 2025',
       slug: 'summer-cultural-events',
-    },
-  ];
-
-  const galleryPhotos = [
-    {
-      id: '1',
-      url: 'https://images.unsplash.com/photo-1558227108-af6eec1a0bb4?q=80&w=2574&auto=format&fit=crop',
-      alt: 'Museum of Islamic Art',
-      caption: 'Museum of Islamic Art',
-      category: 'landmarks',
-    },
-    {
-      id: '2',
-      url: 'https://images.unsplash.com/photo-1577278689329-1914b6814d58?q=80&w=2670&auto=format&fit=crop',
-      alt: 'Doha Skyline',
-      caption: 'Doha Skyline at Night',
-      category: 'cityscapes',
-    },
-    {
-      id: '3',
-      url: 'https://images.unsplash.com/photo-1603864331039-7bbe48682bbd?q=80&w=2574&auto=format&fit=crop',
-      alt: 'Souq Waqif',
-      caption: 'Traditional Souq Waqif',
-      category: 'culture',
-    },
-    {
-      id: '4',
-      url: 'https://images.unsplash.com/photo-1609924206923-4f36e22c94e4?q=80&w=2574&auto=format&fit=crop',
-      alt: 'Desert Safari',
-      caption: 'Desert Safari Experience',
-      category: 'experiences',
     },
   ];
 
@@ -145,21 +113,6 @@ const Index = () => {
               <BlogCard key={blog.id} {...blog} />
             ))}
           </div>
-        </div>
-      </section>
-      
-      <section className="bg-gradient-to-b from-white to-gray-50 py-16">
-        <div className="content-container">
-          <div className="flex justify-between items-center mb-8">
-            <h2 className="section-title">Photo Gallery</h2>
-            <Link 
-              to="/gallery" 
-              className="text-qatar-maroon font-medium hover:text-qatar-gold transition-colors"
-            >
-              View Full Gallery
-            </Link>
-          </div>
-          <PhotoGallery photos={galleryPhotos} title="" />
         </div>
       </section>
       
