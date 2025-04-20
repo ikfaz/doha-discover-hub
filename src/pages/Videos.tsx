@@ -9,7 +9,7 @@ import { Youtube } from 'lucide-react';
 const Videos = () => {
   const [currentCategory, setCurrentCategory] = useState('all');
   
-  // Mock video data
+  // Updated video data with more specific details
   const allVideos = [
     {
       id: 'NJaD4HZOGG0',
@@ -20,10 +20,10 @@ const Videos = () => {
       date: 'April 15, 2025',
     },
     {
-      id: 'NJaD4HZOGG0',
+      id: 'AbcXYZ123',
       title: 'Best Street Food in Doha',
       description: 'Discover the most delicious street food options in Qatar\'s capital city.',
-      videoId: 'NJaD4HZOGG0',
+      videoId: 'AbcXYZ123',
       category: 'food',
       date: 'April 10, 2025',
     },
@@ -186,7 +186,7 @@ const Videos = () => {
               <div className="lg:col-span-2 relative pb-[56.25%] h-0">
                 <iframe
                   className="absolute top-0 left-0 w-full h-full rounded-lg"
-                  src="https://www.youtube.com/embed/videoseries?list=PLyoutKkLobJaYLeqnVk8sXbwVtm0kzZ0d"
+                  src="https://www.youtube.com/embed/videoseries?list=PLyoutKkLobJaYLeqnVk8sXbwVtm0kzZ0d&channel=UC-wTo4Yzj8H4KHid3QoFWGA"
                   title="Doha's Hidden Gems Playlist"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
