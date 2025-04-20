@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import NavBar from '@/components/NavBar';
@@ -159,7 +158,6 @@ const Blog = () => {
     post.excerpt.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-  // Select a featured post - using the desert adventure post
   const featuredPost = allPosts.find(post => post.id === '8') || {
     id: '8',
     title: 'Desert Adventures: Exploring the Inland Sea',
@@ -304,10 +302,18 @@ const Blog = () => {
               <div className="bg-white shadow-md rounded-lg p-6">
                 <h3 className="text-xl font-bold mb-4 text-qatar-maroon">Follow Us</h3>
                 <div className="flex space-x-4">
-                  <Button variant="outline" className="flex-1 border-qatar-maroon text-qatar-maroon hover:bg-qatar-maroon/10">
+                  <Button 
+                    variant="outline" 
+                    className="flex-1 border-qatar-maroon text-qatar-maroon hover:bg-qatar-maroon/10"
+                    onClick={() => window.open('https://www.youtube.com/@ExperienceDoha', '_blank')}
+                  >
                     YouTube
                   </Button>
-                  <Button variant="outline" className="flex-1 border-qatar-maroon text-qatar-maroon hover:bg-qatar-maroon/10">
+                  <Button 
+                    variant="outline" 
+                    className="flex-1 border-qatar-maroon text-qatar-maroon hover:bg-qatar-maroon/10"
+                    onClick={() => window.open('https://instagram.com', '_blank')}
+                  >
                     Instagram
                   </Button>
                 </div>
@@ -329,4 +335,3 @@ const Blog = () => {
 };
 
 export default Blog;
-
