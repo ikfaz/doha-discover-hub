@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, Home, Book, Video, Mail, Image } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import logo from '@/assets/logo.svg';
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,8 +18,7 @@ const NavBar = () => {
         <div className="flex justify-between h-20">
           <div className="flex items-center">
             <Link to="/" className="flex-shrink-0 flex items-center">
-              <span className="text-2xl font-bold text-qatar-maroon">Experience</span>
-              <span className="text-2xl font-bold text-qatar-gold">Doha</span>
+              <img src={logo} alt="Experience Doha Logo" className="h-16 w-16" />
             </Link>
           </div>
           

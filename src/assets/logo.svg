@@ -1,0 +1,77 @@
+
+<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect x="0" y="0" width="500" height="500" fill="#ffffff" />
+  
+  <!-- Maroon outer circle with slight gradient for depth -->
+  <circle cx="250" cy="250" r="200" fill="#8B0D36" />
+  <circle cx="250" cy="250" r="196" fill="#9A0D3A" />
+  
+  <!-- White inner circle for contrast with subtle shadow -->
+  <circle cx="250" cy="250" r="190" fill="#ffffff" />
+  <circle cx="250" cy="252" r="188" fill="#f9f9f9" />
+  
+  <!-- Skyline silhouette in maroon with refined details -->
+  <g fill="#8B0D36">
+    <!-- Museum of Islamic Art - refined -->
+    <path d="M100,290 L130,225 L160,290 L100,290 Z" />
+    <rect x="125" y="290" width="10" height="25" />
+    <path d="M115,290 L145,290" stroke="#8B0D36" stroke-width="1.5" />
+    
+    <!-- Katara Cultural Village - refined -->
+    <path d="M170,315 L170,260 C180,250 190,250 200,260 L200,315 Z" />
+    <path d="M175,260 L175,240 L195,240 L195,260" fill="none" stroke="#8B0D36" stroke-width="1.5" />
+    <path d="M185,240 L185,230" stroke="#8B0D36" stroke-width="1.5" />
+    
+    <!-- Souq Waqif - refined -->
+    <path d="M210,315 L210,270 L250,270 L250,315" fill="none" stroke="#8B0D36" stroke-width="2.5" />
+    <path d="M210,270 L230,250 L250,270" fill="none" stroke="#8B0D36" stroke-width="2.5" />
+    <path d="M220,270 L220,315" stroke="#8B0D36" stroke-width="1" />
+    <path d="M230,270 L230,315" stroke="#8B0D36" stroke-width="1" />
+    <path d="M240,270 L240,315" stroke="#8B0D36" stroke-width="1" />
+    
+    <!-- Aspire Tower/The Torch - refined -->
+    <rect x="260" y="225" width="15" height="90" />
+    <polygon points="260,225 275,225 267.5,205" />
+    <path d="M267.5,225 L267.5,315" stroke="#790A2F" stroke-width="1" />
+    
+    <!-- State Grand Mosque - refined -->
+    <path d="M290,315 L290,270 C305,255 325,255 340,270 L340,315" fill="none" stroke="#8B0D36" stroke-width="2.5" />
+    <circle cx="315" cy="260" r="15" fill="#8B0D36" />
+    <circle cx="315" cy="260" r="10" fill="#971040" />
+    
+    <!-- National Museum of Qatar - refined -->
+    <path d="M350,315 C360,290 370,300 380,285 C390,300 400,290 410,315" fill="none" stroke="#8B0D36" stroke-width="2.5" />
+    <path d="M365,300 C375,290 385,295 395,300" fill="none" stroke="#8B0D36" stroke-width="1" />
+  </g>
+  
+  <!-- Text elements inside the circle with enhanced typography -->
+  <g>
+    <!-- EXPERIENCE text - refined -->
+    <text x="250" y="140" font-family="Arial, sans-serif" font-weight="700" font-size="32" text-anchor="middle" fill="#8B0D36">EXPERIENCE</text>
+    
+    <!-- DOHA text - refined with subtle shadow -->
+    <text x="252" y="182" font-family="Arial, sans-serif" font-weight="700" font-size="48" text-anchor="middle" fill="#971040">DOHA</text>
+    <text x="250" y="180" font-family="Arial, sans-serif" font-weight="700" font-size="48" text-anchor="middle" fill="#8B0D36">DOHA</text>
+    
+    <!-- Decorative elements - refined -->
+    <path d="M150,155 L350,155" stroke="#8B0D36" stroke-width="1" />
+    <path d="M170,195 L330,195" stroke="#8B0D36" stroke-width="1" />
+  </g>
+  
+  <!-- Arabic ornamental pattern at the bottom - refined -->
+  <path d="M150,350 C170,360 200,355 250,355 C300,355 330,360 350,350" fill="none" stroke="#8B0D36" stroke-width="1.5" />
+  <circle cx="250" cy="355" r="3" fill="#8B0D36" />
+  <circle cx="225" cy="355" r="2.5" fill="#8B0D36" />
+  <circle cx="275" cy="355" r="2.5" fill="#8B0D36" />
+  <circle cx="200" cy="355" r="2" fill="#8B0D36" />
+  <circle cx="300" cy="355" r="2" fill="#8B0D36" />
+  <circle cx="175" cy="354" r="1.5" fill="#8B0D36" />
+  <circle cx="325" cy="354" r="1.5" fill="#8B0D36" />
+  
+  <!-- Subtle details to enhance overall design -->
+  <path d="M250,60 L250,90" stroke="#8B0D36" stroke-width="1" opacity="0.7" />
+  <path d="M250,410 L250,440" stroke="#8B0D36" stroke-width="1" opacity="0.7" />
+  <path d="M60,250 L90,250" stroke="#8B0D36" stroke-width="1" opacity="0.7" />
+  <path d="M410,250 L440,250" stroke="#8B0D36" stroke-width="1" opacity="0.7" />
+</svg>
