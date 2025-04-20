@@ -1,7 +1,7 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { AspectRatio } from '@/components/ui/aspect-ratio';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 import BlogCard from '@/components/BlogCard';
@@ -13,7 +13,7 @@ const Index = () => {
     {
       id: '1',
       title: 'Top 10 Must-Visit Attractions in Doha',
-      excerpt: 'Discover the most spectacular sights and experiences in Qatar\'s vibrant capital city.',
+      excerpt: "Discover the most spectacular sights and experiences in Qatar's vibrant capital city.",
       imageUrl: 'https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=800&auto=format&fit=crop',
       category: 'Attractions',
       date: 'April 15, 2025',
@@ -39,8 +39,8 @@ const Index = () => {
     },
     {
       id: '4',
-      title: 'Luxury Shopping Guide: Doha\'s Best Malls',
-      excerpt: 'Explore the finest shopping destinations in Qatar\'s modern metropolis.',
+      title: "Luxury Shopping Guide: Doha's Best Malls",
+      excerpt: "Explore the finest shopping destinations in Qatar's modern metropolis.",
       imageUrl: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&auto=format&fit=crop',
       category: 'Lifestyle',
       date: 'April 18, 2025',
@@ -48,7 +48,7 @@ const Index = () => {
     },
     {
       id: '5',
-      title: 'Desert Adventures: Exploring Qatar\'s Dunes',
+      title: "Desert Adventures: Exploring Qatar's Dunes",
       excerpt: 'Experience thrilling desert safaris and traditional Bedouin hospitality.',
       imageUrl: 'https://images.unsplash.com/photo-1482881497185-d4a9ddbe4151?w=800&auto=format&fit=crop',
       category: 'Adventure',
@@ -69,10 +69,8 @@ const Index = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <NavBar />
-      
-      <section
-        className="relative h-[90vh] bg-qatar-maroon text-white overflow-hidden"
-      >
+
+      <section className="relative h-[90vh] text-white overflow-hidden">
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
@@ -81,15 +79,21 @@ const Index = () => {
             backgroundSize: "cover",
             backgroundPosition: "center",
             filter: "grayscale(100%)",
-            opacity: 0.3,
-            zIndex: 0
+            opacity: 0.15,
+            zIndex: 0,
           }}
         />
-        <div className="absolute inset-0" style={{
-          background: "linear-gradient(135deg, rgba(139,13,54,0.85) 65%, rgba(212,175,55,0.06) 100%)",
-          zIndex: 1
-        }} />
-        <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center" style={{zIndex:2}}>
+        <div
+          className="absolute inset-0"
+          style={{
+            background: "linear-gradient(135deg, rgba(212,175,55,0.06) 40%, rgba(212,175,55,0.03) 100%)",
+            zIndex: 1,
+          }}
+        />
+        <div
+          className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center"
+          style={{ zIndex: 2 }}
+        >
           <div className="max-w-3xl">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold font-heading mb-6 animate-fade-in">
               ExperienceDoha.com
@@ -139,15 +143,12 @@ const Index = () => {
           </div>
         </div>
       </section>
-      
+
       <section className="py-16 bg-qatar-pearl">
         <div className="content-container">
           <div className="flex justify-between items-center mb-8">
             <h2 className="section-title">Latest Articles</h2>
-            <Link 
-              to="/blog" 
-              className="text-qatar-maroon font-medium hover:text-qatar-gold transition-colors"
-            >
+            <Link to="/blog" className="text-qatar-maroon font-medium hover:text-qatar-gold transition-colors">
               View All Articles
             </Link>
           </div>
@@ -158,16 +159,17 @@ const Index = () => {
           </div>
         </div>
       </section>
-      
+
       <section className="py-16 bg-qatar-pearl">
         <div className="content-container max-w-5xl">
           <Newsletter />
         </div>
       </section>
-      
+
       <Footer />
     </div>
   );
 };
 
 export default Index;
+
