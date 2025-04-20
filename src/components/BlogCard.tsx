@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Calendar } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Badge } from '@/components/ui/badge';
@@ -33,22 +33,33 @@ const BlogCard: React.FC<BlogCardProps> = ({
 
   const categoryClass = categoryColors[category.toLowerCase()] || 'bg-gray-100 text-gray-800';
   
-  // Fallback image in case the provided URL fails to load
-  const fallbackImage = "https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?q=80&w=2670&auto=format&fit=crop";
+  // Use a more reliable fallback image
+  const fallbackImage = "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=800&auto=format&fit=crop";
   
-  const [imgSrc, setImgSrc] = React.useState(imageUrl);
-  const [isLoading, setIsLoading] = React.useState(true);
+  const [imgSrc, setImgSrc] = useState(imageUrl);
+  const [isLoading, setIsLoading] = useState(true);
 
-  // Handle image load error
-  const handleImageError = () => {
-    console.log(`Failed to load image: ${imageUrl}, using fallback`);
-    setImgSrc(fallbackImage);
-  };
-
-  // Handle image load success
-  const handleImageLoad = () => {
-    setIsLoading(false);
-  };
+  // Pre-load image to detect errors early
+  useEffect(() => {
+    const img = new Image();
+    img.src = imageUrl;
+    
+    img.onload = () => {
+      setImgSrc(imageUrl);
+      setIsLoading(false);
+    };
+    
+    img.onerror = () => {
+      console.log(`Failed to load image: ${imageUrl}, using fallback`);
+      setImgSrc(fallbackImage);
+      setIsLoading(false);
+    };
+    
+    return () => {
+      img.onload = null;
+      img.onerror = null;
+    };
+  }, [imageUrl]);
 
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden h-full card-hover">
@@ -64,8 +75,6 @@ const BlogCard: React.FC<BlogCardProps> = ({
             alt={title}
             className="w-full h-full object-cover transition-opacity duration-300"
             style={{ opacity: isLoading ? 0 : 1 }}
-            onError={handleImageError}
-            onLoad={handleImageLoad}
           />
         </div>
       </Link>
