@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import NavBar from '@/components/NavBar';
@@ -69,6 +68,87 @@ const Blog = () => {
       date: 'March 25, 2025',
       slug: 'qatar-expat-guide',
     },
+    {
+      id: '7',
+      title: 'The Art of Arabic Coffee: A Cultural Experience',
+      excerpt: 'Learn about the traditions and rituals behind Qatar\'s coffee culture.',
+      imageUrl: 'https://images.unsplash.com/photo-1576485290814-1c72aa4bbb8e?q=80&w=2574&auto=format&fit=crop',
+      category: 'Culture',
+      date: 'March 20, 2025',
+      slug: 'arabic-coffee-culture',
+    },
+    {
+      id: '8',
+      title: 'Desert Adventures: Exploring the Inland Sea',
+      excerpt: 'Experience the thrill of dune bashing and the serenity of Qatar\'s desert landscape.',
+      imageUrl: 'https://images.unsplash.com/photo-1609924206923-4f36e22c94e4?q=80&w=2574&auto=format&fit=crop',
+      category: 'Adventures',
+      date: 'March 15, 2025',
+      slug: 'desert-adventures',
+    },
+    {
+      id: '9',
+      title: 'Modern Architecture in Doha: A Visual Journey',
+      excerpt: 'Discover the stunning architectural marvels that define Doha\'s skyline.',
+      imageUrl: 'https://images.unsplash.com/photo-1577278689329-1914b6814d58?q=80&w=2670&auto=format&fit=crop',
+      category: 'Architecture',
+      date: 'March 10, 2025',
+      slug: 'doha-architecture',
+    },
+    {
+      id: '10',
+      title: 'Family-Friendly Activities in Doha',
+      excerpt: 'The best entertainment options and activities for families with children.',
+      imageUrl: 'https://images.unsplash.com/photo-1528698827591-e19ccd7bc23d?q=80&w=2576&auto=format&fit=crop',
+      category: 'Family',
+      date: 'March 5, 2025',
+      slug: 'family-activities',
+    },
+    {
+      id: '11',
+      title: 'Weekend Getaways Near Doha',
+      excerpt: 'Explore nearby destinations perfect for short breaks from the city.',
+      imageUrl: 'https://images.unsplash.com/photo-1592568787542-43e11a310fed?q=80&w=2574&auto=format&fit=crop',
+      category: 'Travel',
+      date: 'March 1, 2025',
+      slug: 'weekend-getaways',
+    },
+    {
+      id: '12',
+      title: 'Traditional Qatari Crafts and Where to Find Them',
+      excerpt: 'A guide to local artisans and traditional handicrafts in Qatar.',
+      imageUrl: 'https://images.unsplash.com/photo-1603864331039-7bbe48682bbd?q=80&w=2574&auto=format&fit=crop',
+      category: 'Culture',
+      date: 'February 25, 2025',
+      slug: 'qatari-crafts',
+    },
+    {
+      id: '13',
+      title: 'Best Beaches in and Around Doha',
+      excerpt: 'Discover the finest coastal spots for swimming, sunbathing, and water sports.',
+      imageUrl: 'https://images.unsplash.com/photo-1519885277449-12e839432506?q=80&w=2574&auto=format&fit=crop',
+      category: 'Lifestyle',
+      date: 'February 20, 2025',
+      slug: 'doha-beaches',
+    },
+    {
+      id: '14',
+      title: 'Ramadan in Qatar: A Visitor\'s Guide',
+      excerpt: 'Everything you need to know about experiencing Ramadan in Doha.',
+      imageUrl: 'https://images.unsplash.com/photo-1551109359-8263cb477fde?q=80&w=2574&auto=format&fit=crop',
+      category: 'Culture',
+      date: 'February 15, 2025',
+      slug: 'ramadan-guide',
+    },
+    {
+      id: '15',
+      title: 'Sustainable Tourism in Qatar',
+      excerpt: 'How to experience Doha while minimizing your environmental impact.',
+      imageUrl: 'https://images.unsplash.com/photo-1548794397-ebc0aa4a3275?q=80&w=2574&auto=format&fit=crop',
+      category: 'Eco-Tourism',
+      date: 'February 10, 2025',
+      slug: 'sustainable-tourism',
+    },
   ];
 
   // Filter posts based on search query
@@ -77,14 +157,19 @@ const Blog = () => {
     post.excerpt.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-  // Categories
+  // Update categories list based on new posts
   const categories = [
-    { name: 'Attractions', count: 2 },
-    { name: 'Food', count: 1 },
-    { name: 'Culture', count: 0 },
-    { name: 'Events', count: 1 },
-    { name: 'Lifestyle', count: 1 },
-    { name: 'Expat-Tips', count: 1 },
+    { name: 'Attractions', count: allPosts.filter(post => post.category === 'Attractions').length },
+    { name: 'Food', count: allPosts.filter(post => post.category === 'Food').length },
+    { name: 'Culture', count: allPosts.filter(post => post.category === 'Culture').length },
+    { name: 'Events', count: allPosts.filter(post => post.category === 'Events').length },
+    { name: 'Lifestyle', count: allPosts.filter(post => post.category === 'Lifestyle').length },
+    { name: 'Adventures', count: allPosts.filter(post => post.category === 'Adventures').length },
+    { name: 'Architecture', count: allPosts.filter(post => post.category === 'Architecture').length },
+    { name: 'Family', count: allPosts.filter(post => post.category === 'Family').length },
+    { name: 'Travel', count: allPosts.filter(post => post.category === 'Travel').length },
+    { name: 'Eco-Tourism', count: allPosts.filter(post => post.category === 'Eco-Tourism').length },
+    { name: 'Expat-Tips', count: allPosts.filter(post => post.category === 'Expat-Tips').length },
   ];
 
   return (
