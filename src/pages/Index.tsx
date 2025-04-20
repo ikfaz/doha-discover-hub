@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -76,7 +75,7 @@ const Index = () => {
           <div 
             className="absolute inset-0 bg-cover bg-center bg-fixed transform scale-105" 
             style={{ 
-              backgroundImage: "url('https://images.unsplash.com/photo-1496307653780-42ee777d4833?q=80&w=2670&auto=format&fit=crop')",
+              backgroundImage: "url('https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=800&auto=format&fit=crop')",
               filter: "brightness(0.5)",
             }}
           ></div>
