@@ -80,7 +80,12 @@ const Footer = () => {
             
             {/* Social Media Links */}
             <div className="flex space-x-6">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-qatar-gold transition-colors">
+              <a 
+                href="https://www.facebook.com/Experiencedohaqatar" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="hover:text-qatar-gold transition-colors"
+              >
                 <Facebook size={20} />
               </a>
               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-qatar-gold transition-colors">
