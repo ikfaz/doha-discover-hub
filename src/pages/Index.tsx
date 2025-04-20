@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -56,8 +57,9 @@ const Index = () => {
         <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center">
           <div className="max-w-3xl">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold font-heading mb-6 animate-fade-in">
-              Experience the
-              <span className="text-qatar-gold block mt-2">Magic of Doha</span>
+              ExperienceDoha.com
+              <span className="text-qatar-gold block mt-2">Discover Doha,</span>
+              <span className="text-qatar-gold block">Live the Experience</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-white/90 animate-fade-up max-w-2xl">
               Your premium guide to exploring Qatar's most stunning attractions, finest dining, and cultural experiences.
