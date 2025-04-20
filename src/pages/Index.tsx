@@ -38,6 +38,33 @@ const Index = () => {
       date: 'April 5, 2025',
       slug: 'summer-cultural-events',
     },
+    {
+      id: '4',
+      title: 'Luxury Shopping Guide: Doha\'s Best Malls',
+      excerpt: 'Explore the finest shopping destinations in Qatar\'s modern metropolis.',
+      imageUrl: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&auto=format&fit=crop',
+      category: 'Lifestyle',
+      date: 'April 18, 2025',
+      slug: 'luxury-shopping-guide',
+    },
+    {
+      id: '5',
+      title: 'Desert Adventures: Exploring Qatar\'s Dunes',
+      excerpt: 'Experience thrilling desert safaris and traditional Bedouin hospitality.',
+      imageUrl: 'https://images.unsplash.com/photo-1452022582947-b521d8779ab6?w=800&auto=format&fit=crop',
+      category: 'Adventure',
+      date: 'April 12, 2025',
+      slug: 'desert-adventures',
+    },
+    {
+      id: '6',
+      title: 'Modern Art Scene in Doha',
+      excerpt: 'Discover contemporary art galleries and installations across the city.',
+      imageUrl: 'https://images.unsplash.com/photo-1544967082-d9d25d867d66?w=800&auto=format&fit=crop',
+      category: 'Culture',
+      date: 'April 8, 2025',
+      slug: 'modern-art-scene',
+    },
   ];
 
   return (
