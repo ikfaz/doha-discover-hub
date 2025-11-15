@@ -11,6 +11,8 @@ import desertSafariImage from '@/assets/desert-safari-inland-sea.jpg';
 import museumsImage from '@/assets/mia-nmoq-museums.jpg';
 import souqWaqifImage from '@/assets/souq-waqif-night.jpg';
 import layoverImage from '@/assets/doha-layover-experience.jpg';
+import qatarAirwaysImage from '@/assets/qatar-airways-stopover.jpg';
+import cornicheSunsetImage from '@/assets/corniche-sunset-dhow.jpg';
 
 const Index = () => {
   const featuredBlogs = [
@@ -49,6 +51,24 @@ const Index = () => {
       category: 'Expat-Tips',
       date: 'May 6, 2025',
       slug: 'ultimate-doha-layover-24-48-hours',
+    },
+    {
+      id: '26',
+      title: 'Qatar Airways Stopover Packages: Two Holidays in One',
+      excerpt: 'Discover how to turn your layover into a free mini-vacation with Qatar Airways stopover packages and exclusive lounge access benefits.',
+      imageUrl: qatarAirwaysImage,
+      category: 'Expat-Tips',
+      date: 'May 5, 2025',
+      slug: 'qatar-airways-stopover-packages-lounge',
+    },
+    {
+      id: '23',
+      title: 'The Golden Hour in Doha: Corniche Sunset and Dhow Cruise',
+      excerpt: 'Experience the magic of Doha\'s Corniche at sunset, followed by a traditional dhow cruise - the perfect romantic evening in Qatar.',
+      imageUrl: cornicheSunsetImage,
+      category: 'Attractions',
+      date: 'May 4, 2025',
+      slug: 'corniche-sunset-dhow-cruise-guide',
     },
   ];
 
