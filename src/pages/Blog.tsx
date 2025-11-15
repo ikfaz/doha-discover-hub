@@ -17,6 +17,15 @@ const Blog = () => {
   
   const allPosts = [
     {
+      id: '27',
+      title: 'The Ultimate 24-48 Hour Layover in Doha: A Complete Guide',
+      excerpt: 'Transform your Doha layover into a mini-vacation with our detailed 24-hour dash and 48-hour exploration itineraries, from cultural highlights to desert adventures.',
+      imageUrl: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&auto=format&fit=crop',
+      category: 'Expat-Tips',
+      date: 'May 6, 2025',
+      slug: 'ultimate-doha-layover-24-48-hours',
+    },
+    {
       id: '26',
       title: 'Two Holidays in One: Qatar Airways Stopover Packages Guide',
       excerpt: 'Everything you need to know about Qatar Airways stopover packages - from $14/night hotels to premium lounge access at Hamad International Airport.',
