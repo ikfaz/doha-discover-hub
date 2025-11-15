@@ -28,9 +28,20 @@ import westBayAlWaabImage from '@/assets/west-bay-al-waab-comparison.jpg';
 import drivingDohaImage from '@/assets/driving-doha-2025-guide.jpg';
 import lgbtqQatarImage from '@/assets/lgbtq-experiences-qatar-guide.jpg';
 import bankAccountQatarImage from '@/assets/bank-account-qatar-guide.jpg';
+import mobilePlansQatarImage from '@/assets/mobile-plans-qatar-guide.jpg';
 
 const Index = () => {
   const featuredBlogs = [
+    {
+      id: '46',
+      title: 'Best Mobile and Data Plans in Qatar 2025: Ooredoo vs Vodafone Complete Guide',
+      excerpt: 'Compare Ooredoo vs Vodafone Qatar 2025. Find best mobile plans, data packages, prices, coverage, and which telecom provider suits expats in Doha.',
+      imageUrl: mobilePlansQatarImage,
+      category: 'Expat-Tips',
+      date: 'May 26, 2025',
+      slug: 'mobile-plans-qatar-guide',
+      tags: ['mobile plans', 'Ooredoo', 'Vodafone', 'telecom Qatar', 'data packages'],
+    },
     {
       id: '45',
       title: 'Opening a Bank Account in Qatar: QNB vs International Banks Guide',
