@@ -40,12 +40,251 @@ import hamadAirportGuideImage from '@/assets/hamad-airport-guide.jpg';
 import dohaTransformingImage from '@/assets/doha-transforming-middle-east.jpg';
 import costOfLivingImage from '@/assets/cost-of-living-doha-2025.jpg';
 import womenSafetyDressCodeImage from '@/assets/women-safety-dress-code-doha.jpg';
+import internationalSchoolsImage from '@/assets/international-schools-qatar-guide.jpg';
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   
   // Blog post data based on slug
   const blogPosts: Record<string, any> = {
+    'international-schools-qatar-2025': {
+      id: '40',
+      title: 'International Schools in Qatar 2025: Waitlists, Fees, and Application Guide',
+      date: 'May 19, 2025',
+      author: 'Experience Doha Team',
+      readTime: '16 min read',
+      category: 'Expat-Tips',
+      imageUrl: internationalSchoolsImage,
+      tags: ['international schools', 'school fees', 'education Qatar', 'British schools', 'American schools'],
+      content: `
+        <p class="lead">Qatar hosts over 170 international schools serving its expatriate population, offering British, American, IB, French, Indian, and other curricula. The 2025 school year sees continued high demand with waitlists common at top-tier institutions, making early planning essential.</p>
+        
+        <p>Understanding the fee structures, waitlist situations, and application timelines helps families secure quality education for their children.</p>
+        
+        <h2 id="fees">School Fees in Qatar 2025: Complete Breakdown</h2>
+        
+        <h3>Premium Tier Schools (QAR 80,000-120,000/year)</h3>
+        <p>These elite institutions offer world-class facilities, small class sizes, and extensive extracurricular programs:</p>
+        <ul>
+          <li><strong>Doha College (British):</strong> QAR 85,000-95,000</li>
+          <li><strong>American School of Doha:</strong> QAR 90,000-110,000</li>
+          <li><strong>Qatar Academy (IB):</strong> QAR 95,000-115,000</li>
+          <li><strong>Compass International School:</strong> QAR 85,000-105,000</li>
+        </ul>
+        
+        <h3>High Tier Schools (QAR 50,000-80,000/year)</h3>
+        <p>Quality education with strong facilities:</p>
+        <ul>
+          <li><strong>Park House English School:</strong> QAR 55,000-75,000</li>
+          <li><strong>Doha British School:</strong> QAR 50,000-70,000</li>
+          <li><strong>Newton International Academy:</strong> QAR 45,000-65,000</li>
+          <li><strong>SEK International School:</strong> QAR 60,000-80,000</li>
+        </ul>
+        
+        <h3>Mid Tier Schools (QAR 30,000-50,000/year)</h3>
+        <p>Solid education at more accessible prices:</p>
+        <ul>
+          <li><strong>DPS Modern Indian School:</strong> QAR 15,000-25,000</li>
+          <li><strong>Birla Public School:</strong> QAR 12,000-22,000</li>
+          <li><strong>Philippine School Doha:</strong> QAR 18,000-28,000</li>
+          <li><strong>Lycée Bonaparte (French):</strong> QAR 35,000-45,000</li>
+        </ul>
+        
+        <h3>Additional Costs to Budget:</h3>
+        <ul>
+          <li>Registration fees: QAR 2,000-5,000 (non-refundable)</li>
+          <li>Uniforms: QAR 1,500-3,000/year</li>
+          <li>Books and materials: QAR 2,000-5,000/year</li>
+          <li>School buses: QAR 5,000-10,000/year</li>
+          <li>Extracurricular activities: QAR 2,000-8,000/year</li>
+          <li>School trips: QAR 3,000-10,000/year</li>
+        </ul>
+        
+        <p><strong>Total annual cost premium schools:</strong> QAR 100,000-150,000 per child</p>
+        
+        <h2 id="waitlists">Understanding 2025 Waitlist Situations</h2>
+        
+        <h3>Schools with Longest Waitlists:</h3>
+        <ul>
+          <li><strong>American School of Doha</strong> - 12-24 month waitlists common</li>
+          <li><strong>Doha College</strong> - 6-18 months depending on grade</li>
+          <li><strong>Qatar Academy</strong> - 12+ months for popular grades</li>
+          <li><strong>Compass International</strong> - Growing waitlists</li>
+        </ul>
+        
+        <h3>Why Waitlists Exist:</h3>
+        <ul>
+          <li>Limited classroom capacity</li>
+          <li>High expat population growth</li>
+          <li>Schools maintaining quality through controlled enrollment</li>
+          <li>Popular grades (KG1, Grade 1, Grade 7) most affected</li>
+        </ul>
+        
+        <h3>Waitlist Strategies That Work:</h3>
+        <ul>
+          <li><strong>Apply immediately upon job acceptance</strong> - Don't wait until arrival</li>
+          <li><strong>Apply to multiple schools</strong> - Cast wide net initially</li>
+          <li><strong>Consider less popular campuses</strong> - Same school group, shorter waits</li>
+          <li><strong>Timing matters</strong> - Mid-year openings exist as families leave</li>
+          <li><strong>Employer connections</strong> - Some companies have school partnerships</li>
+          <li><strong>Direct contact</strong> - Regular follow-ups show serious interest</li>
+        </ul>
+        
+        <h2 id="timeline">Application Timeline for September 2025</h2>
+        
+        <h3>October-November 2024</h3>
+        <ul>
+          <li>Research schools matching your curriculum preference</li>
+          <li>Attend virtual school tours</li>
+          <li>Gather required documents</li>
+        </ul>
+        
+        <h3>December 2024-January 2025</h3>
+        <ul>
+          <li>Submit applications (most open January 1)</li>
+          <li>Pay registration fees</li>
+          <li>Complete assessment bookings</li>
+        </ul>
+        
+        <h3>February-March 2025</h3>
+        <ul>
+          <li>Student assessments conducted</li>
+          <li>Interview processes (some schools)</li>
+          <li>Waitlist placements confirmed</li>
+        </ul>
+        
+        <h3>April-May 2025</h3>
+        <ul>
+          <li>Offers extended</li>
+          <li>Accept and pay deposits</li>
+          <li>Confirm enrollment</li>
+        </ul>
+        
+        <h3>June-August 2025</h3>
+        <ul>
+          <li>Uniform fittings</li>
+          <li>Orientation programs</li>
+          <li>Class placements announced</li>
+        </ul>
+        
+        <h2 id="documents">Required Documents for Application</h2>
+        <p>Standard requirements across most international schools:</p>
+        <ul>
+          <li>Child's passport copies</li>
+          <li>Birth certificate (translated if necessary)</li>
+          <li>Previous school reports (2-3 years)</li>
+          <li>Vaccination records</li>
+          <li>Parent passport copies</li>
+          <li>Qatar residence permit (when available)</li>
+          <li>Recommendation letters (some schools)</li>
+          <li>Special education documentation (if applicable)</li>
+        </ul>
+        
+        <h2 id="curriculum">Curriculum Options Explained</h2>
+        
+        <h3>British Curriculum (Most Popular)</h3>
+        <ul>
+          <li>IGCSE and A-Levels</li>
+          <li>Structured approach</li>
+          <li>Strong university recognition globally</li>
+          <li><strong>Examples:</strong> Doha College, Park House, Doha British School</li>
+        </ul>
+        
+        <h3>American Curriculum</h3>
+        <ul>
+          <li>US-style education with AP courses</li>
+          <li>Flexible, holistic approach</li>
+          <li>SAT preparation integrated</li>
+          <li><strong>Examples:</strong> American School of Doha, ACS Doha</li>
+        </ul>
+        
+        <h3>International Baccalaureate (IB)</h3>
+        <ul>
+          <li>Internationally recognized</li>
+          <li>Critical thinking focused</li>
+          <li>Primary Years, Middle Years, Diploma Programme</li>
+          <li><strong>Examples:</strong> Qatar Academy, ACS Doha</li>
+        </ul>
+        
+        <h3>Indian Curriculum (CBSE/ISC)</h3>
+        <ul>
+          <li>Cost-effective option</li>
+          <li>Strong math and science focus</li>
+          <li>Primarily serves Indian community</li>
+          <li><strong>Examples:</strong> DPS, Birla, MES Indian School</li>
+        </ul>
+        
+        <h2 id="negotiation">Negotiating School Fees with Employers</h2>
+        
+        <h3>Key negotiation points:</h3>
+        <ul>
+          <li><strong>Education allowance</strong> - Request specific amount covering premium schools</li>
+          <li><strong>Number of children covered</strong> - Ensure all children included</li>
+          <li><strong>Annual increases</strong> - Fees rise 3-5% yearly; allowances should match</li>
+          <li><strong>Registration fees</strong> - Often significant one-time costs</li>
+          <li><strong>Payment timing</strong> - Allowances paid with salary vs. direct school payment</li>
+        </ul>
+        
+        <h3>Red flags in packages:</h3>
+        <ul>
+          <li>Caps at mid-tier school levels</li>
+          <li>No provision for fee increases</li>
+          <li>Limited to certain school types</li>
+          <li>Excludes registration and extras</li>
+        </ul>
+        
+        <h2 id="alternatives">Alternative Options When Waitlisted</h2>
+        
+        <h3>Temporary Solutions:</h3>
+        <ul>
+          <li><strong>Bridge schools</strong> - Enroll temporarily while awaiting preferred school</li>
+          <li><strong>Online schooling</strong> - Accredited programs maintain education continuity</li>
+          <li><strong>Different campuses</strong> - Same school brand, different location</li>
+          <li><strong>Sibling priority</strong> - Enrolling one child may help second child</li>
+        </ul>
+        
+        <p><strong>Important:</strong> Many families successfully transfer mid-year when spaces open, so waitlist position isn't permanent.</p>
+        
+        <h2 id="quality">School Quality Indicators to Evaluate</h2>
+        <p>Beyond fees and waitlists, assess:</p>
+        <ul>
+          <li><strong>BSO/CIS accreditation</strong> - International quality standards</li>
+          <li><strong>University placement rates</strong> - Where graduates attend</li>
+          <li><strong>Teacher retention</strong> - High turnover indicates problems</li>
+          <li><strong>Facility quality</strong> - Labs, libraries, sports facilities</li>
+          <li><strong>Class sizes</strong> - Ideal ratios 1:20 or better</li>
+          <li><strong>Parent reviews</strong> - Facebook groups provide honest insights</li>
+        </ul>
+        
+        <h2 id="budget">Planning Your Education Budget</h2>
+        <p>For family with two children at premium schools:</p>
+        <ul>
+          <li>Tuition: QAR 200,000/year</li>
+          <li>Extras (uniforms, books, activities): QAR 30,000/year</li>
+          <li>Transport: QAR 15,000/year</li>
+          <li><strong>Total: QAR 245,000/year ($67,300)</strong></li>
+        </ul>
+        
+        <p>This represents significant salary percentage, making education allowance negotiations crucial to expat package acceptability.</p>
+        
+        <h2 id="faq">FAQ: International Schools Qatar 2025</h2>
+        
+        <h3>When should I apply for Qatar schools?</h3>
+        <p>Apply 12-18 months before intended start date, especially for premium schools with long waitlists.</p>
+        
+        <h3>Are Qatar school fees negotiable?</h3>
+        <p>No. School fees are fixed. However, employer education allowances are negotiable.</p>
+        
+        <h3>Can I switch schools easily in Qatar?</h3>
+        <p>Yes, though timing affects ease. Year-end transfers are smoothest; mid-year possible with space availability.</p>
+        
+        <h3>Do schools accept children without Arabic?</h3>
+        <p>Yes. Most international schools teach Arabic as additional language, not requirement for entry.</p>
+        
+        <h3>What if my child has special educational needs?</h3>
+        <p>Some schools offer learning support, though services vary significantly. Research specific school capabilities before applying.</p>
+      `,
+    },
     'women-safety-dress-code-doha-qatar': {
       id: '39',
       title: 'Women\'s Safety and Dress Code in Doha, Qatar: Complete 2025 Guide',
