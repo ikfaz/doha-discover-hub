@@ -3,6 +3,8 @@ import { useParams, Link } from 'react-router-dom';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 import Newsletter from '@/components/Newsletter';
+import SchoolComparisonTool from '@/components/SchoolComparisonTool';
+import SchoolFeeCalculator from '@/components/SchoolFeeCalculator';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Calendar, Clock, Facebook, Twitter, Share2 } from 'lucide-react';
@@ -4071,10 +4073,36 @@ const BlogPost = () => {
               </div>
 
               {/* Article Content */}
-              <div 
-                className="prose prose-lg max-w-none"
-                dangerouslySetInnerHTML={{ __html: post.content }}
-              />
+              {slug === 'international-schools-qatar-2025' ? (
+                <div className="prose prose-lg max-w-none space-y-8">
+                  {/* First section of content */}
+                  <div dangerouslySetInnerHTML={{ __html: post.content.split('<h2 id="fees">')[0] }} />
+                  
+                  {/* School Fee Calculator */}
+                  <div className="not-prose my-12">
+                    <SchoolFeeCalculator />
+                  </div>
+                  
+                  {/* Continue with fees section */}
+                  <div dangerouslySetInnerHTML={{ __html: '<h2 id="fees">' + post.content.split('<h2 id="fees">')[1].split('<h2 id="waitlists">')[0] }} />
+                  
+                  {/* Continue with waitlists through quality sections */}
+                  <div dangerouslySetInnerHTML={{ __html: '<h2 id="waitlists">' + post.content.split('<h2 id="waitlists">')[1].split('<h2 id="budget">')[0] }} />
+                  
+                  {/* School Comparison Tool */}
+                  <div className="not-prose my-12">
+                    <SchoolComparisonTool />
+                  </div>
+                  
+                  {/* Rest of content */}
+                  <div dangerouslySetInnerHTML={{ __html: '<h2 id="budget">' + post.content.split('<h2 id="budget">')[1] }} />
+                </div>
+              ) : (
+                <div 
+                  className="prose prose-lg max-w-none"
+                  dangerouslySetInnerHTML={{ __html: post.content }}
+                />
+              )}
 
               {/* Tags */}
               <div className="mt-12 pt-8 border-t">
