@@ -13,6 +13,110 @@ const BlogPost = () => {
   
   // Blog post data based on slug
   const blogPosts: Record<string, any> = {
+    'mia-nmoq-museum-combo-guide': {
+      id: '29',
+      title: 'A Tale of Two Museums: Unlocking Qatar\'s Past and Present with the MIA + NMoQ Combo',
+      date: 'May 8, 2025',
+      author: 'Experience Doha Team',
+      readTime: '11 min read',
+      category: 'Culture',
+      imageUrl: 'https://images.unsplash.com/photo-1554907984-15263bfd63bd?q=80&w=2668&auto=format&fit=crop',
+      content: `
+        <p>Doha is rapidly establishing itself as a global cultural capital, and at the heart of this transformation are two architectural and artistic masterpieces: the <strong>Museum of Islamic Art (MIA)</strong> and the <strong>National Museum of Qatar (NMoQ)</strong>. These institutions, managed by Qatar Museums, offer a profound and complementary journey through the region's history, from the dawn of Islam to the modern, dynamic nation of Qatar. For the discerning traveler, the most efficient and enriching way to experience both is through a combined ticket or the <strong>Discover One Pass</strong>.</p>
+        
+        <h2 id="mia">The Museum of Islamic Art (MIA): A Beacon of Global Heritage</h2>
+        <p>Perched on its own man-made island overlooking the Doha Corniche, the MIA is a symbol of Qatar's commitment to preserving and celebrating Islamic heritage.</p>
+        
+        <h3 id="architecture">Architectural Grandeur</h3>
+        <p>The museum's structure is a work of art in itself, designed by the legendary Chinese-American architect <strong>I.M. Pei</strong>, who emerged from retirement at the age of 91 to take on the project. Pei famously traveled the Islamic world for months, seeking inspiration before settling on the design of the 13th-century Sabil (ablutions fountain) of the Mosque of Ibn Tulun in Cairo.</p>
+        <p>The resulting building is a masterpiece of geometric simplicity and light. Its stark, white limestone façade changes color with the shifting sun, and the central atrium, capped by a massive dome, offers a breathtaking view of the West Bay skyline through its expansive glass wall. The MIA is a serene, contemplative space that perfectly houses its precious contents.</p>
+        
+        <h3 id="collection">The Collection: 14 Centuries of Islamic Art</h3>
+        <p>The MIA's collection is one of the most comprehensive in the world, spanning over 1,400 years and three continents. It is not limited to any single country or period but rather showcases the diversity and unity of Islamic civilization.</p>
+        <ul>
+          <li><strong>Ceramics and Glass:</strong> The collection of ceramics, particularly from Iran and Iraq, demonstrates the evolution of glaze techniques and decorative motifs. The glass collection, including rare pieces from the Fatimid and Mamluk periods, is particularly noteworthy.</li>
+          <li><strong>Textiles and Carpets:</strong> Exquisite silk textiles, embroidered garments, and finely woven carpets from across the Islamic world illustrate the mastery of traditional craftsmanship.</li>
+          <li><strong>Metalwork:</strong> Intricately engraved astrolabes, celestial globes, and bronze objects reveal the scientific and artistic achievements of Islamic artisans.</li>
+          <li><strong>Manuscripts and Calligraphy:</strong> The museum holds a stunning array of Qur'anic manuscripts, illuminated texts, and examples of calligraphy, the highest art form in Islamic culture.</li>
+        </ul>
+        <p>The MIA is more than a museum; it is a cultural bridge, inviting visitors to explore the shared history and artistic legacy of the Islamic world.</p>
+        
+        <h2 id="nmoq">The National Museum of Qatar (NMoQ): The Desert Rose Unfolds</h2>
+        <p>A short distance from the MIA, the <strong>National Museum of Qatar (NMoQ)</strong> tells the story of the nation itself, from its deep geological past to its ambitious future.</p>
+        
+        <h3 id="design">A Design Inspired by Nature</h3>
+        <p>The NMoQ, which opened in 2019, is a stunning architectural feat designed by French architect <strong>Jean Nouvel</strong>. Its structure is inspired by the <strong>desert rose</strong>, a crystalline formation found in the Qatari desert. The interlocking, disc-like structures create a dynamic, complex form that seems to emerge organically from the landscape.</p>
+        <p>The building is a narrative device in itself, guiding visitors through a series of eleven immersive galleries that trace Qatar's history in three main chapters:</p>
+        <ol>
+          <li><strong>The Beginnings:</strong> The geological formation of the peninsula, its natural environment, and the life of its earliest inhabitants.</li>
+          <li><strong>Life in Qatar:</strong> The transition from nomadic life to settled communities, the importance of the sea, and the pearl diving industry that formed the backbone of the economy.</li>
+          <li><strong>The Modern History of Qatar:</strong> The discovery of oil and gas, the unification of the country, and its emergence as a modern, global player.</li>
+        </ol>
+        
+        <h3 id="storytelling">Immersive Storytelling</h3>
+        <p>The NMoQ is renowned for its innovative approach to exhibition design. Instead of static displays, the museum uses a combination of high-definition films, oral histories, archival photographs, and large-scale architectural projections to create a fully immersive, multi-sensory experience.</p>
+        <ul>
+          <li><strong>The Pearl Carpet of Baroda:</strong> A highlight of the collection is this magnificent carpet, embroidered with over 1.5 million pearls and adorned with diamonds, rubies, and emeralds, originally commissioned for a mosque in Medina.</li>
+          <li><strong>Oral Histories:</strong> Throughout the galleries, personal accounts from Qataris provide an intimate and human perspective on the nation's transformation.</li>
+        </ul>
+        
+        <h2 id="combo">The Combo Advantage: Practicality and Value</h2>
+        <p>For visitors with limited time, combining the MIA and NMoQ into a single cultural day is highly recommended. Qatar Museums facilitates this with convenient ticketing options.</p>
+        
+        <h3 id="discover-pass">The Discover One Pass</h3>
+        <p>The most practical option is the <strong>Discover One Pass</strong>, which grants access to four renowned museums, including the MIA and NMoQ, as well as any temporary exhibitions.</p>
+        
+        <table class="w-full border-collapse my-6">
+          <thead>
+            <tr class="bg-qatar-maroon text-white">
+              <th class="border border-gray-300 p-3 text-left">Feature</th>
+              <th class="border border-gray-300 p-3 text-left">MIA (Museum of Islamic Art)</th>
+              <th class="border border-gray-300 p-3 text-left">NMoQ (National Museum of Qatar)</th>
+              <th class="border border-gray-300 p-3 text-left">Combo Advantage</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border border-gray-300 p-3"><strong>Focus</strong></td>
+              <td class="border border-gray-300 p-3">14 centuries of global Islamic art and culture.</td>
+              <td class="border border-gray-300 p-3">The history and future of the nation of Qatar.</td>
+              <td class="border border-gray-300 p-3">Comprehensive cultural and historical context.</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border border-gray-300 p-3"><strong>Architecture</strong></td>
+              <td class="border border-gray-300 p-3">I.M. Pei's geometric, minimalist masterpiece.</td>
+              <td class="border border-gray-300 p-3">Jean Nouvel's dynamic, desert rose-inspired structure.</td>
+              <td class="border border-gray-300 p-3">A study in contrasting architectural genius.</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 p-3"><strong>Key Exhibits</strong></td>
+              <td class="border border-gray-300 p-3">Rare manuscripts, ceramics, and metalwork.</td>
+              <td class="border border-gray-300 p-3">The Pearl Carpet of Baroda, immersive film projections.</td>
+              <td class="border border-gray-300 p-3">Diverse collections appealing to all interests.</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border border-gray-300 p-3"><strong>Location</strong></td>
+              <td class="border border-gray-300 p-3">On a man-made island, adjacent to MIA Park.</td>
+              <td class="border border-gray-300 p-3">Near the Doha Corniche, easily accessible.</td>
+              <td class="border border-gray-300 p-3">Close proximity allows for easy travel between the two.</td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <p><strong>Logistics:</strong> Both museums are located along the Corniche, making the journey between them a simple 10-15 minute taxi ride or a pleasant walk through the MIA Park. Starting at the MIA in the morning and moving to the NMoQ after lunch allows for a full day of cultural immersion.</p>
+        <p>By utilizing the combo ticket, visitors not only save on admission costs but also gain a holistic understanding of Qatar's identity—a nation deeply rooted in its Islamic and Bedouin past, yet boldly embracing a future defined by innovation and global engagement. The MIA and NMoQ are not just museums; they are the twin pillars of Doha's cultural renaissance.</p>
+      `,
+      tableOfContents: [
+        { id: 'mia', title: 'The Museum of Islamic Art (MIA)', level: 2 },
+        { id: 'architecture', title: 'Architectural Grandeur', level: 3 },
+        { id: 'collection', title: 'The Collection: 14 Centuries of Islamic Art', level: 3 },
+        { id: 'nmoq', title: 'The National Museum of Qatar (NMoQ)', level: 2 },
+        { id: 'design', title: 'A Design Inspired by Nature', level: 3 },
+        { id: 'storytelling', title: 'Immersive Storytelling', level: 3 },
+        { id: 'combo', title: 'The Combo Advantage: Practicality and Value', level: 2 },
+        { id: 'discover-pass', title: 'The Discover One Pass', level: 3 },
+      ],
+    },
     'souq-waqif-night-experiences-haggling': {
       id: '28',
       title: 'The Heart of Doha After Dark: Souq Waqif Night Experiences and the Art of Haggling',

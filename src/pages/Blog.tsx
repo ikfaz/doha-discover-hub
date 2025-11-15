@@ -17,6 +17,15 @@ const Blog = () => {
   
   const allPosts = [
     {
+      id: '29',
+      title: 'A Tale of Two Museums: MIA + NMoQ Combo Guide',
+      excerpt: 'Discover Qatar\'s cultural treasures with our guide to visiting the Museum of Islamic Art and National Museum of Qatar using the Discover One Pass.',
+      imageUrl: 'https://images.unsplash.com/photo-1554907984-15263bfd63bd?w=800&auto=format&fit=crop',
+      category: 'Culture',
+      date: 'May 8, 2025',
+      slug: 'mia-nmoq-museum-combo-guide',
+    },
+    {
       id: '28',
       title: 'The Heart of Doha After Dark: Souq Waqif Night Experiences',
       excerpt: 'Discover Souq Waqif at night - from authentic Qatari dining and shisha cafés to mastering the art of haggling in the ancient market alleyways.',
