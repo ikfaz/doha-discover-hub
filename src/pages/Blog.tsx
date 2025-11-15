@@ -49,12 +49,23 @@ import hamadAirportGuideImage from '@/assets/hamad-airport-guide.jpg';
 import dohaTransformingImage from '@/assets/doha-transforming-middle-east.jpg';
 import costOfLivingImage from '@/assets/cost-of-living-doha-2025.jpg';
 import womenSafetyDressCodeImage from '@/assets/women-safety-dress-code-doha.jpg';
+import internationalSchoolsImage from '@/assets/international-schools-qatar-guide.jpg';
 
 const Blog = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   
   const allPosts = [
+    {
+      id: '40',
+      title: 'International Schools in Qatar 2025: Waitlists, Fees, and Application Guide',
+      excerpt: 'Complete guide to international schools in Qatar 2025. Compare fees from QAR 30,000-120,000/year, understand waitlist situations, and learn application strategies.',
+      imageUrl: internationalSchoolsImage,
+      category: 'Expat-Tips',
+      date: 'May 19, 2025',
+      slug: 'international-schools-qatar-2025',
+      tags: ['international schools', 'school fees', 'education Qatar', 'British schools', 'American schools'],
+    },
     {
       id: '39',
       title: 'Women\'s Safety and Dress Code in Doha, Qatar: Complete 2025 Guide',
