@@ -10,6 +10,36 @@ import { Badge } from '@/components/ui/badge';
 import { Search } from 'lucide-react';
 import { Skeleton } from '@/components/ui/skeleton';
 import { Card, CardContent } from '@/components/ui/card';
+import desertSafariImage from '@/assets/desert-safari-inland-sea.jpg';
+import museumsImage from '@/assets/mia-nmoq-museums.jpg';
+import souqWaqifImage from '@/assets/souq-waqif-night.jpg';
+import layoverImage from '@/assets/doha-layover-experience.jpg';
+import qatarAirwaysImage from '@/assets/qatar-airways-stopover.jpg';
+import mediationImage from '@/assets/doha-mediation-hub.jpg';
+import fifaImage from '@/assets/fifa-u17-world-cup.jpg';
+import cornicheImage from '@/assets/corniche-sunset-dhow.jpg';
+import pearlImage from '@/assets/pearl-qatar-luxury.jpg';
+import kataraImage from '@/assets/katara-cultural-village.jpg';
+import airportInteriorImage from '@/assets/hamad-airport-interior.jpg';
+import fiveBestImage from '@/assets/five-best-layover.jpg';
+import nineHourImage from '@/assets/9-hour-stopover.jpg';
+import discoverImage from '@/assets/discover-qatar.jpg';
+import twentyFourHoursImage from '@/assets/24-hours-itinerary.jpg';
+import timeGuideImage from '@/assets/layover-time-guide.jpg';
+import perfectLayoverImage from '@/assets/perfect-layover.jpg';
+import unmissableImage from '@/assets/10-unmissable-things.jpg';
+import transfersImage from '@/assets/hamad-airport-transfers.jpg';
+import stopoverProgramImage from '@/assets/stopover-program.jpg';
+import topAttractionsImage from '@/assets/top-10-attractions.jpg';
+import cuisineImage from '@/assets/qatari-cuisine.jpg';
+import eventsImage from '@/assets/cultural-events.jpg';
+import miaImage from '@/assets/mia-museum.jpg';
+import shoppingImage from '@/assets/shopping-guide.jpg';
+import expatImage from '@/assets/expat-tips.jpg';
+import arabicCoffeeImage from '@/assets/arabic-coffee-culture.jpg';
+import architectureImage from '@/assets/doha-architecture.jpg';
+import familyImage from '@/assets/family-friendly.jpg';
+import weekendImage from '@/assets/weekend-getaways.jpg';
 
 const Blog = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -20,7 +50,7 @@ const Blog = () => {
       id: '30',
       title: 'The Ultimate Arabian Adventure: Desert Safari and Inland Sea',
       excerpt: 'Experience the thrill of dune bashing and the serenity of Khor Al Adaid - your complete guide to Qatar\'s quintessential desert safari adventure.',
-      imageUrl: 'https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=800&auto=format&fit=crop',
+      imageUrl: desertSafariImage,
       category: 'Attractions',
       date: 'May 9, 2025',
       slug: 'desert-safari-inland-sea-khor-al-adaid',
@@ -29,7 +59,7 @@ const Blog = () => {
       id: '29',
       title: 'A Tale of Two Museums: MIA + NMoQ Combo Guide',
       excerpt: 'Discover Qatar\'s cultural treasures with our guide to visiting the Museum of Islamic Art and National Museum of Qatar using the Discover One Pass.',
-      imageUrl: 'https://images.unsplash.com/photo-1554907984-15263bfd63bd?w=800&auto=format&fit=crop',
+      imageUrl: museumsImage,
       category: 'Culture',
       date: 'May 8, 2025',
       slug: 'mia-nmoq-museum-combo-guide',
@@ -38,7 +68,7 @@ const Blog = () => {
       id: '28',
       title: 'The Heart of Doha After Dark: Souq Waqif Night Experiences',
       excerpt: 'Discover Souq Waqif at night - from authentic Qatari dining and shisha cafés to mastering the art of haggling in the ancient market alleyways.',
-      imageUrl: 'https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=800&auto=format&fit=crop',
+      imageUrl: souqWaqifImage,
       category: 'Culture',
       date: 'May 7, 2025',
       slug: 'souq-waqif-night-experiences-haggling',
@@ -47,7 +77,7 @@ const Blog = () => {
       id: '27',
       title: 'The Ultimate 24-48 Hour Layover in Doha: A Complete Guide',
       excerpt: 'Transform your Doha layover into a mini-vacation with our detailed 24-hour dash and 48-hour exploration itineraries, from cultural highlights to desert adventures.',
-      imageUrl: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&auto=format&fit=crop',
+      imageUrl: layoverImage,
       category: 'Expat-Tips',
       date: 'May 6, 2025',
       slug: 'ultimate-doha-layover-24-48-hours',
@@ -56,7 +86,7 @@ const Blog = () => {
       id: '26',
       title: 'Two Holidays in One: Qatar Airways Stopover Packages Guide',
       excerpt: 'Everything you need to know about Qatar Airways stopover packages - from $14/night hotels to premium lounge access at Hamad International Airport.',
-      imageUrl: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&auto=format&fit=crop',
+      imageUrl: qatarAirwaysImage,
       category: 'Expat-Tips',
       date: 'May 5, 2025',
       slug: 'qatar-airways-stopover-packages-lounge',
@@ -65,7 +95,7 @@ const Blog = () => {
       id: '25',
       title: 'Beyond the Horizon: Doha as a Global Mediation Hub',
       excerpt: 'Discover how Doha became a center for international diplomacy and peace negotiations, from the Congo peace talks to global conflict resolution.',
-      imageUrl: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&auto=format&fit=crop',
+      imageUrl: mediationImage,
       category: 'Culture',
       date: 'May 4, 2025',
       slug: 'doha-global-mediation-hub-congo-peace',
@@ -74,7 +104,7 @@ const Blog = () => {
       id: '24',
       title: 'The Stars of Tomorrow: FIFA U-17 World Cup Qatar 2025™ Guide',
       excerpt: 'Complete guide to attending the FIFA U-17 World Cup in Qatar - matches, tickets, fan zones, and witnessing future football legends in action.',
-      imageUrl: 'https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=800&auto=format&fit=crop',
+      imageUrl: fifaImage,
       category: 'Events',
       date: 'May 3, 2025',
       slug: 'fifa-u17-world-cup-qatar-2025',
@@ -83,7 +113,7 @@ const Blog = () => {
       id: '23',
       title: 'The Golden Hour in Doha: Corniche Sunset Walks and Dhow Cruises',
       excerpt: 'Experience the magic of Doha\'s waterfront at sunset - from peaceful Corniche walks with skyline views to romantic dhow cruise adventures.',
-      imageUrl: 'https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=800&auto=format&fit=crop',
+      imageUrl: cornicheImage,
       category: 'Attractions',
       date: 'May 2, 2025',
       slug: 'corniche-sunset-dhow-cruise-guide',
@@ -92,7 +122,7 @@ const Blog = () => {
       id: '22',
       title: 'The Jewel of Doha: Luxury Shopping and Dining at The Pearl-Qatar',
       excerpt: 'Discover The Pearl-Qatar - from Porto Arabia\'s luxury brands to Qanat Quartier\'s Venetian charm, your guide to high-end shopping and fine dining.',
-      imageUrl: 'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&auto=format&fit=crop',
+      imageUrl: pearlImage,
       category: 'Lifestyle',
       date: 'May 1, 2025',
       slug: 'pearl-qatar-luxury-shopping-dining',
@@ -101,7 +131,7 @@ const Blog = () => {
       id: '21',
       title: 'A Year of Culture: Katara Cultural Village Events Calendar 2025',
       excerpt: 'Your complete guide to festivals, exhibitions, and performances at Katara Cultural Village throughout 2025 - from dhow festivals to jazz concerts.',
-      imageUrl: 'https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=800&auto=format&fit=crop',
+      imageUrl: kataraImage,
       category: 'Events',
       date: 'April 30, 2025',
       slug: 'katara-cultural-village-events-2025',
@@ -110,7 +140,7 @@ const Blog = () => {
       id: '20',
       title: 'Ten Ways to Enjoy a Layover at Doha Airport',
       excerpt: 'Discover how to make the most of your time at Hamad International Airport - from The Orchard garden to spa treatments, art installations, and more.',
-      imageUrl: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&auto=format&fit=crop',
+      imageUrl: airportInteriorImage,
       category: 'Expat-Tips',
       date: 'April 29, 2025',
       slug: 'doha-airport-layover-activities',
@@ -119,7 +149,7 @@ const Blog = () => {
       id: '19',
       title: 'The Five Best Things to Do on a Layover in Doha',
       excerpt: 'Top 5 must-do experiences during your Doha layover - Museum of Islamic Art, Souq Waqif, Corniche, desert safaris, and Katara Cultural Village.',
-      imageUrl: 'https://images.unsplash.com/photo-1510382291698-79dd5a410d6e?w=800&auto=format&fit=crop',
+      imageUrl: fiveBestImage,
       category: 'Attractions',
       date: 'April 28, 2025',
       slug: 'five-best-things-doha-layover',
@@ -128,7 +158,7 @@ const Blog = () => {
       id: '18',
       title: '9-Hour Stopover in Qatar: Is It Worth Exploring?',
       excerpt: 'A detailed analysis of whether you should leave the airport during a 9-hour layover - weighing benefits, risks, and practical considerations.',
-      imageUrl: 'https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?w=800&auto=format&fit=crop',
+      imageUrl: nineHourImage,
       category: 'Expat-Tips',
       date: 'April 27, 2025',
       slug: '9-hour-stopover-qatar-worth-it',
@@ -137,7 +167,7 @@ const Blog = () => {
       id: '17',
       title: 'Stopover in Qatar: Discover Qatar - Why Visit',
       excerpt: 'Explore what makes Qatar a world-class destination beyond just a transit point - from cultural attractions to safety, dining, and natural landscapes.',
-      imageUrl: 'https://images.unsplash.com/photo-1518182170546-07661fd94144?w=800&auto=format&fit=crop',
+      imageUrl: discoverImage,
       category: 'Culture',
       date: 'April 26, 2025',
       slug: 'discover-qatar-stopover-guide',
@@ -146,7 +176,7 @@ const Blog = () => {
       id: '16',
       title: '24 Hours in Doha: Complete Qatar Airways Itinerary',
       excerpt: 'Make the most of a full day in Doha with this detailed 24-hour itinerary - from sunrise on the Corniche to evening dhow cruises.',
-      imageUrl: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop',
+      imageUrl: twentyFourHoursImage,
       category: 'Attractions',
       date: 'April 25, 2025',
       slug: '24-hours-doha-qatar-airways',
@@ -155,7 +185,7 @@ const Blog = () => {
       id: '15',
       title: 'Layover in Doha Guide: What to Do in 2–12 Hours',
       excerpt: 'Detailed breakdown of what you can realistically accomplish during layovers of different lengths - from 2 hours to a full day in Doha.',
-      imageUrl: 'https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?w=800&auto=format&fit=crop',
+      imageUrl: timeGuideImage,
       category: 'Expat-Tips',
       date: 'April 24, 2025',
       slug: 'doha-layover-time-guide',
@@ -164,7 +194,7 @@ const Blog = () => {
       id: '14',
       title: 'How to Spend the Perfect Layover in Doha, Qatar',
       excerpt: 'Master the art of the Doha layover with expert tips on timing, transportation, attractions, and making every hour count during your stopover.',
-      imageUrl: 'https://images.unsplash.com/photo-1518182170546-07661fd94144?w=800&auto=format&fit=crop',
+      imageUrl: perfectLayoverImage,
       category: 'Expat-Tips',
       date: 'April 23, 2025',
       slug: 'perfect-layover-doha-guide',
@@ -173,7 +203,7 @@ const Blog = () => {
       id: '13',
       title: '10 Unmissable Things To Do In Doha On A Layover (2025)',
       excerpt: 'Make the most of your Doha layover with these incredible experiences - from museums and souqs to desert safaris and cultural villages.',
-      imageUrl: 'https://images.unsplash.com/photo-1518182170546-07661fd94144?w=800&auto=format&fit=crop',
+      imageUrl: unmissableImage,
       category: 'Attractions',
       date: 'April 22, 2025',
       slug: 'things-to-do-doha-layover',
@@ -182,7 +212,7 @@ const Blog = () => {
       id: '12',
       title: 'Transfers at Hamad International Airport: Complete Guide',
       excerpt: 'Navigate one of the world\'s finest airports with ease. From security to shopping, everything you need to know about connecting through Doha.',
-      imageUrl: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&auto=format&fit=crop',
+      imageUrl: transfersImage,
       category: 'Expat-Tips',
       date: 'April 21, 2025',
       slug: 'hamad-airport-transfers-guide',
@@ -191,7 +221,7 @@ const Blog = () => {
       id: '11',
       title: 'Complete Doha Layover Guide: Qatar Stopover Program Explained',
       excerpt: 'Transform your layover into an adventure with Qatar Airways\' amazing stopover program. Hotels from $14/night, visa-free entry, and world-class experiences await.',
-      imageUrl: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&auto=format&fit=crop',
+      imageUrl: stopoverProgramImage,
       category: 'Expat-Tips',
       date: 'April 20, 2025',
       slug: 'qatar-stopover-program-guide',
@@ -200,7 +230,7 @@ const Blog = () => {
       id: '1',
       title: 'Top 10 Must-Visit Attractions in Doha',
       excerpt: 'Discover the most spectacular sights and experiences in Qatar\'s vibrant capital city.',
-      imageUrl: 'https://images.unsplash.com/photo-1510382291698-79dd5a410d6e?w=800&auto=format&fit=crop',
+      imageUrl: topAttractionsImage,
       category: 'Attractions',
       date: 'April 15, 2025',
       slug: 'top-attractions-doha',
@@ -209,7 +239,7 @@ const Blog = () => {
       id: '2',
       title: 'Best Local Restaurants for Authentic Qatari Cuisine',
       excerpt: 'Taste the traditional flavors of Qatar at these local favorite dining spots.',
-      imageUrl: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&auto=format&fit=crop',
+      imageUrl: cuisineImage,
       category: 'Food',
       date: 'April 10, 2025',
       slug: 'authentic-qatari-cuisine',
@@ -218,7 +248,7 @@ const Blog = () => {
       id: '3',
       title: 'Upcoming Cultural Events in Doha This Summer',
       excerpt: 'Mark your calendar for these exciting cultural festivals and events.',
-      imageUrl: 'https://images.unsplash.com/photo-1466442929976-97f336a657be?w=800&auto=format&fit=crop',
+      imageUrl: eventsImage,
       category: 'Events',
       date: 'April 5, 2025',
       slug: 'summer-cultural-events',
@@ -227,7 +257,7 @@ const Blog = () => {
       id: '4',
       title: 'A Day at the Museum of Islamic Art',
       excerpt: 'Explore one of Doha\'s most iconic architectural landmarks and its world-class collections.',
-      imageUrl: 'https://images.unsplash.com/photo-1473177104440-ffee2f376098?w=800&auto=format&fit=crop',
+      imageUrl: miaImage,
       category: 'Attractions',
       date: 'April 2, 2025',
       slug: 'museum-islamic-art',
@@ -236,7 +266,7 @@ const Blog = () => {
       id: '5',
       title: 'Shopping Guide: From Traditional Souqs to Luxury Malls',
       excerpt: 'Navigate Doha\'s diverse shopping scene with this comprehensive guide.',
-      imageUrl: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&auto=format&fit=crop',
+      imageUrl: shoppingImage,
       category: 'Lifestyle',
       date: 'March 28, 2025',
       slug: 'doha-shopping-guide',
@@ -245,7 +275,7 @@ const Blog = () => {
       id: '6',
       title: 'Essential Tips for Expats Moving to Qatar',
       excerpt: 'Everything you need to know about settling into life in Doha as an expatriate.',
-      imageUrl: 'https://images.unsplash.com/photo-1496307653780-42ee777d4833?w=800&auto=format&fit=crop',
+      imageUrl: expatImage,
       category: 'Expat-Tips',
       date: 'March 25, 2025',
       slug: 'qatar-expat-guide',
@@ -254,7 +284,7 @@ const Blog = () => {
       id: '7',
       title: 'The Art of Arabic Coffee: A Cultural Experience',
       excerpt: 'Learn about the traditions and rituals behind Qatar\'s coffee culture.',
-      imageUrl: 'https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=800&auto=format&fit=crop',
+      imageUrl: arabicCoffeeImage,
       category: 'Culture',
       date: 'March 20, 2025',
       slug: 'arabic-coffee-culture',
@@ -263,7 +293,7 @@ const Blog = () => {
       id: '8',
       title: 'Desert Adventures: Exploring the Inland Sea',
       excerpt: 'Experience the thrill of dune bashing and the serenity of Qatar\'s desert landscape.',
-      imageUrl: 'https://images.unsplash.com/photo-1482881497185-d4a9ddbe4151?w=800&auto=format&fit=crop',
+      imageUrl: desertSafariImage,
       category: 'Adventures',
       date: 'March 15, 2025',
       slug: 'desert-adventures',
@@ -272,7 +302,7 @@ const Blog = () => {
       id: '9',
       title: 'Modern Architecture in Doha: A Visual Journey',
       excerpt: 'Discover the stunning architectural marvels that define Doha\'s skyline.',
-      imageUrl: 'https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=800&auto=format&fit=crop',
+      imageUrl: architectureImage,
       category: 'Architecture',
       date: 'March 10, 2025',
       slug: 'doha-architecture',
@@ -281,7 +311,7 @@ const Blog = () => {
       id: '10',
       title: 'Family-Friendly Activities in Doha',
       excerpt: 'The best entertainment options and activities for families with children.',
-      imageUrl: 'https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=800&auto=format&fit=crop',
+      imageUrl: familyImage,
       category: 'Family',
       date: 'March 5, 2025',
       slug: 'family-activities',
@@ -290,7 +320,7 @@ const Blog = () => {
       id: '11',
       title: 'Weekend Getaways Near Doha',
       excerpt: 'Explore nearby destinations perfect for short breaks from the city.',
-      imageUrl: 'https://images.unsplash.com/photo-1426604966848-d7adac402bff?w=800&auto=format&fit=crop',
+      imageUrl: weekendImage,
       category: 'Travel',
       date: 'March 1, 2025',
       slug: 'weekend-getaways',
