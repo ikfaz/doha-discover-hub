@@ -17,6 +17,15 @@ const Blog = () => {
   
   const allPosts = [
     {
+      id: '25',
+      title: 'Beyond the Horizon: Doha as a Global Mediation Hub',
+      excerpt: 'Discover how Doha became a center for international diplomacy and peace negotiations, from the Congo peace talks to global conflict resolution.',
+      imageUrl: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&auto=format&fit=crop',
+      category: 'Culture',
+      date: 'May 4, 2025',
+      slug: 'doha-global-mediation-hub-congo-peace',
+    },
+    {
       id: '24',
       title: 'The Stars of Tomorrow: FIFA U-17 World Cup Qatar 2025™ Guide',
       excerpt: 'Complete guide to attending the FIFA U-17 World Cup in Qatar - matches, tickets, fan zones, and witnessing future football legends in action.',

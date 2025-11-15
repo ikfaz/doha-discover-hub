@@ -13,6 +13,100 @@ const BlogPost = () => {
   
   // Blog post data based on slug
   const blogPosts: Record<string, any> = {
+    'doha-global-mediation-hub-congo-peace': {
+      id: '25',
+      title: 'Beyond the Horizon: Doha as a Global Mediation Hub and the Significance of the Congo Peace Talks',
+      date: 'May 4, 2025',
+      author: 'Experience Doha Team',
+      readTime: '9 min read',
+      category: 'Culture',
+      imageUrl: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2668&auto=format&fit=crop',
+      content: `
+        <p>In recent decades, the State of Qatar has strategically positioned itself as a crucial player in international diplomacy, transforming its capital, Doha, into a recognized <strong>global mediation hub</strong>. This role extends far beyond its economic power, leveraging its political neutrality, strategic location, and commitment to dialogue to facilitate peace talks and resolve complex international conflicts. A prime example of this commitment is Qatar's sustained effort to mediate the long-running conflict in the Democratic Republic of Congo (DRC), culminating in the recent <strong>Doha Framework for Peace</strong> signed between the DRC government and the M23 movement.</p>
+        
+        <h2 id="mediation-strategy">The Pillars of Qatar's Mediation Strategy</h2>
+        <p>Qatar's success as a mediator is built on several key factors that distinguish its diplomatic approach:</p>
+        
+        <h3 id="neutrality">1. Political Neutrality and Trust</h3>
+        <p>Qatar maintains diplomatic relations with a wide array of global and regional powers, often serving as a rare bridge between otherwise hostile entities. This perceived neutrality allows conflicting parties to meet on Qatari soil with a degree of trust and security that might not be possible elsewhere. The country has successfully hosted talks for conflicts ranging from the Darfur peace process to negotiations between the US and the Taliban.</p>
+        
+        <h3 id="location">2. Strategic Location and Resources</h3>
+        <p>Doha's central geographic location makes it an accessible meeting point for delegations from Africa, Asia, and the West. Furthermore, Qatar's significant financial resources enable it to provide world-class, secure, and discreet facilities for prolonged negotiations, ensuring that logistical concerns do not derail delicate peace processes.</p>
+        
+        <h3 id="commitment">3. Sustained Commitment to Dialogue</h3>
+        <p>Unlike some mediators who engage only sporadically, Qatar demonstrates a long-term commitment to the conflicts it seeks to resolve. This sustained engagement is crucial for building the necessary rapport and trust between warring factions, which often takes years of patient diplomacy.</p>
+        
+        <h2 id="congo-talks">The Congo Peace Talks: A Diplomatic Triumph</h2>
+        <p>The conflict in the eastern DRC, involving the government and the <strong>M23 (March 23 Movement)</strong>, has been one of Africa's most protracted and devastating humanitarian crises. Qatar's involvement in mediating this conflict underscores its growing influence in African diplomacy.</p>
+        
+        <h3 id="doha-framework">The Road to the Doha Framework</h3>
+        <p>Qatar began hosting multiple rounds of talks between the DRC government and the M23 movement in the months leading up to the final agreement. These negotiations were critical for establishing preconditions, building confidence, and agreeing on a structured path toward a lasting resolution.</p>
+        <ul>
+          <li><strong>Key Achievement:</strong> The signing of the <strong>Doha Framework for Peace</strong> in late 2025 marked a significant breakthrough. This framework is not necessarily a final peace treaty but a foundational document that sets out the structure, principles, and mechanisms for a comprehensive peace deal.</li>
+          <li><strong>Focus Areas:</strong> The framework typically addresses critical issues such as a permanent ceasefire, the disarmament and demobilization of M23 fighters, security sector reform, and mechanisms for political participation and reconciliation.</li>
+        </ul>
+        
+        <h3 id="significance">The Significance of the Agreement</h3>
+        <p>The successful mediation of the Congo talks in Doha sends a powerful message to the international community:</p>
+        <ol>
+          <li><strong>African Focus:</strong> It highlights Qatar's increasing diplomatic focus on African conflicts, moving beyond its traditional Middle Eastern sphere of influence.</li>
+          <li><strong>Model for Resolution:</strong> The Doha Framework provides a potential model for resolving other complex conflicts, demonstrating that even deeply entrenched hostilities can be addressed through persistent, neutral mediation.</li>
+          <li><strong>Soft Power Projection:</strong> The success burnishes Qatar's reputation as a reliable and effective global partner, projecting its soft power and enhancing its standing on the world stage.</li>
+        </ol>
+        
+        <h2 id="global-nexus">Doha: A Global Nexus for Peace</h2>
+        <p>The Congo peace talks are one of many examples that solidify Doha's status as a nexus for global peace efforts.</p>
+        
+        <table class="w-full border-collapse my-6">
+          <thead>
+            <tr class="bg-qatar-maroon text-white">
+              <th class="border border-gray-300 p-3 text-left">Conflict Mediated by Qatar</th>
+              <th class="border border-gray-300 p-3 text-left">Year/Period</th>
+              <th class="border border-gray-300 p-3 text-left">Outcome/Significance</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border border-gray-300 p-3"><strong>Darfur Peace Agreement</strong></td>
+              <td class="border border-gray-300 p-3">2011</td>
+              <td class="border border-gray-300 p-3">Comprehensive peace deal between the Sudanese government and rebel groups.</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border border-gray-300 p-3"><strong>US-Taliban Talks</strong></td>
+              <td class="border border-gray-300 p-3">2013 - 2020</td>
+              <td class="border border-gray-300 p-3">Facilitated the signing of the Doha Agreement, leading to the withdrawal of US forces from Afghanistan.</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 p-3"><strong>Lebanese Political Crisis</strong></td>
+              <td class="border border-gray-300 p-3">2008</td>
+              <td class="border border-gray-300 p-3">The Doha Agreement resolved a major political deadlock and averted civil conflict.</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border border-gray-300 p-3"><strong>DRC Government - M23</strong></td>
+              <td class="border border-gray-300 p-3">2025</td>
+              <td class="border border-gray-300 p-3">Signing of the Doha Framework for Peace, establishing a path to end the conflict.</td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <h2 id="future">The Future of Qatari Diplomacy</h2>
+        <p>Qatar's role as a mediation hub is not a temporary endeavor but a long-term strategic investment in its foreign policy. By continuing to host and facilitate these critical dialogues, Doha is not only contributing to global peace and stability but also ensuring its own security and prosperity through a policy of engagement and non-confrontation.</p>
+        
+        <p>The signing of the Doha Framework for Peace for the DRC is a powerful affirmation of this strategy, demonstrating that the quiet diplomacy conducted in the meeting rooms of Doha can have profound, life-changing consequences for millions of people across the globe. As the world faces an increasing number of complex conflicts, Doha's commitment to being a neutral ground for dialogue will only grow in importance.</p>
+      `,
+      tableOfContents: [
+        { title: "The Pillars of Qatar's Mediation Strategy", id: 'mediation-strategy' },
+        { title: '1. Political Neutrality and Trust', id: 'neutrality' },
+        { title: '2. Strategic Location and Resources', id: 'location' },
+        { title: '3. Sustained Commitment to Dialogue', id: 'commitment' },
+        { title: 'The Congo Peace Talks', id: 'congo-talks' },
+        { title: 'The Road to the Doha Framework', id: 'doha-framework' },
+        { title: 'The Significance of the Agreement', id: 'significance' },
+        { title: 'Doha: A Global Nexus for Peace', id: 'global-nexus' },
+        { title: 'The Future of Qatari Diplomacy', id: 'future' }
+      ],
+      tags: ['Diplomacy', 'Peace Talks', 'Global Politics', 'Mediation', 'International Relations']
+    },
     'fifa-u17-world-cup-qatar-2025': {
       id: '24',
       title: 'The Stars of Tomorrow: A Guide to the FIFA U-17 World Cup Qatar 2025™ Matches and Tickets',
