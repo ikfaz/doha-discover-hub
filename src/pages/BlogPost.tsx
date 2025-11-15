@@ -10,6 +10,7 @@ import DrivingLicenseChecker from '@/components/DrivingLicenseChecker';
 import MentalHealthDirectory from '@/components/MentalHealthDirectory';
 import { TherapyCostCalculator } from '@/components/TherapyCostCalculator';
 import { BankComparison } from '@/components/BankComparison';
+import { MobilePlanComparison } from '@/components/MobilePlanComparison';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Calendar, Clock, Facebook, Twitter, Share2 } from 'lucide-react';
@@ -53,12 +54,290 @@ import westBayAlWaabImage from '@/assets/west-bay-al-waab-comparison.jpg';
 import drivingDohaImage from '@/assets/driving-doha-2025-guide.jpg';
 import lgbtqQatarImage from '@/assets/lgbtq-experiences-qatar-guide.jpg';
 import bankAccountQatarImage from '@/assets/bank-account-qatar-guide.jpg';
+import mobilePlansQatarImage from '@/assets/mobile-plans-qatar-guide.jpg';
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   
   // Blog post data based on slug
   const blogPosts: Record<string, any> = {
+    'mobile-plans-qatar-guide': {
+      id: '46',
+      title: 'Best Mobile and Data Plans in Qatar 2025: Ooredoo vs Vodafone Complete Guide',
+      date: 'May 26, 2025',
+      author: 'Experience Doha Team',
+      readTime: '16 min read',
+      category: 'Expat-Tips',
+      imageUrl: mobilePlansQatarImage,
+      tags: ['mobile plans', 'Ooredoo', 'Vodafone', 'telecom Qatar', 'data packages'],
+      content: `
+        <p class="lead">Qatar's mobile market features two providers: Ooredoo (formerly Qtel) and Vodafone Qatar. This duopoly means limited competition but also simplified choice. Understanding each provider's strengths, coverage, and pricing helps expats select optimal plans for their communication needs.</p>
+        
+        <h2 id="ooredoo">Ooredoo Qatar: The Established Player</h2>
+        <p>Ooredoo, formerly Qtel, has operated in Qatar since 1987, holding market dominance with approximately 60% subscriber share. As the original provider, its infrastructure is extensive and mature.</p>
+        
+        <h3>Postpaid Plans 2025</h3>
+        <p><strong>Shahry Plans (Monthly Contracts):</strong></p>
+        <ul>
+          <li><strong>Shahry 150</strong> - QAR 150/month
+            <ul>
+              <li>10GB data</li>
+              <li>Unlimited local calls</li>
+              <li>100 international minutes</li>
+              <li>Social media packages</li>
+            </ul>
+          </li>
+          <li><strong>Shahry 250</strong> - QAR 250/month
+            <ul>
+              <li>30GB data</li>
+              <li>Unlimited local calls</li>
+              <li>200 international minutes</li>
+              <li>Roaming benefits</li>
+            </ul>
+          </li>
+          <li><strong>Shahry 400</strong> - QAR 400/month
+            <ul>
+              <li>Unlimited data</li>
+              <li>Unlimited local calls</li>
+              <li>400 international minutes</li>
+              <li>Premium roaming</li>
+              <li>Device financing options</li>
+            </ul>
+          </li>
+        </ul>
+
+        <p><strong>Prepaid Options:</strong></p>
+        <ul>
+          <li>Hala Prepaid - Pay-as-you-go</li>
+          <li>Daily/weekly data packages</li>
+          <li>Starting QAR 40 for basic usage</li>
+          <li>Top-up available everywhere</li>
+        </ul>
+
+        <h3>Ooredoo Advantages</h3>
+        <ul>
+          <li><strong>Coverage Excellence</strong> - Best network in remote areas</li>
+          <li><strong>Infrastructure Maturity</strong> - Established, reliable systems</li>
+          <li><strong>5G Leadership</strong> - Early 5G deployment</li>
+          <li><strong>Roaming Partnerships</strong> - Extensive international networks</li>
+          <li><strong>Customer Service Centers</strong> - More physical locations</li>
+          <li><strong>Device Variety</strong> - Latest phones available</li>
+          <li><strong>Enterprise Solutions</strong> - Strong business services</li>
+        </ul>
+
+        <h3>Ooredoo Disadvantages</h3>
+        <ul>
+          <li><strong>Higher Pricing</strong> - Generally more expensive</li>
+          <li><strong>Customer Service Quality</strong> - Can be inconsistent</li>
+          <li><strong>Plan Flexibility</strong> - Less customizable options</li>
+          <li><strong>Promotional Offers</strong> - Fewer than Vodafone</li>
+          <li><strong>Contract Terms</strong> - Longer commitments sometimes required</li>
+        </ul>
+
+        <h2 id="vodafone">Vodafone Qatar: The Challenger</h2>
+        <p>Vodafone entered Qatar in 2009, bringing international standards and competitive pricing. With approximately 40% market share, it provides healthy competition that benefits consumers.</p>
+
+        <h3>Postpaid Plans 2025</h3>
+        <p><strong>Red Plans:</strong></p>
+        <ul>
+          <li><strong>Red XS</strong> - QAR 130/month
+            <ul>
+              <li>8GB data</li>
+              <li>Unlimited local calls/SMS</li>
+              <li>50 international minutes</li>
+            </ul>
+          </li>
+          <li><strong>Red M</strong> - QAR 200/month
+            <ul>
+              <li>25GB data</li>
+              <li>Unlimited local calls/SMS</li>
+              <li>150 international minutes</li>
+              <li>Entertainment subscriptions included</li>
+            </ul>
+          </li>
+          <li><strong>Red L</strong> - QAR 350/month
+            <ul>
+              <li>60GB data</li>
+              <li>Unlimited local calls/SMS</li>
+              <li>300 international minutes</li>
+              <li>Premium content access</li>
+              <li>Device upgrade options</li>
+            </ul>
+          </li>
+          <li><strong>Red XL</strong> - QAR 500/month
+            <ul>
+              <li>Unlimited data</li>
+              <li>All inclusive features</li>
+              <li>Maximum roaming benefits</li>
+            </ul>
+          </li>
+        </ul>
+
+        <p><strong>Prepaid Options:</strong></p>
+        <ul>
+          <li>Flex Prepaid - Flexible bundles</li>
+          <li>Control spending easily</li>
+          <li>Data rollover options</li>
+          <li>Starting QAR 35</li>
+        </ul>
+
+        <h3>Vodafone Advantages</h3>
+        <ul>
+          <li><strong>Competitive Pricing</strong> - Generally 10-15% cheaper</li>
+          <li><strong>Flexible Plans</strong> - More customization options</li>
+          <li><strong>App Experience</strong> - Superior mobile app</li>
+          <li><strong>Promotions</strong> - Regular deals and offers</li>
+          <li><strong>Entertainment Bundles</strong> - Streaming service inclusions</li>
+          <li><strong>Contract Terms</strong> - More flexible commitments</li>
+          <li><strong>Innovation</strong> - Quick to adopt new features</li>
+        </ul>
+
+        <h3>Vodafone Disadvantages</h3>
+        <ul>
+          <li><strong>Coverage Gaps</strong> - Occasional issues in remote areas</li>
+          <li><strong>Newer Network</strong> - Less mature infrastructure</li>
+          <li><strong>Fewer Physical Stores</strong> - Limited service center locations</li>
+          <li><strong>Roaming</strong> - Smaller international network</li>
+          <li><strong>Enterprise Services</strong> - Less developed than Ooredoo</li>
+        </ul>
+
+        <h2 id="internet">Home Internet Packages</h2>
+        
+        <h3>Ooredoo Home Internet</h3>
+        <ul>
+          <li>Fibre 50 - QAR 330/month (50 Mbps)</li>
+          <li>Fibre 100 - QAR 380/month (100 Mbps)</li>
+          <li>Fibre 250 - QAR 480/month (250 Mbps)</li>
+          <li>Fibre 500 - QAR 680/month (500 Mbps)</li>
+          <li>Installation: QAR 500 (often waived with contracts)</li>
+        </ul>
+
+        <h3>Vodafone Home Internet</h3>
+        <ul>
+          <li>GigaHome 60 - QAR 299/month</li>
+          <li>GigaHome 100 - QAR 349/month</li>
+          <li>GigaHome 250 - QAR 449/month</li>
+          <li>GigaHome 500 - QAR 649/month</li>
+          <li>Installation: QAR 450 (promotional waivers common)</li>
+        </ul>
+
+        <p><strong>Home Internet Winner:</strong> Vodafone edges ahead on pricing for comparable speeds.</p>
+
+        <h2 id="simcard">Getting Your SIM Card: Step-by-Step</h2>
+        
+        <h3>Required Documents</h3>
+        <ul>
+          <li>Passport (original)</li>
+          <li>Qatar ID (or entry visa for prepaid)</li>
+          <li>Proof of address (for postpaid)</li>
+          <li>Local contact number (if available)</li>
+        </ul>
+
+        <h3>Where to Purchase</h3>
+        <p><strong>Ooredoo Locations:</strong></p>
+        <ul>
+          <li>Main stores in all major malls</li>
+          <li>Airport arrivals (immediate purchase)</li>
+          <li>Authorized retailers throughout city</li>
+        </ul>
+
+        <p><strong>Vodafone Locations:</strong></p>
+        <ul>
+          <li>Mall of Qatar, City Center, Villaggio</li>
+          <li>Airport counter available</li>
+          <li>Numerous authorized dealers</li>
+        </ul>
+
+        <p><strong>Activation Time:</strong> Immediate for prepaid, 24-48 hours for postpaid with contracts.</p>
+
+        <h2 id="tips">Money-Saving Tips</h2>
+        <ol>
+          <li><strong>Prepaid for Testing</strong> - Try both providers before committing to postpaid</li>
+          <li><strong>Negotiate Contracts</strong> - Ask for promotional pricing, especially for longer commitments</li>
+          <li><strong>Bundle Services</strong> - Home internet + mobile packages offer discounts</li>
+          <li><strong>Monitor Usage</strong> - Apps show real-time consumption to avoid overage</li>
+          <li><strong>WiFi Preference</strong> - Use home/office WiFi to conserve mobile data</li>
+          <li><strong>International Calling Apps</strong> - WhatsApp/FaceTime cheaper than carrier minutes</li>
+          <li><strong>Loyalty Programs</strong> - Both offer rewards for long-term customers</li>
+          <li><strong>Timing Matters</strong> - End-of-quarter promotions common</li>
+        </ol>
+
+        <h2 id="service">Customer Service Comparison</h2>
+        
+        <h3>Ooredoo Service</h3>
+        <ul>
+          <li>Call center: +974 111</li>
+          <li>Multiple languages</li>
+          <li>Physical stores numerous</li>
+          <li>Online chat available</li>
+          <li>Response time: Variable</li>
+        </ul>
+
+        <h3>Vodafone Service</h3>
+        <ul>
+          <li>Call center: +974 111 1 111</li>
+          <li>English/Arabic proficient</li>
+          <li>Fewer physical locations</li>
+          <li>App-based support excellent</li>
+          <li>Generally faster resolution</li>
+        </ul>
+
+        <p><strong>Customer Service Winner:</strong> Vodafone receives higher satisfaction ratings for responsiveness and problem resolution.</p>
+
+        <h2 id="5g">5G Coverage and Future-Proofing</h2>
+        <p>Both providers offer extensive 5G networks:</p>
+
+        <h3>Ooredoo 5G</h3>
+        <ul>
+          <li>Launched 2018 (first commercial 5G globally)</li>
+          <li>Coverage: 95%+ of populated areas</li>
+          <li>Speeds: Up to 1+ Gbps</li>
+        </ul>
+
+        <h3>Vodafone 5G</h3>
+        <ul>
+          <li>Launched 2019</li>
+          <li>Coverage: 90%+ of Doha</li>
+          <li>Competitive speeds</li>
+        </ul>
+
+        <p><strong>Recommendation:</strong> Both provide excellent 5G. Device compatibility matters more than provider choice for 5G experience.</p>
+
+        <h2 id="porting">Porting Your Number Between Providers</h2>
+        <p>Qatar allows number portability:</p>
+        <ul>
+          <li>Request porting from new provider</li>
+          <li>Complete within 3-7 business days</li>
+          <li>No fees charged</li>
+          <li>Service interruption minimal</li>
+          <li>Outstanding balances must be cleared first</li>
+        </ul>
+
+        <h2 id="recommendation">Final Recommendation</h2>
+        <p><strong>Choose Ooredoo if:</strong> Coverage in remote areas essential, prefer established infrastructure, need extensive international roaming, or employer provides.</p>
+        
+        <p><strong>Choose Vodafone if:</strong> Value-conscious, want flexible contracts, prioritize mobile app experience, primarily stay in Doha metropolitan area, or appreciate promotional offers.</p>
+        
+        <p><strong>Best Approach:</strong> Many expats start with prepaid SIMs from both providers, testing coverage at home and work locations before committing to postpaid contracts.</p>
+
+        <h2 id="faq">FAQ: Mobile Plans Qatar 2025</h2>
+        
+        <h3>Can I keep my international number?</h3>
+        <p>No. Qatar doesn't support international number portability. You'll receive Qatari number (+974).</p>
+
+        <h3>Do I need Qatar ID for SIM card?</h3>
+        <p>Prepaid: Passport sufficient for tourists. Postpaid: Qatar ID required for residents.</p>
+
+        <h3>Which provider has better call quality?</h3>
+        <p>Both comparable in urban Doha. Ooredoo slightly superior in remote areas.</p>
+
+        <h3>Can I cancel my postpaid contract early?</h3>
+        <p>Yes, but early termination fees apply (often QAR 200-500 plus remaining device payments).</p>
+
+        <h3>Do plans include international texting?</h3>
+        <p>Most plans focus on calling minutes. SMS internationally charged separately or use WhatsApp/apps instead.</p>
+      `,
+    },
     'bank-account-qatar-guide': {
       id: '45',
       title: 'Opening a Bank Account in Qatar: QNB vs International Banks Guide',
@@ -5772,6 +6051,19 @@ const BlogPost = () => {
                   
                   {/* Rest of content */}
                   <div dangerouslySetInnerHTML={{ __html: '<h2 id="decision">' + post.content.split('<h2 id="decision">')[1] }} />
+                </div>
+              ) : slug === 'mobile-plans-qatar-guide' ? (
+                <div className="prose prose-lg max-w-none space-y-8">
+                  {/* First section through Vodafone disadvantages */}
+                  <div dangerouslySetInnerHTML={{ __html: post.content.split('<h2 id="internet">')[0] }} />
+                  
+                  {/* Mobile Plan Comparison Tool */}
+                  <div className="not-prose my-12">
+                    <MobilePlanComparison />
+                  </div>
+                  
+                  {/* Rest of content */}
+                  <div dangerouslySetInnerHTML={{ __html: '<h2 id="internet">' + post.content.split('<h2 id="internet">')[1] }} />
                 </div>
               ) : (
                 <div 
