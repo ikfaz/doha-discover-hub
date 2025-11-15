@@ -17,6 +17,15 @@ const Blog = () => {
   
   const allPosts = [
     {
+      id: '26',
+      title: 'Two Holidays in One: Qatar Airways Stopover Packages Guide',
+      excerpt: 'Everything you need to know about Qatar Airways stopover packages - from $14/night hotels to premium lounge access at Hamad International Airport.',
+      imageUrl: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&auto=format&fit=crop',
+      category: 'Expat-Tips',
+      date: 'May 5, 2025',
+      slug: 'qatar-airways-stopover-packages-lounge',
+    },
+    {
       id: '25',
       title: 'Beyond the Horizon: Doha as a Global Mediation Hub',
       excerpt: 'Discover how Doha became a center for international diplomacy and peace negotiations, from the Congo peace talks to global conflict resolution.',
