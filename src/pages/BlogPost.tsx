@@ -36,12 +36,205 @@ import prostitutionLawsImage from '@/assets/prostitution-laws-legal-guide.jpg';
 import dohaSafetyImage from '@/assets/doha-safety-guide.jpg';
 import womenDrivingImage from '@/assets/women-driving-qatar.jpg';
 import qatariDishesImage from '@/assets/qatari-dishes-guide.jpg';
+import hamadAirportGuideImage from '@/assets/hamad-airport-guide.jpg';
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   
   // Blog post data based on slug
   const blogPosts: Record<string, any> = {
+    'hamad-international-airport-guide': {
+      id: '36',
+      title: 'Hamad International Airport: The Ultimate Guide to Qatar\'s Award-Winning Aviation Hub',
+      date: 'May 15, 2025',
+      author: 'Experience Doha Team',
+      readTime: '15 min read',
+      category: 'Expat-Tips',
+      imageUrl: hamadAirportGuideImage,
+      content: `
+        <p class="lead">Hamad International Airport (HIA) in Doha is not just an airport—it's one of the world's most luxurious and technologically advanced aviation hubs. Since its opening in 2014, HIA has redefined global air travel through world-class design, smooth passenger experience, and unmatched facilities.</p>
+        
+        <p>Whether you are visiting Doha for the first time, connecting on a layover, or planning a vacation in Qatar, understanding what makes this airport special will elevate your journey.</p>
+        
+        <h2 id="unique">What Makes Hamad International Airport Unique?</h2>
+        <p>Hamad International Airport is consistently ranked as one of the top airports globally, often competing with Singapore Changi and Tokyo Haneda. It has won multiple awards for service quality, design, cleanliness, and passenger experience.</p>
+        
+        <p>Here's why travelers love it:</p>
+        
+        <h3>1. Ultra-Modern Architecture</h3>
+        <p>The airport is designed with modern Arab aesthetics, wide open spaces, and elegant lighting. The terminals are quiet, clean, and incredibly spacious, making the airport feel luxurious and calm even during peak hours.</p>
+        
+        <h3>2. Seamless Passenger Flow</h3>
+        <p>From check-in to boarding, everything is designed for maximum efficiency. HIA offers:</p>
+        <ul>
+          <li>Fast security checks</li>
+          <li>Clearly marked signs</li>
+          <li>Automated e-gates for residents</li>
+          <li>Multiple immigration counters</li>
+        </ul>
+        <p>Even during busy events like the FIFA World Cup, the airport is known for handling passenger flow effortlessly.</p>
+        
+        <h3>3. The Iconic Lamp Bear</h3>
+        <p>One of the airport's signature features is the famous yellow <strong>Lamp Bear sculpture</strong>. Created by Swiss artist Urs Fischer, this 7-meter artwork has become one of the must-see photo spots for travelers.</p>
+        
+        <h2 id="location">Location & Accessibility</h2>
+        <p>Hamad International Airport is located just <strong>15 minutes from central Doha</strong>, making it one of the most conveniently located major airports in the Middle East.</p>
+        
+        <h3>Transportation from HIA to Doha:</h3>
+        <ul>
+          <li><strong>Taxi:</strong> Reliable and metered; available 24/7</li>
+          <li><strong>Uber & Careem:</strong> Popular and often cheaper</li>
+          <li><strong>Metro:</strong> The Red Line connects the airport directly to West Bay, Katara, Lusail, and Msheireb</li>
+          <li><strong>Private Transfers:</strong> Offered by many hotels</li>
+          <li><strong>Rent-a-car:</strong> Available inside the arrival terminal</li>
+        </ul>
+        
+        <p>Whether you are heading to West Bay, Souq Waqif, or The Pearl, reaching your destination is quick and easy.</p>
+        
+        <h2 id="facilities">World-Class Facilities at Hamad International Airport</h2>
+        <p>HIA is often described as a mini-city because of its extensive facilities. Here are the top features travelers should know about:</p>
+        
+        <h3>1. Shopping: One of the Best Duty-Free Experiences in the World</h3>
+        <p>Hamad International Airport offers high-end retail therapy like no other. The duty-free area includes:</p>
+        <ul>
+          <li>Luxury brands like Gucci, Dior, Rolex, and Hermes</li>
+          <li>Electronics stores with Apple, Samsung, and gaming accessories</li>
+          <li>Perfume & skincare boutiques with exclusive regional collections</li>
+          <li>Qatari souvenirs including dates, oud, and handicrafts</li>
+        </ul>
+        <p>Travelers often say the airport feels like a five-star mall.</p>
+        
+        <h3>2. Dining Options: From Fast Food to Fine Dining</h3>
+        <p>HIA offers over 30 restaurants, cafés, and lounges.</p>
+        <p>Popular options include:</p>
+        <ul>
+          <li>Harrods Tea Room</li>
+          <li>Burger King & McDonald's</li>
+          <li>Marché (healthy dining)</li>
+          <li>Illy Café</li>
+          <li>Subway</li>
+          <li>Qataf Café (local flavors)</li>
+        </ul>
+        <p>There are plenty of choices whether you want a quick snack, international cuisine, or a relaxing coffee break during a long layover.</p>
+        
+        <h3>3. Lounges: Unmatched Luxury for Travelers</h3>
+        <p>Hamad International Airport is home to some of the most luxurious lounges on the planet.</p>
+        
+        <h4>Al Mourjan Business Lounge</h4>
+        <p>Exclusive to Qatar Airways Business Class passengers.</p>
+        <p>Features include:</p>
+        <ul>
+          <li>A private restaurant</li>
+          <li>Quiet areas</li>
+          <li>Showers</li>
+          <li>Workspaces</li>
+          <li>A reflection pool</li>
+          <li>Sleep pods</li>
+        </ul>
+        
+        <h4>Al Safwa First Class Lounge</h4>
+        <p>Considered by many the best first-class lounge in the world.</p>
+        <p>Highlights include:</p>
+        <ul>
+          <li>Museum-level architecture</li>
+          <li>Private suites</li>
+          <li>Spa</li>
+          <li>Fine-dining restaurant</li>
+          <li>Fountain installations</li>
+          <li>Business center</li>
+        </ul>
+        
+        <h4>Oryx Lounge (Paid Access)</h4>
+        <ul>
+          <li>Open to all travelers for a fee</li>
+          <li>Perfect for long layovers</li>
+        </ul>
+        
+        <h3>4. Sleeping & Relaxation Facilities</h3>
+        <p>For passengers on long transit stays, HIA provides:</p>
+        <ul>
+          <li>Sleep pods</li>
+          <li>Quiet rooms</li>
+          <li>Oryx Airport Hotel inside the terminal</li>
+        </ul>
+        
+        <p>The Oryx Airport Hotel offers:</p>
+        <ul>
+          <li>A swimming pool</li>
+          <li>Fitness center</li>
+          <li>Spa treatments</li>
+          <li>Spacious rooms with runway views</li>
+        </ul>
+        
+        <h3>5. Art & Cultural Installations</h3>
+        <p>HIA is essentially an art museum. Throughout the airport, you will find world-class art pieces by global and local artists including:</p>
+        <ul>
+          <li>Lamp Bear (main concourse)</li>
+          <li>Arne Quinze sculptures</li>
+          <li>Tom Claassen's animal installations</li>
+          <li>Qatari heritage artworks</li>
+        </ul>
+        <p>These pieces turn layovers into cultural experiences.</p>
+        
+        <h2 id="family">Family-Friendly Features</h2>
+        <p>Hamad International Airport is incredibly family-friendly, offering:</p>
+        <ul>
+          <li>Large children's play areas</li>
+          <li>Baby-changing rooms</li>
+          <li>Family restrooms</li>
+          <li>Stroller rentals</li>
+          <li>Kid-friendly dining options</li>
+        </ul>
+        <p>If you're traveling with children, you will appreciate how easy the airport makes family travel.</p>
+        
+        <h2 id="technology">Technology & Security</h2>
+        <p>HIA is one of the most technologically advanced airports in the world, with:</p>
+        <ul>
+          <li>Facial recognition systems</li>
+          <li>Smart gates</li>
+          <li>Digital boarding</li>
+          <li>Automated check-in</li>
+          <li>Ultra-fast free Wi-Fi</li>
+          <li>Charging ports everywhere</li>
+        </ul>
+        <p>Safety is strict but efficient, ensuring travelers feel secure without facing long delays.</p>
+        
+        <h2 id="expansion">Airport Expansion: The Future of HIA</h2>
+        <p>To accommodate increasing tourism and Qatar Airways growth, HIA is undergoing major expansion. New features include:</p>
+        <ul>
+          <li>Tropical-inspired Orchard Garden with 300+ trees</li>
+          <li>More lounges and retail areas</li>
+          <li>Additional boarding gates</li>
+          <li>Enhanced baggage systems</li>
+        </ul>
+        <p>This expansion aims to make HIA the World's Best Airport for years ahead.</p>
+        
+        <h2 id="hotels">Hotels Near Hamad International Airport</h2>
+        <p>If your layover is long but you prefer staying outside the terminal, here are close options:</p>
+        <ul>
+          <li>Hyatt Regency Oryx Doha</li>
+          <li>Crowne Plaza Doha – The Business Park</li>
+          <li>Holiday Inn Doha – The Business Park</li>
+          <li>Steigenberger Hotel Doha</li>
+        </ul>
+        <p>All are within 10–15 minutes of the airport.</p>
+        
+        <h2 id="tips">Tips for First-Time Travelers Through HIA</h2>
+        <ul>
+          <li>Arrive 3 hours before departure (especially during holidays)</li>
+          <li>Download the HIA Qatar mobile app for maps and gate info</li>
+          <li>If on a long layover, consider a Doha City Tour—Qatar Airways offers one for transit passengers</li>
+          <li>Don't miss the stunning Orchard Garden in the new terminal</li>
+          <li>If you're flying Qatar Airways, take advantage of the incredible lounge network</li>
+        </ul>
+        
+        <h2 id="final">Final Thoughts</h2>
+        <p>Hamad International Airport is more than a transit point—it's a complete luxury travel experience. With world-class architecture, exceptional dining, high-end shopping, and smooth connectivity to Doha, it remains one of the world's most impressive airports.</p>
+        
+        <p>Whether you're arriving in Doha for the first time or just passing through on a layover, HIA ensures your journey is comfortable, modern, and unforgettable.</p>
+      `,
+      tags: ['Hamad Airport', 'HIA', 'Airport Guide', 'Transit', 'Lounges']
+    },
     'qatari-dishes-doha-culinary-guide': {
       id: '35',
       title: 'Qatari Dishes You Must Try in Doha: A Complete Culinary Guide',
