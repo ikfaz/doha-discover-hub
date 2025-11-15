@@ -13,6 +13,61 @@ const BlogPost = () => {
   
   // Blog post data based on slug
   const blogPosts: Record<string, any> = {
+    '9-hour-stopover-qatar-worth-it': {
+      id: '18',
+      title: '9-Hour Stopover in Qatar: Is It Worth Exploring?',
+      date: 'April 27, 2025',
+      author: 'Experience Doha Team',
+      readTime: '10 min read',
+      category: 'Expat-Tips',
+      imageUrl: 'https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?q=80&w=2668&auto=format&fit=crop',
+      content: `
+        <p>The nine-hour stopover represents a particularly interesting decision point for travelers—long enough that exploration becomes genuinely feasible yet short enough that risks and logistics require careful consideration. The worthiness question hinges on individual priorities, risk tolerance, and specific circumstances, but the case for exploration generally outweighs staying airport-bound when passengers understand what's involved.</p>
+        
+        <h2 id="time-breakdown">Honest Time Accounting</h2>
+        <p>Begin with honest time accounting. Nine total hours becomes substantially less when deconstructed. Deplaning, immigration, and customs consume thirty to sixty minutes depending on arrival volume. Transportation to Doha's attractions requires twenty to forty-five minutes depending on destination and traffic. Similar return time, plus thirty minutes of buffer, must be added. Airport security for departure, particularly during busy periods, can extend beyond an hour. Most airlines recommend three-hour advance arrival for international flights. These requirements, combined conservatively, leave perhaps three to four hours for actual exploration—meaningful time, but not abundant.</p>
+        
+        <h2 id="case-for">The Case FOR Exploring</h2>
+        <p>The case for exploring rests on several pillars. Cultural enrichment represents primary justification—experiencing Doha, even briefly, provides insights into Gulf society, Islamic artistic traditions, Arabian hospitality, and Qatar's specific developmental trajectory. These experiences broaden perspectives in ways airport lounges cannot replicate. Travel memories often center on places experienced rather than airports transited, making brief city visits potentially significant journey components.</p>
+        
+        <h2 id="physical-benefits">Physical and Mental Benefits</h2>
+        <p>Physical benefits also support exploration. Extended sedentary periods across multiple flights create discomfort that walking through souqs or along waterfronts alleviates. Fresh air (though hot) and natural light provide physiological benefits after recirculated cabin atmospheres. Mental engagement with new environments refreshes cognition in ways that passive waiting doesn't achieve. For long-haul travelers with flights exceeding ten hours before and after layovers, the break from aircraft confinement proves valuable.</p>
+        
+        <h2 id="economic-value">Economic Efficiency</h2>
+        <p>Economic efficiency weighs favorably when considering that many attractions involve minimal or zero entrance fees. Souq Waqif wandering costs nothing unless you purchase items. Corniche walking is free. Museum of Islamic Art admission is complimentary. Even transportation costs remain reasonable—airport taxi to Souq Waqif and return might total $30-40 USD total. Against airport dining costs, which run high everywhere, the exploration expense becomes comparable to staying confined.</p>
+        
+        <h2 id="case-against">The Case AGAINST Exploring</h2>
+        <p>The case against exploring involves risk management primarily. Missing flights creates cascading problems—rebooking fees, missed connections onward, potential overnight accommodation needs, and significant stress. Though the actual risk remains low when departing conservatively, risk-averse travelers may find the anxiety undermines enjoyment. Immigration complications, while rare given visa arrangements, represent small possibility requiring consideration. Physical exhaustion from exploration followed by continued travel affects some passengers negatively, particularly on overnight segments where sleep becomes essential.</p>
+        
+        <h2 id="circumstances">Practical Circumstances That Matter</h2>
+        <p>Practical circumstances influence decisions considerably. First-time layover visitors face steeper learning curves than return travelers familiar with Doha's geography and systems. Solo travelers move faster than groups, particularly groups with children requiring attention. Seasons matter—summer explorations in forty-degree Celsius heat differ substantially from winter visits with pleasant temperatures. Flight timing affects decisions—daytime layovers facilitate different explorations than overnight stopovers.</p>
+        
+        <h2 id="who-benefits">Who Benefits Most from Exploring</h2>
+        <p>Certain travelers particularly benefit from exploration. Those with specific cultural interests—Islamic art enthusiasts, architecture students, Arabian culture scholars—find Doha's offerings directly relevant to their interests. Travelers on extended journeys, accumulating transit time across multiple segments, appreciate activity breaking routine. Photographers seeking Middle Eastern imagery find abundant subjects in Doha's environments. Food enthusiasts eager for authentic Gulf or South Asian cuisines discover exceptional restaurants serving immigrant community populations.</p>
+        
+        <h2 id="who-should-stay">Who Should Stay at the Airport</h2>
+        <p>Conversely, some travelers might wisely remain airport-bound. Those with tight onward connections beyond Doha—where missing the flight creates compounding problems—should eliminate risk. Travelers experiencing illness or excessive fatigue serve their wellbeing better through rest than activity. Those with significant valuable luggage (though luggage typically checks through) might feel uncomfortable distancing from possessions. Travelers with mobility limitations face potential challenges in souq environments with uneven surfaces and significant walking requirements.</p>
+        
+        <h2 id="middle-ground">The Middle-Ground Approach</h2>
+        <p>A middle-ground approach suits many situations. Explore, but choose single destinations requiring minimal logistics. Souq Waqif, with its proximity and variety, accomplishes much within limited time. Stick to covered areas during hot seasons. Maintain constant awareness of time, setting multiple phone alerts for airport return. Have taxi company numbers ready rather than depending on street hailing. Keep critical documents and some currency on your person rather than in checked luggage. These precautions reduce risks while enabling exploration benefits.</p>
+        
+        <h2 id="verdict">The Final Verdict</h2>
+        <p>The fundamental question—worth it?—resolves differently for each traveler based on weighted priorities. For those valuing cultural experiences, physical activity, and memory creation, nine-hour stopovers provide sufficient time for meaningful Doha engagement when planned carefully. For those prioritizing certainty, rest, and risk elimination, airport facilities adequately serve the layover period. Neither choice is wrong; both reflect legitimate travel philosophies. The option's existence, facilitated by Qatar's visa policies and Doha's proximity to its airport, creates choices that many transit hubs don't offer, representing itself a form of value that travelers can appreciate regardless of which option they ultimately choose.</p>
+      `,
+      tableOfContents: [
+        { title: 'Honest Time Accounting', id: 'time-breakdown' },
+        { title: 'The Case FOR Exploring', id: 'case-for' },
+        { title: 'Physical and Mental Benefits', id: 'physical-benefits' },
+        { title: 'Economic Efficiency', id: 'economic-value' },
+        { title: 'The Case AGAINST Exploring', id: 'case-against' },
+        { title: 'Practical Circumstances That Matter', id: 'circumstances' },
+        { title: 'Who Benefits Most from Exploring', id: 'who-benefits' },
+        { title: 'Who Should Stay at the Airport', id: 'who-should-stay' },
+        { title: 'The Middle-Ground Approach', id: 'middle-ground' },
+        { title: 'The Final Verdict', id: 'verdict' }
+      ],
+      tags: ['Decision Making', '9 Hours', 'Layover Planning', 'Risk Assessment', 'Travel Tips']
+    },
     'discover-qatar-stopover-guide': {
       id: '17',
       title: 'Stopover in Qatar: Discover Qatar - Why Visit',

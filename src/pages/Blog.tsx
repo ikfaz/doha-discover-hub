@@ -17,6 +17,15 @@ const Blog = () => {
   
   const allPosts = [
     {
+      id: '18',
+      title: '9-Hour Stopover in Qatar: Is It Worth Exploring?',
+      excerpt: 'A detailed analysis of whether you should leave the airport during a 9-hour layover - weighing benefits, risks, and practical considerations.',
+      imageUrl: 'https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?w=800&auto=format&fit=crop',
+      category: 'Expat-Tips',
+      date: 'April 27, 2025',
+      slug: '9-hour-stopover-qatar-worth-it',
+    },
+    {
       id: '17',
       title: 'Stopover in Qatar: Discover Qatar - Why Visit',
       excerpt: 'Explore what makes Qatar a world-class destination beyond just a transit point - from cultural attractions to safety, dining, and natural landscapes.',
