@@ -37,12 +37,212 @@ import dohaSafetyImage from '@/assets/doha-safety-guide.jpg';
 import womenDrivingImage from '@/assets/women-driving-qatar.jpg';
 import qatariDishesImage from '@/assets/qatari-dishes-guide.jpg';
 import hamadAirportGuideImage from '@/assets/hamad-airport-guide.jpg';
+import dohaTransformingImage from '@/assets/doha-transforming-middle-east.jpg';
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   
   // Blog post data based on slug
   const blogPosts: Record<string, any> = {
+    'doha-changing-middle-east': {
+      id: '37',
+      title: 'Doha: The City That\'s Changing the Middle East',
+      date: 'May 16, 2025',
+      author: 'Experience Doha Team',
+      readTime: '16 min read',
+      category: 'Culture',
+      imageUrl: dohaTransformingImage,
+      content: `
+        <p class="lead">Doha, the capital of Qatar, is one of the fastest-growing and most transformative cities in the world. In just a few decades, it has evolved from a quiet fishing and pearl-diving village into a global hub for finance, tourism, technology, luxury living, and cultural innovation.</p>
+        
+        <p>Today, Doha is not only shaping the future of Qatar—<strong>it is redefining the Middle East</strong>.</p>
+        
+        <h2 id="vision">A Visionary City Built for the Future</h2>
+        <p>Doha's progress is driven by <strong>Qatar National Vision 2030</strong>, a long-term development blueprint focused on:</p>
+        <ul>
+          <li>Economic diversification</li>
+          <li>Sustainable growth</li>
+          <li>Social development</li>
+          <li>Technological innovation</li>
+        </ul>
+        
+        <p>Because of this ambitious plan, Doha has become one of the world's most modern and well-organized cities, blending traditional Arab culture with futuristic architecture and advanced infrastructure.</p>
+        
+        <h2 id="architecture">Stunning Architecture That Redefines the Skyline</h2>
+        <p>One of Doha's most iconic features is its <strong>skyline</strong>—an impressive collection of towers, each with its own architectural identity. The West Bay district is home to award-winning buildings such as:</p>
+        <ul>
+          <li>Tornado Tower</li>
+          <li>Doha Tower</li>
+          <li>Al Bidda Tower</li>
+          <li>Palm Tower</li>
+        </ul>
+        
+        <p>Doha's architecture combines innovation, sustainability, and cultural heritage. Many buildings incorporate designs inspired by Islamic art, desert dunes, and marine traditions, making the city visually unique in the Middle East.</p>
+        
+        <h2 id="transportation">A Global Transportation and Aviation Hub</h2>
+        <p>Doha's transformation is closely linked to <strong>Hamad International Airport (HIA)</strong> and <strong>Qatar Airways</strong>—both considered among the best in the world. They have positioned Doha as a strategic transit point connecting Asia, Europe, Africa, and the Americas.</p>
+        
+        <h3>Key strengths include:</h3>
+        <ul>
+          <li>One of the world's top-ranked airports</li>
+          <li>Qatar Airways' massive global network</li>
+          <li>A state-of-the-art metro system</li>
+          <li>World-class roads and public transport</li>
+        </ul>
+        
+        <p>This connectivity makes Doha not only easy to visit but also ideal for business, trade, and tourism.</p>
+        
+        <h2 id="culture">A Cultural Capital of the Middle East</h2>
+        <p>Doha has invested heavily in cultural institutions that highlight both Qatari heritage and global art.</p>
+        
+        <h3>Museum of Islamic Art (MIA)</h3>
+        <p>Designed by I.M. Pei, this museum is a masterpiece and one of the world's leading cultural institutions.</p>
+        
+        <h3>National Museum of Qatar (NMoQ)</h3>
+        <p>Shaped like a desert rose, this architectural wonder tells Qatar's story through immersive exhibits.</p>
+        
+        <h3>Katara Cultural Village</h3>
+        <p>A vibrant hub for:</p>
+        <ul>
+          <li>Theater</li>
+          <li>Film festivals</li>
+          <li>Art exhibitions</li>
+          <li>Traditional music</li>
+          <li>Workshops</li>
+        </ul>
+        
+        <h3>Msheireb Downtown Doha</h3>
+        <p>The world's first fully sustainable smart city built from scratch, showcasing Doha's dedication to preserving heritage while embracing modernity.</p>
+        
+        <h2 id="economy">Economic Powerhouse of the Gulf</h2>
+        <p>Doha is one of the region's strongest economic centers thanks to Qatar's robust energy sector and long-term diversification plans.</p>
+        
+        <h3>Major industries include:</h3>
+        <ul>
+          <li>Natural gas & energy</li>
+          <li>Finance & banking</li>
+          <li>Construction & real estate</li>
+          <li>Technology & innovation</li>
+          <li>Tourism & hospitality</li>
+          <li>Sports & entertainment</li>
+        </ul>
+        
+        <p>With tax incentives, free zones, and foreign investment opportunities, many global companies are choosing Doha as their Middle East base.</p>
+        
+        <h2 id="safety">A Safe, Clean, and Organized City</h2>
+        <p>Safety is one of Doha's most praised features. Qatar consistently ranks among the safest countries in the world, with extremely low crime rates and high-quality policing.</p>
+        
+        <p>Travelers, families, and expats appreciate:</p>
+        <ul>
+          <li>Clean public spaces</li>
+          <li>Organized transport</li>
+          <li>Strict safety regulations</li>
+          <li>Excellent healthcare systems</li>
+        </ul>
+        
+        <p>Doha's high living standards attract professionals from all over the world.</p>
+        
+        <h2 id="sports">A Leader in Sports and Global Events</h2>
+        <p>Doha is now synonymous with international sports.</p>
+        
+        <p>Qatar has hosted major events, including:</p>
+        <ul>
+          <li>FIFA World Cup 2022</li>
+          <li>World Athletics Championships</li>
+          <li>F1 Grand Prix Qatar</li>
+          <li>Asian Cup</li>
+          <li>MotoGP</li>
+        </ul>
+        
+        <p>Top-tier stadiums like <strong>Lusail Stadium</strong>, <strong>Al Bayt Stadium</strong>, and <strong>Khalifa International Stadium</strong> have put Doha on the global map as a leader in sports innovation.</p>
+        
+        <p>These events have accelerated tourism, infrastructure development, and international recognition.</p>
+        
+        <h2 id="tourism">A Luxury Tourism Destination</h2>
+        <p>Doha is one of the Middle East's most luxurious cities—often compared to Dubai, but with a more refined and culturally rich atmosphere.</p>
+        
+        <h3>Top attractions include:</h3>
+        <ul>
+          <li>Doha Corniche</li>
+          <li>Pearl-Qatar</li>
+          <li>Katara Beach</li>
+          <li>Souq Waqif</li>
+          <li>Desert safaris</li>
+          <li>Luxury malls (Place Vendôme, Villaggio, Galeries Lafayette)</li>
+        </ul>
+        
+        <h3>World-class hotels:</h3>
+        <ul>
+          <li>The Ritz-Carlton</li>
+          <li>St. Regis</li>
+          <li>Four Seasons</li>
+          <li>Raffles Doha</li>
+          <li>Mandarin Oriental</li>
+        </ul>
+        
+        <p>Travelers can enjoy everything from traditional souqs to ultra-modern malls, iconic museums, and pristine beaches.</p>
+        
+        <h2 id="multicultural">A Melting Pot of Cultures</h2>
+        <p>With expats making up the majority of its population, Doha is one of the most multicultural cities on the planet.</p>
+        
+        <p>You'll hear dozens of languages and find cuisines from every country. The expat community includes professionals from:</p>
+        <ul>
+          <li>Europe</li>
+          <li>Asia</li>
+          <li>Africa</li>
+          <li>The Americas</li>
+        </ul>
+        
+        <p>This cultural diversity enriches daily life and gives Doha a truly global feel while still maintaining strong Qatari traditions.</p>
+        
+        <h2 id="technology">Technology and Smart City Innovation</h2>
+        <p>Doha is quickly becoming a major technology hub in the Gulf.</p>
+        
+        <h3>Smart innovations include:</h3>
+        <ul>
+          <li>Autonomous metro trains</li>
+          <li>AI-powered public services</li>
+          <li>Smart traffic systems</li>
+          <li>Digital government portals</li>
+          <li>High-speed 5G connectivity</li>
+          <li>Investment into fintech, AI, and cybersecurity</li>
+        </ul>
+        
+        <p>The city is positioning itself as a future center for tech startups through the <strong>Qatar Free Zones</strong> and <strong>Qatar Science & Technology Park</strong>.</p>
+        
+        <h2 id="sustainability">Sustainable Vision for a Greener Future</h2>
+        <p>Qatar is committed to building an environmentally responsible capital. Doha's sustainability projects include:</p>
+        <ul>
+          <li>Green public transportation</li>
+          <li>Solar energy integration</li>
+          <li>Water conservation systems</li>
+          <li>Recycling programs</li>
+          <li>LEED-certified buildings</li>
+          <li>The sustainable Msheireb Downtown project</li>
+        </ul>
+        
+        <p>These initiatives aim to create a greener, cleaner, and more sustainable city for future generations.</p>
+        
+        <h2 id="impact">Why Doha Is Changing the Middle East</h2>
+        <p>Doha's influence extends far beyond Qatar. It is impacting the Middle East by:</p>
+        <ul>
+          <li>Setting new standards for architecture and infrastructure</li>
+          <li>Attracting international businesses and investments</li>
+          <li>Leading the region in culture, education, and sports</li>
+          <li>Promoting peace, diplomacy, and global cooperation</li>
+          <li>Building sustainable smart cities</li>
+          <li>Diversifying the economy beyond oil and gas</li>
+        </ul>
+        
+        <p><strong>Doha is more than a rising city—it's a symbol of the modern Arab world.</strong></p>
+        
+        <h2 id="final">Final Thoughts</h2>
+        <p>Doha is transforming the Middle East through innovation, culture, economic strength, tourism, and global influence. It is a city where tradition meets the future, where luxury blends with heritage, and where opportunity is growing every day.</p>
+        
+        <p>Whether you're a traveler, investor, or someone simply curious about the region, Doha is a destination that deserves your attention. It's not just changing Qatar—<strong>Doha is helping shape the future of the entire Middle East</strong>.</p>
+      `,
+      tags: ['Doha Development', 'Vision 2030', 'Middle East', 'Innovation', 'Smart City']
+    },
     'hamad-international-airport-guide': {
       id: '36',
       title: 'Hamad International Airport: The Ultimate Guide to Qatar\'s Award-Winning Aviation Hub',

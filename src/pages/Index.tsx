@@ -19,9 +19,19 @@ import dohaSafetyImage from '@/assets/doha-safety-guide.jpg';
 import womenDrivingImage from '@/assets/women-driving-qatar.jpg';
 import qatariDishesImage from '@/assets/qatari-dishes-guide.jpg';
 import hamadAirportGuideImage from '@/assets/hamad-airport-guide.jpg';
+import dohaTransformingImage from '@/assets/doha-transforming-middle-east.jpg';
 
 const Index = () => {
   const featuredBlogs = [
+    {
+      id: '37',
+      title: 'Doha: The City That\'s Changing the Middle East',
+      excerpt: 'Discover how Doha is transforming the Middle East through innovation, culture, economic strength, and global influence. A complete guide to Qatar\'s visionary capital.',
+      imageUrl: dohaTransformingImage,
+      category: 'Culture',
+      date: 'May 16, 2025',
+      slug: 'doha-changing-middle-east',
+    },
     {
       id: '36',
       title: 'Hamad International Airport: The Ultimate Guide to Qatar\'s Award-Winning Aviation Hub',
