@@ -17,6 +17,15 @@ const Blog = () => {
   
   const allPosts = [
     {
+      id: '19',
+      title: 'The Five Best Things to Do on a Layover in Doha',
+      excerpt: 'Top 5 must-do experiences during your Doha layover - Museum of Islamic Art, Souq Waqif, Corniche, desert safaris, and Katara Cultural Village.',
+      imageUrl: 'https://images.unsplash.com/photo-1510382291698-79dd5a410d6e?w=800&auto=format&fit=crop',
+      category: 'Attractions',
+      date: 'April 28, 2025',
+      slug: 'five-best-things-doha-layover',
+    },
+    {
       id: '18',
       title: '9-Hour Stopover in Qatar: Is It Worth Exploring?',
       excerpt: 'A detailed analysis of whether you should leave the airport during a 9-hour layover - weighing benefits, risks, and practical considerations.',

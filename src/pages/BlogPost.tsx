@@ -13,6 +13,45 @@ const BlogPost = () => {
   
   // Blog post data based on slug
   const blogPosts: Record<string, any> = {
+    'five-best-things-doha-layover': {
+      id: '19',
+      title: 'The Five Best Things to Do on a Layover in Doha',
+      date: 'April 28, 2025',
+      author: 'Experience Doha Team',
+      readTime: '9 min read',
+      category: 'Attractions',
+      imageUrl: 'https://images.unsplash.com/photo-1510382291698-79dd5a410d6e?q=80&w=2668&auto=format&fit=crop',
+      content: `
+        <p>Distilling Doha's offerings into five optimal layover activities requires balancing impact, feasibility, and distinctiveness—experiences providing maximum return on limited time investment while showcasing what makes Qatar genuinely unique. These selections prioritize accessibility alongside significance, ensuring that even brief layovers capture the city's essential character.</p>
+        
+        <h2 id="museum-islamic-art">1. Museum of Islamic Art</h2>
+        <p>The Museum of Islamic Art claims first position unequivocally. I.M. Pei's architectural masterpiece stands as possibly Doha's single most impressive achievement, a building where form and function achieve rare harmony. The museum's location on a purpose-built island in Doha Bay means approaching it reveals both the structure's geometric elegance and sweeping city panoramas. Inside, the collection represents Islamic artistic achievement across fourteen centuries and three continents—metalwork from Egypt, ceramics from Iran, textiles from Central Asia, manuscripts from Turkey, and countless other objects demonstrating Islam's cultural richness. The museum organizes these objects thematically rather than purely chronologically, revealing connections across regions and periods that deepen understanding. Entry remains free, making world-class cultural engagement accessible regardless of budget. The museum's cafe provides excellent refreshments with bay views, while the gift shop stocks quality publications and artisanal products. Two hours here provide deeply satisfying cultural immersion; shorter visits remain worthwhile for architectural appreciation alone.</p>
+        
+        <h2 id="souq-waqif">2. Souq Waqif</h2>
+        <p>Souq Waqif represents traditional Doha absolutely essentially. This restored marketplace, while carefully renovated, maintains authentic atmosphere—narrow passages that twist unexpectedly, spice aromas competing with incense, Arabic music drifting from cafes, and merchants engaging visitors in friendly negotiation. The souq's sections specialize differently: one area focuses on textiles, another on perfumes, another on birds and small animals, and another on household goods. Traditional Qatari clothing, including flowing white thobes and embroidered women's garments, can be purchased here, as can khanjar daggers with ornate handles. Restaurants throughout serve exceptional food—Al Tawash offers proper Qatari cuisine, Damasca One provides Syrian specialties, and Parisa delivers Persian elegance in mirror-adorned spaces. The souq functions as social hub for locals and tourists alike, buzzing with activity particularly after sunset when temperatures cool and families emerge. Photography opportunities abound, with every corner presenting visual interest. Several hours disappear quickly when wandering here, yet even briefer visits capture the atmosphere successfully.</p>
+        
+        <h2 id="corniche">3. The Corniche</h2>
+        <p>The Corniche provides Doha's defining vista—seven kilometers of waterfront promenade offering Arabian Gulf views on one side and futuristic skyline on the other. Walking here, particularly during early morning or evening when heat recedes, delivers both physical activity and visual reward. The skyline's towers represent architectural diversity: twisted, tapering, faceted, and curved structures create constantly changing silhouettes. Dhow boats moored along sections offer harbor cruise opportunities, while landscaped areas provide rest spots with benches overlooking water. The walk itself becomes meditation, with rhythm of footsteps and vastness of views enabling mental clearing after aircraft confinement. Free and accessible constantly, the Corniche suits virtually any schedule, offering Doha's essence through direct experiential engagement with its environment.</p>
+        
+        <h2 id="desert-excursion">4. Desert Excursions</h2>
+        <p>Desert excursions transform the layover experience entirely, transporting visitors from urban modernity into timeless landscapes. Tour operators provide packages ranging from four to eight hours, including hotel pickup, dune bashing (exhilarating driving over sand dunes in SUVs), camel rides, sandboarding opportunities, and sometimes traditional camp experiences with food and entertainment. The desert's vastness provides perspective that urban environments cannot—endless sand dunes rolling toward horizons, silence broken only by wind, and light that shifts constantly, transforming landscapes from golden to red to purple. These tours typically visit the inland sea area where desert meets Arabian Gulf, creating dramatic ecological transitions. For many travelers, the desert experience represents Qatar's most memorable offering, connecting to landscapes that defined the region long before petroleum enabled current developments.</p>
+        
+        <h2 id="katara">5. Katara Cultural Village</h2>
+        <p>Katara Cultural Village rounds out essential experiences by showcasing Qatar's commitment to arts and culture. This purpose-built district houses theaters, galleries, public art installations, and numerous restaurants within architecture blending Islamic motifs with contemporary design. The amphitheater, modeled on Greek precedents, hosts performances regularly. Walking through Katara reveals cultural layers—traditional heritage displays alongside contemporary art exhibitions, artisan workshops demonstrating crafts, and public spaces designed for contemplation. The beach access adds dimension, with waterfront cafes offering Gulf views while serving excellent food and beverages. Unlike many tourist zones, Katara feels planned yet authentic, supporting actual artistic activity rather than merely simulating it. Visits here provide insight into how Qatar envisions cultural development—preserving heritage while engaging globally, traditional yet aspirational.</p>
+        
+        <h2 id="conclusion">Why These Five Matter</h2>
+        <p>These five experiences—Museum of Islamic Art, Souq Waqif, Corniche, Desert Excursion, and Katara Cultural Village—collectively cover Doha's essential dimensions. They span cultural heritage and natural environment, traditional atmosphere and modern ambition, artistic achievement and everyday life. Each experience functions independently, allowing layover visitors to select based on available time and personal interests. Together, they reveal why Qatar merits destination consideration rather than merely transit utilization.</p>
+      `,
+      tableOfContents: [
+        { title: '1. Museum of Islamic Art', id: 'museum-islamic-art' },
+        { title: '2. Souq Waqif', id: 'souq-waqif' },
+        { title: '3. The Corniche', id: 'corniche' },
+        { title: '4. Desert Excursions', id: 'desert-excursion' },
+        { title: '5. Katara Cultural Village', id: 'katara' },
+        { title: 'Why These Five Matter', id: 'conclusion' }
+      ],
+      tags: ['Top 5', 'Best Activities', 'Must-Do', 'Layover Guide', 'Essential Doha']
+    },
     '9-hour-stopover-qatar-worth-it': {
       id: '18',
       title: '9-Hour Stopover in Qatar: Is It Worth Exploring?',
