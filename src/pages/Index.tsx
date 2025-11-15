@@ -24,9 +24,20 @@ import costOfLivingImage from '@/assets/cost-of-living-doha-2025.jpg';
 import womenSafetyDressCodeImage from '@/assets/women-safety-dress-code-doha.jpg';
 import internationalSchoolsImage from '@/assets/international-schools-qatar-guide.jpg';
 import qatarVisaRulesImage from '@/assets/qatar-visa-rules-2025.jpg';
+import westBayAlWaabImage from '@/assets/west-bay-al-waab-comparison.jpg';
 
 const Index = () => {
   const featuredBlogs = [
+    {
+      id: '42',
+      title: 'Renting in Doha: West Bay vs Al Waab Comparison Guide 2025',
+      excerpt: 'Compare renting in West Bay vs Al Waab in Doha. Detailed analysis of prices, amenities, lifestyle, schools, and commutes to help expats choose the right neighborhood.',
+      imageUrl: westBayAlWaabImage,
+      category: 'Expat-Tips',
+      date: 'May 22, 2025',
+      slug: 'renting-doha-west-bay-al-waab-2025',
+      tags: ['Doha neighborhoods', 'West Bay', 'Al Waab', 'rental guide', 'expat housing'],
+    },
     {
       id: '41',
       title: 'New Qatar Visa Rules for Expats 2025: Complete Immigration Guide',
