@@ -44,12 +44,22 @@ import alcoholGuideImage from '@/assets/alcohol-guide-doha.jpg';
 import prostitutionLawsImage from '@/assets/prostitution-laws-legal-guide.jpg';
 import dohaSafetyImage from '@/assets/doha-safety-guide.jpg';
 import womenDrivingImage from '@/assets/women-driving-qatar.jpg';
+import qatariDishesImage from '@/assets/qatari-dishes-guide.jpg';
 
 const Blog = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   
   const allPosts = [
+    {
+      id: '35',
+      title: 'Qatari Dishes You Must Try in Doha: A Complete Culinary Guide',
+      excerpt: 'Discover authentic Qatari cuisine from Machboos to Luqaimat. Complete guide to traditional dishes, best restaurants, and cultural food experiences in Doha.',
+      imageUrl: qatariDishesImage,
+      category: 'Food',
+      date: 'May 14, 2025',
+      slug: 'qatari-dishes-doha-culinary-guide',
+    },
     {
       id: '34',
       title: 'Can Women Drive in Qatar? (2025 Guide for Tourists, Expats & Families)',
