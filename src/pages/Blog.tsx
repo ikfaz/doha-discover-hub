@@ -17,6 +17,15 @@ const Blog = () => {
   
   const allPosts = [
     {
+      id: '12',
+      title: 'Transfers at Hamad International Airport: Complete Guide',
+      excerpt: 'Navigate one of the world\'s finest airports with ease. From security to shopping, everything you need to know about connecting through Doha.',
+      imageUrl: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&auto=format&fit=crop',
+      category: 'Expat-Tips',
+      date: 'April 21, 2025',
+      slug: 'hamad-airport-transfers-guide',
+    },
+    {
       id: '11',
       title: 'Complete Doha Layover Guide: Qatar Stopover Program Explained',
       excerpt: 'Transform your layover into an adventure with Qatar Airways\' amazing stopover program. Hotels from $14/night, visa-free entry, and world-class experiences await.',
