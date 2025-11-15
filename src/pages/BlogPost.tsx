@@ -11,6 +11,7 @@ import MentalHealthDirectory from '@/components/MentalHealthDirectory';
 import { TherapyCostCalculator } from '@/components/TherapyCostCalculator';
 import { BankComparison } from '@/components/BankComparison';
 import { MobilePlanComparison } from '@/components/MobilePlanComparison';
+import { RoamingCostComparison } from '@/components/RoamingCostComparison';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Calendar, Clock, Facebook, Twitter, Share2 } from 'lucide-react';
@@ -6062,8 +6063,16 @@ const BlogPost = () => {
                     <MobilePlanComparison />
                   </div>
                   
+                  {/* Continue with internet and other sections */}
+                  <div dangerouslySetInnerHTML={{ __html: '<h2 id="internet">' + post.content.split('<h2 id="internet">')[1].split('<h2 id="5g">')[0] }} />
+                  
+                  {/* Roaming Cost Comparison Tool */}
+                  <div className="not-prose my-12">
+                    <RoamingCostComparison />
+                  </div>
+                  
                   {/* Rest of content */}
-                  <div dangerouslySetInnerHTML={{ __html: '<h2 id="internet">' + post.content.split('<h2 id="internet">')[1] }} />
+                  <div dangerouslySetInnerHTML={{ __html: '<h2 id="5g">' + post.content.split('<h2 id="5g">')[1] }} />
                 </div>
               ) : (
                 <div 
