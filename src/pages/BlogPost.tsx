@@ -43,12 +43,298 @@ import dohaTransformingImage from '@/assets/doha-transforming-middle-east.jpg';
 import costOfLivingImage from '@/assets/cost-of-living-doha-2025.jpg';
 import womenSafetyDressCodeImage from '@/assets/women-safety-dress-code-doha.jpg';
 import internationalSchoolsImage from '@/assets/international-schools-qatar-guide.jpg';
+import qatarVisaRulesImage from '@/assets/qatar-visa-rules-2025.jpg';
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   
   // Blog post data based on slug
   const blogPosts: Record<string, any> = {
+    'qatar-visa-rules-expats-2025': {
+      id: '41',
+      title: 'New Qatar Visa Rules for Expats 2025: Complete Immigration Guide',
+      date: 'May 20, 2025',
+      author: 'Experience Doha Team',
+      readTime: '18 min read',
+      category: 'Expat-Tips',
+      imageUrl: qatarVisaRulesImage,
+      tags: ['Qatar visa', 'work permit', 'residency', 'golden visa', 'immigration'],
+      content: `
+        <p class="lead">Qatar's immigration policies have evolved significantly, reflecting both economic ambitions and workforce flexibility goals. The 2025 visa regulations offer more pathways for residency while maintaining structured sponsorship systems.</p>
+        
+        <p>Understanding these changes helps expats navigate legal requirements effectively.</p>
+        
+        <h2 id="work-visa">Employment Visa (Work Permit) 2025 Requirements</h2>
+        
+        <h3>Eligibility Criteria:</h3>
+        <ul>
+          <li>Valid job offer from Qatar-registered company</li>
+          <li>Relevant educational qualifications (attested)</li>
+          <li>Professional experience matching role</li>
+          <li>Medical fitness certification</li>
+          <li>Clean criminal record</li>
+        </ul>
+        
+        <h3>Application Process:</h3>
+        <ol>
+          <li><strong>Employer Initiates</strong> - Company applies through Ministry of Labor portal</li>
+          <li><strong>Document Submission</strong> - Attested certificates, passport copies, photos</li>
+          <li><strong>Medical Examination</strong> - Blood tests, chest X-ray (TB screening)</li>
+          <li><strong>Visa Issuance</strong> - Electronic authorization within 2-4 weeks</li>
+          <li><strong>Arrival and Fingerprinting</strong> - Biometric registration upon entry</li>
+          <li><strong>Qatar ID (QID)</strong> - Residence permit with work authorization</li>
+        </ol>
+        
+        <p><strong>Processing Timeline:</strong> 4-8 weeks total</p>
+        
+        <h3>Costs:</h3>
+        <ul>
+          <li>Visa fees: QAR 300-500</li>
+          <li>Medical examination: QAR 300-500</li>
+          <li>Document attestation: Varies by country (often $200-500)</li>
+          <li>Qatar ID: QAR 100-200</li>
+        </ul>
+        
+        <h3>Important 2025 Changes:</h3>
+        <ul>
+          <li><strong>Kafala system modifications</strong> - Greater worker mobility</li>
+          <li><strong>Exit permit elimination</strong> - Workers can leave without employer permission</li>
+          <li><strong>Contract-based employment</strong> - Standardized terms required</li>
+          <li><strong>Minimum wage enforcement</strong> - QAR 1,800/month plus allowances</li>
+        </ul>
+        
+        <h2 id="family-visa">Family Sponsorship Visa Rules</h2>
+        
+        <h3>Sponsoring Spouse and Children:</h3>
+        
+        <h4>Eligibility Requirements:</h4>
+        <ul>
+          <li>Minimum salary: QAR 10,000/month (lower threshold than before)</li>
+          <li>Suitable accommodation (inspected)</li>
+          <li>Valid marriage certificate (attested)</li>
+          <li>Children's birth certificates (attested)</li>
+        </ul>
+        
+        <h4>Application Process:</h4>
+        <ol>
+          <li>Employee applies through employer's PRO</li>
+          <li>Family approval granted</li>
+          <li>Visas issued for family entry</li>
+          <li>Medical examinations upon arrival</li>
+          <li>Qatar IDs issued for dependents</li>
+        </ol>
+        
+        <h3>Key Points 2025:</h3>
+        <ul>
+          <li>Spouses can obtain work permits independently after arrival</li>
+          <li>Children sponsored until age 25 (extended from 21)</li>
+          <li>Parents can visit for extended periods but long-term residence remains difficult</li>
+          <li>Processing time approximately 2-4 weeks for approvals</li>
+        </ul>
+        
+        <h3>Working Spouse Procedures:</h3>
+        <ol>
+          <li>Obtain entry visa under spouse sponsorship</li>
+          <li>Find employment</li>
+          <li>Transfer sponsorship to employer</li>
+          <li>No NOC required from husband's employer (major 2025 change)</li>
+        </ol>
+        
+        <h2 id="permanent">Qatar Permanent Residency Program</h2>
+        
+        <h3>Blue Card (Permanent Residency):</h3>
+        <p>Qatar offers permanent residency to select categories:</p>
+        
+        <h4>Eligible Categories:</h4>
+        <ul>
+          <li>Born in Qatar with 20+ years consecutive residence</li>
+          <li>Resided legally in Qatar for 25+ consecutive years</li>
+          <li>Special talents/skills valuable to Qatar</li>
+          <li>Outstanding services to Qatar</li>
+        </ul>
+        
+        <h4>Benefits:</h4>
+        <ul>
+          <li>No sponsor required</li>
+          <li>Own property without partner</li>
+          <li>Priority commercial/educational access</li>
+          <li>Family inclusion possible</li>
+        </ul>
+        
+        <p><strong>Application:</strong> Submit through Ministry of Interior with comprehensive documentation. Approval rates remain selective, with applications reviewed case-by-case.</p>
+        
+        <h2 id="golden-visa">Golden Visa Qatar 2025</h2>
+        
+        <h3>Investment-Based Residency:</h3>
+        <p>Qatar's Golden Visa program attracts investors and high-value individuals:</p>
+        
+        <h4>Investment Pathways:</h4>
+        
+        <h5>1. Real Estate Investment</h5>
+        <ul>
+          <li>Minimum: QAR 3,650,000 ($1 million)</li>
+          <li>Property must be registered</li>
+          <li>10-year renewable residency</li>
+          <li>Family included</li>
+        </ul>
+        
+        <h5>2. Business Investment</h5>
+        <ul>
+          <li>Minimum: QAR 730,000 ($200,000)</li>
+          <li>Active business operation</li>
+          <li>Creates employment</li>
+          <li>5-year renewable residency</li>
+        </ul>
+        
+        <h5>3. Deposit Investment</h5>
+        <ul>
+          <li>Minimum: QAR 3,000,000 in Qatari banks</li>
+          <li>Fixed deposit requirement</li>
+          <li>10-year renewable residency</li>
+          <li>Family included</li>
+        </ul>
+        
+        <h3>Golden Visa Benefits:</h3>
+        <ul>
+          <li>Residence without employer sponsorship</li>
+          <li>Exit and entry without permit requirements</li>
+          <li>Family sponsorship rights</li>
+          <li>Access to public services</li>
+          <li>Property ownership rights</li>
+          <li>Business ownership possibilities</li>
+        </ul>
+        
+        <h3>Application Process:</h3>
+        <ol>
+          <li>Prepare investment proof documentation</li>
+          <li>Apply through Ministry of Interior portal</li>
+          <li>Background verification</li>
+          <li>Medical examination</li>
+          <li>Residence permit issuance (30-60 days processing)</li>
+        </ol>
+        
+        <h2 id="tourist">Tourist and Visit Visa Changes</h2>
+        
+        <h3>Visa-Free Entry (80+ Countries):</h3>
+        <p>Citizens of eligible countries receive:</p>
+        <ul>
+          <li>30 days visa-free entry</li>
+          <li>Extendable for additional 30 days</li>
+          <li>Multiple entry possible within 180 days</li>
+        </ul>
+        
+        <h3>Visa on Arrival:</h3>
+        <ul>
+          <li>Available for additional country list</li>
+          <li>30-day validity standard</li>
+          <li>QAR 100 fee typically</li>
+          <li>Extension applications possible</li>
+        </ul>
+        
+        <h3>GCC Resident Visa:</h3>
+        <p>Residents of other GCC countries can visit Qatar with:</p>
+        <ul>
+          <li>Valid GCC residency</li>
+          <li>30-day entry</li>
+          <li>Multiple entries allowed</li>
+          <li>Simplifies regional travel</li>
+        </ul>
+        
+        <h2 id="compliance">Visa Compliance and Renewals</h2>
+        
+        <h3>Residence Permit Validity:</h3>
+        <ul>
+          <li>Standard: 1-3 years (employer-specific)</li>
+          <li>Renewable before expiration</li>
+          <li>Grace period for renewals: 90 days</li>
+          <li>Overstay penalties: QAR 10/day</li>
+        </ul>
+        
+        <h3>Renewal Process:</h3>
+        <ol>
+          <li>Medical examination (every 2 years for certain nationalities)</li>
+          <li>Employer submits renewal application</li>
+          <li>Fees paid</li>
+          <li>QID reissued</li>
+        </ol>
+        
+        <h3>Compliance Requirements:</h3>
+        <ul>
+          <li>Report address changes within 7 days</li>
+          <li>Maintain valid health insurance</li>
+          <li>Employment must match visa category</li>
+          <li>Criminal violations can result in deportation</li>
+        </ul>
+        
+        <h2 id="attestation">Document Attestation Requirements</h2>
+        
+        <h3>Essential Documents Requiring Attestation:</h3>
+        
+        <h4>Educational Certificates</h4>
+        <ul>
+          <li>Home country foreign ministry</li>
+          <li>Qatar embassy in home country</li>
+          <li>Ministry of Foreign Affairs Qatar</li>
+        </ul>
+        
+        <h4>Marriage Certificates</h4>
+        <ul>
+          <li>Similar attestation chain</li>
+          <li>Required for family visas</li>
+        </ul>
+        
+        <h4>Birth Certificates</h4>
+        <ul>
+          <li>Children's documentation</li>
+          <li>Required for dependent visas</li>
+        </ul>
+        
+        <h4>Professional Certifications</h4>
+        <ul>
+          <li>Engineering, medical, legal credentials</li>
+          <li>Specific council attestations required</li>
+        </ul>
+        
+        <p><strong>Attestation Timeline:</strong> Allow 4-8 weeks minimum</p>
+        
+        <h2 id="mistakes">Common Visa Mistakes to Avoid</h2>
+        <ul>
+          <li><strong>Expired Documents</strong> - Ensure 6+ months passport validity</li>
+          <li><strong>Incorrect Attestation</strong> - Follow exact chain requirements</li>
+          <li><strong>Medical Issues</strong> - Certain conditions can disqualify</li>
+          <li><strong>Incomplete Applications</strong> - Causes delays and rejections</li>
+          <li><strong>Visa Violations</strong> - Overstays create future problems</li>
+          <li><strong>Working Without Permit</strong> - Serious legal consequences</li>
+        </ul>
+        
+        <h2 id="future">Future Immigration Trends</h2>
+        <p>Expected Developments:</p>
+        <ul>
+          <li>Further Kafala reform implementation</li>
+          <li>Digital visa application improvements</li>
+          <li>Regional visa harmonization discussions</li>
+          <li>Talent attraction program expansions</li>
+          <li>Retirement visa possibilities being explored</li>
+        </ul>
+        
+        <h2 id="faq">FAQ: Qatar Visa Rules 2025</h2>
+        
+        <h3>Can I change employers in Qatar?</h3>
+        <p>Yes. Recent reforms allow job changes without employer NOC. Notice periods still apply per contract.</p>
+        
+        <h3>How long can family visit visa be?</h3>
+        <p>Visit visas typically 30-90 days. Some family members can stay longer under specific sponsorship.</p>
+        
+        <h3>Does my wife need permission to work?</h3>
+        <p>No longer requires husband's consent. She can seek employment and obtain work permit independently.</p>
+        
+        <h3>What happens if I lose my job?</h3>
+        <p>Grace period allows job searching. Typically 90 days to find new employment or leave Qatar.</p>
+        
+        <h3>Can I buy property in Qatar?</h3>
+        <p>Yes, in designated areas (Pearl, Lusail, West Bay Lagoon). Property investment can lead to residency.</p>
+      `,
+    },
     'international-schools-qatar-2025': {
       id: '40',
       title: 'International Schools in Qatar 2025: Waitlists, Fees, and Application Guide',

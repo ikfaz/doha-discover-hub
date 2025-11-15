@@ -50,12 +50,23 @@ import dohaTransformingImage from '@/assets/doha-transforming-middle-east.jpg';
 import costOfLivingImage from '@/assets/cost-of-living-doha-2025.jpg';
 import womenSafetyDressCodeImage from '@/assets/women-safety-dress-code-doha.jpg';
 import internationalSchoolsImage from '@/assets/international-schools-qatar-guide.jpg';
+import qatarVisaRulesImage from '@/assets/qatar-visa-rules-2025.jpg';
 
 const Blog = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   
   const allPosts = [
+    {
+      id: '41',
+      title: 'New Qatar Visa Rules for Expats 2025: Complete Immigration Guide',
+      excerpt: 'Updated Qatar visa rules 2025 for expats. Learn about work permits, residency requirements, family sponsorship, golden visas, and new immigration policies.',
+      imageUrl: qatarVisaRulesImage,
+      category: 'Expat-Tips',
+      date: 'May 20, 2025',
+      slug: 'qatar-visa-rules-expats-2025',
+      tags: ['Qatar visa', 'work permit', 'residency', 'golden visa', 'immigration'],
+    },
     {
       id: '40',
       title: 'International Schools in Qatar 2025: Waitlists, Fees, and Application Guide',
