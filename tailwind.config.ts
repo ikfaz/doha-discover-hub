@@ -25,13 +25,8 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
-				qatar: {
-					maroon: '#800000',
-					gold: '#D4AF37',
-					sand: '#E8D8B0',
-					pearl: '#F5F5F5',
-					navy: '#1A2D53'
-				},
+				navy: '#0A2647',
+				gold: '#FFD43B',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'
@@ -72,8 +67,8 @@ export default {
 				}
 			},
 			fontFamily: {
-				sans: ['Inter', 'sans-serif'],
-				heading: ['Playfair Display', 'serif'],
+				sans: ['Poppins', 'sans-serif'],
+				heading: ['Inter', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
