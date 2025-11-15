@@ -1,5 +1,5 @@
-import React from 'react';
 import { useParams, Link } from 'react-router-dom';
+import { useEffect } from 'react';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 import Newsletter from '@/components/Newsletter';
@@ -3952,7 +3952,7 @@ const BlogPost = () => {
   };
 
   // Structured Data for SEO
-  React.useEffect(() => {
+  useEffect(() => {
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.innerHTML = JSON.stringify({
