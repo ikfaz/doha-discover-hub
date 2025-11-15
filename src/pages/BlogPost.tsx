@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import Newsletter from '@/components/Newsletter';
 import SchoolComparisonTool from '@/components/SchoolComparisonTool';
 import SchoolFeeCalculator from '@/components/SchoolFeeCalculator';
+import VisaChecklistGenerator from '@/components/VisaChecklistGenerator';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Calendar, Clock, Facebook, Twitter, Share2 } from 'lucide-react';
@@ -4382,6 +4383,19 @@ const BlogPost = () => {
                   
                   {/* Rest of content */}
                   <div dangerouslySetInnerHTML={{ __html: '<h2 id="budget">' + post.content.split('<h2 id="budget">')[1] }} />
+                </div>
+              ) : slug === 'qatar-visa-rules-expats-2025' ? (
+                <div className="prose prose-lg max-w-none space-y-8">
+                  {/* First section of content through work visa */}
+                  <div dangerouslySetInnerHTML={{ __html: post.content.split('<h2 id="family-visa">')[0] }} />
+                  
+                  {/* Visa Checklist Generator */}
+                  <div className="not-prose my-12">
+                    <VisaChecklistGenerator />
+                  </div>
+                  
+                  {/* Rest of content */}
+                  <div dangerouslySetInnerHTML={{ __html: '<h2 id="family-visa">' + post.content.split('<h2 id="family-visa">')[1] }} />
                 </div>
               ) : (
                 <div 
