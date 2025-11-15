@@ -13,6 +13,57 @@ const BlogPost = () => {
   
   // Blog post data based on slug
   const blogPosts: Record<string, any> = {
+    'doha-layover-time-guide': {
+      id: '15',
+      title: 'Layover in Doha Guide: What to Do in 2–12 Hours',
+      date: 'April 24, 2025',
+      author: 'Experience Doha Team',
+      readTime: '9 min read',
+      category: 'Expat-Tips',
+      imageUrl: 'https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?q=80&w=2668&auto=format&fit=crop',
+      content: `
+        <p>The feasibility and scope of Doha exploration scales directly with available time, each hour opening new possibilities while requiring adjusted expectations. Understanding what's achievable within specific timeframes prevents both underutilization and overscheduling, two common layover pitfalls that diminish potential enjoyment.</p>
+        
+        <h2 id="two-hours">2-Hour Layovers: Airport Only</h2>
+        <p>Two-hour layovers restrict activities to airport confines, which, given Hamad International Airport's facilities, isn't entirely limiting. The airport itself merits exploration, with its indoor tropical garden, contemporary art installations, and observation areas overlooking the runway where massive aircraft taxi and depart. Dining options span quick service to fine dining, allowing a proper meal that breaks flight monotony. The duty-free shopping, particularly for gold jewelry and local products, provides browsing opportunities. Spa facilities offer quick treatments—a neck massage or facial—that refresh without requiring extensive time. This approach acknowledges limitations while maximizing the available environment.</p>
+        
+        <h2 id="four-hours">4-Hour Layovers: Quick City Glimpse</h2>
+        <p>Four-hour layovers begin suggesting possibilities beyond the airport, though tight. After clearing immigration and arranging transport, perhaps ninety minutes remain for exploration before necessary airport return. This window suits singular focused visits rather than multiple attractions. The Museum of Islamic Art, with its proximity to downtown and world-class collection, represents perhaps the optimal choice—sufficient time exists for meaningful engagement with the exhibits and the building's architecture, plus photographs of the Doha skyline from the museum's grounds. Alternatively, a very quick Souq Waqif visit accomplishes market atmosphere absorption and light souvenir purchasing, though depth remains limited.</p>
+        
+        <h2 id="six-hours">6-Hour Layovers: Satisfying Exploration</h2>
+        <p>Six-hour layovers mark the threshold where Doha exploration becomes genuinely satisfying. Two to three hours of city time allow combination experiences: Museum of Islamic Art followed by waterfront Corniche walking, or Souq Waqif with time for both shopping and a proper traditional meal. The pace remains purposeful but not frantic, providing photography opportunities, genuine cultural absorption, and experiences that enhance your journey's memories rather than stressing it. Transportation timing must remain conservative—traffic, while generally manageable, can surprise during peak hours.</p>
+        
+        <h2 id="eight-hours">8-Hour Layovers: Comfortable Discovery</h2>
+        <p>Eight-hour layovers provide comfort margins that transform the experience qualitatively. Now there's time for detours, spontaneous cafe stops, and deeper exploration of chosen areas. Souq Waqif merits several hours when approached thoughtfully—beyond main corridors lie pet souq areas where exotic birds and small animals are sold, art galleries featuring local painters, and restaurants with second-floor terraces overlooking the marketplace activity. The gold souq section alone, with its glittering displays and negotiable prices, can engage visitors considerably. After the souq, time permits traveling to additional destinations—perhaps Katara Cultural Village or the Pearl—before comfortable airport return.</p>
+        
+        <h2 id="ten-hours">10-Hour Layovers: Desert Adventures Possible</h2>
+        <p>Ten-hour layovers open possibilities for experiences requiring longer time commitments. Desert excursions become practical, with most tours requiring four to five hours including transport. These ventures into Qatar's interior landscapes provide powerful contrast to Doha's urbanism—endless sand dunes, possible camel encounters, and silence broken only by wind. Tours typically include dune bashing, sunset viewing, and sometimes traditional Bedouin camp experiences with food and entertainment. Upon return, sufficient time remains for souq exploration or a proper restaurant dinner, meaning the day encompasses both Qatar's natural and cultural dimensions.</p>
+        
+        <h2 id="twelve-hours">12-Hour Layovers: Full-Day Experience</h2>
+        <p>Twelve-hour layovers approach full-day exploration territory. Multiple attractions combine naturally: morning at the National Museum of Qatar learning the nation's history, midday exploring Msheireb's heritage houses and sustainable architecture, afternoon at The Pearl for waterfront ambiance and lunch, late afternoon at Souq Waqif for shopping and early dinner, before comfortable airport return. This itinerary covers substantial ground while maintaining pleasant pacing, with rest breaks preventing exhaustion. Alternatively, the time supports desert excursions combined with thorough city exploration, or single attraction visits undertaken with leisurely depth rather than time pressure.</p>
+        
+        <h2 id="practical-tips">Universal Practical Considerations</h2>
+        <p>Regardless of available hours, certain practical considerations apply universally. SIM cards or international roaming provide navigation assistance through maps applications, restaurant location services, and potential emergency communication. Having your airline's contact information readily available proves valuable should flight changes occur during your exploration. Travel insurance that covers trip interruption provides financial protection should unexpected circumstances prevent timely airport return.</p>
+        
+        <h2 id="seasonal-planning">Weather-Conscious Planning</h2>
+        <p>Weather-conscious planning adjusts itineraries seasonally. Winter months (November through March) offer pleasant temperatures perfect for outdoor activities—extended Corniche walks, desert excursions during comfortable conditions, and outdoor cafe seating become highly enjoyable. Summer months require strategic planning around heat, with air-conditioned museums, shopping areas, and restaurants providing refuge while outdoor time becomes brief and carefully timed for early morning or after sunset.</p>
+        
+        <h2 id="quality-over-quantity">Quality Over Quantity</h2>
+        <p>The fundamental principle underlying successful layover planning recognizes that quality surpasses quantity. Experiencing one attraction thoroughly—engaging with exhibits, conversing with locals, savoring meals, photographing thoughtfully—generates richer memories than rushing through multiple sites superficially. Doha rewards this approach particularly well, as its attractions contain depth that reveals itself progressively. The souq's character emerges over hours of wandering, not minutes of passing through. Museum collections speak more meaningfully when contemplated rather than glanced. Even the desert requires time for its subtleties—the way light shifts across sand, the perfect silence, the stars emerging in unpolluted skies—to register fully.</p>
+      `,
+      tableOfContents: [
+        { title: '2-Hour Layovers: Airport Only', id: 'two-hours' },
+        { title: '4-Hour Layovers: Quick City Glimpse', id: 'four-hours' },
+        { title: '6-Hour Layovers: Satisfying Exploration', id: 'six-hours' },
+        { title: '8-Hour Layovers: Comfortable Discovery', id: 'eight-hours' },
+        { title: '10-Hour Layovers: Desert Adventures Possible', id: 'ten-hours' },
+        { title: '12-Hour Layovers: Full-Day Experience', id: 'twelve-hours' },
+        { title: 'Universal Practical Considerations', id: 'practical-tips' },
+        { title: 'Weather-Conscious Planning', id: 'seasonal-planning' },
+        { title: 'Quality Over Quantity', id: 'quality-over-quantity' }
+      ],
+      tags: ['Layover Planning', 'Time Management', 'Travel Tips', 'Itineraries', 'Doha']
+    },
     'perfect-layover-doha-guide': {
       id: '14',
       title: 'How to Spend the Perfect Layover in Doha, Qatar',
