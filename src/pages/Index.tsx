@@ -14,7 +14,7 @@ import layoverImage from '@/assets/doha-layover-experience.jpg';
 import qatarAirwaysImage from '@/assets/qatar-airways-stopover.jpg';
 import cornicheSunsetImage from '@/assets/corniche-sunset-dhow.jpg';
 import alcoholGuideImage from '@/assets/alcohol-guide-doha.jpg';
-import prostitutionLawsImage from '@/assets/prostitution-laws-doha.jpg';
+import prostitutionLawsImage from '@/assets/prostitution-laws-legal-guide.jpg';
 
 const Index = () => {
   const featuredBlogs = [
