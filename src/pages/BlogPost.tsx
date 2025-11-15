@@ -13,6 +13,65 @@ const BlogPost = () => {
   
   // Blog post data based on slug
   const blogPosts: Record<string, any> = {
+    'discover-qatar-stopover-guide': {
+      id: '17',
+      title: 'Stopover in Qatar: Discover Qatar - Why Visit',
+      date: 'April 26, 2025',
+      author: 'Experience Doha Team',
+      readTime: '11 min read',
+      category: 'Culture',
+      imageUrl: 'https://images.unsplash.com/photo-1518182170546-07661fd94144?q=80&w=2668&auto=format&fit=crop',
+      content: `
+        <p>Discover Qatar, the official destination marketing organization, has crafted their messaging around a simple premise: Qatar deserves consideration as a destination, not merely a transit point. Their materials emphasize the nation's investments in tourism infrastructure, cultural preservation, and visitor experience, arguing persuasively that stopovers here provide unique value impossible to replicate elsewhere. The organization's campaigns showcase what distinguishes Qatar—its blend of Gulf heritage with futuristic vision, its safety and cleanliness, its ambitious cultural projects, and its natural landscapes.</p>
+        
+        <h2 id="accessibility">Easy Accessibility and Visa-Free Entry</h2>
+        <p>The messaging begins with accessibility. Qatar offers visa-free entry to citizens of over eighty countries, while nationals from additional countries receive visa-on-arrival processing. This ease contrasts with many regional competitors where visa processes create barriers. For travelers already routing through Doha, the absence of visa complications removes significant obstacles to stopover consideration. Discover Qatar's promotional materials emphasize this welcoming posture, positioning the nation as open and eager for visitors.</p>
+        
+        <h2 id="cultural-attractions">World-Class Cultural Attractions</h2>
+        <p>Cultural attractions receive prominent placement in Discover Qatar's campaigns, appropriately so given massive national investments. The Museum of Islamic Art, National Museum of Qatar, and Mathaf: Arab Museum of Modern Art represent institutions with global significance, not provincial collections. These museums house artworks and artifacts of genuine importance, displayed in buildings designed by internationally acclaimed architects. The message is clear: cultural tourism in Qatar reaches world-class standards, meriting inclusion on any serious traveler's itinerary.</p>
+        
+        <h2 id="heritage">Heritage Preservation</h2>
+        <p>Heritage preservation balances modernization efforts, with Discover Qatar highlighting places where traditional Qatari life remains visible. Souq Waqif's restoration maintained authentic character while ensuring visitor comfort—the narrow lanes, the spice aromas, the traditional architecture all survived careful renovation. Al Zubarah, a UNESCO World Heritage Site in Qatar's north, preserves eighteenth-century fortifications and archaeological evidence of historical pearl trading communities. These sites provide windows into pre-oil Qatar, demonstrating continuity alongside dramatic transformation.</p>
+        
+        <h2 id="natural-environment">Natural Landscapes and Environment</h2>
+        <p>Natural environment features surprisingly prominently in Qatar promotions, countering assumptions that the country offers only urban experiences. The desert interior, easily accessible from Doha, presents dramatic landscapes of rolling dunes and occasional rock formations. The inland sea, where desert meets Gulf waters, creates photogenic transitions between ecosystems. Mangrove forests in Al Thakira support biodiversity while offering kayaking opportunities through waterways lined with traditional boats. Even within urban areas, parks and waterfront promenades provide greenery that softens architectural hardness.</p>
+        
+        <h2 id="sports">World-Class Sporting Infrastructure</h2>
+        <p>Sporting infrastructure, expanded dramatically for the 2022 FIFA World Cup, continues providing visitor experiences. The stadiums themselves, architectural marvels designed for the tournament, offer tours that explain both engineering achievements and cooling technologies developed for the desert climate. Sports City facilities host international competitions across disciplines, while the Aspire Academy represents world-class athletic training infrastructure. For sports enthusiasts, Qatar's facilities merit dedicated visits.</p>
+        
+        <h2 id="hospitality">Premium Hospitality Standards</h2>
+        <p>Hospitality standards receive emphasis given Qatar's extensive investment in accommodation. Hotels represent virtually every luxury brand globally—Four Seasons, Ritz-Carlton, Mandarin Oriental, St. Regis, and numerous others operate properties here. These hotels maintain standards matching or exceeding their flagships elsewhere, with service quality reflecting serious investment in hospitality training. Beyond luxury tiers, mid-range and budget accommodations have expanded, ensuring all travelers find appropriate lodging. The Qatar Airways Stopover Program leverages this hotel inventory, offering packages that significantly reduce accommodation costs.</p>
+        
+        <h2 id="dining">Diverse Dining Scene</h2>
+        <p>Dining diversity surprises many visitors expecting limited options. Qatar's expatriate majority—approximately eighty-five percent of the population comes from abroad—ensures authentic international cuisine availability. Indian restaurants here achieve quality comparable to Mumbai establishments. Filipino, Pakistani, Lebanese, and Persian cuisines flourish similarly. This diversity means travelers can experience not just Qatari food but regional cuisines prepared by immigrant communities maintaining homeland recipes. Fine dining options, often in hotel settings, provide contemporary interpretations of global cuisines by internationally trained chefs.</p>
+        
+        <h2 id="safety">Safety and Cleanliness</h2>
+        <p>Safety and cleanliness distinguish Qatar notably. Crime rates rank among the world's lowest, with violent crime particularly rare. Women travelers report feeling secure navigating Doha independently, day or night. Infrastructure maintenance keeps public spaces immaculate—streets are clean, public facilities are well-maintained, and systems generally function as expected. For travelers from regions where security concerns limit exploration, Qatar's stability represents significant comfort.</p>
+        
+        <h2 id="shopping">Shopping Experiences</h2>
+        <p>Shopping opportunities extend beyond airport duty-free, with malls housing both international brands and local designers. The upscale options at Villaggio Mall, designed to resemble Venetian streetscapes complete with gondola rides, offer climate-controlled retail therapy. More interesting perhaps are the souqs selling traditional items—Arabic perfumes mixed from base oils, handwoven textiles, gold jewelry sold by weight, and regional antiquities. These purchases carry stories and authenticity impossible to replicate through international chains.</p>
+        
+        <h2 id="family-friendly">Family-Friendly Destination</h2>
+        <p>Family-friendliness remains constant theme in Discover Qatar's positioning. Attractions cater to children explicitly, with playgrounds, educational museum programs, and entertainment facilities designed for younger visitors. Public spaces accommodate families comfortably, with nursing facilities, clean restrooms, and general infrastructure supporting travel with children. Local culture, while conservative, expresses warmth toward families, with children welcomed in restaurants and attractions without the restrictions some destinations impose.</p>
+        
+        <h2 id="conclusion">The Qatar Promise</h2>
+        <p>The cumulative message from Discover Qatar positions the nation as developed-world capable while retaining regional character, modern in infrastructure while respectful of heritage, safe and clean while remaining culturally distinctive. Whether these claims resonate depends on individual interests, but the evidence supports the marketing substantially. Qatar has invested purposefully in becoming tourist-worthy, and stopovers provide opportunities to verify these investments personally.</p>
+      `,
+      tableOfContents: [
+        { title: 'Easy Accessibility and Visa-Free Entry', id: 'accessibility' },
+        { title: 'World-Class Cultural Attractions', id: 'cultural-attractions' },
+        { title: 'Heritage Preservation', id: 'heritage' },
+        { title: 'Natural Landscapes and Environment', id: 'natural-environment' },
+        { title: 'World-Class Sporting Infrastructure', id: 'sports' },
+        { title: 'Premium Hospitality Standards', id: 'hospitality' },
+        { title: 'Diverse Dining Scene', id: 'dining' },
+        { title: 'Safety and Cleanliness', id: 'safety' },
+        { title: 'Shopping Experiences', id: 'shopping' },
+        { title: 'Family-Friendly Destination', id: 'family-friendly' },
+        { title: 'The Qatar Promise', id: 'conclusion' }
+      ],
+      tags: ['Discover Qatar', 'Tourism', 'Cultural Attractions', 'Safety', 'Family Travel']
+    },
     '24-hours-doha-qatar-airways': {
       id: '16',
       title: '24 Hours in Doha: Complete Qatar Airways Itinerary',

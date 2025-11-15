@@ -17,6 +17,15 @@ const Blog = () => {
   
   const allPosts = [
     {
+      id: '17',
+      title: 'Stopover in Qatar: Discover Qatar - Why Visit',
+      excerpt: 'Explore what makes Qatar a world-class destination beyond just a transit point - from cultural attractions to safety, dining, and natural landscapes.',
+      imageUrl: 'https://images.unsplash.com/photo-1518182170546-07661fd94144?w=800&auto=format&fit=crop',
+      category: 'Culture',
+      date: 'April 26, 2025',
+      slug: 'discover-qatar-stopover-guide',
+    },
+    {
       id: '16',
       title: '24 Hours in Doha: Complete Qatar Airways Itinerary',
       excerpt: 'Make the most of a full day in Doha with this detailed 24-hour itinerary - from sunrise on the Corniche to evening dhow cruises.',
