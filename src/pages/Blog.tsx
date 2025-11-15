@@ -17,6 +17,15 @@ const Blog = () => {
   
   const allPosts = [
     {
+      id: '13',
+      title: '10 Unmissable Things To Do In Doha On A Layover (2025)',
+      excerpt: 'Make the most of your Doha layover with these incredible experiences - from museums and souqs to desert safaris and cultural villages.',
+      imageUrl: 'https://images.unsplash.com/photo-1518182170546-07661fd94144?w=800&auto=format&fit=crop',
+      category: 'Attractions',
+      date: 'April 22, 2025',
+      slug: 'things-to-do-doha-layover',
+    },
+    {
       id: '12',
       title: 'Transfers at Hamad International Airport: Complete Guide',
       excerpt: 'Navigate one of the world\'s finest airports with ease. From security to shopping, everything you need to know about connecting through Doha.',
