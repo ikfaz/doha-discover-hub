@@ -13,6 +13,139 @@ const BlogPost = () => {
   
   // Blog post data based on slug
   const blogPosts: Record<string, any> = {
+    'corniche-sunset-dhow-cruise-guide': {
+      id: '23',
+      title: 'The Golden Hour in Doha: Corniche Sunset Walks and the Magic of the Dhow Cruise',
+      date: 'May 2, 2025',
+      author: 'Experience Doha Team',
+      readTime: '8 min read',
+      category: 'Attractions',
+      imageUrl: 'https://images.unsplash.com/photo-1519904981063-b0cf448d479e?q=80&w=2668&auto=format&fit=crop',
+      content: `
+        <p>The <strong>Doha Corniche</strong> is the seven-kilometer-long waterfront promenade that sweeps along Doha Bay, offering the most iconic views of the city. It is the social, recreational, and visual heart of the capital. As the day transitions into evening, the Corniche transforms into a spectacle of light and color, offering two quintessential Qatari experiences: a tranquil sunset walk or a mesmerizing traditional <strong>dhow cruise</strong>.</p>
+        
+        <h2 id="sunset-walk">The Corniche Sunset Walk: A Stroll Through Modernity</h2>
+        <p>The Corniche walk is a favorite pastime for residents and visitors alike, particularly in the late afternoon and early evening when the desert heat subsides.</p>
+        
+        <h3 id="view">The View: A Tale of Two Skylines</h3>
+        <p>A sunset walk along the Corniche provides a unique perspective on Doha's rapid development.</p>
+        <ul>
+          <li><strong>West Bay Skyline:</strong> To the north, the towering, architecturally diverse skyscrapers of the <strong>West Bay</strong> district create a stunning, futuristic backdrop. As the sun sets, the glass facades catch the golden light, and the buildings begin to illuminate, creating a dazzling display.</li>
+          <li><strong>Old Doha and MIA:</strong> To the south, the view is dominated by the traditional wooden <strong>dhow boats</strong> moored in the harbor and the distinctive, geometric structure of the <strong>Museum of Islamic Art (MIA)</strong>. This contrast perfectly encapsulates Doha's identity as a city that honors its past while embracing the future.</li>
+        </ul>
+        
+        <h3 id="atmosphere">The Atmosphere: Social and Serene</h3>
+        <p>The Corniche is a vibrant public space. Families gather for picnics, joggers take their evening run, and street vendors offer snacks and drinks. The atmosphere is relaxed and social, making it an ideal place to observe local life.</p>
+        <ul>
+          <li><strong>Key Landmarks:</strong> Along the walk, you will pass several key landmarks, including the <strong>Dhow Harbour</strong>, the <strong>Pearl Monument</strong> (a symbol of Qatar's pearling history), and the various parks and green spaces that punctuate the promenade.</li>
+          <li><strong>Photography:</strong> The "golden hour" is the best time for photography, with the setting sun casting a warm glow over the city and the bay.</li>
+        </ul>
+        
+        <h2 id="dhow-cruise">The Dhow Cruise: Sailing into the Sunset</h2>
+        <p>For a more immersive experience, stepping aboard a traditional wooden <strong>dhow</strong> offers a completely different perspective of the city. These ancient sailing vessels, once used for pearl diving and trade, have been beautifully repurposed for tourism.</p>
+        
+        <h3 id="experience">The Experience of the Dhow</h3>
+        <p>A sunset dhow cruise typically lasts between one and two hours and is a gentle, relaxing journey across the calm waters of Doha Bay.</p>
+        <ul>
+          <li><strong>The Route:</strong> The dhows sail past the MIA, circle the West Bay skyline, and often venture towards the artificial island of <strong>Al Safliya</strong>. From the water, the scale and complexity of the city's architecture are even more impressive.</li>
+          <li><strong>The Ambiance:</strong> The cruises are often accompanied by soft Arabic music, and many include complimentary refreshments or even a full dinner service. It is a romantic and peaceful way to end the day.</li>
+          <li><strong>The Sunset Spectacle:</strong> The highlight is watching the sun dip below the horizon, painting the sky in fiery hues of orange, pink, and purple, with the city lights slowly taking over the scene.</li>
+        </ul>
+        
+        <h3 id="choosing-cruise">Choosing Your Cruise</h3>
+        <p>Dhow cruises vary in style and offering, allowing visitors to choose the experience that best suits their needs.</p>
+        
+        <table class="w-full border-collapse my-6">
+          <thead>
+            <tr class="bg-qatar-maroon text-white">
+              <th class="border border-gray-300 p-3 text-left">Cruise Type</th>
+              <th class="border border-gray-300 p-3 text-left">Duration</th>
+              <th class="border border-gray-300 p-3 text-left">Key Offering</th>
+              <th class="border border-gray-300 p-3 text-left">Ideal For</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border border-gray-300 p-3"><strong>Sunset Cruise</strong></td>
+              <td class="border border-gray-300 p-3">1 - 2 hours</td>
+              <td class="border border-gray-300 p-3">Viewing the city during the golden hour.</td>
+              <td class="border border-gray-300 p-3">Quick, scenic experience, photographers.</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border border-gray-300 p-3"><strong>Dinner Cruise</strong></td>
+              <td class="border border-gray-300 p-3">2 - 3 hours</td>
+              <td class="border border-gray-300 p-3">Full buffet dinner (often Arabic/International).</td>
+              <td class="border border-gray-300 p-3">Couples, families, a complete evening out.</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 p-3"><strong>Private Charter</strong></td>
+              <td class="border border-gray-300 p-3">Flexible</td>
+              <td class="border border-gray-300 p-3">Exclusive use of the dhow, customizable route.</td>
+              <td class="border border-gray-300 p-3">Special occasions, large groups.</td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <ul>
+          <li><strong>Booking:</strong> Cruises can be booked through tour operators, hotels, or directly at the Dhow Harbour. It is advisable to book in advance, especially during peak season.</li>
+        </ul>
+        
+        <h2 id="practical">Practical Considerations</h2>
+        
+        <table class="w-full border-collapse my-6">
+          <thead>
+            <tr class="bg-qatar-maroon text-white">
+              <th class="border border-gray-300 p-3 text-left">Aspect</th>
+              <th class="border border-gray-300 p-3 text-left">Sunset Walk</th>
+              <th class="border border-gray-300 p-3 text-left">Dhow Cruise</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border border-gray-300 p-3"><strong>Cost</strong></td>
+              <td class="border border-gray-300 p-3">Free</td>
+              <td class="border border-gray-300 p-3">Varies (from QAR 50 to QAR 300+)</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border border-gray-300 p-3"><strong>Duration</strong></td>
+              <td class="border border-gray-300 p-3">Flexible (30 minutes to 2 hours)</td>
+              <td class="border border-gray-300 p-3">Fixed (1 to 3 hours)</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 p-3"><strong>Best Time</strong></td>
+              <td class="border border-gray-300 p-3">30 minutes before sunset</td>
+              <td class="border border-gray-300 p-3">Timed to coincide with sunset</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border border-gray-300 p-3"><strong>Atmosphere</strong></td>
+              <td class="border border-gray-300 p-3">Active, social, on-land</td>
+              <td class="border border-gray-300 p-3">Relaxing, scenic, on-water</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 p-3"><strong>Accessibility</strong></td>
+              <td class="border border-gray-300 p-3">Easily accessible from the city center</td>
+              <td class="border border-gray-300 p-3">Requires travel to the Dhow Harbour</td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <p><strong>Timing:</strong> In the cooler months (November to April), the sunset is a perfect time to be outdoors. In the hotter summer months, the evening breeze on the water during a dhow cruise offers a welcome respite from the heat.</p>
+        
+        <h2 id="conclusion">A Lasting Memory</h2>
+        <p>Whether you choose to keep your feet on the ground and join the evening promenade or set sail on a traditional dhow, the Doha Corniche at sunset is an experience that captures the beauty and spirit of Qatar. It is a moment of calm reflection before the city's vibrant nightlife begins, offering a memory that will last long after your journey ends.</p>
+      `,
+      tableOfContents: [
+        { title: 'The Corniche Sunset Walk', id: 'sunset-walk' },
+        { title: 'The View: Two Skylines', id: 'view' },
+        { title: 'The Atmosphere', id: 'atmosphere' },
+        { title: 'The Dhow Cruise', id: 'dhow-cruise' },
+        { title: 'The Experience of the Dhow', id: 'experience' },
+        { title: 'Choosing Your Cruise', id: 'choosing-cruise' },
+        { title: 'Practical Considerations', id: 'practical' },
+        { title: 'A Lasting Memory', id: 'conclusion' }
+      ],
+      tags: ['Corniche', 'Sunset', 'Dhow Cruise', 'Photography', 'Romantic Activities']
+    },
     'pearl-qatar-luxury-shopping-dining': {
       id: '22',
       title: 'The Jewel of Doha: A Guide to Luxury Shopping and Fine Dining at The Pearl-Qatar',

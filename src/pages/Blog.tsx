@@ -17,6 +17,15 @@ const Blog = () => {
   
   const allPosts = [
     {
+      id: '23',
+      title: 'The Golden Hour in Doha: Corniche Sunset Walks and Dhow Cruises',
+      excerpt: 'Experience the magic of Doha\'s waterfront at sunset - from peaceful Corniche walks with skyline views to romantic dhow cruise adventures.',
+      imageUrl: 'https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=800&auto=format&fit=crop',
+      category: 'Attractions',
+      date: 'May 2, 2025',
+      slug: 'corniche-sunset-dhow-cruise-guide',
+    },
+    {
       id: '22',
       title: 'The Jewel of Doha: Luxury Shopping and Dining at The Pearl-Qatar',
       excerpt: 'Discover The Pearl-Qatar - from Porto Arabia\'s luxury brands to Qanat Quartier\'s Venetian charm, your guide to high-end shopping and fine dining.',
