@@ -13,6 +13,69 @@ const BlogPost = () => {
   
   // Blog post data based on slug
   const blogPosts: Record<string, any> = {
+    'doha-airport-layover-activities': {
+      id: '20',
+      title: 'Ten Ways to Enjoy a Layover at Doha Airport',
+      date: 'April 29, 2025',
+      author: 'Experience Doha Team',
+      readTime: '11 min read',
+      category: 'Expat-Tips',
+      imageUrl: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=2668&auto=format&fit=crop',
+      content: `
+        <p>When circumstances prevent or discourage city exploration, Hamad International Airport itself provides remarkable layover experiences that transform waiting time into enjoyment. The airport, consistently ranked among the world's best, has been designed specifically to serve connecting passengers with facilities that rival many city attractions. Understanding and utilizing these airport offerings ensures that even confined layovers become pleasant rather than tedious.</p>
+        
+        <h2 id="orchard">1. The Orchard - Indoor Tropical Garden</h2>
+        <p>The Orchard represents the airport's most distinctive feature—an indoor tropical garden spanning considerable space within the main terminal. Real trees, living plants, and careful climate control create environments that feel genuinely refreshing after recycled aircraft air. The garden includes seating areas where passengers rest surrounded by greenery, with natural light filtering through skylights overhead. The psychological benefits of this green space extend beyond aesthetics; studies confirm that natural environments reduce stress and improve mood, benefits that weary travelers particularly appreciate. The Orchard's central location makes it easily accessible from any terminal area, becoming natural rest stop during exploration.</p>
+        
+        <h2 id="art">2. Art Installations and Gallery Walk</h2>
+        <p>Art installations throughout the terminal transform functional spaces into gallery experiences. The most famous, "Lamp Bear" by Urs Fischer, features an enormous yellow teddy bear sitting beneath an actual lamp, creating surreal scale contrasts that invite photography and contemplation. Other installations include works by internationally recognized artists, positioned strategically where passengers naturally pause. These artworks reflect Qatar's broader cultural investments, bringing museum-quality pieces into public spaces where they engage audiences who might not visit traditional galleries. Walking purposefully through the terminal seeking these installations creates impromptu art tour experiences.</p>
+        
+        <h2 id="quiet-rooms">3. Quiet Rooms for Rest</h2>
+        <p>Quiet Rooms offer sleeping facilities for passengers with extended layovers, featuring comfortable recliners in dimmed, sound-controlled environments. These spaces provide rest impossible in regular terminal seating, where lighting and activity levels prevent genuine sleep. The rooms operate free of charge, accessible to all passengers regardless of ticket class, though demand during peak hours can limit availability. For overnight layovers or passengers arriving exhausted from long flights, these facilities prove invaluable for restoration before continuing journeys.</p>
+        
+        <h2 id="showers">4. Shower Facilities</h2>
+        <p>Shower facilities similarly provide refreshment opportunities that transform layover experiences. After long flights in pressurized cabins, hot showers deliver remarkable revitalization, clearing both physical discomfort and mental fatigue. The airport provides shower rooms in multiple locations, some free and others within paid lounge facilities. Fresh toiletries typically accompany these facilities, and the cleanliness standards meet expectations for such premium infrastructure. Emerging from showers into clean clothing (packed in carry-on bags by prepared travelers) makes subsequent flights considerably more comfortable.</p>
+        
+        <h2 id="spa">5. Spa Treatments and Wellness</h2>
+        <p>Spa treatments extend relaxation possibilities beyond showers, with professional services including massages, facials, and traditional hammam experiences available within the terminal. These treatments range from quick options suitable for short layovers to comprehensive packages for longer waits. The physical benefits of massage after extended sitting—improved circulation, reduced muscle tension, lymphatic stimulation—combine with psychological relaxation to create notable improvements in travel comfort. Prices reflect airport premium positioning but remain reasonable compared to equivalent hotel spa services.</p>
+        
+        <h2 id="dining">6. Diverse Food Court Experiences</h2>
+        <p>The food court offers remarkable diversity reflecting Qatar's international character. Beyond typical airport fast food chains, passengers find authentic representations of cuisines from across the world—Indian, Lebanese, Japanese, Italian, American, and more. The quality often surprises travelers accustomed to disappointing airport food, as competition for Qatar Airways' discerning transit traffic motivates operators toward excellence. Sit-down restaurants provide full meal experiences with proper service, while quick-service options suit tighter schedules. Coffee shops featuring both international chains and local roasters provide caffeine throughout the layover. Food becomes legitimate layover activity rather than mere necessity.</p>
+        
+        <h2 id="shopping">7. Shopping and Duty-Free</h2>
+        <p>Shopping extends beyond typical duty-free liquor and tobacco toward comprehensive retail experiences. Gold jewelry, for which the region is renowned, comes with competitive pricing due to tax structures. Designer fashion from major houses competes with local brands. Electronics, perfumes, local products, books, and travel essentials fill extensive retail spaces. Window shopping alone consumes considerable time pleasantly, while actual purchases offer value particularly for gold and regionally-specific items. The shopping areas are climate-controlled, spacious, and designed for comfortable browsing rather than pressured selling.</p>
+        
+        <h2 id="technology">8. Technology and Connectivity</h2>
+        <p>Technology access pervades the terminal, with complimentary high-speed WiFi throughout all areas. Charging stations accommodate multiple device types, with some areas providing private workstations for business travelers requiring productive environments. Video calling facilities allow connection with family and colleagues, while the stable internet enables entertainment streaming, work completion, or simply keeping current with external world. These technological provisions recognize modern travelers' connectivity requirements, ensuring layovers don't create information isolation.</p>
+        
+        <h2 id="prayer-rooms">9. Prayer Rooms and Spiritual Spaces</h2>
+        <p>Prayer rooms accommodate religious observance requirements for travelers of various faiths. These spaces are kept quiet, clean, and available throughout terminal operating hours. For Muslim travelers requiring prayer times observance, facilities are positioned conveniently and clearly signed. The availability reflects Qatar's Islamic character while respecting that travelers represent diverse religious backgrounds, providing appropriate spaces without imposing particular practice.</p>
+        
+        <h2 id="hotel">10. Airport Hotel</h2>
+        <p>The airport hotel, connected directly to the terminal, offers rest opportunities without requiring immigration procedures. Passengers can book rooms for specific hour blocks, sleeping in proper beds before continuing journeys. The hotel maintains quality standards matching its airport premium positioning, with rooms featuring modern amenities, comfortable bedding, and blackout capabilities. For truly extended layovers where sleep becomes necessary, this facility provides solutions impossible through terminal seating or quiet rooms alone.</p>
+        
+        <h2 id="bonus">Bonus: Architectural Exploration</h2>
+        <p>Finally, simple exploration of the terminal itself provides activity through architectural appreciation. The building's design by HOK incorporates flowing forms, dramatic lighting, and scale that inspires. Walking its length, observing design details, watching the choreography of operations, and simply experiencing space crafted for global movement becomes almost meditative. The terminal's vast size—among the world's largest—contains sufficient variety that purposeful wandering reveals continuously changing perspectives.</p>
+        
+        <h2 id="conclusion">Airport as Destination</h2>
+        <p>These ten approaches demonstrate that Hamad International Airport, designed as a transit hub for Qatar Airways' global network, succeeds as destination independently. Whether circumstances restrict movement or personal choice prefers convenience, the airport provides layover experiences that satisfy rather than merely tolerate. The investment Qatar has made in this facility reflects understanding that first impressions matter, and for millions of travelers, the airport constitutes their complete Qatar experience. That this experience can prove genuinely positive represents remarkable achievement in airport design and operation.</p>
+      `,
+      tableOfContents: [
+        { title: '1. The Orchard - Indoor Tropical Garden', id: 'orchard' },
+        { title: '2. Art Installations and Gallery Walk', id: 'art' },
+        { title: '3. Quiet Rooms for Rest', id: 'quiet-rooms' },
+        { title: '4. Shower Facilities', id: 'showers' },
+        { title: '5. Spa Treatments and Wellness', id: 'spa' },
+        { title: '6. Diverse Food Court Experiences', id: 'dining' },
+        { title: '7. Shopping and Duty-Free', id: 'shopping' },
+        { title: '8. Technology and Connectivity', id: 'technology' },
+        { title: '9. Prayer Rooms and Spiritual Spaces', id: 'prayer-rooms' },
+        { title: '10. Airport Hotel', id: 'hotel' },
+        { title: 'Bonus: Architectural Exploration', id: 'bonus' },
+        { title: 'Airport as Destination', id: 'conclusion' }
+      ],
+      tags: ['Airport Guide', 'Hamad Airport', 'Airport Facilities', 'Layover Tips', 'Airport Activities']
+    },
     'five-best-things-doha-layover': {
       id: '19',
       title: 'The Five Best Things to Do on a Layover in Doha',

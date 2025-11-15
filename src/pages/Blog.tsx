@@ -17,6 +17,15 @@ const Blog = () => {
   
   const allPosts = [
     {
+      id: '20',
+      title: 'Ten Ways to Enjoy a Layover at Doha Airport',
+      excerpt: 'Discover how to make the most of your time at Hamad International Airport - from The Orchard garden to spa treatments, art installations, and more.',
+      imageUrl: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&auto=format&fit=crop',
+      category: 'Expat-Tips',
+      date: 'April 29, 2025',
+      slug: 'doha-airport-layover-activities',
+    },
+    {
       id: '19',
       title: 'The Five Best Things to Do on a Layover in Doha',
       excerpt: 'Top 5 must-do experiences during your Doha layover - Museum of Islamic Art, Souq Waqif, Corniche, desert safaris, and Katara Cultural Village.',
