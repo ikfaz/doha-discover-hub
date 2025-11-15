@@ -7,6 +7,21 @@ import { Tabs, TabsContent } from "@/components/ui/tabs";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import GalleryHeader from '@/components/GalleryHeader';
 import GalleryTabs from '@/components/GalleryTabs';
+import galleryMia from '@/assets/gallery-mia.jpg';
+import gallerySkyline from '@/assets/gallery-skyline.jpg';
+import gallerySouq from '@/assets/gallery-souq.jpg';
+import galleryDesertSafari from '@/assets/gallery-desert-safari.jpg';
+import galleryWestBay from '@/assets/gallery-west-bay.jpg';
+import galleryKatara from '@/assets/gallery-katara.jpg';
+import galleryFood from '@/assets/gallery-qatari-food.jpg';
+import galleryFestival from '@/assets/gallery-festival.jpg';
+import galleryDesertLandscape from '@/assets/gallery-desert-landscape.jpg';
+import galleryPearl from '@/assets/gallery-pearl.jpg';
+import galleryShopping from '@/assets/gallery-shopping.jpg';
+import galleryNmoq from '@/assets/gallery-nmoq.jpg';
+import galleryCoffee from '@/assets/gallery-coffee.jpg';
+import galleryCorniche from '@/assets/gallery-corniche.jpg';
+import galleryDhow from '@/assets/gallery-dhow.jpg';
 
 const Gallery = () => {
   const [currentCategory, setCurrentCategory] = useState('all');
@@ -16,115 +31,108 @@ const Gallery = () => {
   const allPhotos = [
     {
       id: '1',
-      url: 'https://images.unsplash.com/photo-1558227108-af6eec1a0bb4?q=80&w=2574&auto=format&fit=crop',
-      alt: 'Museum of Islamic Art',
+      url: galleryMia,
+      alt: 'Museum of Islamic Art at sunset',
       caption: 'The iconic Museum of Islamic Art designed by I.M. Pei',
       category: 'landmarks',
     },
     {
       id: '2',
-      url: 'https://images.unsplash.com/photo-1577278689329-1914b6814d58?q=80&w=2670&auto=format&fit=crop',
-      alt: 'Doha Skyline',
+      url: gallerySkyline,
+      alt: 'Doha Skyline at night',
       caption: 'Doha\'s magnificent skyline illuminated at night',
       category: 'cityscapes',
     },
     {
       id: '3',
-      url: 'https://images.unsplash.com/photo-1603864331039-7bbe48682bbd?q=80&w=2574&auto=format&fit=crop',
-      alt: 'Souq Waqif',
+      url: gallerySouq,
+      alt: 'Souq Waqif traditional market',
       caption: 'The bustling traditional market of Souq Waqif',
       category: 'culture',
     },
     {
       id: '4',
-      url: 'https://images.unsplash.com/photo-1609924206923-4f36e22c94e4?q=80&w=2574&auto=format&fit=crop',
-      alt: 'Desert Safari',
+      url: galleryDesertSafari,
+      alt: 'Desert Safari adventure in Qatar',
       caption: 'Adventure in the dunes during a desert safari',
       category: 'experiences',
     },
     {
       id: '5',
-      url: 'https://images.unsplash.com/photo-1578895101408-1a6986a3a449?q=80&w=2574&auto=format&fit=crop',
-      alt: 'West Bay Architecture',
+      url: galleryWestBay,
+      alt: 'West Bay modern architecture',
       caption: 'Modern architectural marvels in West Bay district',
       category: 'cityscapes',
     },
     {
       id: '6',
-      url: 'https://images.unsplash.com/photo-1518182170546-07661fd94144?q=80&w=2668&auto=format&fit=crop',
-      alt: 'Katara Cultural Village',
+      url: galleryKatara,
+      alt: 'Katara Cultural Village amphitheater',
       caption: 'The beautiful Katara Cultural Village',
       category: 'culture',
     },
     {
       id: '7',
-      url: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=2574&auto=format&fit=crop',
-      alt: 'Traditional Qatari Food',
+      url: galleryFood,
+      alt: 'Traditional Qatari cuisine spread',
       caption: 'Delicious traditional Qatari cuisine',
       category: 'food',
     },
     {
       id: '8',
-      url: 'https://images.unsplash.com/photo-1526285759704-71d51dd482ab?q=80&w=2670&auto=format&fit=crop',
-      alt: 'Cultural Festival',
+      url: galleryFestival,
+      alt: 'Cultural festival with traditional dancers',
       caption: 'Celebration of culture at a local festival',
       category: 'culture',
     },
     {
       id: '9',
-      url: 'https://images.unsplash.com/photo-1592568787542-43e11a310fed?q=80&w=2574&auto=format&fit=crop',
-      alt: 'Desert Landscape',
+      url: galleryDesertLandscape,
+      alt: 'Qatar desert landscape at sunset',
       caption: 'The stunning desert landscape outside Doha',
       category: 'experiences',
     },
     {
       id: '10',
-      url: 'https://images.unsplash.com/photo-1517282009859-f000ec3b26fe?q=80&w=2574&auto=format&fit=crop',
-      alt: 'The Pearl-Qatar',
+      url: galleryPearl,
+      alt: 'The Pearl Qatar luxury marina',
       caption: 'Luxury living at The Pearl-Qatar',
       category: 'landmarks',
     },
     {
       id: '11',
-      url: 'https://images.unsplash.com/photo-1528698827591-e19ccd7bc23d?q=80&w=2576&auto=format&fit=crop',
-      alt: 'Shopping Mall',
+      url: galleryShopping,
+      alt: 'Luxury shopping mall interior',
       caption: 'World-class shopping experience in Doha',
       category: 'experiences',
     },
     {
       id: '12',
-      url: 'https://images.unsplash.com/photo-1599946347371-68eb71b16afc?q=80&w=2670&auto=format&fit=crop',
-      alt: 'National Museum of Qatar',
+      url: galleryNmoq,
+      alt: 'National Museum of Qatar architecture',
       caption: 'The stunning National Museum of Qatar',
       category: 'landmarks',
     },
     {
       id: '13',
-      url: 'https://images.unsplash.com/photo-1576485290814-1c72aa4bbb8e?q=80&w=2574&auto=format&fit=crop',
-      alt: 'Traditional Coffee Service',
+      url: galleryCoffee,
+      alt: 'Traditional Arabic coffee service with dates',
       caption: 'Arabic coffee service with dates - a symbol of Qatari hospitality',
       category: 'culture',
     },
     {
       id: '14',
-      url: 'https://images.unsplash.com/photo-1548794397-ebc0aa4a3275?q=80&w=2574&auto=format&fit=crop',
-      alt: 'Modern Architecture',
-      caption: 'Contemporary architectural designs in Doha',
+      url: galleryCorniche,
+      alt: 'Doha Corniche waterfront promenade',
+      caption: 'The beautiful Corniche waterfront with modern skyline',
       category: 'cityscapes',
     },
     {
       id: '15',
-      url: 'https://images.unsplash.com/photo-1551109359-8263cb477fde?q=80&w=2574&auto=format&fit=crop',
-      alt: 'Traditional Market',
-      caption: 'Colorful spices at the local market',
-      category: 'food',
-    },
-    {
-      id: '16',
-      url: 'https://images.unsplash.com/photo-1519885277449-12e839432506?q=80&w=2574&auto=format&fit=crop',
-      alt: 'Doha Port',
-      caption: 'Traditional dhows at Doha\'s historic port',
-      category: 'landmarks',
+      url: galleryDhow,
+      alt: 'Traditional dhow boats in Doha harbor',
+      caption: 'Traditional wooden dhow boats with West Bay skyline',
+      category: 'experiences',
     },
   ];
 
