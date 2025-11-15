@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
+import BudgetCharts from '@/components/BudgetCharts';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -200,7 +201,15 @@ const BudgetPlanner = () => {
             </CardContent>
           </Card>
 
-          <div className="grid lg:grid-cols-3 gap-8">
+          {/* Budget Visualization Charts */}
+          <BudgetCharts 
+            expenses={expenses}
+            currency={currency}
+            convertCurrency={convertCurrency}
+            totalExpenses={totalExpenses}
+          />
+
+          <div className="grid lg:grid-cols-3 gap-8 mt-8">
             {/* Budget Input */}
             <div className="lg:col-span-2 space-y-6">
               {/* Salary & Currency */}
