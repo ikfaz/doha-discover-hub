@@ -7,6 +7,10 @@ import Footer from '@/components/Footer';
 import BlogCard from '@/components/BlogCard';
 import Newsletter from '@/components/Newsletter';
 import { Diamond, Crown, Trophy } from 'lucide-react';
+import desertSafariImage from '@/assets/desert-safari-inland-sea.jpg';
+import museumsImage from '@/assets/mia-nmoq-museums.jpg';
+import souqWaqifImage from '@/assets/souq-waqif-night.jpg';
+import layoverImage from '@/assets/doha-layover-experience.jpg';
 
 const Index = () => {
   const featuredBlogs = [
@@ -14,7 +18,7 @@ const Index = () => {
       id: '30',
       title: 'The Ultimate Arabian Adventure: Desert Safari and Inland Sea',
       excerpt: 'Experience the thrill of dune bashing and the serenity of Khor Al Adaid - your complete guide to Qatar\'s quintessential desert safari adventure.',
-      imageUrl: 'https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=800&auto=format&fit=crop',
+      imageUrl: desertSafariImage,
       category: 'Attractions',
       date: 'May 9, 2025',
       slug: 'desert-safari-inland-sea-khor-al-adaid',
@@ -23,7 +27,7 @@ const Index = () => {
       id: '29',
       title: 'A Tale of Two Museums: MIA + NMoQ Combo Guide',
       excerpt: 'Discover Qatar\'s cultural treasures with our guide to visiting the Museum of Islamic Art and National Museum of Qatar using the Discover One Pass.',
-      imageUrl: 'https://images.unsplash.com/photo-1554907984-15263bfd63bd?w=800&auto=format&fit=crop',
+      imageUrl: museumsImage,
       category: 'Culture',
       date: 'May 8, 2025',
       slug: 'mia-nmoq-museum-combo-guide',
@@ -32,7 +36,7 @@ const Index = () => {
       id: '28',
       title: 'The Heart of Doha After Dark: Souq Waqif Night Experiences',
       excerpt: 'Discover Souq Waqif at night - from authentic Qatari dining and shisha cafés to mastering the art of haggling in the ancient market alleyways.',
-      imageUrl: 'https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=800&auto=format&fit=crop',
+      imageUrl: souqWaqifImage,
       category: 'Culture',
       date: 'May 7, 2025',
       slug: 'souq-waqif-night-experiences-haggling',
@@ -41,7 +45,7 @@ const Index = () => {
       id: '27',
       title: 'The Ultimate 24-48 Hour Layover in Doha: A Complete Guide',
       excerpt: 'Transform your Doha layover into a mini-vacation with our detailed 24-hour dash and 48-hour exploration itineraries, from cultural highlights to desert adventures.',
-      imageUrl: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&auto=format&fit=crop',
+      imageUrl: layoverImage,
       category: 'Expat-Tips',
       date: 'May 6, 2025',
       slug: 'ultimate-doha-layover-24-48-hours',
