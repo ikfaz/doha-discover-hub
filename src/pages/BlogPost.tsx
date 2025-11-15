@@ -38,12 +38,162 @@ import womenDrivingImage from '@/assets/women-driving-qatar.jpg';
 import qatariDishesImage from '@/assets/qatari-dishes-guide.jpg';
 import hamadAirportGuideImage from '@/assets/hamad-airport-guide.jpg';
 import dohaTransformingImage from '@/assets/doha-transforming-middle-east.jpg';
+import costOfLivingImage from '@/assets/cost-of-living-doha-2025.jpg';
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   
   // Blog post data based on slug
   const blogPosts: Record<string, any> = {
+    'cost-of-living-doha-2025': {
+      id: '38',
+      title: 'Cost of Living in Doha 2025: Rent Inflation and Monthly Expenses Guide',
+      date: 'May 17, 2025',
+      author: 'Experience Doha Team',
+      readTime: '12 min read',
+      category: 'Expat-Tips',
+      imageUrl: costOfLivingImage,
+      tags: ['cost of living', 'rent prices', 'expat budget', 'Qatar inflation', 'monthly expenses'],
+      content: `
+        <p class="lead">The cost of living in Doha 2025 has experienced significant shifts following the post-World Cup adjustment period. While Qatar remains an expensive destination by global standards, understanding current pricing helps expats budget accurately and negotiate appropriate salary packages.</p>
+        
+        <p>Doha ranks among the <strong>top 20 most expensive cities globally</strong> for expatriates, though tax-free salaries and employer benefits often offset these costs substantially.</p>
+        
+        <h2 id="rent-inflation">Rent Inflation in Doha: What's Happening in 2025?</h2>
+        <p>Rental prices in Qatar have increased <strong>15-25% since 2023</strong>, driven by sustained demand and limited new supply in premium areas. This rent inflation affects different neighborhoods unevenly:</p>
+        
+        <h3>West Bay Apartments (Premium)</h3>
+        <ul>
+          <li>1-bedroom: QAR 8,000-12,000/month ($2,200-$3,300)</li>
+          <li>2-bedroom: QAR 12,000-18,000/month ($3,300-$4,950)</li>
+          <li>3-bedroom: QAR 16,000-25,000/month ($4,400-$6,875)</li>
+        </ul>
+        
+        <h3>The Pearl-Qatar</h3>
+        <ul>
+          <li>1-bedroom: QAR 9,000-14,000/month ($2,475-$3,850)</li>
+          <li>2-bedroom: QAR 14,000-22,000/month ($3,850-$6,050)</li>
+          <li>3-bedroom: QAR 18,000-30,000/month ($4,950-$8,250)</li>
+        </ul>
+        
+        <h3>Al Waab/Al Sadd (Mid-Range)</h3>
+        <ul>
+          <li>1-bedroom: QAR 5,000-7,500/month ($1,375-$2,060)</li>
+          <li>2-bedroom: QAR 7,500-11,000/month ($2,060-$3,025)</li>
+          <li>3-bedroom: QAR 10,000-15,000/month ($2,750-$4,125)</li>
+        </ul>
+        
+        <h3>Al Wakrah/Mesaieed (Budget)</h3>
+        <ul>
+          <li>1-bedroom: QAR 3,500-5,500/month ($960-$1,510)</li>
+          <li>2-bedroom: QAR 5,000-8,000/month ($1,375-$2,200)</li>
+          <li>3-bedroom: QAR 7,000-11,000/month ($1,925-$3,025)</li>
+        </ul>
+        
+        <h2 id="budget-breakdown">Monthly Budget Breakdown: Singles vs. Families</h2>
+        
+        <h3>Single Professional Monthly Budget (Moderate Lifestyle)</h3>
+        <ul>
+          <li>Rent (1-bed Al Sadd): QAR 6,500</li>
+          <li>Utilities (AC, water, electricity): QAR 400-600</li>
+          <li>Groceries: QAR 1,200-1,800</li>
+          <li>Transportation (car loan + fuel): QAR 2,500-3,500</li>
+          <li>Mobile/Internet: QAR 350</li>
+          <li>Dining out (8-10 times): QAR 1,500-2,500</li>
+          <li>Entertainment: QAR 800-1,200</li>
+          <li>Health insurance: Often employer-provided</li>
+          <li><strong>Total: QAR 13,250-16,450/month ($3,640-$4,520)</strong></li>
+        </ul>
+        
+        <h3>Family of Four Monthly Budget (Comfortable Lifestyle)</h3>
+        <ul>
+          <li>Rent (3-bed villa Al Waab): QAR 14,000</li>
+          <li>Utilities: QAR 1,200-2,000</li>
+          <li>Groceries: QAR 3,500-4,500</li>
+          <li>School fees (2 children): QAR 8,000-15,000</li>
+          <li>Transportation (2 vehicles): QAR 4,500-6,000</li>
+          <li>Mobile/Internet: QAR 500</li>
+          <li>Dining/Entertainment: QAR 3,000-4,500</li>
+          <li>Domestic help: QAR 1,500-2,500</li>
+          <li><strong>Total: QAR 36,200-49,000/month ($9,950-$13,460)</strong></li>
+        </ul>
+        
+        <h2 id="grocery-prices">Grocery Prices in Doha 2025</h2>
+        <p>Grocery costs vary dramatically based on shopping location:</p>
+        
+        <h3>Local Products (Al Meera, Carrefour)</h3>
+        <ul>
+          <li>Milk (1 liter): QAR 6-8</li>
+          <li>Bread (loaf): QAR 4-7</li>
+          <li>Rice (1 kg): QAR 8-15</li>
+          <li>Chicken (1 kg): QAR 20-28</li>
+          <li>Eggs (dozen): QAR 12-18</li>
+        </ul>
+        
+        <h3>Imported Products (Premium)</h3>
+        <ul>
+          <li>Imported cheese: QAR 35-80</li>
+          <li>Organic produce: 40-60% premium</li>
+          <li>Western brands: 30-50% higher than home countries</li>
+        </ul>
+        
+        <p><strong>Money-Saving Tip:</strong> Shopping at Souq markets for fresh produce and using loyalty programs at major supermarkets reduces grocery bills by 20-30%.</p>
+        
+        <h2 id="utilities">Utilities and Hidden Costs</h2>
+        
+        <h3>Electricity and Water</h3>
+        <p>Qatar subsidizes utilities, but air conditioning drives significant consumption:</p>
+        <ul>
+          <li>Summer months (May-September): QAR 800-1,500/month</li>
+          <li>Winter months: QAR 300-600/month</li>
+        </ul>
+        
+        <h3>Internet and Mobile</h3>
+        <ul>
+          <li>Home fiber internet: QAR 300-500/month</li>
+          <li>Mobile plans: QAR 150-300/month</li>
+          <li>Both services offered by Ooredoo and Vodafone</li>
+        </ul>
+        
+        <h3>Transportation Costs</h3>
+        <ul>
+          <li>Fuel: QAR 2.10/liter (subsidized, among world's cheapest)</li>
+          <li>Car insurance: QAR 2,500-5,000/year</li>
+          <li>Vehicle registration: QAR 500-1,000/year</li>
+          <li>Metro single trip: QAR 2-6</li>
+        </ul>
+        
+        <h2 id="salary-negotiations">How Rent Inflation Affects Salary Negotiations</h2>
+        <p>Given 2025's rental market conditions, expats should negotiate packages including:</p>
+        <ul>
+          <li><strong>Housing allowance adjustments</strong> - Request annual reviews tied to inflation</li>
+          <li><strong>Compound accommodation</strong> - Employer-provided housing eliminates rent concerns</li>
+          <li><strong>Relocation bonuses</strong> - Cover deposits (typically 2-3 months rent)</li>
+          <li><strong>Annual flights</strong> - Offset overall cost of living</li>
+        </ul>
+        
+        <h2 id="affordability">Is Doha Affordable in 2025?</h2>
+        <p>The verdict: Doha's affordability depends entirely on your salary package. With tax-free income, employer benefits, and subsidized fuel, many expats save <strong>30-50% of their salary</strong> despite high living costs.</p>
+        
+        <p>However, the 2025 rent inflation means careful budgeting and package negotiation are more critical than ever.</p>
+        
+        <p><strong>Key takeaway:</strong> Request detailed cost-of-living data during job negotiations and ensure housing allowances reflect current market rates, not outdated figures.</p>
+        
+        <h2 id="faq">FAQ: Cost of Living Doha 2025</h2>
+        
+        <h3>How much salary do I need to live comfortably in Doha?</h3>
+        <p>Singles need minimum QAR 15,000-20,000/month; families require QAR 35,000-50,000/month for comfortable lifestyles including school fees.</p>
+        
+        <h3>Is Qatar more expensive than Dubai?</h3>
+        <p>Doha and Dubai have similar costs, though Doha's rent increased more sharply post-2022. Dubai offers more budget accommodation options.</p>
+        
+        <h3>Do expats pay taxes in Qatar?</h3>
+        <p>No. Qatar has no personal income tax, making gross salary equal to net salary—a major advantage offsetting high living costs.</p>
+        
+        <h3>What's the biggest expense for families in Doha?</h3>
+        <p>School fees, ranging QAR 30,000-120,000 annually per child, represent the largest expense after housing.</p>
+      `,
+    },
     'doha-changing-middle-east': {
       id: '37',
       title: 'Doha: The City That\'s Changing the Middle East',
