@@ -41,7 +41,7 @@ import architectureImage from '@/assets/doha-architecture.jpg';
 import familyImage from '@/assets/family-friendly.jpg';
 import weekendImage from '@/assets/weekend-getaways.jpg';
 import alcoholGuideImage from '@/assets/alcohol-guide-doha.jpg';
-import prostitutionLawsImage from '@/assets/prostitution-laws-doha.jpg';
+import prostitutionLawsImage from '@/assets/prostitution-laws-legal-guide.jpg';
 
 const Blog = () => {
   const [searchQuery, setSearchQuery] = useState('');

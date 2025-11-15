@@ -32,7 +32,7 @@ import qatariCuisineImage from '@/assets/qatari-cuisine.jpg';
 import culturalEventsImage from '@/assets/cultural-events.jpg';
 import miaMuseumImage from '@/assets/mia-museum.jpg';
 import alcoholGuideImage from '@/assets/alcohol-guide-doha.jpg';
-import prostitutionLawsImage from '@/assets/prostitution-laws-doha.jpg';
+import prostitutionLawsImage from '@/assets/prostitution-laws-legal-guide.jpg';
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
