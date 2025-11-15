@@ -15,66 +15,67 @@ const About = () => {
     <div className="min-h-screen flex flex-col">
       <NavBar />
       
-      {/* Hero Section */}
-      <section className="bg-qatar-maroon text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold font-heading mb-6">About Experience Doha</h1>
-          <p className="text-xl max-w-3xl mx-auto">
-            Your comprehensive guide to Qatar's vibrant capital city
-          </p>
-        </div>
-      </section>
-      
-      {/* About Content */}
-      <section className="py-16">
-        <div className="content-container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="section-title">Our Story</h2>
-              <p className="text-gray-700 mb-6">
-                Experience Doha was founded with a passion for sharing the beauty, culture, and 
-                excitement of Qatar's capital city with the world. As both a travel enthusiast 
-                and a long-term Doha resident, I created this platform to bridge the gap between 
-                tourist information and authentic local experiences.
-              </p>
-              <p className="text-gray-700 mb-6">
-                What started as a personal blog documenting my adventures around Doha has grown 
-                into a comprehensive resource for both tourists planning their visits and expats 
-                making Doha their home. Through my YouTube channel and detailed articles, I aim 
-                to showcase the perfect blend of traditional heritage and ultramodern development 
-                that makes Doha such a fascinating destination.
-              </p>
-              <p className="text-gray-700 mb-6">
-                Whether you're interested in cultural attractions, culinary experiences, shopping 
-                adventures, or local events, Experience Doha is your trusted companion for navigating 
-                this dynamic city.
-              </p>
-              
-              <div className="flex flex-wrap gap-4 mt-8">
-                <Button 
-                  className="bg-qatar-maroon hover:bg-qatar-maroon/90 text-white"
-                  onClick={() => window.open('https://www.youtube.com/@ExperienceDoha', '_blank')}
-                >
-                  <Youtube className="mr-2 h-4 w-4" />
-                  YouTube Channel
-                </Button>
-                <Button 
-                  variant="outline" 
-                  className="border-qatar-maroon text-qatar-maroon hover:bg-qatar-maroon/10"
-                  onClick={handleContactClick}
-                >
-                  <Mail className="mr-2 h-4 w-4" />
-                  Contact Me
-                </Button>
+      <main>
+        {/* Hero Section */}
+        <section className="bg-qatar-maroon text-white py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 className="text-4xl md:text-5xl font-bold font-heading mb-6">About Experience Doha</h1>
+            <p className="text-xl max-w-3xl mx-auto">
+              Your comprehensive guide to Qatar's vibrant capital city
+            </p>
+          </div>
+        </section>
+        
+        {/* About Content */}
+        <section className="py-16">
+          <div className="content-container">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 className="section-title">Our Story</h2>
+                <p className="text-gray-700 mb-6">
+                  Experience Doha was founded with a passion for sharing the beauty, culture, and 
+                  excitement of Qatar's capital city with the world. As both a travel enthusiast 
+                  and a long-term Doha resident, I created this platform to bridge the gap between 
+                  tourist information and authentic local experiences.
+                </p>
+                <p className="text-gray-700 mb-6">
+                  What started as a personal blog documenting my adventures around Doha has grown 
+                  into a comprehensive resource for both tourists planning their visits and expats 
+                  making Doha their home. Through my YouTube channel and detailed articles, I aim 
+                  to showcase the perfect blend of traditional heritage and ultramodern development 
+                  that makes Doha such a fascinating destination.
+                </p>
+                <p className="text-gray-700 mb-6">
+                  Whether you're interested in cultural attractions, culinary experiences, shopping 
+                  adventures, or local events, Experience Doha is your trusted companion for navigating 
+                  this dynamic city.
+                </p>
+                
+                <div className="flex flex-wrap gap-4 mt-8">
+                  <Button 
+                    className="bg-qatar-maroon hover:bg-qatar-maroon/90 text-white"
+                    onClick={() => window.open('https://www.youtube.com/@ExperienceDoha', '_blank')}
+                  >
+                    <Youtube className="mr-2 h-4 w-4" />
+                    YouTube Channel
+                  </Button>
+                  <Button 
+                    variant="outline" 
+                    className="border-qatar-maroon text-qatar-maroon hover:bg-qatar-maroon/10"
+                    onClick={handleContactClick}
+                  >
+                    <Mail className="mr-2 h-4 w-4" />
+                    Contact Me
+                  </Button>
+                </div>
               </div>
-            </div>
-            
-            <div className="relative">
-              <img 
-                src="https://images.unsplash.com/photo-1517282009859-f000ec3b26fe?q=80&w=2574&auto=format&fit=crop" 
-                alt="About Experience Doha" 
-                className="rounded-lg shadow-xl"
-              />
+              
+              <div className="relative">
+                <img 
+                  src="https://images.unsplash.com/photo-1517282009859-f000ec3b26fe?q=80&w=2574&auto=format&fit=crop" 
+                  alt="Experience Doha team exploring Qatar's attractions and cultural sites" 
+                  className="rounded-lg shadow-xl"
+                />
               <div className="absolute -bottom-6 -left-6 w-48 h-48 bg-qatar-gold rounded-lg -z-10"></div>
               <div className="absolute -top-6 -right-6 w-48 h-48 bg-qatar-maroon rounded-lg -z-10"></div>
             </div>
@@ -139,6 +140,7 @@ const About = () => {
           <Newsletter />
         </div>
       </section>
+      </main>
       
       <Footer />
     </div>

@@ -1777,18 +1777,49 @@ const BlogPost = () => {
     navigator.clipboard.writeText(window.location.href);
   };
 
+  // Structured Data for SEO
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": post.title,
+    "image": post.imageUrl,
+    "author": {
+      "@type": "Organization",
+      "name": post.author
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "ExperienceDoha.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://experiencedoha.com/logo.png"
+      }
+    },
+    "datePublished": post.date,
+    "description": post.excerpt || post.content.substring(0, 160).replace(/<[^>]*>/g, ''),
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `https://experiencedoha.com/blog/${slug}`
+    }
+  };
+
   return (
-    <div className="min-h-screen flex flex-col">
-      <NavBar />
-      
-      <main className="flex-1">
-        {/* Hero Section */}
-        <div className="relative h-[400px] w-full">
-          <img
-            src={post.imageUrl}
-            alt={post.title}
-            className="w-full h-full object-cover"
-          />
+    <>
+      <script type="application/ld+json">
+        {JSON.stringify(structuredData)}
+      </script>
+      <div className="min-h-screen flex flex-col">
+        <NavBar />
+        
+        <main className="flex-1">
+          {/* Hero Section */}
+          <article>
+            <div className="relative h-[400px] w-full">
+              <img
+                src={post.imageUrl}
+                alt={`${post.title} - ${post.category} guide for Doha, Qatar`}
+                className="w-full h-full object-cover"
+              />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
           <div className="absolute bottom-0 left-0 right-0 content-container pb-8">
             <Badge className="mb-4 bg-qatar-gold text-qatar-maroon hover:bg-qatar-gold">
@@ -1924,10 +1955,12 @@ const BlogPost = () => {
 
         {/* Newsletter Section */}
         <Newsletter />
+        </article>
       </main>
 
       <Footer />
     </div>
+    </>
   );
 };
 
