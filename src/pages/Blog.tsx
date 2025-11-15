@@ -17,6 +17,15 @@ const Blog = () => {
   
   const allPosts = [
     {
+      id: '22',
+      title: 'The Jewel of Doha: Luxury Shopping and Dining at The Pearl-Qatar',
+      excerpt: 'Discover The Pearl-Qatar - from Porto Arabia\'s luxury brands to Qanat Quartier\'s Venetian charm, your guide to high-end shopping and fine dining.',
+      imageUrl: 'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&auto=format&fit=crop',
+      category: 'Lifestyle',
+      date: 'May 1, 2025',
+      slug: 'pearl-qatar-luxury-shopping-dining',
+    },
+    {
       id: '21',
       title: 'A Year of Culture: Katara Cultural Village Events Calendar 2025',
       excerpt: 'Your complete guide to festivals, exhibitions, and performances at Katara Cultural Village throughout 2025 - from dhow festivals to jazz concerts.',

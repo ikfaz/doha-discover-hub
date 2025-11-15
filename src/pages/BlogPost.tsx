@@ -13,6 +13,100 @@ const BlogPost = () => {
   
   // Blog post data based on slug
   const blogPosts: Record<string, any> = {
+    'pearl-qatar-luxury-shopping-dining': {
+      id: '22',
+      title: 'The Jewel of Doha: A Guide to Luxury Shopping and Fine Dining at The Pearl-Qatar',
+      date: 'May 1, 2025',
+      author: 'Experience Doha Team',
+      readTime: '9 min read',
+      category: 'Lifestyle',
+      imageUrl: 'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=2668&auto=format&fit=crop',
+      content: `
+        <p>The Pearl-Qatar is an artificial island spanning nearly four million square meters, a masterpiece of urban planning and a symbol of Qatar's ambition and affluence. Often referred to as the "Arabian Riviera," this luxurious destination offers an unparalleled experience of high-end shopping, world-class dining, and Mediterranean-inspired living. For the discerning traveler, The Pearl is a must-visit to witness the pinnacle of Doha's modern, cosmopolitan lifestyle.</p>
+        
+        <h2 id="distinctive-luxury">An Island of Distinctive Luxury</h2>
+        <p>The Pearl is divided into several distinct districts, each with its own unique architectural style and atmosphere, but all united by a commitment to luxury and exclusivity.</p>
+        
+        <h3 id="porto-arabia">Porto Arabia: The Heart of High-End Retail</h3>
+        <p>Porto Arabia is the vibrant, beating heart of The Pearl. Its crescent-shaped harbor is lined with luxury yachts and flanked by high-rise residential towers and a long, elegant promenade. This area is the primary destination for luxury shopping.</p>
+        <ul>
+          <li><strong>Shopping Experience:</strong> The retail offerings here are dominated by international luxury brands and designer boutiques. Visitors can browse the latest collections from Parisian fashion houses, Italian leather goods manufacturers, and Swiss watchmakers. The shopping experience is intimate and exclusive, catering to a clientele seeking the finest in global luxury.</li>
+          <li><strong>Dining:</strong> The promenade is a culinary hotspot, featuring a concentration of high-end restaurants and chic cafés. The dining here is characterized by its stunning waterfront views and diverse international cuisine.</li>
+        </ul>
+        
+        <h3 id="qanat-quartier">Qanat Quartier: Venice Meets the Gulf</h3>
+        <p>Perhaps the most picturesque district, the Qanat Quartier is inspired by the romantic architecture of Venice. It features colorful low-rise buildings, intricate canals, and charming pedestrian bridges.</p>
+        <ul>
+          <li><strong>Shopping:</strong> The retail here is more focused on boutique stores, specialty shops, and local designers, offering a more curated and unique selection compared to the global brands of Porto Arabia.</li>
+          <li><strong>Dining:</strong> The dining experience in Qanat Quartier is more intimate and casual, with numerous coffee shops and restaurants offering a relaxed atmosphere along the canals. The pastel-colored buildings and open plazas make it a perfect spot for a leisurely afternoon meal.</li>
+        </ul>
+        
+        <h3 id="medina-centrale">Medina Centrale: The Town Square</h3>
+        <p>Medina Centrale serves as the island's town square, offering a more family-friendly and accessible retail and dining experience. It features a cinema, a large open plaza, and a mix of high-street and mid-range brands.</p>
+        <ul>
+          <li><strong>Focus:</strong> This area provides a balance, offering convenience stores, casual dining, and entertainment options, making it a central gathering point for residents and visitors.</li>
+        </ul>
+        
+        <h2 id="dining-landscape">The Fine Dining Landscape</h2>
+        <p>The Pearl-Qatar has firmly established itself as a premier culinary destination in the Gulf, attracting world-renowned chefs and international restaurant concepts. The dining scene is characterized by its diversity, quality, and spectacular settings.</p>
+        
+        <table class="w-full border-collapse my-6">
+          <thead>
+            <tr class="bg-qatar-maroon text-white">
+              <th class="border border-gray-300 p-3 text-left">District</th>
+              <th class="border border-gray-300 p-3 text-left">Culinary Focus</th>
+              <th class="border border-gray-300 p-3 text-left">Signature Experience</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border border-gray-300 p-3"><strong>Porto Arabia</strong></td>
+              <td class="border border-gray-300 p-3">International Fine Dining (Italian, French, Asian)</td>
+              <td class="border border-gray-300 p-3">Dinner with a view of luxury yachts and the marina.</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border border-gray-300 p-3"><strong>Qanat Quartier</strong></td>
+              <td class="border border-gray-300 p-3">Boutique Cafés, Specialty Cuisine, Desserts</td>
+              <td class="border border-gray-300 p-3">Casual, picturesque dining along the colorful canals.</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 p-3"><strong>Marsa Malaz Kempinski</strong></td>
+              <td class="border border-gray-300 p-3">High-End Hotel Restaurants (Steakhouse, Seafood)</td>
+              <td class="border border-gray-300 p-3">Exclusive, sophisticated dining within a five-star setting.</td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <h3 id="must-try">Must-Try Dining Experiences</h3>
+        <ol>
+          <li><strong>High-End Italian:</strong> Several restaurants offer authentic, sophisticated Italian cuisine, often with ingredients flown in directly from Italy.</li>
+          <li><strong>Seafood Specialties:</strong> Given its waterfront location, The Pearl boasts exceptional seafood restaurants, serving fresh catches prepared with a global flair.</li>
+          <li><strong>Thematic Dining:</strong> Look for unique concepts, such as restaurants specializing in molecular gastronomy or fusion cuisine, which are often found within the luxury hotels on the island.</li>
+        </ol>
+        
+        <h2 id="practical-tips">Practical Tips for a Luxury Visit</h2>
+        <ul>
+          <li><strong>Getting There:</strong> The Pearl is easily accessible by taxi or private car. It is a short drive from the West Bay area.</li>
+          <li><strong>Dress Code:</strong> While generally more relaxed than traditional areas like Souq Waqif, smart casual attire is recommended, especially for fine dining establishments.</li>
+          <li><strong>Best Time to Visit:</strong> The evening, when the lights reflect off the water and the weather is cooler, is the most atmospheric time for a visit.</li>
+          <li><strong>Transportation on the Island:</strong> The island is large, but a free shuttle service operates between the main districts, making it easy to hop from Porto Arabia to Qanat Quartier.</li>
+        </ul>
+        
+        <h2 id="conclusion">A Lifestyle Destination</h2>
+        <p>The Pearl-Qatar is more than just a real estate development; it is a lifestyle destination that showcases the modern face of Qatar. It is a place where global luxury meets Arabian hospitality, offering a truly unique and memorable experience for those who appreciate the finer things in life. A visit to The Pearl is a journey into the future of Doha, a city that seamlessly blends tradition with world-class modernity.</p>
+      `,
+      tableOfContents: [
+        { title: 'An Island of Distinctive Luxury', id: 'distinctive-luxury' },
+        { title: 'Porto Arabia: High-End Retail', id: 'porto-arabia' },
+        { title: 'Qanat Quartier: Venice Meets the Gulf', id: 'qanat-quartier' },
+        { title: 'Medina Centrale: The Town Square', id: 'medina-centrale' },
+        { title: 'The Fine Dining Landscape', id: 'dining-landscape' },
+        { title: 'Must-Try Dining Experiences', id: 'must-try' },
+        { title: 'Practical Tips for a Luxury Visit', id: 'practical-tips' },
+        { title: 'A Lifestyle Destination', id: 'conclusion' }
+      ],
+      tags: ['The Pearl', 'Luxury Shopping', 'Fine Dining', 'Porto Arabia', 'Lifestyle']
+    },
     'katara-cultural-village-events-2025': {
       id: '21',
       title: 'A Year of Culture: Katara Cultural Village Events Calendar 2025',
