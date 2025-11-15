@@ -113,6 +113,7 @@ const BlogPost = () => {
         { id: 'overnight', title: 'The Overnight Experience', level: 3 },
         { id: 'practical-tips', title: 'Practical Tips for the Desert Safari', level: 2 },
       ],
+      tags: ['Desert', 'Adventure', 'Nature', 'Attractions', 'Tours']
     },
     'mia-nmoq-museum-combo-guide': {
       id: '29',
@@ -217,6 +218,7 @@ const BlogPost = () => {
         { id: 'combo', title: 'The Combo Advantage: Practicality and Value', level: 2 },
         { id: 'discover-pass', title: 'The Discover One Pass', level: 3 },
       ],
+      tags: ['Museums', 'Culture', 'Architecture', 'Art', 'Attractions']
     },
     'souq-waqif-night-experiences-haggling': {
       id: '28',
@@ -314,6 +316,7 @@ const BlogPost = () => {
         { id: 'golden-rules', title: 'The Golden Rules of Negotiation', level: 3 },
         { id: 'practical-tips', title: 'Practical Tips for a Night Visit', level: 2 },
       ],
+      tags: ['Culture', 'Shopping', 'Food', 'Souq Waqif', 'Nightlife']
     },
     'ultimate-doha-layover-24-48-hours': {
       id: '27',
@@ -449,6 +452,7 @@ const BlogPost = () => {
         { id: 'day-2', title: 'Day 2: Modernity and Adventure', level: 3 },
         { id: 'logistics', title: 'Stopover Logistics: The Discover Qatar Program', level: 2 },
       ],
+      tags: ['Expat-Tips', 'Layover', 'Itinerary', 'Travel', 'Attractions']
     },
     'qatar-airways-stopover-packages-lounge': {
       id: '26',
