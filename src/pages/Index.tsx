@@ -27,9 +27,20 @@ import qatarVisaRulesImage from '@/assets/qatar-visa-rules-2025.jpg';
 import westBayAlWaabImage from '@/assets/west-bay-al-waab-comparison.jpg';
 import drivingDohaImage from '@/assets/driving-doha-2025-guide.jpg';
 import lgbtqQatarImage from '@/assets/lgbtq-experiences-qatar-guide.jpg';
+import bankAccountQatarImage from '@/assets/bank-account-qatar-guide.jpg';
 
 const Index = () => {
   const featuredBlogs = [
+    {
+      id: '45',
+      title: 'Opening a Bank Account in Qatar: QNB vs International Banks Guide',
+      excerpt: 'Compare QNB vs international banks in Qatar. Learn account requirements, fees, services, and which bank is best for expats opening accounts in Doha 2025.',
+      imageUrl: bankAccountQatarImage,
+      category: 'Expat-Tips',
+      date: 'May 25, 2025',
+      slug: 'bank-account-qatar-guide',
+      tags: ['Qatar banking', 'QNB', 'expat finance', 'international banks', 'account opening'],
+    },
     {
       id: '44',
       title: 'LGBTQ+ Experiences in Qatar: What Expats Need to Know 2025',

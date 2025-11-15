@@ -9,6 +9,7 @@ import VisaChecklistGenerator from '@/components/VisaChecklistGenerator';
 import DrivingLicenseChecker from '@/components/DrivingLicenseChecker';
 import MentalHealthDirectory from '@/components/MentalHealthDirectory';
 import { TherapyCostCalculator } from '@/components/TherapyCostCalculator';
+import { BankComparison } from '@/components/BankComparison';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Calendar, Clock, Facebook, Twitter, Share2 } from 'lucide-react';
@@ -51,12 +52,279 @@ import qatarVisaRulesImage from '@/assets/qatar-visa-rules-2025.jpg';
 import westBayAlWaabImage from '@/assets/west-bay-al-waab-comparison.jpg';
 import drivingDohaImage from '@/assets/driving-doha-2025-guide.jpg';
 import lgbtqQatarImage from '@/assets/lgbtq-experiences-qatar-guide.jpg';
+import bankAccountQatarImage from '@/assets/bank-account-qatar-guide.jpg';
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   
   // Blog post data based on slug
   const blogPosts: Record<string, any> = {
+    'bank-account-qatar-guide': {
+      id: '45',
+      title: 'Opening a Bank Account in Qatar: QNB vs International Banks Guide',
+      date: 'May 25, 2025',
+      author: 'Experience Doha Team',
+      readTime: '15 min read',
+      category: 'Expat-Tips',
+      imageUrl: bankAccountQatarImage,
+      tags: ['Qatar banking', 'QNB', 'expat finance', 'international banks', 'account opening'],
+      content: `
+        <p class="lead">Choosing the right bank in Qatar affects your daily financial life significantly—from salary transfers and bill payments to international transfers and loan access. While Qatar National Bank (QNB) dominates the local market, international banks offer alternatives worth considering.</p>
+        
+        <h2 id="requirements">Bank Account Requirements for Expats</h2>
+        <p>To open a bank account in Qatar, you'll need the following standard documentation:</p>
+        <ul>
+          <li><strong>Valid Passport</strong> - Original with 6+ months validity</li>
+          <li><strong>Qatar ID (QID)</strong> - Residence permit card</li>
+          <li><strong>Salary Certificate</strong> - From employer stating position and salary</li>
+          <li><strong>Employment Contract</strong> - Proof of employment</li>
+          <li><strong>NOC Letter</strong> - Employer's No Objection Certificate</li>
+          <li><strong>Proof of Address</strong> - Utility bill or tenancy contract</li>
+          <li><strong>Passport Photos</strong> - Recent photographs (2-4)</li>
+        </ul>
+        <p><strong>Opening Timeline:</strong> 3-7 business days typically<br/>
+        <strong>Minimum Deposit:</strong> QAR 0-5,000 depending on account type</p>
+
+        <h2 id="qnb">Qatar National Bank (QNB): Local Market Leader</h2>
+        <p>QNB holds approximately 50% market share in Qatar, making it the dominant banking force. As partially government-owned, it enjoys stability and extensive infrastructure.</p>
+        
+        <h3>Account Types</h3>
+        <ul>
+          <li><strong>Current Account</strong> - Standard transactional (no interest)</li>
+          <li><strong>Savings Account</strong> - Interest-bearing options</li>
+          <li><strong>Premium Account</strong> - High-balance privileges</li>
+          <li><strong>Islamic Account</strong> - Sharia-compliant options</li>
+        </ul>
+
+        <h3>QNB Advantages</h3>
+        <ul>
+          <li><strong>Extensive Branch Network</strong> - 65+ branches across Qatar</li>
+          <li><strong>ATM Availability</strong> - Largest ATM network in country</li>
+          <li><strong>Government Connections</strong> - Easy for government-related transactions</li>
+          <li><strong>Employer Relationships</strong> - Many companies use QNB for payroll</li>
+          <li><strong>Local Integration</strong> - Seamless for Qatar-specific services</li>
+          <li><strong>Mobile Banking</strong> - Comprehensive app functionality</li>
+          <li><strong>Arabic/English Support</strong> - Full bilingual services</li>
+        </ul>
+
+        <h3>QNB Disadvantages</h3>
+        <ul>
+          <li><strong>Customer Service</strong> - Can be bureaucratic and slow</li>
+          <li><strong>International Transfers</strong> - Higher fees than competitors</li>
+          <li><strong>Queue Times</strong> - Branch visits often lengthy</li>
+          <li><strong>Account Closures</strong> - Complicated process when leaving Qatar</li>
+          <li><strong>Credit Products</strong> - Conservative lending criteria</li>
+          <li><strong>Global Network</strong> - Limited presence outside MENA</li>
+        </ul>
+
+        <h3>QNB Fee Structure</h3>
+        <ul>
+          <li>Account maintenance: QAR 0-50/month</li>
+          <li>Debit card: QAR 75-150/year</li>
+          <li>International transfers: QAR 75-150 + exchange markup</li>
+          <li>Cheque book: QAR 50-100</li>
+          <li>SMS alerts: QAR 30/month</li>
+        </ul>
+
+        <h2 id="international">International Banks in Qatar</h2>
+        <p>Major international banking options include:</p>
+        <ul>
+          <li>HSBC Qatar</li>
+          <li>Standard Chartered</li>
+          <li>Citibank</li>
+          <li>Barclays</li>
+          <li>BNP Paribas</li>
+        </ul>
+
+        <h3>HSBC Qatar - Most Popular International Choice</h3>
+        
+        <h4>Advantages</h4>
+        <ul>
+          <li><strong>Global Network</strong> - Accounts linked worldwide</li>
+          <li><strong>International Transfers</strong> - Competitive rates</li>
+          <li><strong>Expat Experience</strong> - Understanding of expat needs</li>
+          <li><strong>Premier Services</strong> - Excellent high-net-worth banking</li>
+          <li><strong>Exit Support</strong> - Smoother account closure when leaving</li>
+          <li><strong>Credit Cards</strong> - International acceptance superior</li>
+          <li><strong>Wealth Management</strong> - Investment options available</li>
+        </ul>
+
+        <h4>Disadvantages</h4>
+        <ul>
+          <li><strong>Limited Branches</strong> - 5-6 locations only</li>
+          <li><strong>Higher Requirements</strong> - Minimum salary often QAR 15,000+</li>
+          <li><strong>Fees</strong> - Generally higher maintenance fees</li>
+          <li><strong>ATM Network</strong> - Fewer than local banks (though QNB ATMs usable)</li>
+          <li><strong>Local Services</strong> - Some Qatar-specific features lacking</li>
+        </ul>
+
+        <h4>HSBC Fee Structure</h4>
+        <ul>
+          <li>Account maintenance: QAR 50-100/month (waived with minimum balance)</li>
+          <li>Debit card: QAR 100-200/year</li>
+          <li>International transfers: QAR 50-100 (lower than QNB)</li>
+          <li>Premier account: Free with QAR 100,000+ balance</li>
+        </ul>
+
+        <h2 id="decision">Which Bank Should You Choose?</h2>
+        
+        <h3>Choose QNB If:</h3>
+        <ul>
+          <li>Employer requires QNB for salary</li>
+          <li>Salary below QAR 15,000/month</li>
+          <li>Need frequent branch access</li>
+          <li>Planning to stay long-term</li>
+          <li>Prefer largest ATM network</li>
+          <li>Require Islamic banking</li>
+          <li>Government transactions common</li>
+        </ul>
+
+        <h3>Choose International Bank If:</h3>
+        <ul>
+          <li>Salary above QAR 15,000/month</li>
+          <li>Frequent international transfers needed</li>
+          <li>Planning multi-country career</li>
+          <li>Value global banking continuity</li>
+          <li>Prefer premium service quality</li>
+          <li>Leaving Qatar within 2-3 years</li>
+          <li>Have existing relationship with bank</li>
+        </ul>
+
+        <h3>Best Strategy: Maintain Both</h3>
+        <p>Many expats successfully use dual-banking:</p>
+        <ul>
+          <li><strong>QNB</strong> - Salary receipt, local payments, utilities</li>
+          <li><strong>International</strong> - Savings, international transfers, investments</li>
+        </ul>
+        <p>This approach leverages strengths of each while mitigating weaknesses.</p>
+
+        <h2 id="process">Account Opening Process Step-by-Step</h2>
+        
+        <h3>QNB Process</h3>
+        <ol>
+          <li>Visit branch with documents</li>
+          <li>Queue for account opening desk</li>
+          <li>Form completion (20-30 minutes)</li>
+          <li>Document verification</li>
+          <li>Initial deposit (if required)</li>
+          <li>Temporary card issued</li>
+          <li>Permanent card mailed (7-10 days)</li>
+          <li>Online banking activation</li>
+        </ol>
+
+        <h3>HSBC Process</h3>
+        <ol>
+          <li>Call/online appointment booking</li>
+          <li>Document pre-screening</li>
+          <li>Scheduled meeting (30-45 minutes)</li>
+          <li>Faster document processing</li>
+          <li>Card and online access quicker</li>
+          <li>Relationship manager assigned (Premier)</li>
+        </ol>
+
+        <h2 id="mobile">Online Banking and Mobile Apps</h2>
+        
+        <h3>QNB Mobile Banking</h3>
+        <ul>
+          <li>Bill payments (Kahramaa, telecom)</li>
+          <li>Internal transfers instant</li>
+          <li>International transfers available</li>
+          <li>Card management</li>
+          <li>Balance inquiries</li>
+          <li>Cheque services</li>
+          <li>QR code payments</li>
+        </ul>
+
+        <h3>HSBC Mobile Banking</h3>
+        <ul>
+          <li>Global account view</li>
+          <li>International transfers at better rates</li>
+          <li>Investment management</li>
+          <li>Card controls</li>
+          <li>Bill payments</li>
+          <li>Multi-currency capabilities</li>
+          <li>Biometric login</li>
+        </ul>
+
+        <h2 id="credit">Credit Cards and Loans</h2>
+        
+        <h3>QNB Credit Cards</h3>
+        <ul>
+          <li>Multiple tier options</li>
+          <li>Local reward programs</li>
+          <li>Airport lounge access (premium)</li>
+          <li>Interest rates: 2-3% monthly</li>
+          <li>Credit limit: Based on salary multiple</li>
+        </ul>
+
+        <h3>HSBC Credit Cards</h3>
+        <ul>
+          <li>International rewards programs</li>
+          <li>Better travel benefits</li>
+          <li>Premium card options</li>
+          <li>Global acceptance superior</li>
+          <li>Interest rates: Similar to QNB</li>
+        </ul>
+
+        <h3>Personal Loans</h3>
+        <p>Both banks offer personal loans to expats:</p>
+        <ul>
+          <li>Up to 15x monthly salary</li>
+          <li>Repayment periods: 12-60 months</li>
+          <li>Interest rates: 4-7% annually</li>
+          <li>Processing fees: 1% of loan amount</li>
+          <li>Salary transfer requirement typically mandatory</li>
+        </ul>
+
+        <h2 id="closing">Closing Accounts When Leaving Qatar</h2>
+        
+        <h3>QNB Closure Challenges</h3>
+        <ul>
+          <li>Requires clearance certificates</li>
+          <li>Outstanding payments must be settled</li>
+          <li>Credit cards cancelled first</li>
+          <li>Final salary confirmed</li>
+          <li>Process takes 2-4 weeks</li>
+          <li>Physical branch visit mandatory</li>
+        </ul>
+
+        <h3>International Bank Closure</h3>
+        <ul>
+          <li>Generally smoother process</li>
+          <li>Global transfer options</li>
+          <li>Faster processing</li>
+          <li>Remote closure sometimes possible</li>
+          <li>Better documentation for records</li>
+        </ul>
+
+        <h2 id="mistakes">Common Banking Mistakes to Avoid</h2>
+        <ol>
+          <li><strong>Opening account before QID</strong> - Wait until residence permit in hand</li>
+          <li><strong>Single bank dependency</strong> - Backup accounts valuable</li>
+          <li><strong>Ignoring fees</strong> - Charges accumulate significantly</li>
+          <li><strong>Missed loan payments</strong> - Travel bans can be imposed</li>
+          <li><strong>Not updating contact info</strong> - Miss important notifications</li>
+          <li><strong>Forgetting to close accounts</strong> - Creates complications later</li>
+        </ol>
+
+        <h2 id="faq">FAQ: Banking in Qatar</h2>
+        
+        <h3>Can I open a bank account without QID?</h3>
+        <p>Most banks require QID. Some allow account opening with visa copy, but functionality limited until QID obtained.</p>
+
+        <h3>How long does international transfer take?</h3>
+        <p>QNB: 3-5 business days. HSBC: 1-3 business days. Fees and exchange rates vary significantly.</p>
+
+        <h3>What happens to my account if I lose my job?</h3>
+        <p>Account remains active but salary-linked products (loans, credit cards) may require attention. Banks may downgrade services.</p>
+
+        <h3>Can I have multiple bank accounts in Qatar?</h3>
+        <p>Yes. No restrictions on number of accounts. Many expats maintain 2-3 accounts for different purposes.</p>
+
+        <h3>Are my deposits safe in Qatar banks?</h3>
+        <p>Yes. Qatar Deposit Insurance Scheme covers up to QAR 500,000 per depositor per bank.</p>
+      `,
+    },
     'lgbtq-experiences-qatar-2025': {
       id: '44',
       title: 'LGBTQ+ Experiences in Qatar: What Expats Need to Know 2025',
@@ -5491,6 +5759,19 @@ const BlogPost = () => {
                   
                   {/* Rest of content */}
                   <div dangerouslySetInnerHTML={{ __html: '<h2 id="community">' + post.content.split('<h2 id="community">')[1] }} />
+                </div>
+              ) : slug === 'bank-account-qatar-guide' ? (
+                <div className="prose prose-lg max-w-none space-y-8">
+                  {/* First section through QNB advantages */}
+                  <div dangerouslySetInnerHTML={{ __html: post.content.split('<h2 id="decision">')[0] }} />
+                  
+                  {/* Bank Comparison Tool */}
+                  <div className="not-prose my-12">
+                    <BankComparison />
+                  </div>
+                  
+                  {/* Rest of content */}
+                  <div dangerouslySetInnerHTML={{ __html: '<h2 id="decision">' + post.content.split('<h2 id="decision">')[1] }} />
                 </div>
               ) : (
                 <div 
