@@ -47,12 +47,23 @@ import womenDrivingImage from '@/assets/women-driving-qatar.jpg';
 import qatariDishesImage from '@/assets/qatari-dishes-guide.jpg';
 import hamadAirportGuideImage from '@/assets/hamad-airport-guide.jpg';
 import dohaTransformingImage from '@/assets/doha-transforming-middle-east.jpg';
+import costOfLivingImage from '@/assets/cost-of-living-doha-2025.jpg';
 
 const Blog = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   
   const allPosts = [
+    {
+      id: '38',
+      title: 'Cost of Living in Doha 2025: Rent Inflation and Monthly Expenses Guide',
+      excerpt: 'Discover the real cost of living in Doha 2025, including rent inflation rates, apartment prices, grocery costs, and monthly budget breakdowns for singles and families.',
+      imageUrl: costOfLivingImage,
+      category: 'Expat-Tips',
+      date: 'May 17, 2025',
+      slug: 'cost-of-living-doha-2025',
+      tags: ['cost of living', 'rent prices', 'expat budget', 'Qatar inflation', 'monthly expenses'],
+    },
     {
       id: '37',
       title: 'Doha: The City That\'s Changing the Middle East',
