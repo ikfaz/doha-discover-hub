@@ -13,6 +13,61 @@ const BlogPost = () => {
   
   // Blog post data based on slug
   const blogPosts: Record<string, any> = {
+    'perfect-layover-doha-guide': {
+      id: '14',
+      title: 'How to Spend the Perfect Layover in Doha, Qatar',
+      date: 'April 23, 2025',
+      author: 'Experience Doha Team',
+      readTime: '10 min read',
+      category: 'Expat-Tips',
+      imageUrl: 'https://images.unsplash.com/photo-1518182170546-07661fd94144?q=80&w=2668&auto=format&fit=crop',
+      content: `
+        <p>Crafting the perfect layover experience requires balancing ambition with realism, ensuring you sample enough of Doha to feel satisfied without creating stress that undermines the journey's enjoyment. The perfect layover isn't about seeing everything but about seeing the right things at the right pace, leaving you enriched rather than exhausted for your continuing travels.</p>
+        
+        <h2 id="preparation">Pre-Arrival Preparation</h2>
+        <p>Preparation begins before your first flight lands. Research Doha's current weather—summer temperatures can exceed 40°C, making outdoor activities challenging without preparation. Check whether your layover falls during Ramadan or other significant periods that might affect operating hours. Confirm your visa status, as citizens of many countries enter visa-free, while others require advance arrangements. Pack layover essentials in your carry-on: comfortable walking shoes, sunscreen, modest clothing that respects local customs, and a small daypack. Currency isn't problematic since credit cards work widely and ATMs are abundant, though having some Qatari Riyals for souq purchases proves useful.</p>
+        
+        <h2 id="timing">Timing Your Airport Exit</h2>
+        <p>Timing your exit from Hamad International Airport deserves careful calculation. Immigration, even with efficient processing, requires time. Allow at least thirty minutes for arrival procedures, longer during peak periods. From exiting the secure area to reaching Doha's attractions takes another thirty to sixty minutes depending on destination and traffic. Return timing must be equally conservative—security screening for departure, particularly during busy periods, can extend beyond expectations. The general rule suggests returning to the airport three hours before an international flight, though experienced travelers with shorter layovers might reduce this slightly while accepting increased risk.</p>
+        
+        <h2 id="short-layover">5-6 Hour Layovers</h2>
+        <p>For layovers of five to six hours—accounting for airport processes—the wisest approach focuses on a single district. Souq Waqif represents the most accessible option, located approximately twenty minutes from the airport by taxi. Arriving there allows two to three hours of exploration, sufficient for wandering the market's corridors, photographing its architecture, purchasing small souvenirs, and enjoying a traditional meal. The experience remains relaxed rather than rushed, providing authentic cultural immersion without the anxiety of watching clocks constantly.</p>
+        
+        <h2 id="medium-layover">8-10 Hour Layovers</h2>
+        <p>Layovers extending to eight or ten hours open possibilities for combining experiences. A morning arrival might begin with the Museum of Islamic Art during its opening hours, when crowds remain thin and air conditioning provides respite from outdoor heat. From there, the Corniche walk leads toward Souq Waqif, where lunch becomes both nourishment and cultural experience. The afternoon offers time for deeper souq exploration or a brief taxi ride to Katara Cultural Village before returning to the airport. This itinerary maintains logical geographical flow, minimizing transit time between attractions.</p>
+        
+        <h2 id="long-layover">12+ Hour Layovers</h2>
+        <p>Layovers approaching twelve hours or overnight stays transform possibilities entirely. Now desert excursions become practical, with sufficient time for dune adventures while maintaining comfortable return margins. Alternatively, morning might feature the National Museum of Qatar followed by Msheireb's heritage houses, afternoon at The Pearl for waterfront relaxation and upscale dining, evening at Souq Waqif for shopping and dinner, with the night allowing genuine rest before continuing travels. This pacing respects human energy levels, alternating active exploration with restful interludes.</p>
+        
+        <h2 id="transportation">Transportation Options</h2>
+        <p>Transportation choices significantly impact layover success. Taxis from Hamad International Airport use meters and are reasonably priced by international standards—the journey to central Doha typically costs between 50-80 QAR (approximately $14-22 USD). Qatar's metro system, opened recently, provides affordable travel to major tourist areas, though requires slightly more time and planning. Ride-sharing apps operate legally, offering similar pricing to taxis with app-based convenience. For desert excursions or multi-site itineraries, pre-arranged tours eliminate navigation concerns while often bundling experiences efficiently.</p>
+        
+        <h2 id="dress-code">What to Wear</h2>
+        <p>What to wear matters both for comfort and cultural respect. Qatar is relatively liberal within the Gulf context, but modesty remains appreciated. For men, shorts that reach the knee and shirts with sleeves suffice. Women should avoid very short skirts or shorts and opt for tops that cover shoulders, though headscarves aren't required except when visiting mosques. Layers work well since outdoor heat contrasts with aggressive air conditioning indoors. Comfortable walking shoes prove essential, as even brief explorations involve considerable walking, often on hard surfaces.</p>
+        
+        <h2 id="food">Food and Dining</h2>
+        <p>Food represents one of layover exploration's genuine pleasures, and skipping meals to maximize sightseeing time misses an essential cultural dimension. Qatari cuisine, influenced by Bedouin traditions and Gulf trade routes, offers distinct flavors rarely encountered elsewhere. Machboos, the national dish, features spiced rice with chicken, lamb, or fish. Lugaimat—sweet dumplings drizzled with date syrup—provide perfect afternoon energy. Arabic coffee, lighter and cardamom-spiced unlike its Turkish cousin, accompanies almost any interaction. Restaurants in Souq Waqif, particularly Al Tawash and Damasca One, receive consistent recommendations for quality and authenticity.</p>
+        
+        <h2 id="safety">Safety and Etiquette</h2>
+        <p>Safety concerns are minimal in Doha, which maintains extremely low crime rates. The primary caution relates to heat exposure—proper hydration, sun protection, and knowing your physical limits matter, especially during summer months. Traffic, while organized, moves quickly, so pedestrian awareness remains important. Regarding photography, ask permission before photographing individuals, particularly local women, as a matter of respect. Government buildings and military installations shouldn't be photographed.</p>
+        
+        <h2 id="conclusion">The Perfect Layover Philosophy</h2>
+        <p>The perfect layover ultimately recognizes that completeness is impossible and unnecessary. Qatar's investments mean Doha offers more than most visitors, including residents, fully explore. The goal isn't comprehensive coverage but meaningful engagement—a conversation with a shopkeeper, the taste of cardamom in your coffee, the call to prayer echoing through ancient-styled alleyways, the skyline's reflection at sunset. These moments, collected thoughtfully rather than rushed through frantically, constitute the perfect layover's substance.</p>
+      `,
+      tableOfContents: [
+        { title: 'Pre-Arrival Preparation', id: 'preparation' },
+        { title: 'Timing Your Airport Exit', id: 'timing' },
+        { title: '5-6 Hour Layovers', id: 'short-layover' },
+        { title: '8-10 Hour Layovers', id: 'medium-layover' },
+        { title: '12+ Hour Layovers', id: 'long-layover' },
+        { title: 'Transportation Options', id: 'transportation' },
+        { title: 'What to Wear', id: 'dress-code' },
+        { title: 'Food and Dining', id: 'food' },
+        { title: 'Safety and Etiquette', id: 'safety' },
+        { title: 'The Perfect Layover Philosophy', id: 'conclusion' }
+      ],
+      tags: ['Layover Tips', 'Travel Planning', 'Doha Guide', 'Transportation', 'Cultural Tips']
+    },
     'things-to-do-doha-layover': {
       id: '13',
       title: '10 Unmissable Things To Do In Doha On A Layover (2025)',
