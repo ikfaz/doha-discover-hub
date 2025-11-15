@@ -27,7 +27,7 @@ const ListingCard: React.FC<ListingCardProps> = ({ listing }) => {
             ))}
           </div>
           <div className="absolute top-3 right-3 flex items-center gap-1 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full">
-            <Star className="w-4 h-4 fill-gold text-gold" />
+            <Star className="w-4 h-4 fill-secondary text-secondary" />
             <span className="text-sm font-semibold">{listing.rating}</span>
           </div>
         </div>
