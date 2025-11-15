@@ -17,6 +17,15 @@ const Blog = () => {
   
   const allPosts = [
     {
+      id: '15',
+      title: 'Layover in Doha Guide: What to Do in 2–12 Hours',
+      excerpt: 'Detailed breakdown of what you can realistically accomplish during layovers of different lengths - from 2 hours to a full day in Doha.',
+      imageUrl: 'https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?w=800&auto=format&fit=crop',
+      category: 'Expat-Tips',
+      date: 'April 24, 2025',
+      slug: 'doha-layover-time-guide',
+    },
+    {
       id: '14',
       title: 'How to Spend the Perfect Layover in Doha, Qatar',
       excerpt: 'Master the art of the Doha layover with expert tips on timing, transportation, attractions, and making every hour count during your stopover.',
