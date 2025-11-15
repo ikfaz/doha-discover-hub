@@ -15,9 +15,19 @@ import qatarAirwaysImage from '@/assets/qatar-airways-stopover.jpg';
 import cornicheSunsetImage from '@/assets/corniche-sunset-dhow.jpg';
 import alcoholGuideImage from '@/assets/alcohol-guide-doha.jpg';
 import prostitutionLawsImage from '@/assets/prostitution-laws-legal-guide.jpg';
+import dohaSafetyImage from '@/assets/doha-safety-guide.jpg';
 
 const Index = () => {
   const featuredBlogs = [
+    {
+      id: '33',
+      title: 'How Safe Is Doha, Qatar? (2025 Full Safety Guide for Tourists & Expats)',
+      excerpt: 'Complete safety guide covering crime rates, local laws, nightlife safety, scams, and travel tips. Everything tourists and expats need to know about safety in Doha.',
+      imageUrl: dohaSafetyImage,
+      category: 'Expat-Tips',
+      date: 'May 12, 2025',
+      slug: 'doha-safety-guide-tourists-expats',
+    },
     {
       id: '32',
       title: 'Prostitution in Doha, Qatar: Is It Legal? (2025 Complete Guide)',
