@@ -13,6 +13,141 @@ const BlogPost = () => {
   
   // Blog post data based on slug
   const blogPosts: Record<string, any> = {
+    'ultimate-doha-layover-24-48-hours': {
+      id: '27',
+      title: 'The Ultimate 24-48 Hour Layover in Doha: A Guide to Maximizing Your Stopover',
+      date: 'May 6, 2025',
+      author: 'Experience Doha Team',
+      readTime: '12 min read',
+      category: 'Expat-Tips',
+      imageUrl: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2668&auto=format&fit=crop',
+      content: `
+        <p>For millions of travelers each year, Doha, Qatar, is more than just a transit point—it is a gateway to the world and an increasingly popular stopover destination. Thanks to the award-winning services of Qatar Airways and the strategically designed <strong>Discover Qatar Stopover Program</strong>, a layover of 24 to 96 hours can be seamlessly transformed into a mini-vacation. This guide provides meticulously planned itineraries to help you maximize a 24-hour dash or a more leisurely 48-hour exploration of Qatar's vibrant capital.</p>
+        
+        <h2 id="24-hour-dash">The 24-Hour Doha Dash: Culture, Commerce, and Corniche</h2>
+        <p>A 24-hour layover requires a focused, high-impact itinerary. The key is to concentrate on the cultural heart of the city, all easily accessible from Hamad International Airport (HIA).</p>
+        
+        <h3 id="morning">Morning (Hours 1-4): Arrival and Islamic Art</h3>
+        <p>Upon arrival at HIA, take advantage of the efficient, modern infrastructure. The city center is a short 15-20 minute taxi ride away. Your first stop should be the <strong>Museum of Islamic Art (MIA)</strong>.</p>
+        <p>The MIA, designed by the legendary architect I.M. Pei, is an architectural masterpiece set on its own purpose-built island overlooking the Corniche. Its collection spans 1,400 years of Islamic art from three continents. Focus on the ground and first floors to appreciate the breadth of the collection without rushing. The museum is a perfect, air-conditioned introduction to the region's rich history.</p>
+        <ul>
+          <li><strong>Tip:</strong> Check the museum's opening hours in advance, as they can vary. Allow at least two hours for a meaningful visit.</li>
+        </ul>
+        
+        <h3 id="midday">Midday (Hours 5-7): The Corniche and Lunch</h3>
+        <p>After the museum, step out onto the adjacent <strong>MIA Park</strong> and walk along the famous <strong>Doha Corniche</strong>. This seven-kilometer-long promenade offers stunning views of the futuristic West Bay skyline. The contrast between the traditional dhow boats in the harbor and the towering skyscrapers is the quintessential Doha photo opportunity.</p>
+        <p>For lunch, head to the nearby <strong>Souq Waqif</strong>. This historic market offers a range of authentic Qatari and Middle Eastern dining options. Look for a restaurant with an outdoor terrace for a perfect people-watching experience.</p>
+        
+        <h3 id="afternoon">Afternoon (Hours 8-12): Souq Waqif Immersion</h3>
+        <p>The afternoon is dedicated to exploring the labyrinthine alleys of <strong>Souq Waqif</strong>. This market is a meticulously restored piece of Doha's past, offering spices, perfumes, textiles, and traditional handicrafts.</p>
+        <ul>
+          <li><strong>Must-See:</strong> The Falcon Souq, where you can see magnificent birds of prey, and the Gold Souq, a dazzling display of jewelry.</li>
+          <li><strong>Haggling:</strong> While not as intense as some other regional markets, haggling is expected, especially for non-essential items. Start your offer at 50-60% of the asking price and aim to settle around 70-80%.</li>
+        </ul>
+        
+        <h3 id="evening">Evening (Hours 13-24): The Pearl and Departure</h3>
+        <p>As the sun sets, take a taxi to <strong>The Pearl-Qatar</strong>, an artificial island synonymous with luxury. The Porto Arabia and Qanat Quartier areas offer a completely different, European-inspired atmosphere.</p>
+        <ul>
+          <li><strong>Dinner:</strong> Indulge in fine dining at one of The Pearl's many high-end restaurants.</li>
+          <li><strong>Dhow Cruise:</strong> Alternatively, opt for a sunset dhow cruise from the Corniche for a final, spectacular view of the city lights before heading back to HIA for your onward flight.</li>
+        </ul>
+        
+        <hr class="my-8 border-t-2 border-gray-300" />
+        
+        <h2 id="48-hour-dive">The 48-Hour Doha Deep Dive: Adventure, Luxury, and Modernity</h2>
+        <p>With a full 48 hours, you can comfortably add a desert adventure and explore Doha's modern cultural institutions.</p>
+        
+        <h3 id="day-1">Day 1: Culture and Tradition (Same as 24-Hour Dash)</h3>
+        <p>Follow the 24-hour itinerary for Day 1, focusing on the MIA, the Corniche, and Souq Waqif. This provides a solid foundation in Qatari culture and history.</p>
+        
+        <h3 id="day-2">Day 2: Modernity and Adventure</h3>
+        
+        <h4 class="text-xl font-semibold mt-6 mb-3">Morning (Hours 25-30): National Museum of Qatar</h4>
+        <p>Start your second day at the <strong>National Museum of Qatar (NMoQ)</strong>. Designed by Jean Nouvel, the building is inspired by the desert rose crystal. The NMoQ offers a compelling journey through Qatar's history, from its geological formation to its modern-day status as a global power. The exhibits are highly immersive and technologically advanced.</p>
+        <ul>
+          <li><strong>Combo Ticket:</strong> Consider purchasing a <strong>Discover One Pass</strong> from Qatar Museums, which grants access to both the MIA and NMoQ, offering better value.</li>
+        </ul>
+        
+        <h4 class="text-xl font-semibold mt-6 mb-3">Midday (Hours 31-36): Katara Cultural Village</h4>
+        <p>Next, head north to <strong>Katara Cultural Village</strong>. This purpose-built complex is a hub for arts, culture, and gastronomy. It features an opera house, an amphitheater, art galleries, and a public beach.</p>
+        <ul>
+          <li><strong>Lunch:</strong> Enjoy a meal at one of Katara's diverse restaurants, such as the popular Turkish or Lebanese options.</li>
+          <li><strong>Exploration:</strong> Wander through the beautiful architecture, including the Gold Mosque and the Pigeon Towers.</li>
+        </ul>
+        
+        <h4 class="text-xl font-semibold mt-6 mb-3">Afternoon (Hours 37-43): Desert Safari and Inland Sea</h4>
+        <p>The highlight of a 48-hour stopover is the quintessential Qatari experience: a <strong>Desert Safari and Inland Sea (Khor Al Adaid) trip</strong>. Book a half-day tour that typically includes:</p>
+        <ol>
+          <li><strong>Dune Bashing:</strong> A thrilling ride over the massive sand dunes in a 4x4 vehicle.</li>
+          <li><strong>Camel Ride:</strong> A brief, traditional experience.</li>
+          <li><strong>Inland Sea:</strong> A visit to Khor Al Adaid, one of the few places in the world where the sea meets the desert.</li>
+        </ol>
+        <ul>
+          <li><strong>Logistics:</strong> Tours usually last 4-6 hours and require booking in advance. They often include hotel pickup and drop-off.</li>
+        </ul>
+        
+        <h4 class="text-xl font-semibold mt-6 mb-3">Evening (Hours 44-48): Relaxation and Reflection</h4>
+        <p>Return to the city, allowing time for a final dinner and packing.</p>
+        <ul>
+          <li><strong>Dinner:</strong> Choose a restaurant in the <strong>West Bay</strong> area for a sophisticated, modern dining experience with a view of the city you have just explored.</li>
+          <li><strong>Lounge Access:</strong> If you are flying Qatar Airways Business or First Class, or have Oneworld status, utilize the world-class lounges at HIA for a relaxing end to your stopover.</li>
+        </ul>
+        
+        <h2 id="logistics">Stopover Logistics: The Discover Qatar Program</h2>
+        <p>The <strong>Qatar Airways Stopover Program</strong>, managed by Discover Qatar, is the most cost-effective way to arrange your stay.</p>
+        
+        <table class="w-full border-collapse my-6">
+          <thead>
+            <tr class="bg-qatar-maroon text-white">
+              <th class="border border-gray-300 p-3 text-left">Package Tier</th>
+              <th class="border border-gray-300 p-3 text-left">Starting Price (USD/pp)</th>
+              <th class="border border-gray-300 p-3 text-left">Hotel Category</th>
+              <th class="border border-gray-300 p-3 text-left">Key Feature</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border border-gray-300 p-3"><strong>Standard</strong></td>
+              <td class="border border-gray-300 p-3">$14</td>
+              <td class="border border-gray-300 p-3">4-Star</td>
+              <td class="border border-gray-300 p-3">Excellent value, wide selection of hotels.</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border border-gray-300 p-3"><strong>Premium</strong></td>
+              <td class="border border-gray-300 p-3">$24</td>
+              <td class="border border-gray-300 p-3">5-Star</td>
+              <td class="border border-gray-300 p-3">Luxury accommodation at a heavily discounted rate.</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 p-3"><strong>Premium w/ Beach</strong></td>
+              <td class="border border-gray-300 p-3">$31</td>
+              <td class="border border-gray-300 p-3">5-Star</td>
+              <td class="border border-gray-300 p-3">Includes access to Doha Sands Beach.</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border border-gray-300 p-3"><strong>Luxury</strong></td>
+              <td class="border border-gray-300 p-3">$83</td>
+              <td class="border border-gray-300 p-3">5-Star Luxury</td>
+              <td class="border border-gray-300 p-3">Includes breakfast, top-tier luxury brands.</td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <p><strong>Eligibility:</strong> The offer is valid for confirmed Qatar Airways ticket holders with a minimum transit time of 12 hours and a maximum of 96 hours. Booking must be done through the Discover Qatar website.</p>
+        <p>By planning ahead and utilizing the excellent stopover resources, your brief visit to Doha will be transformed from a simple layover into an unforgettable journey.</p>
+      `,
+      tableOfContents: [
+        { id: '24-hour-dash', title: 'The 24-Hour Doha Dash', level: 2 },
+        { id: 'morning', title: 'Morning: Arrival and Islamic Art', level: 3 },
+        { id: 'midday', title: 'Midday: The Corniche and Lunch', level: 3 },
+        { id: 'afternoon', title: 'Afternoon: Souq Waqif Immersion', level: 3 },
+        { id: 'evening', title: 'Evening: The Pearl and Departure', level: 3 },
+        { id: '48-hour-dive', title: 'The 48-Hour Doha Deep Dive', level: 2 },
+        { id: 'day-1', title: 'Day 1: Culture and Tradition', level: 3 },
+        { id: 'day-2', title: 'Day 2: Modernity and Adventure', level: 3 },
+        { id: 'logistics', title: 'Stopover Logistics: The Discover Qatar Program', level: 2 },
+      ],
+    },
     'qatar-airways-stopover-packages-lounge': {
       id: '26',
       title: 'Two Holidays in One: Unpacking the Qatar Airways Stopover Packages and the Privilege of Lounge Access',
