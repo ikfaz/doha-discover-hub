@@ -39,12 +39,194 @@ import qatariDishesImage from '@/assets/qatari-dishes-guide.jpg';
 import hamadAirportGuideImage from '@/assets/hamad-airport-guide.jpg';
 import dohaTransformingImage from '@/assets/doha-transforming-middle-east.jpg';
 import costOfLivingImage from '@/assets/cost-of-living-doha-2025.jpg';
+import womenSafetyDressCodeImage from '@/assets/women-safety-dress-code-doha.jpg';
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   
   // Blog post data based on slug
   const blogPosts: Record<string, any> = {
+    'women-safety-dress-code-doha-qatar': {
+      id: '39',
+      title: 'Women\'s Safety and Dress Code in Doha, Qatar: Complete 2025 Guide',
+      date: 'May 18, 2025',
+      author: 'Experience Doha Team',
+      readTime: '14 min read',
+      category: 'Expat-Tips',
+      imageUrl: womenSafetyDressCodeImage,
+      tags: ['women safety', 'dress code', 'female expat', 'cultural norms', 'modest dress'],
+      content: `
+        <p class="lead">Doha consistently ranks among the world's safest cities for women, with Qatar maintaining extremely low crime rates. Female expats and tourists regularly report feeling secure walking alone, using public transportation, and navigating the city independently—even at night.</p>
+        
+        <p>However, safety in Qatar extends beyond physical security to understanding <strong>cultural norms, dress expectations, and social boundaries</strong> that differ from Western countries.</p>
+        
+        <h2 id="safety">Is Doha Safe for Women in 2025?</h2>
+        <p>Qatar's crime rate is exceptionally low, violent crime is rare, and police presence is visible throughout Doha. Women can travel independently, work professionally, and maintain active social lives with confidence.</p>
+        
+        <h2 id="dress-code">Understanding Qatar's Dress Code for Women</h2>
+        
+        <h3>The Legal Framework</h3>
+        <p>Qatar's dress code is based on Islamic principles emphasizing modesty, though it's more relaxed than neighboring Saudi Arabia. While there's no strictly enforced law requiring specific clothing, the Qatar Tourism Authority recommends:</p>
+        <ul>
+          <li>Covering shoulders</li>
+          <li>Covering knees</li>
+          <li>Avoiding tight or revealing clothing</li>
+          <li>No transparent fabrics</li>
+        </ul>
+        
+        <h3>What This Means Practically</h3>
+        
+        <h4>Acceptable Everywhere:</h4>
+        <ul>
+          <li>Loose-fitting pants or jeans</li>
+          <li>Maxi skirts and midi skirts</li>
+          <li>T-shirts covering shoulders</li>
+          <li>Blouses and tunics</li>
+          <li>Maxi dresses</li>
+          <li>Cardigans and light jackets</li>
+        </ul>
+        
+        <h4>Acceptable in Specific Venues:</h4>
+        <ul>
+          <li><strong>Swimwear:</strong> Hotel pools, private beaches only</li>
+          <li><strong>Shorts above knee:</strong> Inside malls, hotels, compounds</li>
+          <li><strong>Sleeveless tops:</strong> Hotels, international restaurants, compounds</li>
+        </ul>
+        
+        <h4>Avoid in Public:</h4>
+        <ul>
+          <li>Very short shorts or skirts</li>
+          <li>Crop tops exposing midriff</li>
+          <li>Deep cleavage</li>
+          <li>See-through clothing</li>
+          <li>Extremely tight clothing</li>
+        </ul>
+        
+        <h2 id="locations">Dress Code by Location</h2>
+        
+        <h3>Souq Waqif and Cultural Sites</h3>
+        <p>Dress conservatively—long pants or skirts, covered shoulders. This shows respect and prevents unwanted attention. Loose, breathable fabrics work best in heat.</p>
+        
+        <h3>Shopping Malls</h3>
+        <p>More relaxed atmosphere. Knee-length shorts acceptable, though covering shoulders remains advisable. Security may request visitors to cover up if deemed inappropriate.</p>
+        
+        <h3>Restaurants and Hotels</h3>
+        <p>International hotels follow Western standards. Sleeveless dresses, shorter skirts acceptable within these venues. Beach clubs and pool areas permit swimwear.</p>
+        
+        <h3>Mosques (If Visiting)</h3>
+        <p>Head covering required, loose clothing covering arms and legs essential. Many mosques provide abayas for visitors.</p>
+        
+        <h3>Offices and Workplaces</h3>
+        <p>Business professional attire—similar to Western standards but erring toward conservative. Knee-length skirts, covered shoulders, no deep necklines.</p>
+        
+        <h2 id="safety-tips">Safety Tips for Women in Qatar</h2>
+        
+        <h3>Transportation Safety</h3>
+        <ul>
+          <li>Taxis are safe and metered</li>
+          <li>Uber/Careem operate legally with tracked rides</li>
+          <li>Metro has women-only carriages available</li>
+          <li>Avoid hitchhiking or unmarked vehicles</li>
+        </ul>
+        
+        <h3>Social Interactions</h3>
+        <ul>
+          <li>Qatari culture is conservative regarding male-female interactions</li>
+          <li><strong>Handshakes:</strong> Wait for men to extend hand first</li>
+          <li><strong>Eye contact:</strong> Brief is respectful, prolonged may be misinterpreted</li>
+          <li><strong>Photography:</strong> Always ask permission before photographing locals</li>
+        </ul>
+        
+        <h3>Accommodation Safety</h3>
+        <ul>
+          <li>Hotels are extremely safe with strong security</li>
+          <li>Apartment compounds have 24/7 security</li>
+          <li>Gated communities common for families</li>
+        </ul>
+        
+        <h2 id="cultural">Cultural Considerations for Women</h2>
+        
+        <h3>Ramadan Period</h3>
+        <p>During Ramadan, dress even more conservatively and avoid eating, drinking, or smoking in public during daylight hours. This applies to all residents regardless of religion.</p>
+        
+        <h3>Relationships and Dating</h3>
+        <p>Unmarried couples cohabitating is technically illegal, though enforcement varies. Public displays of affection—even holding hands—should be minimal. Dating exists but operates discreetly.</p>
+        
+        <h3>Alcohol Consumption</h3>
+        <p>Women can drink alcohol in licensed venues (hotels, clubs) same as men. However, public intoxication is illegal and poorly regarded culturally.</p>
+        
+        <h3>Interactions with Local Men</h3>
+        <p>Qatari men generally maintain respectful distance. If unwanted attention occurs (rare), firmly stating "no" or involving authorities resolves situations quickly. Harassment carries serious legal consequences in Qatar.</p>
+        
+        <h2 id="working">Working as a Woman in Doha</h2>
+        
+        <h3>Professional Environment</h3>
+        <p>Qatar's workforce includes many professional women, both local and expatriate. Women hold executive positions, run businesses, and work across industries. The professional environment is generally respectful, though:</p>
+        <ul>
+          <li>Some traditional companies maintain conservative cultures</li>
+          <li>International companies follow global standards</li>
+          <li>Networking events are common and inclusive</li>
+          <li>Women can drive, travel independently, own property</li>
+        </ul>
+        
+        <h3>Workplace Rights</h3>
+        <ul>
+          <li>Equal pay requirements exist</li>
+          <li>Maternity leave: 50 days paid</li>
+          <li>No restrictions on industries women can work in</li>
+          <li>Sexual harassment taken seriously legally</li>
+        </ul>
+        
+        <h2 id="healthcare">Healthcare and Women's Services</h2>
+        <p>Qatar provides excellent healthcare for women:</p>
+        <ul>
+          <li>Women's hospitals with female staff available</li>
+          <li>Comprehensive reproductive healthcare</li>
+          <li>No restrictions on contraception access</li>
+          <li>Prenatal and postnatal care of international standard</li>
+        </ul>
+        
+        <h2 id="expat-experiences">What Female Expats Say About Living in Qatar</h2>
+        
+        <h3>Common Positive Experiences:</h3>
+        <ul>
+          <li>Feeling safer than in home countries</li>
+          <li>Respectful treatment in professional settings</li>
+          <li>Ability to maintain independence</li>
+          <li>Quality healthcare access</li>
+        </ul>
+        
+        <h3>Common Challenges:</h3>
+        <ul>
+          <li>Adjusting to modest dress, especially in summer heat</li>
+          <li>Limited nightlife compared to Western cities</li>
+          <li>Conservative social environment</li>
+          <li>Missing certain freedoms (beach attire, public affection)</li>
+        </ul>
+        
+        <h2 id="bottom-line">Bottom Line: Women's Safety in Doha</h2>
+        <p>Qatar is genuinely safe for women—both physically and professionally. The dress code, while requiring adjustment, isn't overly restrictive for most situations. Women who respect cultural norms while maintaining their independence find Doha accommodating.</p>
+        
+        <p><strong>Key advice:</strong> Pack modest clothing, understand cultural expectations, and appreciate that safety and respect are cultural priorities that benefit everyone, even when requiring compromise.</p>
+        
+        <h2 id="faq">FAQ: Women's Safety and Dress Code Qatar</h2>
+        
+        <h3>Can women drive in Qatar?</h3>
+        <p>Yes. Women can drive, obtain licenses, and travel independently without restrictions.</p>
+        
+        <h3>Do I need to wear a headscarf in Qatar?</h3>
+        <p>No. Headscarves aren't required for non-Muslim women except when entering mosques.</p>
+        
+        <h3>Can women go out alone at night in Doha?</h3>
+        <p>Yes. Doha is very safe at night. Women regularly dine, shop, and socialize independently after dark.</p>
+        
+        <h3>What happens if I dress inappropriately?</h3>
+        <p>Usually nothing serious. Security may ask you to cover up, or you might receive disapproving looks. Arrests are extremely rare and only for extreme cases.</p>
+        
+        <h3>Can single women rent apartments alone?</h3>
+        <p>Yes. Single women can rent apartments, though some landlords prefer families. International compounds are most accommodating.</p>
+      `,
+    },
     'cost-of-living-doha-2025': {
       id: '38',
       title: 'Cost of Living in Doha 2025: Rent Inflation and Monthly Expenses Guide',
