@@ -13,6 +13,131 @@ const BlogPost = () => {
   
   // Blog post data based on slug
   const blogPosts: Record<string, any> = {
+    'katara-cultural-village-events-2025': {
+      id: '21',
+      title: 'A Year of Culture: Katara Cultural Village Events Calendar 2025',
+      date: 'April 30, 2025',
+      author: 'Experience Doha Team',
+      readTime: '10 min read',
+      category: 'Events',
+      imageUrl: 'https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?q=80&w=2668&auto=format&fit=crop',
+      content: `
+        <p><strong>Katara Cultural Village</strong> stands as a unique and ambitious project in Doha, a dedicated space designed to foster global understanding through art, heritage, and cultural exchange. More than just a collection of beautiful buildings, Katara is a dynamic, year-round host for festivals, exhibitions, and performances. For visitors planning a trip to Qatar in 2025, understanding the Katara events calendar is essential for tapping into the heart of the nation's cultural life.</p>
+        
+        <h2 id="vision">The Vision of Katara: A Hub for Global Dialogue</h2>
+        <p>The village's architecture is a deliberate blend of traditional Qatari and Islamic styles, featuring winding alleyways, an impressive open-air amphitheater, and two stunning mosques—the <strong>Katara Mosque</strong> (Blue Mosque) and the <strong>Gold Mosque</strong>. This setting provides a perfect backdrop for its mission: to be a beacon of art and culture in the Middle East.</p>
+        <p>Katara's calendar is typically structured around several major annual festivals, complemented by a continuous stream of art exhibitions, workshops, and performances across its various venues, including the Katara Opera House and the Drama Theatre.</p>
+        
+        <h2 id="key-events">Key Annual Events in the 2025 Calendar</h2>
+        <p>While specific dates for all events are subject to official confirmation by the Katara Cultural Village Foundation, the annual cycle reliably features several major cultural tentpoles.</p>
+        
+        <h3 id="dhow-festival">1. Katara Traditional Dhow Festival (Late November/Early December)</h3>
+        <p>This is arguably one of Katara's most significant annual events, celebrating Qatar's rich maritime heritage. The festival brings together participants from across the Gulf region to showcase traditional dhow boats, maritime crafts, and sea-related folk arts.</p>
+        <ul>
+          <li><strong>Focus:</strong> Traditional sailing, pearl diving history, and sea-faring songs.</li>
+          <li><strong>Experience:</strong> Visitors can board the dhows, watch traditional fishing and diving demonstrations, and enjoy local food stalls.</li>
+        </ul>
+        
+        <h3 id="hunting-falcons">2. Katara International Hunting and Falcons Exhibition (S'hail) (October/November)</h3>
+        <p>Reflecting the deep-rooted tradition of falconry in Qatari culture, the S'hail exhibition is a world-class event for enthusiasts. It features the latest hunting equipment, falconry gear, and a highly anticipated auction of some of the world's finest falcons.</p>
+        <ul>
+          <li><strong>Focus:</strong> Falconry, hunting, and traditional Qatari heritage.</li>
+          <li><strong>Experience:</strong> A chance to see magnificent birds of prey up close and understand the cultural significance of this ancient sport.</li>
+        </ul>
+        
+        <h3 id="jazz-festival">3. Katara European Jazz Festival (Late October/Early November)</h3>
+        <p>A testament to Katara's commitment to international cultural exchange, this festival brings acclaimed jazz musicians from various European countries to Doha. It is a popular event that offers free performances, often held in the open air, attracting a diverse audience.</p>
+        <ul>
+          <li><strong>Focus:</strong> Contemporary European jazz music.</li>
+          <li><strong>Experience:</strong> High-quality, free musical performances in a beautiful setting.</li>
+        </ul>
+        
+        <h3 id="art-festival">4. Qatar International Art Festival (QIAF) (December)</h3>
+        <p>The QIAF is a major event for the visual arts community, typically held at Katara. It features a large-scale exhibition, live painting sessions, and workshops, bringing together artists from over 50 countries.</p>
+        <ul>
+          <li><strong>Focus:</strong> Global contemporary art, painting, and sculpture.</li>
+          <li><strong>Experience:</strong> Witnessing artists create work live and engaging with the international art scene.</li>
+        </ul>
+        
+        <h2 id="continuous-offerings">The Continuous Cultural Offering</h2>
+        <p>Beyond the major festivals, Katara maintains a vibrant calendar of ongoing activities and exhibitions throughout 2025.</p>
+        
+        <h3 id="art-exhibitions">Art and Exhibitions</h3>
+        <p>The village is home to several galleries, including the <strong>Katara Art Center</strong> and the <strong>Al Thuraya Planetarium</strong>. These venues host rotating exhibitions that cover a wide spectrum of art forms, from contemporary Qatari painting to international photography and historical artifacts.</p>
+        <p><strong>Tip:</strong> Check the official Katara website's "What's On" section for the most up-to-date schedule of gallery openings and workshops.</p>
+        
+        <h3 id="performing-arts">Performing Arts</h3>
+        <p>The <strong>Katara Opera House</strong> is a premier venue for classical music, opera, and ballet, often hosting international touring companies. The <strong>Katara Amphitheatre</strong>, a stunning Greco-Roman style structure overlooking the sea, is used for large-scale concerts and theatrical productions, particularly during the cooler months.</p>
+        
+        <h3 id="educational-activities">Educational and Recreational Activities</h3>
+        <p>Katara also offers a range of activities for families and individuals:</p>
+        <ul>
+          <li><strong>Katara Beach:</strong> A public beach offering various water sports and recreational facilities.</li>
+          <li><strong>Workshops:</strong> Regular workshops in traditional crafts, calligraphy, and music are often available.</li>
+          <li><strong>Restaurants and Cafés:</strong> A diverse culinary scene, from fine dining to casual eateries, ensures that a visit to Katara is a full-day experience.</li>
+        </ul>
+        
+        <h2 id="planning">Planning Your 2025 Visit</h2>
+        <p>To make the most of a visit to Katara, especially if targeting a specific event, advanced planning is crucial.</p>
+        
+        <table class="w-full border-collapse my-6">
+          <thead>
+            <tr class="bg-qatar-maroon text-white">
+              <th class="border border-gray-300 p-3 text-left">Event Type</th>
+              <th class="border border-gray-300 p-3 text-left">Typical Timing</th>
+              <th class="border border-gray-300 p-3 text-left">Key Venues</th>
+              <th class="border border-gray-300 p-3 text-left">Planning Tip</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border border-gray-300 p-3"><strong>Major Festivals</strong></td>
+              <td class="border border-gray-300 p-3">Late October - December</td>
+              <td class="border border-gray-300 p-3">Amphitheatre, Beach, Esplanade</td>
+              <td class="border border-gray-300 p-3">Book accommodation and check specific dates early.</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border border-gray-300 p-3"><strong>Art Exhibitions</strong></td>
+              <td class="border border-gray-300 p-3">Year-round</td>
+              <td class="border border-gray-300 p-3">Katara Art Center, Galleries</td>
+              <td class="border border-gray-300 p-3">Check the "What's On" section for opening times.</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 p-3"><strong>Performing Arts</strong></td>
+              <td class="border border-gray-300 p-3">Year-round</td>
+              <td class="border border-gray-300 p-3">Opera House, Drama Theatre</td>
+              <td class="border border-gray-300 p-3">Purchase tickets well in advance for international acts.</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border border-gray-300 p-3"><strong>Recreational</strong></td>
+              <td class="border border-gray-300 p-3">Year-round</td>
+              <td class="border border-gray-300 p-3">Katara Beach, Restaurants</td>
+              <td class="border border-gray-300 p-3">Best enjoyed in the evening when the weather is cooler.</td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <p><strong>Access and Logistics:</strong> Katara Cultural Village is easily accessible by car or taxi and is served by the <strong>Katara Metro Station</strong> on the Red Line, making it simple to integrate into any Doha itinerary.</p>
+        
+        <h2 id="conclusion">A Bridge Between Cultures</h2>
+        <p>Katara Cultural Village is a dynamic reflection of Qatar's role as a bridge between cultures. A visit in 2025 promises not only architectural beauty but also a deep immersion into a vibrant, evolving cultural landscape. By aligning your trip with one of its major festivals, you can transform a simple visit into a truly unforgettable cultural experience.</p>
+      `,
+      tableOfContents: [
+        { title: 'The Vision of Katara', id: 'vision' },
+        { title: 'Key Annual Events in 2025', id: 'key-events' },
+        { title: '1. Traditional Dhow Festival', id: 'dhow-festival' },
+        { title: '2. Hunting and Falcons Exhibition', id: 'hunting-falcons' },
+        { title: '3. European Jazz Festival', id: 'jazz-festival' },
+        { title: '4. International Art Festival', id: 'art-festival' },
+        { title: 'Continuous Cultural Offering', id: 'continuous-offerings' },
+        { title: 'Art and Exhibitions', id: 'art-exhibitions' },
+        { title: 'Performing Arts', id: 'performing-arts' },
+        { title: 'Educational Activities', id: 'educational-activities' },
+        { title: 'Planning Your 2025 Visit', id: 'planning' },
+        { title: 'A Bridge Between Cultures', id: 'conclusion' }
+      ],
+      tags: ['Katara', 'Events Calendar', 'Festivals', 'Cultural Events', '2025 Guide']
+    },
     'doha-airport-layover-activities': {
       id: '20',
       title: 'Ten Ways to Enjoy a Layover at Doha Airport',

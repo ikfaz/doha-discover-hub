@@ -17,6 +17,15 @@ const Blog = () => {
   
   const allPosts = [
     {
+      id: '21',
+      title: 'A Year of Culture: Katara Cultural Village Events Calendar 2025',
+      excerpt: 'Your complete guide to festivals, exhibitions, and performances at Katara Cultural Village throughout 2025 - from dhow festivals to jazz concerts.',
+      imageUrl: 'https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=800&auto=format&fit=crop',
+      category: 'Events',
+      date: 'April 30, 2025',
+      slug: 'katara-cultural-village-events-2025',
+    },
+    {
       id: '20',
       title: 'Ten Ways to Enjoy a Layover at Doha Airport',
       excerpt: 'Discover how to make the most of your time at Hamad International Airport - from The Orchard garden to spa treatments, art installations, and more.',
