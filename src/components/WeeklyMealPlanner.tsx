@@ -219,12 +219,11 @@ export const WeeklyMealPlanner = () => {
             {days.map(day => (
               <div key={day.key} className="space-y-2">
                 <Label htmlFor={day.key} className="font-semibold">{day.label}</Label>
-                <Select value={meals[day.key]} onValueChange={(value) => handleMealChange(day.key, value)}>
+                <Select value={meals[day.key] || undefined} onValueChange={(value) => handleMealChange(day.key, value)}>
                   <SelectTrigger id={day.key} className="bg-background">
                     <SelectValue placeholder="Select a meal" />
                   </SelectTrigger>
                   <SelectContent className="bg-background z-50">
-                    <SelectItem value="">No meal</SelectItem>
                     {recipes.map(recipe => (
                       <SelectItem key={recipe.id} value={recipe.id}>
                         {recipe.name} ({recipe.servings} servings)
