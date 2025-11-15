@@ -68,4 +68,25 @@
   .card-hover {
     @apply transition duration-300 transform hover:shadow-lg hover:-translate-y-1;
   }
+
+  /* Article content styling */
+  .prose h2 {
+    @apply text-qatar-maroon font-bold text-2xl mt-8 mb-4;
+  }
+
+  .prose h3 {
+    @apply text-qatar-maroon font-semibold text-xl mt-6 mb-3;
+  }
+
+  .prose p {
+    @apply text-gray-900 leading-relaxed mb-4;
+  }
+
+  .prose strong {
+    @apply text-gray-900 font-semibold;
+  }
+
+  .prose a {
+    @apply text-qatar-maroon hover:text-qatar-gold underline;
+  }
 }
