@@ -35,12 +35,200 @@ import alcoholGuideImage from '@/assets/alcohol-guide-doha.jpg';
 import prostitutionLawsImage from '@/assets/prostitution-laws-legal-guide.jpg';
 import dohaSafetyImage from '@/assets/doha-safety-guide.jpg';
 import womenDrivingImage from '@/assets/women-driving-qatar.jpg';
+import qatariDishesImage from '@/assets/qatari-dishes-guide.jpg';
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   
   // Blog post data based on slug
   const blogPosts: Record<string, any> = {
+    'qatari-dishes-doha-culinary-guide': {
+      id: '35',
+      title: 'Qatari Dishes You Must Try in Doha: A Complete Culinary Guide',
+      date: 'May 14, 2025',
+      author: 'Experience Doha Team',
+      readTime: '14 min read',
+      category: 'Food',
+      imageUrl: qatariDishesImage,
+      content: `
+        <p class="lead">When travelers think of Doha, they often imagine futuristic skyscrapers, luxury hotels, and pristine beaches. But beneath the modern glow of Qatar's capital lies one of the most underrated treasures of the Middle East—<strong>authentic Qatari cuisine</strong>.</p>
+        
+        <p>Rooted in Bedouin tradition and influenced by Persian, Indian, East African, and Levantine flavors, Qatar's food culture is a blend of history, hospitality, and bold spices.</p>
+        
+        <p>If you're visiting Doha for the first time, experiencing traditional Qatari dishes is essential. This guide explores the top Qatari foods you must try, where to find them, and why each dish holds cultural significance.</p>
+        
+        <h2 id="machboos">1. Machboos – Qatar's National Dish</h2>
+        <p>If Qatar had one dish that defines its culinary identity, it would be <strong>Machboos</strong>. Similar to biryani but with its own distinctive spices, Machboos is a fragrant rice dish cooked with slow-marinated meat (usually chicken, lamb, or goat) and seasoned with dried lime (loomi), saffron, cardamom, and cloves.</p>
+        
+        <h3>Why You Must Try It</h3>
+        <ul>
+          <li>Rich, aromatic, and deeply comforting</li>
+          <li>A perfect introduction to traditional Qatari flavors</li>
+          <li>Served in almost every Qatari household and majlis</li>
+        </ul>
+        
+        <h3>Where to Try It</h3>
+        <ul>
+          <li>SMAT Restaurant</li>
+          <li>Al Tawash</li>
+          <li>Shay Al Shoomos</li>
+        </ul>
+        
+        <h2 id="harees">2. Harees – A Ramadan Favorite</h2>
+        <p>Harees is a slow-cooked dish made from wheat and meat, blended into a creamy porridge-like texture. Its simplicity makes it special, and it's often served during Ramadan and family gatherings.</p>
+        
+        <h3>Why You Must Try It</h3>
+        <ul>
+          <li>Smooth, silky, and incredibly filling</li>
+          <li>One of the most traditional Qatari comfort foods</li>
+        </ul>
+        
+        <h3>Where to Try It</h3>
+        <ul>
+          <li>Local Qatari homes (if you get an invite!)</li>
+          <li>Ghiwane Restaurant</li>
+        </ul>
+        
+        <h2 id="thareed">3. Thareed – The Qatari "Lasagna"</h2>
+        <p>Often called "Arabic lasagna," Thareed is a stew of vegetables and tender meat layered with thin, crispy bread that absorbs the flavors. Qataris especially love Thareed during Ramadan.</p>
+        
+        <h3>Why You Must Try It</h3>
+        <ul>
+          <li>A perfect balance of savory stew and crunchy bread</li>
+          <li>A culturally symbolic dish served during holy occasions</li>
+        </ul>
+        
+        <h3>Where to Try It</h3>
+        <ul>
+          <li>SMAT</li>
+          <li>Nourlaya by Chef Nour</li>
+        </ul>
+        
+        <h2 id="majboos-rubyan">4. Majboos Rubyan – Spicy Shrimp Qatari Style</h2>
+        <p>Seafood plays a big role in Qatari history thanks to its deep pearl-diving roots. Majboos Rubyan is the seafood version of Machboos, featuring fresh Gulf shrimp cooked in aromatic spiced rice.</p>
+        
+        <h3>Why You Must Try It</h3>
+        <ul>
+          <li>A coastal twist on the national dish</li>
+          <li>Highlights Qatar's maritime heritage</li>
+        </ul>
+        
+        <h3>Where to Try It</h3>
+        <ul>
+          <li>Al Mourjan (Corniche)</li>
+          <li>Bandar Aden</li>
+        </ul>
+        
+        <h2 id="balaleet">5. Balaleet – Sweet and Savory Breakfast</h2>
+        <p>Balaleet is Qatar's most famous breakfast dish—sweet vermicelli noodles cooked with sugar, saffron, and rose water, topped with a thin omelet for a sweet-savory contrast.</p>
+        
+        <h3>Why You Must Try It</h3>
+        <ul>
+          <li>Unique and unlike any Western breakfast</li>
+          <li>A perfect dish for foodies who love traditional flavors</li>
+        </ul>
+        
+        <h3>Where to Try It</h3>
+        <ul>
+          <li>Shay Al Shoomos (Souq Waqif)</li>
+          <li>Damasca One</li>
+        </ul>
+        
+        <h2 id="madrouba">6. Madrouba – The Qatari Energy Bowl</h2>
+        <p>Madrouba is a hearty plate of mashed rice cooked with milk, butter, lentils, and chicken. It is slow-cooked for hours until it reaches a creamy consistency.</p>
+        
+        <h3>Why You Must Try It</h3>
+        <ul>
+          <li>High-energy, flavorful, and deeply comforting</li>
+          <li>Often served in Qatari homes during winter</li>
+        </ul>
+        
+        <h3>Where to Try It</h3>
+        <ul>
+          <li>SMAT</li>
+          <li>Al Jasra Restaurant (Souq Waqif)</li>
+        </ul>
+        
+        <h2 id="saloona">7. Saloona – Qatar's All-Purpose Stew</h2>
+        <p>Saloona is a rich stew made with chicken, beef, or lamb, mixed with potatoes, carrots, and tomatoes simmered in a flavorful broth. It's usually served over rice or enjoyed with Arabic bread.</p>
+        
+        <h3>Why You Must Try It</h3>
+        <ul>
+          <li>Versatile, hearty, and perfect for family-style dining</li>
+          <li>Represents authentic homemade Qatari cooking</li>
+        </ul>
+        
+        <h3>Where to Try It</h3>
+        <ul>
+          <li>Ghiwane Restaurant</li>
+          <li>Al Enna (Katara)</li>
+        </ul>
+        
+        <h2 id="luqaimat">8. Luqaimat – The King of Qatari Desserts</h2>
+        <p>No Qatari meal ends without <strong>Luqaimat</strong>, golden crispy dough balls coated with date syrup or honey and sprinkled with sesame seeds. They are especially popular during Ramadan nights.</p>
+        
+        <h3>Why You Must Try It</h3>
+        <ul>
+          <li>Crispy outside, soft inside</li>
+          <li>Perfect for a sweet finish after a traditional meal</li>
+        </ul>
+        
+        <h3>Where to Try It</h3>
+        <ul>
+          <li>Local Qatari stalls in Katara</li>
+          <li>Shay Al Shoomos</li>
+        </ul>
+        
+        <h2 id="khabees">9. Khabees – Sweet Dates Delight</h2>
+        <p>Khabees is a traditional Qatari dessert made from roasted flour, sugar, saffron, nuts, and dates—reflecting Qatar's long history of date farming.</p>
+        
+        <h3>Why You Must Try It</h3>
+        <ul>
+          <li>Rich, earthy, and full of natural sweetness</li>
+          <li>Perfect with Qatari karak tea</li>
+        </ul>
+        
+        <h2 id="karak">10. Karak Tea – Qatar's National Drink</h2>
+        <p>Even though it's not a food, Karak deserves a mention. Imported from South Asian traditions, Karak is sweet, creamy, spiced tea made with evaporated milk and cardamom. It is a staple across Doha.</p>
+        
+        <h3>Where to Try It</h3>
+        <ul>
+          <li>Chapati & Karak (Katara)</li>
+          <li>Tea Time</li>
+          <li>Literally every corner shop!</li>
+        </ul>
+        
+        <h2 id="where-to-eat">Where to Eat Qatari Food in Doha</h2>
+        <p>If you want the best Qatari culinary experience, start with:</p>
+        
+        <h3>1. Souq Waqif</h3>
+        <p>The heart of traditional food culture.</p>
+        <p>Must-visit spots:</p>
+        <ul>
+          <li>Shay Al Shoomos</li>
+          <li>Al Tawash</li>
+          <li>Damasca One</li>
+        </ul>
+        
+        <h3>2. Katara Cultural Village</h3>
+        <p>A mix of upscale and local Qatari dining options.</p>
+        
+        <h3>3. Msheireb Downtown</h3>
+        <p>Modern Qatari restaurants blending tradition and innovation.</p>
+        
+        <h2 id="tips">Tips for Trying Qatari Food as a Tourist</h2>
+        <ul>
+          <li>Qatari dishes are often spiced but not too spicy, perfect for beginners</li>
+          <li>Locals love sharing food—don't be surprised if you're invited to a majlis meal</li>
+          <li>Fridays are the best days to try Qatari buffets in hotels and local eateries</li>
+          <li>Always pair your meal with Karak or Qahwa (Arabic coffee)</li>
+        </ul>
+        
+        <h2 id="conclusion">Final Thoughts</h2>
+        <p>Exploring Qatari dishes in Doha is more than just eating—it's a journey through the country's culture, heritage, and hospitality. Whether you're indulging in Machboos by the Corniche, savoring Luqaimat during a desert safari, or sipping Karak in a bustling souq, Qatari cuisine offers flavors you'll remember long after your trip ends.</p>
+      `,
+      tags: ['Qatari Food', 'Traditional Cuisine', 'Restaurants', 'Machboos', 'Doha Dining']
+    },
     'women-driving-qatar-guide': {
       id: '34',
       title: 'Can Women Drive in Qatar? (2025 Guide for Tourists, Expats & Families)',
