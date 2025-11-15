@@ -7,6 +7,7 @@ import SchoolComparisonTool from '@/components/SchoolComparisonTool';
 import SchoolFeeCalculator from '@/components/SchoolFeeCalculator';
 import VisaChecklistGenerator from '@/components/VisaChecklistGenerator';
 import DrivingLicenseChecker from '@/components/DrivingLicenseChecker';
+import MentalHealthDirectory from '@/components/MentalHealthDirectory';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Calendar, Clock, Facebook, Twitter, Share2 } from 'lucide-react';
@@ -5471,6 +5472,19 @@ const BlogPost = () => {
                   
                   {/* Rest of content */}
                   <div dangerouslySetInnerHTML={{ __html: '<h2 id="rules">' + post.content.split('<h2 id="rules">')[1] }} />
+                </div>
+              ) : slug === 'lgbtq-experiences-qatar-2025' ? (
+                <div className="prose prose-lg max-w-none space-y-8">
+                  {/* First section through mental health */}
+                  <div dangerouslySetInnerHTML={{ __html: post.content.split('<h2 id="community">')[0] }} />
+                  
+                  {/* Mental Health Directory */}
+                  <div className="not-prose my-12">
+                    <MentalHealthDirectory />
+                  </div>
+                  
+                  {/* Rest of content */}
+                  <div dangerouslySetInnerHTML={{ __html: '<h2 id="community">' + post.content.split('<h2 id="community">')[1] }} />
                 </div>
               ) : (
                 <div 
