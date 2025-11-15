@@ -13,6 +13,103 @@ const BlogPost = () => {
   
   // Blog post data based on slug
   const blogPosts: Record<string, any> = {
+    'souq-waqif-night-experiences-haggling': {
+      id: '28',
+      title: 'The Heart of Doha After Dark: Souq Waqif Night Experiences and the Art of Haggling',
+      date: 'May 7, 2025',
+      author: 'Experience Doha Team',
+      readTime: '9 min read',
+      category: 'Culture',
+      imageUrl: 'https://images.unsplash.com/photo-1555400038-63f5ba517a47?q=80&w=2668&auto=format&fit=crop',
+      content: `
+        <p>As the intense desert sun dips below the West Bay skyline, the ancient heart of Doha begins to beat with a renewed energy. <strong>Souq Waqif</strong>, meaning "standing market," is not merely a shopping destination; it is a living, breathing cultural institution that truly comes alive after sunset. For any visitor to Qatar, a night spent wandering its meticulously restored alleys, inhaling the scent of spices and incense, and engaging in the time-honored tradition of haggling, is an essential experience.</p>
+        
+        <h2 id="night-souq">The Souq at Night: A Sensory Tapestry</h2>
+        <p>The transformation of Souq Waqif from a bustling daytime market to a vibrant, nocturnal hub is dramatic. The architecture, a blend of traditional Qatari and Gulf styles, is illuminated by soft, warm lighting, casting long shadows that enhance the market's historical ambiance.</p>
+        
+        <h3 id="culinary">Culinary Delights and Social Hubs</h3>
+        <p>The evening is the prime time for dining and socializing. The central courtyard and the surrounding alleyways are lined with restaurants and cafés offering a diverse range of cuisines.</p>
+        <ul>
+          <li><strong>Authentic Qatari Cuisine:</strong> Seek out local eateries serving traditional dishes like <strong>Machboos</strong> (spiced rice with meat or seafood), <strong>Thareed</strong> (a rich stew with bread), and <strong>Harees</strong> (wheat and meat porridge). These are often best enjoyed in the open-air seating areas, where the atmosphere is electric.</li>
+          <li><strong>Shisha and Coffee:</strong> Numerous cafés offer comfortable seating where locals and tourists alike gather to enjoy strong Arabic coffee, mint tea, and <strong>shisha</strong> (water pipe). The air is thick with the sweet, fruity aroma of flavored tobacco, creating a quintessential Middle Eastern evening scene.</li>
+          <li><strong>Sweet Endings:</strong> Don't miss the opportunity to try local desserts like <strong>Luqaimat</strong> (sweet dumplings drizzled with date syrup) or fresh, warm <strong>Karak</strong> (spiced milk tea), a national favorite.</li>
+        </ul>
+        
+        <h3 id="spectacle">The Nightly Spectacle</h3>
+        <p>Beyond food, the Souq offers a continuous stream of cultural sights and sounds.</p>
+        <ul>
+          <li><strong>Street Performers:</strong> Musicians, storytellers, and traditional dancers often perform in the main square, drawing crowds and adding to the festive atmosphere.</li>
+          <li><strong>The Falcon Souq:</strong> While falcons are often more active during the day, the Falcon Souq remains a fascinating place to visit in the evening. You can observe the majestic birds and the specialized equipment used for falconry, a deeply rooted Qatari tradition.</li>
+          <li><strong>The Animal Market:</strong> A short walk away, the animal market features horses, camels, and various exotic pets, though it is generally quieter in the late evening.</li>
+          <li><strong>Art and Handicrafts:</strong> The Souq is a treasure trove of handicrafts, including intricate wooden carvings, traditional clothing, and beautiful Persian rugs. The evening light makes the colors and textures of these items particularly appealing.</li>
+        </ul>
+        
+        <h2 id="haggling">The Art of the Deal: Haggling in Souq Waqif</h2>
+        <p>Haggling, or bargaining, is not just a transaction in Souq Waqif; it is a social ritual and a key part of the shopping experience. It is a friendly, respectful exchange that, when done correctly, can lead to a mutually satisfying price and a memorable interaction.</p>
+        
+        <h3 id="golden-rules">The Golden Rules of Negotiation</h3>
+        <ol>
+          <li><strong>Be Polite and Friendly:</strong> Always start with a warm greeting, such as "Salam Alaikum" (Peace be upon you). A smile and a respectful demeanor are your most important tools. The negotiation should feel like a pleasant conversation, not a confrontation.</li>
+          <li><strong>Know Your Price:</strong> Before you start, decide on the maximum price you are willing to pay. This prevents you from getting carried away in the moment.</li>
+          <li><strong>Never Accept the First Price:</strong> The initial price quoted by the vendor is almost always inflated, sometimes by 50% or more. This is the starting point for the negotiation.</li>
+          <li><strong>Start Low, But Not Insultingly Low:</strong> A good rule of thumb is to counter with <strong>50% to 60%</strong> of the vendor's initial asking price. This leaves plenty of room for both sides to move.</li>
+          <li><strong>Be Prepared to Walk Away:</strong> This is the most powerful tool in your arsenal. If you reach a stalemate, politely thank the vendor and begin to walk away. Often, the vendor will call you back with a better offer. If they don't, you know you've hit their minimum price, and you can always return.</li>
+          <li><strong>Buy Multiple Items:</strong> If you are purchasing several items from the same vendor, you have a much stronger position to negotiate a bulk discount.</li>
+          <li><strong>Use Cash:</strong> While many vendors accept cards, cash (Qatari Riyals) is preferred and can often secure a better deal.</li>
+          <li><strong>Understand the Exception:</strong> For certain items, such as packaged spices, dates, or items in fixed-price shops, haggling may not be possible or appropriate. Use your judgment.</li>
+        </ol>
+        
+        <table class="w-full border-collapse my-6">
+          <thead>
+            <tr class="bg-qatar-maroon text-white">
+              <th class="border border-gray-300 p-3 text-left">Haggling Strategy</th>
+              <th class="border border-gray-300 p-3 text-left">Description</th>
+              <th class="border border-gray-300 p-3 text-left">Expected Outcome</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border border-gray-300 p-3"><strong>The Lowball Counter</strong></td>
+              <td class="border border-gray-300 p-3">Offer 50-60% of the asking price.</td>
+              <td class="border border-gray-300 p-3">Establishes a wide negotiation range.</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border border-gray-300 p-3"><strong>The Walk-Away</strong></td>
+              <td class="border border-gray-300 p-3">Politely leave the stall if the price is too high.</td>
+              <td class="border border-gray-300 p-3">Often results in the vendor offering their best price.</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 p-3"><strong>The Bulk Buy</strong></td>
+              <td class="border border-gray-300 p-3">Negotiate a discount for purchasing multiple items.</td>
+              <td class="border border-gray-300 p-3">Higher chance of a significant price reduction.</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border border-gray-300 p-3"><strong>The Cash Advantage</strong></td>
+              <td class="border border-gray-300 p-3">Offer to pay in cash (QAR) instead of card.</td>
+              <td class="border border-gray-300 p-3">Small, immediate discount or better final price.</td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <h2 id="practical-tips">Practical Tips for a Night Visit</h2>
+        <ul>
+          <li><strong>Best Time to Visit:</strong> The Souq is busiest and most atmospheric between <strong>7:00 PM and 11:00 PM</strong>.</li>
+          <li><strong>Dress Code:</strong> While the Souq is a tourist area, dressing respectfully is always appreciated. Shoulders and knees should be covered.</li>
+          <li><strong>Getting There:</strong> It is easily accessible by taxi or the Doha Metro (Souq Waqif station on the Gold Line).</li>
+          <li><strong>Safety:</strong> The Souq is very safe, with a visible police presence.</li>
+        </ul>
+        
+        <p>Souq Waqif at night is a journey back in time, a place where the traditions of the Gulf are proudly displayed. It is a place to shop, to eat, to socialize, and most importantly, to connect with the rich cultural heritage of Qatar. Master the art of the haggle, and you will leave not only with a unique souvenir but with a genuine story to tell.</p>
+      `,
+      tableOfContents: [
+        { id: 'night-souq', title: 'The Souq at Night: A Sensory Tapestry', level: 2 },
+        { id: 'culinary', title: 'Culinary Delights and Social Hubs', level: 3 },
+        { id: 'spectacle', title: 'The Nightly Spectacle', level: 3 },
+        { id: 'haggling', title: 'The Art of the Deal: Haggling in Souq Waqif', level: 2 },
+        { id: 'golden-rules', title: 'The Golden Rules of Negotiation', level: 3 },
+        { id: 'practical-tips', title: 'Practical Tips for a Night Visit', level: 2 },
+      ],
+    },
     'ultimate-doha-layover-24-48-hours': {
       id: '27',
       title: 'The Ultimate 24-48 Hour Layover in Doha: A Guide to Maximizing Your Stopover',

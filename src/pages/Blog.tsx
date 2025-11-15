@@ -17,6 +17,15 @@ const Blog = () => {
   
   const allPosts = [
     {
+      id: '28',
+      title: 'The Heart of Doha After Dark: Souq Waqif Night Experiences',
+      excerpt: 'Discover Souq Waqif at night - from authentic Qatari dining and shisha cafés to mastering the art of haggling in the ancient market alleyways.',
+      imageUrl: 'https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=800&auto=format&fit=crop',
+      category: 'Culture',
+      date: 'May 7, 2025',
+      slug: 'souq-waqif-night-experiences-haggling',
+    },
+    {
       id: '27',
       title: 'The Ultimate 24-48 Hour Layover in Doha: A Complete Guide',
       excerpt: 'Transform your Doha layover into a mini-vacation with our detailed 24-hour dash and 48-hour exploration itineraries, from cultural highlights to desert adventures.',
