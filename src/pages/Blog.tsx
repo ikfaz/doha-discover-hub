@@ -48,12 +48,23 @@ import qatariDishesImage from '@/assets/qatari-dishes-guide.jpg';
 import hamadAirportGuideImage from '@/assets/hamad-airport-guide.jpg';
 import dohaTransformingImage from '@/assets/doha-transforming-middle-east.jpg';
 import costOfLivingImage from '@/assets/cost-of-living-doha-2025.jpg';
+import womenSafetyDressCodeImage from '@/assets/women-safety-dress-code-doha.jpg';
 
 const Blog = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   
   const allPosts = [
+    {
+      id: '39',
+      title: 'Women\'s Safety and Dress Code in Doha, Qatar: Complete 2025 Guide',
+      excerpt: 'Essential guide to women\'s safety in Doha and Qatar dress code requirements. Learn what to wear, cultural expectations, and safety tips for female expats and tourists.',
+      imageUrl: womenSafetyDressCodeImage,
+      category: 'Expat-Tips',
+      date: 'May 18, 2025',
+      slug: 'women-safety-dress-code-doha-qatar',
+      tags: ['women safety', 'dress code', 'female expat', 'cultural norms', 'modest dress'],
+    },
     {
       id: '38',
       title: 'Cost of Living in Doha 2025: Rent Inflation and Monthly Expenses Guide',
