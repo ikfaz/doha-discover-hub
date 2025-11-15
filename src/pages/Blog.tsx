@@ -17,6 +17,15 @@ const Blog = () => {
   
   const allPosts = [
     {
+      id: '30',
+      title: 'The Ultimate Arabian Adventure: Desert Safari and Inland Sea',
+      excerpt: 'Experience the thrill of dune bashing and the serenity of Khor Al Adaid - your complete guide to Qatar\'s quintessential desert safari adventure.',
+      imageUrl: 'https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=800&auto=format&fit=crop',
+      category: 'Attractions',
+      date: 'May 9, 2025',
+      slug: 'desert-safari-inland-sea-khor-al-adaid',
+    },
+    {
       id: '29',
       title: 'A Tale of Two Museums: MIA + NMoQ Combo Guide',
       excerpt: 'Discover Qatar\'s cultural treasures with our guide to visiting the Museum of Islamic Art and National Museum of Qatar using the Discover One Pass.',

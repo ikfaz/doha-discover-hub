@@ -13,6 +13,107 @@ const BlogPost = () => {
   
   // Blog post data based on slug
   const blogPosts: Record<string, any> = {
+    'desert-safari-inland-sea-khor-al-adaid': {
+      id: '30',
+      title: 'The Ultimate Arabian Adventure: Desert Safari and the Majestic Inland Sea (Khor Al Adaid)',
+      date: 'May 9, 2025',
+      author: 'Experience Doha Team',
+      readTime: '10 min read',
+      category: 'Attractions',
+      imageUrl: 'https://images.unsplash.com/photo-1509316785289-025f5b846b35?q=80&w=2668&auto=format&fit=crop',
+      content: `
+        <p>No visit to Qatar is complete without venturing beyond the glittering skyline of Doha to experience the raw, untamed beauty of the Arabian desert. The quintessential Qatari adventure is the <strong>Desert Safari and Inland Sea (Khor Al Adaid) trip</strong>, a thrilling journey that combines adrenaline-pumping dune bashing with the serene, natural wonder of a UNESCO-recognized site where the sea meets the sand.</p>
+        
+        <h2 id="journey">The Journey: From City to Wilderness</h2>
+        <p>The desert safari typically begins with a pickup from your hotel in a powerful, air-conditioned <strong>4x4 SUV</strong> (usually a Toyota Land Cruiser or similar). The drive south from Doha takes approximately one hour, passing through the industrial area before reaching the staging point near the town of Mesaieed.</p>
+        
+        <h3 id="dune-bashing">1. The Thrill of Dune Bashing</h3>
+        <p>At the edge of the desert, the tires are partially deflated to prepare the vehicle for the soft sand. This marks the beginning of the most exhilarating part of the safari: <strong>dune bashing</strong>.</p>
+        <ul>
+          <li><strong>The Experience:</strong> Expert drivers navigate the massive, towering sand dunes with skill and precision, creating a roller-coaster-like experience. The vehicles slide, spin, and climb near-vertical slopes, offering an unforgettable rush of adrenaline.</li>
+          <li><strong>Safety:</strong> Reputable tour operators prioritize safety, and all vehicles are equipped with roll cages and safety features. It is important to choose a licensed and experienced operator.</li>
+        </ul>
+        
+        <h3 id="activities">2. Sandboarding and Camel Riding</h3>
+        <p>Most safari packages include stops for traditional desert activities:</p>
+        <ul>
+          <li><strong>Sandboarding:</strong> Similar to snowboarding, visitors can slide down the steep slopes of the dunes on a board. It is a fun, low-impact activity that offers a unique perspective on the desert landscape.</li>
+          <li><strong>Camel Riding:</strong> A brief, traditional camel ride is often offered at a desert camp or a designated stop, providing a classic photo opportunity and a taste of the Bedouin way of life.</li>
+        </ul>
+        
+        <h2 id="inland-sea">The Destination: Khor Al Adaid (The Inland Sea)</h2>
+        <p>The climax of the desert safari is the arrival at <strong>Khor Al Adaid</strong>, or the Inland Sea. This remarkable natural reserve, located near the border with Saudi Arabia, is one of the few places in the world where the sea penetrates deep into the heart of the desert.</p>
+        
+        <h3 id="unesco">A UNESCO-Recognized Natural Wonder</h3>
+        <p>Khor Al Adaid is a large tidal bay that is connected to the Arabian Gulf by a narrow, deep channel. The area is a stunning landscape of massive, crescent-shaped sand dunes that descend directly into the turquoise waters of the sea.</p>
+        <ul>
+          <li><strong>Ecological Significance:</strong> The area is a vital ecosystem, home to a diverse range of wildlife, including sea turtles, dugongs, and various species of birds. It is a protected area and a testament to the natural beauty of the region.</li>
+          <li><strong>The View:</strong> The sight of the endless desert meeting the calm, clear waters of the sea is truly breathtaking, especially at sunrise or sunset. The silence and vastness of the landscape offer a profound sense of peace and isolation.</li>
+        </ul>
+        
+        <h2 id="choosing">Choosing Your Safari Experience</h2>
+        <p>Desert safaris are offered in various formats to suit different schedules and preferences.</p>
+        
+        <table class="w-full border-collapse my-6">
+          <thead>
+            <tr class="bg-qatar-maroon text-white">
+              <th class="border border-gray-300 p-3 text-left">Safari Type</th>
+              <th class="border border-gray-300 p-3 text-left">Duration</th>
+              <th class="border border-gray-300 p-3 text-left">Best For</th>
+              <th class="border border-gray-300 p-3 text-left">Key Features</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border border-gray-300 p-3"><strong>Half-Day Safari</strong></td>
+              <td class="border border-gray-300 p-3">4 - 5 hours</td>
+              <td class="border border-gray-300 p-3">Layover travelers, first-timers</td>
+              <td class="border border-gray-300 p-3">Dune bashing, Inland Sea visit, quick return.</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border border-gray-300 p-3"><strong>Full-Day Safari</strong></td>
+              <td class="border border-gray-300 p-3">8 - 10 hours</td>
+              <td class="border border-gray-300 p-3">Comprehensive experience</td>
+              <td class="border border-gray-300 p-3">Includes lunch, more time at the Inland Sea, additional activities.</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 p-3"><strong>Overnight Safari</strong></td>
+              <td class="border border-gray-300 p-3">24 hours</td>
+              <td class="border border-gray-300 p-3">Immersive experience</td>
+              <td class="border border-gray-300 p-3">Sunset/sunrise views, traditional BBQ dinner, sleeping in a Bedouin-style camp.</td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <h3 id="overnight">The Overnight Experience</h3>
+        <p>For the most immersive adventure, the overnight safari is highly recommended. After the sunset dune bashing, guests are taken to a traditional Bedouin-style camp set up near the Inland Sea.</p>
+        <ul>
+          <li><strong>Evening:</strong> The night includes a delicious <strong>traditional BBQ dinner</strong> (often featuring grilled meats and local delicacies), Arabic music, and the opportunity to gaze at the spectacular, unpolluted desert night sky.</li>
+          <li><strong>Morning:</strong> Waking up to the sunrise over the Inland Sea is an unforgettable moment, followed by a traditional breakfast before the drive back to Doha.</li>
+        </ul>
+        
+        <h2 id="practical-tips">Practical Tips for the Desert Safari</h2>
+        <ol>
+          <li><strong>Book in Advance:</strong> Especially for weekend or overnight trips, booking with a reputable tour operator like Discover Qatar or a well-reviewed local company is essential.</li>
+          <li><strong>Timing:</strong> The cooler months (October to April) are the most comfortable for desert activities. If traveling in the summer, opt for an early morning or late afternoon trip to avoid the midday heat.</li>
+          <li><strong>What to Wear:</strong> Wear light, comfortable clothing. Sunglasses, a hat, and sunscreen are essential. Closed-toe shoes are recommended for walking on the sand.</li>
+          <li><strong>Health Considerations:</strong> Dune bashing is not recommended for pregnant women, individuals with back or neck problems, or very young children. Most operators will offer a less aggressive option upon request.</li>
+          <li><strong>Hydration:</strong> The desert climate is extremely dry. Ensure you drink plenty of water throughout the trip.</li>
+        </ol>
+        
+        <p>The Desert Safari and Inland Sea trip is a powerful reminder of the natural heritage that underpins modern Qatar. It is an adventure that connects the visitor to the timeless landscape and the enduring spirit of the Arabian Peninsula.</p>
+      `,
+      tableOfContents: [
+        { id: 'journey', title: 'The Journey: From City to Wilderness', level: 2 },
+        { id: 'dune-bashing', title: 'The Thrill of Dune Bashing', level: 3 },
+        { id: 'activities', title: 'Sandboarding and Camel Riding', level: 3 },
+        { id: 'inland-sea', title: 'The Destination: Khor Al Adaid', level: 2 },
+        { id: 'unesco', title: 'A UNESCO-Recognized Natural Wonder', level: 3 },
+        { id: 'choosing', title: 'Choosing Your Safari Experience', level: 2 },
+        { id: 'overnight', title: 'The Overnight Experience', level: 3 },
+        { id: 'practical-tips', title: 'Practical Tips for the Desert Safari', level: 2 },
+      ],
+    },
     'mia-nmoq-museum-combo-guide': {
       id: '29',
       title: 'A Tale of Two Museums: Unlocking Qatar\'s Past and Present with the MIA + NMoQ Combo',
