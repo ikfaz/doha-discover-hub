@@ -29,9 +29,20 @@ import drivingDohaImage from '@/assets/driving-doha-2025-guide.jpg';
 import lgbtqQatarImage from '@/assets/lgbtq-experiences-qatar-guide.jpg';
 import bankAccountQatarImage from '@/assets/bank-account-qatar-guide.jpg';
 import mobilePlansQatarImage from '@/assets/mobile-plans-qatar-guide.jpg';
+import groceryShoppingDohaImage from '@/assets/grocery-shopping-doha-guide.jpg';
 
 const Index = () => {
   const featuredBlogs = [
+    {
+      id: '47',
+      title: 'Grocery Shopping Hacks in Doha 2025: Carrefour vs Lulu Complete Guide',
+      excerpt: 'Master grocery shopping in Doha with Carrefour vs Lulu comparison. Find best prices, product selection, delivery options, and money-saving hacks for expats in Qatar.',
+      imageUrl: groceryShoppingDohaImage,
+      category: 'Expat-Tips',
+      date: 'May 27, 2025',
+      slug: 'grocery-shopping-doha-guide',
+      tags: ['grocery shopping', 'Carrefour', 'Lulu Hypermarket', 'money saving', 'expat life'],
+    },
     {
       id: '46',
       title: 'Best Mobile and Data Plans in Qatar 2025: Ooredoo vs Vodafone Complete Guide',
