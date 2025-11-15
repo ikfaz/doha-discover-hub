@@ -8,6 +8,7 @@ import SchoolFeeCalculator from '@/components/SchoolFeeCalculator';
 import VisaChecklistGenerator from '@/components/VisaChecklistGenerator';
 import DrivingLicenseChecker from '@/components/DrivingLicenseChecker';
 import MentalHealthDirectory from '@/components/MentalHealthDirectory';
+import { TherapyCostCalculator } from '@/components/TherapyCostCalculator';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Calendar, Clock, Facebook, Twitter, Share2 } from 'lucide-react';
@@ -5481,6 +5482,11 @@ const BlogPost = () => {
                   {/* Mental Health Directory */}
                   <div className="not-prose my-12">
                     <MentalHealthDirectory />
+                  </div>
+                  
+                  {/* Therapy Cost Calculator */}
+                  <div className="not-prose my-12">
+                    <TherapyCostCalculator />
                   </div>
                   
                   {/* Rest of content */}
