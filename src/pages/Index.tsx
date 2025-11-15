@@ -14,9 +14,19 @@ import layoverImage from '@/assets/doha-layover-experience.jpg';
 import qatarAirwaysImage from '@/assets/qatar-airways-stopover.jpg';
 import cornicheSunsetImage from '@/assets/corniche-sunset-dhow.jpg';
 import alcoholGuideImage from '@/assets/alcohol-guide-doha.jpg';
+import prostitutionLawsImage from '@/assets/prostitution-laws-doha.jpg';
 
 const Index = () => {
   const featuredBlogs = [
+    {
+      id: '32',
+      title: 'Prostitution in Doha, Qatar: Is It Legal? (2025 Complete Guide)',
+      excerpt: 'Everything tourists and expats need to know about prostitution laws, penalties, safety, and scams in Qatar. A comprehensive legal guide for visitors.',
+      imageUrl: prostitutionLawsImage,
+      category: 'Expat-Tips',
+      date: 'May 11, 2025',
+      slug: 'prostitution-laws-doha-qatar-guide',
+    },
     {
       id: '31',
       title: 'Is Drinking Alcohol Allowed in Doha, Qatar? (2025 Full Guide)',

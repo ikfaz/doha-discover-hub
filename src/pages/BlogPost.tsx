@@ -32,12 +32,264 @@ import qatariCuisineImage from '@/assets/qatari-cuisine.jpg';
 import culturalEventsImage from '@/assets/cultural-events.jpg';
 import miaMuseumImage from '@/assets/mia-museum.jpg';
 import alcoholGuideImage from '@/assets/alcohol-guide-doha.jpg';
+import prostitutionLawsImage from '@/assets/prostitution-laws-doha.jpg';
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   
   // Blog post data based on slug
   const blogPosts: Record<string, any> = {
+    'prostitution-laws-doha-qatar-guide': {
+      id: '32',
+      title: 'Prostitution in Doha, Qatar: Is It Legal? (2025 Complete Guide)',
+      date: 'May 11, 2025',
+      author: 'Experience Doha Team',
+      readTime: '11 min read',
+      category: 'Expat-Tips',
+      imageUrl: prostitutionLawsImage,
+      content: `
+        <p class="lead">Doha has quickly become one of the most modern and luxurious cities in the Middle East. With its rapid tourism growth, world-class hotels, and international population, many travelers search online for information about local laws—especially regarding prostitution, escort services, and related activities.</p>
+        
+        <p>One of the most commonly asked questions is: <em>"Is prostitution legal in Doha, Qatar?"</em></p>
+        
+        <p>The short and clear answer is: <strong>NO. Prostitution is illegal in Qatar.</strong></p>
+        
+        <p>This article provides a complete, 2025 guide explaining the laws, penalties, myths, safety tips, and what tourists should know to avoid legal trouble.</p>
+        
+        <h2 id="legal">Is Prostitution Legal in Doha, Qatar?</h2>
+        <p><strong>Prostitution is 100% illegal in Doha and across Qatar.</strong></p>
+        
+        <p>Qatar is a conservative Muslim country governed by:</p>
+        <ul>
+          <li>Sharia law</li>
+          <li>Qatari Penal Code</li>
+          <li>Strict moral and public decency regulations</li>
+        </ul>
+        
+        <p>Under these laws, all forms of prostitution—including escort services, brothels, solicitation, and paid sexual activity—are strictly prohibited.</p>
+        
+        <h2 id="illegal">What Activities Are Illegal?</h2>
+        <p>The following activities are considered criminal offenses in Qatar:</p>
+        <ul>
+          <li>❌ Paying for sexual services</li>
+          <li>❌ Offering sexual services</li>
+          <li>❌ Running a brothel</li>
+          <li>❌ Promoting escort or prostitution services</li>
+          <li>❌ Online sexual solicitation</li>
+          <li>❌ Living off the earnings of prostitution</li>
+          <li>❌ Attempting to engage in transactional sex</li>
+        </ul>
+        
+        <p>Even indirect involvement—such as arranging a meeting or advertising such services—is illegal.</p>
+        
+        <h2 id="penalties">Penalties for Prostitution in Doha</h2>
+        <p>Qatar enforces strict punishments for prostitution-related crimes. Depending on the offense, penalties can include:</p>
+        
+        <h3>For Sellers (Sex Workers):</h3>
+        <ul>
+          <li>Detention</li>
+          <li>Deportation (for foreigners)</li>
+          <li>Fines</li>
+          <li>Imprisonment</li>
+        </ul>
+        
+        <h3>For Buyers (Clients):</h3>
+        <ul>
+          <li>Imprisonment</li>
+          <li>High fines</li>
+          <li>Entry bans</li>
+          <li>Deportation (if foreign)</li>
+        </ul>
+        
+        <h3>For Organizers or Pimps:</h3>
+        <ul>
+          <li>Long prison sentences</li>
+          <li>Very heavy fines</li>
+          <li>Permanent deportation</li>
+          <li>Blacklisting from re-entry</li>
+        </ul>
+        
+        <p>The government takes these offenses seriously to maintain social order and cultural values.</p>
+        
+        <h2 id="escorts">What About Escort Agencies?</h2>
+        <p><strong>Escort agencies—whether online, offline, or disguised as "massage services"—are illegal.</strong></p>
+        
+        <p>Many online platforms claiming to operate as "escort services in Doha" are:</p>
+        <ul>
+          <li>Scams</li>
+          <li>Fake profiles</li>
+          <li>Trap websites</li>
+          <li>Illegal operations</li>
+          <li>Severe legal risks for users</li>
+        </ul>
+        
+        <p>Tourists interacting with these platforms risk:</p>
+        <ul>
+          <li>Arrest</li>
+          <li>Fraud</li>
+          <li>Blackmail</li>
+          <li>Identity theft</li>
+          <li>Police investigations</li>
+        </ul>
+        
+        <h2 id="hotels">Do Hotels Allow Prostitution?</h2>
+        <p>Hotels in Doha are strictly regulated.</p>
+        
+        <p>Qatar has clear guidelines requiring hotels to:</p>
+        <ul>
+          <li>Prevent illegal activities</li>
+          <li>Report suspicious behavior</li>
+          <li>Maintain guest records</li>
+          <li>Enforce security checks</li>
+        </ul>
+        
+        <p>Hotels do not allow prostitution and can face penalties if illegal activity takes place on their premises.</p>
+        
+        <h2 id="nightlife">What About Nightclubs and Bars in Doha?</h2>
+        <p>Nightlife exists in Doha—but it is not a prostitution environment.</p>
+        
+        <p>Licensed hotel bars may have:</p>
+        <ul>
+          <li>Live music</li>
+          <li>DJs</li>
+          <li>Expats</li>
+          <li>Tourists</li>
+        </ul>
+        
+        <p>But sexual solicitation or transactional sexual behavior is criminally punishable.</p>
+        
+        <h2 id="online">Online Prostitution in Qatar</h2>
+        <p>Websites, social media pages, Telegram groups, and apps offering "companionship," "escorts," or similar services operate illegally.</p>
+        
+        <p>Qatar cybercrime law covers:</p>
+        <ul>
+          <li>Online solicitation</li>
+          <li>Arranging sexual services</li>
+          <li>Posting sexual ads</li>
+        </ul>
+        
+        <p>Authorities monitor platforms and have made multiple arrests for such activities.</p>
+        
+        <h2 id="scams">Do Tourists Get Targeted or Tricked?</h2>
+        <p>Some tourists encounter:</p>
+        <ul>
+          <li>"Companion services" scams</li>
+          <li>Fake escort websites</li>
+          <li>WhatsApp messages</li>
+          <li>Social media accounts offering meetups</li>
+        </ul>
+        
+        <p>Many are designed to:</p>
+        <ul>
+          <li>Steal money</li>
+          <li>Blackmail travelers</li>
+          <li>Install malware</li>
+          <li>Collect personal data</li>
+        </ul>
+        
+        <p>Because prostitution is illegal, victims often feel scared to report—but Qatar's police encourage reporting fraud and scams.</p>
+        
+        <h2 id="red-light">Is There a "Red-Light District" in Doha?</h2>
+        <p><strong>No.</strong> Doha has no red-light district, no legal brothels, and no tolerated prostitution zones.</p>
+        
+        <p>All forms of paid sexual activity are prohibited.</p>
+        
+        <h2 id="why">Why Is Prostitution Illegal in Qatar?</h2>
+        <p>There are cultural, religious, and legal reasons behind the prohibition:</p>
+        
+        <h3>1. Islam forbids prostitution</h3>
+        <p>Qatar follows Islamic values that view prostitution as harmful and immoral.</p>
+        
+        <h3>2. Public morality laws</h3>
+        <p>The country strongly protects:</p>
+        <ul>
+          <li>Family values</li>
+          <li>Social harmony</li>
+          <li>Public decency</li>
+        </ul>
+        
+        <h3>3. Safety concerns</h3>
+        <p>Prostitution is linked with:</p>
+        <ul>
+          <li>Human trafficking</li>
+          <li>Exploitation</li>
+          <li>Violence</li>
+          <li>Organized crime</li>
+        </ul>
+        
+        <p>Qatar takes a firm stance on these issues.</p>
+        
+        <h2 id="dating">Is Dating Allowed in Doha?</h2>
+        <p>Dating is allowed privately and respectfully, but public indecency is not.</p>
+        
+        <p><strong>General guidelines:</strong></p>
+        <ul>
+          <li>✔ Couples can meet in malls, restaurants, and public places</li>
+          <li>✔ Holding hands is tolerated</li>
+          <li>✔ Kissing or touching intimately in public is illegal</li>
+          <li>✔ Cohabitation laws have become more relaxed for expats</li>
+        </ul>
+        
+        <p>Dating is acceptable—but paid sexual activity is not.</p>
+        
+        <h2 id="safety">How Qatar Ensures Tourist Safety</h2>
+        <p>Doha is one of the safest cities in the world. Travelers who follow the law rarely face any issues.</p>
+        
+        <p>The government focuses on:</p>
+        <ul>
+          <li>Strict law enforcement</li>
+          <li>Monitoring illegal activities</li>
+          <li>Protecting visitors from scams or exploitation</li>
+        </ul>
+        
+        <p>Tourists who avoid illegal services will have a trouble-free experience.</p>
+        
+        <h2 id="advice">Advice for Tourists Visiting Doha</h2>
+        
+        <h3>1. Avoid any escort websites or online offers</h3>
+        <p>Most are scams or monitored by authorities.</p>
+        
+        <h3>2. Do not respond to unsolicited messages</h3>
+        <p>Common on Instagram or WhatsApp.</p>
+        
+        <h3>3. Do not meet strangers in private rooms</h3>
+        <p>Private meetings can lead to blackmail or police involvement.</p>
+        
+        <h3>4. Respect local laws and culture</h3>
+        <p>Qatar is safe and welcoming as long as laws are followed.</p>
+        
+        <h3>5. If something feels suspicious, walk away</h3>
+        <p>Safety first.</p>
+        
+        <h2 id="approached">If You Are Approached by Someone Offering Services</h2>
+        <p>The best action is to:</p>
+        <ul>
+          <li>Politely decline</li>
+          <li>Leave the area</li>
+          <li>Avoid conversation</li>
+          <li>Do not exchange personal info</li>
+          <li>Do not give money</li>
+        </ul>
+        
+        <p>Most approaches are either illegal or scams.</p>
+        
+        <h2 id="takeaways">Key Takeaways: Is Prostitution Legal in Doha?</h2>
+        <ul>
+          <li>✔ NO — Prostitution is illegal</li>
+          <li>✔ No legal escort services exist</li>
+          <li>✔ Buying, selling, or arranging prostitution leads to severe penalties</li>
+          <li>✔ Hotels and clubs are strictly monitored</li>
+          <li>✔ Online escort offers are usually scams</li>
+          <li>✔ Tourists must avoid illegal services</li>
+          <li>✔ Doha is very safe if you respect local laws</li>
+        </ul>
+        
+        <h2 id="verdict">Final Verdict</h2>
+        <p>Doha is a modern, welcoming, and extremely safe destination. However, prostitution remains strictly illegal, with heavy penalties for those involved. Visitors should avoid any form of paid sexual activity and always respect the laws and cultural values of Qatar.</p>
+        
+        <p>By understanding the rules and staying aware, tourists can enjoy a smooth, comfortable, and memorable stay in one of the Middle East's most impressive cities.</p>
+      `,
+    },
     'alcohol-allowed-doha-qatar-guide': {
       id: '31',
       title: 'Is Drinking Alcohol Allowed in Doha, Qatar? (2025 Full Guide)',
