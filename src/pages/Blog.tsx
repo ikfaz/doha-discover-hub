@@ -17,6 +17,15 @@ const Blog = () => {
   
   const allPosts = [
     {
+      id: '14',
+      title: 'How to Spend the Perfect Layover in Doha, Qatar',
+      excerpt: 'Master the art of the Doha layover with expert tips on timing, transportation, attractions, and making every hour count during your stopover.',
+      imageUrl: 'https://images.unsplash.com/photo-1518182170546-07661fd94144?w=800&auto=format&fit=crop',
+      category: 'Expat-Tips',
+      date: 'April 23, 2025',
+      slug: 'perfect-layover-doha-guide',
+    },
+    {
       id: '13',
       title: '10 Unmissable Things To Do In Doha On A Layover (2025)',
       excerpt: 'Make the most of your Doha layover with these incredible experiences - from museums and souqs to desert safaris and cultural villages.',
