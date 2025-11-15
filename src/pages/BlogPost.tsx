@@ -13,6 +13,111 @@ const BlogPost = () => {
   
   // Blog post data based on slug
   const blogPosts: Record<string, any> = {
+    'fifa-u17-world-cup-qatar-2025': {
+      id: '24',
+      title: 'The Stars of Tomorrow: A Guide to the FIFA U-17 World Cup Qatar 2025™ Matches and Tickets',
+      date: 'May 3, 2025',
+      author: 'Experience Doha Team',
+      readTime: '8 min read',
+      category: 'Events',
+      imageUrl: 'https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=2668&auto=format&fit=crop',
+      content: `
+        <p>Following the monumental success of the FIFA World Cup 2022™, Qatar is set to host another major global football event: the expanded <strong>FIFA U-17 World Cup Qatar 2025™</strong>. This tournament, scheduled to take place from <strong>November 3 to November 27, 2025</strong>, will be the first of five consecutive editions held in Qatar, showcasing the nation's commitment to football development and its world-class infrastructure. For fans, this is a unique opportunity to witness the future stars of the sport in action.</p>
+        
+        <h2 id="tournament-format">The Expanded Tournament Format</h2>
+        <p>The FIFA U-17 World Cup 2025™ marks a significant change in the tournament's history. The number of participating teams has been expanded from 24 to <strong>48 nations</strong>, leading to a total of <strong>104 matches</strong> played over the three-week period. This expansion promises a more diverse and competitive tournament, providing a larger platform for young talent from every corner of the globe.</p>
+        
+        <h3 id="tournament-details">Key Tournament Details</h3>
+        
+        <table class="w-full border-collapse my-6">
+          <thead>
+            <tr class="bg-qatar-maroon text-white">
+              <th class="border border-gray-300 p-3 text-left">Detail</th>
+              <th class="border border-gray-300 p-3 text-left">Specification</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border border-gray-300 p-3"><strong>Host Nation</strong></td>
+              <td class="border border-gray-300 p-3">Qatar</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border border-gray-300 p-3"><strong>Dates</strong></td>
+              <td class="border border-gray-300 p-3">November 3 – November 27, 2025</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 p-3"><strong>Number of Teams</strong></td>
+              <td class="border border-gray-300 p-3">48 (Expanded from 24)</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border border-gray-300 p-3"><strong>Number of Matches</strong></td>
+              <td class="border border-gray-300 p-3">104</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 p-3"><strong>Frequency</strong></td>
+              <td class="border border-gray-300 p-3">First of five consecutive editions in Qatar</td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <p>The tournament will utilize the same state-of-the-art stadiums and training facilities that made the 2022 World Cup a success, ensuring a premium experience for both players and spectators.</p>
+        
+        <h2 id="tickets">Securing Your Tickets: The General Sale</h2>
+        <p>The ticketing process for the FIFA U-17 World Cup Qatar 2025™ is designed to be accessible and affordable, reflecting the tournament's focus on youth and community engagement.</p>
+        
+        <h3 id="ticket-types">Ticket Types and Availability</h3>
+        <p>Tickets for the tournament have been made available to the general public through the official FIFA ticketing portal and local partners. Fans can typically choose from two main types of tickets:</p>
+        <ol>
+          <li><strong>Individual Match Tickets:</strong> Allows entry to a single match, perfect for those who want to see a specific team or game.</li>
+          <li><strong>Day Passes:</strong> A highly convenient option that grants access to all matches played on a specific day in a designated stadium. Given the compact nature of Qatar, this allows fans to potentially watch multiple games in a single day.</li>
+        </ol>
+        
+        <h3 id="purchase">How to Purchase Tickets</h3>
+        <p>The primary channel for purchasing tickets is the official ticketing website, often managed in partnership with local entities like <strong>Road to Qatar</strong> or <strong>Visit Qatar</strong>.</p>
+        <ul>
+          <li><strong>Official Portals:</strong> The most reliable source is the official FIFA U-17 World Cup Qatar 2025™ ticketing portal.</li>
+          <li><strong>Pricing:</strong> In line with the tournament's focus, ticket prices are generally very affordable, making it an excellent option for families and budget-conscious travelers.</li>
+          <li><strong>Key Dates:</strong> Fans should monitor official announcements for key ticketing phases, including the initial general sale, last-minute sales, and any potential resale platforms.</li>
+        </ul>
+        
+        <h2 id="fan-experience">The Fan Experience in Qatar</h2>
+        <p>Qatar's experience hosting major sporting events ensures that the fan experience will be seamless and memorable.</p>
+        
+        <h3 id="accessibility">Stadium Accessibility</h3>
+        <p>One of the greatest advantages of the tournament being held in Qatar is the <strong>compact geography</strong>. All stadiums are located within a short distance of Doha, easily accessible via the state-of-the-art <strong>Doha Metro</strong> system. This means fans can attend multiple matches in a single day without the logistical challenges of long-distance travel.</p>
+        
+        <h3 id="festivities">Fan Festivities and Activities</h3>
+        <p>In addition to the matches, the tournament will be accompanied by special fan festivities and cultural activities.</p>
+        <ul>
+          <li><strong>Fan Zones:</strong> Dedicated fan zones will be set up, offering entertainment, food and beverage options, and a place for supporters of all nations to gather and celebrate.</li>
+          <li><strong>Cultural Immersion:</strong> The tournament provides a perfect opportunity for fans to explore Qatar's rich culture. The compact schedule allows for easy integration of sightseeing, such as visiting <strong>Souq Waqif</strong>, the <strong>Museum of Islamic Art</strong>, or taking a <strong>desert safari</strong>, between match days.</li>
+        </ul>
+        
+        <h2 id="why-attend">Why Attend the U-17 World Cup?</h2>
+        <p>Attending the FIFA U-17 World Cup is a unique experience for several reasons:</p>
+        <ol>
+          <li><strong>Witnessing Future Legends:</strong> This tournament is historically a proving ground for future football superstars. Many of the world's greatest players, including the likes of Neymar, Ronaldinho, and Toni Kroos, made their first major international appearances at the U-17 level.</li>
+          <li><strong>Affordable World Cup Experience:</strong> It offers the excitement and atmosphere of a World Cup at a fraction of the cost and complexity of the senior tournament.</li>
+          <li><strong>Family-Friendly Event:</strong> The focus on youth makes it an ideal, safe, and exciting event for families with children.</li>
+        </ol>
+        
+        <h2 id="conclusion">A Celebration of Youth Football</h2>
+        <p>The FIFA U-17 World Cup Qatar 2025™ is more than just a football tournament; it is a celebration of global youth and the beautiful game. With an expanded format and Qatar's proven ability to host world-class events, it promises to be a thrilling and accessible spectacle for football fans from around the world. Securing your tickets early is the first step to witnessing the next generation of footballing greatness.</p>
+      `,
+      tableOfContents: [
+        { title: 'The Expanded Tournament Format', id: 'tournament-format' },
+        { title: 'Key Tournament Details', id: 'tournament-details' },
+        { title: 'Securing Your Tickets', id: 'tickets' },
+        { title: 'Ticket Types and Availability', id: 'ticket-types' },
+        { title: 'How to Purchase Tickets', id: 'purchase' },
+        { title: 'The Fan Experience in Qatar', id: 'fan-experience' },
+        { title: 'Stadium Accessibility', id: 'accessibility' },
+        { title: 'Fan Festivities and Activities', id: 'festivities' },
+        { title: 'Why Attend the U-17 World Cup?', id: 'why-attend' },
+        { title: 'A Celebration of Youth Football', id: 'conclusion' }
+      ],
+      tags: ['FIFA U-17', 'World Cup', 'Football', 'Sports Events', 'Tickets']
+    },
     'corniche-sunset-dhow-cruise-guide': {
       id: '23',
       title: 'The Golden Hour in Doha: Corniche Sunset Walks and the Magic of the Dhow Cruise',

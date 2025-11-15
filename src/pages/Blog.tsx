@@ -17,6 +17,15 @@ const Blog = () => {
   
   const allPosts = [
     {
+      id: '24',
+      title: 'The Stars of Tomorrow: FIFA U-17 World Cup Qatar 2025™ Guide',
+      excerpt: 'Complete guide to attending the FIFA U-17 World Cup in Qatar - matches, tickets, fan zones, and witnessing future football legends in action.',
+      imageUrl: 'https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=800&auto=format&fit=crop',
+      category: 'Events',
+      date: 'May 3, 2025',
+      slug: 'fifa-u17-world-cup-qatar-2025',
+    },
+    {
       id: '23',
       title: 'The Golden Hour in Doha: Corniche Sunset Walks and Dhow Cruises',
       excerpt: 'Experience the magic of Doha\'s waterfront at sunset - from peaceful Corniche walks with skyline views to romantic dhow cruise adventures.',
