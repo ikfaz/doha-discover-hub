@@ -13,6 +13,61 @@ const BlogPost = () => {
   
   // Blog post data based on slug
   const blogPosts: Record<string, any> = {
+    'hamad-airport-transfers-guide': {
+      id: '12',
+      title: 'Transfers at Hamad International Airport: Complete Guide',
+      date: 'April 21, 2025',
+      author: 'Experience Doha Team',
+      readTime: '10 min read',
+      category: 'Expat-Tips',
+      imageUrl: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=2668&auto=format&fit=crop',
+      content: `
+        <p>Hamad International Airport, consistently ranked among the world's finest aviation hubs, has engineered its transfer process to be as seamless as possible. For the millions of passengers connecting through Doha annually, understanding this process eliminates anxiety and maximizes the efficiency of what is already a remarkably well-organized system.</p>
+        
+        <h2 id="arrival-process">The Transfer Journey Begins</h2>
+        <p>The transfer journey begins before you even land. As your aircraft approaches Doha, cabin crew distribute transit cards to passengers continuing onward. These cards, when completed, expedite the security screening process that awaits all transfer passengers. Keep this card accessible along with your boarding pass for your onward flight, as you'll need both documents multiple times during the transfer process.</p>
+        
+        <h2 id="navigation">Following the Transfer Signage</h2>
+        <p>Upon disembarking, follow the prominent "Transfer" signage that appears immediately in the jet bridge area. The airport's design channels connecting passengers away from the arrivals hall toward dedicated transfer security checkpoints. These checkpoints are strategically positioned to process the high volume of transit traffic efficiently, with multiple screening lanes and advanced imaging technology that speeds throughput without compromising security standards.</p>
+        
+        <h2 id="security">Security Screening Process</h2>
+        <p>The security screening process mirrors international standards but moves with notable efficiency. Laptops and large electronics need to be removed from bags, liquids must comply with the standard 100ml restriction in clear bags, and outerwear should be removed. The staff are professional and numerous, ensuring queues rarely become excessive except during peak connection times. Once through security, you're officially in the international departures area with access to all terminal facilities.</p>
+        
+        <h2 id="connection-times">Minimum Connection Times</h2>
+        <p>Minimum connection times at Hamad International Airport are set at 60 minutes for standard transfers, though this can vary based on specific routing. The airport's single-terminal design means there's no need to navigate between separate buildings or catch transfer buses—everything exists under one expansive roof. However, the terminal's sheer size means walking distances can be significant, sometimes exceeding fifteen minutes between distant gates. The airport provides complimentary electric carts for passengers with mobility concerns or particularly tight connections.</p>
+        
+        <h2 id="gate-information">Gate Information and Monitoring</h2>
+        <p>Gate information for onward flights displays on monitors throughout the terminal, updated in real-time. The airport recommends passengers check their gate assignment multiple times, as changes can occur, particularly for flights departing several hours after arrival. The gate area features not just seating but local dining options, duty-free shopping, and quiet zones for rest, meaning early arrival at your gate doesn't confine you to uncomfortable waiting.</p>
+        
+        <h2 id="layover-amenities">Long Layover Amenities</h2>
+        <p>For passengers with longer layovers, Hamad International Airport transforms from a transit point into a destination itself. The Orchard, a massive indoor garden with tropical plants and natural lighting, provides a serene environment for relaxation. Quiet rooms equipped with reclining seats offer spaces for genuine rest. Children have dedicated play areas with age-appropriate equipment and supervised activities. Business travelers find workstations with charging facilities and complimentary WiFi throughout the terminal.</p>
+        
+        <h2 id="shopping">Shopping and Dining Options</h2>
+        <p>The shopping options cater to diverse interests and budgets. Luxury brands occupy prominent positions, but there are also shops selling local Qatari products, international books, electronics, and travel essentials. Prices at duty-free outlets are competitive with other major hubs, though savvy travelers compare specific items before purchasing. Food options range from quick service to sit-down restaurants, including both international chains and local cuisine, with halal options widely available throughout.</p>
+        
+        <h2 id="special-assistance">Special Assistance Services</h2>
+        <p>Special assistance is readily available for passengers requiring additional support. Dedicated staff assist elderly passengers, those with disabilities, families traveling with young children, and unaccompanied minors. These services should be arranged through your airline at the time of booking, though the airport can accommodate reasonable requests even without advance notice. The staff's multilingual capabilities—particularly in English and Arabic—ensure clear communication.</p>
+        
+        <h2 id="airport-experience">The Airport Experience</h2>
+        <p>One distinctive feature is the absence of the typical airport stress. The architectural design, with its flowing curves and abundant natural light, creates a calming atmosphere. The climate control maintains comfortable temperatures year-round, essential given Doha's external heat. Art installations punctuate the terminal, with "Lamp Bear" by Urs Fischer being perhaps the most photographed, a massive yellow teddy bear beneath an actual lamp that has become the airport's informal mascot.</p>
+        
+        <h2 id="lounge-access">Premium Lounge Access</h2>
+        <p>For passengers whose transfer extends beyond six hours, the airport offers paid lounge access regardless of travel class or airline status. These lounges provide shower facilities, hot meals, beverages, and quiet sleeping areas. The investment of $50-100 for lounge access often proves worthwhile for extended layovers, particularly on red-eye connections where rest becomes paramount.</p>
+      `,
+      tableOfContents: [
+        { title: 'The Transfer Journey Begins', id: 'arrival-process' },
+        { title: 'Following the Transfer Signage', id: 'navigation' },
+        { title: 'Security Screening Process', id: 'security' },
+        { title: 'Minimum Connection Times', id: 'connection-times' },
+        { title: 'Gate Information and Monitoring', id: 'gate-information' },
+        { title: 'Long Layover Amenities', id: 'layover-amenities' },
+        { title: 'Shopping and Dining Options', id: 'shopping' },
+        { title: 'Special Assistance Services', id: 'special-assistance' },
+        { title: 'The Airport Experience', id: 'airport-experience' },
+        { title: 'Premium Lounge Access', id: 'lounge-access' }
+      ],
+      tags: ['Airport Guide', 'Travel Tips', 'Hamad Airport', 'Transit', 'Doha']
+    },
     'qatar-stopover-program-guide': {
       id: '11',
       title: 'Complete Doha Layover Guide: Qatar Stopover Program Explained',
