@@ -12,6 +12,7 @@ import { TherapyCostCalculator } from '@/components/TherapyCostCalculator';
 import { BankComparison } from '@/components/BankComparison';
 import { MobilePlanComparison } from '@/components/MobilePlanComparison';
 import { RoamingCostComparison } from '@/components/RoamingCostComparison';
+import { GroceryPriceComparison } from '@/components/GroceryPriceComparison';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Calendar, Clock, Facebook, Twitter, Share2 } from 'lucide-react';
@@ -56,12 +57,308 @@ import drivingDohaImage from '@/assets/driving-doha-2025-guide.jpg';
 import lgbtqQatarImage from '@/assets/lgbtq-experiences-qatar-guide.jpg';
 import bankAccountQatarImage from '@/assets/bank-account-qatar-guide.jpg';
 import mobilePlansQatarImage from '@/assets/mobile-plans-qatar-guide.jpg';
+import groceryShoppingDohaImage from '@/assets/grocery-shopping-doha-guide.jpg';
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   
   // Blog post data based on slug
   const blogPosts: Record<string, any> = {
+    'grocery-shopping-doha-guide': {
+      id: '47',
+      title: 'Grocery Shopping Hacks in Doha 2025: Carrefour vs Lulu Complete Guide',
+      date: 'May 27, 2025',
+      author: 'Experience Doha Team',
+      readTime: '18 min read',
+      category: 'Expat-Tips',
+      imageUrl: groceryShoppingDohaImage,
+      tags: ['grocery shopping', 'Carrefour', 'Lulu Hypermarket', 'money saving', 'expat life'],
+      content: `
+        <p class="lead">Grocery expenses represent significant monthly costs for Doha residents, with families spending QAR 2,500-4,500 monthly on food. Understanding the major players—particularly Carrefour and Lulu Hypermarket—and implementing strategic shopping habits can reduce these expenses by 20-30% while maintaining quality.</p>
+        
+        <h2 id="carrefour">Carrefour Qatar: The French Giant</h2>
+        
+        <h3>Store Presence</h3>
+        <p>Carrefour operates multiple formats across Qatar:</p>
+        <ul>
+          <li><strong>Carrefour Hypermarkets</strong> - Large format (City Center, Mall of Qatar, Doha Festival City)</li>
+          <li><strong>Carrefour Markets</strong> - Medium stores in neighborhoods</li>
+          <li><strong>Carrefour Express</strong> - Convenience format</li>
+        </ul>
+
+        <h3>Carrefour Strengths</h3>
+        <ul>
+          <li><strong>Product Range</strong> - Extensive international imports</li>
+          <li><strong>Quality Standards</strong> - European products readily available</li>
+          <li><strong>Store Experience</strong> - Modern, organized layouts</li>
+          <li><strong>Non-Food Items</strong> - Electronics, clothing, household goods</li>
+          <li><strong>Private Label</strong> - Carrefour brand offers value</li>
+          <li><strong>Organic Section</strong> - Growing healthy options</li>
+          <li><strong>Loyalty Program</strong> - MyClub card benefits</li>
+        </ul>
+
+        <h3>Carrefour Weaknesses</h3>
+        <ul>
+          <li><strong>Higher Prices</strong> - Generally 10-15% more expensive</li>
+          <li><strong>Limited Locations</strong> - Concentrated in major malls</li>
+          <li><strong>Parking Challenges</strong> - Mall parking can be crowded</li>
+          <li><strong>Weekend Crowds</strong> - Extremely busy Fridays/Saturdays</li>
+          <li><strong>South Asian Products</strong> - Less variety than Lulu</li>
+        </ul>
+
+        <p><strong>Average Basket Cost (Family Weekly):</strong> QAR 800-1,200</p>
+
+        <h2 id="lulu">Lulu Hypermarket: The Value Champion</h2>
+        
+        <h3>Store Presence</h3>
+        <p>Lulu has expanded aggressively in Qatar with locations including Al Messila, Al Gharafa, D-Ring Road, Barwa Village, and multiple other locations throughout Doha.</p>
+
+        <h3>Lulu Strengths</h3>
+        <ul>
+          <li><strong>Competitive Pricing</strong> - Consistently lower prices</li>
+          <li><strong>Fresh Produce</strong> - Excellent quality, daily freshness</li>
+          <li><strong>Asian/Indian Products</strong> - Unmatched selection</li>
+          <li><strong>Bulk Options</strong> - Family-size savings</li>
+          <li><strong>Bakery/Deli</strong> - Fresh, high-quality offerings</li>
+          <li><strong>Butchery</strong> - Custom cuts available</li>
+          <li><strong>Weekend Deals</strong> - Thursday-Saturday specials</li>
+        </ul>
+
+        <h3>Lulu Weaknesses</h3>
+        <ul>
+          <li><strong>Store Layout</strong> - Can be overwhelming, less organized</li>
+          <li><strong>European Products</strong> - Limited selection compared to Carrefour</li>
+          <li><strong>Crowds</strong> - Extremely busy, especially evenings</li>
+          <li><strong>Parking</strong> - Standalone stores have better parking</li>
+          <li><strong>Premium Brands</strong> - Less variety in specialty items</li>
+        </ul>
+
+        <p><strong>Average Basket Cost (Family Weekly):</strong> QAR 600-900</p>
+        <p><strong>Overall:</strong> Lulu saves approximately 15-20% on comparable baskets, primarily on fresh produce and staples.</p>
+
+        <h2 id="others">Other Supermarkets Worth Knowing</h2>
+        
+        <h3>Al Meera (Local Chain)</h3>
+        <ul>
+          <li>Qatari-owned cooperative</li>
+          <li>Neighborhood locations convenient</li>
+          <li>Competitive on basics</li>
+          <li>Support local economy</li>
+        </ul>
+
+        <h3>Monoprix (French)</h3>
+        <ul>
+          <li>Premium imported goods</li>
+          <li>Higher price point</li>
+          <li>Gourmet selections</li>
+          <li>Quality over value</li>
+        </ul>
+
+        <h3>Géant (French)</h3>
+        <ul>
+          <li>Similar to Carrefour</li>
+          <li>Good promotions</li>
+          <li>Hyatt Plaza location popular</li>
+        </ul>
+
+        <h3>Family Food Centre</h3>
+        <ul>
+          <li>Budget option</li>
+          <li>Basic selections</li>
+          <li>South Asian community focused</li>
+          <li>Lowest prices possible</li>
+        </ul>
+
+        <h2 id="hacks">Grocery Shopping Hacks That Actually Work</h2>
+
+        <h3>Hack #1: Strategic Store Selection</h3>
+        <p>Use different stores for different needs:</p>
+        <ul>
+          <li><strong>Lulu</strong> - Fresh produce, bulk staples, Asian ingredients</li>
+          <li><strong>Carrefour</strong> - European imports, specialty items, non-food</li>
+          <li><strong>Al Meera</strong> - Quick neighborhood runs, emergency purchases</li>
+          <li><strong>Souq Markets</strong> - Freshest produce, best vegetable prices</li>
+        </ul>
+
+        <h3>Hack #2: Timing Your Shops</h3>
+        <p><strong>Best Times:</strong></p>
+        <ul>
+          <li>Weekday mornings (9-11 AM): Quietest, freshest stock</li>
+          <li>Tuesday/Wednesday: Post-weekend restocking complete</li>
+          <li>Early evening (5-6 PM): Pre-dinner, manageable crowds</li>
+        </ul>
+        <p><strong>Avoid:</strong></p>
+        <ul>
+          <li>Friday afternoons: Maximum crowds</li>
+          <li>Thursday evenings: Weekend rush begins</li>
+          <li>Month-end: Expat payday creates congestion</li>
+        </ul>
+
+        <h3>Hack #3: Loyalty Programs</h3>
+        <p><strong>Carrefour MyClub:</strong></p>
+        <ul>
+          <li>Points on purchases</li>
+          <li>Member-exclusive discounts</li>
+          <li>Birthday rewards</li>
+          <li>Free to join</li>
+        </ul>
+        <p><strong>Lulu Happiness Card:</strong></p>
+        <ul>
+          <li>Instant discounts</li>
+          <li>Point accumulation</li>
+          <li>Special offers</li>
+          <li>Free registration</li>
+        </ul>
+        <p><strong>Annual Savings:</strong> QAR 500-1,500 through loyalty programs</p>
+
+        <h3>Hack #4: Promotional Calendars</h3>
+        <p><strong>Weekly Patterns:</strong></p>
+        <ul>
+          <li>Tuesday: Fresh produce promotions</li>
+          <li>Thursday-Saturday: Weekend specials (Lulu especially)</li>
+          <li>Month Start: New monthly deals launch</li>
+          <li>Ramadan: Special pricing throughout</li>
+        </ul>
+        <p><strong>Annual Events:</strong></p>
+        <ul>
+          <li>Qatar National Day (December): Major sales</li>
+          <li>Eid periods: Promotional pricing</li>
+          <li>Back-to-school: Household deals</li>
+        </ul>
+
+        <h3>Hack #5: Online Shopping Advantages</h3>
+        <p><strong>Carrefour Online:</strong></p>
+        <ul>
+          <li>Same prices as store</li>
+          <li>Delivery: QAR 15-30</li>
+          <li>Time-saving significant</li>
+          <li>Impulse purchases reduced</li>
+          <li>Special online offers</li>
+        </ul>
+        <p><strong>Lulu Online:</strong></p>
+        <ul>
+          <li>Competitive pricing maintained</li>
+          <li>Delivery service reliable</li>
+          <li>Order tracking available</li>
+          <li>Fresher items sometimes</li>
+        </ul>
+        <p><strong>Talabat Mart/Quick Commerce:</strong></p>
+        <ul>
+          <li>Convenience pricing (higher)</li>
+          <li>30-minute delivery</li>
+          <li>Good for emergencies</li>
+          <li>Premium for speed</li>
+        </ul>
+        <p><strong>Online Shopping Tip:</strong> Reduced impulse buying often saves 15-25% on overall spending despite delivery fees.</p>
+
+        <h3>Hack #6: Bulk Buying Strategy</h3>
+        <p><strong>Worth Buying Bulk:</strong></p>
+        <ul>
+          <li>Rice, flour, lentils</li>
+          <li>Cooking oils</li>
+          <li>Cleaning products</li>
+          <li>Toilet paper, tissues</li>
+          <li>Canned goods</li>
+          <li>Frozen items (if storage available)</li>
+        </ul>
+        <p><strong>Not Worth Bulk:</strong></p>
+        <ul>
+          <li>Fresh produce (spoilage)</li>
+          <li>Dairy (expiration)</li>
+          <li>Specialty items (taste fatigue)</li>
+        </ul>
+
+        <h3>Hack #7: Private Label Products</h3>
+        <p>Carrefour and Lulu both offer store brands:</p>
+        <ul>
+          <li>30-50% cheaper than name brands</li>
+          <li>Quality often comparable</li>
+          <li>Especially good for: Cleaning supplies, basic pantry items, canned goods, frozen vegetables</li>
+        </ul>
+
+        <h3>Hack #8: Produce Market Shopping</h3>
+        <p>Souq Waqif and Local Markets:</p>
+        <ul>
+          <li>Freshest vegetables</li>
+          <li>Negotiable prices</li>
+          <li>30-40% cheaper than supermarkets</li>
+          <li>Cultural experience bonus</li>
+          <li>Cash preferred</li>
+        </ul>
+        <p><strong>Weekly Market Savings:</strong> QAR 100-200 on produce alone</p>
+
+        <h3>Hack #9: International Product Alternatives</h3>
+        <p>Instead of expensive imported products:</p>
+        <ul>
+          <li>Local dairy vs. European brands (40% savings)</li>
+          <li>Regional fruits vs. imported (significant savings)</li>
+          <li>Turkish/Lebanese products vs. Western European</li>
+          <li>Local chicken vs. imported (20% savings)</li>
+        </ul>
+
+        <h3>Hack #10: Meal Planning</h3>
+        <p>Plan weekly meals before shopping:</p>
+        <ul>
+          <li>Reduces waste by 25-30%</li>
+          <li>Prevents multiple store trips</li>
+          <li>Curbs impulse purchases</li>
+          <li>Uses sales effectively</li>
+          <li>Batch cooking opportunities</li>
+        </ul>
+
+        <h2 id="delivery">Delivery Services Comparison</h2>
+        
+        <h3>Carrefour Delivery</h3>
+        <ul>
+          <li>Minimum order: QAR 100</li>
+          <li>Delivery fee: QAR 15-30</li>
+          <li>Same-day available</li>
+          <li>Website and app ordering</li>
+        </ul>
+
+        <h3>Lulu Delivery</h3>
+        <ul>
+          <li>Minimum order: QAR 100</li>
+          <li>Delivery fee: QAR 20-35</li>
+          <li>Next-day typical</li>
+          <li>Online ordering improving</li>
+        </ul>
+
+        <h3>Third-Party Options</h3>
+        <ul>
+          <li><strong>Talabat</strong> - Multiple stores, quick delivery</li>
+          <li><strong>Snoonu</strong> - Local app, various partners</li>
+          <li><strong>Rafeeq</strong> - Grocery focus</li>
+        </ul>
+
+        <h2 id="strategy">Family Monthly Shopping Strategy</h2>
+        <ul>
+          <li><strong>Week 1:</strong> Major shop at Lulu (bulk items, monthly staples) - QAR 1,200</li>
+          <li><strong>Week 2:</strong> Fresh produce market + Al Meera (top-up) - QAR 400</li>
+          <li><strong>Week 3:</strong> Carrefour (specialty items, non-food needs) - QAR 500</li>
+          <li><strong>Week 4:</strong> Lulu fresh + market (fresh items only) - QAR 400</li>
+        </ul>
+        <p><strong>Monthly Total:</strong> QAR 2,500 (vs. QAR 3,500+ without strategy)</p>
+        <p><strong>Annual Savings:</strong> QAR 12,000+</p>
+
+        <h2 id="faq">FAQ: Grocery Shopping Doha</h2>
+        
+        <h3>Which supermarket has best meat quality?</h3>
+        <p>Lulu's butchery section receives high praise for freshness and custom cuts. Carrefour offers good quality imported meats.</p>
+
+        <h3>Can I find Western products in Doha?</h3>
+        <p>Yes. Carrefour and Monoprix stock extensive European/American products. Expect premium pricing for imports.</p>
+
+        <h3>Is organic food available?</h3>
+        <p>Growing availability at Carrefour, specialty stores (Organic Foods & Cafe), and some items at Lulu. Prices significantly higher than conventional.</p>
+
+        <h3>Best place for Indian/Asian groceries?</h3>
+        <p>Lulu unmatched for South Asian products. Family Food Centre also excellent for specific Indian ingredients at lower prices.</p>
+
+        <h3>Do supermarkets deliver everywhere in Doha?</h3>
+        <p>Major chains deliver to most residential areas. Some remote locations may have limitations or higher fees.</p>
+      `,
+    },
     'mobile-plans-qatar-guide': {
       id: '46',
       title: 'Best Mobile and Data Plans in Qatar 2025: Ooredoo vs Vodafone Complete Guide',
@@ -6073,6 +6370,19 @@ const BlogPost = () => {
                   
                   {/* Rest of content */}
                   <div dangerouslySetInnerHTML={{ __html: '<h2 id="5g">' + post.content.split('<h2 id="5g">')[1] }} />
+                </div>
+              ) : slug === 'grocery-shopping-doha-guide' ? (
+                <div className="prose prose-lg max-w-none space-y-8">
+                  {/* First section through Lulu */}
+                  <div dangerouslySetInnerHTML={{ __html: post.content.split('<h2 id="others">')[0] }} />
+                  
+                  {/* Grocery Price Comparison Tool */}
+                  <div className="not-prose my-12">
+                    <GroceryPriceComparison />
+                  </div>
+                  
+                  {/* Rest of content */}
+                  <div dangerouslySetInnerHTML={{ __html: '<h2 id="others">' + post.content.split('<h2 id="others">')[1] }} />
                 </div>
               ) : (
                 <div 
