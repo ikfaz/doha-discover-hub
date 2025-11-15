@@ -26,9 +26,20 @@ import internationalSchoolsImage from '@/assets/international-schools-qatar-guid
 import qatarVisaRulesImage from '@/assets/qatar-visa-rules-2025.jpg';
 import westBayAlWaabImage from '@/assets/west-bay-al-waab-comparison.jpg';
 import drivingDohaImage from '@/assets/driving-doha-2025-guide.jpg';
+import lgbtqQatarImage from '@/assets/lgbtq-experiences-qatar-guide.jpg';
 
 const Index = () => {
   const featuredBlogs = [
+    {
+      id: '44',
+      title: 'LGBTQ+ Experiences in Qatar: What Expats Need to Know 2025',
+      excerpt: 'Honest guide to LGBTQ+ experiences in Qatar. Understand legal realities, safety considerations, expat community experiences, and practical advice for living in Doha.',
+      imageUrl: lgbtqQatarImage,
+      category: 'Expat-Tips',
+      date: 'May 24, 2025',
+      slug: 'lgbtq-experiences-qatar-2025',
+      tags: ['LGBTQ Qatar', 'expat life', 'safety guide', 'legal information', 'diversity'],
+    },
     {
       id: '43',
       title: 'Driving in Doha 2025: Traffic Updates, Rules, and Survival Guide',
