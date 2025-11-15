@@ -48,12 +48,348 @@ import internationalSchoolsImage from '@/assets/international-schools-qatar-guid
 import qatarVisaRulesImage from '@/assets/qatar-visa-rules-2025.jpg';
 import westBayAlWaabImage from '@/assets/west-bay-al-waab-comparison.jpg';
 import drivingDohaImage from '@/assets/driving-doha-2025-guide.jpg';
+import lgbtqQatarImage from '@/assets/lgbtq-experiences-qatar-guide.jpg';
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   
   // Blog post data based on slug
   const blogPosts: Record<string, any> = {
+    'lgbtq-experiences-qatar-2025': {
+      id: '44',
+      title: 'LGBTQ+ Experiences in Qatar: What Expats Need to Know 2025',
+      date: 'May 24, 2025',
+      author: 'Experience Doha Team',
+      readTime: '14 min read',
+      category: 'Expat-Tips',
+      imageUrl: lgbtqQatarImage,
+      tags: ['LGBTQ Qatar', 'expat life', 'safety guide', 'legal information', 'diversity'],
+      content: `
+        <p class="lead">Qatar presents complex realities for LGBTQ+ individuals considering relocation or travel. The country's legal framework, rooted in Islamic Sharia law, criminalizes homosexual acts, yet enforcement and daily experiences vary considerably from legal severity.</p>
+        
+        <p>This guide provides honest, practical information to help individuals make informed decisions.</p>
+        
+        <div class="bg-amber-50 dark:bg-amber-950/20 border-l-4 border-amber-500 p-4 my-6">
+          <p class="font-semibold text-amber-800 dark:text-amber-300">Important Disclaimer</p>
+          <p class="text-sm text-amber-700 dark:text-amber-400">This article provides factual information about current conditions. Individual circumstances vary, and consulting legal professionals for personal situations is strongly recommended.</p>
+        </div>
+        
+        <h2 id="legal">Legal Framework: What the Law Says</h2>
+        
+        <h3>Official Legal Status</h3>
+        <ul>
+          <li>Homosexual acts criminalized under Qatari Penal Code</li>
+          <li>Punishments can include imprisonment (up to 7 years) and fines</li>
+          <li>Sharia law technically permits more severe penalties</li>
+          <li>Same-sex relationships not legally recognized</li>
+          <li>No legal protections for LGBTQ+ individuals</li>
+        </ul>
+        
+        <h3>Enforcement Reality</h3>
+        <p>Despite severe legal provisions, enforcement patterns reveal:</p>
+        <ul>
+          <li>Criminal prosecutions of expats rare</li>
+          <li>Deportation more common than imprisonment for foreigners</li>
+          <li>Private behavior generally not policed</li>
+          <li>Public displays of affection (any couple) restricted</li>
+          <li>Authorities don't actively "search" for violations</li>
+        </ul>
+        
+        <p><strong>However:</strong></p>
+        <ul>
+          <li>Legal protections do not exist</li>
+          <li>Reporting by others can trigger investigation</li>
+          <li>Employer complaints can result in consequences</li>
+          <li>Police encounters can escalate situations</li>
+          <li>Zero legal recourse against discrimination</li>
+        </ul>
+        
+        <h2 id="daily-life">Practical Considerations for LGBTQ+ Expats</h2>
+        
+        <h3>Daily Life Realities</h3>
+        <p>Many LGBTQ+ expats successfully live in Qatar by:</p>
+        <ul>
+          <li>Maintaining privacy about personal life</li>
+          <li>Avoiding public displays of affection</li>
+          <li>Being selective about disclosure</li>
+          <li>Building trusted social circles</li>
+          <li>Separating professional and personal spheres</li>
+        </ul>
+        
+        <h3>Social Environments</h3>
+        <p>Qatar's conservative culture means:</p>
+        <ul>
+          <li>No LGBTQ+ venues, bars, or spaces exist</li>
+          <li>Pride events prohibited</li>
+          <li>Dating apps technically work but carry risks</li>
+          <li>Online activity potentially monitored</li>
+          <li>Community largely underground and private</li>
+        </ul>
+        
+        <h3>Workplace Experiences</h3>
+        <ul>
+          <li>Colleagues generally don't inquire about personal life</li>
+          <li>"Don't ask, don't tell" atmosphere common</li>
+          <li>Professional environments focus on work</li>
+          <li>Housing as "single" expected for unmarried</li>
+          <li>Partner cannot be openly acknowledged at work functions</li>
+        </ul>
+        
+        <h2 id="housing">Housing and Partner Considerations</h2>
+        
+        <h3>Cohabitation</h3>
+        <ul>
+          <li>Unmarried couples cohabitating technically illegal</li>
+          <li>Applies to heterosexual and same-sex couples</li>
+          <li>Enforcement varies but risk exists</li>
+          <li>Some landlords rent to "roommates" knowingly</li>
+          <li>Compound living offers more privacy</li>
+        </ul>
+        
+        <h3>Visa Status</h3>
+        <ul>
+          <li>Partners cannot be sponsored as dependents</li>
+          <li>Each person needs independent employment visa</li>
+          <li>Visit visas for partners limited (30-90 days)</li>
+          <li>No family visa options for same-sex couples</li>
+          <li>Long-term partner cohabitation legally complicated</li>
+        </ul>
+        
+        <h3>Practical Solutions Used</h3>
+        <ul>
+          <li>Both partners secure employment</li>
+          <li>Rent as "flatmates" sharing accommodation</li>
+          <li>Maintain separate official addresses</li>
+          <li>Private life kept strictly private</li>
+          <li>Leave country for visits together</li>
+        </ul>
+        
+        <h2 id="healthcare">Healthcare Considerations</h2>
+        
+        <h3>Medical Care</h3>
+        <ul>
+          <li>Healthcare system professional and confidential</li>
+          <li>Doctors bound by medical ethics</li>
+          <li>HIV testing required for residence visa (privacy concerns exist)</li>
+          <li>Mental health services limited in LGBTQ+ competency</li>
+          <li>Some expats seek healthcare outside Qatar</li>
+        </ul>
+        
+        <h3>Important Notes</h3>
+        <ul>
+          <li>Emergency care available without discrimination</li>
+          <li>Routine care generally professional</li>
+          <li>Discussing orientation with doctors requires caution</li>
+          <li>Foreign hospital options used by some</li>
+          <li>Travel for certain treatments common</li>
+        </ul>
+        
+        <h2 id="mental-health">Mental Health and Support</h2>
+        
+        <h3>Challenges</h3>
+        <p>Living closeted in conservative environment creates stresses:</p>
+        <ul>
+          <li>Isolation from authentic self-expression</li>
+          <li>Limited support systems</li>
+          <li>Constant vigilance exhausting</li>
+          <li>Community connection difficult</li>
+          <li>Mental health impact significant</li>
+        </ul>
+        
+        <h3>Support Options</h3>
+        <p>Limited but exist:</p>
+        <ul>
+          <li>Online communities (using VPN recommended)</li>
+          <li>International support organizations</li>
+          <li>Private therapy (select carefully)</li>
+          <li>Trusted friend networks</li>
+          <li>Regular trips to accepting countries</li>
+        </ul>
+        
+        <h3>Self-Care Strategies</h3>
+        <p>Expats report:</p>
+        <ul>
+          <li>Regular travel to gay-friendly destinations</li>
+          <li>Virtual community connections</li>
+          <li>Focusing on professional growth</li>
+          <li>Building meaningful friendships (regardless of orientation discussion)</li>
+          <li>Setting time limits on Qatar stay</li>
+        </ul>
+        
+        <h2 id="community">Social Life and Community</h2>
+        
+        <h3>Finding Community</h3>
+        <ul>
+          <li>Occurs through trusted networks</li>
+          <li>Gym and fitness communities</li>
+          <li>Professional networking</li>
+          <li>Private home gatherings</li>
+          <li>Expat social groups (general)</li>
+        </ul>
+        
+        <h3>Safety Considerations</h3>
+        <ul>
+          <li>Dating apps carry risks (entrapment possible)</li>
+          <li>Discretion absolutely essential</li>
+          <li>Meeting new people requires caution</li>
+          <li>Privacy protection paramount</li>
+          <li>Trust built slowly</li>
+        </ul>
+        
+        <h3>Social Outlets</h3>
+        <p>Without dedicated spaces, LGBTQ+ expats utilize:</p>
+        <ul>
+          <li>International hotel venues</li>
+          <li>Private parties</li>
+          <li>Travel for social freedom</li>
+          <li>Virtual platforms</li>
+          <li>Fitness and hobby groups</li>
+        </ul>
+        
+        <h2 id="decision">Making the Decision: Should You Move to Qatar?</h2>
+        
+        <h3>Consider Qatar if:</h3>
+        <ul>
+          <li>☑ Financial benefits significantly valuable</li>
+          <li>☑ Professional growth opportunity exceptional</li>
+          <li>☑ Comfortable maintaining privacy</li>
+          <li>☑ Short to medium term assignment</li>
+          <li>☑ Resilient and adaptable personality</li>
+          <li>☑ Strong support systems elsewhere</li>
+        </ul>
+        
+        <h3>Reconsider if:</h3>
+        <ul>
+          <li>☒ Open identity expression essential to wellbeing</li>
+          <li>☒ Partner unable to secure independent visa</li>
+          <li>☒ Mental health concerns about closeted living</li>
+          <li>☒ Long-term relationship recognition needed</li>
+          <li>☒ Activism or community involvement important</li>
+          <li>☒ Low tolerance for restrictive environments</li>
+        </ul>
+        
+        <h3>Questions to Ask Yourself</h3>
+        <ul>
+          <li>How important is being "out" in daily life?</li>
+          <li>Can I separate professional and personal spheres?</li>
+          <li>Does my partner have independent visa pathway?</li>
+          <li>What's my timeline—temporary or indefinite?</li>
+          <li>How will restrictions affect my mental health?</li>
+          <li>Do financial benefits outweigh personal costs?</li>
+        </ul>
+        
+        <h2 id="safety">Safety Recommendations</h2>
+        
+        <h3>Essential Practices</h3>
+        
+        <p><strong>Maintain Privacy:</strong></p>
+        <ul>
+          <li>Personal life stays personal</li>
+          <li>Social media discretion</li>
+          <li>Online activity awareness</li>
+          <li>Conversation topics chosen carefully</li>
+        </ul>
+        
+        <p><strong>Know Legal Rights:</strong></p>
+        <ul>
+          <li>Embassy contact information ready</li>
+          <li>Legal resources identified</li>
+          <li>Know exit procedures</li>
+          <li>Documentation secured</li>
+        </ul>
+        
+        <p><strong>Build Support Systems:</strong></p>
+        <ul>
+          <li>Trusted contacts established</li>
+          <li>Emergency plans prepared</li>
+          <li>Mental health support arranged</li>
+          <li>Regular check-ins maintained</li>
+        </ul>
+        
+        <p><strong>Practice Digital Safety:</strong></p>
+        <ul>
+          <li>VPN usage recommended</li>
+          <li>Dating app caution extreme</li>
+          <li>Location sharing disabled</li>
+          <li>Privacy settings maximized</li>
+        </ul>
+        
+        <h2 id="future">What the Future May Hold</h2>
+        
+        <h3>Current Trends</h3>
+        <ul>
+          <li>2022 World Cup increased visibility</li>
+          <li>International pressure ongoing</li>
+          <li>Government statements emphasize "respect" for visitors</li>
+          <li>Slow social change generationally</li>
+          <li>Legal reform not immediately expected</li>
+        </ul>
+        
+        <h3>Reality</h3>
+        <ul>
+          <li>Fundamental legal changes unlikely near-term</li>
+          <li>Social attitudes evolving very gradually</li>
+          <li>Conservative elements maintain influence</li>
+          <li>Gulf regional norms restrictive</li>
+          <li>Progress measured in decades not years</li>
+        </ul>
+        
+        <h2 id="resources">Resources and Support</h2>
+        
+        <h3>International Organizations</h3>
+        <ul>
+          <li><strong>ILGA World</strong> - Global LGBTQ+ information</li>
+          <li><strong>Human Rights Watch</strong> - Qatar reports</li>
+          <li><strong>Outright International</strong> - Advocacy</li>
+          <li><strong>Local embassy support</strong> - Varies by country</li>
+        </ul>
+        
+        <h3>Emergency Contacts</h3>
+        <ul>
+          <li>Home country embassy (priority)</li>
+          <li>International human rights organizations</li>
+          <li>Legal assistance resources</li>
+          <li>Mental health crisis lines</li>
+        </ul>
+        
+        <h2 id="conclusion">Final Thoughts</h2>
+        
+        <p>Living in Qatar as an LGBTQ+ individual requires significant compromise—trading openness for opportunity. This trade-off is deeply personal, with no universally correct answer. Some find the professional and financial benefits worthwhile, successfully navigating restrictions for defined periods. Others find the psychological costs too substantial, regardless of benefits offered.</p>
+        
+        <p><strong>Key Takeaway:</strong> Information empowers decision-making. Understanding Qatar's realities—both legal and practical—allows individuals to assess whether temporary residence aligns with their personal circumstances, values, and wellbeing needs.</p>
+        
+        <p>Those who choose Qatar should do so with eyes open, support systems strong, and exit plans prepared. Those who choose otherwise should feel validated in prioritizing authentic living over financial opportunity.</p>
+        
+        <h2 id="faq">FAQ: LGBTQ+ Experiences Qatar</h2>
+        
+        <div class="space-y-4 my-6">
+          <div>
+            <h4 class="font-bold mb-2">Can I be arrested for being gay in Qatar?</h4>
+            <p>While laws technically exist, expat arrests are rare. Deportation is more common consequence if issues arise. Private behavior generally isn't policed actively.</p>
+          </div>
+          
+          <div>
+            <h4 class="font-bold mb-2">Can my same-sex partner come to Qatar?</h4>
+            <p>Not as sponsored dependent. They would need independent employment visa or limited visit visas only.</p>
+          </div>
+          
+          <div>
+            <h4 class="font-bold mb-2">Is it safe to use dating apps in Qatar?</h4>
+            <p>Technically functional but carries risks including potential entrapment. Extreme caution advised or avoidance recommended.</p>
+          </div>
+          
+          <div>
+            <h4 class="font-bold mb-2">Will employers know my orientation?</h4>
+            <p>Unless you disclose, no. Background checks don't reveal this information. Privacy is expected and maintained by most.</p>
+          </div>
+          
+          <div>
+            <h4 class="font-bold mb-2">How do other LGBTQ+ expats cope?</h4>
+            <p>Commonly through privacy maintenance, regular travel to accepting countries, building trusted friend networks, and focusing on professional aspects of life in Qatar.</p>
+          </div>
+        </div>
+      `
+    },
     'driving-doha-2025-guide': {
       id: '43',
       title: 'Driving in Doha 2025: Traffic Updates, Rules, and Survival Guide',
