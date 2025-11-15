@@ -289,6 +289,7 @@ const BlogPost = () => {
         
         <p>By understanding the rules and staying aware, tourists can enjoy a smooth, comfortable, and memorable stay in one of the Middle East's most impressive cities.</p>
       `,
+      tags: ['Legal Guide', 'Safety', 'Laws', 'Tourist Information', 'Doha']
     },
     'alcohol-allowed-doha-qatar-guide': {
       id: '31',
@@ -517,6 +518,7 @@ const BlogPost = () => {
         
         <p>Doha offers a safe, premium, and relaxed nightlife experience — perfect for tourists who want to enjoy their vacation responsibly.</p>
       `,
+      tags: ['Alcohol Laws', 'Nightlife', 'Legal Guide', 'Hotel Bars', 'Doha']
     },
     'desert-safari-inland-sea-khor-al-adaid': {
       id: '30',
