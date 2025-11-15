@@ -13,6 +13,121 @@ const BlogPost = () => {
   
   // Blog post data based on slug
   const blogPosts: Record<string, any> = {
+    'qatar-airways-stopover-packages-lounge': {
+      id: '26',
+      title: 'Two Holidays in One: Unpacking the Qatar Airways Stopover Packages and the Privilege of Lounge Access',
+      date: 'May 5, 2025',
+      author: 'Experience Doha Team',
+      readTime: '10 min read',
+      category: 'Expat-Tips',
+      imageUrl: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=2668&auto=format&fit=crop',
+      content: `
+        <p>Qatar Airways, consistently ranked among the world's leading airlines, has transformed the concept of a long layover from a travel inconvenience into a coveted opportunity. Through its partnership with <strong>Discover Qatar</strong>, the airline offers exceptionally priced stopover packages that allow passengers to explore the vibrant city of Doha for up to four nights. This program, combined with the airline's world-class lounge facilities at Hamad International Airport (HIA), creates a seamless and luxurious travel experience that effectively turns one journey into two distinct holidays.</p>
+        
+        <h2 id="stopover-program">The Discover Qatar Stopover Program: Unbeatable Value</h2>
+        <p>The Qatar Airways Stopover Program is a strategic initiative designed to encourage transit passengers to experience the country. It is renowned globally for offering some of the best value in luxury travel, providing heavily discounted rates at premium hotels.</p>
+        
+        <h3 id="eligibility">Eligibility and Logistics</h3>
+        <p>The program is open to confirmed ticket holders of Qatar Airways, code-share flights, and <strong>one-world</strong> member airlines. The primary eligibility criteria are:</p>
+        <ul>
+          <li><strong>Minimum Transit Time:</strong> A layover of at least <strong>12 hours</strong> in Doha.</li>
+          <li><strong>Maximum Stay:</strong> A maximum stay of <strong>96 hours</strong> (four nights).</li>
+        </ul>
+        <p>Booking must be done directly through the Discover Qatar website, separate from the flight booking, although the flight ticket is required to qualify for the discounted rates.</p>
+        
+        <h3 id="tiers">The Four Tiers of Luxury</h3>
+        <p>The program is structured into four distinct tiers, catering to various budgets and preferences, all starting at remarkably low prices per person, per night, based on double occupancy.</p>
+        
+        <table class="w-full border-collapse my-6">
+          <thead>
+            <tr class="bg-qatar-maroon text-white">
+              <th class="border border-gray-300 p-3 text-left">Package Tier</th>
+              <th class="border border-gray-300 p-3 text-left">Starting Price (USD/pp)</th>
+              <th class="border border-gray-300 p-3 text-left">Hotel Category</th>
+              <th class="border border-gray-300 p-3 text-left">Key Features</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border border-gray-300 p-3"><strong>Standard</strong></td>
+              <td class="border border-gray-300 p-3">$14</td>
+              <td class="border border-gray-300 p-3">4-Star</td>
+              <td class="border border-gray-300 p-3">Excellent value, wide selection of hotels from international brands (e.g., Hilton, Marriott).</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border border-gray-300 p-3"><strong>Premium</strong></td>
+              <td class="border border-gray-300 p-3">$24</td>
+              <td class="border border-gray-300 p-3">5-Star</td>
+              <td class="border border-gray-300 p-3">Access to luxury 5-star hotels at a fraction of the standard cost.</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 p-3"><strong>Premium w/ Beach</strong></td>
+              <td class="border border-gray-300 p-3">$31</td>
+              <td class="border border-gray-300 p-3">5-Star</td>
+              <td class="border border-gray-300 p-3">Includes access to the exclusive Doha Sands Beach, offering a resort experience.</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border border-gray-300 p-3"><strong>Luxury</strong></td>
+              <td class="border border-gray-300 p-3">$83</td>
+              <td class="border border-gray-300 p-3">5-Star Luxury</td>
+              <td class="border border-gray-300 p-3">Top-tier luxury hotels (e.g., Fairmont, Rixos) and includes complimentary breakfast.</td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <p>The value proposition of this program is immense. For a minimal fee, travelers can secure accommodation in hotels that would typically cost hundreds of dollars per night, making a multi-day stopover an incredibly affordable luxury.</p>
+        
+        <h3 id="enhancements">Enhancing the Stopover</h3>
+        <p>Beyond the hotel, Discover Qatar offers a range of add-ons to complete the experience:</p>
+        <ol>
+          <li><strong>Airport Transfers:</strong> Seamless, pre-booked transfers between HIA and the hotel.</li>
+          <li><strong>Tours and Excursions:</strong> Discounted rates on popular activities, including the thrilling <strong>Desert Safari and Inland Sea</strong> trip, city tours of Doha, and cultural visits to the <strong>Museum of Islamic Art</strong> and <strong>Souq Waqif</strong>.</li>
+          <li><strong>Visa Facilitation:</strong> For nationalities requiring a visa, the program provides information and often assists with the necessary documentation, though many nationalities can enter Qatar visa-free.</li>
+        </ol>
+        
+        <h2 id="lounge-access">The Privilege of Lounge Access at HIA</h2>
+        <p>While the stopover packages focus on accommodation and excursions outside the airport, the experience of flying Qatar Airways is significantly enhanced by its world-class lounge facilities at <strong>Hamad International Airport (HIA)</strong>. It is important to note that <strong>lounge access is generally not included in the standard stopover package</strong>; it is a benefit tied to the class of travel or the passenger's frequent flyer status.</p>
+        
+        <h3 id="first-class-lounge">Al Safwa First Class Lounge</h3>
+        <p>The <strong>Al Safwa First Class Lounge</strong> is an architectural marvel and a sanctuary of luxury. Access is reserved for Qatar Airways First Class passengers.</p>
+        <ul>
+          <li><strong>Features:</strong> The lounge boasts a dedicated spa, private relaxation rooms, a fine-dining restaurant, a business center, and a family area. Its design, inspired by the MIA, features high ceilings, water features, and a tranquil atmosphere.</li>
+        </ul>
+        
+        <h3 id="business-lounge">Al Mourjan Business Class Lounge</h3>
+        <p>The <strong>Al Mourjan Business Class Lounge</strong> is one of the largest and most impressive business class lounges globally, accessible to Qatar Airways and one-world Business Class passengers.</p>
+        <ul>
+          <li><strong>Features:</strong> Spanning two levels, it includes multiple dining areas (buffet and à la carte), quiet zones with private resting pods, a games room, and a stunning water feature that serves as the lounge's centerpiece. The sheer size ensures that even during peak hours, the lounge maintains a sense of calm and space.</li>
+        </ul>
+        
+        <h3 id="gold-silver">Gold and Silver Lounges</h3>
+        <p>For <strong>Privilege Club Gold</strong> and <strong>Silver</strong> members, or equivalent <strong>one-world Sapphire</strong> and <strong>Ruby</strong> members traveling in Economy Class, dedicated lounges are available, offering a comfortable space with complimentary food and beverages.</p>
+        
+        <h3 id="distinction">The Lounge Access Distinction</h3>
+        <p>Travelers should understand the distinction:</p>
+        <ul>
+          <li><strong>Stopover Package:</strong> Provides discounted hotel and tours for a multi-day stay in Doha.</li>
+          <li><strong>Lounge Access:</strong> Provides a premium experience <em>within</em> the airport, based on the class of ticket purchased (First/Business) or the passenger's elite frequent flyer status.</li>
+        </ul>
+        <p>However, the two elements work in synergy. A passenger flying Business Class (with lounge access) can enjoy the luxury of the Al Mourjan lounge before or after their stopover, seamlessly transitioning from a discounted 5-star hotel stay to a premium airport experience.</p>
+        
+        <h2 id="conclusion">Conclusion: A Seamless Travel Experience</h2>
+        <p>The combination of the <strong>Qatar Airways Stopover Program</strong> and the exceptional facilities at HIA solidifies Doha's position as a premier global travel hub. The stopover packages offer an accessible way for travelers to immerse themselves in Qatari culture, while the world-class lounges provide a benchmark for airport luxury. By utilizing both, passengers can transform a simple journey into a dual-destination adventure, experiencing the best of both the city and the sky. This integrated approach to travel is a key reason why Qatar Airways continues to set the standard for the modern long-haul experience.</p>
+      `,
+      tableOfContents: [
+        { title: 'The Discover Qatar Stopover Program', id: 'stopover-program' },
+        { title: 'Eligibility and Logistics', id: 'eligibility' },
+        { title: 'The Four Tiers of Luxury', id: 'tiers' },
+        { title: 'Enhancing the Stopover', id: 'enhancements' },
+        { title: 'The Privilege of Lounge Access', id: 'lounge-access' },
+        { title: 'Al Safwa First Class Lounge', id: 'first-class-lounge' },
+        { title: 'Al Mourjan Business Class Lounge', id: 'business-lounge' },
+        { title: 'Gold and Silver Lounges', id: 'gold-silver' },
+        { title: 'The Lounge Access Distinction', id: 'distinction' },
+        { title: 'A Seamless Travel Experience', id: 'conclusion' }
+      ],
+      tags: ['Qatar Airways', 'Stopover Package', 'Lounge Access', 'Travel Deals', 'Luxury Travel']
+    },
     'doha-global-mediation-hub-congo-peace': {
       id: '25',
       title: 'Beyond the Horizon: Doha as a Global Mediation Hub and the Significance of the Congo Peace Talks',
