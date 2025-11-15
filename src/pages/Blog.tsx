@@ -40,12 +40,22 @@ import arabicCoffeeImage from '@/assets/arabic-coffee-culture.jpg';
 import architectureImage from '@/assets/doha-architecture.jpg';
 import familyImage from '@/assets/family-friendly.jpg';
 import weekendImage from '@/assets/weekend-getaways.jpg';
+import alcoholGuideImage from '@/assets/alcohol-guide-doha.jpg';
 
 const Blog = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   
   const allPosts = [
+    {
+      id: '31',
+      title: 'Is Drinking Alcohol Allowed in Doha, Qatar? (2025 Full Guide)',
+      excerpt: 'Your ultimate tourist-friendly guide to alcohol rules, prices, licensed venues, and nightlife in Doha. Everything you need to know about drinking legally in Qatar.',
+      imageUrl: alcoholGuideImage,
+      category: 'Expat-Tips',
+      date: 'May 10, 2025',
+      slug: 'alcohol-allowed-doha-qatar-guide',
+    },
     {
       id: '30',
       title: 'The Ultimate Arabian Adventure: Desert Safari and Inland Sea',

@@ -31,12 +31,241 @@ import top10AttractionsImage from '@/assets/top-10-attractions.jpg';
 import qatariCuisineImage from '@/assets/qatari-cuisine.jpg';
 import culturalEventsImage from '@/assets/cultural-events.jpg';
 import miaMuseumImage from '@/assets/mia-museum.jpg';
+import alcoholGuideImage from '@/assets/alcohol-guide-doha.jpg';
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   
   // Blog post data based on slug
   const blogPosts: Record<string, any> = {
+    'alcohol-allowed-doha-qatar-guide': {
+      id: '31',
+      title: 'Is Drinking Alcohol Allowed in Doha, Qatar? (2025 Full Guide)',
+      date: 'May 10, 2025',
+      author: 'Experience Doha Team',
+      readTime: '12 min read',
+      category: 'Expat-Tips',
+      imageUrl: alcoholGuideImage,
+      content: `
+        <p class="lead"><strong>Doha is one of the fastest-growing travel destinations in the Middle East.</strong> With its futuristic skyline, world-class hotels, and rich cultural heritage, millions of visitors come to Qatar every year. But one question tourists ask more than anything else is: <em>"Is drinking alcohol allowed in Doha, Qatar?"</em></p>
+        
+        <p>The short answer is <strong>YES</strong> — alcohol is allowed in Qatar, but with important rules, restrictions, and specific places where you can drink legally. This comprehensive guide will explain everything you need to know before you visit, including alcohol laws, where to buy it, hotel bars, nightlife rules, fines, and tourist tips.</p>
+        
+        <h2 id="legal">Is Alcohol Legal in Doha, Qatar?</h2>
+        <p><strong>Yes.</strong> Alcohol is legal in Qatar but strictly regulated. The country follows Islamic law, which discourages drinking, but it still makes controlled exceptions for expatriates, tourists, and licensed venues.</p>
+        
+        <p>Qatar's alcohol regulations are designed to:</p>
+        <ul>
+          <li>Respect local culture</li>
+          <li>Promote responsible drinking</li>
+          <li>Maintain safety in public areas</li>
+          <li>Control alcohol distribution to licensed places only</li>
+        </ul>
+        
+        <h2 id="where">Where Can You Drink Alcohol in Doha?</h2>
+        <p>You <strong>CANNOT</strong> drink anywhere you want in Doha. Alcohol consumption is permitted only in approved locations.</p>
+        
+        <h3 id="hotels">1. Licensed Hotels (Most Popular for Tourists)</h3>
+        <p>Almost all international 4-star and 5-star hotels in Doha have:</p>
+        <ul>
+          <li>Bars</li>
+          <li>Lounges</li>
+          <li>Nightclubs</li>
+          <li>Licensed restaurants</li>
+        </ul>
+        
+        <p>These hotels legally serve alcohol to tourists and residents.</p>
+        
+        <p><strong>Popular hotel bars include:</strong></p>
+        <ul>
+          <li>W Doha</li>
+          <li>Hilton Doha</li>
+          <li>Rixos Gulf Hotel Doha</li>
+          <li>InterContinental Doha</li>
+          <li>Marriott Marquis Doha</li>
+          <li>The Ned Doha</li>
+          <li>Mondrian Doha</li>
+        </ul>
+        
+        <p>These venues are safe, legal, and commonly visited by expats and tourists.</p>
+        
+        <h3 id="restaurants">2. Licensed Restaurants & Bars</h3>
+        <p>A few standalone restaurants (outside hotels) also have alcohol licenses, but they are limited.</p>
+        
+        <p>These venues typically require customers to be:</p>
+        <ul>
+          <li>Over 21</li>
+          <li>Carrying valid ID</li>
+          <li>Respectful of the rules</li>
+        </ul>
+        
+        <h3 id="qdc">3. Qatar Distribution Company (QDC)</h3>
+        <p>This is the only place in Qatar where alcohol can be purchased for home consumption — and it requires a special permit, which only expatriate residents can apply for.</p>
+        
+        <p><strong>Important:</strong></p>
+        <ul>
+          <li>Tourists <strong>cannot</strong> buy alcohol from QDC</li>
+          <li>Visitors can only drink at licensed venues</li>
+        </ul>
+        
+        <h2 id="public">Is Public Drinking Allowed in Doha?</h2>
+        <p><strong>No.</strong> Public drinking is illegal.</p>
+        
+        <p>You cannot drink alcohol:</p>
+        <ul>
+          <li>On the street</li>
+          <li>In parks</li>
+          <li>On beaches</li>
+          <li>In malls</li>
+          <li>At tourist attractions</li>
+          <li>Inside your car</li>
+          <li>At any unlicensed location</li>
+        </ul>
+        
+        <p><strong>Public drunkenness is also illegal</strong> and carries heavy penalties.</p>
+        
+        <h2 id="laws">Alcohol Laws & Penalties in Qatar</h2>
+        <p>Qatar takes alcohol laws seriously. Violations can lead to:</p>
+        <ul>
+          <li>Hefty fines</li>
+          <li>Jail time</li>
+          <li>Deportation in serious cases</li>
+        </ul>
+        
+        <p><strong>Illegal activities include:</strong></p>
+        <ul>
+          <li>❌ Drinking alcohol in public</li>
+          <li>❌ Being drunk in public</li>
+          <li>❌ Bringing alcohol into Qatar in luggage (strictly banned)</li>
+          <li>❌ Transporting alcohol without permit</li>
+          <li>❌ Drinking or possessing alcohol under 21</li>
+        </ul>
+        
+        <p><strong>Tip:</strong> Always drink responsibly and stay within hotel premises.</p>
+        
+        <h2 id="bringing">Can You Bring Alcohol Into Qatar?</h2>
+        <p><strong>No.</strong> Qatar strictly prohibits bringing alcohol into the country—even sealed bottles.</p>
+        
+        <p>At Hamad International Airport:</p>
+        <ul>
+          <li>Your luggage may be scanned</li>
+          <li>Alcohol bottles will be confiscated</li>
+          <li>You won't be fined, but you won't get the bottle back</li>
+        </ul>
+        
+        <h2 id="prices">How Much Does Alcohol Cost in Doha?</h2>
+        <p>Alcohol in Qatar is expensive due to high import taxes.</p>
+        
+        <h3>Average Prices in Hotel Bars</h3>
+        <ul>
+          <li><strong>Beer:</strong> 35–60 QAR</li>
+          <li><strong>Cocktails:</strong> 60–120 QAR</li>
+          <li><strong>Wine by glass:</strong> 50–150 QAR</li>
+          <li><strong>Wine bottle:</strong> 300–800 QAR</li>
+          <li><strong>Premium spirits:</strong> 70–150 QAR per shot</li>
+        </ul>
+        
+        <p>Happy hours are common and help reduce costs.</p>
+        
+        <h2 id="nightlife">Nightlife in Doha: What to Expect</h2>
+        <p>Doha is not a party city like Dubai, but nightlife exists in a more relaxed, luxury setting.</p>
+        
+        <p><strong>Common nightlife options include:</strong></p>
+        <ul>
+          <li>Stylish rooftop bars</li>
+          <li>Live music lounges</li>
+          <li>DJ nights in hotel clubs</li>
+          <li>Beach clubs at premium resorts</li>
+        </ul>
+        
+        <p>There's no wild nightlife culture, but the atmosphere is polished and international.</p>
+        
+        <h2 id="dress">Dress Code for Bars & Clubs in Doha</h2>
+        <p>Dress codes are usually enforced.</p>
+        
+        <h3>For men:</h3>
+        <ul>
+          <li>Smart casual</li>
+          <li>No shorts (in many venues)</li>
+          <li>No flip-flops</li>
+          <li>Collared shirts preferred</li>
+        </ul>
+        
+        <h3>For women:</h3>
+        <ul>
+          <li>Smart casual / elegant</li>
+          <li>Dresses or stylish outfits</li>
+          <li>Avoid extremely revealing clothing</li>
+        </ul>
+        
+        <p>Hotels are more flexible than public areas, but modesty is still recommended.</p>
+        
+        <h2 id="religion">Alcohol for Non-Muslims Only</h2>
+        <p>In Qatar:</p>
+        <ul>
+          <li>Only non-Muslims can drink alcohol legally</li>
+          <li>Muslims are not allowed to buy, drink, or possess alcohol</li>
+          <li>Tourists of any religion can enter hotel bars — no one will ask your religion</li>
+          <li>The rule applies mainly to residents applying for permits</li>
+        </ul>
+        
+        <h2 id="age">Age Limit for Drinking Alcohol in Qatar</h2>
+        <p>To drink at a licensed venue, you must be <strong>21 years old</strong>.</p>
+        
+        <p>Security staff may ask for ID, especially for younger tourists.</p>
+        
+        <h2 id="ramadan">Can You Drink Alcohol During Ramadan in Qatar?</h2>
+        <p>During Ramadan:</p>
+        <ul>
+          <li>Many bars stop selling alcohol</li>
+          <li>Some hotels remain open but offer "dry nights"</li>
+          <li>No alcohol is served before sunset</li>
+          <li>Rules change year to year</li>
+        </ul>
+        
+        <p>Plan ahead if visiting during Ramadan.</p>
+        
+        <h2 id="tourists">Can Tourists Buy Alcohol for Private Use?</h2>
+        <p><strong>No.</strong> Tourists can only drink inside licensed hotels and bars. Alcohol purchased at a bar cannot be taken out of the building.</p>
+        
+        <h2 id="safety">Is It Safe to Drink in Doha?</h2>
+        <p><strong>Yes.</strong> Doha is one of the safest cities in the world. Hotel bars are supervised, secure, and well-managed.</p>
+        
+        <p>Just make sure to:</p>
+        <ul>
+          <li>Stay inside the venue</li>
+          <li>Avoid public intoxication</li>
+          <li>Take a taxi back to your hotel if needed</li>
+        </ul>
+        
+        <h2 id="tips">Tips for Drinking Legally & Safely in Doha</h2>
+        
+        <h3>✔ Drink only at licensed hotel bars or restaurants</h3>
+        <p>This is the simplest way to avoid problems.</p>
+        
+        <h3>✔ Keep your ID with you</h3>
+        <p>Passport or digital copy is recommended.</p>
+        
+        <h3>✔ Respect local culture</h3>
+        <p>Avoid loud behavior or drunkenness outside venues.</p>
+        
+        <h3>✔ Do not drink and drive</h3>
+        <p>Qatar has zero tolerance for drunk driving.</p>
+        
+        <h3>✔ Plan your transportation</h3>
+        <p>Use:</p>
+        <ul>
+          <li>Uber</li>
+          <li>Karwa</li>
+          <li>Hotel taxis</li>
+        </ul>
+        
+        <h2 id="verdict">Final Verdict: Is Drinking Alcohol Allowed in Doha?</h2>
+        <p><strong>Yes</strong> — alcohol is allowed in Doha, but in a controlled and respectable way that aligns with Qatar's culture. As long as you follow the rules, you can enjoy a drink at world-class hotel bars, lounges, and licensed venues without any issues.</p>
+        
+        <p>Doha offers a safe, premium, and relaxed nightlife experience — perfect for tourists who want to enjoy their vacation responsibly.</p>
+      `,
+    },
     'desert-safari-inland-sea-khor-al-adaid': {
       id: '30',
       title: 'The Ultimate Arabian Adventure: Desert Safari and the Majestic Inland Sea (Khor Al Adaid)',
