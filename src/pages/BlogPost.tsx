@@ -34,12 +34,281 @@ import miaMuseumImage from '@/assets/mia-museum.jpg';
 import alcoholGuideImage from '@/assets/alcohol-guide-doha.jpg';
 import prostitutionLawsImage from '@/assets/prostitution-laws-legal-guide.jpg';
 import dohaSafetyImage from '@/assets/doha-safety-guide.jpg';
+import womenDrivingImage from '@/assets/women-driving-qatar.jpg';
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   
   // Blog post data based on slug
   const blogPosts: Record<string, any> = {
+    'women-driving-qatar-guide': {
+      id: '34',
+      title: 'Can Women Drive in Qatar? (2025 Guide for Tourists, Expats & Families)',
+      date: 'May 13, 2025',
+      author: 'Experience Doha Team',
+      readTime: '12 min read',
+      category: 'Expat-Tips',
+      imageUrl: womenDrivingImage,
+      content: `
+        <p class="lead">For years, many Middle Eastern countries had mixed rules about women driving. This has led thousands of travelers and expats to ask: <em>"Can women drive in Qatar?"</em></p>
+        
+        <p><strong>The short and clear answer is: YES. Women can legally drive in Qatar — both locals and foreigners.</strong></p>
+        
+        <p>Qatar has allowed women to drive for decades, and the country is known for being modern, safe, and welcoming for female drivers.</p>
+        
+        <h2 id="simple-answer">Can Women Drive in Qatar? The Simple Answer</h2>
+        <p><strong>Absolutely yes.</strong> Women in Qatar can:</p>
+        <ul>
+          <li>✔ Drive any type of car</li>
+          <li>✔ Obtain a full Qatari driving license</li>
+          <li>✔ Rent cars</li>
+          <li>✔ Buy and register vehicles</li>
+          <li>✔ Use Uber, Careem, and taxis freely</li>
+          <li>✔ Drive alone or with passengers</li>
+        </ul>
+        
+        <p>There are no restrictions on women driving in Qatar.</p>
+        
+        <h2 id="modern-perspective">A Modern Perspective: Qatar Supports Women Drivers</h2>
+        <p>Unlike some outdated stereotypes, Qatar is one of the most progressive countries in the Gulf region. Women actively work in:</p>
+        <ul>
+          <li>Government</li>
+          <li>Airlines</li>
+          <li>Banking</li>
+          <li>Healthcare</li>
+          <li>Business</li>
+          <li>Education</li>
+          <li>Media</li>
+        </ul>
+        
+        <p>Driving is completely normal for women across Doha. You'll see women driving in:</p>
+        <ul>
+          <li>SUVs</li>
+          <li>Sedans</li>
+          <li>Luxury cars</li>
+          <li>Taxis</li>
+          <li>Ride-share vehicles</li>
+          <li>Personal vehicles</li>
+        </ul>
+        
+        <p>Qatar's road system is modern, clean, and designed to accommodate all drivers.</p>
+        
+        <h2 id="permission">Do Women Need Permission to Drive?</h2>
+        <p><strong>No.</strong> Women do not need:</p>
+        <ul>
+          <li>❌ Permission from a male guardian</li>
+          <li>❌ Special paperwork</li>
+          <li>❌ A male escort in the car</li>
+          <li>❌ A gender-specific driving license</li>
+        </ul>
+        
+        <p>Driving rules are the same for men and women.</p>
+        
+        <h2 id="tourists">Can Female Tourists Drive in Qatar?</h2>
+        <p><strong>Yes!</strong> Female tourists can legally drive in Qatar if they have:</p>
+        <ul>
+          <li>✔ An International Driving Permit (IDP), OR</li>
+          <li>✔ A valid driving license from their home country (up to 6 months)</li>
+        </ul>
+        
+        <p>Most European, American, Canadian, Australian, and GCC licenses are accepted temporarily.</p>
+        
+        <p>Women tourists can also rent cars without any restrictions. Rental companies treat men and women equally.</p>
+        
+        <h2 id="expats">Can Female Expats Drive in Qatar?</h2>
+        <p><strong>Yes.</strong> Female expats can easily:</p>
+        <ul>
+          <li>Apply for a Qatari driving license</li>
+          <li>Buy or lease a vehicle</li>
+          <li>Drive alone</li>
+          <li>Drive at night</li>
+          <li>Drive with friends or colleagues</li>
+          <li>Drive to work or school</li>
+        </ul>
+        
+        <p>Many expat women drive daily to malls, schools, hospitals, or business districts.</p>
+        
+        <h2 id="licenses">Driving Licenses for Women in Qatar</h2>
+        <p>The process for women to get a license is the same as for men.</p>
+        
+        <h3>Requirements:</h3>
+        <ul>
+          <li>Valid residence permit</li>
+          <li>Passport</li>
+          <li>Eye test</li>
+          <li>Driving classes (if needed)</li>
+          <li>Theory and road test</li>
+        </ul>
+        
+        <p>Once approved, women receive the same Qatari driving license as men.</p>
+        
+        <h2 id="rideshare">Are Women Taxi or Uber Drivers in Qatar?</h2>
+        <p>Women can drive for ride-hailing companies like Uber and Careem, but the majority of drivers in the industry are men. However, more women are joining the transportation sector each year, especially in private companies and deliveries.</p>
+        
+        <h2 id="women-only">Are There Women-Only Taxis or Transport Options?</h2>
+        <p><strong>Yes</strong> — Qatar offers safe transportation options for women:</p>
+        
+        <h3>1. Ladies-Only Metro Cars</h3>
+        <p>Designated metro carriages for:</p>
+        <ul>
+          <li>Women</li>
+          <li>Mothers</li>
+          <li>Children</li>
+        </ul>
+        <p>These provide comfort and privacy.</p>
+        
+        <h3>2. Ladies Sections in Buses</h3>
+        <p>Some public buses have women-only seating areas.</p>
+        
+        <h3>3. Women-Only Taxi Services</h3>
+        <p>Private companies sometimes offer female-only driver services for comfort.</p>
+        
+        <h2 id="safety">Is It Safe for Women to Drive in Qatar?</h2>
+        <p><strong>Yes.</strong> Qatar is one of the safest countries in the world for female drivers.</p>
+        
+        <p>Women regularly drive at all hours of the day and night.</p>
+        
+        <h3>Safety Advantages for Women in Qatar:</h3>
+        <ul>
+          <li>✔ Low crime rate</li>
+          <li>✔ Safe roads</li>
+          <li>✔ High visibility police presence</li>
+          <li>✔ Clean, modern highways</li>
+          <li>✔ Strict traffic laws</li>
+          <li>✔ Heavy fines for harassment or reckless driving</li>
+        </ul>
+        
+        <p>Road safety is excellent, although drivers should still be cautious of:</p>
+        <ul>
+          <li>Fast drivers</li>
+          <li>Some aggressive lane changes</li>
+          <li>Busy traffic during rush hour</li>
+        </ul>
+        
+        <p>But compared to many countries, Qatar roads are very safe.</p>
+        
+        <h2 id="restrictions">Do Women Face Any Restrictions on Where They Can Drive?</h2>
+        <p><strong>No.</strong> Women can drive:</p>
+        <ul>
+          <li>✔ On highways</li>
+          <li>✔ In the city</li>
+          <li>✔ In rural areas</li>
+          <li>✔ On the Corniche</li>
+          <li>✔ Inside shopping centers' parking areas</li>
+          <li>✔ In desert locations (with a 4x4)</li>
+        </ul>
+        
+        <p>There are no gender-based driving zones.</p>
+        
+        <h2 id="culture">Driving Culture in Qatar: What Women Should Know</h2>
+        <p>While Qatar is extremely safe, here are practical tips for women new to driving:</p>
+        
+        <h3>1. Traffic Can Be Fast-Paced</h3>
+        <p>Drivers change lanes quickly, so stay alert.</p>
+        
+        <h3>2. Use Navigation Apps</h3>
+        <p>Google Maps and Waze work perfectly in Qatar.</p>
+        
+        <h3>3. Keep Distance During Rush Hour</h3>
+        <p>Traffic is busy in:</p>
+        <ul>
+          <li>West Bay</li>
+          <li>The Pearl</li>
+          <li>Salwa Road</li>
+          <li>C-Ring Road</li>
+          <li>Al Wakrah Road</li>
+        </ul>
+        
+        <h3>4. Parking Can Be Tight in Malls</h3>
+        <p>Especially during weekends.</p>
+        
+        <h3>5. Desert Driving Requires Skill</h3>
+        <p>Only attempt dunes with an experienced driver.</p>
+        
+        <h2 id="motorcycles">Can Women Drive Motorcycles or Bicycles in Qatar?</h2>
+        <p><strong>Yes.</strong> Women are allowed to drive:</p>
+        <ul>
+          <li>✔ Motorcycles</li>
+          <li>✔ Bicycles</li>
+          <li>✔ Electric scooters</li>
+        </ul>
+        
+        <p>They can also obtain a motorcycle license like men.</p>
+        
+        <h2 id="clothing">Can Women Drive While Wearing Abaya or Hijab?</h2>
+        <p><strong>Yes.</strong> Many Qatari women drive while wearing:</p>
+        <ul>
+          <li>Abaya</li>
+          <li>Hijab</li>
+          <li>Shayla</li>
+          <li>Niqab</li>
+        </ul>
+        
+        <p>Women can also drive wearing Western clothing. There are no clothing restrictions for driving, as long as safety is not compromised.</p>
+        
+        <h2 id="attitudes">Cultural Attitudes Toward Women Drivers in Qatar</h2>
+        <p>Qatar is modern and supportive of women's mobility. Female drivers are widely accepted in society.</p>
+        
+        <p>You will see women behind the wheel in:</p>
+        <ul>
+          <li>Luxury cars</li>
+          <li>SUVs</li>
+          <li>Company vehicles</li>
+          <li>Family cars</li>
+          <li>Sports cars</li>
+        </ul>
+        
+        <p>Driving is common for all age groups: students, mothers, working professionals, and elderly women.</p>
+        
+        <h2 id="police">Do Women Get Pulled Over by Police?</h2>
+        <p>If a traffic rule is violated, both men and women may be stopped.</p>
+        
+        <p>Police treat women respectfully and professionally. Women can speak English during checks, as most officers understand it.</p>
+        
+        <h2 id="passengers">Can Women Drive with Male Passengers?</h2>
+        <p><strong>Yes.</strong> Women can drive with:</p>
+        <ul>
+          <li>✔ Male colleagues</li>
+          <li>✔ Male friends</li>
+          <li>✔ Brothers</li>
+          <li>✔ Cousins</li>
+          <li>✔ Husband</li>
+          <li>✔ Sons</li>
+          <li>✔ Any passenger</li>
+        </ul>
+        
+        <p>There are no gender restrictions.</p>
+        
+        <h2 id="night">Can Women Drive After Dark?</h2>
+        <p><strong>Yes.</strong> It is common for women to drive:</p>
+        <ul>
+          <li>At night</li>
+          <li>Early morning</li>
+          <li>During Ramadan</li>
+          <li>To/from night shifts</li>
+          <li>For social activities</li>
+        </ul>
+        
+        <p>Doha is extremely safe after dark, making it comfortable for women to drive anytime.</p>
+        
+        <h2 id="takeaways">Key Takeaways: Can Women Drive in Qatar?</h2>
+        <ul>
+          <li>✔ YES — Women can fully drive in Qatar</li>
+          <li>✔ Women can own, rent, buy, and register cars</li>
+          <li>✔ Tourists and expats can drive legally</li>
+          <li>✔ No male permission required</li>
+          <li>✔ Driving is safe for women day and night</li>
+          <li>✔ Qatar has modern, well-maintained roads</li>
+          <li>✔ Women can drive all types of vehicles</li>
+        </ul>
+        
+        <h2 id="verdict">Final Verdict</h2>
+        <p>Qatar is one of the most advanced and supportive countries in the Middle East when it comes to women driving. Whether you are a tourist visiting for a few days, a student, or an expat planning to live in Doha, you will find driving easy, safe, and fully permitted.</p>
+        
+        <p>Women in Qatar enjoy the same driving rights as men — and driving is an everyday, normal part of life.</p>
+      `,
+      tags: ['Women Rights', 'Driving License', 'Expat Guide', 'Tourist Tips', 'Qatar Laws']
+    },
     'doha-safety-guide-tourists-expats': {
       id: '33',
       title: 'How Safe Is Doha, Qatar? (2025 Full Safety Guide for Tourists & Expats)',

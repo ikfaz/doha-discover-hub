@@ -43,12 +43,22 @@ import weekendImage from '@/assets/weekend-getaways.jpg';
 import alcoholGuideImage from '@/assets/alcohol-guide-doha.jpg';
 import prostitutionLawsImage from '@/assets/prostitution-laws-legal-guide.jpg';
 import dohaSafetyImage from '@/assets/doha-safety-guide.jpg';
+import womenDrivingImage from '@/assets/women-driving-qatar.jpg';
 
 const Blog = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   
   const allPosts = [
+    {
+      id: '34',
+      title: 'Can Women Drive in Qatar? (2025 Guide for Tourists, Expats & Families)',
+      excerpt: 'Everything you need to know about driving laws for women in Qatar. Complete guide covering licenses, safety, cultural attitudes, and practical tips.',
+      imageUrl: womenDrivingImage,
+      category: 'Expat-Tips',
+      date: 'May 13, 2025',
+      slug: 'women-driving-qatar-guide',
+    },
     {
       id: '33',
       title: 'How Safe Is Doha, Qatar? (2025 Full Safety Guide for Tourists & Expats)',
