@@ -25,9 +25,20 @@ import womenSafetyDressCodeImage from '@/assets/women-safety-dress-code-doha.jpg
 import internationalSchoolsImage from '@/assets/international-schools-qatar-guide.jpg';
 import qatarVisaRulesImage from '@/assets/qatar-visa-rules-2025.jpg';
 import westBayAlWaabImage from '@/assets/west-bay-al-waab-comparison.jpg';
+import drivingDohaImage from '@/assets/driving-doha-2025-guide.jpg';
 
 const Index = () => {
   const featuredBlogs = [
+    {
+      id: '43',
+      title: 'Driving in Doha 2025: Traffic Updates, Rules, and Survival Guide',
+      excerpt: 'Essential guide to driving in Doha 2025. Traffic patterns, road rules, license requirements, fines, and navigation tips for new drivers in Qatar.',
+      imageUrl: drivingDohaImage,
+      category: 'Expat-Tips',
+      date: 'May 23, 2025',
+      slug: 'driving-doha-2025-guide',
+      tags: ['driving Doha', 'Qatar license', 'traffic rules', 'road safety', 'expat driving'],
+    },
     {
       id: '42',
       title: 'Renting in Doha: West Bay vs Al Waab Comparison Guide 2025',

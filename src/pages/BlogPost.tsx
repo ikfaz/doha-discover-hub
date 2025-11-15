@@ -6,6 +6,7 @@ import Newsletter from '@/components/Newsletter';
 import SchoolComparisonTool from '@/components/SchoolComparisonTool';
 import SchoolFeeCalculator from '@/components/SchoolFeeCalculator';
 import VisaChecklistGenerator from '@/components/VisaChecklistGenerator';
+import DrivingLicenseChecker from '@/components/DrivingLicenseChecker';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Calendar, Clock, Facebook, Twitter, Share2 } from 'lucide-react';
@@ -46,12 +47,428 @@ import womenSafetyDressCodeImage from '@/assets/women-safety-dress-code-doha.jpg
 import internationalSchoolsImage from '@/assets/international-schools-qatar-guide.jpg';
 import qatarVisaRulesImage from '@/assets/qatar-visa-rules-2025.jpg';
 import westBayAlWaabImage from '@/assets/west-bay-al-waab-comparison.jpg';
+import drivingDohaImage from '@/assets/driving-doha-2025-guide.jpg';
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   
   // Blog post data based on slug
   const blogPosts: Record<string, any> = {
+    'driving-doha-2025-guide': {
+      id: '43',
+      title: 'Driving in Doha 2025: Traffic Updates, Rules, and Survival Guide',
+      date: 'May 23, 2025',
+      author: 'Experience Doha Team',
+      readTime: '16 min read',
+      category: 'Expat-Tips',
+      imageUrl: drivingDohaImage,
+      tags: ['driving Doha', 'Qatar license', 'traffic rules', 'road safety', 'expat driving'],
+      content: `
+        <p class="lead">Driving in Doha has evolved significantly with infrastructure improvements, yet traffic congestion remains a daily challenge for residents. Understanding traffic patterns, mastering road rules, and developing defensive driving skills ensures safer, less stressful commutes in Qatar's capital.</p>
+        
+        <h2 id="traffic-reality">Current Traffic Situation 2025</h2>
+        
+        <h3>Infrastructure Improvements</h3>
+        <ul>
+          <li>Lusail Expressway expansion completed</li>
+          <li>Metro system reducing road dependency</li>
+          <li>Smart traffic systems operational</li>
+          <li>Multiple interchange upgrades finished</li>
+        </ul>
+        
+        <h3>Remaining Challenges</h3>
+        <ul>
+          <li>Population growth outpacing infrastructure</li>
+          <li>School traffic creating bottlenecks</li>
+          <li>Construction zone detours frequent</li>
+          <li>Event traffic (sports, conferences) impactful</li>
+        </ul>
+        
+        <h3>Peak Congestion Times</h3>
+        <p><strong>Morning Rush (7:00-9:00 AM)</strong></p>
+        <ul>
+          <li>School drops create localized chaos</li>
+          <li>West Bay bound traffic heaviest</li>
+          <li>Industrial Area routes congested</li>
+          <li>Average delays: 20-45 minutes extra</li>
+        </ul>
+        
+        <p><strong>Evening Rush (4:00-7:00 PM)</strong></p>
+        <ul>
+          <li>Office exodus across city</li>
+          <li>Mall areas particularly slow</li>
+          <li>Residential areas backed up</li>
+          <li>Thursdays (weekend start) worst</li>
+        </ul>
+        
+        <p><strong>Traffic-Free Windows:</strong></p>
+        <ul>
+          <li>Weekday mid-mornings (10 AM-12 PM)</li>
+          <li>Early afternoons (2-4 PM)</li>
+          <li>Friday mornings (weekend day)</li>
+          <li>Late evenings (9 PM+)</li>
+        </ul>
+        
+        <h2 id="license">Obtaining Your Qatar Driving License</h2>
+        
+        <h3>Automatic License Transfer (15 Countries)</h3>
+        <p>Citizens of these countries can transfer licenses directly:</p>
+        <p><strong>Eligible Countries:</strong> USA, Canada, UK, Germany, France, Netherlands, Spain, Portugal, Italy, Australia, New Zealand, Japan, South Korea, Switzerland, Austria</p>
+        
+        <p><strong>Process:</strong></p>
+        <ol>
+          <li>Eye test at approved center</li>
+          <li>Apply at traffic department</li>
+          <li>Submit home license (returned later)</li>
+          <li>Pay fees (QAR 200-300)</li>
+          <li>Receive Qatar license (5-7 days)</li>
+        </ol>
+        
+        <h3>License From Other Countries</h3>
+        <p>Requires testing process:</p>
+        
+        <p><strong>Theory Test:</strong></p>
+        <ul>
+          <li>35 questions, multiple choice</li>
+          <li>Pass mark: 70%</li>
+          <li>Book at traffic department</li>
+          <li>Study traffic signs specifically</li>
+        </ul>
+        
+        <p><strong>Road Test:</strong></p>
+        <ul>
+          <li>Practical driving assessment</li>
+          <li>Includes parking, signals, road rules</li>
+          <li>Pass rate varies by examiner</li>
+          <li>May require 2-3 attempts</li>
+        </ul>
+        
+        <p><strong>Driving School Requirement:</strong> Most non-transferring nationalities must complete 20-30 driving lessons minimum with school endorsement for test. Additional cost: QAR 3,000-5,000</p>
+        
+        <p><strong>License Validity:</strong> 5-10 years depending on residence permit</p>
+        
+        <h2 id="rules">Essential Qatar Driving Rules</h2>
+        
+        <h3>Speed Limits</h3>
+        <ul>
+          <li><strong>Residential areas:</strong> 40-50 km/h</li>
+          <li><strong>City streets:</strong> 60-80 km/h</li>
+          <li><strong>Highways:</strong> 100-120 km/h</li>
+          <li><strong>School zones:</strong> 30 km/h</li>
+          <li><strong>Construction zones:</strong> As posted</li>
+        </ul>
+        
+        <p><strong>Strictly Enforced:</strong></p>
+        <ul>
+          <li>Speed cameras widespread</li>
+          <li>20 km/h grace before fines trigger</li>
+          <li>Radar detectors illegal to use</li>
+          <li>Undercover police vehicles active</li>
+        </ul>
+        
+        <h3>Seatbelt Laws</h3>
+        <ul>
+          <li>Mandatory for all occupants</li>
+          <li>Children under 10: back seat required</li>
+          <li>Infant seats mandatory for babies</li>
+          <li>Fines: QAR 500 per violation</li>
+        </ul>
+        
+        <h3>Mobile Phone Usage</h3>
+        <ul>
+          <li>Handheld phones illegal while driving</li>
+          <li>Bluetooth/hands-free permitted</li>
+          <li>Caught texting: QAR 500 fine</li>
+          <li>Accident while using phone: severe penalties</li>
+        </ul>
+        
+        <h3>Lane Discipline</h3>
+        <ul>
+          <li>Right lane: slower traffic, exits</li>
+          <li>Left lanes: faster traffic, overtaking</li>
+          <li>Lane changing without signal: fineable</li>
+          <li>Tailgating common but illegal</li>
+        </ul>
+        
+        <h2 id="fines">Traffic Fines and Penalties 2025</h2>
+        
+        <div class="overflow-x-auto my-8">
+          <table class="min-w-full border-collapse border border-border">
+            <thead>
+              <tr class="bg-muted">
+                <th class="border border-border px-4 py-2 text-left">Offense</th>
+                <th class="border border-border px-4 py-2 text-left">Fine (QAR)</th>
+                <th class="border border-border px-4 py-2 text-left">Black Points</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="border border-border px-4 py-2">Speeding (20-30 km/h over)</td>
+                <td class="border border-border px-4 py-2">500</td>
+                <td class="border border-border px-4 py-2">3</td>
+              </tr>
+              <tr class="bg-muted/50">
+                <td class="border border-border px-4 py-2">Speeding (30-50 km/h over)</td>
+                <td class="border border-border px-4 py-2">1,000</td>
+                <td class="border border-border px-4 py-2">6</td>
+              </tr>
+              <tr>
+                <td class="border border-border px-4 py-2">Running red light</td>
+                <td class="border border-border px-4 py-2">6,000</td>
+                <td class="border border-border px-4 py-2">7</td>
+              </tr>
+              <tr class="bg-muted/50">
+                <td class="border border-border px-4 py-2">Phone use while driving</td>
+                <td class="border border-border px-4 py-2">500</td>
+                <td class="border border-border px-4 py-2">3</td>
+              </tr>
+              <tr>
+                <td class="border border-border px-4 py-2">Seatbelt violation</td>
+                <td class="border border-border px-4 py-2">500</td>
+                <td class="border border-border px-4 py-2">3</td>
+              </tr>
+              <tr class="bg-muted/50">
+                <td class="border border-border px-4 py-2">Illegal parking</td>
+                <td class="border border-border px-4 py-2">300-500</td>
+                <td class="border border-border px-4 py-2">0</td>
+              </tr>
+              <tr>
+                <td class="border border-border px-4 py-2">Reckless driving</td>
+                <td class="border border-border px-4 py-2">3,000+</td>
+                <td class="border border-border px-4 py-2">7</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        
+        <h3>Black Points System</h3>
+        <ul>
+          <li>14 points: License suspended 3 months</li>
+          <li>Points clear after 1 year incident-free</li>
+          <li>Multiple suspensions lead to revocation</li>
+        </ul>
+        
+        <p><strong>Paying Fines:</strong></p>
+        <ul>
+          <li>Metrash2 app (recommended)</li>
+          <li>Traffic department offices</li>
+          <li>Must clear before vehicle registration renewal</li>
+          <li>Delays accumulate late fees</li>
+        </ul>
+        
+        <h2 id="navigation">Navigating Doha's Roads</h2>
+        
+        <h3>Major Highways</h3>
+        
+        <p><strong>Dukhan Highway (Al Shamal Road):</strong></p>
+        <ul>
+          <li>Connects north-south</li>
+          <li>High speed, well-maintained</li>
+          <li>Watch for animal crossings in north</li>
+        </ul>
+        
+        <p><strong>Al Rayyan Road:</strong></p>
+        <ul>
+          <li>East-west arterial</li>
+          <li>Heavy traffic throughout day</li>
+          <li>Multiple intersections slow progress</li>
+        </ul>
+        
+        <p><strong>Lusail Expressway:</strong></p>
+        <ul>
+          <li>Newest highway</li>
+          <li>Connects Doha to Lusail</li>
+          <li>Fastest north-south route currently</li>
+        </ul>
+        
+        <p><strong>Salwa Road:</strong></p>
+        <ul>
+          <li>Main southern route</li>
+          <li>Industrial Area traffic impacts</li>
+          <li>Congested during work hours</li>
+        </ul>
+        
+        <h3>Navigation Apps</h3>
+        <ul>
+          <li><strong>Google Maps</strong> - Generally accurate, real-time traffic</li>
+          <li><strong>Waze</strong> - Community updates, hazard warnings</li>
+          <li><strong>Snoonu</strong> - Local app, improving functionality</li>
+        </ul>
+        
+        <h3>Street Naming Challenges</h3>
+        <p>Qatar uses multiple naming systems:</p>
+        <ul>
+          <li>Zone numbers (official addresses)</li>
+          <li>Street numbers</li>
+          <li>Local landmark references</li>
+          <li>Historical names</li>
+        </ul>
+        
+        <p><strong>Pro Tip:</strong> Save locations by GPS coordinates when possible. Zone/street/building numbers are official but confusing.</p>
+        
+        <h2 id="parking">Parking in Doha</h2>
+        
+        <h3>Paid Parking Areas</h3>
+        <ul>
+          <li>Souq Waqif vicinity</li>
+          <li>Msheireb Downtown</li>
+          <li>Some mall exteriors</li>
+          <li>Street parking meters</li>
+        </ul>
+        
+        <p><strong>Payment Methods:</strong></p>
+        <ul>
+          <li>SMS to parking numbers</li>
+          <li>Kahramaa app</li>
+          <li>Physical meters (decreasing)</li>
+          <li>Fines for unpaid: QAR 300+</li>
+        </ul>
+        
+        <h3>Free Parking</h3>
+        <ul>
+          <li>Most mall parking structures</li>
+          <li>Residential area streets</li>
+          <li>Mosque parking (during prayers respectfully)</li>
+          <li>Office building allocated spaces</li>
+        </ul>
+        
+        <h2 id="challenges">Common Driving Challenges</h2>
+        
+        <h3>Aggressive Driving</h3>
+        <p>Qatar's roads feature assertive driving styles:</p>
+        <ul>
+          <li>Tailgating at high speeds</li>
+          <li>Last-second lane changes</li>
+          <li>Horn usage frequent</li>
+          <li>Flashing headlights to move slower vehicles</li>
+        </ul>
+        
+        <p><strong>Defensive Strategies:</strong></p>
+        <ul>
+          <li>Maintain safe following distance</li>
+          <li>Use mirrors constantly</li>
+          <li>Yield to aggressive drivers (safer option)</li>
+          <li>Avoid confrontations absolutely</li>
+          <li>Dashcam recommended for protection</li>
+        </ul>
+        
+        <h3>Roundabouts</h3>
+        <p>Doha features many roundabouts:</p>
+        <ul>
+          <li>Yield to traffic inside roundabout</li>
+          <li>Signal when exiting</li>
+          <li>Stay in appropriate lane for exit</li>
+          <li>Watch for sudden lane changes by others</li>
+        </ul>
+        
+        <h3>Weather Driving</h3>
+        <p><strong>Summer:</strong></p>
+        <ul>
+          <li>AC essential (40°C+ temperatures)</li>
+          <li>Tire pressure checks important</li>
+          <li>Early morning fog occasional</li>
+        </ul>
+        
+        <p><strong>Winter Rains:</strong></p>
+        <ul>
+          <li>Roads become extremely slippery</li>
+          <li>Drainage systems overwhelmed</li>
+          <li>Reduce speed significantly</li>
+          <li>Flash flooding possible in underpasses</li>
+        </ul>
+        
+        <h2 id="requirements">Vehicle Requirements</h2>
+        
+        <h3>Mandatory</h3>
+        <ul>
+          <li>Valid registration (istimara)</li>
+          <li>Insurance certificate</li>
+          <li>Fire extinguisher in vehicle</li>
+          <li>First aid kit (recommended)</li>
+          <li>Warning triangle</li>
+        </ul>
+        
+        <h3>Annual Inspection</h3>
+        <ul>
+          <li>Required for registration renewal</li>
+          <li>Checks brakes, lights, emissions</li>
+          <li>Failure requires repairs before retest</li>
+          <li>Designated inspection centers</li>
+        </ul>
+        
+        <h3>Insurance Requirements</h3>
+        <ul>
+          <li>Third-party minimum</li>
+          <li>Comprehensive recommended</li>
+          <li>Prices: QAR 2,500-6,000/year</li>
+          <li>Compare quotes annually</li>
+        </ul>
+        
+        <h2 id="accidents">Accident Procedures</h2>
+        
+        <h3>Minor Accidents (No injuries)</h3>
+        <ol>
+          <li>Move vehicles to roadside if possible</li>
+          <li>Exchange details</li>
+          <li>Photograph damage and scene</li>
+          <li>Report to police station within 24 hours</li>
+          <li>Obtain police report for insurance</li>
+        </ol>
+        
+        <h3>Serious Accidents</h3>
+        <ol>
+          <li>Call 999 immediately</li>
+          <li>Do not move injured</li>
+          <li>Police will attend scene</li>
+          <li>Await official report</li>
+          <li>Insurance handles claims</li>
+        </ol>
+        
+        <p><strong>Important:</strong> Never admit fault at scene. Let police determine responsibility through investigation.</p>
+        
+        <h2 id="future">Future Transportation Developments</h2>
+        
+        <h3>Ongoing Improvements</h3>
+        <ul>
+          <li>Metro expansion continuing</li>
+          <li>More bus routes added</li>
+          <li>Cycling infrastructure developing</li>
+          <li>Smart parking systems expanding</li>
+          <li>Ride-sharing growth (Careem, Uber)</li>
+        </ul>
+        
+        <p><strong>Impact:</strong> Reduced road dependency expected gradually, but personal vehicle remains dominant transportation mode for foreseeable future.</p>
+        
+        <h2 id="faq">FAQ: Driving in Doha 2025</h2>
+        
+        <div class="space-y-4 my-6">
+          <div>
+            <h4 class="font-bold mb-2">Can women drive in Qatar?</h4>
+            <p>Yes. No gender restrictions on driving. Women obtain licenses same as men.</p>
+          </div>
+          
+          <div>
+            <h4 class="font-bold mb-2">Is international driving permit valid?</h4>
+            <p>Temporarily yes (30-90 days). Long-term residents must obtain Qatar license.</p>
+          </div>
+          
+          <div>
+            <h4 class="font-bold mb-2">How much does fuel cost?</h4>
+            <p>Approximately QAR 2.10/liter for premium—among world's cheapest due to subsidies.</p>
+          </div>
+          
+          <div>
+            <h4 class="font-bold mb-2">Are traffic laws strictly enforced?</h4>
+            <p>Yes. Cameras widespread, fines significant, and police presence visible. Take rules seriously.</p>
+          </div>
+          
+          <div>
+            <h4 class="font-bold mb-2">What side of road does Qatar drive on?</h4>
+            <p>Right side, same as USA and continental Europe. Vehicles are left-hand drive.</p>
+          </div>
+        </div>
+      `
+    },
     'renting-doha-west-bay-al-waab-2025': {
       id: '42',
       title: 'Renting in Doha: West Bay vs Al Waab Comparison Guide 2025',
@@ -4705,6 +5122,19 @@ const BlogPost = () => {
                   
                   {/* Rest of content */}
                   <div dangerouslySetInnerHTML={{ __html: '<h2 id="family-visa">' + post.content.split('<h2 id="family-visa">')[1] }} />
+                </div>
+              ) : slug === 'driving-doha-2025-guide' ? (
+                <div className="prose prose-lg max-w-none space-y-8">
+                  {/* First section through license eligibility */}
+                  <div dangerouslySetInnerHTML={{ __html: post.content.split('<h2 id="rules">')[0] }} />
+                  
+                  {/* Driving License Checker Tool */}
+                  <div className="not-prose my-12">
+                    <DrivingLicenseChecker />
+                  </div>
+                  
+                  {/* Rest of content */}
+                  <div dangerouslySetInnerHTML={{ __html: '<h2 id="rules">' + post.content.split('<h2 id="rules">')[1] }} />
                 </div>
               ) : (
                 <div 
