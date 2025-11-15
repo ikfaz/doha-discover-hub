@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Home, Book, Video, Mail, Image } from 'lucide-react';
+import { Menu, X, Home, Book, Video, Mail, Image, Calculator } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import logo from '@/assets/logo.svg';
 
@@ -43,6 +43,10 @@ const NavBar = () => {
             <Link to="/gallery" className="flex items-center text-gray-700 hover:text-qatar-maroon transition-colors">
               <Image className="h-4 w-4 mr-1" />
               <span>Gallery</span>
+            </Link>
+            <Link to="/budget-planner" className="flex items-center text-gray-700 hover:text-qatar-maroon transition-colors">
+              <Calculator className="h-4 w-4 mr-1" />
+              <span>Budget Planner</span>
             </Link>
             <Link to="/contact" className="flex items-center text-gray-700 hover:text-qatar-maroon transition-colors">
               <Mail className="h-4 w-4 mr-1" />
@@ -102,6 +106,13 @@ const NavBar = () => {
               onClick={() => setIsMenuOpen(false)}
             >
               Gallery
+            </Link>
+            <Link 
+              to="/budget-planner" 
+              className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-qatar-maroon hover:bg-gray-50"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Budget Planner
             </Link>
             <Link 
               to="/contact" 
