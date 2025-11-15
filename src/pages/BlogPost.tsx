@@ -33,12 +33,280 @@ import culturalEventsImage from '@/assets/cultural-events.jpg';
 import miaMuseumImage from '@/assets/mia-museum.jpg';
 import alcoholGuideImage from '@/assets/alcohol-guide-doha.jpg';
 import prostitutionLawsImage from '@/assets/prostitution-laws-legal-guide.jpg';
+import dohaSafetyImage from '@/assets/doha-safety-guide.jpg';
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   
   // Blog post data based on slug
   const blogPosts: Record<string, any> = {
+    'doha-safety-guide-tourists-expats': {
+      id: '33',
+      title: 'How Safe Is Doha, Qatar? (2025 Full Safety Guide for Tourists & Expats)',
+      date: 'May 12, 2025',
+      author: 'Experience Doha Team',
+      readTime: '13 min read',
+      category: 'Expat-Tips',
+      imageUrl: dohaSafetyImage,
+      content: `
+        <p class="lead">Doha, the capital of Qatar, has become one of the world's fastest-growing travel destinations. With luxury hotels, futuristic skyscrapers, and year-round sunshine, millions of tourists visit the city every year. But many first-time visitors ask the same question: <em>"How safe is Doha, Qatar?"</em></p>
+        
+        <p><strong>The simple answer: Doha is one of the safest cities in the world</strong> — for tourists, families, expats, and solo travelers alike.</p>
+        
+        <p>This comprehensive guide explains crime rates, local laws, cultural expectations, nightlife safety, scams, transportation safety, and everything you need to know before traveling to Qatar in 2025.</p>
+        
+        <h2 id="short-answer">Is Doha Safe? The Short Answer</h2>
+        <p><strong>Yes. Doha is exceptionally safe.</strong> It consistently ranks among the top 10 safest cities worldwide, with extremely low crime rates and high police presence.</p>
+        
+        <p>Visitors frequently describe Doha as:</p>
+        <ul>
+          <li>Clean</li>
+          <li>Secure</li>
+          <li>Well-organized</li>
+          <li>Family-friendly</li>
+          <li>Culturally respectful</li>
+          <li>Policed without being intimidating</li>
+        </ul>
+        
+        <p>Whether you're walking along the Corniche at midnight or exploring Souq Waqif during the day, you will feel safe almost everywhere.</p>
+        
+        <h2 id="crime-rates">Crime Rates in Doha (2025 Overview)</h2>
+        <p>Qatar has among the lowest crime rates globally.</p>
+        
+        <h3>Low Risks:</h3>
+        <ul>
+          <li>✔ Violent crime</li>
+          <li>✔ Mugging</li>
+          <li>✔ Assault</li>
+          <li>✔ Pickpocketing</li>
+          <li>✔ Street harassment</li>
+          <li>✔ Car theft</li>
+          <li>✔ Public disorder</li>
+        </ul>
+        
+        <h3>Moderate Risks (mostly rare incidents):</h3>
+        <ul>
+          <li>Online scams</li>
+          <li>Traffic accidents</li>
+          <li>Heat-related emergencies (in summer)</li>
+        </ul>
+        
+        <h3>High Risks:</h3>
+        <p>None for tourists.</p>
+        
+        <p>In 2025, Qatar remains one of the safest countries for solo female travelers, families, and business visitors.</p>
+        
+        <h2 id="why-safe">Why Is Doha So Safe?</h2>
+        <p>There are several reasons why safety levels are exceptionally high:</p>
+        
+        <h3>1. Strong Law Enforcement</h3>
+        <p>Qatar maintains strict laws against:</p>
+        <ul>
+          <li>Theft</li>
+          <li>Violence</li>
+          <li>Harassment</li>
+          <li>Vandalism</li>
+          <li>Public intoxication</li>
+        </ul>
+        <p>Police response time is fast and efficient.</p>
+        
+        <h3>2. Respectful Culture</h3>
+        <p>Qatar is culturally conservative, and most residents follow social norms that promote harmony and respect.</p>
+        
+        <h3>3. High Standard of Living</h3>
+        <p>Poverty and homelessness are extremely rare, reducing crime motives.</p>
+        
+        <h3>4. Surveillance and Security</h3>
+        <p>Public areas, malls, and transport hubs are well-monitored for safety.</p>
+        
+        <h3>5. International Community</h3>
+        <p>With expats making up the majority of the population, the environment is diverse, friendly, and peaceful.</p>
+        
+        <h2 id="female-travelers">Is Doha Safe for Solo Female Travelers?</h2>
+        <p><strong>Yes</strong> — Doha is considered one of the safest Middle Eastern cities for women.</p>
+        
+        <p>Women can safely:</p>
+        <ul>
+          <li>Walk alone in malls</li>
+          <li>Travel via Uber</li>
+          <li>Explore Souq Waqif</li>
+          <li>Visit beaches</li>
+          <li>Shop at night</li>
+        </ul>
+        
+        <p>Harassment is extremely rare compared to many major global cities. However, modest clothing (covering shoulders and knees) is recommended in public areas.</p>
+        
+        <p>Hotel bars, restaurants, and tourist attractions are very safe for women.</p>
+        
+        <h2 id="night-safety">Is Doha Safe at Night?</h2>
+        <p><strong>Absolutely.</strong> Doha's streets, Corniche promenade, and neighborhoods are well-lit and safe even late at night. Violent crime is virtually unknown.</p>
+        
+        <p>You may see families walking with children past midnight — a sign of how safe the city truly is.</p>
+        
+        <p>The only nightlife risks involve:</p>
+        <ul>
+          <li>Alcohol overconsumption in hotel bars</li>
+          <li>Expensive taxis during peak hours</li>
+        </ul>
+        
+        <p>But crime remains extremely low.</p>
+        
+        <h2 id="transport">Is Public Transportation Safe in Doha?</h2>
+        <p><strong>Yes.</strong> Doha's public transport is modern, clean, and secure.</p>
+        
+        <h3>Metro Safety</h3>
+        <p>The Doha Metro is:</p>
+        <ul>
+          <li>Air-conditioned</li>
+          <li>Monitored</li>
+          <li>Reliable</li>
+          <li>Very safe for women and families</li>
+          <li>Affordable</li>
+        </ul>
+        <p>Separate women/family cars are available for comfort.</p>
+        
+        <h3>Taxis & Ride-Sharing</h3>
+        <p>Uber, Careem, and Karwa taxi services are safe, regulated, and easy to use.</p>
+        
+        <h3>Buses</h3>
+        <p>Karwa buses are safe but used less frequently by tourists due to slower travel times.</p>
+        
+        <h2 id="driving">Is Driving in Doha Safe?</h2>
+        <p>Driving is safe but can be challenging because:</p>
+        <ul>
+          <li>Some drivers speed</li>
+          <li>Roads are busy</li>
+          <li>Traffic rules are strict</li>
+          <li>Fines for violations are high</li>
+        </ul>
+        
+        <p>Tourists should stick to:</p>
+        <ul>
+          <li>Taxis</li>
+          <li>Uber</li>
+          <li>Metro</li>
+        </ul>
+        <p>unless they are confident drivers.</p>
+        
+        <h2 id="hotels">How Safe Are Doha's Hotels?</h2>
+        <p>Hotels in Doha — especially 4-star and 5-star properties — maintain extremely high safety standards.</p>
+        
+        <p>You can expect:</p>
+        <ul>
+          <li>24/7 security</li>
+          <li>CCTV</li>
+          <li>Key-card elevators</li>
+          <li>Safe deposit boxes</li>
+          <li>Staff trained in emergency procedures</li>
+        </ul>
+        
+        <p>Top hotels like W Doha, Hilton Doha, Sheraton Grand, and Rixos are known for exceptional safety.</p>
+        
+        <h2 id="scams">Are There Scams in Doha?</h2>
+        <p>While scams are far less common than in other tourist destinations, some things to watch out for include:</p>
+        
+        <h3>1. Online Scams</h3>
+        <ul>
+          <li>Fake social media accounts offering services (especially illegal ones)</li>
+          <li>Fake business pages</li>
+          <li>Fraudulent investment links</li>
+        </ul>
+        
+        <h3>2. Taxi Overcharging</h3>
+        <p>Rare, but it can happen with unlicensed taxis. Use Uber, Careem, or official Karwa taxis.</p>
+        
+        <h3>3. Fake Tour Guides</h3>
+        <p>Only use licensed tour companies.</p>
+        
+        <h3>4. Heat-related Risks</h3>
+        <p>Not a scam — but summer heat can be dangerous. Always drink water and avoid long walks in extreme heat.</p>
+        
+        <h2 id="laws">Local Laws Tourists Should Know</h2>
+        <p>Qatar is safe because laws are respected. Tourists should be aware of:</p>
+        
+        <h3>1. Public Decency Laws</h3>
+        <p>Avoid:</p>
+        <ul>
+          <li>Public intoxication</li>
+          <li>Disorderly conduct</li>
+          <li>Physical intimacy in public</li>
+        </ul>
+        
+        <h3>2. Alcohol Restrictions</h3>
+        <p>Alcohol is legal only in licensed hotel bars; public drinking is illegal.</p>
+        
+        <h3>3. Drug Laws</h3>
+        <p>Zero tolerance — even small amounts lead to severe penalties.</p>
+        
+        <h3>4. Dress Code</h3>
+        <p>Modest clothing is recommended in public.</p>
+        
+        <h3>5. Cybercrime Laws</h3>
+        <p>Posting offensive content online can lead to fines or legal issues.</p>
+        
+        <p>Following these guidelines ensures a trouble-free trip.</p>
+        
+        <h2 id="families">Is Doha Safe for Families?</h2>
+        <p><strong>Yes</strong> — Doha is incredibly family-friendly. Children can safely enjoy:</p>
+        <ul>
+          <li>Parks</li>
+          <li>Beaches</li>
+          <li>Malls</li>
+          <li>Museums</li>
+          <li>Desert tours</li>
+        </ul>
+        
+        <p>The city is clean, organized, and peaceful, making it ideal for family vacations.</p>
+        
+        <h2 id="emergency">Emergency & Health Safety</h2>
+        <p>Qatar has world-class healthcare and emergency services.</p>
+        
+        <h3>Emergency Numbers:</h3>
+        <ul>
+          <li><strong>999</strong> — Police, ambulance, fire</li>
+          <li>Operators speak English</li>
+        </ul>
+        
+        <h3>Hospitals:</h3>
+        <ul>
+          <li>Hamad General Hospital</li>
+          <li>Sidra Medicine</li>
+          <li>Aster Medical</li>
+          <li>Al Ahli Hospital</li>
+        </ul>
+        
+        <p>Healthcare is fast, high-quality, and efficient.</p>
+        
+        <h2 id="tips">Top Safety Tips for Tourists in Doha</h2>
+        <p>Even in a safe city, it's good to follow precautions:</p>
+        <ul>
+          <li>✔ Keep valuables secure in crowded places</li>
+          <li>✔ Drink water regularly (especially in summer)</li>
+          <li>✔ Use licensed taxis or Uber</li>
+          <li>✔ Follow cultural norms</li>
+          <li>✔ Avoid illegal activities</li>
+          <li>✔ Do not drink in public</li>
+          <li>✔ Dress modestly in traditional areas</li>
+        </ul>
+        
+        <h2 id="verdict">Final Verdict: How Safe Is Doha, Qatar?</h2>
+        <p><strong>Doha is one of the safest cities on the planet.</strong> Whether you are a solo traveler, family, couple, or business visitor, you can explore the city with confidence.</p>
+        
+        <h3>In Summary:</h3>
+        <ul>
+          <li>✔ Very low crime</li>
+          <li>✔ Friendly environment</li>
+          <li>✔ Safe day and night</li>
+          <li>✔ Excellent transport</li>
+          <li>✔ Secure hotels</li>
+          <li>✔ Highly respectful culture</li>
+          <li>✔ Perfect for families and solo travelers</li>
+        </ul>
+        
+        <p>If you follow local laws and respect Qatar's culture, you will have a smooth, enjoyable, and safe trip.</p>
+      `,
+      tags: ['Safety Guide', 'Crime Rates', 'Travel Tips', 'Tourist Safety', 'Doha']
+    },
     'prostitution-laws-doha-qatar-guide': {
       id: '32',
       title: 'Prostitution in Doha, Qatar: Is It Legal? (2025 Complete Guide)',
