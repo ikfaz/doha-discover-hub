@@ -13,6 +13,61 @@ const BlogPost = () => {
   
   // Blog post data based on slug
   const blogPosts: Record<string, any> = {
+    'things-to-do-doha-layover': {
+      id: '13',
+      title: '10 Unmissable Things To Do In Doha On A Layover (2025)',
+      date: 'April 22, 2025',
+      author: 'Experience Doha Team',
+      readTime: '11 min read',
+      category: 'Attractions',
+      imageUrl: 'https://images.unsplash.com/photo-1518182170546-07661fd94144?q=80&w=2668&auto=format&fit=crop',
+      content: `
+        <p>Doha has transformed itself from a quiet Gulf state capital into a world-class destination brimming with activities that can fill layovers ranging from a few hours to a full day. The city's compact nature and modern infrastructure make it surprisingly accessible for transit visitors, with experiences that reveal both traditional Arabian culture and Qatar's ambitious vision for the future.</p>
+        
+        <h2 id="museum-islamic-art">1. Museum of Islamic Art</h2>
+        <p>The Museum of Islamic Art stands as perhaps the most essential Doha experience, achievable even with limited time. Designed by I.M. Pei, the building itself is a masterpiece—a geometric fortress rising from its own island in Doha Bay. Inside, the collection spans 1,400 years of Islamic artistic achievement, from intricate metalwork to illuminated manuscripts, ceramics to textiles. The museum opens early and stays open late on certain days, accommodating various layover schedules. Even an hour here provides profound insights into Islamic civilization's artistic legacy, while the museum's waterfront location offers stunning photographs of the Doha skyline.</p>
+        
+        <h2 id="souq-waqif">2. Souq Waqif</h2>
+        <p>Souq Waqif represents the heart of traditional Doha, a restored marketplace that successfully balances authenticity with accessibility. The narrow alleyways overflow with spices, perfumes, traditional clothing, and handcrafted souvenirs. Falcons perch on their handlers' arms outside dedicated shops, while the aroma of Arabic coffee wafts from countless cafes. This isn't a sanitized tourist trap but a living market where locals shop alongside visitors. The architecture, with its exposed wooden beams and wind towers, evokes historical Qatar, though careful restoration has ensured modern comfort. Restaurants here serve some of Doha's best traditional cuisine, from machboos (spiced rice with meat) to harees (wheat and meat porridge), providing cultural immersion through flavor.</p>
+        
+        <h2 id="corniche">3. The Corniche</h2>
+        <p>The Corniche stretches seven kilometers along Doha Bay, offering a walking or cycling path with views that define the city. On one side, the Arabian Gulf's waters; on the other, Doha's futuristic skyline. Early morning or evening visits avoid the daytime heat while providing optimal lighting for photography. Dhow boats—traditional wooden vessels—dock along sections of the Corniche, with many offering harbor cruises that present the skyline from the water. The path connects multiple attractions, making it efficient for layover visitors to experience several sites within a single walk.</p>
+        
+        <h2 id="katara">4. Katara Cultural Village</h2>
+        <p>Katara Cultural Village, located between The Pearl and West Bay, showcases Qatar's commitment to arts and culture. This purpose-built district houses theaters, galleries, restaurants, and an amphitheater modeled on Greek precedents. The architecture blends Islamic motifs with modern design, creating spaces that host everything from international film festivals to traditional music performances. Even without attending a scheduled event, walking through Katara reveals public art installations, artisan workshops, and cultural exhibitions. The beachfront location adds another dimension, with cafes overlooking the water providing restful spots for contemplation.</p>
+        
+        <h2 id="the-pearl">5. The Pearl-Qatar</h2>
+        <p>The Pearl-Qatar demonstrates Doha's luxury aspirations through an artificial island that houses high-end residential and commercial spaces. The marina, lined with yachts and restaurants, offers a Mediterranean atmosphere transplanted to the Gulf. Shopping here trends toward designer brands, though the window shopping and architecture warrant visits regardless of purchasing intentions. The island's layout encourages exploration on foot, with each district presenting slightly different character—some more intimate, others more expansive.</p>
+        
+        <h2 id="desert-safari">6. Desert Safari Adventures</h2>
+        <p>Desert excursions remain feasible even for shorter layovers, with tour operators offering packages as brief as four hours. These trips venture into Qatar's interior landscapes, where rolling dunes replace urban development. Dune bashing—controlled driving at speed over sand dunes—provides adrenaline, while camel rides offer gentler interaction with the environment. Many tours include visits to inland seas where desert meets water, creating landscapes of striking beauty. Sunset departures are particularly popular, as the shifting light transforms the sand from golden to red to purple.</p>
+        
+        <h2 id="national-museum">7. National Museum of Qatar</h2>
+        <p>The National Museum of Qatar, designed by Jean Nouvel, opened in 2019 and immediately became an architectural landmark. The building's interlocking discs evoke the desert rose crystal, while interior exhibits chronicle Qatar's journey from pearling community to modern nation. The museum integrates film, artifacts, and interactive displays to tell stories that are simultaneously specific to Qatar and universal in their themes of identity, development, and aspiration. The adjacent heritage village reconstruction provides additional context for understanding pre-oil Qatar.</p>
+        
+        <h2 id="msheireb">8. Msheireb Downtown Doha</h2>
+        <p>Msheireb Downtown Doha represents sustainable urban development through the restoration and reimagining of a historic district. The area includes four heritage house museums that illuminate aspects of Qatari history: slavery's abolition, petroleum's arrival, traditional architecture, and daily domestic life. These museums are intimate and manageable, requiring perhaps thirty minutes each, making them suitable for layover visits. The surrounding district features contemporary architecture designed for walkability and environmental efficiency, modeling possibilities for Gulf cities typically dependent on automobiles and air conditioning.</p>
+        
+        <h2 id="culinary">9. Culinary Exploration</h2>
+        <p>For culinary exploration beyond Souq Waqif, the food halls and restaurants in various districts offer global cuisine alongside Qatari specialties. The food culture here reflects the expatriate majority population, meaning you'll find exceptional Indian, Filipino, Lebanese, and Persian restaurants operating at levels comparable to their home countries. Many restaurants accommodate tight schedules, with quality food served efficiently, understanding that many diners are indeed transit visitors with flights to catch.</p>
+        
+        <h2 id="spa-wellness">10. Spa and Wellness</h2>
+        <p>For those seeking relaxation over activity, spa facilities at major hotels accept day visitors for individual treatments. After long flights and before longer ones, a massage or hammam experience provides physical restoration while still offering cultural exposure. The traditional hammam experience, with its steam rooms and body treatments, connects to bathing traditions practiced across the Islamic world for centuries.</p>
+      `,
+      tableOfContents: [
+        { title: '1. Museum of Islamic Art', id: 'museum-islamic-art' },
+        { title: '2. Souq Waqif', id: 'souq-waqif' },
+        { title: '3. The Corniche', id: 'corniche' },
+        { title: '4. Katara Cultural Village', id: 'katara' },
+        { title: '5. The Pearl-Qatar', id: 'the-pearl' },
+        { title: '6. Desert Safari Adventures', id: 'desert-safari' },
+        { title: '7. National Museum of Qatar', id: 'national-museum' },
+        { title: '8. Msheireb Downtown Doha', id: 'msheireb' },
+        { title: '9. Culinary Exploration', id: 'culinary' },
+        { title: '10. Spa and Wellness', id: 'spa-wellness' }
+      ],
+      tags: ['Activities', 'Layover Guide', 'Attractions', 'Things To Do', 'Doha']
+    },
     'hamad-airport-transfers-guide': {
       id: '12',
       title: 'Transfers at Hamad International Airport: Complete Guide',
