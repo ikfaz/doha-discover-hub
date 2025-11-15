@@ -196,14 +196,14 @@ const BlogPost = () => {
             <div className="lg:col-span-2">
               {/* Table of Contents */}
               {post.tableOfContents && (
-                <div className="mb-8 p-6 bg-gray-50 rounded-lg border border-gray-200">
+                <div className="mb-8 p-6 bg-gray-50 rounded-lg border-2 border-qatar-maroon">
                   <h3 className="text-lg font-bold mb-4 text-qatar-maroon">Table of Contents</h3>
                   <nav className="space-y-2">
                     {post.tableOfContents.map((item: { title: string; id: string }) => (
                       <a
                         key={item.id}
                         href={`#${item.id}`}
-                        className="block text-sm text-gray-700 hover:text-qatar-gold transition-colors py-1 hover:translate-x-1 transform duration-200"
+                        className="block text-sm text-gray-900 hover:text-qatar-gold transition-colors py-1 hover:translate-x-1 transform duration-200 font-medium"
                         onClick={(e) => {
                           e.preventDefault();
                           document.getElementById(item.id)?.scrollIntoView({ behavior: 'smooth' });
