@@ -52,25 +52,32 @@ const Index = () => {
     },
   ];
 
+  // Structured Data for SEO
+  React.useEffect(() => {
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.innerHTML = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "ExperienceDoha.com",
+      "url": "https://experiencedoha.com",
+      "description": "Comprehensive guide to Doha attractions, culture, dining, and travel experiences in Qatar",
+      "publisher": {
+        "@type": "Organization",
+        "name": "ExperienceDoha.com"
+      }
+    });
+    document.head.appendChild(script);
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, []);
+
   return (
-    <>
-      <script type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "WebSite",
-          "name": "ExperienceDoha.com",
-          "url": "https://experiencedoha.com",
-          "description": "Comprehensive guide to Doha attractions, culture, dining, and travel experiences in Qatar",
-          "publisher": {
-            "@type": "Organization",
-            "name": "ExperienceDoha.com"
-          }
-        })}
-      </script>
-      <div className="min-h-screen flex flex-col">
-        <NavBar />
-        
-        <main>
+    <div className="min-h-screen flex flex-col">
+      <NavBar />
+      
+      <main>
           <section className="relative h-[90vh] bg-qatar-maroon text-white overflow-hidden">
             <div className="absolute inset-0">
               <div 
@@ -156,7 +163,6 @@ const Index = () => {
       
       <Footer />
     </div>
-    </>
   );
 };
 

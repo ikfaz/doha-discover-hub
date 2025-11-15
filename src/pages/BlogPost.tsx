@@ -1778,42 +1778,46 @@ const BlogPost = () => {
   };
 
   // Structured Data for SEO
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": post.title,
-    "image": post.imageUrl,
-    "author": {
-      "@type": "Organization",
-      "name": post.author
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "ExperienceDoha.com",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://experiencedoha.com/logo.png"
+  React.useEffect(() => {
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.innerHTML = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": post.title,
+      "image": post.imageUrl,
+      "author": {
+        "@type": "Organization",
+        "name": post.author
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "ExperienceDoha.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://experiencedoha.com/logo.png"
+        }
+      },
+      "datePublished": post.date,
+      "description": post.excerpt || post.content.substring(0, 160).replace(/<[^>]*>/g, ''),
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": `https://experiencedoha.com/blog/${slug}`
       }
-    },
-    "datePublished": post.date,
-    "description": post.excerpt || post.content.substring(0, 160).replace(/<[^>]*>/g, ''),
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": `https://experiencedoha.com/blog/${slug}`
-    }
-  };
+    });
+    document.head.appendChild(script);
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, [post, slug]);
 
   return (
-    <>
-      <script type="application/ld+json">
-        {JSON.stringify(structuredData)}
-      </script>
-      <div className="min-h-screen flex flex-col">
-        <NavBar />
-        
-        <main className="flex-1">
-          {/* Hero Section */}
-          <article>
+    <div className="min-h-screen flex flex-col">
+      <NavBar />
+      
+      <main className="flex-1">
+        {/* Hero Section */}
+        <article>
             <div className="relative h-[400px] w-full">
               <img
                 src={post.imageUrl}
@@ -1960,7 +1964,6 @@ const BlogPost = () => {
 
       <Footer />
     </div>
-    </>
   );
 };
 
