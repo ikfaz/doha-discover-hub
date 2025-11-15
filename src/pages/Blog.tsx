@@ -17,6 +17,15 @@ const Blog = () => {
   
   const allPosts = [
     {
+      id: '11',
+      title: 'Complete Doha Layover Guide: Qatar Stopover Program Explained',
+      excerpt: 'Transform your layover into an adventure with Qatar Airways\' amazing stopover program. Hotels from $14/night, visa-free entry, and world-class experiences await.',
+      imageUrl: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&auto=format&fit=crop',
+      category: 'Expat-Tips',
+      date: 'April 20, 2025',
+      slug: 'qatar-stopover-program-guide',
+    },
+    {
       id: '1',
       title: 'Top 10 Must-Visit Attractions in Doha',
       excerpt: 'Discover the most spectacular sights and experiences in Qatar\'s vibrant capital city.',
