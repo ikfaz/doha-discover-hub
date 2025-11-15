@@ -13,6 +13,65 @@ const BlogPost = () => {
   
   // Blog post data based on slug
   const blogPosts: Record<string, any> = {
+    '24-hours-doha-qatar-airways': {
+      id: '16',
+      title: '24 Hours in Doha: Complete Qatar Airways Itinerary',
+      date: 'April 25, 2025',
+      author: 'Experience Doha Team',
+      readTime: '12 min read',
+      category: 'Attractions',
+      imageUrl: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=2668&auto=format&fit=crop',
+      content: `
+        <p>When Qatar Airways promotes 24 hours in Doha, they're advocating for exactly the kind of comprehensive experience that transforms their hub city from transit point to destination. A full day allows immersion into Doha's character—its blend of tradition and futurism, its culinary richness, its architectural ambitions, and its cultural institutions. The airline's promotional materials outline itineraries because they genuinely believe in their home base's appeal, and 24 hours provides sufficient time to validate that belief.</p>
+        
+        <h2 id="morning-sunrise">Morning: Sunrise at the Corniche</h2>
+        <p>Morning begins optimally with sunrise over the Corniche, when Doha's heat remains manageable and the waterfront comes alive with joggers, families, and fishermen. The skyline's glass towers catch early light dramatically, creating photographs that capture the city's essence. The walk itself covers seven kilometers entirely, though selective sections provide representative experiences. West Bay's towers loom closest at the Corniche's northern end, while the southern sections offer Museum of Islamic Art views across the water.</p>
+        
+        <h2 id="breakfast">Breakfast: Traditional Cafes</h2>
+        <p>Breakfast might follow at one of Doha's many hotel restaurants offering international buffets, though more authentic experiences exist at traditional cafes serving foul (fava bean stew), labneh (strained yogurt), fresh flatbreads, and Arabic tea. Souq Waqif's morning atmosphere differs from its evening energy—quieter, more local, with shopkeepers preparing displays and deliveries restocking supplies. The morning meal here costs less than hotel options while providing cultural immersion from the day's start.</p>
+        
+        <h2 id="museum-islamic-art">Mid-Morning: Museum of Islamic Art</h2>
+        <p>Mid-morning shifts focus to cultural institutions. The Museum of Islamic Art deserves two hours minimum, longer if art history interests you particularly. The collection's quality rivals major international museums, with objects from across Islam's geographic spread and historical timeline. The building's architecture by I.M. Pei—his final major work—justifies visits independently of contents, with its geometric forms, natural lighting, and views integrating interior experiences with external landscape. The museum cafe offers respite with quality refreshments, while the gift shop stocks books and artisanal products superior to typical tourist merchandise.</p>
+        
+        <h2 id="lunch-souq">Lunch: Souq Waqif Dining</h2>
+        <p>Lunch at Souq Waqif provides both nourishment and experience, with restaurants like Parisa (Persian cuisine in stunning mirror-work interiors) or Damasca One (Syrian specialties) offering memorable meals. The souq's afternoon energy builds as temperatures peak and people seek shaded commerce. This is when the market's complexity reveals itself—beyond tourist souvenirs lie sections selling falcon equipment, traditional clothing, household goods, and wedding supplies. Getting somewhat lost within the souq's maze yields discoveries impossible through planned routes.</p>
+        
+        <h2 id="afternoon-museums">Afternoon: National Museum or The Pearl</h2>
+        <p>Afternoon might include the National Museum of Qatar, whose desert rose architecture and multimedia storytelling approach national history innovatively. Alternatively, The Pearl-Qatar provides contrast—contemporary luxury, marina settings, and international dining options. The island's construction itself represents remarkable engineering, having created habitable space from nothing through land reclamation. Walking its marina districts, observing yacht culture, and perhaps indulging in afternoon gelato offers relaxation before evening activities.</p>
+        
+        <h2 id="desert-excursion">Late Afternoon: Desert Safari Option</h2>
+        <p>Late afternoon excursions into the desert remain feasible within 24-hour windows, particularly with organized tours that optimize logistics. The desert experience, including dune bashing, camel rides, and potential falcon interaction, provides counterpoint to urban sophistication. Watching sunset from dune peaks, with horizon lines uninterrupted by construction, connects visitors to landscapes that defined Qatar long before petroleum wealth enabled Doha's towers.</p>
+        
+        <h2 id="evening-souq">Evening: Souq Waqif After Dark</h2>
+        <p>Evening returns to Souq Waqif, transformed under lights into atmospheric wonderland. The market's activity peaks after sunset, when temperatures cool and families emerge for shopping and socializing. Dinner here should include traditional Qatari dishes if you haven't yet sampled them. Following the meal, Al Shurfa restaurant's rooftop terrace provides sweeping souq views while serving excellent Arabic coffee and tea. The surrounding area offers opportunities for final souvenir purchases, perhaps acquiring spices, perfumes, or pashmina shawls characteristic of the region.</p>
+        
+        <h2 id="night-dhow">Night: Dhow Cruise or Cultural Performance</h2>
+        <p>The day's conclusion might include dhow boat cruising along the Corniche, viewing the city from water perspectives as lights illuminate the skyline. These cruises typically last one to two hours, including refreshments, and provide peaceful conclusion to active days. Alternatively, visiting Katara Cultural Village for evening performances—music, theater, or film depending on current programming—offers cultural engagement before departure.</p>
+        
+        <h2 id="pacing-tips">Pacing and Rest</h2>
+        <p>Throughout this 24-hour itinerary, pacing matters tremendously. Rest periods between activities prevent exhaustion, particularly during warmer months. Hotel check-in times, if using Qatar Airways' stopover program, provide midday respite opportunities where naps, showers, and general refreshment enable sustained exploration. The goal isn't checking every item on tourist lists but experiencing sufficient depth to understand Doha's character genuinely.</p>
+        
+        <h2 id="transportation">Getting Around</h2>
+        <p>Transportation between these activities utilizes combinations of walking (particularly in Souq Waqif and along Corniche), taxi services, and potentially Doha's metro system for efficient, affordable transit. The city's size, while growing, remains manageable, with major attractions concentrated in accessible areas. Traffic patterns, while occasionally congested during rush hours, rarely create significant delays.</p>
+        
+        <h2 id="conclusion">Qatar Airways' Vision Realized</h2>
+        <p>Qatar Airways' promotion of 24-hour Doha experiences serves mutual interests—the airline benefits from passengers choosing routes that utilize their hub, while travelers gain experiences that transcend typical transit. The success of this arrangement relies upon Doha actually delivering value, which contemporary developments ensure it does. The city that once existed primarily as pearling port and quiet capital has invested strategically in becoming genuinely destination-worthy, and a full day there confirms this transformation convincingly.</p>
+      `,
+      tableOfContents: [
+        { title: 'Morning: Sunrise at the Corniche', id: 'morning-sunrise' },
+        { title: 'Breakfast: Traditional Cafes', id: 'breakfast' },
+        { title: 'Mid-Morning: Museum of Islamic Art', id: 'museum-islamic-art' },
+        { title: 'Lunch: Souq Waqif Dining', id: 'lunch-souq' },
+        { title: 'Afternoon: National Museum or The Pearl', id: 'afternoon-museums' },
+        { title: 'Late Afternoon: Desert Safari Option', id: 'desert-excursion' },
+        { title: 'Evening: Souq Waqif After Dark', id: 'evening-souq' },
+        { title: 'Night: Dhow Cruise or Cultural Performance', id: 'night-dhow' },
+        { title: 'Pacing and Rest', id: 'pacing-tips' },
+        { title: 'Getting Around', id: 'transportation' },
+        { title: "Qatar Airways' Vision Realized", id: 'conclusion' }
+      ],
+      tags: ['24 Hours', 'Full Day Itinerary', 'Qatar Airways', 'Complete Guide', 'Doha']
+    },
     'doha-layover-time-guide': {
       id: '15',
       title: 'Layover in Doha Guide: What to Do in 2–12 Hours',

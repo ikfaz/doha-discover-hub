@@ -17,6 +17,15 @@ const Blog = () => {
   
   const allPosts = [
     {
+      id: '16',
+      title: '24 Hours in Doha: Complete Qatar Airways Itinerary',
+      excerpt: 'Make the most of a full day in Doha with this detailed 24-hour itinerary - from sunrise on the Corniche to evening dhow cruises.',
+      imageUrl: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop',
+      category: 'Attractions',
+      date: 'April 25, 2025',
+      slug: '24-hours-doha-qatar-airways',
+    },
+    {
       id: '15',
       title: 'Layover in Doha Guide: What to Do in 2–12 Hours',
       excerpt: 'Detailed breakdown of what you can realistically accomplish during layovers of different lengths - from 2 hours to a full day in Doha.',
