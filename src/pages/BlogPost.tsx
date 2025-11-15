@@ -7,6 +7,30 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Calendar, Clock, Facebook, Twitter, Share2 } from 'lucide-react';
 import BlogCard from '@/components/BlogCard';
+import desertSafariImage from '@/assets/desert-safari-inland-sea.jpg';
+import miaNmoqImage from '@/assets/mia-nmoq-museums.jpg';
+import souqWaqifNightImage from '@/assets/souq-waqif-night.jpg';
+import dohaLayoverImage from '@/assets/doha-layover-experience.jpg';
+import qatarAirwaysStopoverImage from '@/assets/qatar-airways-stopover.jpg';
+import dohaMediationImage from '@/assets/doha-mediation-hub.jpg';
+import fifaU17Image from '@/assets/fifa-u17-world-cup.jpg';
+import cornicheSunsetImage from '@/assets/corniche-sunset-dhow.jpg';
+import pearlQatarImage from '@/assets/pearl-qatar-luxury.jpg';
+import kataraImage from '@/assets/katara-cultural-village.jpg';
+import hamadAirportInteriorImage from '@/assets/hamad-airport-interior.jpg';
+import fiveBestLayoverImage from '@/assets/five-best-layover.jpg';
+import nineHourStopoverImage from '@/assets/9-hour-stopover.jpg';
+import discoverQatarImage from '@/assets/discover-qatar.jpg';
+import twentyFourHoursImage from '@/assets/24-hours-itinerary.jpg';
+import layoverTimeGuideImage from '@/assets/layover-time-guide.jpg';
+import perfectLayoverImage from '@/assets/perfect-layover.jpg';
+import unmissableThingsImage from '@/assets/10-unmissable-things.jpg';
+import hamadAirportTransfersImage from '@/assets/hamad-airport-transfers.jpg';
+import stopoverProgramImage from '@/assets/stopover-program.jpg';
+import top10AttractionsImage from '@/assets/top-10-attractions.jpg';
+import qatariCuisineImage from '@/assets/qatari-cuisine.jpg';
+import culturalEventsImage from '@/assets/cultural-events.jpg';
+import miaMuseumImage from '@/assets/mia-museum.jpg';
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -20,7 +44,7 @@ const BlogPost = () => {
       author: 'Experience Doha Team',
       readTime: '10 min read',
       category: 'Attractions',
-      imageUrl: 'https://images.unsplash.com/photo-1509316785289-025f5b846b35?q=80&w=2668&auto=format&fit=crop',
+      imageUrl: desertSafariImage,
       content: `
         <p>No visit to Qatar is complete without venturing beyond the glittering skyline of Doha to experience the raw, untamed beauty of the Arabian desert. The quintessential Qatari adventure is the <strong>Desert Safari and Inland Sea (Khor Al Adaid) trip</strong>, a thrilling journey that combines adrenaline-pumping dune bashing with the serene, natural wonder of a UNESCO-recognized site where the sea meets the sand.</p>
         
@@ -118,11 +142,11 @@ const BlogPost = () => {
     'mia-nmoq-museum-combo-guide': {
       id: '29',
       title: 'A Tale of Two Museums: Unlocking Qatar\'s Past and Present with the MIA + NMoQ Combo',
-      date: 'May 8, 2025',
+      date: 'May 11, 2025',
       author: 'Experience Doha Team',
-      readTime: '11 min read',
+      readTime: '12 min read',
       category: 'Culture',
-      imageUrl: 'https://images.unsplash.com/photo-1554907984-15263bfd63bd?q=80&w=2668&auto=format&fit=crop',
+      imageUrl: miaNmoqImage,
       content: `
         <p>Doha is rapidly establishing itself as a global cultural capital, and at the heart of this transformation are two architectural and artistic masterpieces: the <strong>Museum of Islamic Art (MIA)</strong> and the <strong>National Museum of Qatar (NMoQ)</strong>. These institutions, managed by Qatar Museums, offer a profound and complementary journey through the region's history, from the dawn of Islam to the modern, dynamic nation of Qatar. For the discerning traveler, the most efficient and enriching way to experience both is through a combined ticket or the <strong>Discover One Pass</strong>.</p>
         
@@ -223,11 +247,11 @@ const BlogPost = () => {
     'souq-waqif-night-experiences-haggling': {
       id: '28',
       title: 'The Heart of Doha After Dark: Souq Waqif Night Experiences and the Art of Haggling',
-      date: 'May 7, 2025',
+      date: 'May 13, 2025',
       author: 'Experience Doha Team',
       readTime: '9 min read',
       category: 'Culture',
-      imageUrl: 'https://images.unsplash.com/photo-1555400038-63f5ba517a47?q=80&w=2668&auto=format&fit=crop',
+      imageUrl: souqWaqifNightImage,
       content: `
         <p>As the intense desert sun dips below the West Bay skyline, the ancient heart of Doha begins to beat with a renewed energy. <strong>Souq Waqif</strong>, meaning "standing market," is not merely a shopping destination; it is a living, breathing cultural institution that truly comes alive after sunset. For any visitor to Qatar, a night spent wandering its meticulously restored alleys, inhaling the scent of spices and incense, and engaging in the time-honored tradition of haggling, is an essential experience.</p>
         
@@ -325,7 +349,7 @@ const BlogPost = () => {
       author: 'Experience Doha Team',
       readTime: '12 min read',
       category: 'Expat-Tips',
-      imageUrl: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2668&auto=format&fit=crop',
+      imageUrl: dohaLayoverImage,
       content: `
         <p>For millions of travelers each year, Doha, Qatar, is more than just a transit point—it is a gateway to the world and an increasingly popular stopover destination. Thanks to the award-winning services of Qatar Airways and the strategically designed <strong>Discover Qatar Stopover Program</strong>, a layover of 24 to 96 hours can be seamlessly transformed into a mini-vacation. This guide provides meticulously planned itineraries to help you maximize a 24-hour dash or a more leisurely 48-hour exploration of Qatar's vibrant capital.</p>
         
@@ -461,7 +485,7 @@ const BlogPost = () => {
       author: 'Experience Doha Team',
       readTime: '10 min read',
       category: 'Expat-Tips',
-      imageUrl: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=2668&auto=format&fit=crop',
+      imageUrl: qatarAirwaysStopoverImage,
       content: `
         <p>Qatar Airways, consistently ranked among the world's leading airlines, has transformed the concept of a long layover from a travel inconvenience into a coveted opportunity. Through its partnership with <strong>Discover Qatar</strong>, the airline offers exceptionally priced stopover packages that allow passengers to explore the vibrant city of Doha for up to four nights. This program, combined with the airline's world-class lounge facilities at Hamad International Airport (HIA), creates a seamless and luxurious travel experience that effectively turns one journey into two distinct holidays.</p>
         
@@ -576,7 +600,7 @@ const BlogPost = () => {
       author: 'Experience Doha Team',
       readTime: '9 min read',
       category: 'Culture',
-      imageUrl: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2668&auto=format&fit=crop',
+      imageUrl: dohaMediationImage,
       content: `
         <p>In recent decades, the State of Qatar has strategically positioned itself as a crucial player in international diplomacy, transforming its capital, Doha, into a recognized <strong>global mediation hub</strong>. This role extends far beyond its economic power, leveraging its political neutrality, strategic location, and commitment to dialogue to facilitate peace talks and resolve complex international conflicts. A prime example of this commitment is Qatar's sustained effort to mediate the long-running conflict in the Democratic Republic of Congo (DRC), culminating in the recent <strong>Doha Framework for Peace</strong> signed between the DRC government and the M23 movement.</p>
         
@@ -670,7 +694,7 @@ const BlogPost = () => {
       author: 'Experience Doha Team',
       readTime: '8 min read',
       category: 'Events',
-      imageUrl: 'https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=2668&auto=format&fit=crop',
+      imageUrl: fifaU17Image,
       content: `
         <p>Following the monumental success of the FIFA World Cup 2022™, Qatar is set to host another major global football event: the expanded <strong>FIFA U-17 World Cup Qatar 2025™</strong>. This tournament, scheduled to take place from <strong>November 3 to November 27, 2025</strong>, will be the first of five consecutive editions held in Qatar, showcasing the nation's commitment to football development and its world-class infrastructure. For fans, this is a unique opportunity to witness the future stars of the sport in action.</p>
         
@@ -775,7 +799,7 @@ const BlogPost = () => {
       author: 'Experience Doha Team',
       readTime: '8 min read',
       category: 'Attractions',
-      imageUrl: 'https://images.unsplash.com/photo-1519904981063-b0cf448d479e?q=80&w=2668&auto=format&fit=crop',
+      imageUrl: cornicheSunsetImage,
       content: `
         <p>The <strong>Doha Corniche</strong> is the seven-kilometer-long waterfront promenade that sweeps along Doha Bay, offering the most iconic views of the city. It is the social, recreational, and visual heart of the capital. As the day transitions into evening, the Corniche transforms into a spectacle of light and color, offering two quintessential Qatari experiences: a tranquil sunset walk or a mesmerizing traditional <strong>dhow cruise</strong>.</p>
         
@@ -908,7 +932,7 @@ const BlogPost = () => {
       author: 'Experience Doha Team',
       readTime: '9 min read',
       category: 'Lifestyle',
-      imageUrl: 'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=2668&auto=format&fit=crop',
+      imageUrl: pearlQatarImage,
       content: `
         <p>The Pearl-Qatar is an artificial island spanning nearly four million square meters, a masterpiece of urban planning and a symbol of Qatar's ambition and affluence. Often referred to as the "Arabian Riviera," this luxurious destination offers an unparalleled experience of high-end shopping, world-class dining, and Mediterranean-inspired living. For the discerning traveler, The Pearl is a must-visit to witness the pinnacle of Doha's modern, cosmopolitan lifestyle.</p>
         
@@ -1002,7 +1026,7 @@ const BlogPost = () => {
       author: 'Experience Doha Team',
       readTime: '10 min read',
       category: 'Events',
-      imageUrl: 'https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?q=80&w=2668&auto=format&fit=crop',
+      imageUrl: kataraImage,
       content: `
         <p><strong>Katara Cultural Village</strong> stands as a unique and ambitious project in Doha, a dedicated space designed to foster global understanding through art, heritage, and cultural exchange. More than just a collection of beautiful buildings, Katara is a dynamic, year-round host for festivals, exhibitions, and performances. For visitors planning a trip to Qatar in 2025, understanding the Katara events calendar is essential for tapping into the heart of the nation's cultural life.</p>
         
@@ -1123,11 +1147,11 @@ const BlogPost = () => {
     'doha-airport-layover-activities': {
       id: '20',
       title: 'Ten Ways to Enjoy a Layover at Doha Airport',
-      date: 'April 29, 2025',
+      date: 'Jan 15, 2025',
       author: 'Experience Doha Team',
-      readTime: '11 min read',
+      readTime: '8 min read',
       category: 'Expat-Tips',
-      imageUrl: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=2668&auto=format&fit=crop',
+      imageUrl: hamadAirportInteriorImage,
       content: `
         <p>When circumstances prevent or discourage city exploration, Hamad International Airport itself provides remarkable layover experiences that transform waiting time into enjoyment. The airport, consistently ranked among the world's best, has been designed specifically to serve connecting passengers with facilities that rival many city attractions. Understanding and utilizing these airport offerings ensures that even confined layovers become pleasant rather than tedious.</p>
         
@@ -1186,11 +1210,11 @@ const BlogPost = () => {
     'five-best-things-doha-layover': {
       id: '19',
       title: 'The Five Best Things to Do on a Layover in Doha',
-      date: 'April 28, 2025',
+      date: 'Jan 18, 2025',
       author: 'Experience Doha Team',
-      readTime: '9 min read',
+      readTime: '7 min read',
       category: 'Attractions',
-      imageUrl: 'https://images.unsplash.com/photo-1510382291698-79dd5a410d6e?q=80&w=2668&auto=format&fit=crop',
+      imageUrl: fiveBestLayoverImage,
       content: `
         <p>Distilling Doha's offerings into five optimal layover activities requires balancing impact, feasibility, and distinctiveness—experiences providing maximum return on limited time investment while showcasing what makes Qatar genuinely unique. These selections prioritize accessibility alongside significance, ensuring that even brief layovers capture the city's essential character.</p>
         
@@ -1229,7 +1253,7 @@ const BlogPost = () => {
       author: 'Experience Doha Team',
       readTime: '10 min read',
       category: 'Expat-Tips',
-      imageUrl: 'https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?q=80&w=2668&auto=format&fit=crop',
+      imageUrl: nineHourStopoverImage,
       content: `
         <p>The nine-hour stopover represents a particularly interesting decision point for travelers—long enough that exploration becomes genuinely feasible yet short enough that risks and logistics require careful consideration. The worthiness question hinges on individual priorities, risk tolerance, and specific circumstances, but the case for exploration generally outweighs staying airport-bound when passengers understand what's involved.</p>
         
@@ -1284,7 +1308,7 @@ const BlogPost = () => {
       author: 'Experience Doha Team',
       readTime: '11 min read',
       category: 'Culture',
-      imageUrl: 'https://images.unsplash.com/photo-1518182170546-07661fd94144?q=80&w=2668&auto=format&fit=crop',
+      imageUrl: discoverQatarImage,
       content: `
         <p>Discover Qatar, the official destination marketing organization, has crafted their messaging around a simple premise: Qatar deserves consideration as a destination, not merely a transit point. Their materials emphasize the nation's investments in tourism infrastructure, cultural preservation, and visitor experience, arguing persuasively that stopovers here provide unique value impossible to replicate elsewhere. The organization's campaigns showcase what distinguishes Qatar—its blend of Gulf heritage with futuristic vision, its safety and cleanliness, its ambitious cultural projects, and its natural landscapes.</p>
         
@@ -1343,7 +1367,7 @@ const BlogPost = () => {
       author: 'Experience Doha Team',
       readTime: '12 min read',
       category: 'Attractions',
-      imageUrl: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=2668&auto=format&fit=crop',
+      imageUrl: twentyFourHoursImage,
       content: `
         <p>When Qatar Airways promotes 24 hours in Doha, they're advocating for exactly the kind of comprehensive experience that transforms their hub city from transit point to destination. A full day allows immersion into Doha's character—its blend of tradition and futurism, its culinary richness, its architectural ambitions, and its cultural institutions. The airline's promotional materials outline itineraries because they genuinely believe in their home base's appeal, and 24 hours provides sufficient time to validate that belief.</p>
         
@@ -1398,11 +1422,11 @@ const BlogPost = () => {
     'doha-layover-time-guide': {
       id: '15',
       title: 'Layover in Doha Guide: What to Do in 2–12 Hours',
-      date: 'April 24, 2025',
+      date: 'Feb 1, 2025',
       author: 'Experience Doha Team',
       readTime: '9 min read',
       category: 'Expat-Tips',
-      imageUrl: 'https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?q=80&w=2668&auto=format&fit=crop',
+      imageUrl: layoverTimeGuideImage,
       content: `
         <p>The feasibility and scope of Doha exploration scales directly with available time, each hour opening new possibilities while requiring adjusted expectations. Understanding what's achievable within specific timeframes prevents both underutilization and overscheduling, two common layover pitfalls that diminish potential enjoyment.</p>
         
@@ -1449,11 +1473,11 @@ const BlogPost = () => {
     'perfect-layover-doha-guide': {
       id: '14',
       title: 'How to Spend the Perfect Layover in Doha, Qatar',
-      date: 'April 23, 2025',
+      date: 'Feb 3, 2025',
       author: 'Experience Doha Team',
-      readTime: '10 min read',
+      readTime: '8 min read',
       category: 'Expat-Tips',
-      imageUrl: 'https://images.unsplash.com/photo-1518182170546-07661fd94144?q=80&w=2668&auto=format&fit=crop',
+      imageUrl: perfectLayoverImage,
       content: `
         <p>Crafting the perfect layover experience requires balancing ambition with realism, ensuring you sample enough of Doha to feel satisfied without creating stress that undermines the journey's enjoyment. The perfect layover isn't about seeing everything but about seeing the right things at the right pace, leaving you enriched rather than exhausted for your continuing travels.</p>
         
@@ -1504,11 +1528,11 @@ const BlogPost = () => {
     'things-to-do-doha-layover': {
       id: '13',
       title: '10 Unmissable Things To Do In Doha On A Layover (2025)',
-      date: 'April 22, 2025',
+      date: 'Feb 5, 2025',
       author: 'Experience Doha Team',
-      readTime: '11 min read',
+      readTime: '10 min read',
       category: 'Attractions',
-      imageUrl: 'https://images.unsplash.com/photo-1518182170546-07661fd94144?q=80&w=2668&auto=format&fit=crop',
+      imageUrl: unmissableThingsImage,
       content: `
         <p>Doha has transformed itself from a quiet Gulf state capital into a world-class destination brimming with activities that can fill layovers ranging from a few hours to a full day. The city's compact nature and modern infrastructure make it surprisingly accessible for transit visitors, with experiences that reveal both traditional Arabian culture and Qatar's ambitious vision for the future.</p>
         
@@ -1559,11 +1583,11 @@ const BlogPost = () => {
     'hamad-airport-transfers-guide': {
       id: '12',
       title: 'Transfers at Hamad International Airport: Complete Guide',
-      date: 'April 21, 2025',
+      date: 'Feb 8, 2025',
       author: 'Experience Doha Team',
-      readTime: '10 min read',
+      readTime: '7 min read',
       category: 'Expat-Tips',
-      imageUrl: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=2668&auto=format&fit=crop',
+      imageUrl: hamadAirportTransfersImage,
       content: `
         <p>Hamad International Airport, consistently ranked among the world's finest aviation hubs, has engineered its transfer process to be as seamless as possible. For the millions of passengers connecting through Doha annually, understanding this process eliminates anxiety and maximizes the efficiency of what is already a remarkably well-organized system.</p>
         
@@ -1614,11 +1638,11 @@ const BlogPost = () => {
     'qatar-stopover-program-guide': {
       id: '11',
       title: 'Complete Doha Layover Guide: Qatar Stopover Program Explained',
-      date: 'April 20, 2025',
+      date: 'Feb 10, 2025',
       author: 'Experience Doha Team',
-      readTime: '12 min read',
+      readTime: '9 min read',
       category: 'Expat-Tips',
-      imageUrl: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=2668&auto=format&fit=crop',
+      imageUrl: stopoverProgramImage,
       content: `
         <p>Qatar Airways has positioned itself as more than just an airline—it's become a gateway to experiencing one of the Middle East's most dynamic destinations through its innovative Stopover Program. This initiative transforms what would otherwise be a tedious layover into an opportunity for genuine exploration, offering travelers remarkably affordable packages that include accommodation, tours, and experiences in Doha.</p>
         
@@ -1673,11 +1697,11 @@ const BlogPost = () => {
     'default': {
       id: '1',
       title: 'Top 10 Must-Visit Attractions in Doha',
-      date: 'April 15, 2025',
+      date: 'March 1, 2025',
       author: 'Experience Doha Team',
-      readTime: '8 min read',
+      readTime: '10 min read',
       category: 'Attractions',
-      imageUrl: 'https://images.unsplash.com/photo-1518182170546-07661fd94144?q=80&w=2668&auto=format&fit=crop',
+      imageUrl: top10AttractionsImage,
       content: `
         <p>Doha, the capital city of Qatar, has transformed itself into a vibrant metropolis that seamlessly blends traditional Arabian heritage with futuristic architecture and world-class amenities. From cultural landmarks to modern marvels, here are the top 10 attractions you shouldn't miss when visiting Doha.</p>
         
@@ -1724,7 +1748,7 @@ const BlogPost = () => {
       id: '2',
       title: 'Best Local Restaurants for Authentic Qatari Cuisine',
       excerpt: 'Taste the traditional flavors of Qatar at these local favorite dining spots.',
-      imageUrl: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&auto=format&fit=crop',
+      imageUrl: qatariCuisineImage,
       category: 'Food',
       date: 'April 10, 2025',
       slug: 'authentic-qatari-cuisine',
@@ -1733,7 +1757,7 @@ const BlogPost = () => {
       id: '3',
       title: 'Upcoming Cultural Events in Doha This Summer',
       excerpt: 'Mark your calendar for these exciting cultural festivals and events.',
-      imageUrl: 'https://images.unsplash.com/photo-1466442929976-97f336a657be?w=800&auto=format&fit=crop',
+      imageUrl: culturalEventsImage,
       category: 'Events',
       date: 'April 5, 2025',
       slug: 'summer-cultural-events',
@@ -1742,7 +1766,7 @@ const BlogPost = () => {
       id: '4',
       title: 'A Day at the Museum of Islamic Art',
       excerpt: 'Explore one of Doha\'s most iconic architectural landmarks and its world-class collections.',
-      imageUrl: 'https://images.unsplash.com/photo-1473177104440-ffee2f376098?w=800&auto=format&fit=crop',
+      imageUrl: miaMuseumImage,
       category: 'Attractions',
       date: 'April 2, 2025',
       slug: 'museum-islamic-art',
