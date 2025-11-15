@@ -18,9 +18,19 @@ import prostitutionLawsImage from '@/assets/prostitution-laws-legal-guide.jpg';
 import dohaSafetyImage from '@/assets/doha-safety-guide.jpg';
 import womenDrivingImage from '@/assets/women-driving-qatar.jpg';
 import qatariDishesImage from '@/assets/qatari-dishes-guide.jpg';
+import hamadAirportGuideImage from '@/assets/hamad-airport-guide.jpg';
 
 const Index = () => {
   const featuredBlogs = [
+    {
+      id: '36',
+      title: 'Hamad International Airport: The Ultimate Guide to Qatar\'s Award-Winning Aviation Hub',
+      excerpt: 'Complete guide to Hamad International Airport - facilities, lounges, shopping, dining, transport, and everything you need to know about this world-class airport.',
+      imageUrl: hamadAirportGuideImage,
+      category: 'Expat-Tips',
+      date: 'May 15, 2025',
+      slug: 'hamad-international-airport-guide',
+    },
     {
       id: '35',
       title: 'Qatari Dishes You Must Try in Doha: A Complete Culinary Guide',
