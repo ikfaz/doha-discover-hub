@@ -24,39 +24,52 @@ const BlogPost = () => {
       content: `
         <p>Qatar Airways has positioned itself as more than just an airline—it's become a gateway to experiencing one of the Middle East's most dynamic destinations through its innovative Stopover Program. This initiative transforms what would otherwise be a tedious layover into an opportunity for genuine exploration, offering travelers remarkably affordable packages that include accommodation, tours, and experiences in Doha.</p>
         
-        <h2>What Is the Qatar Stopover Program?</h2>
+        <h2 id="what-is-the-program">What Is the Qatar Stopover Program?</h2>
         <p>The Qatar Stopover Program allows passengers flying with Qatar Airways to extend their layover for one to four nights at significantly reduced rates. Hotels that typically command hundreds of dollars per night become accessible at prices starting from just $14 per person per night for three-star properties, scaling up to around $50 for five-star luxury accommodations. This pricing structure makes the program one of the most competitive stopover offerings in the aviation industry, rivaling similar programs from Singapore Airlines and Turkish Airlines.</p>
         
-        <h2>Eligibility Requirements</h2>
+        <h2 id="eligibility">Eligibility Requirements</h2>
         <p>Eligibility for the program is straightforward but specific. Travelers must be flying internationally on Qatar Airways with a connecting flight through Hamad International Airport. The stopover must be booked as part of an existing Qatar Airways itinerary, and the minimum connection time between flights should be at least 12 hours. Importantly, passengers need to ensure they have the appropriate visa arrangements, though Qatar has made this considerably easier by offering visa-free entry to citizens of over 80 countries and streamlined visa-on-arrival processes for many others.</p>
         
-        <h2>How to Book Your Stopover</h2>
+        <h2 id="how-to-book">How to Book Your Stopover</h2>
         <p>Booking the stopover requires planning ahead, ideally at the time of purchasing your flights. The process can be completed through Qatar Airways' website by selecting the "Add Stopover" option during the booking flow, or by contacting Qatar Airways directly. Travel agents familiar with the program can also facilitate bookings, often with additional insights about the best properties and packages available. The earlier you book, the better selection of hotels you'll have, particularly during peak travel seasons or major events in Qatar.</p>
         
-        <h2>Accommodation Options</h2>
+        <h2 id="accommodation">Accommodation Options</h2>
         <p>The accommodation options span the full spectrum of hospitality. Budget-conscious travelers can select from comfortable three-star hotels that provide clean, modern rooms with essential amenities. Mid-range options include four-star properties with additional features like swimming pools, multiple dining venues, and central locations. For those seeking luxury, five-star hotels from renowned chains like Marriott, Ritz-Carlton, and Mandarin Oriental participate in the program, offering world-class service at a fraction of their standard rates.</p>
         
-        <h2>Additional Perks and Benefits</h2>
+        <h2 id="perks">Additional Perks and Benefits</h2>
         <p>Beyond accommodation, the program often includes additional perks that enhance the value proposition. Some packages bundle airport transfers, ensuring seamless transportation between Hamad International Airport and your hotel. Others incorporate breakfast, city tours, or museum entry tickets. During major sporting events or cultural festivals, special packages emerge that include tickets to these attractions, providing experiences that would otherwise require significant planning and expense.</p>
         
-        <h2>Logistics and Execution</h2>
+        <h2 id="logistics">Logistics and Execution</h2>
         <p>The practical execution of a stopover requires attention to logistics. Upon landing at Hamad International Airport, travelers proceed through immigration using the dedicated stopover lanes where available. Luggage is typically checked through to the final destination, though this should be confirmed at check-in. Hotel transfers, when included, meet passengers in the arrivals hall with clear signage. The process is designed to minimize friction, allowing travelers to maximize their limited time in Doha.</p>
         
-        <h2>What Makes It Valuable</h2>
+        <h2 id="value">What Makes It Valuable</h2>
         <p>What makes the program particularly valuable is the quality of experiences it enables. Qatar has invested billions in cultural infrastructure, from the iconic Museum of Islamic Art to the desert landscapes accessible just outside the city. A single night in Doha can include visits to Souq Waqif's atmospheric alleys, a dhow cruise along the Corniche, or a thrilling desert safari complete with dune bashing and traditional Bedouin hospitality. The stopover transforms a journey's interruption into a journey's highlight.</p>
         
-        <h2>Best Practices for Success</h2>
+        <h2 id="best-practices">Best Practices for Success</h2>
         <p>Successful utilization of the Qatar Stopover Program involves several considerations. Researching hotel locations relative to attractions helps maximize time efficiency. Understanding prayer times and cultural norms ensures respectful navigation of local customs. Booking popular restaurants and experiences in advance prevents disappointment, particularly during peak seasons. Finally, allowing buffer time for airport procedures ensures stress-free continuation of your journey.</p>
         
-        <h2>Comparing Value Propositions</h2>
+        <h2 id="value-comparison">Comparing Value Propositions</h2>
         <p>When compared to paying for accommodation and experiences independently, the stopover program's value becomes apparent. A night in a five-star Doha hotel at standard rates could easily exceed $300, while the stopover program offers similar properties at a fraction of the cost. When factored in with potential tours, meals, and transfers, savings can reach hundreds of dollars, effectively making the stopover a nearly cost-free addition to your journey.</p>
         
-        <h2>Strategic Travel Planning</h2>
+        <h2 id="travel-planning">Strategic Travel Planning</h2>
         <p>From a strategic travel planning perspective, the program offers unique advantages. Long-haul travelers can break up exhausting journeys with a comfortable stay, arriving at their final destination more refreshed. Business travelers can use the stopover to explore potential opportunities in Qatar's growing economy. Families can turn a connection into an educational adventure for children, exposing them to a different culture and geography.</p>
         
-        <h2>Conclusion</h2>
+        <h2 id="conclusion">Conclusion</h2>
         <p>The Qatar Stopover Program represents a sophisticated approach to transit hospitality, one that recognizes passengers as potential tourists rather than mere connections. For travelers willing to extend their journey by even a single night, it offers remarkable value and memorable experiences. Whether you're seeking luxury relaxation, cultural immersion, or adventurous exploration, the program provides the framework and affordability to make your layover in Doha truly worthwhile.</p>
       `,
+      tableOfContents: [
+        { title: 'What Is the Qatar Stopover Program?', id: 'what-is-the-program' },
+        { title: 'Eligibility Requirements', id: 'eligibility' },
+        { title: 'How to Book Your Stopover', id: 'how-to-book' },
+        { title: 'Accommodation Options', id: 'accommodation' },
+        { title: 'Additional Perks and Benefits', id: 'perks' },
+        { title: 'Logistics and Execution', id: 'logistics' },
+        { title: 'What Makes It Valuable', id: 'value' },
+        { title: 'Best Practices for Success', id: 'best-practices' },
+        { title: 'Comparing Value Propositions', id: 'value-comparison' },
+        { title: 'Strategic Travel Planning', id: 'travel-planning' },
+        { title: 'Conclusion', id: 'conclusion' }
+      ],
       tags: ['Travel Tips', 'Qatar Airways', 'Stopover', 'Doha', 'Travel Planning']
     },
     'default': {
@@ -181,6 +194,28 @@ const BlogPost = () => {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Main Content */}
             <div className="lg:col-span-2">
+              {/* Table of Contents */}
+              {post.tableOfContents && (
+                <div className="mb-8 p-6 bg-gray-50 rounded-lg border border-gray-200">
+                  <h3 className="text-lg font-bold mb-4 text-qatar-maroon">Table of Contents</h3>
+                  <nav className="space-y-2">
+                    {post.tableOfContents.map((item: { title: string; id: string }) => (
+                      <a
+                        key={item.id}
+                        href={`#${item.id}`}
+                        className="block text-sm text-gray-700 hover:text-qatar-gold transition-colors py-1 hover:translate-x-1 transform duration-200"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          document.getElementById(item.id)?.scrollIntoView({ behavior: 'smooth' });
+                        }}
+                      >
+                        → {item.title}
+                      </a>
+                    ))}
+                  </nav>
+                </div>
+              )}
+
               {/* Share Buttons */}
               <div className="flex items-center gap-4 mb-8 pb-8 border-b">
                 <span className="text-sm font-medium text-gray-600">Share this article:</span>
