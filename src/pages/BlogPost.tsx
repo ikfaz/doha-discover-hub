@@ -45,12 +45,321 @@ import costOfLivingImage from '@/assets/cost-of-living-doha-2025.jpg';
 import womenSafetyDressCodeImage from '@/assets/women-safety-dress-code-doha.jpg';
 import internationalSchoolsImage from '@/assets/international-schools-qatar-guide.jpg';
 import qatarVisaRulesImage from '@/assets/qatar-visa-rules-2025.jpg';
+import westBayAlWaabImage from '@/assets/west-bay-al-waab-comparison.jpg';
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   
   // Blog post data based on slug
   const blogPosts: Record<string, any> = {
+    'renting-doha-west-bay-al-waab-2025': {
+      id: '42',
+      title: 'Renting in Doha: West Bay vs Al Waab Comparison Guide 2025',
+      date: 'May 22, 2025',
+      author: 'Experience Doha Team',
+      readTime: '15 min read',
+      category: 'Expat-Tips',
+      imageUrl: westBayAlWaabImage,
+      tags: ['Doha neighborhoods', 'West Bay', 'Al Waab', 'rental guide', 'expat housing'],
+      content: `
+        <p class="lead">Choosing between West Bay and Al Waab represents more than a rental decision—it's a lifestyle choice. West Bay offers urban high-rise living with business district convenience, while Al Waab provides suburban villa life with family-oriented amenities.</p>
+        
+        <p>Understanding each neighborhood's characteristics helps expats select housing matching their priorities.</p>
+        
+        <h2 id="west-bay-overview">West Bay: Doha's Business District</h2>
+        
+        <h3>Neighborhood Character</h3>
+        <p>West Bay forms Doha's commercial heart, home to multinational corporations, luxury hotels, and diplomatic missions. The skyline's iconic towers—Tornado Tower, Palm Tower, Doha Tower—define Qatar's modern image. This is high-rise living with metropolitan energy.</p>
+        
+        <h3>Rental Market 2025</h3>
+        <p><strong>Apartments:</strong></p>
+        <ul>
+          <li><strong>Studio:</strong> QAR 6,000-9,000/month</li>
+          <li><strong>1-bedroom:</strong> QAR 8,000-12,000/month</li>
+          <li><strong>2-bedroom:</strong> QAR 12,000-18,000/month</li>
+          <li><strong>3-bedroom:</strong> QAR 16,000-25,000/month</li>
+          <li><strong>Penthouse:</strong> QAR 35,000-60,000+/month</li>
+        </ul>
+        
+        <p><strong>Typical Lease Terms:</strong></p>
+        <ul>
+          <li>12-month minimum</li>
+          <li>2-3 months deposit</li>
+          <li>Post-dated cheques (2-4 payments)</li>
+          <li>Furnished/unfurnished options available</li>
+        </ul>
+        
+        <h3>Advantages of West Bay</h3>
+        <ul>
+          <li><strong>Commute Convenience</strong> - Walking distance to many offices</li>
+          <li><strong>Metro Access</strong> - Multiple stations on Red Line</li>
+          <li><strong>Modern Infrastructure</strong> - New buildings, reliable utilities</li>
+          <li><strong>Hotel Amenities</strong> - Access to pools, gyms, restaurants</li>
+          <li><strong>Views</strong> - Corniche and sea vistas from higher floors</li>
+          <li><strong>Maintenance</strong> - Professional building management</li>
+          <li><strong>Security</strong> - 24/7 concierge and CCTV</li>
+        </ul>
+        
+        <h3>Disadvantages of West Bay</h3>
+        <ul>
+          <li><strong>Cost</strong> - Premium pricing for location</li>
+          <li><strong>Space</strong> - Apartments smaller than villas</li>
+          <li><strong>Family Suitability</strong> - Limited outdoor play areas for children</li>
+          <li><strong>Traffic Congestion</strong> - Rush hour gridlock common</li>
+          <li><strong>Limited Parking</strong> - Visitor parking challenging</li>
+          <li><strong>Sterile Environment</strong> - Lacks neighborhood warmth</li>
+          <li><strong>Construction</strong> - Ongoing development causes disruption</li>
+        </ul>
+        
+        <h3>Ideal For</h3>
+        <ul>
+          <li>Single professionals</li>
+          <li>Young couples without children</li>
+          <li>Business executives</li>
+          <li>Short-term assignments</li>
+          <li>Those prioritizing convenience over space</li>
+        </ul>
+        
+        <h2 id="al-waab-overview">Al Waab: Family-Oriented Suburb</h2>
+        
+        <h3>Neighborhood Character</h3>
+        <p>Al Waab sits inland, southwest of central Doha, characterized by residential compounds, villas with gardens, and family-focused amenities. The area hosts numerous schools, sports facilities, and shopping options within a more suburban environment.</p>
+        
+        <h3>Rental Market 2025</h3>
+        <p><strong>Villas (Standalone and Compound):</strong></p>
+        <ul>
+          <li><strong>3-bedroom:</strong> QAR 10,000-15,000/month</li>
+          <li><strong>4-bedroom:</strong> QAR 13,000-18,000/month</li>
+          <li><strong>5-bedroom:</strong> QAR 16,000-24,000/month</li>
+          <li><strong>Luxury compounds:</strong> QAR 20,000-35,000/month</li>
+        </ul>
+        
+        <p><strong>Apartments (Limited Availability):</strong></p>
+        <ul>
+          <li><strong>2-bedroom:</strong> QAR 7,000-10,000/month</li>
+          <li><strong>3-bedroom:</strong> QAR 9,000-13,000/month</li>
+        </ul>
+        
+        <p><strong>Typical Lease Terms:</strong></p>
+        <ul>
+          <li>12-month minimum (some compounds 24 months)</li>
+          <li>2 months deposit standard</li>
+          <li>Post-dated cheques</li>
+          <li>Maintenance often included in compounds</li>
+        </ul>
+        
+        <h3>Advantages of Al Waab</h3>
+        <ul>
+          <li><strong>Space</strong> - Large villas with gardens and pools</li>
+          <li><strong>Family Environment</strong> - Child-friendly community</li>
+          <li><strong>School Proximity</strong> - Multiple international schools nearby</li>
+          <li><strong>Compound Living</strong> - Shared facilities (pools, gyms, play areas)</li>
+          <li><strong>Value</strong> - More space per riyal compared to West Bay</li>
+          <li><strong>Community</strong> - Neighbor interactions, social environment</li>
+          <li><strong>Parking</strong> - Ample space for multiple vehicles</li>
+          <li><strong>Quiet</strong> - Lower traffic and noise levels</li>
+        </ul>
+        
+        <h3>Disadvantages of Al Waab</h3>
+        <ul>
+          <li><strong>Commute Required</strong> - 20-40 minutes to business district</li>
+          <li><strong>Car Dependency</strong> - Limited public transport</li>
+          <li><strong>Less Urban</strong> - Fewer restaurants and entertainment</li>
+          <li><strong>Older Infrastructure</strong> - Some properties need updates</li>
+          <li><strong>Limited Metro</strong> - Green Line access but stations distant</li>
+          <li><strong>Weekend Dead</strong> - Area quietens significantly</li>
+          <li><strong>Compound Rules</strong> - Some restrictions on activities</li>
+        </ul>
+        
+        <h3>Ideal For</h3>
+        <ul>
+          <li>Families with children</li>
+          <li>Those seeking space and gardens</li>
+          <li>Compound community preference</li>
+          <li>Pet owners (more accommodating)</li>
+          <li>Longer-term assignments</li>
+        </ul>
+        
+        <h2 id="cost-comparison">Direct Comparison: Monthly Living Costs</h2>
+        
+        <div class="overflow-x-auto my-8">
+          <table class="min-w-full border-collapse border border-border">
+            <thead>
+              <tr class="bg-muted">
+                <th class="border border-border px-4 py-2 text-left">Expense</th>
+                <th class="border border-border px-4 py-2 text-left">West Bay</th>
+                <th class="border border-border px-4 py-2 text-left">Al Waab</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="border border-border px-4 py-2">Rent (3-bed)</td>
+                <td class="border border-border px-4 py-2">QAR 18,000</td>
+                <td class="border border-border px-4 py-2">QAR 13,000</td>
+              </tr>
+              <tr class="bg-muted/50">
+                <td class="border border-border px-4 py-2">Utilities</td>
+                <td class="border border-border px-4 py-2">QAR 800</td>
+                <td class="border border-border px-4 py-2">QAR 1,500</td>
+              </tr>
+              <tr>
+                <td class="border border-border px-4 py-2">Transportation</td>
+                <td class="border border-border px-4 py-2">QAR 2,000</td>
+                <td class="border border-border px-4 py-2">QAR 3,500</td>
+              </tr>
+              <tr class="bg-muted/50">
+                <td class="border border-border px-4 py-2">Groceries</td>
+                <td class="border border-border px-4 py-2">QAR 2,500</td>
+                <td class="border border-border px-4 py-2">QAR 2,200</td>
+              </tr>
+              <tr class="font-bold">
+                <td class="border border-border px-4 py-2">Total</td>
+                <td class="border border-border px-4 py-2">QAR 23,300</td>
+                <td class="border border-border px-4 py-2">QAR 20,200</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        
+        <h2 id="school-access">School Access</h2>
+        
+        <h3>West Bay</h3>
+        <ul>
+          <li>Limited schools within neighborhood</li>
+          <li>Students bus to schools in other areas</li>
+          <li>30-45 minute commutes common</li>
+        </ul>
+        
+        <h3>Al Waab</h3>
+        <ul>
+          <li>Compass International School (5 minutes)</li>
+          <li>Newton International Academy (10 minutes)</li>
+          <li>Multiple Indian schools nearby</li>
+          <li>Doha College accessible (15 minutes)</li>
+        </ul>
+        
+        <h2 id="amenities">Shopping and Amenities</h2>
+        
+        <h3>West Bay</h3>
+        <ul>
+          <li>City Center Mall (10 minutes)</li>
+          <li>The Gate Mall (15 minutes)</li>
+          <li>Hotel restaurants walking distance</li>
+          <li>Limited supermarkets within area</li>
+        </ul>
+        
+        <h3>Al Waab</h3>
+        <ul>
+          <li>Hyatt Plaza (walking distance)</li>
+          <li>Mall of Qatar (20 minutes)</li>
+          <li>Multiple supermarkets</li>
+          <li>Standalone restaurants</li>
+        </ul>
+        
+        <h2 id="healthcare">Healthcare Access</h2>
+        
+        <h3>West Bay</h3>
+        <ul>
+          <li>Sidra Medicine (15 minutes)</li>
+          <li>Multiple clinics in area</li>
+          <li>Hospital proximity good</li>
+        </ul>
+        
+        <h3>Al Waab</h3>
+        <ul>
+          <li>Al Waab Health Center (walking distance)</li>
+          <li>Sidra Medicine (10 minutes)</li>
+          <li>Hamad Medical City accessible</li>
+        </ul>
+        
+        <h2 id="commute">Commute Considerations</h2>
+        
+        <h3>West Bay to Common Destinations</h3>
+        <ul>
+          <li><strong>Energy City/Lusail:</strong> 15-25 minutes</li>
+          <li><strong>Airport:</strong> 25-35 minutes</li>
+          <li><strong>Industrial Area:</strong> 35-45 minutes</li>
+          <li><strong>Education City:</strong> 25-35 minutes</li>
+        </ul>
+        
+        <h3>Al Waab to Common Destinations</h3>
+        <ul>
+          <li><strong>West Bay offices:</strong> 20-40 minutes</li>
+          <li><strong>Airport:</strong> 30-40 minutes</li>
+          <li><strong>Industrial Area:</strong> 30-40 minutes</li>
+          <li><strong>Education City:</strong> 15-20 minutes</li>
+        </ul>
+        
+        <p><strong>Traffic Patterns:</strong> Morning rush (7-9 AM) significantly impacts both areas. West Bay experiences internal congestion while Al Waab faces arterial road delays. Evening rush (4-7 PM) reverses patterns.</p>
+        
+        <h2 id="decision-guide">Making Your Decision</h2>
+        
+        <h3>Choose West Bay if:</h3>
+        <ul>
+          <li>☑ Working in West Bay business district</li>
+          <li>☑ Single or couple without children</li>
+          <li>☑ Prefer apartment living</li>
+          <li>☑ Value walkability and metro access</li>
+          <li>☑ Enjoy urban environment</li>
+          <li>☑ Budget allows premium rents</li>
+        </ul>
+        
+        <h3>Choose Al Waab if:</h3>
+        <ul>
+          <li>☑ Have school-age children</li>
+          <li>☑ Need space for family</li>
+          <li>☑ Prefer villa with garden</li>
+          <li>☑ Working in Education City or southern Doha</li>
+          <li>☑ Seeking compound community</li>
+          <li>☑ Plan to stay 2+ years</li>
+        </ul>
+        
+        <h2 id="alternatives">Alternative Neighborhoods to Consider</h2>
+        
+        <h3>If West Bay Appeals But Too Expensive:</h3>
+        <ul>
+          <li><strong>Al Dafna</strong> - Adjacent, slightly lower rents</li>
+          <li><strong>The Pearl</strong> - Marina living, varied pricing</li>
+          <li><strong>Lusail</strong> - New city, modern apartments</li>
+        </ul>
+        
+        <h3>If Al Waab Appeals But Want Options:</h3>
+        <ul>
+          <li><strong>Al Rayyan</strong> - More affordable, family area</li>
+          <li><strong>Abu Hamour</strong> - Good schools, compound living</li>
+          <li><strong>Ain Khaled</strong> - Growing area, newer compounds</li>
+        </ul>
+        
+        <h2 id="faq">FAQ: West Bay vs Al Waab Rentals</h2>
+        
+        <div class="space-y-4 my-6">
+          <div>
+            <h4 class="font-bold mb-2">Which area has better rental value?</h4>
+            <p>Al Waab offers more space per riyal. A 3-bedroom villa costs similar to a 2-bedroom West Bay apartment.</p>
+          </div>
+          
+          <div>
+            <h4 class="font-bold mb-2">Can I find furnished rentals in both areas?</h4>
+            <p>Yes. West Bay apartments commonly furnished. Al Waab villas often unfurnished but furnished compounds exist.</p>
+          </div>
+          
+          <div>
+            <h4 class="font-bold mb-2">What are electricity costs in each area?</h4>
+            <p>Al Waab villas cost more to cool (larger space). West Bay apartments typically lower utility bills but higher base rent.</p>
+          </div>
+          
+          <div>
+            <h4 class="font-bold mb-2">Is it easy to change areas later?</h4>
+            <p>Yes. Standard lease terms are 12 months with notice periods. Moving between areas is common as needs change.</p>
+          </div>
+          
+          <div>
+            <h4 class="font-bold mb-2">Do both areas have gyms and pools?</h4>
+            <p>West Bay building amenities typically included. Al Waab compounds include facilities. Standalone villas may lack these unless compound-based.</p>
+          </div>
+        </div>
+      `
+    },
     'qatar-visa-rules-expats-2025': {
       id: '41',
       title: 'New Qatar Visa Rules for Expats 2025: Complete Immigration Guide',
