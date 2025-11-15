@@ -13,6 +13,7 @@ import { BankComparison } from '@/components/BankComparison';
 import { MobilePlanComparison } from '@/components/MobilePlanComparison';
 import { RoamingCostComparison } from '@/components/RoamingCostComparison';
 import { GroceryPriceComparison } from '@/components/GroceryPriceComparison';
+import { WeeklyMealPlanner } from '@/components/WeeklyMealPlanner';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Calendar, Clock, Facebook, Twitter, Share2 } from 'lucide-react';
@@ -6381,8 +6382,16 @@ const BlogPost = () => {
                     <GroceryPriceComparison />
                   </div>
                   
+                  {/* Continue with other supermarkets through hacks */}
+                  <div dangerouslySetInnerHTML={{ __html: '<h2 id="others">' + post.content.split('<h2 id="others">')[1].split('<h2 id="delivery">')[0] }} />
+                  
+                  {/* Weekly Meal Planner Tool */}
+                  <div className="not-prose my-12">
+                    <WeeklyMealPlanner />
+                  </div>
+                  
                   {/* Rest of content */}
-                  <div dangerouslySetInnerHTML={{ __html: '<h2 id="others">' + post.content.split('<h2 id="others">')[1] }} />
+                  <div dangerouslySetInnerHTML={{ __html: '<h2 id="delivery">' + post.content.split('<h2 id="delivery">')[1] }} />
                 </div>
               ) : (
                 <div 
