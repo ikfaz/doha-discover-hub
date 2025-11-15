@@ -306,16 +306,26 @@ const BudgetPlanner = () => {
                     <div className="flex gap-2">
                       <Input
                         id="newCategory"
-                        placeholder="e.g., Gym Membership"
+                        placeholder="e.g., Gym Membership, Sports Club, etc."
                         value={newCategoryName}
                         onChange={(e) => setNewCategoryName(e.target.value)}
-                        onKeyDown={(e) => e.key === 'Enter' && handleAddCategory()}
+                        onKeyDown={(e) => e.key === 'Enter' && newCategoryName.trim() && handleAddCategory()}
+                        className="flex-1"
                       />
-                      <Button onClick={handleAddCategory} className="flex items-center gap-2">
+                      <Button 
+                        onClick={handleAddCategory} 
+                        className="flex items-center gap-2"
+                        disabled={!newCategoryName.trim()}
+                      >
                         <Plus className="h-4 w-4" />
                         Add
                       </Button>
                     </div>
+                    {newCategoryName.trim() && (
+                      <p className="text-xs text-muted-foreground">
+                        ✓ Ready to add "{newCategoryName}"
+                      </p>
+                    )}
                   </div>
                 </CardContent>
               </Card>
