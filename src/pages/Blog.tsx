@@ -393,15 +393,38 @@ const Blog = () => {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <NavBar />
-      
-      <section className="bg-qatar-maroon text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold font-heading mb-6">The Experience Doha Blog</h1>
-          <p className="text-xl max-w-3xl mx-auto">
-            Insights, guides, and stories about life and travel in Qatar's capital
-          </p>
+    <>
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Blog",
+          "name": "Experience Doha Blog",
+          "description": "Insights, guides, and stories about life and travel in Qatar's capital",
+          "url": "https://experiencedoha.com/blog",
+          "publisher": {
+            "@type": "Organization",
+            "name": "ExperienceDoha.com"
+          },
+          "blogPost": allPosts.map(post => ({
+            "@type": "BlogPosting",
+            "headline": post.title,
+            "image": post.imageUrl,
+            "datePublished": post.date,
+            "description": post.excerpt,
+            "url": `https://experiencedoha.com/blog/${post.slug}`
+          }))
+        })}
+      </script>
+      <div className="min-h-screen flex flex-col">
+        <NavBar />
+        
+        <main>
+          <section className="bg-qatar-maroon text-white py-16">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+              <h1 className="text-4xl md:text-5xl font-bold font-heading mb-6">Experience Doha Blog - Qatar Travel Guide</h1>
+              <p className="text-xl max-w-3xl mx-auto">
+                Expert insights, guides, and stories about life and travel in Qatar's vibrant capital
+              </p>
         </div>
       </section>
       
@@ -474,7 +497,7 @@ const Blog = () => {
                     <div className="aspect-video relative overflow-hidden rounded-md">
                       <img 
                         src={featuredPost.imageUrl} 
-                        alt={featuredPost.title} 
+                        alt={`${featuredPost.title} - Featured guide for Doha, Qatar`}
                         className="object-cover w-full h-full transform hover:scale-105 transition-transform duration-300"
                       />
                     </div>
@@ -538,9 +561,11 @@ const Blog = () => {
           <Newsletter />
         </div>
       </section>
+      </main>
       
       <Footer />
     </div>
+    </>
   );
 };
 

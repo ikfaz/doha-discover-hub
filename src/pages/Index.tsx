@@ -53,36 +53,53 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <NavBar />
-      
-      <section className="relative h-[90vh] bg-qatar-maroon text-white overflow-hidden">
-        <div className="absolute inset-0">
-          <div 
-            className="absolute inset-0 bg-cover bg-center bg-fixed transform scale-105" 
-            style={{ 
-              backgroundImage: "url('https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=800&auto=format&fit=crop')",
-              filter: "brightness(0.5)",
-            }}
-          ></div>
-        </div>
-        <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center">
-          <div className="max-w-3xl">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold font-heading mb-6 animate-fade-in">
-              ExperienceDoha.com
-              <span className="text-qatar-gold block mt-2">Discover Doha,</span>
-              <span className="text-qatar-gold block">Live the Experience</span>
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 text-white/90 animate-fade-up max-w-2xl">
-              Your premium guide to exploring Qatar's most stunning attractions, finest dining, and cultural experiences.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Button className="bg-qatar-gold hover:bg-qatar-gold/90 text-qatar-maroon font-bold text-lg px-8 py-6 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl">
-                <Link to="/blog">Explore Doha</Link>
-              </Button>
-              <Button className="bg-transparent hover:bg-white/10 border-2 border-white text-white font-bold text-lg px-8 py-6 rounded-full backdrop-blur-sm transition-all duration-300">
-                <Link to="/videos">Watch Videos</Link>
-              </Button>
+    <>
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "ExperienceDoha.com",
+          "url": "https://experiencedoha.com",
+          "description": "Comprehensive guide to Doha attractions, culture, dining, and travel experiences in Qatar",
+          "publisher": {
+            "@type": "Organization",
+            "name": "ExperienceDoha.com"
+          }
+        })}
+      </script>
+      <div className="min-h-screen flex flex-col">
+        <NavBar />
+        
+        <main>
+          <section className="relative h-[90vh] bg-qatar-maroon text-white overflow-hidden">
+            <div className="absolute inset-0">
+              <div 
+                className="absolute inset-0 bg-cover bg-center bg-fixed transform scale-105" 
+                role="img"
+                aria-label="Panoramic view of Doha skyline and corniche"
+                style={{ 
+                  backgroundImage: "url('https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=800&auto=format&fit=crop')",
+                  filter: "brightness(0.5)",
+                }}
+              ></div>
+            </div>
+            <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center">
+              <div className="max-w-3xl">
+                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold font-heading mb-6 animate-fade-in">
+                  ExperienceDoha.com
+                  <span className="text-qatar-gold block mt-2">Discover Doha,</span>
+                  <span className="text-qatar-gold block">Live the Experience</span>
+                </h1>
+                <p className="text-xl md:text-2xl mb-8 text-white/90 animate-fade-up max-w-2xl">
+                  Your premium guide to exploring Qatar's most stunning attractions, finest dining, and cultural experiences.
+                </p>
+                <div className="flex flex-wrap gap-4">
+                  <Button className="bg-qatar-gold hover:bg-qatar-gold/90 text-qatar-maroon font-bold text-lg px-8 py-6 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl">
+                    <Link to="/blog">Explore Doha</Link>
+                  </Button>
+                  <Button className="bg-transparent hover:bg-white/10 border-2 border-white text-white font-bold text-lg px-8 py-6 rounded-full backdrop-blur-sm transition-all duration-300">
+                    <Link to="/videos">Watch Videos</Link>
+                  </Button>
             </div>
           </div>
         </div>
@@ -135,9 +152,11 @@ const Index = () => {
           <Newsletter />
         </div>
       </section>
+      </main>
       
       <Footer />
     </div>
+    </>
   );
 };
 
