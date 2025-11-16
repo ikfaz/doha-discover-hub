@@ -31,9 +31,20 @@ import bankAccountQatarImage from '@/assets/bank-account-qatar-guide.jpg';
 import mobilePlansQatarImage from '@/assets/mobile-plans-qatar-guide.jpg';
 import groceryShoppingDohaImage from '@/assets/grocery-shopping-doha-guide.jpg';
 import dohaMetro2025Image from '@/assets/doha-metro-2025-guide.jpg';
+import petImportQatarImage from '@/assets/pet-import-qatar-guide.jpg';
 
 const Index = () => {
   const featuredBlogs = [
+    {
+      id: '49',
+      title: 'Pet Import Rules and Veterinary Care in Qatar 2025: Complete Guide',
+      excerpt: 'Import your pet to Qatar with this 2025 guide. Learn requirements, quarantine rules, costs, documentation, and find best veterinary clinics in Doha for expats.',
+      imageUrl: petImportQatarImage,
+      category: 'Expat-Tips',
+      date: 'May 29, 2025',
+      slug: 'pet-import-qatar-guide',
+      tags: ['pet import Qatar', 'bringing pets to Doha', 'veterinary clinics', 'animal permit', 'pet relocation'],
+    },
     {
       id: '48',
       title: 'Doha Metro 2025: New Lines, Expansions, and Complete Network Guide',
