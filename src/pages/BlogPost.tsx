@@ -62,14 +62,448 @@ import mobilePlansQatarImage from '@/assets/mobile-plans-qatar-guide.jpg';
 import groceryShoppingDohaImage from '@/assets/grocery-shopping-doha-guide.jpg';
 import dohaMetro2025Image from '@/assets/doha-metro-2025-guide.jpg';
 import petImportQatarImage from '@/assets/pet-import-qatar-guide.jpg';
+import hiringMaidNannyImage from '@/assets/hiring-maid-nanny-qatar-guide.jpg';
 import PetImportChecklist from '@/components/PetImportChecklist';
 import VeterinaryCostEstimator from '@/components/VeterinaryCostEstimator';
+import DomesticWorkerCostCalculator from '@/components/DomesticWorkerCostCalculator';
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   
   // Blog post data based on slug
   const blogPosts: Record<string, any> = {
+    'hiring-maid-nanny-qatar-guide': {
+      id: '50',
+      title: 'Hiring Maids and Nannies in Doha Qatar 2025: Complete Legal Guide',
+      date: 'May 30, 2025',
+      author: 'Experience Doha Team',
+      readTime: '19 min read',
+      category: 'Expat-Tips',
+      imageUrl: hiringMaidNannyImage,
+      tags: ['hiring maid Qatar', 'nanny Doha', 'domestic worker visa', 'housemaid salary', 'sponsorship'],
+      content: `
+        <p class="lead">Hiring domestic workers in Qatar involves legal sponsorship responsibilities, cultural considerations, and ethical employment practices. With approximately 150,000 domestic workers in Qatar, the sector operates within specific regulatory frameworks that protect both employers and employees.</p>
+        
+        <p>Understanding these requirements ensures legal compliance while creating positive working arrangements for all parties.</p>
+
+        <h2 id="types">Types of Domestic Workers</h2>
+        
+        <h3>Common Categories</h3>
+        <ul>
+          <li><strong>Housemaids</strong> - General cleaning, cooking, laundry</li>
+          <li><strong>Nannies</strong> - Childcare focused</li>
+          <li><strong>Drivers</strong> - Household transportation</li>
+          <li><strong>Gardeners</strong> - Outdoor maintenance</li>
+          <li><strong>Cooks</strong> - Dedicated meal preparation</li>
+        </ul>
+        
+        <h3>Live-in vs. Live-out</h3>
+        
+        <p><strong>Live-in:</strong></p>
+        <ul>
+          <li>Accommodation provided by employer</li>
+          <li>More common arrangement</li>
+          <li>Available for extended hours</li>
+          <li>Full salary negotiation</li>
+          <li>Private room required</li>
+        </ul>
+        
+        <p><strong>Live-out:</strong></p>
+        <ul>
+          <li>Independent accommodation</li>
+          <li>Fixed working hours</li>
+          <li>Higher hourly rate</li>
+          <li>Less common currently</li>
+          <li>Growing trend</li>
+        </ul>
+
+        <h2 id="legal">Legal Requirements for Sponsorship</h2>
+        
+        <h3>Employer Eligibility</h3>
+        <ul>
+          <li>Valid Qatar residence permit</li>
+          <li>Minimum salary requirement: QAR 10,000-15,000/month</li>
+          <li>Suitable accommodation proving ability to house worker</li>
+          <li>No outstanding legal issues</li>
+          <li>Approval from Ministry of Labor</li>
+        </ul>
+        
+        <h3>Sponsorship Process</h3>
+        
+        <p><strong>1. Recruitment Agency Selection</strong></p>
+        <ul>
+          <li>Licensed agencies mandatory</li>
+          <li>Ministry of Interior approved</li>
+          <li>Country-specific specialists</li>
+          <li>Fee structures vary</li>
+        </ul>
+        
+        <p><strong>2. Worker Selection</strong></p>
+        <ul>
+          <li>Profile review</li>
+          <li>Video interviews possible</li>
+          <li>References verification</li>
+          <li>Skills assessment</li>
+        </ul>
+        
+        <p><strong>3. Visa Application</strong></p>
+        <ul>
+          <li>Submit through MOI portal</li>
+          <li>Documentation package complete</li>
+          <li>Medical requirements met</li>
+          <li>Processing: 2-4 weeks</li>
+        </ul>
+        
+        <p><strong>4. Arrival and Registration</strong></p>
+        <ul>
+          <li>Airport pickup arranged</li>
+          <li>Medical examination</li>
+          <li>Fingerprinting</li>
+          <li>Qatar ID issuance</li>
+        </ul>
+
+        <h2 id="agencies">Recruitment Agencies in Qatar</h2>
+        
+        <h3>Licensed Agencies</h3>
+        <ul>
+          <li>MBM Recruitment</li>
+          <li>First Step Recruitment</li>
+          <li>Gulf Recruitment Services</li>
+          <li>Al Faisal Recruitment</li>
+          <li>Numerous country-specific agencies</li>
+        </ul>
+        
+        <h3>Agency Fees</h3>
+        <ul>
+          <li><strong>Philippines workers:</strong> QAR 8,000-12,000</li>
+          <li><strong>Indonesian workers:</strong> QAR 10,000-14,000</li>
+          <li><strong>Nepali workers:</strong> QAR 6,000-10,000</li>
+          <li><strong>Ethiopian workers:</strong> QAR 5,000-8,000</li>
+          <li><strong>Sri Lankan workers:</strong> QAR 8,000-11,000</li>
+        </ul>
+        
+        <p><strong>Fees Cover:</strong></p>
+        <ul>
+          <li>Recruitment services</li>
+          <li>Documentation processing</li>
+          <li>Visa application</li>
+          <li>Initial travel</li>
+          <li>Basic orientation</li>
+        </ul>
+        
+        <p><strong>Employer Responsibilities for Fees:</strong></p>
+        <ul>
+          <li>Employers must pay recruitment costs</li>
+          <li>Workers should not bear fees</li>
+          <li>Ethical employment standard</li>
+          <li>Legal requirement in Qatar</li>
+        </ul>
+
+        <h2 id="salary">Salary Expectations 2025</h2>
+        
+        <h3>Current Market Rates</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Worker Type</th>
+              <th>Monthly Salary (QAR)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Housemaid</td>
+              <td>1,500-2,500</td>
+            </tr>
+            <tr>
+              <td>Nanny (experienced)</td>
+              <td>2,000-3,500</td>
+            </tr>
+            <tr>
+              <td>Driver</td>
+              <td>2,500-4,000</td>
+            </tr>
+            <tr>
+              <td>Cook</td>
+              <td>2,500-4,500</td>
+            </tr>
+            <tr>
+              <td>Housekeeper (qualified)</td>
+              <td>2,000-3,000</td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <h3>Factors Affecting Salary</h3>
+        <ul>
+          <li>Experience level</li>
+          <li>Language skills (English premium)</li>
+          <li>Qualifications (childcare certifications)</li>
+          <li>Previous Gulf experience</li>
+          <li>Nationality (market-driven variation)</li>
+          <li>Special skills (cooking, tutoring)</li>
+        </ul>
+        
+        <h3>In Addition to Salary</h3>
+        <ul>
+          <li>Accommodation (live-in)</li>
+          <li>Food provision</li>
+          <li>Annual return ticket home</li>
+          <li>Medical insurance</li>
+          <li>End-of-service gratuity</li>
+          <li>Weekly day off (mandatory)</li>
+        </ul>
+
+        <h2 id="contracts">Employment Contracts: What to Include</h2>
+        
+        <h3>Mandatory Contract Elements</h3>
+        <ul>
+          <li><strong>Job Description</strong> - Clear duties outlined</li>
+          <li><strong>Working Hours</strong> - Maximum legally 10 hours/day</li>
+          <li><strong>Salary</strong> - Amount and payment schedule</li>
+          <li><strong>Benefits</strong> - Leave, tickets, insurance specified</li>
+          <li><strong>Accommodation</strong> - Details if live-in</li>
+          <li><strong>Duration</strong> - Contract period (typically 2 years)</li>
+          <li><strong>Termination</strong> - Notice periods and conditions</li>
+        </ul>
+        
+        <h3>Best Practice Additions</h3>
+        <ul>
+          <li>Day off specifications (which day, timing)</li>
+          <li>Mobile phone access</li>
+          <li>Privacy expectations</li>
+          <li>Guest policies</li>
+          <li>Food allowances/arrangements</li>
+          <li>Overtime compensation</li>
+        </ul>
+        
+        <h3>Contract Language</h3>
+        <ul>
+          <li>Arabic and English versions</li>
+          <li>Worker's native language helpful</li>
+          <li>Both parties sign</li>
+          <li>Ministry registration required</li>
+        </ul>
+
+        <h2 id="rights">Worker Rights Under Qatar Law</h2>
+        
+        <h3>Legal Protections</h3>
+        <ul>
+          <li><strong>Minimum Wage:</strong> QAR 1,000 + allowances</li>
+          <li><strong>Working Hours:</strong> Maximum 10 hours/day</li>
+          <li><strong>Rest Day:</strong> One full day weekly (mandatory since 2017)</li>
+          <li><strong>Leave:</strong> Paid annual leave (21 days)</li>
+          <li><strong>Accommodation:</strong> Decent living conditions required</li>
+          <li><strong>Food:</strong> Adequate provision or allowance</li>
+          <li><strong>Medical Care:</strong> Access to healthcare</li>
+          <li><strong>End-of-Service:</strong> Three weeks salary per year worked</li>
+          <li><strong>Document Retention:</strong> Workers keep own documents</li>
+          <li><strong>Mobility:</strong> Can change employers under certain conditions</li>
+        </ul>
+
+        <h2 id="finding">Finding Domestic Workers: Options</h2>
+        
+        <h3>Agency Route (Most Common)</h3>
+        
+        <p><strong>Advantages:</strong></p>
+        <ul>
+          <li>Pre-screened candidates</li>
+          <li>Documentation handled</li>
+          <li>Legal compliance assured</li>
+          <li>Replacement guarantee (typically 3 months)</li>
+        </ul>
+        
+        <p><strong>Disadvantages:</strong></p>
+        <ul>
+          <li>Higher costs</li>
+          <li>Limited personal selection</li>
+          <li>Processing time longer</li>
+        </ul>
+        
+        <h3>Transfer Route (Existing Worker)</h3>
+        
+        <p><strong>Advantages:</strong></p>
+        <ul>
+          <li>Already in Qatar</li>
+          <li>Proven references</li>
+          <li>No recruitment wait</li>
+          <li>Cultural adaptation complete</li>
+        </ul>
+        
+        <p><strong>Disadvantages:</strong></p>
+        <ul>
+          <li>Transfer fees apply</li>
+          <li>Previous employer NOC needed</li>
+          <li>Potentially higher salary expectations</li>
+        </ul>
+        
+        <h3>How to Find Transfers</h3>
+        <ul>
+          <li>QatarLiving classifieds (online)</li>
+          <li>Facebook expat groups</li>
+          <li>Word of mouth networks</li>
+          <li>Compound notice boards</li>
+          <li>Embassy recommendations</li>
+        </ul>
+        
+        <h3>Transfer Process</h3>
+        <ul>
+          <li>Current employer provides NOC</li>
+          <li>Worker agrees to transfer</li>
+          <li>New sponsorship application</li>
+          <li>Medical re-examination</li>
+          <li>New Qatar ID issuance</li>
+          <li>Timeline: 2-4 weeks</li>
+        </ul>
+
+        <h2 id="living">Living Arrangements for Domestic Workers</h2>
+        
+        <h3>Legal Requirements</h3>
+        <ul>
+          <li>Private sleeping area</li>
+          <li>Adequate ventilation</li>
+          <li>Climate control (AC in summer)</li>
+          <li>Access to bathroom facilities</li>
+          <li>Secure storage for belongings</li>
+          <li>Privacy respected</li>
+        </ul>
+        
+        <h3>Practical Considerations</h3>
+        <ul>
+          <li>Separate room ideal (not storage areas)</li>
+          <li>Bathroom access defined</li>
+          <li>Kitchen access for food preparation</li>
+          <li>Living space comfort</li>
+          <li>Noise and sleep considerations</li>
+          <li>Guest restrictions reasonable</li>
+        </ul>
+        
+        <h3>Villa vs. Apartment</h3>
+        <p>Villas typically easier for live-in arrangements with more space. Apartments require creative solutions but remain manageable.</p>
+
+        <h2 id="best-practices">Employment Relationship Best Practices</h2>
+        
+        <h3>Communication</h3>
+        <ul>
+          <li>Clear expectations from start</li>
+          <li>Regular check-ins</li>
+          <li>Language patience (barrier common)</li>
+          <li>Cultural sensitivity awareness</li>
+          <li>Written instructions when helpful</li>
+        </ul>
+        
+        <h3>Respect</h3>
+        <ul>
+          <li>Professional relationship</li>
+          <li>Fair treatment always</li>
+          <li>Personal time respected</li>
+          <li>Dignity maintained</li>
+          <li>Gratitude expressed</li>
+        </ul>
+        
+        <h3>Financial Transparency</h3>
+        <ul>
+          <li>On-time payments</li>
+          <li>Receipts for records</li>
+          <li>No salary withholding</li>
+          <li>Overtime compensated</li>
+          <li>Raises considered annually</li>
+        </ul>
+        
+        <h3>Common Challenges</h3>
+        <ul>
+          <li>Language barriers</li>
+          <li>Homesickness periods</li>
+          <li>Cultural misunderstandings</li>
+          <li>Skill gaps</li>
+          <li>Schedule conflicts</li>
+        </ul>
+        
+        <h3>Resolution Approaches</h3>
+        <ul>
+          <li>Open dialogue</li>
+          <li>Training provision</li>
+          <li>Professional mediation (if needed)</li>
+          <li>Embassy support available</li>
+          <li>Ministry of Labor assistance</li>
+        </ul>
+
+        <h2 id="termination">Termination and End of Employment</h2>
+        
+        <h3>Notice Requirements</h3>
+        <ul>
+          <li>30-day notice standard</li>
+          <li>Mutual agreement possible</li>
+          <li>Immediate termination (serious cause only)</li>
+          <li>Final settlement required</li>
+        </ul>
+        
+        <h3>End-of-Service Benefits</h3>
+        <ul>
+          <li>Gratuity payment (3 weeks per year)</li>
+          <li>Outstanding salary paid</li>
+          <li>Return ticket provided</li>
+          <li>Document return</li>
+          <li>Reference letter (if requested)</li>
+        </ul>
+        
+        <h3>Exit Procedures</h3>
+        <ul>
+          <li>Notice served properly</li>
+          <li>Final month worked (or waived)</li>
+          <li>All benefits calculated</li>
+          <li>Departure clearance obtained</li>
+          <li>Visa cancellation completed</li>
+          <li>Airport departure ensured</li>
+        </ul>
+
+        <h2 id="ethics">Ethical Considerations</h2>
+        
+        <h3>Responsible Employment</h3>
+        <ul>
+          <li>Fair wages above minimum</li>
+          <li>Proper rest provisions</li>
+          <li>Respectful treatment</li>
+          <li>Professional boundaries</li>
+          <li>Support for wellbeing</li>
+        </ul>
+        
+        <h3>Avoiding Exploitation</h3>
+        <ul>
+          <li>No document confiscation</li>
+          <li>Freedom of communication</li>
+          <li>Mobility within legal bounds</li>
+          <li>Access to help if needed</li>
+          <li>Human dignity paramount</li>
+        </ul>
+        
+        <h3>Qatar's Progress</h3>
+        <p>Recent labor reforms improved conditions:</p>
+        <ul>
+          <li>Wage Protection System</li>
+          <li>Domestic worker law enhancements</li>
+          <li>Complaint mechanisms established</li>
+          <li>Worker support centers</li>
+          <li>International scrutiny influence</li>
+        </ul>
+
+        <h2 id="faq">FAQ: Hiring Domestic Help Qatar</h2>
+        
+        <h3>Can I sponsor a maid without high salary?</h3>
+        <p>Minimum salary requirements exist (QAR 10,000-15,000). Without meeting thresholds, sponsorship difficult though exceptions may exist for specific circumstances.</p>
+        
+        <h3>How long does hiring process take?</h3>
+        <p>Agency recruitment: 2-4 months. Transfer: 2-4 weeks. Timing depends on country of origin and documentation completion.</p>
+        
+        <h3>What if worker wants to leave early?</h3>
+        <p>Workers can resign with notice. Early termination provisions in contract apply. Mutual agreement often best resolution.</p>
+        
+        <h3>Do I pay worker during their annual leave?</h3>
+        <p>Yes. Annual leave is paid leave. 21 days after one year's service standard. Many employers provide early leave as goodwill.</p>
+        
+        <h3>Can domestic worker drive my car?</h3>
+        <p>Needs valid Qatar driving license. Separate driver's license category exists. Insurance implications significant. Generally not recommended unless specifically hired as driver.</p>
+      `,
+    },
     'pet-import-qatar-guide': {
       id: '49',
       title: 'Pet Import Rules and Veterinary Care in Qatar 2025: Complete Guide',
@@ -7054,6 +7488,19 @@ const BlogPost = () => {
                   
                   {/* Rest of content */}
                   <div dangerouslySetInnerHTML={{ __html: '<h2 id="delivery">' + post.content.split('<h2 id="delivery">')[1] }} />
+                </div>
+              ) : slug === 'hiring-maid-nanny-qatar-guide' ? (
+                <div className="prose prose-lg max-w-none space-y-8">
+                  {/* First section through salary */}
+                  <div dangerouslySetInnerHTML={{ __html: post.content.split('<h2 id="contracts">')[0] }} />
+                  
+                  {/* Domestic Worker Cost Calculator */}
+                  <div className="not-prose my-12">
+                    <DomesticWorkerCostCalculator />
+                  </div>
+                  
+                  {/* Rest of content */}
+                  <div dangerouslySetInnerHTML={{ __html: '<h2 id="contracts">' + post.content.split('<h2 id="contracts">')[1] }} />
                 </div>
               ) : slug === 'pet-import-qatar-guide' ? (
                 <div className="prose prose-lg max-w-none space-y-8">
