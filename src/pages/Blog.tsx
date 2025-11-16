@@ -612,7 +612,7 @@ const Blog = () => {
       slug: 'qatari-crafts',
     },
     {
-      id: '13',
+      id: '113',
       title: 'Best Beaches in and Around Doha',
       excerpt: 'Discover the finest coastal spots for swimming, sunbathing, and water sports.',
       imageUrl: 'https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=800&auto=format&fit=crop',
@@ -621,7 +621,7 @@ const Blog = () => {
       slug: 'doha-beaches',
     },
     {
-      id: '14',
+      id: '114',
       title: 'Ramadan in Qatar: A Visitor\'s Guide',
       excerpt: 'Everything you need to know about experiencing Ramadan in Doha.',
       imageUrl: 'https://images.unsplash.com/photo-1466442929976-97f336a657be?w=800&auto=format&fit=crop',
@@ -630,7 +630,7 @@ const Blog = () => {
       slug: 'ramadan-guide',
     },
     {
-      id: '15',
+      id: '115',
       title: 'Sustainable Tourism in Qatar',
       excerpt: 'How to experience Doha while minimizing your environmental impact.',
       imageUrl: 'https://images.unsplash.com/photo-1465379944081-7f47de8d74ac?w=800&auto=format&fit=crop',
