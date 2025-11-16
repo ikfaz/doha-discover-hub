@@ -61,12 +61,367 @@ import bankAccountQatarImage from '@/assets/bank-account-qatar-guide.jpg';
 import mobilePlansQatarImage from '@/assets/mobile-plans-qatar-guide.jpg';
 import groceryShoppingDohaImage from '@/assets/grocery-shopping-doha-guide.jpg';
 import dohaMetro2025Image from '@/assets/doha-metro-2025-guide.jpg';
+import petImportQatarImage from '@/assets/pet-import-qatar-guide.jpg';
+import PetImportChecklist from '@/components/PetImportChecklist';
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   
   // Blog post data based on slug
   const blogPosts: Record<string, any> = {
+    'pet-import-qatar-guide': {
+      id: '49',
+      title: 'Pet Import Rules and Veterinary Care in Qatar 2025: Complete Guide',
+      date: 'May 29, 2025',
+      author: 'Experience Doha Team',
+      readTime: '18 min read',
+      category: 'Expat-Tips',
+      imageUrl: petImportQatarImage,
+      tags: ['pet import Qatar', 'bringing pets to Doha', 'veterinary clinics', 'animal permit', 'pet relocation'],
+      content: `
+        <p class="lead">Relocating pets to Qatar involves bureaucratic navigation, but thousands of expats successfully bring cats and dogs to Doha annually. Understanding Qatar's pet import regulations and preparing documentation correctly ensures smooth entry for your furry family members.</p>
+        
+        <p>Qatar allows importation of most domesticated cats and dogs, with specific requirements designed to prevent disease introduction while accommodating expatriate needs.</p>
+
+        <h2 id="requirements">Pet Import Requirements 2025</h2>
+        
+        <h3>Essential Documentation</h3>
+        <ol>
+          <li><strong>Microchip</strong>
+            <ul>
+              <li>ISO 11784/11785 compliant</li>
+              <li>15-digit code</li>
+              <li>Must be implanted before rabies vaccination</li>
+              <li>Veterinarian verification required</li>
+            </ul>
+          </li>
+          <li><strong>Rabies Vaccination</strong>
+            <ul>
+              <li>At least 21 days before travel</li>
+              <li>Not more than 12 months old</li>
+              <li>Inactivated virus vaccine only</li>
+              <li>Veterinarian certificate required</li>
+            </ul>
+          </li>
+          <li><strong>Rabies Titer Test</strong>
+            <ul>
+              <li>Blood test proving immunity</li>
+              <li>Approved laboratory (OIE-approved)</li>
+              <li>Results: 0.5 IU/ml minimum</li>
+              <li>Valid for entry requirements</li>
+            </ul>
+          </li>
+          <li><strong>Health Certificate</strong>
+            <ul>
+              <li>Issued within 10 days of travel</li>
+              <li>Government veterinarian endorsement</li>
+              <li>Country of origin certification</li>
+              <li>Translated to English/Arabic</li>
+            </ul>
+          </li>
+          <li><strong>Import Permit</strong>
+            <ul>
+              <li>Applied through Qatar Ministry (WOQOD system)</li>
+              <li>Approval required before travel</li>
+              <li>Valid for specific period</li>
+              <li>Fees: QAR 100-300</li>
+            </ul>
+          </li>
+        </ol>
+        
+        <p><strong>Additional Requirements:</strong></p>
+        <ul>
+          <li>Internal/external parasite treatment (within 48 hours of travel)</li>
+          <li>Treatments recorded on health certificate</li>
+          <li>Original vaccination booklet</li>
+          <li>Recent photographs of pet</li>
+        </ul>
+
+        <h2 id="banned-breeds">Banned and Restricted Breeds</h2>
+        
+        <h3>Prohibited Dog Breeds in Qatar</h3>
+        <ul>
+          <li>Pit Bull Terrier</li>
+          <li>Rottweiler</li>
+          <li>Dogo Argentino</li>
+          <li>Fila Brasileiro</li>
+          <li>American Staffordshire Terrier</li>
+          <li>Tosa Inu</li>
+          <li>Presa Canario</li>
+        </ul>
+        
+        <p><em>Crossbreeds of prohibited breeds also restricted.</em></p>
+        <p><strong>Note:</strong> Breed restrictions strictly enforced. Mixed breeds may face scrutiny if resembling prohibited breeds.</p>
+
+        <h2 id="process">Step-by-Step Import Process</h2>
+        
+        <h3>3-6 Months Before Travel</h3>
+        <ul>
+          <li>Verify pet's breed not prohibited</li>
+          <li>Ensure microchip properly registered</li>
+          <li>Update rabies vaccination if needed</li>
+          <li>Conduct rabies titer test</li>
+          <li>Research airline pet policies</li>
+          <li>Contact pet relocation companies (optional)</li>
+        </ul>
+        
+        <h3>1 Month Before Travel</h3>
+        <ul>
+          <li>Apply for Qatar import permit online</li>
+          <li>Gather all documentation</li>
+          <li>Book airline cargo/cabin space</li>
+          <li>Arrange travel crate (IATA compliant)</li>
+          <li>Schedule pre-travel veterinary exam</li>
+        </ul>
+        
+        <h3>10 Days Before Travel</h3>
+        <ul>
+          <li>Final veterinary health check</li>
+          <li>Government veterinarian endorsement</li>
+          <li>Parasite treatment administered</li>
+          <li>Documentation compilation complete</li>
+          <li>Airline reconfirmation</li>
+        </ul>
+        
+        <h3>Arrival in Qatar</h3>
+        <ul>
+          <li>Customs clearance at airport</li>
+          <li>Documentation inspection</li>
+          <li>Pet physical examination</li>
+          <li>Import permit verification</li>
+          <li>Fees payment (if applicable)</li>
+          <li>Quarantine assessment (usually avoided with proper documentation)</li>
+        </ul>
+
+        <h2 id="quarantine">Quarantine Policies</h2>
+        
+        <p><strong>Good News:</strong> Qatar generally does not require quarantine for pets with complete documentation from low-risk rabies countries. This includes most Western nations, UAE, and approved regions.</p>
+        
+        <h3>When Quarantine Applies</h3>
+        <ul>
+          <li>Incomplete documentation</li>
+          <li>High-risk rabies countries</li>
+          <li>Breed identification concerns</li>
+          <li>Unauthorized vaccinations</li>
+          <li>Failed health inspection</li>
+        </ul>
+        
+        <p><strong>Quarantine Duration:</strong> 30-120 days if required (rare for well-prepared imports)</p>
+        <p><strong>Cost:</strong> QAR 50-100 per day plus medical examinations</p>
+
+        <h2 id="airlines">Airline Pet Transport Options</h2>
+        
+        <h3>Cargo Transport (Larger Pets)</h3>
+        
+        <p><strong>Qatar Airways Cargo:</strong></p>
+        <ul>
+          <li>Professional pet handling</li>
+          <li>Climate-controlled holds</li>
+          <li>IATA crate requirements</li>
+          <li>Cost: QAR 2,500-8,000 (size-dependent)</li>
+          <li>Most common method for dogs</li>
+        </ul>
+        
+        <p><strong>Other Airlines:</strong></p>
+        <ul>
+          <li>Emirates SkyCargo</li>
+          <li>Lufthansa Cargo</li>
+          <li>British Airways</li>
+          <li>Similar pricing structures</li>
+        </ul>
+        
+        <h3>Cabin Transport (Small Pets)</h3>
+        <p>Some airlines permit small pets in cabin:</p>
+        <ul>
+          <li>Weight limits (usually under 8kg including carrier)</li>
+          <li>Advance booking essential</li>
+          <li>Limited spaces per flight</li>
+          <li>Higher fees but less stressful</li>
+        </ul>
+        
+        <h3>Pet Relocation Services</h3>
+        
+        <p>Professional companies handle:</p>
+        <ul>
+          <li>Documentation compilation</li>
+          <li>Permit applications</li>
+          <li>Airport coordination</li>
+          <li>Customs clearance</li>
+          <li>Door-to-door service</li>
+          <li>Cost: QAR 5,000-15,000 (total service)</li>
+        </ul>
+        
+        <p><strong>Recommended When:</strong></p>
+        <ul>
+          <li>First-time pet importers</li>
+          <li>Complex country requirements</li>
+          <li>Limited time for paperwork</li>
+          <li>Risk-averse approach preferred</li>
+        </ul>
+
+        <h2 id="veterinary">Veterinary Clinics in Doha</h2>
+        
+        <h3>Top Veterinary Facilities</h3>
+        
+        <p><strong>1. Qatar Veterinary Center (QVC)</strong></p>
+        <ul>
+          <li><strong>Location:</strong> Multiple branches</li>
+          <li><strong>Services:</strong> Full medical, surgery, boarding</li>
+          <li><strong>Reputation:</strong> Government-affiliated, reliable</li>
+          <li><strong>Emergency:</strong> 24/7 services available</li>
+        </ul>
+        
+        <p><strong>2. Al Rayyan Veterinary Hospital</strong></p>
+        <ul>
+          <li><strong>Location:</strong> Al Rayyan</li>
+          <li><strong>Services:</strong> Comprehensive care</li>
+          <li><strong>Specialty:</strong> Surgery, orthopedics</li>
+          <li><strong>Quality:</strong> Highly rated by expats</li>
+        </ul>
+        
+        <p><strong>3. Westside Veterinary Clinic</strong></p>
+        <ul>
+          <li><strong>Location:</strong> West Bay area</li>
+          <li><strong>Services:</strong> Modern facilities</li>
+          <li><strong>International:</strong> English-speaking staff</li>
+          <li><strong>Experience:</strong> Expat pet focus</li>
+        </ul>
+        
+        <p><strong>4. Safari Veterinary Hospital</strong></p>
+        <ul>
+          <li><strong>Location:</strong> Salwa Road</li>
+          <li><strong>Services:</strong> Medical and grooming</li>
+          <li><strong>Exotic:</strong> Handles various animals</li>
+          <li><strong>Facilities:</strong> Modern equipment</li>
+        </ul>
+        
+        <p><strong>5. The Pet Hospital Qatar</strong></p>
+        <ul>
+          <li><strong>Location:</strong> Multiple locations</li>
+          <li><strong>Services:</strong> Full-service veterinary</li>
+          <li><strong>Convenience:</strong> Extended hours</li>
+          <li><strong>Reputation:</strong> Professional staff</li>
+        </ul>
+        
+        <h3>Veterinary Costs</h3>
+        <ul>
+          <li><strong>Consultation:</strong> QAR 150-300</li>
+          <li><strong>Vaccinations:</strong> QAR 150-350 per shot</li>
+          <li><strong>Spay/neuter:</strong> QAR 800-2,000</li>
+          <li><strong>Dental cleaning:</strong> QAR 1,000-2,500</li>
+          <li><strong>Emergency visits:</strong> QAR 300-500 (plus treatment)</li>
+        </ul>
+
+        <h2 id="insurance">Pet Insurance in Qatar</h2>
+        
+        <h3>Available Options</h3>
+        <p>Limited but growing:</p>
+        <ul>
+          <li><strong>QIC (Qatar Insurance)</strong> - Basic coverage</li>
+          <li><strong>International policies</strong> - Some honor Qatar residence</li>
+          <li><strong>Breed-specific exclusions</strong> - Common limitations</li>
+        </ul>
+        
+        <h3>Coverage Typically Includes</h3>
+        <ul>
+          <li>Accident coverage</li>
+          <li>Illness treatment</li>
+          <li>Surgery costs</li>
+          <li>Emergency care</li>
+          <li>Sometimes third-party liability</li>
+        </ul>
+        
+        <p><strong>Annual Costs:</strong> QAR 500-2,000 depending on coverage level</p>
+
+        <h2 id="living">Living with Pets in Doha</h2>
+        
+        <h3>Housing Considerations</h3>
+        <ul>
+          <li>Not all landlords pet-friendly</li>
+          <li>Compounds generally accepting</li>
+          <li>Villa compounds preferable for dogs</li>
+          <li>Apartments more restrictive</li>
+          <li>Negotiate pet clauses in lease</li>
+        </ul>
+        
+        <h3>Climate Challenges</h3>
+        <ul>
+          <li>Summer heat dangerous (40°C+)</li>
+          <li>Morning/evening walks only in summer</li>
+          <li>Paw protection needed on hot surfaces</li>
+          <li>Hydration critical</li>
+          <li>AC essential in home</li>
+        </ul>
+        
+        <h3>Dog Walking Areas</h3>
+        <ul>
+          <li>Limited dedicated dog parks</li>
+          <li>Compound common areas</li>
+          <li>Evening corniche walks</li>
+          <li>West Bay promenade</li>
+          <li>Some mall external areas</li>
+        </ul>
+        
+        <h3>Pet Supplies</h3>
+        <p>Available at:</p>
+        <ul>
+          <li><strong>Pet Arabia</strong> (specialized chain)</li>
+          <li><strong>Carrefour/Lulu</strong> (basic supplies)</li>
+          <li><strong>Online ordering</strong> (growing options)</li>
+          <li><strong>Veterinary clinic shops</strong></li>
+        </ul>
+
+        <h2 id="cats">Cat-Specific Considerations</h2>
+        
+        <p>Cats adapt well to Doha climate:</p>
+        <ul>
+          <li>Indoor living recommended</li>
+          <li>Heat less problematic (indoor AC)</li>
+          <li>Apartment living suitable</li>
+          <li>Less outdoor concerns</li>
+          <li>Easier transport process generally</li>
+        </ul>
+
+        <h2 id="reexport">Re-Exporting Pets from Qatar</h2>
+        
+        <p>When leaving Qatar:</p>
+        <ul>
+          <li>Similar documentation required</li>
+          <li>Destination country rules apply</li>
+          <li>Health certificates needed</li>
+          <li>Advance planning essential (3+ months)</li>
+          <li>Consider future moves when importing</li>
+        </ul>
+
+        <h2 id="mistakes">Common Pet Import Mistakes</h2>
+        <ol>
+          <li><strong>Incomplete vaccination records</strong> - Ensure all shots documented</li>
+          <li><strong>Wrong microchip type</strong> - Verify ISO compatibility</li>
+          <li><strong>Expired health certificates</strong> - Timing critical (10-day window)</li>
+          <li><strong>Breed misrepresentation</strong> - Honesty essential</li>
+          <li><strong>Airline booking delays</strong> - Limited pet cargo spaces</li>
+          <li><strong>Import permit overlooked</strong> - Required before travel</li>
+          <li><strong>Titer test not from approved lab</strong> - Use OIE-certified facilities</li>
+        </ol>
+
+        <h2 id="faq">FAQ: Pet Import Qatar 2025</h2>
+        
+        <h3>How long does pet import approval take?</h3>
+        <p>Import permit typically approved within 3-7 business days. Allow 2-4 weeks for complete documentation process.</p>
+        
+        <h3>Can I bring multiple pets?</h3>
+        <p>Yes. Each pet requires individual documentation and permits. No official limit but practical considerations apply.</p>
+        
+        <h3>Is pet food expensive in Qatar?</h3>
+        <p>Yes. Imported pet food costs 30-50% more than Western countries. Premium brands particularly expensive. Stock up during home visits.</p>
+        
+        <h3>Are there pet-sitting services?</h3>
+        <p>Yes. Growing industry with home visit and boarding options. Veterinary clinics offer boarding. Compound networks provide recommendations.</p>
+        
+        <h3>What if my pet has a layover in Qatar?</h3>
+        <p>Transit animals have different requirements. Brief transit may not need full import documentation. Check with airline and Qatar authorities.</p>
+      `,
+    },
     'doha-metro-2025-guide': {
       id: '48',
       title: 'Doha Metro 2025: New Lines, Expansions, and Complete Network Guide',
@@ -6698,6 +7053,19 @@ const BlogPost = () => {
                   
                   {/* Rest of content */}
                   <div dangerouslySetInnerHTML={{ __html: '<h2 id="delivery">' + post.content.split('<h2 id="delivery">')[1] }} />
+                </div>
+              ) : slug === 'pet-import-qatar-guide' ? (
+                <div className="prose prose-lg max-w-none space-y-8">
+                  {/* First section through process */}
+                  <div dangerouslySetInnerHTML={{ __html: post.content.split('<h2 id="quarantine">')[0] }} />
+                  
+                  {/* Pet Import Checklist */}
+                  <div className="not-prose my-12">
+                    <PetImportChecklist />
+                  </div>
+                  
+                  {/* Rest of content */}
+                  <div dangerouslySetInnerHTML={{ __html: '<h2 id="quarantine">' + post.content.split('<h2 id="quarantine">')[1] }} />
                 </div>
               ) : slug === 'doha-metro-2025-guide' ? (
                 <div className="prose prose-lg max-w-none space-y-8">
