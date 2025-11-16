@@ -64,12 +64,23 @@ import gymsFitnessDohaImage from '@/assets/gyms-fitness-doha-guide.jpg';
 import remoteWorkCafesImage from '@/assets/remote-work-cafes-doha-guide.jpg';
 import housingRentDohaImage from '@/assets/housing-rent-doha-2025.jpg';
 import jobMarketQatarImage from '@/assets/job-market-qatar-2025.jpg';
+import expatSalariesDohaImage from '@/assets/expat-salaries-doha-2025.jpg';
 
 const Blog = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   
   const allPosts = [
+    {
+      id: '57',
+      title: 'The Compensation Landscape: Average and Typical Salaries for Various Expat Roles in Doha',
+      excerpt: 'Comprehensive guide to expat salaries in Qatar 2025. Salary ranges by sector, total compensation packages, allowances, and negotiation strategies for Doha.',
+      imageUrl: expatSalariesDohaImage,
+      category: 'Expat-Tips',
+      date: 'June 6, 2025',
+      slug: 'expat-salaries-doha-2025',
+      tags: ['Qatar salaries', 'expat compensation', 'salary negotiation', 'tax-free income', 'housing allowance'],
+    },
     {
       id: '56',
       title: 'The Gateway to Opportunity: Job Market and Employment for Foreigners in Qatar',
