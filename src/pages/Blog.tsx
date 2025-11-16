@@ -60,12 +60,23 @@ import groceryShoppingDohaImage from '@/assets/grocery-shopping-doha-guide.jpg';
 import dohaMetro2025Image from '@/assets/doha-metro-2025-guide.jpg';
 import petImportQatarImage from '@/assets/pet-import-qatar-guide.jpg';
 import hiringMaidNannyImage from '@/assets/hiring-maid-nanny-qatar-guide.jpg';
+import gymsFitnessDohaImage from '@/assets/gyms-fitness-doha-guide.jpg';
 
 const Blog = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   
   const allPosts = [
+    {
+      id: '51',
+      title: 'Gyms and Fitness Trends in Doha Qatar 2025: Complete Guide',
+      excerpt: 'Discover best gyms in Doha 2025, membership costs, fitness trends, and workout options for expats in Qatar. Compare facilities from budget to luxury.',
+      imageUrl: gymsFitnessDohaImage,
+      category: 'Expat-Tips',
+      date: 'May 31, 2025',
+      slug: 'gyms-fitness-doha-guide',
+      tags: ['gyms Doha Qatar', 'fitness centers Qatar', 'gym membership', 'best gyms Qatar', 'fitness trends'],
+    },
     {
       id: '50',
       title: 'Hiring Maids and Nannies in Doha Qatar 2025: Complete Legal Guide',

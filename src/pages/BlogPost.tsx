@@ -63,15 +63,416 @@ import groceryShoppingDohaImage from '@/assets/grocery-shopping-doha-guide.jpg';
 import dohaMetro2025Image from '@/assets/doha-metro-2025-guide.jpg';
 import petImportQatarImage from '@/assets/pet-import-qatar-guide.jpg';
 import hiringMaidNannyImage from '@/assets/hiring-maid-nanny-qatar-guide.jpg';
+import gymsFitnessDohaImage from '@/assets/gyms-fitness-doha-guide.jpg';
 import PetImportChecklist from '@/components/PetImportChecklist';
 import VeterinaryCostEstimator from '@/components/VeterinaryCostEstimator';
 import DomesticWorkerCostCalculator from '@/components/DomesticWorkerCostCalculator';
+import GymMembershipComparison from '@/components/GymMembershipComparison';
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   
   // Blog post data based on slug
   const blogPosts: Record<string, any> = {
+    'gyms-fitness-doha-guide': {
+      id: '51',
+      title: 'Gyms and Fitness Trends in Doha Qatar 2025: Complete Guide',
+      date: 'May 31, 2025',
+      author: 'Experience Doha Team',
+      readTime: '17 min read',
+      category: 'Expat-Tips',
+      imageUrl: gymsFitnessDohaImage,
+      tags: ['gyms Doha Qatar', 'fitness centers Qatar', 'gym membership', 'best gyms Qatar', 'fitness trends'],
+      content: `
+        <p class="lead">Qatar's fitness scene has exploded in recent years, driven by expatriate demand, government health initiatives, and World Cup legacy infrastructure. From budget-friendly chains to ultra-luxury facilities, Doha offers diverse workout options for every preference and budget.</p>
+        
+        <p>Understanding the landscape helps expats find perfect fitness homes matching their goals, schedules, and financial comfort.</p>
+
+        <h2 id="types">Types of Fitness Facilities</h2>
+        
+        <h3>1. Hotel Health Clubs</h3>
+        <p>Attached to major hotels:</p>
+        <ul>
+          <li>W Hotel, St. Regis, Four Seasons, Marriott</li>
+          <li>Premium facilities, pools, spas</li>
+          <li>Day passes: QAR 100-300</li>
+          <li>Monthly memberships: QAR 600-1,500</li>
+          <li>Beautiful settings but expensive</li>
+        </ul>
+        
+        <h3>2. Commercial Gym Chains</h3>
+        <p>Standalone fitness centers:</p>
+        <ul>
+          <li>Fitness First</li>
+          <li>Fitness Time</li>
+          <li>Gold's Gym</li>
+          <li>Oxygen Gym</li>
+          <li>Monthly: QAR 250-500</li>
+          <li>Multiple locations, consistent quality</li>
+        </ul>
+        
+        <h3>3. CrossFit Boxes</h3>
+        <p>Functional fitness focused:</p>
+        <ul>
+          <li>CrossFit Doha</li>
+          <li>CrossFit Al Rayyan</li>
+          <li>CrossFit Sandy Beach</li>
+          <li>Monthly: QAR 500-800</li>
+          <li>Community-driven, intense workouts</li>
+        </ul>
+        
+        <h3>4. Boutique Studios</h3>
+        <p>Specialized fitness:</p>
+        <ul>
+          <li>Yoga studios</li>
+          <li>Pilates centers</li>
+          <li>Cycling studios (Soul Cycle type)</li>
+          <li>Monthly/class packages: QAR 400-900</li>
+          <li>Expert instruction, intimate settings</li>
+        </ul>
+        
+        <h3>5. Compound/Community Gyms</h3>
+        <p>Residential facilities:</p>
+        <ul>
+          <li>Included in some rents</li>
+          <li>Basic equipment</li>
+          <li>Convenient location</li>
+          <li>Free with accommodation</li>
+          <li>Variable quality</li>
+        </ul>
+
+        <h2 id="top-gyms">Top Gyms in Doha: Detailed Reviews</h2>
+        
+        <h3>1. Oxygen Gym (Multiple Locations)</h3>
+        
+        <p><strong>Facilities:</strong></p>
+        <ul>
+          <li>State-of-art equipment</li>
+          <li>Multiple branches city-wide</li>
+          <li>Mixed and ladies-only sections</li>
+          <li>Personal training available</li>
+          <li>Group classes included</li>
+        </ul>
+        
+        <p><strong>Membership:</strong></p>
+        <ul>
+          <li>Monthly: QAR 350-450</li>
+          <li>Annual: QAR 3,500-4,500</li>
+          <li>Joining fee: QAR 200-400</li>
+        </ul>
+        
+        <p><strong>Best For:</strong> Serious bodybuilders, strength training focus, affordable quality</p>
+        
+        <h3>2. Fitness First (Various Locations)</h3>
+        
+        <p><strong>Facilities:</strong></p>
+        <ul>
+          <li>International standard equipment</li>
+          <li>Pool access (some locations)</li>
+          <li>Wide class variety</li>
+          <li>Family memberships available</li>
+          <li>Corporate partnerships</li>
+        </ul>
+        
+        <p><strong>Membership:</strong></p>
+        <ul>
+          <li>Monthly: QAR 450-600</li>
+          <li>Annual: QAR 4,500-6,000</li>
+          <li>Multi-club access options</li>
+        </ul>
+        
+        <p><strong>Best For:</strong> All-round fitness, families, structured programs</p>
+        
+        <h3>3. Aspire Zone (Olympic Standard)</h3>
+        
+        <p><strong>Facilities:</strong></p>
+        <ul>
+          <li>World-class sports complex</li>
+          <li>Olympic swimming pools</li>
+          <li>Track and field facilities</li>
+          <li>Multiple sports courts</li>
+          <li>Professional coaching available</li>
+        </ul>
+        
+        <p><strong>Membership:</strong></p>
+        <ul>
+          <li>Public access programs</li>
+          <li>Specific sport registrations</li>
+          <li>Monthly: QAR 400-700</li>
+          <li>Exceptional facilities</li>
+        </ul>
+        
+        <p><strong>Best For:</strong> Athletes, swimmers, sports enthusiasts, families</p>
+        
+        <h3>4. CrossFit Doha</h3>
+        
+        <p><strong>Facilities:</strong></p>
+        <ul>
+          <li>Dedicated CrossFit equipment</li>
+          <li>Expert coaching staff</li>
+          <li>Community atmosphere</li>
+          <li>Competition preparation</li>
+          <li>Varying workout levels</li>
+        </ul>
+        
+        <p><strong>Membership:</strong></p>
+        <ul>
+          <li>Monthly unlimited: QAR 650-850</li>
+          <li>Drop-in: QAR 80-100</li>
+          <li>Foundation courses required</li>
+        </ul>
+        
+        <p><strong>Best For:</strong> Functional fitness enthusiasts, community seekers, intensity lovers</p>
+        
+        <h3>5. The Club (West Bay)</h3>
+        
+        <p><strong>Facilities:</strong></p>
+        <ul>
+          <li>Luxury health club</li>
+          <li>Spa and wellness integrated</li>
+          <li>Premium equipment</li>
+          <li>Squash courts</li>
+          <li>Restaurant on-site</li>
+        </ul>
+        
+        <p><strong>Membership:</strong></p>
+        <ul>
+          <li>Monthly: QAR 800-1,200</li>
+          <li>Annual: QAR 8,000-12,000</li>
+          <li>Premium experience</li>
+        </ul>
+        
+        <p><strong>Best For:</strong> Executives, luxury experience seekers, networking</p>
+
+        <h2 id="ladies">Ladies-Only Gyms and Facilities</h2>
+        
+        <h3>Dedicated Women's Options</h3>
+        <p>Many facilities offer ladies-only sections or timings:</p>
+        <ul>
+          <li><strong>Oxygen Gym Ladies</strong> - Separate branches</li>
+          <li><strong>Ladies Fitness Company</strong> - Women exclusive</li>
+          <li><strong>Curves</strong> - Women's circuit training</li>
+          <li><strong>Hotel spas</strong> - Ladies wellness programs</li>
+          <li><strong>Community centers</strong> - Women's hours</li>
+        </ul>
+        
+        <h3>Cultural Considerations</h3>
+        <ul>
+          <li>Privacy important for many women</li>
+          <li>Dedicated spaces increasingly available</li>
+          <li>Modest workout wear options</li>
+          <li>Female trainers accessible</li>
+          <li>Comfortable environments created</li>
+        </ul>
+        
+        <h3>Typical Features</h3>
+        <ul>
+          <li>Private workout areas</li>
+          <li>Female-only staff</li>
+          <li>Prayer facilities</li>
+          <li>Family-friendly scheduling</li>
+          <li>Community building focus</li>
+        </ul>
+
+        <h2 id="trends">Fitness Trends Dominating Doha 2025</h2>
+        
+        <h3>1. High-Intensity Interval Training (HIIT)</h3>
+        <ul>
+          <li>Quick, effective workouts</li>
+          <li>Time-efficient for busy professionals</li>
+          <li>Multiple studios offering</li>
+          <li>Measurable results</li>
+          <li>Popular after-work sessions</li>
+        </ul>
+        
+        <h3>2. Padel Tennis</h3>
+        <ul>
+          <li>Fastest-growing sport in Qatar</li>
+          <li>Social aspect appealing</li>
+          <li>Multiple new courts opened</li>
+          <li>Mix of fitness and fun</li>
+          <li>Accessible for beginners</li>
+        </ul>
+        
+        <h3>3. Outdoor Fitness (Seasonal)</h3>
+        <ul>
+          <li>Winter months (November-March)</li>
+          <li>Corniche running groups</li>
+          <li>Boot camps in parks</li>
+          <li>Desert fitness retreats</li>
+          <li>Community running events</li>
+        </ul>
+        
+        <h3>4. Wellness Integration</h3>
+        <ul>
+          <li>Mental health awareness growing</li>
+          <li>Meditation/mindfulness classes</li>
+          <li>Recovery-focused training</li>
+          <li>Sleep optimization programs</li>
+          <li>Holistic health approaches</li>
+        </ul>
+        
+        <h3>5. Technology-Driven Fitness</h3>
+        <ul>
+          <li>Fitness app usage high</li>
+          <li>Wearable tracking popular</li>
+          <li>Virtual classes maintaining popularity</li>
+          <li>AI-powered training programs</li>
+          <li>Data-driven workout optimization</li>
+        </ul>
+        
+        <h3>6. Functional Training</h3>
+        <ul>
+          <li>Movement-based exercises</li>
+          <li>Real-life strength application</li>
+          <li>Injury prevention focus</li>
+          <li>Sports-specific training</li>
+          <li>Growing facility investment</li>
+        </ul>
+
+        <h2 id="classes">Group Fitness Classes Popular in Doha</h2>
+        
+        <h3>Most Attended</h3>
+        <ul>
+          <li><strong>Spinning/Cycling</strong> - High energy cardio</li>
+          <li><strong>Yoga</strong> - Multiple styles available</li>
+          <li><strong>Body Pump</strong> - Weight-based group training</li>
+          <li><strong>Zumba</strong> - Dance fitness</li>
+          <li><strong>Boxing/Kickboxing</strong> - Stress relief, conditioning</li>
+          <li><strong>Pilates</strong> - Core strength, flexibility</li>
+          <li><strong>HIIT Classes</strong> - Maximum calorie burn</li>
+        </ul>
+        
+        <h3>Class Costs</h3>
+        <ul>
+          <li>Included in gym memberships (chains)</li>
+          <li>Drop-in classes: QAR 50-150</li>
+          <li>Class packages: QAR 500-1,000 (10 classes)</li>
+          <li>Studio memberships: QAR 600-1,200/month</li>
+        </ul>
+
+        <h2 id="personal-training">Personal Training in Doha</h2>
+        
+        <h3>Trainer Availability</h3>
+        <p>Abundant personal trainers across all gyms:</p>
+        <ul>
+          <li>Certifications vary (international standards preferred)</li>
+          <li>Experience levels diverse</li>
+          <li>Specializations available (strength, weight loss, sports)</li>
+          <li>Female trainers accessible</li>
+        </ul>
+        
+        <h3>Typical Costs</h3>
+        <ul>
+          <li><strong>Single session:</strong> QAR 150-350</li>
+          <li><strong>Package (10 sessions):</strong> QAR 1,200-3,000</li>
+          <li><strong>Package (20 sessions):</strong> QAR 2,000-5,000</li>
+          <li><strong>Premium trainers:</strong> QAR 300-500/session</li>
+        </ul>
+        
+        <h3>Finding Right Trainer</h3>
+        <ul>
+          <li>Trial sessions available</li>
+          <li>Check certifications (ACE, NASM, etc.)</li>
+          <li>Reviews from other clients</li>
+          <li>Specialization matches goals</li>
+          <li>Communication style compatibility</li>
+        </ul>
+
+        <h2 id="budget">Budget-Friendly Fitness Options</h2>
+        
+        <h3>For Cost-Conscious Expats</h3>
+        
+        <p><strong>Community Center Gyms:</strong></p>
+        <ul>
+          <li>Qatar Foundation facilities</li>
+          <li>Al Rayyan Sports Club</li>
+          <li>Monthly: QAR 150-300</li>
+          <li>Basic but functional</li>
+        </ul>
+        
+        <p><strong>Compound Gyms:</strong></p>
+        <ul>
+          <li>Often free with rent</li>
+          <li>Quality varies significantly</li>
+          <li>Convenience unbeatable</li>
+          <li>Limited equipment sometimes</li>
+        </ul>
+        
+        <p><strong>Outdoor Alternatives:</strong></p>
+        <ul>
+          <li>Corniche running (free)</li>
+          <li>Outdoor gym equipment (parks)</li>
+          <li>YouTube/app workouts (home)</li>
+          <li>Group sports (informal)</li>
+        </ul>
+        
+        <p><strong>Off-Peak Memberships:</strong></p>
+        <ul>
+          <li>Some gyms offer discounts</li>
+          <li>Weekday-only options</li>
+          <li>Morning-only access</li>
+          <li>Savings: 20-30%</li>
+        </ul>
+
+        <h2 id="summer">Summer Workout Challenges</h2>
+        
+        <h3>Heat Considerations (40°C+)</h3>
+        <ul>
+          <li>Outdoor exercise dangerous</li>
+          <li>Early morning only (5-6 AM)</li>
+          <li>Indoor alternatives essential</li>
+          <li>Hydration critical always</li>
+          <li>AC-dependent fitness</li>
+        </ul>
+        
+        <h3>Ramadan Adjustments</h3>
+        <ul>
+          <li>Gym hours modified</li>
+          <li>Evening classes post-Iftar</li>
+          <li>Fasting workout strategies</li>
+          <li>Spiritual fitness integration</li>
+          <li>Community support important</li>
+        </ul>
+
+        <h2 id="corporate">Corporate Fitness Partnerships</h2>
+        
+        <p>Many companies provide:</p>
+        <ul>
+          <li>Gym membership subsidies</li>
+          <li>On-site fitness facilities</li>
+          <li>Corporate rates negotiated</li>
+          <li>Wellness program inclusion</li>
+          <li>Tax-efficient benefits</li>
+        </ul>
+        
+        <p><strong>Ask Employer About:</strong></p>
+        <ul>
+          <li>Fitness allowances</li>
+          <li>Preferred gym partnerships</li>
+          <li>On-site facilities</li>
+          <li>Flexible working for fitness</li>
+          <li>Group corporate rates</li>
+        </ul>
+
+        <h2 id="faq">FAQ: Gyms and Fitness Doha</h2>
+        
+        <h3>Are gyms mixed or segregated?</h3>
+        <p>Both exist. Many gyms offer separate sections or dedicated women's facilities. Some gyms entirely mixed, others have designated times/areas.</p>
+        
+        <h3>Can I freeze gym membership during travel?</h3>
+        <p>Most gyms allow membership freezing. Terms vary (typically 1-3 months maximum). Check contract before signing.</p>
+        
+        <h3>What's average gym membership cost?</h3>
+        <p>QAR 300-600/month for quality facilities. Luxury options QAR 800-1,500. Budget options QAR 150-250.</p>
+        
+        <h3>Best time to workout in Doha?</h3>
+        <p>Morning (6-8 AM) before work or evening (7-9 PM) after dinner. Avoid peak afternoon heat and crowded periods.</p>
+        
+        <h3>Are swimming pools common in gyms?</h3>
+        <p>Hotel gyms typically include pools. Chain gyms sometimes. Standalone facilities often don't. Compounds frequently have pools.</p>
+      `,
+    },
     'hiring-maid-nanny-qatar-guide': {
       id: '50',
       title: 'Hiring Maids and Nannies in Doha Qatar 2025: Complete Legal Guide',
@@ -7488,6 +7889,19 @@ const BlogPost = () => {
                   
                   {/* Rest of content */}
                   <div dangerouslySetInnerHTML={{ __html: '<h2 id="delivery">' + post.content.split('<h2 id="delivery">')[1] }} />
+                </div>
+              ) : slug === 'gyms-fitness-doha-guide' ? (
+                <div className="prose prose-lg max-w-none space-y-8">
+                  {/* First section through top gyms */}
+                  <div dangerouslySetInnerHTML={{ __html: post.content.split('<h2 id="ladies">')[0] }} />
+                  
+                  {/* Gym Membership Comparison */}
+                  <div className="not-prose my-12">
+                    <GymMembershipComparison />
+                  </div>
+                  
+                  {/* Rest of content */}
+                  <div dangerouslySetInnerHTML={{ __html: '<h2 id="ladies">' + post.content.split('<h2 id="ladies">')[1] }} />
                 </div>
               ) : slug === 'hiring-maid-nanny-qatar-guide' ? (
                 <div className="prose prose-lg max-w-none space-y-8">
