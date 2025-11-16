@@ -71,6 +71,7 @@ import expatSalariesDohaImage from '@/assets/expat-salaries-doha-2025.jpg';
 import qatarTaxGuideImage from '@/assets/qatar-tax-guide-2025.jpg';
 import qatarWorkVisaGuideImage from '@/assets/qatar-work-visa-guide-2025.jpg';
 import qatarLaborLawReformsImage from '@/assets/qatar-labor-law-reforms-2025.jpg';
+import endOfServiceGratuityImage from '@/assets/end-of-service-gratuity-qatar-2025.jpg';
 import PetImportChecklist from '@/components/PetImportChecklist';
 import VeterinaryCostEstimator from '@/components/VeterinaryCostEstimator';
 import DomesticWorkerCostCalculator from '@/components/DomesticWorkerCostCalculator';
@@ -87,12 +88,122 @@ import { TaxSavingsCalculator } from '@/components/TaxSavingsCalculator';
 import { RentalPropertyROICalculator } from '@/components/RentalPropertyROICalculator';
 import { VisaApplicationTracker } from '@/components/VisaApplicationTracker';
 import { LaborRightsCalculator } from '@/components/LaborRightsCalculator';
+import { EOSGCalculator } from '@/components/EOSGCalculator';
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   
   // Blog post data based on slug
   const blogPosts: Record<string, any> = {
+    'end-of-service-gratuity-qatar-2025': {
+      id: '61',
+      title: 'The Final Payout: End-of-Service Benefits and Gratuity Calculations in Qatar',
+      date: 'June 10, 2025',
+      author: 'Experience Doha Team',
+      readTime: '18 min read',
+      category: 'Expat-Tips',
+      imageUrl: endOfServiceGratuityImage,
+      tags: ['EOSG Qatar', 'gratuity calculation', 'end of service', 'labor benefits', 'expat compensation'],
+      content: `
+        <p>For expatriates working in Qatar, the <strong>End-of-Service Gratuity (EOSG)</strong> is a legally mandated lump-sum payment that serves as a retirement or severance benefit. Governed by the <strong>Qatar Labour Law (Law No. 14 of 2004)</strong>, this gratuity is a crucial component of the total compensation package and represents a significant financial asset upon the termination of employment. Understanding the eligibility criteria and the precise calculation method is essential for any expat planning their financial future in Doha.</p>
+
+        <h2 id="eligibility">Eligibility for End-of-Service Gratuity</h2>
+        <p>The right to an EOSG is protected by law, but specific conditions must be met for an employee to be eligible for the full benefit.</p>
+
+        <h3 id="minimum-service">1. Minimum Service Period</h3>
+        <p>An employee is entitled to the gratuity only if they have completed a <strong>minimum of one full year</strong> of continuous service with the employer.</p>
+
+        <h3 id="termination-basis">2. Basis of Termination</h3>
+        <p>The gratuity is payable upon the termination of employment, regardless of whether the contract is fixed-term or indefinite, provided the termination is not due to gross misconduct.</p>
+
+        <ul>
+          <li><strong>Employer Termination:</strong> If the employer terminates the contract, the employee is entitled to the <strong>full gratuity</strong>.</li>
+          <li><strong>Employee Resignation (Indefinite Contract):</strong>
+            <ul>
+              <li><strong>Less than 2 years of service:</strong> Not entitled to any gratuity.</li>
+              <li><strong>2 to 5 years of service:</strong> Entitled to one-third (1/3) of the full gratuity.</li>
+              <li><strong>More than 5 years of service:</strong> Entitled to two-thirds (2/3) of the full gratuity.</li>
+              <li><strong>More than 10 years of service:</strong> Entitled to the full gratuity.</li>
+            </ul>
+          </li>
+          <li><strong>Employee Resignation (Fixed-Term Contract):</strong> If the employee resigns before the end of a fixed-term contract, they are generally not entitled to the gratuity, unless the contract allows for it or the resignation is due to a breach of contract by the employer.</li>
+        </ul>
+
+        <h3 id="misconduct">3. Termination for Gross Misconduct</h3>
+        <p>If an employee is dismissed for one of the reasons stipulated in <strong>Article 61</strong> of the Labour Law (e.g., gross misconduct, assault, or repeated failure to perform duties), they forfeit their right to the EOSG.</p>
+
+        <h2 id="calculation">The Gratuity Calculation Formula</h2>
+        <p>The calculation of the EOSG is based on the employee's <strong>basic salary</strong> and the <strong>number of years of service</strong>. Allowances (such as housing, transport, and education) are generally excluded from the calculation unless explicitly stated otherwise in the employment contract.</p>
+
+        <h3 id="statutory-formula">The Statutory Formula</h3>
+        <p>The law mandates a minimum entitlement based on the following scale:</p>
+        <ul>
+          <li><strong>21 days of basic salary</strong> for each of the first five years of service.</li>
+          <li><strong>30 days of basic salary</strong> for each subsequent year of service.</li>
+        </ul>
+        <p>The employer is free to offer a more generous rate (e.g., 30 days for all years of service), but they cannot offer less than the statutory minimum.</p>
+
+        <h3 id="step-by-step">Step-by-Step Calculation</h3>
+        <p>The most common and simplest method for calculating the gratuity is based on the 21-day per year rate for the first five years and 30 days thereafter.</p>
+
+        <div class="bg-accent/10 p-6 rounded-lg my-6">
+          <p class="font-semibold mb-3">Formula:</p>
+          <p class="font-mono text-sm">EOSG = (Years of Service × Entitled Days × Monthly Basic Salary / 30)</p>
+        </div>
+
+        <div class="bg-primary/10 p-6 rounded-lg my-6">
+          <p class="font-semibold mb-3">Example Calculation (Employee with 7 years of service and a Basic Salary of QAR 15,000):</p>
+          <ol class="space-y-2 ml-6">
+            <li><strong>Daily Basic Salary:</strong> QAR 15,000 / 30 = QAR 500</li>
+            <li><strong>Gratuity for First 5 Years (21 days/year):</strong> 5 years × 21 days × QAR 500/day = QAR 52,500</li>
+            <li><strong>Gratuity for Remaining 2 Years (30 days/year):</strong> 2 years × 30 days × QAR 500/day = QAR 30,000</li>
+            <li><strong>Total End-of-Service Gratuity:</strong> QAR 52,500 + QAR 30,000 = <span class="text-primary font-bold">QAR 82,500</span></li>
+          </ol>
+        </div>
+
+        <table class="w-full my-6 border-collapse">
+          <thead>
+            <tr class="bg-muted">
+              <th class="border p-3 text-left">Years of Service</th>
+              <th class="border p-3 text-left">Entitled Days per Year</th>
+              <th class="border p-3 text-left">Calculation Basis</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border p-3">1 to 5 Years</td>
+              <td class="border p-3">21 Days</td>
+              <td class="border p-3">(Years × 21 × Daily Basic Salary)</td>
+            </tr>
+            <tr>
+              <td class="border p-3">6+ Years</td>
+              <td class="border p-3">30 Days</td>
+              <td class="border p-3">(Years × 30 × Daily Basic Salary)</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2 id="contract-importance">The Importance of the Employment Contract</h2>
+        <p>While the Labour Law sets the minimum standard, the employment contract is the definitive document for the employee's entitlements.</p>
+
+        <ul>
+          <li><strong>Higher Entitlement:</strong> If the contract stipulates a more generous gratuity (e.g., 30 days for all years of service), the contract supersedes the minimum legal requirement.</li>
+          <li><strong>Inclusion of Allowances:</strong> If the contract explicitly states that the gratuity calculation should include allowances (e.g., "Basic Salary plus Fixed Allowances"), then the total amount is used as the basis for the calculation. <strong>This is a critical point for negotiation</strong>, as it can significantly increase the final payout.</li>
+        </ul>
+
+        <h2 id="other-benefits">Other End-of-Service Benefits</h2>
+        <p>In addition to the gratuity, an employee whose contract is terminated is also entitled to:</p>
+
+        <ol>
+          <li><strong>Payment in Lieu of Notice:</strong> If the employer terminates the contract without serving the full notice period, the employee must be paid their full salary for the duration of the unserved notice period.</li>
+          <li><strong>Accrued Annual Leave:</strong> Payment for any unused annual leave days accumulated up to the date of termination.</li>
+          <li><strong>Repatriation Flight:</strong> The employer is legally obliged to provide the employee with a one-way ticket to their home country or the place where the contract was signed.</li>
+        </ol>
+
+        <h2 id="conclusion">Conclusion</h2>
+        <p>The End-of-Service Gratuity is a vital financial component of the expat experience in Qatar, providing a tax-free nest egg upon the conclusion of employment. Prospective expatriates must <strong>carefully review their employment contract</strong> to confirm the basis of the gratuity calculation—specifically, whether it is based on the statutory minimum or a more generous company policy, and whether allowances are included. By understanding these rules, expats can accurately forecast their savings and ensure they receive their full legal entitlement upon leaving their post in Doha.</p>
+      `,
+    },
     'qatar-labor-law-reforms-2025': {
       id: '60',
       title: 'A New Era of Mobility: Labor Laws and the Sponsorship (Kafala) System Reforms in Qatar',
@@ -9343,7 +9454,20 @@ const BlogPost = () => {
               </div>
 
               {/* Article Content */}
-              {slug === 'qatar-labor-law-reforms-2025' ? (
+              {slug === 'end-of-service-gratuity-qatar-2025' ? (
+                <div className="prose prose-lg max-w-none space-y-8">
+                  {/* First section through calculation */}
+                  <div dangerouslySetInnerHTML={{ __html: post.content.split('<h2 id="calculation">')[0] }} />
+                  
+                  {/* EOSG Calculator */}
+                  <div className="not-prose my-12">
+                    <EOSGCalculator />
+                  </div>
+                  
+                  {/* Rest of content */}
+                  <div dangerouslySetInnerHTML={{ __html: '<h2 id="calculation">' + post.content.split('<h2 id="calculation">')[1] }} />
+                </div>
+              ) : slug === 'qatar-labor-law-reforms-2025' ? (
                 <div className="prose prose-lg max-w-none space-y-8">
                   {/* First section through transformation */}
                   <div dangerouslySetInnerHTML={{ __html: post.content.split('<h2 id="protection">')[0] }} />
