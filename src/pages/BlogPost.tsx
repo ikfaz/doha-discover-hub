@@ -70,6 +70,7 @@ import jobMarketQatarImage from '@/assets/job-market-qatar-2025.jpg';
 import expatSalariesDohaImage from '@/assets/expat-salaries-doha-2025.jpg';
 import qatarTaxGuideImage from '@/assets/qatar-tax-guide-2025.jpg';
 import qatarWorkVisaGuideImage from '@/assets/qatar-work-visa-guide-2025.jpg';
+import qatarLaborLawReformsImage from '@/assets/qatar-labor-law-reforms-2025.jpg';
 import PetImportChecklist from '@/components/PetImportChecklist';
 import VeterinaryCostEstimator from '@/components/VeterinaryCostEstimator';
 import DomesticWorkerCostCalculator from '@/components/DomesticWorkerCostCalculator';
@@ -85,12 +86,112 @@ import { SalaryCalculator } from '@/components/SalaryCalculator';
 import { TaxSavingsCalculator } from '@/components/TaxSavingsCalculator';
 import { RentalPropertyROICalculator } from '@/components/RentalPropertyROICalculator';
 import { VisaApplicationTracker } from '@/components/VisaApplicationTracker';
+import { LaborRightsCalculator } from '@/components/LaborRightsCalculator';
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   
   // Blog post data based on slug
   const blogPosts: Record<string, any> = {
+    'qatar-labor-law-reforms-2025': {
+      id: '60',
+      title: 'A New Era of Mobility: Labor Laws and the Sponsorship (Kafala) System Reforms in Qatar',
+      date: 'June 9, 2025',
+      author: 'Experience Doha Team',
+      readTime: '16 min read',
+      category: 'Expat-Tips',
+      imageUrl: qatarLaborLawReformsImage,
+      tags: ['Qatar labor law', 'Kafala reform', 'NOC abolished', 'worker rights', 'job mobility Qatar'],
+      content: `
+        <p>Qatar has undergone a period of unprecedented labor reform, fundamentally reshaping the relationship between employers and the vast expatriate workforce. Driven by international scrutiny and a commitment to modernizing its labor market, the government has dismantled key components of the traditional <strong>Kafala (sponsorship) system</strong>. These reforms, particularly the <strong>abolition of the No-Objection Certificate (NOC)</strong> and the introduction of a <strong>non-discriminatory minimum wage</strong>, have significantly enhanced worker mobility and protection, making the Qatari labor market more dynamic and fair.</p>
+
+        <h2 id="transformation">The Transformation of the Kafala System</h2>
+        <p>The Kafala system, which historically tied a migrant worker's legal status to their employer (sponsor), was the subject of widespread criticism. In response, Qatar has implemented a series of legislative changes that have effectively dismantled the most restrictive elements of the system.</p>
+
+        <h3>1. The End of the No-Objection Certificate (NOC)</h3>
+        <p>The most significant reform for professional expatriates is the <strong>abolition of the requirement for a No-Objection Certificate (NOC)</strong> from the current employer to change jobs.</p>
+
+        <ul>
+          <li><strong>Pre-Reform:</strong> Workers were legally required to obtain an NOC from their employer to switch jobs before the end of their contract. Without it, they faced a mandatory two-year ban on working in Qatar.</li>
+          <li><strong>Post-Reform (Law No. 18 of 2020):</strong> Workers can now <strong>change jobs at any time</strong> during their contract, provided they adhere to a statutory notice period:
+            <ul>
+              <li><strong>Notice Period (≤2 years of service):</strong> One month.</li>
+              <li><strong>Notice Period (>2 years of service):</strong> Two months.</li>
+            </ul>
+          </li>
+        </ul>
+
+        <p>This change has empowered employees, fostered competition among employers for talent, and significantly increased labor mobility within the country.</p>
+
+        <h3>2. Freedom to Leave the Country</h3>
+        <p>The requirement for an <strong>exit permit</strong>, which previously required the employer's permission for a worker to leave Qatar, has also been abolished for the vast majority of workers. This ensures that employees are free to travel without the consent of their sponsor.</p>
+
+        <h2 id="protection">Enhanced Worker Protection and Minimum Wage</h2>
+        <p>In addition to mobility, the reforms have focused on establishing a stronger safety net for all workers.</p>
+
+        <h3>1. Non-Discriminatory Minimum Wage</h3>
+        <p>In 2021, Qatar introduced a <strong>non-discriminatory minimum wage</strong> for all workers, regardless of nationality, set at <strong>QAR 1,000 per month</strong>.</p>
+
+        <ul>
+          <li><strong>Mandatory Allowances:</strong> Employers must also provide a minimum of <strong>QAR 500 per month for accommodation</strong> and <strong>QAR 300 per month for food</strong>, unless these are provided directly by the employer.</li>
+          <li><strong>Significance:</strong> This was the first country in the GCC to implement a non-discriminatory minimum wage, setting a new standard for labor rights in the region.</li>
+        </ul>
+
+        <h3>2. Wage Protection System (WPS)</h3>
+        <p>The WPS is a mandatory electronic system that ensures all workers are paid their wages <strong>on time and in full</strong>, directly into their Qatari bank accounts. This system allows the Ministry of Labour to monitor compliance and take swift action against employers who fail to pay their workers.</p>
+
+        <h3>3. Joint Labour Committees</h3>
+        <p>New regulations mandate the establishment of <strong>Joint Labour Committees</strong> in companies with more than 30 workers. These committees, composed of both management and elected worker representatives, provide a formal platform for dialogue and consultation on working conditions, safety, and other employment matters.</p>
+
+        <h2 id="provisions">Key Provisions of the Qatar Labour Law</h2>
+        <p>The fundamental rights and obligations of both employers and employees are governed by the <strong>Qatar Labour Law (Law No. 14 of 2004)</strong>. Key provisions include:</p>
+
+        <div class="overflow-x-auto my-8">
+          <table class="min-w-full border-collapse border border-border">
+            <thead class="bg-muted">
+              <tr>
+                <th class="border border-border px-4 py-3 text-left font-semibold">Provision</th>
+                <th class="border border-border px-4 py-3 text-left font-semibold">Detail</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="border border-border px-4 py-2 font-medium">Working Hours</td>
+                <td class="border border-border px-4 py-2">Maximum of 48 hours per week (8 hours per day) and 6 days a week. During Ramadan, this is reduced to 36 hours per week (6 hours per day).</td>
+              </tr>
+              <tr class="bg-muted/50">
+                <td class="border border-border px-4 py-2 font-medium">Overtime</td>
+                <td class="border border-border px-4 py-2">Overtime is compensated at a rate of 125% of the basic wage.</td>
+              </tr>
+              <tr>
+                <td class="border border-border px-4 py-2 font-medium">Annual Leave</td>
+                <td class="border border-border px-4 py-2">Minimum of 3 weeks (21 days) of paid annual leave after one year of service.</td>
+              </tr>
+              <tr class="bg-muted/50">
+                <td class="border border-border px-4 py-2 font-medium">Sick Leave</td>
+                <td class="border border-border px-4 py-2">Up to 12 weeks of sick leave per year, with the first two weeks fully paid, the next four weeks half-paid, and the remaining six weeks unpaid.</td>
+              </tr>
+              <tr>
+                <td class="border border-border px-4 py-2 font-medium">Public Holidays</td>
+                <td class="border border-border px-4 py-2">Employees are entitled to paid leave on officially declared public holidays.</td>
+              </tr>
+              <tr class="bg-muted/50">
+                <td class="border border-border px-4 py-2 font-medium">End-of-Service Gratuity</td>
+                <td class="border border-border px-4 py-2">Mandatory lump-sum payment upon termination. First 5 years: 21 days per year. Beyond 5 years: 30 days per year.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 id="future">The Future of Labor in Qatar</h2>
+        <p>The reforms have been widely praised by international bodies, including the <strong>International Labour Organization (ILO)</strong>, as a significant step forward. However, challenges remain in the effective implementation and enforcement of these new laws, particularly among smaller companies.</p>
+
+        <p>For the professional expatriate, the reforms have created a <strong>more secure and flexible work environment</strong>. The ability to change jobs without employer consent provides a powerful negotiating tool and reduces the risk of exploitation.</p>
+
+        <h2 id="conclusion">Conclusion</h2>
+        <p>Qatar's labor law reforms represent a <strong>paradigm shift</strong> from the restrictive Kafala system to a more modern, contract-based employment framework. While the system still requires a sponsor for the Residence Permit, the enhanced worker mobility, the introduction of a minimum wage, and the strengthened legal protections have fundamentally improved the quality of life and career prospects for the vast expatriate community in Doha.</p>
+      `,
+    },
     'qatar-work-visa-guide-2025': {
       id: '59',
       title: 'The Golden Ticket: Work Visa and Residence Permit (RP) Application Process in Qatar',
@@ -9242,7 +9343,20 @@ const BlogPost = () => {
               </div>
 
               {/* Article Content */}
-              {slug === 'qatar-work-visa-guide-2025' ? (
+              {slug === 'qatar-labor-law-reforms-2025' ? (
+                <div className="prose prose-lg max-w-none space-y-8">
+                  {/* First section through transformation */}
+                  <div dangerouslySetInnerHTML={{ __html: post.content.split('<h2 id="protection">')[0] }} />
+                  
+                  {/* Labor Rights Calculator */}
+                  <div className="not-prose my-12">
+                    <LaborRightsCalculator />
+                  </div>
+                  
+                  {/* Rest of content */}
+                  <div dangerouslySetInnerHTML={{ __html: '<h2 id="protection">' + post.content.split('<h2 id="protection">')[1] }} />
+                </div>
+              ) : slug === 'qatar-work-visa-guide-2025' ? (
                 <div className="prose prose-lg max-w-none space-y-8">
                   {/* First section through phase 1 */}
                   <div dangerouslySetInnerHTML={{ __html: post.content.split('<h2 id="phase-2">')[0] }} />
