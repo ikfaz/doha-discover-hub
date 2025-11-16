@@ -39,6 +39,16 @@ import remoteWorkCafesImage from '@/assets/remote-work-cafes-doha-guide.jpg';
 const Index = () => {
   const featuredBlogs = [
     {
+      id: '54',
+      title: 'The Price of Paradise: Cost of Living in Doha and a Comparison to Dubai and Riyadh',
+      excerpt: 'Compare cost of living in Doha vs Dubai and Riyadh. Housing costs, groceries, transportation, education fees, and strategies for managing expenses in Qatar 2025.',
+      imageUrl: costOfLivingImage,
+      category: 'Expat-Tips',
+      date: 'June 3, 2025',
+      slug: 'cost-of-living-doha-dubai-riyadh',
+      tags: ['cost of living Doha', 'Doha vs Dubai', 'Qatar housing costs', 'expat budget Qatar', 'living expenses Qatar'],
+    },
+    {
       id: '53',
       title: 'Alcohol Rules in Qatar 2025: QDC, Licenses, and Complete Legal Guide',
       excerpt: 'Understand Qatar alcohol laws 2025. Learn about QDC permits, where to buy alcohol legally, hotel bar rules, consumption restrictions, and penalties in Doha.',
