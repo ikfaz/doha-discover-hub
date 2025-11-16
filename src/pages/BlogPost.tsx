@@ -76,6 +76,7 @@ import QDCPermitCalculator from '@/components/QDCPermitCalculator';
 import HotelBarFinder from '@/components/HotelBarFinder';
 import CityCostComparison from '@/components/CityCostComparison';
 import RentPriceComparison from '@/components/RentPriceComparison';
+import JobSearchStrategyGuide from '@/components/JobSearchStrategyGuide';
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -8861,7 +8862,20 @@ const BlogPost = () => {
               </div>
 
               {/* Article Content */}
-              {slug === 'housing-rent-doha-2025' ? (
+              {slug === 'job-market-qatar-2025' ? (
+                <div className="prose prose-lg max-w-none space-y-8">
+                  {/* First section through search landscape */}
+                  <div dangerouslySetInnerHTML={{ __html: post.content.split('<h2 id="trends">')[0] }} />
+                  
+                  {/* Job Search Strategy Guide */}
+                  <div className="not-prose my-12">
+                    <JobSearchStrategyGuide />
+                  </div>
+                  
+                  {/* Rest of content */}
+                  <div dangerouslySetInnerHTML={{ __html: '<h2 id="trends">' + post.content.split('<h2 id="trends">')[1] }} />
+                </div>
+              ) : slug === 'housing-rent-doha-2025' ? (
                 <div className="prose prose-lg max-w-none space-y-8">
                   {/* First section through options */}
                   <div dangerouslySetInnerHTML={{ __html: post.content.split('<h2 id="legal">')[0] }} />
