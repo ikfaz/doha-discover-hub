@@ -72,6 +72,7 @@ import qatarTaxGuideImage from '@/assets/qatar-tax-guide-2025.jpg';
 import qatarWorkVisaGuideImage from '@/assets/qatar-work-visa-guide-2025.jpg';
 import qatarLaborLawReformsImage from '@/assets/qatar-labor-law-reforms-2025.jpg';
 import endOfServiceGratuityImage from '@/assets/end-of-service-gratuity-qatar-2025.jpg';
+import healthcareInsuranceQatarImage from '@/assets/healthcare-insurance-qatar-guide.jpg';
 import PetImportChecklist from '@/components/PetImportChecklist';
 import VeterinaryCostEstimator from '@/components/VeterinaryCostEstimator';
 import DomesticWorkerCostCalculator from '@/components/DomesticWorkerCostCalculator';
@@ -90,12 +91,113 @@ import { VisaApplicationTracker } from '@/components/VisaApplicationTracker';
 import { LaborRightsCalculator } from '@/components/LaborRightsCalculator';
 import { EOSGCalculator } from '@/components/EOSGCalculator';
 import { ContractNegotiationChecklist } from '@/components/ContractNegotiationChecklist';
+import { HealthInsuranceComparison } from '@/components/HealthInsuranceComparison';
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   
   // Blog post data based on slug
   const blogPosts: Record<string, any> = {
+    'healthcare-insurance-qatar-guide': {
+      id: '62',
+      title: 'Health and Wellness: The Healthcare System and Insurance Options for Expats in Doha',
+      date: 'June 11, 2025',
+      author: 'Experience Doha Team',
+      readTime: '16 min read',
+      category: 'Expat-Tips',
+      imageUrl: healthcareInsuranceQatarImage,
+      tags: ['Qatar healthcare', 'health insurance', 'HMC hospitals', 'medical coverage', 'expat health'],
+      content: `
+        <p>Qatar has invested heavily in developing a world-class healthcare system, positioning it as a regional leader in medical services. For expatriates, understanding the structure of this system—which includes both <strong>public and private sectors</strong>—and the <strong>mandatory health insurance requirements</strong> is crucial for ensuring access to high-quality medical care during their stay in Doha.</p>
+
+        <h2 id="dual-system">The Dual Healthcare System</h2>
+        <p>Qatar operates a dual healthcare system, providing services through both government-funded public institutions and a growing private sector.</p>
+
+        <h3 id="public-healthcare">1. The Public Healthcare System</h3>
+        <p>The public system is managed by the <strong>Hamad Medical Corporation (HMC)</strong>, which operates the country's main hospitals, specialized centers, and primary healthcare centers (PHCCs).</p>
+
+        <ul>
+          <li><strong>Quality:</strong> HMC facilities are internationally accredited and offer a high standard of care, often utilizing state-of-the-art technology and highly qualified international staff.</li>
+          <li><strong>Access for Expats:</strong> Expatriates can access public healthcare services by obtaining a <strong>Hamad Health Card</strong>.
+            <ul>
+              <li><strong>Health Card:</strong> The card is available for a nominal annual fee (currently QAR 100 for adults). It allows the holder to receive subsidized services, including reduced fees for consultations, laboratory tests, and prescription medications at HMC and PHCC facilities.</li>
+            </ul>
+          </li>
+          <li><strong>Limitations:</strong> While subsidized, the public system can sometimes involve longer waiting times for non-emergency appointments, and expats may not have a choice of doctor.</li>
+        </ul>
+
+        <h3 id="private-healthcare">2. The Private Healthcare Sector</h3>
+        <p>The private sector has expanded rapidly to meet the demand for more immediate access, specialized care, and a choice of Western-trained practitioners.</p>
+
+        <ul>
+          <li><strong>Providers:</strong> Numerous private hospitals and clinics operate across Doha, including international brands and specialized centers.</li>
+          <li><strong>Advantages:</strong> Shorter waiting times, greater choice of specialists, and a more personalized patient experience.</li>
+          <li><strong>Cost:</strong> Services in the private sector are significantly more expensive than in the public system and are typically covered by private health insurance.</li>
+        </ul>
+
+        <h2 id="mandatory-insurance">Mandatory Health Insurance for Expatriates</h2>
+        <p>In a significant move to ensure comprehensive coverage for all residents, Qatar has made <strong>health insurance mandatory for all expatriates</strong>.</p>
+
+        <h3 id="insurance-law">The Mandatory Health Insurance Law</h3>
+        <p>The law mandates that all residents, including expatriates and visitors, must have health insurance coverage. This shifts the responsibility for providing primary healthcare coverage from the state to the employer (for employees) or the individual (for dependents and visitors).</p>
+
+        <ul>
+          <li><strong>Employer Obligation:</strong> Employers are legally required to provide basic health insurance coverage for all their employees. This is a non-negotiable part of the employment contract.</li>
+          <li><strong>Dependents:</strong> While the employer is responsible for the employee, the employee is generally responsible for securing and paying for the health insurance of their dependents (spouse and children), unless the employment contract explicitly includes a family health insurance package.</li>
+        </ul>
+
+        <h3 id="types-of-insurance">Types of Health Insurance</h3>
+        <p>Expatriates typically encounter two main types of insurance plans:</p>
+
+        <table class="w-full my-6 border-collapse">
+          <thead>
+            <tr class="bg-muted">
+              <th class="border p-3 text-left">Insurance Type</th>
+              <th class="border p-3 text-left">Coverage</th>
+              <th class="border p-3 text-left">Cost</th>
+              <th class="border p-3 text-left">Access</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border p-3"><strong>Basic (Mandatory)</strong></td>
+              <td class="border p-3">Covers essential primary care, emergency services, and basic hospitalization.</td>
+              <td class="border p-3">Paid by the employer (low cost).</td>
+              <td class="border p-3">Primarily HMC/PHCCs, limited private network.</td>
+            </tr>
+            <tr>
+              <td class="border p-3"><strong>Comprehensive (Private)</strong></td>
+              <td class="border p-3">Covers a wider range of services, including dental, optical, specialist consultations, and elective procedures.</td>
+              <td class="border p-3">Paid by employer (premium package) or individual.</td>
+              <td class="border p-3">Extensive network of private hospitals and clinics.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="bg-primary/10 p-6 rounded-lg my-6">
+          <p class="font-semibold mb-2">The Importance of Comprehensive Coverage</p>
+          <p>Given the high cost of private medical care, most professional expatriates prefer a comprehensive private insurance plan. When negotiating an employment package, securing a <strong>family-wide, high-tier private health insurance policy</strong> is as crucial as negotiating the salary and housing allowance.</p>
+        </div>
+
+        <h2 id="wellness-considerations">Health and Wellness Considerations</h2>
+        <p>Beyond the formal healthcare system, Doha offers a high standard of living that contributes to overall wellness.</p>
+
+        <h3 id="water-food-safety">1. Water and Food Safety</h3>
+        <p>Tap water in Doha is desalinated and generally safe to drink, though many residents prefer bottled water for taste. Food safety standards are high, with strict regulations on imported and locally produced food.</p>
+
+        <h3 id="environmental-factors">2. Environmental Factors</h3>
+        <ul>
+          <li><strong>Air Quality:</strong> Air quality is generally good, though dust and sandstorms can occasionally occur, which may affect individuals with respiratory conditions.</li>
+          <li><strong>Climate:</strong> The extreme heat in the summer months (May to September) necessitates caution. Outdoor activity during the day is strongly discouraged, and hydration is critical.</li>
+        </ul>
+
+        <h3 id="mental-health">3. Mental Health Services</h3>
+        <p>Mental health awareness and services are growing in Qatar. HMC offers public mental health services, and a number of private clinics provide confidential counseling and psychiatric services, typically covered by comprehensive private insurance plans.</p>
+
+        <h2 id="conclusion">Conclusion</h2>
+        <p>The healthcare system in Doha is robust, modern, and capable of providing excellent medical care. The mandatory health insurance law ensures that all expatriates have a safety net, with employers responsible for the basic coverage of their staff. For a truly comfortable and comprehensive experience, however, securing a <strong>high-tier private health insurance package is highly recommended</strong>. This ensures quick access to the best private facilities and specialists, allowing expatriates to focus on their careers and enjoy the high quality of life that Doha offers with peace of mind.</p>
+      `,
+    },
     'end-of-service-gratuity-qatar-2025': {
       id: '61',
       title: 'The Final Payout: End-of-Service Benefits and Gratuity Calculations in Qatar',
@@ -9455,7 +9557,20 @@ const BlogPost = () => {
               </div>
 
               {/* Article Content */}
-              {slug === 'end-of-service-gratuity-qatar-2025' ? (
+              {slug === 'healthcare-insurance-qatar-guide' ? (
+                <div className="prose prose-lg max-w-none space-y-8">
+                  {/* First section through types of insurance */}
+                  <div dangerouslySetInnerHTML={{ __html: post.content.split('<h3 id="types-of-insurance">')[0] }} />
+                  
+                  {/* Health Insurance Comparison Tool */}
+                  <div className="not-prose my-12">
+                    <HealthInsuranceComparison />
+                  </div>
+                  
+                  {/* Rest of content */}
+                  <div dangerouslySetInnerHTML={{ __html: '<h3 id="types-of-insurance">' + post.content.split('<h3 id="types-of-insurance">')[1] }} />
+                </div>
+              ) : slug === 'end-of-service-gratuity-qatar-2025' ? (
                 <div className="prose prose-lg max-w-none space-y-8">
                   {/* First section through calculation */}
                   <div dangerouslySetInnerHTML={{ __html: post.content.split('<h2 id="calculation">')[0] }} />
