@@ -89,6 +89,7 @@ import { RentalPropertyROICalculator } from '@/components/RentalPropertyROICalcu
 import { VisaApplicationTracker } from '@/components/VisaApplicationTracker';
 import { LaborRightsCalculator } from '@/components/LaborRightsCalculator';
 import { EOSGCalculator } from '@/components/EOSGCalculator';
+import { ContractNegotiationChecklist } from '@/components/ContractNegotiationChecklist';
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -9466,6 +9467,11 @@ const BlogPost = () => {
                   
                   {/* Rest of content */}
                   <div dangerouslySetInnerHTML={{ __html: '<h2 id="calculation">' + post.content.split('<h2 id="calculation">')[1] }} />
+                  
+                  {/* Contract Negotiation Checklist */}
+                  <div className="not-prose my-12">
+                    <ContractNegotiationChecklist />
+                  </div>
                 </div>
               ) : slug === 'qatar-labor-law-reforms-2025' ? (
                 <div className="prose prose-lg max-w-none space-y-8">
