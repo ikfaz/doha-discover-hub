@@ -63,6 +63,7 @@ import groceryShoppingDohaImage from '@/assets/grocery-shopping-doha-guide.jpg';
 import dohaMetro2025Image from '@/assets/doha-metro-2025-guide.jpg';
 import petImportQatarImage from '@/assets/pet-import-qatar-guide.jpg';
 import PetImportChecklist from '@/components/PetImportChecklist';
+import VeterinaryCostEstimator from '@/components/VeterinaryCostEstimator';
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -7064,8 +7065,16 @@ const BlogPost = () => {
                     <PetImportChecklist />
                   </div>
                   
+                  {/* Quarantine through Insurance section */}
+                  <div dangerouslySetInnerHTML={{ __html: '<h2 id="quarantine">' + post.content.split('<h2 id="quarantine">')[1].split('<h2 id="living">')[0] }} />
+                  
+                  {/* Veterinary Cost Estimator */}
+                  <div className="not-prose my-12">
+                    <VeterinaryCostEstimator />
+                  </div>
+                  
                   {/* Rest of content */}
-                  <div dangerouslySetInnerHTML={{ __html: '<h2 id="quarantine">' + post.content.split('<h2 id="quarantine">')[1] }} />
+                  <div dangerouslySetInnerHTML={{ __html: '<h2 id="living">' + post.content.split('<h2 id="living">')[1] }} />
                 </div>
               ) : slug === 'doha-metro-2025-guide' ? (
                 <div className="prose prose-lg max-w-none space-y-8">
