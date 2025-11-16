@@ -67,6 +67,7 @@ import gymsFitnessDohaImage from '@/assets/gyms-fitness-doha-guide.jpg';
 import remoteWorkCafesImage from '@/assets/remote-work-cafes-doha-guide.jpg';
 import housingRentDohaImage from '@/assets/housing-rent-doha-2025.jpg';
 import jobMarketQatarImage from '@/assets/job-market-qatar-2025.jpg';
+import expatSalariesDohaImage from '@/assets/expat-salaries-doha-2025.jpg';
 import PetImportChecklist from '@/components/PetImportChecklist';
 import VeterinaryCostEstimator from '@/components/VeterinaryCostEstimator';
 import DomesticWorkerCostCalculator from '@/components/DomesticWorkerCostCalculator';
@@ -78,12 +79,147 @@ import CityCostComparison from '@/components/CityCostComparison';
 import RentPriceComparison from '@/components/RentPriceComparison';
 import JobSearchStrategyGuide from '@/components/JobSearchStrategyGuide';
 import { CVTemplateGenerator } from '@/components/CVTemplateGenerator';
+import { SalaryCalculator } from '@/components/SalaryCalculator';
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   
   // Blog post data based on slug
   const blogPosts: Record<string, any> = {
+    'expat-salaries-doha-2025': {
+      id: '57',
+      title: 'The Compensation Landscape: Average and Typical Salaries for Various Expat Roles in Doha',
+      date: 'June 6, 2025',
+      author: 'Experience Doha Team',
+      readTime: '18 min read',
+      category: 'Expat-Tips',
+      imageUrl: expatSalariesDohaImage,
+      tags: ['Qatar salaries', 'expat compensation', 'salary negotiation', 'tax-free income', 'housing allowance'],
+      content: `
+        <p>One of the primary drivers for expatriates moving to Doha is the opportunity to earn a competitive, tax-free salary. The compensation structure in Qatar is highly attractive, but salaries vary significantly based on industry, experience, nationality, and the specific role. Understanding the typical salary ranges for various expat roles is crucial for negotiating a fair and financially rewarding employment package.</p>
+
+        <h2 id="tax-free">The Tax-Free Advantage</h2>
+        <p>It is important to reiterate the fundamental financial benefit: <strong>Qatar does not impose personal income tax on wages and salaries</strong>. This means the gross salary is the net salary, offering a substantial increase in disposable income compared to countries with high tax rates. This advantage is the core of the financial appeal for expats.</p>
+
+        <h2 id="benchmarks">Average Salary Benchmarks</h2>
+        <p>While the overall average salary provides a general benchmark, it is less useful than sector-specific data due to the wide disparity between high-earning executive roles and lower-paid service positions.</p>
+        
+        <ul>
+          <li><strong>Overall Average Salary:</strong> The average monthly salary in Qatar is often cited to be around <strong>QAR 15,000</strong> (approximately USD 4,100). However, this figure is heavily skewed by the high number of low-wage workers.</li>
+          <li><strong>Median Salary:</strong> A more realistic figure for professional expatriates is the median salary, which is typically lower than the average but provides a better sense of the middle ground.</li>
+        </ul>
+
+        <h2 id="ranges">Sector-Specific Salary Ranges</h2>
+        <p>Salaries are generally highest in the energy sector and for senior management roles across all industries. The following table provides estimated monthly salary ranges (excluding allowances) for professional expat roles in key sectors as of late 2025.</p>
+
+        <div class="overflow-x-auto my-8">
+          <table class="min-w-full border-collapse border border-border">
+            <thead class="bg-muted">
+              <tr>
+                <th class="border border-border px-4 py-3 text-left font-semibold">Sector</th>
+                <th class="border border-border px-4 py-3 text-left font-semibold">Role</th>
+                <th class="border border-border px-4 py-3 text-left font-semibold">Junior/Entry Level (QAR)</th>
+                <th class="border border-border px-4 py-3 text-left font-semibold">Mid-Level/Specialist (QAR)</th>
+                <th class="border border-border px-4 py-3 text-left font-semibold">Senior/Management (QAR)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="border border-border px-4 py-2 font-medium">Oil & Gas</td>
+                <td class="border border-border px-4 py-2">Engineer (Petroleum/Process)</td>
+                <td class="border border-border px-4 py-2">18,000 – 25,000</td>
+                <td class="border border-border px-4 py-2">25,000 – 40,000</td>
+                <td class="border border-border px-4 py-2">40,000 – 65,000+</td>
+              </tr>
+              <tr class="bg-muted/50">
+                <td class="border border-border px-4 py-2 font-medium">Banking & Finance</td>
+                <td class="border border-border px-4 py-2">Analyst/Associate</td>
+                <td class="border border-border px-4 py-2">15,000 – 22,000</td>
+                <td class="border border-border px-4 py-2">22,000 – 35,000</td>
+                <td class="border border-border px-4 py-2">35,000 – 55,000+</td>
+              </tr>
+              <tr>
+                <td class="border border-border px-4 py-2 font-medium">Information Technology</td>
+                <td class="border border-border px-4 py-2">Software Developer/IT Specialist</td>
+                <td class="border border-border px-4 py-2">14,000 – 20,000</td>
+                <td class="border border-border px-4 py-2">20,000 – 30,000</td>
+                <td class="border border-border px-4 py-2">30,000 – 45,000</td>
+              </tr>
+              <tr class="bg-muted/50">
+                <td class="border border-border px-4 py-2 font-medium">Healthcare</td>
+                <td class="border border-border px-4 py-2">Registered Nurse (Western)</td>
+                <td class="border border-border px-4 py-2">12,000 – 18,000</td>
+                <td class="border border-border px-4 py-2">18,000 – 25,000</td>
+                <td class="border border-border px-4 py-2">25,000 – 40,000+</td>
+              </tr>
+              <tr>
+                <td class="border border-border px-4 py-2 font-medium">Education</td>
+                <td class="border border-border px-4 py-2">International School Teacher</td>
+                <td class="border border-border px-4 py-2">10,000 – 16,000</td>
+                <td class="border border-border px-4 py-2">16,000 – 25,000</td>
+                <td class="border border-border px-4 py-2">25,000 – 40,000+</td>
+              </tr>
+              <tr class="bg-muted/50">
+                <td class="border border-border px-4 py-2 font-medium">Construction</td>
+                <td class="border border-border px-4 py-2">Site Engineer/Supervisor</td>
+                <td class="border border-border px-4 py-2">12,000 – 18,000</td>
+                <td class="border border-border px-4 py-2">18,000 – 28,000</td>
+                <td class="border border-border px-4 py-2">28,000 – 45,000</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="text-sm text-muted-foreground italic">Note: These figures represent the basic salary and do not include the value of allowances, which can significantly increase the total compensation package.</p>
+
+        <h2 id="package">The Total Compensation Package: Beyond Basic Salary</h2>
+        <p>In Qatar, the total compensation package is often more important than the basic salary alone. A comprehensive package for a professional expat typically includes several non-taxable allowances that cover the high cost of living.</p>
+
+        <h3>1. Housing Allowance (The Most Critical)</h3>
+        <p>Given the high cost of rent, a separate housing allowance is essential. This is often paid monthly or quarterly.</p>
+        <ul>
+          <li><strong>Typical Value:</strong> Can range from <strong>QAR 6,000 to QAR 15,000+ per month</strong>, depending on the role and whether the employee is single or accompanied by family.</li>
+          <li><strong>Alternative:</strong> Some companies provide company-leased accommodation (apartment or villa) instead of a cash allowance.</li>
+        </ul>
+
+        <h3>2. Transportation Allowance</h3>
+        <p>This covers the cost of commuting. It can be a cash allowance or the provision of a company car.</p>
+        <ul>
+          <li><strong>Typical Value:</strong> <strong>QAR 1,500 to QAR 3,500 per month</strong>.</li>
+        </ul>
+
+        <h3>3. Education Allowance (For Families)</h3>
+        <p>For expats with children, the cost of international school fees is substantial. A good package will include an allowance to cover all or a significant portion of these fees.</p>
+        <ul>
+          <li><strong>Typical Value:</strong> Varies widely, often covering fees for two to three children up to a specified annual limit (e.g., <strong>QAR 40,000 to QAR 80,000 per child per year</strong>).</li>
+        </ul>
+
+        <h3>4. Annual Benefits</h3>
+        <ul>
+          <li><strong>Annual Flight Tickets:</strong> Return economy or business class tickets to the employee's home country for the employee and their dependents.</li>
+          <li><strong>Health Insurance:</strong> Mandatory for all employees. A high-quality package will include comprehensive private health insurance.</li>
+          <li><strong>End-of-Service Gratuity:</strong> A legally mandated lump-sum payment upon termination of employment.</li>
+        </ul>
+
+        <h2 id="factors">Factors Influencing Salary Negotiation</h2>
+
+        <h3>1. Nationality and Origin</h3>
+        <p>While illegal, a "nationality premium" still exists in the Qatari job market. Candidates from Western countries (North America, Western Europe, Australia) often command higher salaries and more generous packages than those from other regions, even for similar roles.</p>
+
+        <h3>2. Scarcity of Skill</h3>
+        <p>Roles requiring highly specialized or niche skills (e.g., specific FinTech expertise, rare medical specialties) will command a premium due to the limited local talent pool.</p>
+
+        <h3>3. Company Type</h3>
+        <ul>
+          <li><strong>Government/Semi-Government Entities:</strong> Often offer the most stable and comprehensive packages, including generous housing and education allowances.</li>
+          <li><strong>Multinational Corporations (MNCs):</strong> Offer competitive salaries aligned with global pay scales but may have less generous allowances than government entities.</li>
+          <li><strong>Local Private Companies:</strong> Salaries can be more variable, and allowances may be less comprehensive, requiring more careful negotiation.</li>
+        </ul>
+
+        <h2 id="conclusion">Conclusion</h2>
+        <p>The salary landscape in Doha is highly rewarding for professional expatriates, offering the significant advantage of tax-free income. However, a successful financial outcome depends not just on the basic salary but on the total compensation package. Prospective employees must research sector-specific benchmarks, understand the high cost of living (especially housing and education), and negotiate a comprehensive package that adequately covers these expenses to maximize their savings potential and ensure a comfortable, high-quality life in Qatar.</p>
+      `,
+    },
     'job-market-qatar-2025': {
       id: '56',
       title: 'The Gateway to Opportunity: Job Market and Employment for Foreigners in Qatar',
@@ -8863,7 +8999,20 @@ const BlogPost = () => {
               </div>
 
               {/* Article Content */}
-              {slug === 'job-market-qatar-2025' ? (
+              {slug === 'expat-salaries-doha-2025' ? (
+                <div className="prose prose-lg max-w-none space-y-8">
+                  {/* First section through salary ranges */}
+                  <div dangerouslySetInnerHTML={{ __html: post.content.split('<h2 id="package">')[0] }} />
+                  
+                  {/* Salary Calculator */}
+                  <div className="not-prose my-12">
+                    <SalaryCalculator />
+                  </div>
+                  
+                  {/* Rest of content */}
+                  <div dangerouslySetInnerHTML={{ __html: '<h2 id="package">' + post.content.split('<h2 id="package">')[1] }} />
+                </div>
+              ) : slug === 'job-market-qatar-2025' ? (
                 <div className="prose prose-lg max-w-none space-y-8">
                   {/* First section through search landscape */}
                   <div dangerouslySetInnerHTML={{ __html: post.content.split('<h2 id="trends">')[0] }} />
