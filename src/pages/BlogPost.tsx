@@ -78,6 +78,127 @@ const BlogPost = () => {
   
   // Blog post data based on slug
   const blogPosts: Record<string, any> = {
+    'cost-of-living-doha-dubai-riyadh': {
+      id: '54',
+      title: 'The Price of Paradise: Cost of Living in Doha and a Comparison to Dubai and Riyadh',
+      date: 'June 3, 2025',
+      author: 'Experience Doha Team',
+      readTime: '14 min read',
+      category: 'Expat-Tips',
+      imageUrl: costOfLivingImage,
+      tags: ['cost of living Doha', 'Doha vs Dubai', 'Qatar housing costs', 'expat budget Qatar', 'living expenses Qatar'],
+      content: `
+        <p class="lead">The decision to relocate to Doha, Qatar, is often driven by the promise of a tax-free salary and a high quality of life. However, maximizing the financial benefits of an expatriate package requires a clear understanding of the cost of living (CoL).</p>
+
+        <h2 id="overview">General Cost of Living in Doha</h2>
+        
+        <p>Doha's CoL is heavily influenced by its reliance on imported goods and a competitive real estate market. While salaries are tax-free, daily expenses can quickly add up.</p>
+
+        <h3>Key Expenditure Categories</h3>
+        
+        <ol>
+          <li><strong>Housing (The Major Factor):</strong> Rent is, by far, the single largest expense for most expatriates. While the post-World Cup market saw some stabilization, high-quality accommodation in prime areas like The Pearl-Qatar, West Bay, and Lusail remains costly. The size, location, and amenities (pool, gym, security) of the property dictate the price.</li>
+          <li><strong>Groceries and Food:</strong> Most food items are imported, leading to higher prices for international brands and fresh produce compared to many Western countries. Local markets (like the Central Market) can offer better value for certain items.</li>
+          <li><strong>Transportation:</strong> Owning a car is common, and petrol is relatively inexpensive. However, the cost of purchasing and insuring a vehicle, combined with maintenance, is a factor. The Doha Metro offers an affordable alternative for city travel.</li>
+          <li><strong>Utilities and Services:</strong> Electricity and water are subsidized, making them relatively affordable. However, internet and mobile phone services, while high-quality, can be expensive compared to global averages.</li>
+          <li><strong>Education:</strong> International school fees are a significant expense for expat families. A comprehensive package should ideally include an education allowance to cover these substantial costs.</li>
+        </ol>
+
+        <h2 id="comparison">Doha vs. Regional Competitors: Dubai and Riyadh</h2>
+        
+        <p>When considering a move to the Gulf Cooperation Council (GCC) region, Doha is often benchmarked against Dubai and Riyadh. While all three offer tax-free income, their cost structures differ significantly.</p>
+
+        <h3>The Cost of Living Index</h3>
+        
+        <p>Cost of living indices, which compare the relative price of consumer goods and services (excluding rent) in different cities, provide a useful starting point.</p>
+
+        <div class="overflow-x-auto my-6">
+          <table class="w-full border-collapse">
+            <thead>
+              <tr class="bg-muted">
+                <th class="border border-border p-3 text-left">City</th>
+                <th class="border border-border p-3 text-left">Cost of Living Index (Excl. Rent)</th>
+                <th class="border border-border p-3 text-left">Rent Index</th>
+                <th class="border border-border p-3 text-left">Local Purchasing Power Index</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="border border-border p-3"><strong>Dubai, UAE</strong></td>
+                <td class="border border-border p-3">Higher</td>
+                <td class="border border-border p-3">Highest</td>
+                <td class="border border-border p-3">Moderate</td>
+              </tr>
+              <tr class="bg-muted/50">
+                <td class="border border-border p-3"><strong>Doha, Qatar</strong></td>
+                <td class="border border-border p-3">Moderate-High</td>
+                <td class="border border-border p-3">High</td>
+                <td class="border border-border p-3">High</td>
+              </tr>
+              <tr>
+                <td class="border border-border p-3"><strong>Riyadh, KSA</strong></td>
+                <td class="border border-border p-3">Moderate</td>
+                <td class="border border-border p-3">Moderate-Low</td>
+                <td class="border border-border p-3">Moderate</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="text-sm text-muted-foreground mt-2"><em>Source: Based on Q4 2025 data from various CoL databases.</em></p>
+        </div>
+
+        <h3>Detailed Comparison by Category</h3>
+
+        <h4>1. Housing and Rent</h4>
+        
+        <p>This is the most critical differentiator.</p>
+        
+        <ul>
+          <li><strong>Dubai:</strong> Historically the most expensive, particularly for prime locations like Dubai Marina and Downtown.</li>
+          <li><strong>Doha:</strong> High, especially in the most desirable expat areas (The Pearl, West Bay). However, it is generally considered slightly more affordable than comparable properties in Dubai.</li>
+          <li><strong>Riyadh:</strong> Significantly more affordable than both Doha and Dubai. The housing market in Riyadh offers greater value for money, particularly for larger, unfurnished properties.</li>
+        </ul>
+
+        <h4>2. Groceries and Consumer Goods</h4>
+        
+        <ul>
+          <li><strong>Doha:</strong> Prices for imported goods are generally high due to logistics and customs.</li>
+          <li><strong>Dubai:</strong> Similar to Doha, with high prices for imported items, but a wider variety of budget-friendly options due to the sheer volume of trade.</li>
+          <li><strong>Riyadh:</strong> Generally lower prices for basic groceries and local produce compared to the other two, though luxury imported items remain expensive.</li>
+        </ul>
+
+        <h4>3. Entertainment and Leisure</h4>
+        
+        <ul>
+          <li><strong>Dubai:</strong> Offers the widest and most expensive range of high-end entertainment, from fine dining to luxury beach clubs.</li>
+          <li><strong>Doha:</strong> Offers a growing, high-quality entertainment scene, often centered around luxury hotels. Costs are comparable to Dubai for similar experiences.</li>
+          <li><strong>Riyadh:</strong> The entertainment scene is rapidly expanding but remains the most conservative and generally the least expensive of the three.</li>
+        </ul>
+
+        <h4>4. Local Purchasing Power</h4>
+        
+        <p>The <strong>Local Purchasing Power Index</strong> is crucial, as it indicates the relative buying power of the average salary in that city.</p>
+        
+        <ul>
+          <li><strong>Doha</strong> often ranks highly in purchasing power. While the CoL is high, the average salary is also competitive, allowing residents to afford a comfortable lifestyle and save a substantial portion of their income.</li>
+          <li><strong>Dubai</strong> and <strong>Riyadh</strong> offer competitive salaries, but the higher cost of rent in Dubai and the slightly lower average salary in Riyadh can sometimes reduce the net savings potential compared to Doha.</li>
+        </ul>
+
+        <h2 id="strategies">Strategies for Managing the Cost of Living in Doha</h2>
+        
+        <p>Expatriates can significantly influence their CoL and savings potential through strategic choices:</p>
+
+        <ol>
+          <li><strong>Negotiate a Housing Allowance:</strong> Since housing is the largest expense, a generous, separate housing allowance is vital. If the employer provides accommodation, ensure it meets your needs and is centrally located.</li>
+          <li><strong>Consider Location:</strong> Living outside the prime expat areas (e.g., Al Sadd, Al Waab) can reduce rent costs significantly, often without sacrificing quality, especially with the excellent metro connectivity.</li>
+          <li><strong>Limit Dining Out:</strong> While Doha's dining scene is tempting, frequenting high-end restaurants, particularly those in five-star hotels, can quickly deplete a budget. Utilizing home cooking and more affordable local eateries is key to saving.</li>
+          <li><strong>Factor in School Fees:</strong> For families, the cost of international schooling must be fully accounted for in the compensation package.</li>
+        </ol>
+
+        <h2 id="conclusion">Conclusion</h2>
+        
+        <p>In conclusion, Doha offers a high-reward financial environment for expatriates, primarily due to the tax-free salary structure. However, this advantage is balanced by a high cost of living, particularly in the housing sector. While generally more affordable than Dubai, it is more expensive than Riyadh. Prospective expats must conduct thorough research, negotiate a robust compensation package that includes a generous housing and education allowance, and adopt a disciplined approach to spending to truly capitalize on the financial opportunities Doha provides.</p>
+      `,
+    },
     'alcohol-guide-doha': {
       id: '53',
       title: 'Alcohol Rules in Qatar 2025: QDC, Licenses, and Complete Legal Guide',
