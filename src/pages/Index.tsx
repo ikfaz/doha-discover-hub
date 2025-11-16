@@ -41,9 +41,19 @@ import expatSalariesDohaImage from '@/assets/expat-salaries-doha-2025.jpg';
 import qatarTaxGuideImage from '@/assets/qatar-tax-guide-2025.jpg';
 import qatarWorkVisaGuideImage from '@/assets/qatar-work-visa-guide-2025.jpg';
 import qatarLaborLawReformsImage from '@/assets/qatar-labor-law-reforms-2025.jpg';
+import endOfServiceGratuityImage from '@/assets/end-of-service-gratuity-qatar-2025.jpg';
 
 const Index = () => {
   const featuredBlogs = [
+    {
+      id: '61',
+      title: 'The Final Payout: End-of-Service Benefits and Gratuity Calculations in Qatar',
+      excerpt: 'Complete guide to end-of-service gratuity (EOSG) in Qatar. Eligibility, calculation formula, resignation vs termination scenarios, and financial planning tips for expats.',
+      imageUrl: endOfServiceGratuityImage,
+      category: 'Expat-Tips',
+      date: 'June 10, 2025',
+      slug: 'end-of-service-gratuity-qatar-2025',
+    },
     {
       id: '60',
       title: 'A New Era of Mobility: Labor Laws and the Sponsorship (Kafala) System Reforms in Qatar',
