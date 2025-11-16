@@ -63,12 +63,23 @@ import hiringMaidNannyImage from '@/assets/hiring-maid-nanny-qatar-guide.jpg';
 import gymsFitnessDohaImage from '@/assets/gyms-fitness-doha-guide.jpg';
 import remoteWorkCafesImage from '@/assets/remote-work-cafes-doha-guide.jpg';
 import housingRentDohaImage from '@/assets/housing-rent-doha-2025.jpg';
+import jobMarketQatarImage from '@/assets/job-market-qatar-2025.jpg';
 
 const Blog = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   
   const allPosts = [
+    {
+      id: '56',
+      title: 'The Gateway to Opportunity: Job Market and Employment for Foreigners in Qatar',
+      excerpt: 'Explore Qatar job market 2025 for expats. Key hiring sectors, employment trends, labor reforms, visa sponsorship process, and career opportunities in Doha.',
+      imageUrl: jobMarketQatarImage,
+      category: 'Expat-Tips',
+      date: 'June 5, 2025',
+      slug: 'job-market-qatar-2025',
+      tags: ['Qatar jobs', 'expat employment', 'work visa Qatar', 'Qatar job market', 'career opportunities'],
+    },
     {
       id: '55',
       title: "The Real Estate Landscape: Housing and Rent Prices in Doha's Current Market",
