@@ -66,6 +66,7 @@ import hiringMaidNannyImage from '@/assets/hiring-maid-nanny-qatar-guide.jpg';
 import gymsFitnessDohaImage from '@/assets/gyms-fitness-doha-guide.jpg';
 import remoteWorkCafesImage from '@/assets/remote-work-cafes-doha-guide.jpg';
 import housingRentDohaImage from '@/assets/housing-rent-doha-2025.jpg';
+import jobMarketQatarImage from '@/assets/job-market-qatar-2025.jpg';
 import PetImportChecklist from '@/components/PetImportChecklist';
 import VeterinaryCostEstimator from '@/components/VeterinaryCostEstimator';
 import DomesticWorkerCostCalculator from '@/components/DomesticWorkerCostCalculator';
@@ -81,6 +82,123 @@ const BlogPost = () => {
   
   // Blog post data based on slug
   const blogPosts: Record<string, any> = {
+    'job-market-qatar-2025': {
+      id: '56',
+      title: 'The Gateway to Opportunity: Job Market and Employment for Foreigners in Qatar',
+      date: 'June 5, 2025',
+      author: 'Experience Doha Team',
+      readTime: '15 min read',
+      category: 'Expat-Tips',
+      imageUrl: jobMarketQatarImage,
+      tags: ['Qatar jobs', 'expat employment', 'work visa Qatar', 'Qatar job market', 'career opportunities'],
+      content: `
+        <p class="lead">Qatar's economy, fueled by its vast natural gas reserves and ambitious national vision, has created a dynamic and competitive job market that is heavily reliant on expatriate talent. With foreigners making up the vast majority of the workforce, the employment landscape in Doha is characterized by high demand in specific sectors, a focus on skilled professionals, and a continuous push for economic diversification under Qatar National Vision 2030.</p>
+
+        <h2 id="sectors">Key Sectors Driving Expat Employment</h2>
+        
+        <p>While the energy sector remains the bedrock of the economy, government investment has spurred significant growth in non-hydrocarbon industries, creating diverse opportunities for skilled expatriates.</p>
+
+        <h3>1. Construction and Infrastructure</h3>
+        
+        <p>Despite the completion of major World Cup projects, the construction sector remains active due to ongoing mega-projects in Lusail City, the expansion of Hamad International Airport (HIA), and the development of new industrial zones. This sector requires a wide range of professionals, from project managers and engineers to skilled tradespeople.</p>
+
+        <h3>2. Healthcare and Medical Services</h3>
+        
+        <p>Qatar is heavily investing in its public and private healthcare systems to meet the needs of its growing population. This has created a constant demand for doctors, nurses, specialists, and allied health professionals. Western-trained and experienced medical staff are particularly sought after.</p>
+
+        <h3>3. Education</h3>
+        
+        <p>With a large expat population and a commitment to world-class education, there is a high demand for qualified teachers and administrators in international schools and higher education institutions, including the various branch campuses of prestigious Western universities (e.g., Education City).</p>
+
+        <h3>4. Finance and Banking</h3>
+        
+        <p>Doha is striving to become a regional financial hub, competing with Dubai and Riyadh. The Qatar Financial Centre (QFC) attracts international banks, insurance companies, and financial technology (FinTech) firms, creating opportunities for experienced finance professionals, auditors, and compliance officers.</p>
+
+        <h3>5. Information Technology (IT) and Digital Transformation</h3>
+        
+        <p>In line with the national vision for a knowledge-based economy, there is a strong push for digital transformation across all sectors. This has fueled demand for IT specialists, cybersecurity experts, data scientists, and software developers.</p>
+
+        <div class="overflow-x-auto my-6">
+          <table class="w-full border-collapse">
+            <thead>
+              <tr class="bg-muted">
+                <th class="border border-border p-3 text-left">Sector</th>
+                <th class="border border-border p-3 text-left">Primary Expat Roles</th>
+                <th class="border border-border p-3 text-left">Market Demand (2025)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="border border-border p-3"><strong>Energy (Oil & Gas)</strong></td>
+                <td class="border border-border p-3">Engineers, Geologists, Project Managers</td>
+                <td class="border border-border p-3">Stable, High-Value</td>
+              </tr>
+              <tr class="bg-muted/50">
+                <td class="border border-border p-3"><strong>Healthcare</strong></td>
+                <td class="border border-border p-3">Doctors, Nurses, Specialists, Administrators</td>
+                <td class="border border-border p-3">High, Growing</td>
+              </tr>
+              <tr>
+                <td class="border border-border p-3"><strong>Construction</strong></td>
+                <td class="border border-border p-3">Project Managers, Civil Engineers, Architects</td>
+                <td class="border border-border p-3">Moderate-High</td>
+              </tr>
+              <tr class="bg-muted/50">
+                <td class="border border-border p-3"><strong>Finance</strong></td>
+                <td class="border border-border p-3">Analysts, Auditors, Compliance Officers</td>
+                <td class="border border-border p-3">High, Strategic</td>
+              </tr>
+              <tr>
+                <td class="border border-border p-3"><strong>Education</strong></td>
+                <td class="border border-border p-3">International School Teachers, University Faculty</td>
+                <td class="border border-border p-3">Stable, High-Quality</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 id="search">The Job Search Landscape for Foreigners</h2>
+        
+        <p>The job market in Qatar is highly competitive, and the process for securing a position often differs from Western markets.</p>
+
+        <h3>1. Qualifications and Experience</h3>
+        
+        <p>Employers in Qatar generally prioritize candidates with international experience and Western qualifications. For high-level positions, a Master's degree or specialized certification is often a prerequisite. English is the primary language of business, but Arabic proficiency is a significant advantage in many government and local private sector roles.</p>
+
+        <h3>2. The Importance of Being Present</h3>
+        
+        <p>While online applications are common, many employers prefer to hire candidates who are already in the GCC region or are willing to travel for final interviews. Networking, both online (LinkedIn) and in-person, is a crucial component of a successful job search.</p>
+
+        <h3>3. Direct Hire vs. Recruitment Agencies</h3>
+        
+        <ul>
+          <li><strong>Direct Hire:</strong> The most common and preferred method for professional roles. Companies advertise directly on their websites or major job portals.</li>
+          <li><strong>Recruitment Agencies:</strong> Specialized agencies are often used for executive-level positions or for mass recruitment in sectors like hospitality and construction.</li>
+        </ul>
+
+        <h3>4. The Role of the Employer (Sponsorship)</h3>
+        
+        <p>Under the current system, an employer must sponsor a foreign worker for their work visa and Residence Permit (RP). This means the job offer is the gateway to living and working in Qatar. The employer handles the majority of the visa application process, making the initial job offer the most critical step.</p>
+
+        <h2 id="trends">Market Trends and Challenges in 2025</h2>
+
+        <h3>Minimum Wage and Labor Reforms</h3>
+        
+        <p>Qatar has implemented significant labor reforms, including the introduction of a non-discriminatory minimum wage of QR 1,000 per month (plus QR 500 for accommodation and QR 300 for food, unless provided by the employer). While this primarily impacts lower-income workers, it signals a broader commitment to improving labor standards.</p>
+
+        <h3>The End of the No-Objection Certificate (NOC)</h3>
+        
+        <p>The abolition of the NOC requirement is perhaps the most significant reform for professional expatriates. This allows workers to change jobs before the end of their contract without the employer's permission, provided they adhere to a notice period. This has increased labor mobility and competition, empowering employees and making the job market more dynamic.</p>
+
+        <h3>Competition</h3>
+        
+        <p>The primary challenge for foreigners is the intense competition. Candidates from all over the world—including the Middle East, Asia, Europe, and North America—compete for the same roles. A strong, tailored CV and a clear understanding of the local market are essential for standing out.</p>
+
+        <h2 id="conclusion">Conclusion</h2>
+        
+        <p>The job market in Qatar remains a land of opportunity for skilled expatriates, particularly those with experience in the high-growth sectors of healthcare, finance, IT, and education. The tax-free salary structure, combined with recent labor reforms that enhance worker mobility, makes Doha an increasingly attractive career destination. Success requires strategic targeting of key industries, a commitment to professional excellence, and a clear understanding that the job offer is the key to unlocking the entire expatriate experience in Qatar.</p>
+      `,
+    },
     'housing-rent-doha-2025': {
       id: '55',
       title: "The Real Estate Landscape: Housing and Rent Prices in Doha's Current Market",
