@@ -71,6 +71,7 @@ import DomesticWorkerCostCalculator from '@/components/DomesticWorkerCostCalcula
 import GymMembershipComparison from '@/components/GymMembershipComparison';
 import RemoteWorkCafeFinder from '@/components/RemoteWorkCafeFinder';
 import QDCPermitCalculator from '@/components/QDCPermitCalculator';
+import HotelBarFinder from '@/components/HotelBarFinder';
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -8643,8 +8644,16 @@ const BlogPost = () => {
                     <QDCPermitCalculator />
                   </div>
                   
+                  {/* Content through legal venues section */}
+                  <div dangerouslySetInnerHTML={{ __html: '<h2 id="spending-limits">' + post.content.split('<h2 id="spending-limits">')[1].split('<h2 id="prohibited">')[0] }} />
+                  
+                  {/* Hotel Bar Finder */}
+                  <div className="not-prose my-12">
+                    <HotelBarFinder />
+                  </div>
+                  
                   {/* Rest of content */}
-                  <div dangerouslySetInnerHTML={{ __html: '<h2 id="spending-limits">' + post.content.split('<h2 id="spending-limits">')[1] }} />
+                  <div dangerouslySetInnerHTML={{ __html: '<h2 id="prohibited">' + post.content.split('<h2 id="prohibited">')[1] }} />
                 </div>
               ) : slug === 'gyms-fitness-doha-guide' ? (
                 <div className="prose prose-lg max-w-none space-y-8">
