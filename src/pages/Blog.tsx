@@ -59,12 +59,23 @@ import mobilePlansQatarImage from '@/assets/mobile-plans-qatar-guide.jpg';
 import groceryShoppingDohaImage from '@/assets/grocery-shopping-doha-guide.jpg';
 import dohaMetro2025Image from '@/assets/doha-metro-2025-guide.jpg';
 import petImportQatarImage from '@/assets/pet-import-qatar-guide.jpg';
+import hiringMaidNannyImage from '@/assets/hiring-maid-nanny-qatar-guide.jpg';
 
 const Blog = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   
   const allPosts = [
+    {
+      id: '50',
+      title: 'Hiring Maids and Nannies in Doha Qatar 2025: Complete Legal Guide',
+      excerpt: 'Hire domestic help legally in Qatar with this 2025 guide. Learn visa sponsorship, salaries, contracts, rights, and where to find maids and nannies in Doha.',
+      imageUrl: hiringMaidNannyImage,
+      category: 'Expat-Tips',
+      date: 'May 30, 2025',
+      slug: 'hiring-maid-nanny-qatar-guide',
+      tags: ['hiring maid Qatar', 'nanny Doha', 'domestic worker visa', 'housemaid salary', 'sponsorship'],
+    },
     {
       id: '49',
       title: 'Pet Import Rules and Veterinary Care in Qatar 2025: Complete Guide',
