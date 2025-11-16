@@ -14,6 +14,7 @@ import { MobilePlanComparison } from '@/components/MobilePlanComparison';
 import { RoamingCostComparison } from '@/components/RoamingCostComparison';
 import { GroceryPriceComparison } from '@/components/GroceryPriceComparison';
 import { WeeklyMealPlanner } from '@/components/WeeklyMealPlanner';
+import { MetroFareCalculator } from '@/components/MetroFareCalculator';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Calendar, Clock, Facebook, Twitter, Share2 } from 'lucide-react';
@@ -59,12 +60,317 @@ import lgbtqQatarImage from '@/assets/lgbtq-experiences-qatar-guide.jpg';
 import bankAccountQatarImage from '@/assets/bank-account-qatar-guide.jpg';
 import mobilePlansQatarImage from '@/assets/mobile-plans-qatar-guide.jpg';
 import groceryShoppingDohaImage from '@/assets/grocery-shopping-doha-guide.jpg';
+import dohaMetro2025Image from '@/assets/doha-metro-2025-guide.jpg';
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   
   // Blog post data based on slug
   const blogPosts: Record<string, any> = {
+    'doha-metro-2025-guide': {
+      id: '48',
+      title: 'Doha Metro 2025: New Lines, Expansions, and Complete Network Guide',
+      date: 'May 28, 2025',
+      author: 'Experience Doha Team',
+      readTime: '16 min read',
+      category: 'Expat-Tips',
+      imageUrl: dohaMetro2025Image,
+      tags: ['Doha Metro', 'public transport', 'Qatar Rail', 'commuting', 'metro fares'],
+      content: `
+        <p class="lead">The Doha Metro represents Qatar's most ambitious public transportation project, designed to reduce traffic congestion and provide world-class transit options. Since its 2019 launch, the network has expanded significantly, with 2025 seeing continued developments that reshape how residents navigate the capital.</p>
+        
+        <h2 id="network">Current Metro Network Overview</h2>
+        <p><strong>Three Operational Lines:</strong></p>
+        <ul>
+          <li><strong>Red Line (Coast Line)</strong> - 40km
+            <ul>
+              <li>Al Wakra to Lusail</li>
+              <li>18 stations</li>
+              <li>Major stops: Airport, West Bay, Lusail</li>
+            </ul>
+          </li>
+          <li><strong>Green Line (Education Line)</strong> - 22km
+            <ul>
+              <li>Al Riffa to Al Mansoura</li>
+              <li>11 stations</li>
+              <li>Major stops: Education City, Al Shaqab</li>
+            </ul>
+          </li>
+          <li><strong>Gold Line (Historic Line)</strong> - 14km
+            <ul>
+              <li>Al Aziziyah to Ras Bu Aboud</li>
+              <li>11 stations</li>
+              <li>Major stops: Souq Waqif, National Museum</li>
+            </ul>
+          </li>
+        </ul>
+        <p><strong>Total Network:</strong> 76km with 37 stations (as of early 2025)</p>
+
+        <h2 id="expansions">2025 Metro Expansions and New Developments</h2>
+        
+        <h3>Phase 2 Expansions</h3>
+        <p>Qatar Rail continues network expansion:</p>
+        
+        <p><strong>Red Line Northern Extension:</strong></p>
+        <ul>
+          <li>Lusail to Lusail QNB stations</li>
+          <li>Additional coverage for new city development</li>
+          <li>Residential area connectivity improved</li>
+          <li>Expected completion: Ongoing/2025</li>
+        </ul>
+
+        <p><strong>Green Line Extensions:</strong></p>
+        <ul>
+          <li>Westward expansion planned</li>
+          <li>Education City full coverage</li>
+          <li>Research facility connections</li>
+          <li>Timeline: Progressive implementation</li>
+        </ul>
+
+        <p><strong>Blue Line (Future):</strong></p>
+        <ul>
+          <li>Planning stages advanced</li>
+          <li>Will create circular connectivity</li>
+          <li>Central Doha coverage enhanced</li>
+          <li>Estimated: 2026-2027 launch</li>
+        </ul>
+
+        <p><strong>Airport Connectivity:</strong></p>
+        <ul>
+          <li>Direct terminal access maintained</li>
+          <li>Luggage facilities at station</li>
+          <li>Immigration/customs integration</li>
+          <li>24-hour service for flight times</li>
+        </ul>
+
+        <h2 id="stations">Station Guide: Major Stops Explained</h2>
+        
+        <h3>Msheireb Station (Interchange)</h3>
+        <p>Central hub where all three lines connect:</p>
+        <ul>
+          <li>Underground commercial development</li>
+          <li>Easy line transfers</li>
+          <li>Downtown Doha access</li>
+          <li>Cultural district proximity</li>
+        </ul>
+
+        <h3>West Bay Station (Red Line)</h3>
+        <p>Business district access:</p>
+        <ul>
+          <li>Corporate offices walking distance</li>
+          <li>Skyline views from exit</li>
+          <li>Peak hour crowds significant</li>
+          <li>Multiple exit points</li>
+        </ul>
+
+        <h3>Hamad International Airport (Red Line)</h3>
+        <p>Direct airport connection:</p>
+        <ul>
+          <li>Terminal 1 access</li>
+          <li>Check-in possible from city</li>
+          <li>Luggage carts available</li>
+          <li>24-hour service</li>
+        </ul>
+
+        <h3>Souq Waqif Station (Gold Line)</h3>
+        <p>Cultural heart access:</p>
+        <ul>
+          <li>Steps from traditional market</li>
+          <li>Tourist attraction proximity</li>
+          <li>Evening/weekend popularity</li>
+          <li>Authentic Doha experience</li>
+        </ul>
+
+        <h3>Education City Station (Green Line)</h3>
+        <p>Academic zone coverage:</p>
+        <ul>
+          <li>University access</li>
+          <li>Research facilities</li>
+          <li>Sports venues</li>
+          <li>Growing residential areas</li>
+        </ul>
+
+        <h2 id="hours">Operating Hours</h2>
+        
+        <h3>Saturday to Wednesday</h3>
+        <ul>
+          <li>First train: 5:30 AM</li>
+          <li>Last train: 11:30 PM</li>
+          <li>Peak frequency: 3-6 minutes</li>
+          <li>Off-peak: 6-12 minutes</li>
+        </ul>
+
+        <h3>Thursday</h3>
+        <ul>
+          <li>First train: 5:30 AM</li>
+          <li>Last train: 12:30 AM (extended)</li>
+          <li>Weekend start consideration</li>
+        </ul>
+
+        <h3>Friday</h3>
+        <ul>
+          <li>First train: 2:00 PM (after prayers)</li>
+          <li>Last train: 11:30 PM</li>
+          <li>Reduced morning service</li>
+        </ul>
+
+        <h2 id="tips">Metro Travel Tips</h2>
+        
+        <h3>For Commuters</h3>
+        
+        <p><strong>Timing Matters</strong></p>
+        <ul>
+          <li>Peak hours: 7-9 AM, 4-7 PM</li>
+          <li>Trains can be crowded</li>
+          <li>Allow buffer time</li>
+          <li>Off-peak significantly easier</li>
+        </ul>
+
+        <p><strong>Women's Carriages</strong></p>
+        <ul>
+          <li>Dedicated cars available</li>
+          <li>Family sections provided</li>
+          <li>Clearly marked</li>
+          <li>Optional but appreciated</li>
+        </ul>
+
+        <p><strong>Temperature Planning</strong></p>
+        <ul>
+          <li>Stations air-conditioned</li>
+          <li>Exit to outdoor heat shocking</li>
+          <li>Dress in layers</li>
+          <li>Hydration important</li>
+        </ul>
+
+        <p><strong>Connectivity Apps</strong></p>
+        <ul>
+          <li>Qatar Rail app essential</li>
+          <li>Real-time tracking</li>
+          <li>Journey planning</li>
+          <li>Service alerts</li>
+        </ul>
+
+        <p><strong>First/Last Mile Solutions</strong></p>
+        <ul>
+          <li>Bus connections at stations</li>
+          <li>Taxi ranks available</li>
+          <li>Ride-sharing pickup zones</li>
+          <li>Walking distances can be significant</li>
+        </ul>
+
+        <h2 id="bus">Integration with Bus Network</h2>
+        
+        <h3>Metrolink Buses</h3>
+        <p>Feeder services connect metro stations to:</p>
+        <ul>
+          <li>Residential areas</li>
+          <li>Shopping destinations</li>
+          <li>Work zones</li>
+          <li>Educational institutions</li>
+        </ul>
+
+        <h3>Transfer System</h3>
+        <ul>
+          <li>Single card works on both</li>
+          <li>Transfers within 60 minutes</li>
+          <li>Reduced combined fare</li>
+          <li>Route planning integrated</li>
+        </ul>
+
+        <h3>Coverage Expansion</h3>
+        <ul>
+          <li>Areas not metro-served</li>
+          <li>Frequency improvements</li>
+          <li>Air-conditioned buses</li>
+          <li>Real-time tracking available</li>
+        </ul>
+
+        <h2 id="coverage">Areas Best Served by Metro</h2>
+        
+        <h3>Excellent Coverage</h3>
+        <ul>
+          <li>West Bay (business district)</li>
+          <li>Lusail (northern city)</li>
+          <li>Msheireb (downtown)</li>
+          <li>Airport connectivity</li>
+          <li>Education City</li>
+          <li>Souq Waqif area</li>
+        </ul>
+
+        <h3>Limited Coverage</h3>
+        <ul>
+          <li>Al Waab (residential)</li>
+          <li>The Pearl (requires bus connection)</li>
+          <li>Industrial Area (partial)</li>
+          <li>Southern suburbs</li>
+          <li>Western residential zones</li>
+        </ul>
+
+        <h2 id="future">Future Development Plans</h2>
+        
+        <h3>Qatar Integrated Railway Programme</h3>
+        
+        <p><strong>National Rail Network:</strong></p>
+        <ul>
+          <li>Connections to Saudi Arabia border</li>
+          <li>Bahrain potential link</li>
+          <li>Airport expansion connectivity</li>
+          <li>Industrial area services</li>
+        </ul>
+
+        <p><strong>Metro Phase 3:</strong></p>
+        <ul>
+          <li>New lines under consideration</li>
+          <li>Blue Line priority</li>
+          <li>Coverage gaps addressed</li>
+          <li>Timeline: Post-2027</li>
+        </ul>
+
+        <p><strong>Technology Upgrades:</strong></p>
+        <ul>
+          <li>Automated fare collection improvements</li>
+          <li>Mobile ticketing expansion</li>
+          <li>Real-time information enhancement</li>
+          <li>Accessibility features added</li>
+        </ul>
+
+        <h2 id="impact">Environmental and Economic Impact</h2>
+        
+        <h3>Benefits Realized</h3>
+        <ul>
+          <li>Traffic congestion reduction (estimated 20-30% on routes)</li>
+          <li>Carbon emissions decreased</li>
+          <li>Fuel consumption lowered</li>
+          <li>Employment creation</li>
+          <li>Urban development catalyst</li>
+        </ul>
+
+        <h3>Ongoing Challenges</h3>
+        <ul>
+          <li>Cultural shift toward public transport</li>
+          <li>First/last mile solutions needed</li>
+          <li>Full network utilization building</li>
+          <li>Weekend service limitations</li>
+        </ul>
+
+        <h2 id="faq">FAQ: Doha Metro 2025</h2>
+        
+        <h3>Is Doha Metro safe?</h3>
+        <p>Extremely safe. 24/7 security, CCTV coverage throughout, and emergency assistance readily available.</p>
+
+        <h3>Can I take luggage on metro?</h3>
+        <p>Yes. No size restrictions, though busy times make large items challenging. Airport station accommodates luggage well.</p>
+
+        <h3>Is metro cheaper than taxi?</h3>
+        <p>Significantly. Metro costs QAR 2-6 vs. taxi minimum QAR 25-50. Monthly pass offers best value for regular users.</p>
+
+        <h3>Do all areas have metro access?</h3>
+        <p>No. Network primarily serves central/north Doha and specific zones. Many residential areas require bus connections.</p>
+
+        <h3>How crowded does metro get?</h3>
+        <p>Peak hours quite crowded, especially Red Line to West Bay. Gold class offers less crowded alternative at premium.</p>
+      `,
+    },
     'grocery-shopping-doha-guide': {
       id: '47',
       title: 'Grocery Shopping Hacks in Doha 2025: Carrefour vs Lulu Complete Guide',
@@ -6392,6 +6698,19 @@ const BlogPost = () => {
                   
                   {/* Rest of content */}
                   <div dangerouslySetInnerHTML={{ __html: '<h2 id="delivery">' + post.content.split('<h2 id="delivery">')[1] }} />
+                </div>
+              ) : slug === 'doha-metro-2025-guide' ? (
+                <div className="prose prose-lg max-w-none space-y-8">
+                  {/* First section through stations */}
+                  <div dangerouslySetInnerHTML={{ __html: post.content.split('<h2 id="hours">')[0] }} />
+                  
+                  {/* Metro Fare Calculator */}
+                  <div className="not-prose my-12">
+                    <MetroFareCalculator />
+                  </div>
+                  
+                  {/* Rest of content */}
+                  <div dangerouslySetInnerHTML={{ __html: '<h2 id="hours">' + post.content.split('<h2 id="hours">')[1] }} />
                 </div>
               ) : (
                 <div 
