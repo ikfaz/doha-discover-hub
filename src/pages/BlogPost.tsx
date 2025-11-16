@@ -72,6 +72,7 @@ import GymMembershipComparison from '@/components/GymMembershipComparison';
 import RemoteWorkCafeFinder from '@/components/RemoteWorkCafeFinder';
 import QDCPermitCalculator from '@/components/QDCPermitCalculator';
 import HotelBarFinder from '@/components/HotelBarFinder';
+import CityCostComparison from '@/components/CityCostComparison';
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -8619,7 +8620,20 @@ const BlogPost = () => {
               </div>
 
               {/* Article Content */}
-              {slug === 'international-schools-qatar-2025' ? (
+              {slug === 'cost-of-living-doha-dubai-riyadh' ? (
+                <div className="prose prose-lg max-w-none space-y-8">
+                  {/* First section through comparison */}
+                  <div dangerouslySetInnerHTML={{ __html: post.content.split('<h2 id="strategies">')[0] }} />
+                  
+                  {/* City Cost Comparison Calculator */}
+                  <div className="not-prose my-12">
+                    <CityCostComparison />
+                  </div>
+                  
+                  {/* Rest of content */}
+                  <div dangerouslySetInnerHTML={{ __html: '<h2 id="strategies">' + post.content.split('<h2 id="strategies">')[1] }} />
+                </div>
+              ) : slug === 'international-schools-qatar-2025' ? (
                 <div className="prose prose-lg max-w-none space-y-8">
                   {/* First section of content */}
                   <div dangerouslySetInnerHTML={{ __html: post.content.split('<h2 id="fees">')[0] }} />
