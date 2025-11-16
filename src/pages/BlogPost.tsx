@@ -70,12 +70,386 @@ import VeterinaryCostEstimator from '@/components/VeterinaryCostEstimator';
 import DomesticWorkerCostCalculator from '@/components/DomesticWorkerCostCalculator';
 import GymMembershipComparison from '@/components/GymMembershipComparison';
 import RemoteWorkCafeFinder from '@/components/RemoteWorkCafeFinder';
+import QDCPermitCalculator from '@/components/QDCPermitCalculator';
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   
   // Blog post data based on slug
   const blogPosts: Record<string, any> = {
+    'alcohol-guide-doha': {
+      id: '53',
+      title: 'Alcohol Rules in Qatar 2025: QDC, Licenses, and Complete Legal Guide',
+      date: 'June 2, 2025',
+      author: 'Experience Doha Team',
+      readTime: '18 min read',
+      category: 'Expat-Tips',
+      imageUrl: alcoholGuideImage,
+      tags: ['alcohol rules Qatar', 'QDC Qatar', 'alcohol license Doha', 'legal drinking Qatar', 'alcohol permit'],
+      content: `
+        <p class="lead">Qatar, as a Muslim-majority country following Islamic principles, maintains strict alcohol regulations. However, alcohol is not completely banned for non-Muslim residents and visitors. Understanding the legal framework ensures compliance while accessing permitted alcohol consumption.</p>
+
+        <h2 id="basics">Understanding Alcohol in Qatar: The Basics</h2>
+        
+        <h3>Legal Framework Overview</h3>
+        
+        <p><strong>Key Points:</strong></p>
+        <ul>
+          <li>Alcohol not prohibited for non-Muslims</li>
+          <li>Strict regulation and controls apply</li>
+          <li>Public intoxication illegal for everyone</li>
+          <li>Drinking age: 21 years</li>
+          <li>No alcohol advertising permitted</li>
+          <li>Personal importation illegal</li>
+          <li>Licensed venues and QDC are legal sources</li>
+        </ul>
+        
+        <p><strong>Important Distinction:</strong></p>
+        <ul>
+          <li><strong>Legal:</strong> Purchasing from QDC with permit, drinking at licensed venues</li>
+          <li><strong>Illegal:</strong> Public drinking, providing to Muslims, importing personally, public intoxication</li>
+        </ul>
+
+        <h2 id="qdc">Qatar Distribution Company (QDC)</h2>
+        
+        <h3>What is QDC?</h3>
+        <p>The Qatar Distribution Company is the sole authorized retailer for alcohol and pork products in Qatar. Operating the only liquor store in the country, QDC serves non-Muslim residents with proper permits.</p>
+        
+        <p><strong>QDC Location:</strong></p>
+        <ul>
+          <li>Single store near Industrial Area</li>
+          <li>Salwa Industrial Area (Abu Hamour)</li>
+          <li>Large warehouse-style facility</li>
+          <li>Ample parking available</li>
+          <li>Operating hours: Sun-Thu 10 AM - 7 PM, closed Fridays</li>
+        </ul>
+
+        <h2 id="permit">Obtaining QDC Permit (Alcohol License)</h2>
+        
+        <h3>Eligibility Requirements</h3>
+        <ul>
+          <li><strong>Non-Muslim</strong> - Religious identification required</li>
+          <li><strong>Qatar Resident</strong> - Valid QID necessary</li>
+          <li><strong>Employed</strong> - Active employment in Qatar</li>
+          <li><strong>Employer Approval</strong> - NOC from sponsor</li>
+          <li><strong>Minimum Salary</strong> - QAR 3,000+ monthly (some variation exists)</li>
+          <li><strong>Age</strong> - 21 years minimum</li>
+        </ul>
+        
+        <h3>Application Process</h3>
+        
+        <p><strong>1. Employer NOC</strong> - Request letter stating:</p>
+        <ul>
+          <li>Company approves employee's application</li>
+          <li>Employee position and salary</li>
+          <li>Company letterhead required</li>
+        </ul>
+        
+        <p><strong>2. Visit QDC</strong> - Bring:</p>
+        <ul>
+          <li>Passport (original + copy)</li>
+          <li>Qatar ID (original + copy)</li>
+          <li>Employer NOC letter</li>
+          <li>Salary certificate</li>
+          <li>Passport photos (2-4)</li>
+        </ul>
+        
+        <p><strong>3. Application Completion</strong></p>
+        <ul>
+          <li>Fill forms at QDC</li>
+          <li>Document verification</li>
+          <li>Photograph taken</li>
+          <li>Processing fee paid (QAR 300-500)</li>
+        </ul>
+        
+        <p><strong>4. License Issuance</strong></p>
+        <ul>
+          <li>Card printed on-site</li>
+          <li>Valid for one year</li>
+          <li>Linked to QID number</li>
+          <li>Must renew annually</li>
+        </ul>
+        
+        <p><strong>Processing Time:</strong> Often same-day or 1-3 days</p>
+
+        <div class="component-container">
+          <div id="qdc-calculator"></div>
+        </div>
+
+        <h2 id="spending-limits">QDC Permit Spending Limits</h2>
+        
+        <h3>Monthly Allowance</h3>
+        <p>Permits come with spending caps based on salary:</p>
+        <ul>
+          <li><strong>Basic:</strong> QAR 500-1,000/month</li>
+          <li><strong>Standard:</strong> QAR 1,000-3,000/month</li>
+          <li><strong>Higher:</strong> QAR 3,000+/month (higher salaries)</li>
+        </ul>
+        
+        <p><strong>Important Notes:</strong></p>
+        <ul>
+          <li>Cannot exceed monthly limit</li>
+          <li>Unused allowance doesn't roll over</li>
+          <li>Monthly cycle resets automatically</li>
+          <li>Receipt tracking maintained</li>
+          <li>Shared household considerations</li>
+        </ul>
+        
+        <p><strong>Household Strategy:</strong> Some families have multiple adults obtain permits to increase household allowance. Each adult over 21 can apply independently if meeting requirements.</p>
+
+        <h2 id="shopping">Shopping at QDC</h2>
+        
+        <h3>Product Selection</h3>
+        
+        <p><strong>Beer:</strong></p>
+        <ul>
+          <li>International brands</li>
+          <li>Regional options</li>
+          <li>Non-alcoholic available</li>
+          <li>Wide variety</li>
+        </ul>
+        
+        <p><strong>Wine:</strong></p>
+        <ul>
+          <li>Red, white, rosé, sparkling</li>
+          <li>Various regions represented</li>
+          <li>Moderate selection</li>
+          <li>Prices higher than home countries</li>
+        </ul>
+        
+        <p><strong>Spirits:</strong></p>
+        <ul>
+          <li>Vodka, gin, whiskey, rum, etc.</li>
+          <li>Major brands stocked</li>
+          <li>Premium options available</li>
+          <li>Cocktail mixers sold</li>
+        </ul>
+        
+        <p><strong>Pork Products:</strong> QDC also sells:</p>
+        <ul>
+          <li>Bacon, ham, sausages</li>
+          <li>Pork cuts</li>
+          <li>Processed pork items</li>
+          <li>Separate section from alcohol</li>
+        </ul>
+        
+        <h3>Pricing</h3>
+        <p>Expect 30-50% higher prices than duty-free or Western supermarkets:</p>
+        <ul>
+          <li><strong>Basic wine:</strong> QAR 60-150</li>
+          <li><strong>Premium wine:</strong> QAR 150-500+</li>
+          <li><strong>Beer (6-pack):</strong> QAR 60-120</li>
+          <li><strong>Standard spirits:</strong> QAR 120-300</li>
+          <li><strong>Premium spirits:</strong> QAR 300-1,000+</li>
+        </ul>
+        
+        <p><strong>Payment:</strong></p>
+        <ul>
+          <li>Cash and card accepted</li>
+          <li>QDC loyalty program exists</li>
+          <li>Receipts kept for records</li>
+          <li>Discrete packaging provided</li>
+        </ul>
+
+        <h2 id="legal-venues">Alcohol Consumption Locations</h2>
+        
+        <h3>Legal Venues</h3>
+        
+        <p><strong>1. Hotel Bars and Restaurants</strong></p>
+        <p>Licensed hotels serve alcohol:</p>
+        <ul>
+          <li>No permit required for purchase</li>
+          <li>Open to residents and visitors</li>
+          <li>Higher prices than QDC</li>
+          <li>Food service often required</li>
+          <li>Professional atmosphere</li>
+        </ul>
+        
+        <p><strong>Popular Options:</strong></p>
+        <ul>
+          <li>W Hotel</li>
+          <li>St. Regis</li>
+          <li>Four Seasons</li>
+          <li>Marriott</li>
+          <li>Ritz-Carlton</li>
+          <li>Various others</li>
+        </ul>
+        
+        <p><strong>Prices:</strong> QAR 45-80 for cocktails, QAR 30-50 for beer, QAR 60-150 for wine glasses</p>
+        
+        <p><strong>2. Licensed Restaurants</strong></p>
+        <p>Some restaurants have licenses:</p>
+        <ul>
+          <li>Similar rules to hotels</li>
+          <li>Food service integration</li>
+          <li>Limited compared to hotels</li>
+          <li>Check before visiting</li>
+        </ul>
+        
+        <p><strong>3. Private Residences</strong></p>
+        <p>Legal to consume at home:</p>
+        <ul>
+          <li>Must purchase from QDC</li>
+          <li>Cannot provide to Muslims</li>
+          <li>Private property consumption</li>
+          <li>Discrete behavior expected</li>
+          <li>No public disturbance</li>
+        </ul>
+
+        <h2 id="prohibited">Illegal Activities: Strict Prohibitions</h2>
+        
+        <h3>Absolutely Forbidden</h3>
+        <ul>
+          <li><strong>Public Intoxication</strong> - Visible impairment in public spaces</li>
+          <li><strong>Drinking in Public</strong> - Parks, beaches, streets</li>
+          <li><strong>Providing Alcohol to Muslims</strong> - Serious offense</li>
+          <li><strong>Personal Importation</strong> - Cannot bring alcohol into Qatar</li>
+          <li><strong>Driving Under Influence</strong> - Zero tolerance policy</li>
+          <li><strong>Underage Drinking</strong> - Below 21 prohibited</li>
+          <li><strong>Purchasing Without Permit</strong> - From any source including duty-free</li>
+          <li><strong>Sharing Permit</strong> - Using others' permits</li>
+        </ul>
+
+        <h2 id="penalties">Penalties for Violations</h2>
+        
+        <h3>Consequences Can Include</h3>
+        <ul>
+          <li><strong>Fines:</strong> QAR 3,000-10,000+</li>
+          <li><strong>Imprisonment:</strong> 1-6 months possible</li>
+          <li><strong>Deportation:</strong> For serious offenses</li>
+          <li><strong>Employment Termination:</strong> Companies may terminate</li>
+          <li><strong>Visa Cancellation:</strong> Residence permit revoked</li>
+          <li><strong>Criminal Record:</strong> Affecting future visas</li>
+        </ul>
+        
+        <p><strong>Drunk Driving Specifically:</strong></p>
+        <ul>
+          <li>Blood alcohol limit: 0.00% (zero tolerance)</li>
+          <li>Immediate arrest</li>
+          <li>Vehicle impounded</li>
+          <li>Severe penalties</li>
+          <li>No exceptions</li>
+        </ul>
+
+        <h2 id="world-cup">World Cup Legacy and Changes</h2>
+        
+        <h3>2022 Adjustments</h3>
+        <p>During World Cup, Qatar temporarily relaxed some rules:</p>
+        <ul>
+          <li>Fan zones sold alcohol</li>
+          <li>Extended venue hours</li>
+          <li>More accessible consumption</li>
+        </ul>
+        
+        <p><strong>Post-World Cup:</strong></p>
+        <ul>
+          <li>Returned to previous regulations</li>
+          <li>Licensed venues standard</li>
+          <li>QDC primary source</li>
+          <li>No permanent liberalization</li>
+          <li>Tradition maintained</li>
+        </ul>
+
+        <h2 id="cultural">Cultural Sensitivity</h2>
+        
+        <h3>Respectful Behavior</h3>
+        <ul>
+          <li>Discrete transportation of QDC purchases</li>
+          <li>No obvious intoxication public</li>
+          <li>Respect local customs</li>
+          <li>Ramadan particular awareness</li>
+          <li>Professional conduct expected</li>
+        </ul>
+        
+        <p><strong>Ramadan Considerations:</strong></p>
+        <ul>
+          <li>Many hotel bars closed during fasting hours</li>
+          <li>Evening service may resume after Iftar</li>
+          <li>Be extra respectful</li>
+          <li>Avoid public spaces with alcohol</li>
+          <li>Check venue operating schedules</li>
+        </ul>
+        
+        <p><strong>Compound Living:</strong></p>
+        <ul>
+          <li>More relaxed environment</li>
+          <li>Private BBQs with alcohol common</li>
+          <li>Still respect Muslim staff/neighbors</li>
+          <li>Not public spaces technically</li>
+          <li>Community guidelines apply</li>
+        </ul>
+
+        <h2 id="practical-tips">Practical Tips for Expats</h2>
+        
+        <h3>QDC Shopping</h3>
+        <ul>
+          <li><strong>Go Early</strong> - Queues build up</li>
+          <li><strong>Plan Purchases</strong> - Monthly limits matter</li>
+          <li><strong>Bring Permit</strong> - Always required</li>
+          <li><strong>Check Stock</strong> - Specific items may be unavailable</li>
+          <li><strong>Budget Accordingly</strong> - Prices significant</li>
+        </ul>
+        
+        <h3>Hotel Drinking</h3>
+        <ul>
+          <li><strong>Check Hours</strong> - Vary by venue</li>
+          <li><strong>Reservation Advised</strong> - Popular spots book up</li>
+          <li><strong>Dress Code</strong> - Smart casual minimum</li>
+          <li><strong>Food Service</strong> - Often required</li>
+          <li><strong>Transport Planning</strong> - No drinking and driving</li>
+        </ul>
+        
+        <h3>Home Consumption</h3>
+        <ul>
+          <li><strong>Discrete Storage</strong> - Not visible publicly</li>
+          <li><strong>Responsible Hosting</strong> - Know your guests</li>
+          <li><strong>Disposal Careful</strong> - Bottles in regular trash carefully</li>
+          <li><strong>Noise Respect</strong> - Neighbors consideration</li>
+          <li><strong>No Muslim Provision</strong> - Even friends</li>
+        </ul>
+
+        <h2 id="alternatives">Alternative Social Options</h2>
+        
+        <h3>Non-Alcoholic Socializing</h3>
+        <p>Qatar offers extensive options:</p>
+        <ul>
+          <li>Shisha lounges (hookah)</li>
+          <li>Cafe culture (coffee/tea)</li>
+          <li>Dessert spots</li>
+          <li>Restaurants (food focused)</li>
+          <li>Sports activities</li>
+          <li>Cultural events</li>
+          <li>Mall socializing</li>
+        </ul>
+        
+        <h3>Mocktail Scene</h3>
+        <p>Growing trend:</p>
+        <ul>
+          <li>Creative non-alcoholic drinks</li>
+          <li>Premium mocktail menus</li>
+          <li>Sophisticated alternatives</li>
+          <li>Health-conscious options</li>
+          <li>Cultural appropriateness</li>
+        </ul>
+
+        <h2 id="faq">Frequently Asked Questions</h2>
+        
+        <h3>Can tourists drink in Qatar?</h3>
+        <p>Yes, at licensed hotel venues only. Tourists cannot obtain QDC permits but can purchase at hotels without permits.</p>
+        
+        <h3>Can I bring alcohol in my luggage?</h3>
+        <p>No. Personal importation completely prohibited. Duty-free alcohol from departing country must be surrendered or disposed before entry.</p>
+        
+        <h3>What if I'm Muslim but want QDC permit?</h3>
+        <p>Muslims cannot obtain permits. Application requires non-Muslim status verification. Providing alcohol to Muslims is illegal.</p>
+        
+        <h3>How much alcohol can I buy monthly?</h3>
+        <p>Depends on salary-based permit limits. Ranges from QAR 500-3,000+ monthly. Cannot exceed assigned limit.</p>
+        
+        <h3>Is drinking at home completely legal?</h3>
+        <p>Yes, for non-Muslims with legally purchased alcohol (QDC). Must be private consumption. Cannot provide to Muslims. Discrete behavior expected.</p>
+      `,
+    },
     'remote-work-cafes-doha-guide': {
       id: '52',
       title: 'Best Cafes for Remote Work in Doha Qatar 2025: Digital Nomad Guide',
@@ -8258,6 +8632,19 @@ const BlogPost = () => {
                   
                   {/* Rest of content */}
                   <div dangerouslySetInnerHTML={{ __html: '<h2 id="coworking">' + post.content.split('<h2 id="coworking">')[1] }} />
+                </div>
+              ) : slug === 'alcohol-guide-doha' ? (
+                <div className="prose prose-lg max-w-none space-y-8">
+                  {/* First section through permit process */}
+                  <div dangerouslySetInnerHTML={{ __html: post.content.split('<h2 id="spending-limits">')[0] }} />
+                  
+                  {/* QDC Permit Calculator */}
+                  <div className="not-prose my-12">
+                    <QDCPermitCalculator />
+                  </div>
+                  
+                  {/* Rest of content */}
+                  <div dangerouslySetInnerHTML={{ __html: '<h2 id="spending-limits">' + post.content.split('<h2 id="spending-limits">')[1] }} />
                 </div>
               ) : slug === 'gyms-fitness-doha-guide' ? (
                 <div className="prose prose-lg max-w-none space-y-8">
