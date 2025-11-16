@@ -69,6 +69,7 @@ import housingRentDohaImage from '@/assets/housing-rent-doha-2025.jpg';
 import jobMarketQatarImage from '@/assets/job-market-qatar-2025.jpg';
 import expatSalariesDohaImage from '@/assets/expat-salaries-doha-2025.jpg';
 import qatarTaxGuideImage from '@/assets/qatar-tax-guide-2025.jpg';
+import qatarWorkVisaGuideImage from '@/assets/qatar-work-visa-guide-2025.jpg';
 import PetImportChecklist from '@/components/PetImportChecklist';
 import VeterinaryCostEstimator from '@/components/VeterinaryCostEstimator';
 import DomesticWorkerCostCalculator from '@/components/DomesticWorkerCostCalculator';
@@ -83,12 +84,135 @@ import { CVTemplateGenerator } from '@/components/CVTemplateGenerator';
 import { SalaryCalculator } from '@/components/SalaryCalculator';
 import { TaxSavingsCalculator } from '@/components/TaxSavingsCalculator';
 import { RentalPropertyROICalculator } from '@/components/RentalPropertyROICalculator';
+import { VisaApplicationTracker } from '@/components/VisaApplicationTracker';
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   
   // Blog post data based on slug
   const blogPosts: Record<string, any> = {
+    'qatar-work-visa-guide-2025': {
+      id: '59',
+      title: 'The Golden Ticket: Work Visa and Residence Permit (RP) Application Process in Qatar',
+      date: 'June 8, 2025',
+      author: 'Experience Doha Team',
+      readTime: '14 min read',
+      category: 'Expat-Tips',
+      imageUrl: qatarWorkVisaGuideImage,
+      tags: ['Qatar visa', 'work permit', 'residence permit', 'QID card', 'visa requirements'],
+      content: `
+        <p>For any expatriate planning to live and work in Doha, the <strong>Work Visa and Residence Permit (RP)</strong> is the single most important document. It is the legal foundation of their stay, granting them the right to reside, work, and access essential services in Qatar. The process is primarily employer-driven, with the sponsoring company taking the lead. Understanding the step-by-step requirements and the necessary documentation is crucial for a smooth and efficient transition to life in Qatar.</p>
+
+        <h2 id="sponsorship">The Sponsorship System and Employer Responsibility</h2>
+        <p>The entire process is rooted in the <strong>sponsorship system</strong>, where a Qatari entity (the employer) must sponsor the foreign worker. The employer is responsible for initiating and managing the majority of the application process.</p>
+
+        <h2 id="phase-1">Phase 1: Pre-Arrival (The Work Entry Visa)</h2>
+        <p>This phase occurs before the employee travels to Qatar.</p>
+
+        <ol>
+          <li><strong>Job Offer and Contract:</strong> The process begins with a formal job offer and the signing of an employment contract. This contract must comply with the Qatar Labour Law.</li>
+          <li><strong>Labour Quota Approval:</strong> The employer must first obtain approval from the Ministry of Labour (MoL) for a labour quota, confirming the need to hire a foreign worker for the specific role.</li>
+          <li><strong>Work Entry Visa Application:</strong> The employer applies to the Ministry of Interior (MoI) for a Work Entry Visa on behalf of the employee.</li>
+          <li><strong>Required Documents (from Employee):</strong>
+            <ul>
+              <li>Copy of a valid passport (minimum 6 months validity).</li>
+              <li>Educational certificates (attested by the Ministry of Foreign Affairs in the home country and the Qatari Embassy).</li>
+              <li>Police Clearance Certificate (PCC) from the home country (attested).</li>
+              <li>Signed employment contract.</li>
+              <li>Passport-sized photographs.</li>
+            </ul>
+          </li>
+        </ol>
+
+        <p>Once approved, the <strong>Work Entry Visa</strong> is issued, allowing the employee to travel to Qatar. This visa is typically valid for <strong>30 days</strong> and must be converted into a Residence Permit (RP) within this period.</p>
+
+        <h2 id="phase-2">Phase 2: Post-Arrival (Medical and Biometrics)</h2>
+        <p>Upon arrival in Doha, the employee must complete the final steps to convert the entry visa into a full Residence Permit. This must be done within the first few weeks of arrival.</p>
+
+        <ol>
+          <li><strong>Medical Examination:</strong> The employee must undergo a mandatory medical examination at a government-approved medical center (often the Medical Commission). This examination typically includes:
+            <ul>
+              <li>Blood tests (for HIV, Hepatitis B and C).</li>
+              <li>Chest X-ray (for Tuberculosis).</li>
+              <li><strong>Note:</strong> A failed medical examination will result in immediate deportation.</li>
+            </ul>
+          </li>
+          <li><strong>Biometrics and Fingerprinting:</strong> The employee must visit the Department of Criminal Evidence and Information (CEID) to provide biometric data, including fingerprints and a digital photograph. This data is used for security and identification purposes.</li>
+        </ol>
+
+        <h2 id="phase-3">Phase 3: Final Issuance (The Residence Permit)</h2>
+        <p>Once the medical and biometrics are cleared, the employer submits the final application to the MoI.</p>
+
+        <ol>
+          <li><strong>RP Application Submission:</strong> The employer submits all collected documents, including the medical clearance and biometrics receipt, to the MoI.</li>
+          <li><strong>RP Issuance:</strong> Upon approval, the Residence Permit (RP) is issued. This is typically linked to the employee's <strong>Qatar ID card (QID)</strong>. The QID is the official identification document in Qatar and is required for virtually all transactions, including opening a bank account, signing a lease, and obtaining a driving license.</li>
+          <li><strong>Validity:</strong> The RP is usually valid for one to five years, depending on the employment contract and the employer's discretion, and must be renewed before expiration.</li>
+        </ol>
+
+        <h2 id="requirements">Key Requirements and Documentation</h2>
+        <p>The most common cause of delays in the RP process is incomplete or improperly attested documentation.</p>
+
+        <div class="overflow-x-auto my-8">
+          <table class="min-w-full border-collapse border border-border">
+            <thead class="bg-muted">
+              <tr>
+                <th class="border border-border px-4 py-3 text-left font-semibold">Document</th>
+                <th class="border border-border px-4 py-3 text-left font-semibold">Requirement</th>
+                <th class="border border-border px-4 py-3 text-left font-semibold">Attestation</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="border border-border px-4 py-2 font-medium">Passport</td>
+                <td class="border border-border px-4 py-2">Minimum 6 months validity.</td>
+                <td class="border border-border px-4 py-2">N/A</td>
+              </tr>
+              <tr class="bg-muted/50">
+                <td class="border border-border px-4 py-2 font-medium">Educational Certificates</td>
+                <td class="border border-border px-4 py-2">Highest degree/diploma.</td>
+                <td class="border border-border px-4 py-2">Mandatory: Home Country MoFA and Qatari Embassy.</td>
+              </tr>
+              <tr>
+                <td class="border border-border px-4 py-2 font-medium">Police Clearance Certificate (PCC)</td>
+                <td class="border border-border px-4 py-2">Issued by home country police.</td>
+                <td class="border border-border px-4 py-2">Mandatory: Home Country MoFA and Qatari Embassy.</td>
+              </tr>
+              <tr class="bg-muted/50">
+                <td class="border border-border px-4 py-2 font-medium">Medical Certificate</td>
+                <td class="border border-border px-4 py-2">Issued by Qatar Medical Commission.</td>
+                <td class="border border-border px-4 py-2">N/A</td>
+              </tr>
+              <tr>
+                <td class="border border-border px-4 py-2 font-medium">Photographs</td>
+                <td class="border border-border px-4 py-2">Passport-sized, white or blue background.</td>
+                <td class="border border-border px-4 py-2">N/A</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Attestation: The Critical Step</h3>
+        <p><strong>Attestation</strong> is the legal verification of a document's authenticity. For educational and police certificates, this is a multi-step process that must be completed before arriving in Qatar:</p>
+
+        <ol>
+          <li>Notarization in the home country.</li>
+          <li>Verification by the Ministry of Foreign Affairs (MoFA) in the home country.</li>
+          <li>Legalization by the Qatari Embassy or Consulate in the home country.</li>
+          <li>Final verification by the MoFA in Doha (upon arrival).</li>
+        </ol>
+
+        <h2 id="family">Family Residence Permits</h2>
+        <p>Once the employee has obtained their own RP, they can sponsor their immediate family (spouse and children) to join them in Qatar, provided they meet a <strong>minimum salary threshold</strong> (typically QAR 10,000 per month, though this can vary).</p>
+
+        <ul>
+          <li><strong>Process:</strong> Similar to the employee's RP, the family members must also undergo a medical examination and obtain their own QID.</li>
+          <li><strong>Wife's Work Status:</strong> A wife sponsored by her husband can seek employment in Qatar without needing a new sponsor, provided she obtains a No-Objection Certificate (NOC) from her husband and a work permit from the Ministry of Labour.</li>
+        </ul>
+
+        <h2 id="conclusion">Conclusion</h2>
+        <p>The Work Visa and Residence Permit process in Qatar is a structured, multi-stage procedure that is heavily dependent on the sponsoring employer. While the requirements are strict, a well-prepared expatriate, with the full support of their company, can navigate the process efficiently. The resulting <strong>QID is the key to unlocking the full expatriate experience in Doha</strong>, granting access to all the services and opportunities the country has to offer.</p>
+      `,
+    },
     'qatar-tax-guide-2025': {
       id: '58',
       title: 'The Tax-Free Promise: Taxation in Qatar – Income Tax, Property Tax, and the VAT Outlook',
@@ -9118,7 +9242,20 @@ const BlogPost = () => {
               </div>
 
               {/* Article Content */}
-              {slug === 'qatar-tax-guide-2025' ? (
+              {slug === 'qatar-work-visa-guide-2025' ? (
+                <div className="prose prose-lg max-w-none space-y-8">
+                  {/* First section through phase 1 */}
+                  <div dangerouslySetInnerHTML={{ __html: post.content.split('<h2 id="phase-2">')[0] }} />
+                  
+                  {/* Visa Application Tracker */}
+                  <div className="not-prose my-12">
+                    <VisaApplicationTracker />
+                  </div>
+                  
+                  {/* Rest of content */}
+                  <div dangerouslySetInnerHTML={{ __html: '<h2 id="phase-2">' + post.content.split('<h2 id="phase-2">')[1] }} />
+                </div>
+              ) : slug === 'qatar-tax-guide-2025' ? (
                 <div className="prose prose-lg max-w-none space-y-8">
                   {/* First section through income tax */}
                   <div dangerouslySetInnerHTML={{ __html: post.content.split('<h2 id="corporate-tax">')[0] }} />
