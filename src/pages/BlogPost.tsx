@@ -92,6 +92,7 @@ import { LaborRightsCalculator } from '@/components/LaborRightsCalculator';
 import { EOSGCalculator } from '@/components/EOSGCalculator';
 import { ContractNegotiationChecklist } from '@/components/ContractNegotiationChecklist';
 import { HealthInsuranceComparison } from '@/components/HealthInsuranceComparison';
+import { HealthcareProviderDirectory } from '@/components/HealthcareProviderDirectory';
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -9569,6 +9570,11 @@ const BlogPost = () => {
                   
                   {/* Rest of content */}
                   <div dangerouslySetInnerHTML={{ __html: '<h3 id="types-of-insurance">' + post.content.split('<h3 id="types-of-insurance">')[1] }} />
+                  
+                  {/* Healthcare Provider Directory */}
+                  <div className="not-prose my-12">
+                    <HealthcareProviderDirectory />
+                  </div>
                 </div>
               ) : slug === 'end-of-service-gratuity-qatar-2025' ? (
                 <div className="prose prose-lg max-w-none space-y-8">
