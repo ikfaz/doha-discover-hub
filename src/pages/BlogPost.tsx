@@ -82,6 +82,7 @@ import JobSearchStrategyGuide from '@/components/JobSearchStrategyGuide';
 import { CVTemplateGenerator } from '@/components/CVTemplateGenerator';
 import { SalaryCalculator } from '@/components/SalaryCalculator';
 import { TaxSavingsCalculator } from '@/components/TaxSavingsCalculator';
+import { RentalPropertyROICalculator } from '@/components/RentalPropertyROICalculator';
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -9127,8 +9128,16 @@ const BlogPost = () => {
                     <TaxSavingsCalculator />
                   </div>
                   
+                  {/* Continue with corporate tax through property tax */}
+                  <div dangerouslySetInnerHTML={{ __html: '<h2 id="corporate-tax">' + post.content.split('<h2 id="corporate-tax">')[1].split('<h2 id="vat">')[0] }} />
+                  
+                  {/* Rental Property ROI Calculator */}
+                  <div className="not-prose my-12">
+                    <RentalPropertyROICalculator />
+                  </div>
+                  
                   {/* Rest of content */}
-                  <div dangerouslySetInnerHTML={{ __html: '<h2 id="corporate-tax">' + post.content.split('<h2 id="corporate-tax">')[1] }} />
+                  <div dangerouslySetInnerHTML={{ __html: '<h2 id="vat">' + post.content.split('<h2 id="vat">')[1] }} />
                 </div>
               ) : slug === 'expat-salaries-doha-2025' ? (
                 <div className="prose prose-lg max-w-none space-y-8">
