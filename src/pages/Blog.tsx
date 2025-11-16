@@ -66,12 +66,23 @@ import housingRentDohaImage from '@/assets/housing-rent-doha-2025.jpg';
 import jobMarketQatarImage from '@/assets/job-market-qatar-2025.jpg';
 import expatSalariesDohaImage from '@/assets/expat-salaries-doha-2025.jpg';
 import qatarTaxGuideImage from '@/assets/qatar-tax-guide-2025.jpg';
+import qatarWorkVisaGuideImage from '@/assets/qatar-work-visa-guide-2025.jpg';
 
 const Blog = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   
   const allPosts = [
+    {
+      id: '59',
+      title: 'The Golden Ticket: Work Visa and Residence Permit (RP) Application Process in Qatar',
+      excerpt: 'Complete guide to Qatar work visa and RP process 2025. Step-by-step requirements, documentation, attestation, medical exam, biometrics, and QID card issuance.',
+      imageUrl: qatarWorkVisaGuideImage,
+      category: 'Expat-Tips',
+      date: 'June 8, 2025',
+      slug: 'qatar-work-visa-guide-2025',
+      tags: ['Qatar visa', 'work permit', 'residence permit', 'QID card', 'visa requirements'],
+    },
     {
       id: '58',
       title: 'The Tax-Free Promise: Taxation in Qatar – Income Tax, Property Tax, and the VAT Outlook',
