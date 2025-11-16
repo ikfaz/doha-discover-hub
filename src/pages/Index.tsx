@@ -34,9 +34,20 @@ import dohaMetro2025Image from '@/assets/doha-metro-2025-guide.jpg';
 import petImportQatarImage from '@/assets/pet-import-qatar-guide.jpg';
 import hiringMaidNannyImage from '@/assets/hiring-maid-nanny-qatar-guide.jpg';
 import gymsFitnessDohaImage from '@/assets/gyms-fitness-doha-guide.jpg';
+import remoteWorkCafesImage from '@/assets/remote-work-cafes-doha-guide.jpg';
 
 const Index = () => {
   const featuredBlogs = [
+    {
+      id: '52',
+      title: 'Best Cafes for Remote Work in Doha Qatar 2025: Digital Nomad Guide',
+      excerpt: 'Find best cafes for remote work in Doha 2025. WiFi speeds, power outlets, atmosphere, and productivity-friendly spots for digital workers in Qatar.',
+      imageUrl: remoteWorkCafesImage,
+      category: 'Expat-Tips',
+      date: 'June 1, 2025',
+      slug: 'remote-work-cafes-doha-guide',
+      tags: ['remote work cafes Doha', 'coworking Doha', 'WiFi cafes Qatar', 'digital nomads', 'laptop-friendly cafes'],
+    },
     {
       id: '51',
       title: 'Gyms and Fitness Trends in Doha Qatar 2025: Complete Guide',

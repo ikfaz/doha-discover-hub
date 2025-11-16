@@ -64,16 +64,372 @@ import dohaMetro2025Image from '@/assets/doha-metro-2025-guide.jpg';
 import petImportQatarImage from '@/assets/pet-import-qatar-guide.jpg';
 import hiringMaidNannyImage from '@/assets/hiring-maid-nanny-qatar-guide.jpg';
 import gymsFitnessDohaImage from '@/assets/gyms-fitness-doha-guide.jpg';
+import remoteWorkCafesImage from '@/assets/remote-work-cafes-doha-guide.jpg';
 import PetImportChecklist from '@/components/PetImportChecklist';
 import VeterinaryCostEstimator from '@/components/VeterinaryCostEstimator';
 import DomesticWorkerCostCalculator from '@/components/DomesticWorkerCostCalculator';
 import GymMembershipComparison from '@/components/GymMembershipComparison';
+import RemoteWorkCafeFinder from '@/components/RemoteWorkCafeFinder';
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   
   // Blog post data based on slug
   const blogPosts: Record<string, any> = {
+    'remote-work-cafes-doha-guide': {
+      id: '52',
+      title: 'Best Cafes for Remote Work in Doha Qatar 2025: Digital Nomad Guide',
+      date: 'June 1, 2025',
+      author: 'Experience Doha Team',
+      readTime: '16 min read',
+      category: 'Expat-Tips',
+      imageUrl: remoteWorkCafesImage,
+      tags: ['remote work cafes Doha', 'coworking Doha', 'WiFi cafes Qatar', 'digital nomads', 'laptop-friendly cafes'],
+      content: `
+        <p class="lead">Qatar's remote work scene has matured significantly, with cafes increasingly recognizing the laptop-wielding customer segment. While traditional cafe culture in Qatar centers on socializing, numerous establishments now welcome remote workers with reliable WiFi, abundant power outlets, and productivity-conducive environments.</p>
+
+        <h2 id="features">What Makes a Great Remote Work Cafe?</h2>
+        
+        <h3>Essential Features</h3>
+        <ul>
+          <li><strong>Reliable WiFi</strong> - Fast, stable connection</li>
+          <li><strong>Power Outlets</strong> - Accessible at most tables</li>
+          <li><strong>Comfortable Seating</strong> - Extended sitting possible</li>
+          <li><strong>Acceptable Noise Level</strong> - Focus-friendly atmosphere</li>
+          <li><strong>Coffee Quality</strong> - Fuel for productivity</li>
+          <li><strong>Operating Hours</strong> - Fits work schedule</li>
+          <li><strong>Location</strong> - Convenient to residence/office</li>
+        </ul>
+        
+        <h3>Nice-to-Have</h3>
+        <ul>
+          <li>Air conditioning comfort</li>
+          <li>Natural lighting</li>
+          <li>Good food options</li>
+          <li>Laptop-friendly tables</li>
+          <li>Minimal crowding</li>
+          <li>Quiet zones available</li>
+        </ul>
+
+        <h2 id="top-cafes">Top Remote Work Cafes in Doha</h2>
+        
+        <h3>1. Flat White Specialty Coffee (Msheireb)</h3>
+        
+        <p><strong>Why It Works:</strong></p>
+        <ul>
+          <li>Excellent WiFi speed</li>
+          <li>Power outlets throughout</li>
+          <li>Modern, spacious interior</li>
+          <li>Professional atmosphere</li>
+          <li>Central location</li>
+        </ul>
+        
+        <p><strong>Details:</strong></p>
+        <ul>
+          <li><strong>Hours:</strong> 7 AM - 11 PM</li>
+          <li><strong>WiFi:</strong> Fast and reliable</li>
+          <li><strong>Coffee:</strong> QAR 25-45</li>
+          <li><strong>Seating:</strong> Tables and counters</li>
+          <li><strong>Noise:</strong> Moderate, ambient music</li>
+        </ul>
+        
+        <p><strong>Best For:</strong> Serious work sessions, meetings, all-day productivity</p>
+        
+        <h3>2. Drop Coffee (Multiple Locations)</h3>
+        
+        <p><strong>Why It Works:</strong></p>
+        <ul>
+          <li>Consistent quality chain</li>
+          <li>Good workspace layout</li>
+          <li>Various seating options</li>
+          <li>Multiple locations convenient</li>
+          <li>Less crowded weekdays</li>
+        </ul>
+        
+        <p><strong>Details:</strong></p>
+        <ul>
+          <li><strong>Hours:</strong> 6 AM - 12 AM</li>
+          <li><strong>WiFi:</strong> Strong throughout</li>
+          <li><strong>Coffee:</strong> QAR 20-40</li>
+          <li><strong>Seating:</strong> Varied options</li>
+          <li><strong>Noise:</strong> Moderate</li>
+        </ul>
+        
+        <p><strong>Best For:</strong> Quick work sessions, convenience, consistency</p>
+        
+        <h3>3. DRVN Coffee (City Center)</h3>
+        
+        <p><strong>Why It Works:</strong></p>
+        <ul>
+          <li>Designer interior</li>
+          <li>Instagram-worthy setting</li>
+          <li>Quality specialty coffee</li>
+          <li>Decent workspace</li>
+          <li>Mall convenience</li>
+        </ul>
+        
+        <p><strong>Details:</strong></p>
+        <ul>
+          <li><strong>Hours:</strong> 9 AM - 10 PM</li>
+          <li><strong>WiFi:</strong> Good speed</li>
+          <li><strong>Coffee:</strong> QAR 30-50</li>
+          <li><strong>Seating:</strong> Modern arrangements</li>
+          <li><strong>Noise:</strong> Mall ambient</li>
+        </ul>
+        
+        <p><strong>Best For:</strong> Creative work, shorter sessions, aesthetic appreciation</p>
+        
+        <h3>4. Cortado Coffee (Al Sadd)</h3>
+        
+        <p><strong>Why It Works:</strong></p>
+        <ul>
+          <li>Neighborhood cafe feel</li>
+          <li>Quiet atmosphere</li>
+          <li>Regular customer base</li>
+          <li>Owner supportive of workers</li>
+          <li>Great pastries</li>
+        </ul>
+        
+        <p><strong>Details:</strong></p>
+        <ul>
+          <li><strong>Hours:</strong> 7 AM - 11 PM</li>
+          <li><strong>WiFi:</strong> Reliable</li>
+          <li><strong>Coffee:</strong> QAR 22-38</li>
+          <li><strong>Seating:</strong> Comfortable tables</li>
+          <li><strong>Noise:</strong> Quiet to moderate</li>
+        </ul>
+        
+        <p><strong>Best For:</strong> Focused work, local atmosphere, extended sessions</p>
+        
+        <h3>5. DELI CUCINA (West Bay)</h3>
+        
+        <p><strong>Why It Works:</strong></p>
+        <ul>
+          <li>Professional setting</li>
+          <li>Full meals available</li>
+          <li>Good for meetings</li>
+          <li>Business district location</li>
+          <li>All-day menu</li>
+        </ul>
+        
+        <p><strong>Details:</strong></p>
+        <ul>
+          <li><strong>Hours:</strong> 7 AM - 11 PM</li>
+          <li><strong>WiFi:</strong> Excellent</li>
+          <li><strong>Coffee:</strong> QAR 25-45</li>
+          <li><strong>Food:</strong> QAR 45-100</li>
+          <li><strong>Seating:</strong> Restaurant style</li>
+          <li><strong>Noise:</strong> Business appropriate</li>
+        </ul>
+        
+        <p><strong>Best For:</strong> Client meetings, lunch work sessions, professional environment</p>
+        
+        <h3>6. The Pearl Cafes (Various)</h3>
+        
+        <p><strong>Pearl-Qatar Location Advantages:</strong></p>
+        <p>Multiple cafes along marina:</p>
+        <ul>
+          <li>Beautiful waterfront views</li>
+          <li>Premium atmosphere</li>
+          <li>International options</li>
+          <li>Evening work viable</li>
+          <li>Relaxed environment</li>
+        </ul>
+        
+        <p><strong>Popular Options:</strong></p>
+        <ul>
+          <li>Cavalli Caffe</li>
+          <li>Cafe Bateel</li>
+          <li>Biella Caffe</li>
+          <li>Paul Bakery</li>
+        </ul>
+        
+        <p><strong>Best For:</strong> Relaxed work, scenic environment, evening productivity</p>
+        
+        <h3>7. Katara Cultural Village Cafes</h3>
+        
+        <p><strong>Why It Works:</strong></p>
+        <ul>
+          <li>Cultural atmosphere</li>
+          <li>Less commercial feel</li>
+          <li>Outdoor seating options (seasonal)</li>
+          <li>Quiet zones</li>
+          <li>Artistic environment</li>
+        </ul>
+        
+        <p><strong>Details:</strong></p>
+        <ul>
+          <li><strong>Hours:</strong> Varies by cafe</li>
+          <li><strong>WiFi:</strong> Generally available</li>
+          <li><strong>Coffee:</strong> QAR 20-45</li>
+          <li><strong>Seating:</strong> Varied</li>
+          <li><strong>Noise:</strong> Usually quiet</li>
+        </ul>
+        
+        <p><strong>Best For:</strong> Creative projects, peaceful environment, inspiration seeking</p>
+
+        <h2 id="coworking">Coworking Spaces Alternative</h2>
+        
+        <h3>When Cafes Aren't Enough</h3>
+        <p>Dedicated coworking spaces offer:</p>
+        
+        <p><strong>1. Connect Qatar (Multiple)</strong></p>
+        <ul>
+          <li>Professional facilities</li>
+          <li>Meeting rooms available</li>
+          <li>Printing services</li>
+          <li>Monthly: QAR 800-2,000</li>
+          <li>Networking opportunities</li>
+        </ul>
+        
+        <p><strong>2. Basecamp Coworking</strong></p>
+        <ul>
+          <li>Modern setup</li>
+          <li>Community events</li>
+          <li>Hot desk options</li>
+          <li>Day passes: QAR 75-150</li>
+          <li>Monthly flexible terms</li>
+        </ul>
+        
+        <p><strong>3. Regus (Business Centers)</strong></p>
+        <ul>
+          <li>Corporate standard</li>
+          <li>Virtual office options</li>
+          <li>Multiple locations</li>
+          <li>Premium pricing</li>
+          <li>Professional services</li>
+        </ul>
+        
+        <h3>Coworking Advantages</h3>
+        <ul>
+          <li>Dedicated workspace</li>
+          <li>Professional infrastructure</li>
+          <li>Community building</li>
+          <li>Meeting space access</li>
+          <li>More reliable facilities</li>
+        </ul>
+
+        <h2 id="etiquette">Remote Work Etiquette in Doha Cafes</h2>
+        
+        <h3>Cultural Considerations</h3>
+        <ul>
+          <li>Don't overstay during peak meal times</li>
+          <li>Purchase regularly if occupying table</li>
+          <li>Keep noise minimal (calls in designated areas)</li>
+          <li>Respect prayer times if staff busy</li>
+          <li>Dress appropriately for venue</li>
+        </ul>
+        
+        <h3>Cafe Courtesy</h3>
+        <ul>
+          <li>Buy at least one item per 2 hours</li>
+          <li>Share large tables during busy periods</li>
+          <li>Don't monopolize outlets</li>
+          <li>Clean your workspace</li>
+          <li>Tip appropriately</li>
+        </ul>
+        
+        <h3>Peak Avoidance</h3>
+        <ul>
+          <li><strong>Breakfast rush:</strong> 8-10 AM</li>
+          <li><strong>Lunch peak:</strong> 12-2 PM</li>
+          <li><strong>Evening social hours:</strong> 5-8 PM</li>
+        </ul>
+
+        <h2 id="wifi">WiFi Speeds and Connectivity</h2>
+        
+        <h3>Typical Cafe WiFi</h3>
+        <ul>
+          <li><strong>Speed:</strong> 10-50 Mbps</li>
+          <li><strong>Reliability:</strong> Generally good</li>
+          <li><strong>Password:</strong> Ask staff</li>
+          <li><strong>VPN usage:</strong> Usually works</li>
+          <li><strong>Video calls:</strong> Most support</li>
+        </ul>
+        
+        <h3>Backup Options</h3>
+        <ul>
+          <li>Mobile hotspot (personal data)</li>
+          <li>Multiple SIM cards</li>
+          <li>Download essential files beforehand</li>
+          <li>Have offline work prepared</li>
+        </ul>
+
+        <h2 id="costs">Costs of Cafe Working</h2>
+        
+        <h3>Daily Budget</h3>
+        <ul>
+          <li>2-3 coffees: QAR 60-120</li>
+          <li>Pastry/snack: QAR 25-40</li>
+          <li>Lunch (if working through): QAR 50-100</li>
+          <li><strong>Total:</strong> QAR 100-250/day</li>
+        </ul>
+        
+        <h3>Monthly Consideration</h3>
+        <p>Working 20 days monthly: QAR 2,000-5,000</p>
+        <p>Compare to:</p>
+        <ul>
+          <li>Coworking membership: QAR 800-1,500</li>
+          <li>Home office setup: One-time investment</li>
+        </ul>
+
+        <h2 id="productivity">Maximizing Productivity</h2>
+        
+        <h3>Time Management</h3>
+        <ul>
+          <li><strong>Peak focus:</strong> 9-12 AM (morning sessions)</li>
+          <li><strong>After lunch:</strong> 2-5 PM (quieter period)</li>
+          <li><strong>Evening:</strong> 7-10 PM (less suitable for calls)</li>
+        </ul>
+        
+        <h3>Essential Gear</h3>
+        <ul>
+          <li>Laptop charger (obviously)</li>
+          <li>Noise-canceling headphones</li>
+          <li>Portable power bank</li>
+          <li>Mouse (if preferred)</li>
+          <li>Water bottle</li>
+        </ul>
+        
+        <h3>Productivity Apps</h3>
+        <ul>
+          <li>Focus timers</li>
+          <li>Task managers</li>
+          <li>Noise apps (cafe ambiance)</li>
+          <li>VPN for security</li>
+          <li>Communication tools</li>
+        </ul>
+
+        <h2 id="visa">Remote Work Visa Considerations</h2>
+        
+        <p><strong>Important Note:</strong></p>
+        <p>Qatar doesn't currently offer digital nomad visas. Remote workers should have:</p>
+        <ul>
+          <li>Employment visa (from Qatar employer)</li>
+          <li>Valid residence permit</li>
+          <li>Or visit visa (limited time)</li>
+        </ul>
+        
+        <p>Working for foreign companies while on residence visa: Legal gray area. Many expats do freelance/remote work, but technically employment should be through sponsoring company.</p>
+
+        <h2 id="faq">FAQ: Remote Work Cafes Doha</h2>
+        
+        <h3>Do cafes mind long working sessions?</h3>
+        <p>Generally tolerant if you're purchasing regularly. Avoid peak meal times for extended stays. Some cafes explicitly welcome workers.</p>
+        
+        <h3>Is cafe WiFi secure?</h3>
+        <p>Use VPN for sensitive work. Public WiFi carries inherent risks. Don't access critical banking/passwords on cafe networks.</p>
+        
+        <h3>Best area for remote work cafes?</h3>
+        <p>Msheireb and West Bay have highest concentration of work-friendly cafes. The Pearl offers pleasant atmosphere. City Center mall has options.</p>
+        
+        <h3>Can I take video calls in cafes?</h3>
+        <p>Best to step outside or find quiet corner. Most cafes not ideal for calls. Use mute strategically. Earbuds essential.</p>
+        
+        <h3>Are evenings good for cafe working?</h3>
+        <p>Social crowds increase evenings. Quiet cafes become social spaces. Morning and early afternoon better for focused work.</p>
+      `,
+    },
     'gyms-fitness-doha-guide': {
       id: '51',
       title: 'Gyms and Fitness Trends in Doha Qatar 2025: Complete Guide',
@@ -7889,6 +8245,19 @@ const BlogPost = () => {
                   
                   {/* Rest of content */}
                   <div dangerouslySetInnerHTML={{ __html: '<h2 id="delivery">' + post.content.split('<h2 id="delivery">')[1] }} />
+                </div>
+              ) : slug === 'remote-work-cafes-doha-guide' ? (
+                <div className="prose prose-lg max-w-none space-y-8">
+                  {/* First section through top cafes */}
+                  <div dangerouslySetInnerHTML={{ __html: post.content.split('<h2 id="coworking">')[0] }} />
+                  
+                  {/* Remote Work Cafe Finder */}
+                  <div className="not-prose my-12">
+                    <RemoteWorkCafeFinder />
+                  </div>
+                  
+                  {/* Rest of content */}
+                  <div dangerouslySetInnerHTML={{ __html: '<h2 id="coworking">' + post.content.split('<h2 id="coworking">')[1] }} />
                 </div>
               ) : slug === 'gyms-fitness-doha-guide' ? (
                 <div className="prose prose-lg max-w-none space-y-8">
