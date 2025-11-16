@@ -30,9 +30,20 @@ import lgbtqQatarImage from '@/assets/lgbtq-experiences-qatar-guide.jpg';
 import bankAccountQatarImage from '@/assets/bank-account-qatar-guide.jpg';
 import mobilePlansQatarImage from '@/assets/mobile-plans-qatar-guide.jpg';
 import groceryShoppingDohaImage from '@/assets/grocery-shopping-doha-guide.jpg';
+import dohaMetro2025Image from '@/assets/doha-metro-2025-guide.jpg';
 
 const Index = () => {
   const featuredBlogs = [
+    {
+      id: '48',
+      title: 'Doha Metro 2025: New Lines, Expansions, and Complete Network Guide',
+      excerpt: 'Complete guide to Doha Metro 2025 including new line expansions, stations, fares, operating hours, and travel tips for commuters in Qatar.',
+      imageUrl: dohaMetro2025Image,
+      category: 'Expat-Tips',
+      date: 'May 28, 2025',
+      slug: 'doha-metro-2025-guide',
+      tags: ['Doha Metro', 'public transport', 'Qatar Rail', 'commuting', 'metro fares'],
+    },
     {
       id: '47',
       title: 'Grocery Shopping Hacks in Doha 2025: Carrefour vs Lulu Complete Guide',
