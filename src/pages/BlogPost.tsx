@@ -70,6 +70,7 @@ import VeterinaryCostEstimator from '@/components/VeterinaryCostEstimator';
 import DomesticWorkerCostCalculator from '@/components/DomesticWorkerCostCalculator';
 import GymMembershipComparison from '@/components/GymMembershipComparison';
 import RemoteWorkCafeFinder from '@/components/RemoteWorkCafeFinder';
+import CafeMapFinder from '@/components/CafeMapFinder';
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -8254,6 +8255,11 @@ const BlogPost = () => {
                   {/* Remote Work Cafe Finder */}
                   <div className="not-prose my-12">
                     <RemoteWorkCafeFinder />
+                  </div>
+                  
+                  {/* Cafe Map Finder */}
+                  <div className="not-prose my-12">
+                    <CafeMapFinder />
                   </div>
                   
                   {/* Rest of content */}
