@@ -80,6 +80,7 @@ import RentPriceComparison from '@/components/RentPriceComparison';
 import JobSearchStrategyGuide from '@/components/JobSearchStrategyGuide';
 import { CVTemplateGenerator } from '@/components/CVTemplateGenerator';
 import { SalaryCalculator } from '@/components/SalaryCalculator';
+import { TaxSavingsCalculator } from '@/components/TaxSavingsCalculator';
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -9001,8 +9002,16 @@ const BlogPost = () => {
               {/* Article Content */}
               {slug === 'expat-salaries-doha-2025' ? (
                 <div className="prose prose-lg max-w-none space-y-8">
-                  {/* First section through salary ranges */}
-                  <div dangerouslySetInnerHTML={{ __html: post.content.split('<h2 id="package">')[0] }} />
+                  {/* First section through tax-free advantage */}
+                  <div dangerouslySetInnerHTML={{ __html: post.content.split('<h2 id="benchmarks">')[0] }} />
+                  
+                  {/* Tax Savings Calculator */}
+                  <div className="not-prose my-12">
+                    <TaxSavingsCalculator />
+                  </div>
+                  
+                  {/* Continue with benchmarks through salary ranges */}
+                  <div dangerouslySetInnerHTML={{ __html: '<h2 id="benchmarks">' + post.content.split('<h2 id="benchmarks">')[1].split('<h2 id="package">')[0] }} />
                   
                   {/* Salary Calculator */}
                   <div className="not-prose my-12">
