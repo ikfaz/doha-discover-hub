@@ -38,9 +38,19 @@ import remoteWorkCafesImage from '@/assets/remote-work-cafes-doha-guide.jpg';
 import housingRentDohaImage from '@/assets/housing-rent-doha-2025.jpg';
 import jobMarketQatarImage from '@/assets/job-market-qatar-2025.jpg';
 import expatSalariesDohaImage from '@/assets/expat-salaries-doha-2025.jpg';
+import qatarTaxGuideImage from '@/assets/qatar-tax-guide-2025.jpg';
 
 const Index = () => {
   const featuredBlogs = [
+    {
+      id: '58',
+      title: 'The Tax-Free Promise: Taxation in Qatar – Income Tax, Property Tax, and the VAT Outlook',
+      excerpt: 'Complete guide to Qatar tax system 2025. 0% personal income tax, corporate tax, property tax, rental income, and VAT outlook for expats in Doha.',
+      imageUrl: qatarTaxGuideImage,
+      category: 'Expat-Tips',
+      date: 'June 7, 2025',
+      slug: 'qatar-tax-guide-2025',
+    },
     {
       id: '57',
       title: 'The Compensation Landscape: Average and Typical Salaries for Various Expat Roles in Doha',

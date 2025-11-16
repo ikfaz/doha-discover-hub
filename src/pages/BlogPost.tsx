@@ -68,6 +68,7 @@ import remoteWorkCafesImage from '@/assets/remote-work-cafes-doha-guide.jpg';
 import housingRentDohaImage from '@/assets/housing-rent-doha-2025.jpg';
 import jobMarketQatarImage from '@/assets/job-market-qatar-2025.jpg';
 import expatSalariesDohaImage from '@/assets/expat-salaries-doha-2025.jpg';
+import qatarTaxGuideImage from '@/assets/qatar-tax-guide-2025.jpg';
 import PetImportChecklist from '@/components/PetImportChecklist';
 import VeterinaryCostEstimator from '@/components/VeterinaryCostEstimator';
 import DomesticWorkerCostCalculator from '@/components/DomesticWorkerCostCalculator';
@@ -87,6 +88,122 @@ const BlogPost = () => {
   
   // Blog post data based on slug
   const blogPosts: Record<string, any> = {
+    'qatar-tax-guide-2025': {
+      id: '58',
+      title: 'The Tax-Free Promise: Taxation in Qatar – Income Tax, Property Tax, and the VAT Outlook',
+      date: 'June 7, 2025',
+      author: 'Experience Doha Team',
+      readTime: '12 min read',
+      category: 'Expat-Tips',
+      imageUrl: qatarTaxGuideImage,
+      tags: ['Qatar tax', 'tax-free income', 'VAT Qatar', 'property tax', 'income tax Qatar'],
+      content: `
+        <p>One of the most compelling reasons for expatriates to relocate to Doha is the highly favorable tax environment. Qatar operates a tax system that is designed to attract foreign investment and talent, offering significant financial advantages over most Western and developed economies. For the individual expatriate, the system is characterized by the <strong>absence of personal income tax</strong>. However, a complete understanding of the Qatari tax landscape requires knowledge of corporate taxes, property taxes, and the ongoing discussions surrounding the potential introduction of a Value Added Tax (VAT).</p>
+
+        <h2 id="income-tax">Personal Income Tax: The Zero-Tax Advantage</h2>
+        <p>The cornerstone of Qatar's appeal to foreign workers is the simple fact that <strong>there is no personal income tax on wages, salaries, or allowances</strong> earned by individuals in Qatar.</p>
+
+        <blockquote class="border-l-4 border-primary pl-4 italic my-6">
+          "There are no income taxes imposed on wages in Qatar, and even other kinds of taxes are limited. Unlike many other countries, Qatar does not impose capital gains tax..."
+        </blockquote>
+
+        <p>This zero-tax policy applies to all forms of personal employment income, regardless of the individual's nationality or residency status. This means that the <strong>gross salary negotiated with an employer is the net amount received by the employee</strong>, offering a substantial boost to disposable income and savings potential.</p>
+
+        <h3>Expatriate Obligations to Home Country</h3>
+        <p>While Qatar does not tax income, expatriates must be aware of their tax obligations in their home country.</p>
+
+        <ul>
+          <li><strong>US Citizens:</strong> American citizens are taxed on their worldwide income, regardless of where they live. However, they can often utilize the Foreign Earned Income Exclusion (FEIE) and the Foreign Tax Credit to significantly reduce or eliminate their US tax liability.</li>
+          <li><strong>Other Nationalities:</strong> Most other countries have residency-based tax systems. If an expat is considered a non-resident for tax purposes in their home country, they typically have no tax liability there. Expats must confirm their specific home country's tax laws.</li>
+        </ul>
+
+        <h2 id="corporate-tax">Corporate and Business Taxation</h2>
+        <p>While individuals enjoy a tax-free environment, businesses operating in Qatar are subject to corporate taxes.</p>
+
+        <ul>
+          <li><strong>Corporate Income Tax (CIT):</strong> The standard CIT rate is a flat <strong>10%</strong> on a company's taxable income derived from sources within Qatar. This is relatively low by international standards.</li>
+          <li><strong>Withholding Tax (WHT):</strong> A WHT is imposed on certain payments made to non-residents who do not have a permanent establishment in Qatar. This typically applies to royalties, technical fees, and interest payments.</li>
+        </ul>
+
+        <h2 id="property-tax">Property Tax and Real Estate</h2>
+        <p>Qatar does <strong>not impose a general property tax</strong> on real estate ownership.</p>
+
+        <ul>
+          <li><strong>Ownership:</strong> Foreigners are permitted to own property in designated areas, primarily in freehold zones like The Pearl-Qatar, Lusail, and Al Khor Resort Project.</li>
+          <li><strong>Rental Income:</strong> While employment income is tax-free, <strong>rental income derived from property owned in Qatar is generally subject to the standard 10% Corporate Income Tax</strong>. This is a key distinction for expats who invest in local real estate.</li>
+          <li><strong>Municipal Fees:</strong> Property owners and tenants may be subject to small municipal fees for services, but these are not considered a broad-based property tax.</li>
+        </ul>
+
+        <h2 id="vat">The VAT Outlook: A Regional Shift</h2>
+        <p>The most significant potential change to the Qatari tax landscape is the possible introduction of a <strong>Value Added Tax (VAT)</strong>.</p>
+
+        <h3>The GCC Agreement</h3>
+        <p>Qatar, along with the other members of the Gulf Cooperation Council (GCC), signed a unified agreement to implement a VAT system. The standard rate agreed upon is <strong>5%</strong>.</p>
+
+        <h3>Current Status (2025)</h3>
+        <p>As of late 2025, Qatar has <strong>not yet implemented VAT</strong>. It remains the only GCC country, along with Kuwait, that has not yet done so, while Saudi Arabia, the UAE, Bahrain, and Oman have all introduced the tax.</p>
+
+        <blockquote class="border-l-4 border-primary pl-4 italic my-6">
+          "Projections suggest that Qatar may implement VAT in 2025, with a proposed rate of 5%."
+        </blockquote>
+
+        <p>While the implementation date has been repeatedly postponed, the consensus among financial analysts is that the introduction of VAT is a matter of <em>when, not if</em>.</p>
+
+        <h3>Impact of VAT on Expatriates</h3>
+        <p>Once implemented, a 5% VAT would have a direct impact on the cost of living for expatriates:</p>
+
+        <ol>
+          <li><strong>Increased Cost of Goods and Services:</strong> The price of most consumer goods, services, and entertainment would increase by 5%.</li>
+          <li><strong>Exemptions:</strong> Essential services like healthcare, education, and certain food items are typically exempt or zero-rated under the GCC framework, mitigating the impact on basic necessities.</li>
+          <li><strong>Inflation:</strong> The introduction of VAT would likely cause a temporary spike in inflation, further increasing the overall cost of living in Doha.</li>
+        </ol>
+
+        <h2 id="summary">Summary of Qatar's Tax Environment</h2>
+        <p>The Qatari tax system is highly favorable to the individual expatriate, making it a powerful financial incentive for relocation.</p>
+
+        <div class="overflow-x-auto my-8">
+          <table class="min-w-full border-collapse border border-border">
+            <thead class="bg-muted">
+              <tr>
+                <th class="border border-border px-4 py-3 text-left font-semibold">Tax Type</th>
+                <th class="border border-border px-4 py-3 text-left font-semibold">Status in Qatar (2025)</th>
+                <th class="border border-border px-4 py-3 text-left font-semibold">Impact on Expatriates</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="border border-border px-4 py-2 font-medium">Personal Income Tax</td>
+                <td class="border border-border px-4 py-2">0% (Zero)</td>
+                <td class="border border-border px-4 py-2">Major Financial Advantage. Gross salary equals net salary.</td>
+              </tr>
+              <tr class="bg-muted/50">
+                <td class="border border-border px-4 py-2 font-medium">Corporate Income Tax</td>
+                <td class="border border-border px-4 py-2">10%</td>
+                <td class="border border-border px-4 py-2">Applies to businesses, not individual wages.</td>
+              </tr>
+              <tr>
+                <td class="border border-border px-4 py-2 font-medium">Property Tax</td>
+                <td class="border border-border px-4 py-2">None (General)</td>
+                <td class="border border-border px-4 py-2">No annual tax on property ownership.</td>
+              </tr>
+              <tr class="bg-muted/50">
+                <td class="border border-border px-4 py-2 font-medium">Rental Income Tax</td>
+                <td class="border border-border px-4 py-2">10% CIT</td>
+                <td class="border border-border px-4 py-2">Applies to income from rental properties.</td>
+              </tr>
+              <tr>
+                <td class="border border-border px-4 py-2 font-medium">Value Added Tax (VAT)</td>
+                <td class="border border-border px-4 py-2">Not yet implemented (Expected 5%)</td>
+                <td class="border border-border px-4 py-2">Will increase the cost of living upon introduction.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 id="conclusion">Conclusion</h2>
+        <p>The <strong>tax-free salary remains the single most attractive financial feature</strong> of the expat package in Doha. While the potential introduction of VAT will slightly increase the cost of living, Qatar will continue to offer one of the most financially rewarding environments for international professionals globally. Prospective expats should factor in the current tax-free status and the potential future impact of VAT when negotiating their total compensation package.</p>
+      `,
+    },
     'expat-salaries-doha-2025': {
       id: '57',
       title: 'The Compensation Landscape: Average and Typical Salaries for Various Expat Roles in Doha',
@@ -9000,7 +9117,20 @@ const BlogPost = () => {
               </div>
 
               {/* Article Content */}
-              {slug === 'expat-salaries-doha-2025' ? (
+              {slug === 'qatar-tax-guide-2025' ? (
+                <div className="prose prose-lg max-w-none space-y-8">
+                  {/* First section through income tax */}
+                  <div dangerouslySetInnerHTML={{ __html: post.content.split('<h2 id="corporate-tax">')[0] }} />
+                  
+                  {/* Tax Savings Calculator */}
+                  <div className="not-prose my-12">
+                    <TaxSavingsCalculator />
+                  </div>
+                  
+                  {/* Rest of content */}
+                  <div dangerouslySetInnerHTML={{ __html: '<h2 id="corporate-tax">' + post.content.split('<h2 id="corporate-tax">')[1] }} />
+                </div>
+              ) : slug === 'expat-salaries-doha-2025' ? (
                 <div className="prose prose-lg max-w-none space-y-8">
                   {/* First section through tax-free advantage */}
                   <div dangerouslySetInnerHTML={{ __html: post.content.split('<h2 id="benchmarks">')[0] }} />
