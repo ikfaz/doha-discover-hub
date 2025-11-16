@@ -77,6 +77,7 @@ import HotelBarFinder from '@/components/HotelBarFinder';
 import CityCostComparison from '@/components/CityCostComparison';
 import RentPriceComparison from '@/components/RentPriceComparison';
 import JobSearchStrategyGuide from '@/components/JobSearchStrategyGuide';
+import { CVTemplateGenerator } from '@/components/CVTemplateGenerator';
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -8870,6 +8871,11 @@ const BlogPost = () => {
                   {/* Job Search Strategy Guide */}
                   <div className="not-prose my-12">
                     <JobSearchStrategyGuide />
+                  </div>
+                  
+                  {/* CV Template Generator */}
+                  <div className="not-prose my-12">
+                    <CVTemplateGenerator />
                   </div>
                   
                   {/* Rest of content */}
