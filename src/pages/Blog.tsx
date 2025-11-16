@@ -67,12 +67,23 @@ import jobMarketQatarImage from '@/assets/job-market-qatar-2025.jpg';
 import expatSalariesDohaImage from '@/assets/expat-salaries-doha-2025.jpg';
 import qatarTaxGuideImage from '@/assets/qatar-tax-guide-2025.jpg';
 import qatarWorkVisaGuideImage from '@/assets/qatar-work-visa-guide-2025.jpg';
+import qatarLaborLawReformsImage from '@/assets/qatar-labor-law-reforms-2025.jpg';
 
 const Blog = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   
   const allPosts = [
+    {
+      id: '60',
+      title: 'A New Era of Mobility: Labor Laws and the Sponsorship (Kafala) System Reforms in Qatar',
+      excerpt: 'Complete guide to Qatar labor law reforms 2025. NOC abolition, Kafala system changes, minimum wage, worker mobility, and enhanced protections for expats.',
+      imageUrl: qatarLaborLawReformsImage,
+      category: 'Expat-Tips',
+      date: 'June 9, 2025',
+      slug: 'qatar-labor-law-reforms-2025',
+      tags: ['Qatar labor law', 'Kafala reform', 'NOC abolished', 'worker rights', 'job mobility Qatar'],
+    },
     {
       id: '59',
       title: 'The Golden Ticket: Work Visa and Residence Permit (RP) Application Process in Qatar',
