@@ -62,12 +62,23 @@ import petImportQatarImage from '@/assets/pet-import-qatar-guide.jpg';
 import hiringMaidNannyImage from '@/assets/hiring-maid-nanny-qatar-guide.jpg';
 import gymsFitnessDohaImage from '@/assets/gyms-fitness-doha-guide.jpg';
 import remoteWorkCafesImage from '@/assets/remote-work-cafes-doha-guide.jpg';
+import housingRentDohaImage from '@/assets/housing-rent-doha-2025.jpg';
 
 const Blog = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   
   const allPosts = [
+    {
+      id: '55',
+      title: "The Real Estate Landscape: Housing and Rent Prices in Doha's Current Market",
+      excerpt: 'Navigate Doha housing market 2025. Rent prices in The Pearl, West Bay, Lusail, affordability strategies, contract structures, and expat housing options in Qatar.',
+      imageUrl: housingRentDohaImage,
+      category: 'Expat-Tips',
+      date: 'June 4, 2025',
+      slug: 'housing-rent-doha-2025',
+      tags: ['housing Doha', 'rent prices Qatar', 'The Pearl Qatar', 'Lusail City', 'expat housing'],
+    },
     {
       id: '54',
       title: 'The Price of Paradise: Cost of Living in Doha and a Comparison to Dubai and Riyadh',

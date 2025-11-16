@@ -65,6 +65,7 @@ import petImportQatarImage from '@/assets/pet-import-qatar-guide.jpg';
 import hiringMaidNannyImage from '@/assets/hiring-maid-nanny-qatar-guide.jpg';
 import gymsFitnessDohaImage from '@/assets/gyms-fitness-doha-guide.jpg';
 import remoteWorkCafesImage from '@/assets/remote-work-cafes-doha-guide.jpg';
+import housingRentDohaImage from '@/assets/housing-rent-doha-2025.jpg';
 import PetImportChecklist from '@/components/PetImportChecklist';
 import VeterinaryCostEstimator from '@/components/VeterinaryCostEstimator';
 import DomesticWorkerCostCalculator from '@/components/DomesticWorkerCostCalculator';
@@ -79,6 +80,127 @@ const BlogPost = () => {
   
   // Blog post data based on slug
   const blogPosts: Record<string, any> = {
+    'housing-rent-doha-2025': {
+      id: '55',
+      title: "The Real Estate Landscape: Housing and Rent Prices in Doha's Current Market",
+      date: 'June 4, 2025',
+      author: 'Experience Doha Team',
+      readTime: '16 min read',
+      category: 'Expat-Tips',
+      imageUrl: housingRentDohaImage,
+      tags: ['housing Doha', 'rent prices Qatar', 'The Pearl Qatar', 'Lusail City', 'expat housing'],
+      content: `
+        <p class="lead">The residential real estate market in Doha is a critical component of the expatriate experience, often representing the single largest monthly expenditure. Following the significant infrastructure boom leading up to the 2022 FIFA World Cup, the market has entered a phase of stabilization, yet rent prices in prime expat areas remain high.</p>
+
+        <h2 id="market">Current Market Dynamics (2025)</h2>
+        
+        <p>The Doha residential market in 2025 is characterized by a mixed performance, with stability in capital values but fluctuating rental rates heavily dependent on location and quality.</p>
+
+        <h3>Post-World Cup Stabilization</h3>
+        
+        <p>The massive influx of short-term residents and the subsequent demand for housing during the World Cup led to a temporary, sharp spike in rental prices. Since then, the market has seen a correction, with prices settling at a new, elevated baseline.</p>
+        
+        <ul>
+          <li><strong>Supply:</strong> The market has a substantial supply of high-quality residential units, particularly in new developments like Lusail and The Pearl-Qatar.</li>
+          <li><strong>Demand:</strong> Demand remains strong, driven by the continuous arrival of expatriates in key sectors (finance, energy, healthcare, and education) and the government's ongoing investment in non-hydrocarbon industries.</li>
+          <li><strong>Performance:</strong> While the overall ValuStrat Price Index (VPI) for residential capital values has shown stability, the rental market is more volatile, with premium areas maintaining high occupancy and rental rates.</li>
+        </ul>
+
+        <h2 id="factors">Factors Driving High Rents</h2>
+        
+        <p>Several structural and market-driven factors contribute to the high cost of housing in Doha, particularly in areas favored by expatriates.</p>
+
+        <h3>1. Location and Expat Preference</h3>
+        
+        <p>Expatriates overwhelmingly prefer specific, high-amenity locations that offer a Westernized lifestyle, proximity to international schools, and easy access to business districts.</p>
+        
+        <ul>
+          <li><strong>The Pearl-Qatar:</strong> Known for its luxury apartments, villas, and Mediterranean-style living, The Pearl commands the highest rental premiums.</li>
+          <li><strong>West Bay:</strong> The central business district, offering high-rise, modern apartments with stunning skyline views and proximity to corporate offices.</li>
+          <li><strong>Lusail City:</strong> A rapidly developing, smart city offering brand-new, high-specification units, particularly in areas like Fox Hills and Marina District.</li>
+        </ul>
+        
+        <p>High occupancy rates in these prime areas allow landlords to maintain elevated rental prices.</p>
+
+        <h3>2. Quality and Amenities</h3>
+        
+        <p>The standard of housing in Doha is generally very high. Most expat-focused properties are fully furnished or semi-furnished and include a comprehensive suite of amenities:</p>
+        
+        <ul>
+          <li><strong>Facilities:</strong> Swimming pools, state-of-the-art gyms, dedicated parking, and children's play areas are standard.</li>
+          <li><strong>Services:</strong> 24-hour security, maintenance, and concierge services are typically included in the rental agreement, adding to the overall cost.</li>
+        </ul>
+
+        <h3>3. Contract Structure</h3>
+        
+        <p>Rental contracts in Qatar are typically for a minimum of one year. The common practice is to pay with post-dated cheques (PDCs), often requiring 12 cheques for the year, plus a security deposit equivalent to one month's rent. This upfront financial commitment can be a barrier for newcomers.</p>
+
+        <h2 id="options">Housing Options and Affordability</h2>
+        
+        <p>The affordability of housing is relative to the expat's salary package. A robust package that includes a generous housing allowance is crucial for maintaining a high standard of living.</p>
+
+        <h3>Apartments vs. Villas</h3>
+
+        <div class="overflow-x-auto my-6">
+          <table class="w-full border-collapse">
+            <thead>
+              <tr class="bg-muted">
+                <th class="border border-border p-3 text-left">Housing Type</th>
+                <th class="border border-border p-3 text-left">Typical Locations</th>
+                <th class="border border-border p-3 text-left">Average Monthly Rent (QAR)</th>
+                <th class="border border-border p-3 text-left">Target Expat Group</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="border border-border p-3"><strong>Luxury Apartment (1-BR)</strong></td>
+                <td class="border border-border p-3">The Pearl, West Bay, Lusail Marina</td>
+                <td class="border border-border p-3">7,000 – 12,000</td>
+                <td class="border border-border p-3">Singles, Couples, Young Professionals</td>
+              </tr>
+              <tr class="bg-muted/50">
+                <td class="border border-border p-3"><strong>Mid-Range Apartment (2-BR)</strong></td>
+                <td class="border border-border p-3">Al Sadd, Al Waab, Old Airport</td>
+                <td class="border border-border p-3">5,500 – 8,500</td>
+                <td class="border border-border p-3">Mid-level professionals, Small Families</td>
+              </tr>
+              <tr>
+                <td class="border border-border p-3"><strong>Compound Villa (3-BR)</strong></td>
+                <td class="border border-border p-3">Al Waab, Al Gharafa, Abu Hamour</td>
+                <td class="border border-border p-3">12,000 – 18,000</td>
+                <td class="border border-border p-3">Families with children (due to compound amenities)</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="text-sm text-muted-foreground mt-2"><em>Note: Prices are estimates for Q4 2025 and vary significantly based on furnishing, age of the property, and specific location.</em></p>
+        </div>
+
+        <h3>Strategies for Affordability</h3>
+
+        <ol>
+          <li><strong>Look Beyond Prime Areas:</strong> Areas slightly further from the central business district, such as Al Sadd, Al Waab, and parts of Al Gharafa, offer excellent quality housing at more competitive prices. The efficiency of the Doha Metro makes commuting from these areas feasible.</li>
+          <li><strong>Negotiate the Package:</strong> Prospective expats should treat the housing allowance as a non-negotiable component of their salary. A common mistake is accepting a low allowance and then struggling to find suitable accommodation.</li>
+          <li><strong>Consider Unfurnished:</strong> Unfurnished properties are significantly cheaper than fully furnished ones. While requiring an initial investment in furniture, this can lead to substantial long-term savings.</li>
+          <li><strong>Shared Accommodation:</strong> For single professionals, sharing a large apartment or villa in a prime location is a common and cost-effective strategy to access high-end amenities at a lower personal cost.</li>
+        </ol>
+
+        <h2 id="legal">Legal and Practical Considerations</h2>
+
+        <h3>RERA and Regulatory Environment</h3>
+        
+        <p>The Qatari government has taken steps to regulate the real estate market, but expats should still exercise caution:</p>
+
+        <ul>
+          <li><strong>Agent Fees:</strong> Real estate agents typically charge a commission equivalent to half a month's rent.</li>
+          <li><strong>Contract Review:</strong> All rental contracts should be reviewed carefully, ensuring clarity on maintenance responsibilities, utility payments, and the terms for the return of the security deposit.</li>
+          <li><strong>Ejari-like Registration:</strong> While not identical to Dubai's Ejari, the rental contract must be registered with the relevant municipality to be legally binding and used for official purposes, such as obtaining a Residence Permit (RP).</li>
+        </ul>
+
+        <h2 id="conclusion">Conclusion</h2>
+        
+        <p>In summary, the Doha housing market offers a vast array of high-quality, modern accommodation options. However, the price of entry is high, particularly in the most sought-after expat enclaves. Success in the Doha rental market hinges on securing a competitive housing allowance and making strategic choices about location and property type to ensure that the high cost of rent does not negate the financial benefits of a tax-free salary.</p>
+      `,
+    },
     'cost-of-living-doha-dubai-riyadh': {
       id: '54',
       title: 'The Price of Paradise: Cost of Living in Doha and a Comparison to Dubai and Riyadh',
