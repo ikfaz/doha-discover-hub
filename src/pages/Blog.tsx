@@ -69,6 +69,16 @@ const Blog = () => {
   
   const allPosts = [
     {
+      id: '53',
+      title: 'Alcohol Rules in Qatar 2025: QDC, Licenses, and Complete Legal Guide',
+      excerpt: 'Understand Qatar alcohol laws 2025. Learn about QDC permits, where to buy alcohol legally, hotel bar rules, consumption restrictions, and penalties in Doha.',
+      imageUrl: alcoholGuideImage,
+      category: 'Expat-Tips',
+      date: 'June 2, 2025',
+      slug: 'alcohol-guide-doha',
+      tags: ['alcohol rules Qatar', 'QDC Qatar', 'alcohol license Doha', 'legal drinking Qatar', 'alcohol permit'],
+    },
+    {
       id: '52',
       title: 'Best Cafes for Remote Work in Doha Qatar 2025: Digital Nomad Guide',
       excerpt: 'Find best cafes for remote work in Doha 2025. WiFi speeds, power outlets, atmosphere, and productivity-friendly spots for digital workers in Qatar.',
