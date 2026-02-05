@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 import BudgetCharts from '@/components/BudgetCharts';
+import SEOHead from '@/components/SEOHead';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -159,6 +160,10 @@ const BudgetPlanner = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <SEOHead 
+        title="Doha Expat Budget Planner - Calculate Living Costs in Qatar"
+        description="Plan your monthly expenses in Doha with our interactive budget planner. Calculate costs for singles or families, convert currencies, and estimate savings potential."
+      />
       <NavBar />
       
       <main className="flex-grow bg-gradient-to-b from-muted/30 to-background">

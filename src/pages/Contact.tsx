@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
+import SEOHead from '@/components/SEOHead';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -44,6 +45,10 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <SEOHead 
+        title="Contact Us - Experience Doha"
+        description="Get in touch with Experience Doha. Questions about Qatar travel, suggestions, or partnerships - we'd love to hear from you."
+      />
       <NavBar />
       
       {/* Header */}

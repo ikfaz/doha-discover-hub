@@ -5,6 +5,7 @@ import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 import BlogCard from '@/components/BlogCard';
 import Newsletter from '@/components/Newsletter';
+import SEOHead from '@/components/SEOHead';
 
 const BlogCategory = () => {
   const { category } = useParams<{ category: string }>();
@@ -103,6 +104,10 @@ const BlogCategory = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <SEOHead 
+        title={`${currentCategory.title} - Experience Doha Blog`}
+        description={currentCategory.description}
+      />
       <NavBar />
       
       {/* Header */}

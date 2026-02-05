@@ -2,10 +2,15 @@
 import React from 'react';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
+import SEOHead from '@/components/SEOHead';
 
 const CookiePolicy = () => {
   return (
     <div className="min-h-screen flex flex-col">
+      <SEOHead 
+        title="Cookie Policy - Experience Doha"
+        description="Learn about the cookies we use on Experience Doha and how to manage your preferences."
+      />
       <NavBar />
       <main className="flex-1 container mx-auto px-4 py-12 max-w-4xl">
         <h1 className="text-4xl font-bold text-qatar-maroon mb-8">Cookie Policy</h1>

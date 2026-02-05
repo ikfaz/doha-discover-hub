@@ -4,6 +4,7 @@ import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 import BlogCard from '@/components/BlogCard';
 import Newsletter from '@/components/Newsletter';
+import SEOHead from '@/components/SEOHead';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -766,6 +767,10 @@ const Blog = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <SEOHead 
+        title="Experience Doha Blog - Qatar Travel Guide & Expat Tips"
+        description="Expert insights, guides, and stories about life and travel in Qatar's vibrant capital. Tips for expats, tourists, and anyone curious about Doha."
+      />
       <NavBar />
       
       <main>

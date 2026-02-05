@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 import Newsletter from '@/components/Newsletter';
+import SEOHead from '@/components/SEOHead';
 import { Tabs, TabsContent } from "@/components/ui/tabs";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import GalleryHeader from '@/components/GalleryHeader';
@@ -143,6 +144,10 @@ const Gallery = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <SEOHead 
+        title="Doha Photo Gallery - Experience Doha"
+        description="Browse stunning photos of Doha's skyline, landmarks, culture, and attractions. Visual inspiration for your Qatar trip."
+      />
       <NavBar />
       <GalleryHeader />
       
