@@ -2,10 +2,15 @@
 import React from 'react';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
+import SEOHead from '@/components/SEOHead';
 
 const TermsOfService = () => {
   return (
     <div className="min-h-screen flex flex-col">
+      <SEOHead 
+        title="Terms of Service - Experience Doha"
+        description="Read the terms and conditions for using Experience Doha website and services."
+      />
       <NavBar />
       <main className="flex-1 container mx-auto px-4 py-12 max-w-4xl">
         <h1 className="text-4xl font-bold text-qatar-maroon mb-8">Terms of Service</h1>

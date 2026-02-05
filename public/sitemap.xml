@@ -1,42 +1,260 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Static Pages -->
   <url>
     <loc>https://experiencedoha.com/</loc>
-    <lastmod>2025-05-15</lastmod>
+    <lastmod>2025-06-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://experiencedoha.com/blog</loc>
-    <lastmod>2025-05-15</lastmod>
+    <lastmod>2025-06-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://experiencedoha.com/videos</loc>
-    <lastmod>2025-05-15</lastmod>
+    <lastmod>2025-06-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://experiencedoha.com/gallery</loc>
-    <lastmod>2025-05-15</lastmod>
+    <lastmod>2025-06-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://experiencedoha.com/about</loc>
-    <lastmod>2025-05-15</lastmod>
+    <lastmod>2025-06-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://experiencedoha.com/contact</loc>
-    <lastmod>2025-05-15</lastmod>
+    <lastmod>2025-06-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://experiencedoha.com/budget-planner</loc>
+    <lastmod>2025-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://experiencedoha.com/privacy-policy</loc>
+    <lastmod>2025-06-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://experiencedoha.com/terms-of-service</loc>
+    <lastmod>2025-06-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://experiencedoha.com/cookie-policy</loc>
+    <lastmod>2025-06-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
   <!-- Blog Posts -->
+  <url>
+    <loc>https://experiencedoha.com/blog/healthcare-insurance-qatar-guide</loc>
+    <lastmod>2025-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://experiencedoha.com/blog/end-of-service-gratuity-qatar-2025</loc>
+    <lastmod>2025-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://experiencedoha.com/blog/qatar-labor-law-reforms-2025</loc>
+    <lastmod>2025-06-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://experiencedoha.com/blog/qatar-work-visa-guide-2025</loc>
+    <lastmod>2025-06-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://experiencedoha.com/blog/qatar-tax-guide-2025</loc>
+    <lastmod>2025-06-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://experiencedoha.com/blog/expat-salaries-doha-2025</loc>
+    <lastmod>2025-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://experiencedoha.com/blog/job-market-qatar-2025</loc>
+    <lastmod>2025-06-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://experiencedoha.com/blog/housing-rent-doha-2025</loc>
+    <lastmod>2025-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://experiencedoha.com/blog/cost-of-living-doha-dubai-riyadh</loc>
+    <lastmod>2025-06-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://experiencedoha.com/blog/alcohol-guide-doha</loc>
+    <lastmod>2025-06-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://experiencedoha.com/blog/remote-work-cafes-doha-guide</loc>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://experiencedoha.com/blog/gyms-fitness-doha-guide</loc>
+    <lastmod>2025-05-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://experiencedoha.com/blog/hiring-maid-nanny-qatar-guide</loc>
+    <lastmod>2025-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://experiencedoha.com/blog/pet-import-qatar-guide</loc>
+    <lastmod>2025-05-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://experiencedoha.com/blog/doha-metro-2025-guide</loc>
+    <lastmod>2025-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://experiencedoha.com/blog/grocery-shopping-doha-guide</loc>
+    <lastmod>2025-05-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://experiencedoha.com/blog/mobile-plans-qatar-guide</loc>
+    <lastmod>2025-05-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://experiencedoha.com/blog/bank-account-qatar-guide</loc>
+    <lastmod>2025-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://experiencedoha.com/blog/lgbtq-experiences-qatar-2025</loc>
+    <lastmod>2025-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://experiencedoha.com/blog/driving-doha-2025-guide</loc>
+    <lastmod>2025-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://experiencedoha.com/blog/renting-doha-west-bay-al-waab-2025</loc>
+    <lastmod>2025-05-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://experiencedoha.com/blog/qatar-visa-rules-expats-2025</loc>
+    <lastmod>2025-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://experiencedoha.com/blog/international-schools-qatar-2025</loc>
+    <lastmod>2025-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://experiencedoha.com/blog/women-safety-dress-code-doha-qatar</loc>
+    <lastmod>2025-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://experiencedoha.com/blog/cost-of-living-doha-2025</loc>
+    <lastmod>2025-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://experiencedoha.com/blog/doha-changing-middle-east</loc>
+    <lastmod>2025-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://experiencedoha.com/blog/hamad-international-airport-guide</loc>
+    <lastmod>2025-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://experiencedoha.com/blog/qatari-dishes-doha-culinary-guide</loc>
+    <lastmod>2025-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://experiencedoha.com/blog/women-driving-qatar-guide</loc>
+    <lastmod>2025-05-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://experiencedoha.com/blog/doha-safety-guide-tourists-expats</loc>
+    <lastmod>2025-05-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://experiencedoha.com/blog/prostitution-laws-doha-qatar-guide</loc>
+    <lastmod>2025-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://experiencedoha.com/blog/alcohol-allowed-doha-qatar-guide</loc>
+    <lastmod>2025-05-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://experiencedoha.com/blog/desert-safari-inland-sea-khor-al-adaid</loc>
     <lastmod>2025-05-09</lastmod>
@@ -45,19 +263,205 @@
   </url>
   <url>
     <loc>https://experiencedoha.com/blog/mia-nmoq-museum-combo-guide</loc>
-    <lastmod>2025-05-11</lastmod>
+    <lastmod>2025-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://experiencedoha.com/blog/souq-waqif-night-experiences-haggling</loc>
-    <lastmod>2025-05-13</lastmod>
+    <lastmod>2025-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://experiencedoha.com/blog/ultimate-doha-layover-24-48-hours</loc>
     <lastmod>2025-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://experiencedoha.com/blog/qatar-airways-stopover-packages-lounge</loc>
+    <lastmod>2025-05-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://experiencedoha.com/blog/doha-global-mediation-hub-congo-peace</loc>
+    <lastmod>2025-05-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://experiencedoha.com/blog/fifa-u17-world-cup-qatar-2025</loc>
+    <lastmod>2025-05-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://experiencedoha.com/blog/corniche-sunset-dhow-cruise-guide</loc>
+    <lastmod>2025-05-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://experiencedoha.com/blog/pearl-qatar-luxury-shopping-dining</loc>
+    <lastmod>2025-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://experiencedoha.com/blog/katara-cultural-village-events-2025</loc>
+    <lastmod>2025-04-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://experiencedoha.com/blog/doha-airport-layover-activities</loc>
+    <lastmod>2025-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://experiencedoha.com/blog/five-best-things-doha-layover</loc>
+    <lastmod>2025-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://experiencedoha.com/blog/9-hour-stopover-qatar-worth-it</loc>
+    <lastmod>2025-04-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://experiencedoha.com/blog/discover-qatar-stopover-guide</loc>
+    <lastmod>2025-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://experiencedoha.com/blog/24-hours-doha-qatar-airways</loc>
+    <lastmod>2025-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://experiencedoha.com/blog/doha-layover-time-guide</loc>
+    <lastmod>2025-04-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://experiencedoha.com/blog/perfect-layover-doha-guide</loc>
+    <lastmod>2025-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://experiencedoha.com/blog/things-to-do-doha-layover</loc>
+    <lastmod>2025-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://experiencedoha.com/blog/hamad-airport-transfers-guide</loc>
+    <lastmod>2025-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://experiencedoha.com/blog/qatar-stopover-program-guide</loc>
+    <lastmod>2025-04-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://experiencedoha.com/blog/top-attractions-doha</loc>
+    <lastmod>2025-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://experiencedoha.com/blog/authentic-qatari-cuisine</loc>
+    <lastmod>2025-04-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://experiencedoha.com/blog/summer-cultural-events</loc>
+    <lastmod>2025-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://experiencedoha.com/blog/museum-islamic-art</loc>
+    <lastmod>2025-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://experiencedoha.com/blog/doha-shopping-guide</loc>
+    <lastmod>2025-03-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://experiencedoha.com/blog/qatar-expat-guide</loc>
+    <lastmod>2025-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://experiencedoha.com/blog/arabic-coffee-culture</loc>
+    <lastmod>2025-03-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://experiencedoha.com/blog/desert-adventures</loc>
+    <lastmod>2025-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://experiencedoha.com/blog/doha-architecture</loc>
+    <lastmod>2025-03-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://experiencedoha.com/blog/family-activities</loc>
+    <lastmod>2025-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://experiencedoha.com/blog/weekend-getaways</loc>
+    <lastmod>2025-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://experiencedoha.com/blog/qatari-crafts</loc>
+    <lastmod>2025-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://experiencedoha.com/blog/doha-beaches</loc>
+    <lastmod>2025-02-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://experiencedoha.com/blog/ramadan-guide</loc>
+    <lastmod>2025-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://experiencedoha.com/blog/sustainable-tourism</loc>
+    <lastmod>2025-02-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

@@ -3,6 +3,7 @@ import React from 'react';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 import Newsletter from '@/components/Newsletter';
+import SEOHead from '@/components/SEOHead';
 import { Button } from '@/components/ui/button';
 import { Mail, Youtube } from 'lucide-react';
 
@@ -13,6 +14,10 @@ const About = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <SEOHead 
+        title="About Experience Doha - Your Qatar Travel Guide"
+        description="Learn about Experience Doha, your comprehensive guide to Qatar's vibrant capital city. Expert insights on attractions, culture, and travel tips."
+      />
       <NavBar />
       
       <main>

@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 import Newsletter from '@/components/Newsletter';
+import SEOHead from '@/components/SEOHead';
 import SchoolComparisonTool from '@/components/SchoolComparisonTool';
 import SchoolFeeCalculator from '@/components/SchoolFeeCalculator';
 import VisaChecklistGenerator from '@/components/VisaChecklistGenerator';
@@ -9472,6 +9473,13 @@ const BlogPost = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <SEOHead 
+        title={`${post.title} - Experience Doha`}
+        description={post.excerpt}
+        image={typeof post.imageUrl === 'string' ? post.imageUrl : undefined}
+        type="article"
+        publishedTime={post.date}
+      />
       <NavBar />
       
       <main className="flex-1">

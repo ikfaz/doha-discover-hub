@@ -1,17 +1,23 @@
 import { useParams } from "react-router-dom";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 
 const Listing = () => {
   const { slug } = useParams();
+  const title = slug?.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ') || 'Listing';
 
   return (
     <div className="min-h-screen flex flex-col">
+      <SEOHead 
+        title={`${title} - Experience Doha`}
+        description={`Details about ${title} in Doha, Qatar.`}
+      />
       <NavBar />
       <main className="flex-1">
         <div className="content-container">
           <h1 className="section-title">
-            {slug?.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}
+            {title}
           </h1>
           <div className="mt-8">
             <p className="text-muted-foreground">Listing details coming soon...</p>

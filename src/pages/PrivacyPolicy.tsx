@@ -2,10 +2,15 @@
 import React from 'react';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
+import SEOHead from '@/components/SEOHead';
 
 const PrivacyPolicy = () => {
   return (
     <div className="min-h-screen flex flex-col">
+      <SEOHead 
+        title="Privacy Policy - Experience Doha"
+        description="Learn how Experience Doha collects, uses, and protects your personal information."
+      />
       <NavBar />
       <main className="flex-1 container mx-auto px-4 py-12 max-w-4xl">
         <h1 className="text-4xl font-bold text-qatar-maroon mb-8">Privacy Policy</h1>

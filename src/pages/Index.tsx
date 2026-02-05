@@ -6,6 +6,7 @@ import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 import BlogCard from '@/components/BlogCard';
 import Newsletter from '@/components/Newsletter';
+import SEOHead from '@/components/SEOHead';
 import { Diamond, Crown, Trophy } from 'lucide-react';
 import desertSafariImage from '@/assets/desert-safari-inland-sea.jpg';
 import museumsImage from '@/assets/mia-nmoq-museums.jpg';
@@ -432,6 +433,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <SEOHead />
       <NavBar />
       
       <main>

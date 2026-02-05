@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 import Newsletter from '@/components/Newsletter';
+import SEOHead from '@/components/SEOHead';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from '@/components/ui/button';
 import { Youtube, ExternalLink } from 'lucide-react';
@@ -41,6 +42,10 @@ const Videos = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <SEOHead 
+        title="Doha Travel Videos - Experience Doha"
+        description="Watch videos about Doha attractions, culture, food, and travel experiences. Visual guides to help you explore Qatar's capital."
+      />
       <NavBar />
       
       {/* Header */}
