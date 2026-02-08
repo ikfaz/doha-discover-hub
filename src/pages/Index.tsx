@@ -423,7 +423,10 @@ const Index = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <SEOHead />
+      <SEOHead 
+        title="Experience Doha - Ultimate Guide to Qatar Travel & Living"
+        description="The ultimate guide to living in and visiting Doha, Qatar. Updated for 2026 with visa rules, cost of living, and stopover tips."
+      />
       <NavBar />
       
       <main>
