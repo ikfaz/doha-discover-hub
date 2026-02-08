@@ -70,23 +70,12 @@ import qatarTaxGuideImage from '@/assets/qatar-tax-guide-2025.jpg';
 import qatarWorkVisaGuideImage from '@/assets/qatar-work-visa-guide-2025.jpg';
 import qatarLaborLawReformsImage from '@/assets/qatar-labor-law-reforms-2025.jpg';
 import endOfServiceGratuityImage from '@/assets/end-of-service-gratuity-qatar-2025.jpg';
-import healthcareInsuranceQatarImage from '@/assets/healthcare-insurance-qatar-guide.jpg';
 
 const Blog = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   
   const allPosts = [
-    {
-      id: '62',
-      title: 'Health and Wellness: The Healthcare System and Insurance Options for Expats in Doha',
-      excerpt: 'Complete guide to Qatar healthcare system 2025. Public vs private healthcare, mandatory insurance requirements, HMC facilities, and choosing the right coverage for expats.',
-      imageUrl: healthcareInsuranceQatarImage,
-      category: 'Expat-Tips',
-      date: 'June 11, 2025',
-      slug: 'healthcare-insurance-qatar-guide',
-      tags: ['Qatar healthcare', 'health insurance', 'HMC hospitals', 'medical coverage', 'expat health'],
-    },
     {
       id: '61',
       title: 'The Final Payout: End-of-Service Benefits and Gratuity Calculations in Qatar',
