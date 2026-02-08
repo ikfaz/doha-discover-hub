@@ -5156,6 +5156,7 @@ const BlogPost = () => {
       category: 'Expat-Tips',
       imageUrl: qatarVisaRulesImage,
       tags: ['Qatar visa', 'work permit', 'residency', 'golden visa', 'immigration'],
+      metaDescription: 'The Golden Ticket: Complete guide to Qatar work visas, family sponsorship, and hayya card rules for 2026.',
       content: `
         <p class="lead">Qatar's immigration policies have evolved significantly, reflecting both economic ambitions and workforce flexibility goals. The 2025 visa regulations offer more pathways for residency while maintaining structured sponsorship systems.</p>
         
@@ -5860,6 +5861,7 @@ const BlogPost = () => {
       category: 'Expat-Tips',
       imageUrl: costOfLivingImage,
       tags: ['cost of living', 'rent prices', 'expat budget', 'Qatar inflation', 'monthly expenses'],
+      metaDescription: 'How expensive is Qatar in 2026? A detailed breakdown of rent, school fees, and grocery prices for expats.',
       content: `
         <div class="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-lg mb-8">
           <p class="text-amber-800 font-semibold text-lg m-0">⚠️ Updated for Winter 2025/2026</p>
@@ -9411,7 +9413,7 @@ const BlogPost = () => {
     <div className="min-h-screen flex flex-col">
       <SEOHead 
         title={`${post.title} - Experience Doha`}
-        description={post.excerpt}
+        description={post.metaDescription || post.excerpt}
         image={typeof post.imageUrl === 'string' ? post.imageUrl : undefined}
         type="article"
         publishedTime={post.date}
