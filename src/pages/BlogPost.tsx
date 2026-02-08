@@ -93,8 +93,6 @@ import { EOSGCalculator } from '@/components/EOSGCalculator';
 import { ContractNegotiationChecklist } from '@/components/ContractNegotiationChecklist';
 
 const BlogPost = () => {
-
-const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   
   // Blog post data based on slug
