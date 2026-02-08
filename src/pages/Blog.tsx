@@ -308,8 +308,8 @@ const Blog = () => {
     },
     {
       id: '38',
-      title: 'Cost of Living in Doha 2025: Rent Inflation and Monthly Expenses Guide',
-      excerpt: 'Discover the real cost of living in Doha 2025, including rent inflation rates, apartment prices, grocery costs, and monthly budget breakdowns for singles and families.',
+      title: 'Cost of Living in Doha (2026 Update): Rent, Food & Hidden Costs',
+      excerpt: 'Updated for Winter 2025/2026. Real cost of living in Doha including rent inflation, grocery prices, hidden costs, and monthly budget comparison for singles and families.',
       imageUrl: costOfLivingImage,
       category: 'Expat-Tips',
       date: 'May 17, 2025',

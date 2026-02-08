@@ -5853,7 +5853,7 @@ const BlogPost = () => {
     },
     'cost-of-living-doha-2025': {
       id: '38',
-      title: 'Cost of Living in Doha 2025: Rent Inflation and Monthly Expenses Guide',
+      title: 'Cost of Living in Doha (2026 Update): Rent, Food & Hidden Costs',
       date: 'May 17, 2025',
       author: 'Experience Doha Team',
       readTime: '12 min read',
@@ -5861,11 +5861,15 @@ const BlogPost = () => {
       imageUrl: costOfLivingImage,
       tags: ['cost of living', 'rent prices', 'expat budget', 'Qatar inflation', 'monthly expenses'],
       content: `
-        <p class="lead">The cost of living in Doha 2025 has experienced significant shifts following the post-World Cup adjustment period. While Qatar remains an expensive destination by global standards, understanding current pricing helps expats budget accurately and negotiate appropriate salary packages.</p>
+        <div class="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-lg mb-8">
+          <p class="text-amber-800 font-semibold text-lg m-0">⚠️ Updated for Winter 2025/2026</p>
+        </div>
+
+        <p class="lead">The cost of living in Doha has experienced significant shifts following the post-World Cup adjustment period. While Qatar remains an expensive destination by global standards, understanding current pricing helps expats budget accurately and negotiate appropriate salary packages.</p>
         
         <p>Doha ranks among the <strong>top 20 most expensive cities globally</strong> for expatriates, though tax-free salaries and employer benefits often offset these costs substantially.</p>
         
-        <h2 id="rent-inflation">Rent Inflation in Doha: What's Happening in 2025?</h2>
+        <h2 id="rent-inflation">Rent Inflation in Doha: What's Happening?</h2>
         <p>Rental prices in Qatar have increased <strong>15-25% since 2023</strong>, driven by sustained demand and limited new supply in premium areas. This rent inflation affects different neighborhoods unevenly:</p>
         
         <h3>West Bay Apartments (Premium)</h3>
@@ -5898,33 +5902,68 @@ const BlogPost = () => {
         
         <h2 id="budget-breakdown">Monthly Budget Breakdown: Singles vs. Families</h2>
         
-        <h3>Single Professional Monthly Budget (Moderate Lifestyle)</h3>
-        <ul>
-          <li>Rent (1-bed Al Sadd): QAR 6,500</li>
-          <li>Utilities (AC, water, electricity): QAR 400-600</li>
-          <li>Groceries: QAR 1,200-1,800</li>
-          <li>Transportation (car loan + fuel): QAR 2,500-3,500</li>
-          <li>Mobile/Internet: QAR 350</li>
-          <li>Dining out (8-10 times): QAR 1,500-2,500</li>
-          <li>Entertainment: QAR 800-1,200</li>
-          <li>Health insurance: Often employer-provided</li>
-          <li><strong>Total: QAR 13,250-16,450/month ($3,640-$4,520)</strong></li>
-        </ul>
+        <table class="w-full my-6 border-collapse">
+          <thead>
+            <tr class="bg-muted">
+              <th class="border p-3 text-left">Item</th>
+              <th class="border p-3 text-left">Cost (Single)</th>
+              <th class="border p-3 text-left">Cost (Family of 4)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border p-3">Rent</td>
+              <td class="border p-3">QAR 6,500 (1-bed Al Sadd)</td>
+              <td class="border p-3">QAR 14,000 (3-bed villa Al Waab)</td>
+            </tr>
+            <tr>
+              <td class="border p-3">Utilities (AC, water, electricity)</td>
+              <td class="border p-3">QAR 400–600</td>
+              <td class="border p-3">QAR 1,200–2,000</td>
+            </tr>
+            <tr>
+              <td class="border p-3">Groceries</td>
+              <td class="border p-3">QAR 1,200–1,800</td>
+              <td class="border p-3">QAR 3,500–4,500</td>
+            </tr>
+            <tr>
+              <td class="border p-3">Transportation</td>
+              <td class="border p-3">QAR 2,500–3,500</td>
+              <td class="border p-3">QAR 4,500–6,000 (2 vehicles)</td>
+            </tr>
+            <tr>
+              <td class="border p-3">Mobile / Internet</td>
+              <td class="border p-3">QAR 350</td>
+              <td class="border p-3">QAR 500</td>
+            </tr>
+            <tr>
+              <td class="border p-3">Dining Out / Entertainment</td>
+              <td class="border p-3">QAR 2,300–3,700</td>
+              <td class="border p-3">QAR 3,000–4,500</td>
+            </tr>
+            <tr>
+              <td class="border p-3">School Fees</td>
+              <td class="border p-3">—</td>
+              <td class="border p-3">QAR 8,000–15,000 (2 children)</td>
+            </tr>
+            <tr>
+              <td class="border p-3">Domestic Help</td>
+              <td class="border p-3">—</td>
+              <td class="border p-3">QAR 1,500–2,500</td>
+            </tr>
+            <tr>
+              <td class="border p-3">Health Insurance</td>
+              <td class="border p-3" colspan="2">Often employer-provided</td>
+            </tr>
+            <tr class="font-bold bg-muted/50">
+              <td class="border p-3">Total</td>
+              <td class="border p-3">QAR 13,250–16,450 ($3,640–$4,520)</td>
+              <td class="border p-3">QAR 36,200–49,000 ($9,950–$13,460)</td>
+            </tr>
+          </tbody>
+        </table>
         
-        <h3>Family of Four Monthly Budget (Comfortable Lifestyle)</h3>
-        <ul>
-          <li>Rent (3-bed villa Al Waab): QAR 14,000</li>
-          <li>Utilities: QAR 1,200-2,000</li>
-          <li>Groceries: QAR 3,500-4,500</li>
-          <li>School fees (2 children): QAR 8,000-15,000</li>
-          <li>Transportation (2 vehicles): QAR 4,500-6,000</li>
-          <li>Mobile/Internet: QAR 500</li>
-          <li>Dining/Entertainment: QAR 3,000-4,500</li>
-          <li>Domestic help: QAR 1,500-2,500</li>
-          <li><strong>Total: QAR 36,200-49,000/month ($9,950-$13,460)</strong></li>
-        </ul>
-        
-        <h2 id="grocery-prices">Grocery Prices in Doha 2025</h2>
+        <h2 id="grocery-prices">Grocery Prices in Doha</h2>
         <p>Grocery costs vary dramatically based on shopping location:</p>
         
         <h3>Local Products (Al Meera, Carrefour)</h3>
@@ -5970,7 +6009,7 @@ const BlogPost = () => {
         </ul>
         
         <h2 id="salary-negotiations">How Rent Inflation Affects Salary Negotiations</h2>
-        <p>Given 2025's rental market conditions, expats should negotiate packages including:</p>
+        <p>Given the current rental market conditions, expats should negotiate packages including:</p>
         <ul>
           <li><strong>Housing allowance adjustments</strong> - Request annual reviews tied to inflation</li>
           <li><strong>Compound accommodation</strong> - Employer-provided housing eliminates rent concerns</li>
@@ -5978,14 +6017,14 @@ const BlogPost = () => {
           <li><strong>Annual flights</strong> - Offset overall cost of living</li>
         </ul>
         
-        <h2 id="affordability">Is Doha Affordable in 2025?</h2>
+        <h2 id="affordability">Is Doha Affordable?</h2>
         <p>The verdict: Doha's affordability depends entirely on your salary package. With tax-free income, employer benefits, and subsidized fuel, many expats save <strong>30-50% of their salary</strong> despite high living costs.</p>
         
-        <p>However, the 2025 rent inflation means careful budgeting and package negotiation are more critical than ever.</p>
+        <p>However, ongoing rent inflation means careful budgeting and package negotiation are more critical than ever.</p>
         
         <p><strong>Key takeaway:</strong> Request detailed cost-of-living data during job negotiations and ensure housing allowances reflect current market rates, not outdated figures.</p>
         
-        <h2 id="faq">FAQ: Cost of Living Doha 2025</h2>
+        <h2 id="faq">FAQ: Cost of Living Doha</h2>
         
         <h3>How much salary do I need to live comfortably in Doha?</h3>
         <p>Singles need minimum QAR 15,000-20,000/month; families require QAR 35,000-50,000/month for comfortable lifestyles including school fees.</p>
