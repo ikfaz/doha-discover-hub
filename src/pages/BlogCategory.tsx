@@ -47,7 +47,7 @@ const BlogCategory = () => {
       excerpt: 'Discover the most spectacular sights and experiences in Qatar\'s vibrant capital city.',
       imageUrl: 'https://images.unsplash.com/photo-1518182170546-07661fd94144?q=80&w=2668&auto=format&fit=crop',
       category: 'attractions',
-      date: 'April 15, 2025',
+      date: 'April 15, 2026',
       slug: 'top-attractions-doha',
     },
     {
@@ -56,7 +56,7 @@ const BlogCategory = () => {
       excerpt: 'Explore one of Doha\'s most iconic architectural landmarks and its world-class collections.',
       imageUrl: 'https://images.unsplash.com/photo-1558227108-af6eec1a0bb4?q=80&w=2574&auto=format&fit=crop',
       category: 'attractions',
-      date: 'April 2, 2025',
+      date: 'April 2, 2026',
       slug: 'museum-islamic-art',
     },
     {
@@ -65,7 +65,7 @@ const BlogCategory = () => {
       excerpt: 'Taste the traditional flavors of Qatar at these local favorite dining spots.',
       imageUrl: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=2574&auto=format&fit=crop',
       category: 'food',
-      date: 'April 10, 2025',
+      date: 'April 10, 2026',
       slug: 'authentic-qatari-cuisine',
     },
     {
@@ -74,7 +74,7 @@ const BlogCategory = () => {
       excerpt: 'Mark your calendar for these exciting cultural festivals and events.',
       imageUrl: 'https://images.unsplash.com/photo-1526285759704-71d51dd482ab?q=80&w=2670&auto=format&fit=crop',
       category: 'events',
-      date: 'April 5, 2025',
+      date: 'April 5, 2026',
       slug: 'summer-cultural-events',
     },
     {
@@ -83,7 +83,7 @@ const BlogCategory = () => {
       excerpt: 'Navigate Doha\'s diverse shopping scene with this comprehensive guide.',
       imageUrl: 'https://images.unsplash.com/photo-1528698827591-e19ccd7bc23d?q=80&w=2576&auto=format&fit=crop',
       category: 'lifestyle',
-      date: 'March 28, 2025',
+      date: 'March 28, 2026',
       slug: 'doha-shopping-guide',
     },
     {
@@ -92,7 +92,7 @@ const BlogCategory = () => {
       excerpt: 'Everything you need to know about settling into life in Doha as an expatriate.',
       imageUrl: 'https://images.unsplash.com/photo-1599946347371-68eb71b16afc?q=80&w=2670&auto=format&fit=crop',
       category: 'expat-tips',
-      date: 'March 25, 2025',
+      date: 'March 25, 2026',
       slug: 'qatar-expat-guide',
     },
   ];
