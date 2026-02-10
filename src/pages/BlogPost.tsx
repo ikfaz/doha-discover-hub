@@ -100,7 +100,7 @@ const BlogPost = () => {
     'end-of-service-gratuity-qatar-2025': {
       id: '61',
       title: 'The Final Payout: End-of-Service Benefits and Gratuity Calculations in Qatar',
-      date: 'June 10, 2025',
+      date: 'June 10, 2026',
       author: 'Experience Doha Team',
       readTime: '18 min read',
       category: 'Expat-Tips',
@@ -209,7 +209,7 @@ const BlogPost = () => {
     'qatar-labor-law-reforms-2025': {
       id: '60',
       title: 'A New Era of Mobility: Labor Laws and the Sponsorship (Kafala) System Reforms in Qatar',
-      date: 'June 9, 2025',
+      date: 'June 9, 2026',
       author: 'Experience Doha Team',
       readTime: '16 min read',
       category: 'Expat-Tips',
@@ -308,7 +308,7 @@ const BlogPost = () => {
     'qatar-work-visa-guide-2025': {
       id: '59',
       title: 'The Golden Ticket: Work Visa and Residence Permit (RP) Application Process in Qatar',
-      date: 'June 8, 2025',
+      date: 'June 8, 2026',
       author: 'Experience Doha Team',
       readTime: '14 min read',
       category: 'Expat-Tips',
@@ -430,7 +430,7 @@ const BlogPost = () => {
     'qatar-tax-guide-2025': {
       id: '58',
       title: 'The Tax-Free Promise: Taxation in Qatar – Income Tax, Property Tax, and the VAT Outlook',
-      date: 'June 7, 2025',
+      date: 'June 7, 2026',
       author: 'Experience Doha Team',
       readTime: '12 min read',
       category: 'Expat-Tips',
@@ -479,11 +479,11 @@ const BlogPost = () => {
         <h3>The GCC Agreement</h3>
         <p>Qatar, along with the other members of the Gulf Cooperation Council (GCC), signed a unified agreement to implement a VAT system. The standard rate agreed upon is <strong>5%</strong>.</p>
 
-        <h3>Current Status (2025)</h3>
-        <p>As of late 2025, Qatar has <strong>not yet implemented VAT</strong>. It remains the only GCC country, along with Kuwait, that has not yet done so, while Saudi Arabia, the UAE, Bahrain, and Oman have all introduced the tax.</p>
+        <h3>Current Status (2026)</h3>
+        <p>As of late 2026, Qatar has <strong>not yet implemented VAT</strong>. It remains the only GCC country, along with Kuwait, that has not yet done so, while Saudi Arabia, the UAE, Bahrain, and Oman have all introduced the tax.</p>
 
         <blockquote class="border-l-4 border-primary pl-4 italic my-6">
-          "Projections suggest that Qatar may implement VAT in 2025, with a proposed rate of 5%."
+          "Projections suggest that Qatar may implement VAT in 2026, with a proposed rate of 5%."
         </blockquote>
 
         <p>While the implementation date has been repeatedly postponed, the consensus among financial analysts is that the introduction of VAT is a matter of <em>when, not if</em>.</p>
@@ -505,7 +505,7 @@ const BlogPost = () => {
             <thead class="bg-muted">
               <tr>
                 <th class="border border-border px-4 py-3 text-left font-semibold">Tax Type</th>
-                <th class="border border-border px-4 py-3 text-left font-semibold">Status in Qatar (2025)</th>
+                <th class="border border-border px-4 py-3 text-left font-semibold">Status in Qatar (2026)</th>
                 <th class="border border-border px-4 py-3 text-left font-semibold">Impact on Expatriates</th>
               </tr>
             </thead>
@@ -546,7 +546,7 @@ const BlogPost = () => {
     'expat-salaries-doha-2025': {
       id: '57',
       title: 'The Compensation Landscape: Average and Typical Salaries for Various Expat Roles in Doha',
-      date: 'June 6, 2025',
+      date: 'June 6, 2026',
       author: 'Experience Doha Team',
       readTime: '18 min read',
       category: 'Expat-Tips',
@@ -567,7 +567,7 @@ const BlogPost = () => {
         </ul>
 
         <h2 id="ranges">Sector-Specific Salary Ranges</h2>
-        <p>Salaries are generally highest in the energy sector and for senior management roles across all industries. The following table provides estimated monthly salary ranges (excluding allowances) for professional expat roles in key sectors as of late 2025.</p>
+        <p>Salaries are generally highest in the energy sector and for senior management roles across all industries. The following table provides estimated monthly salary ranges (excluding allowances) for professional expat roles in key sectors as of late 2026.</p>
 
         <div class="overflow-x-auto my-8">
           <table class="min-w-full border-collapse border border-border">
@@ -680,7 +680,7 @@ const BlogPost = () => {
     'job-market-qatar-2025': {
       id: '56',
       title: 'The Gateway to Opportunity: Job Market and Employment for Foreigners in Qatar',
-      date: 'June 5, 2025',
+      date: 'June 5, 2026',
       author: 'Experience Doha Team',
       readTime: '15 min read',
       category: 'Expat-Tips',
@@ -719,7 +719,7 @@ const BlogPost = () => {
               <tr class="bg-muted">
                 <th class="border border-border p-3 text-left">Sector</th>
                 <th class="border border-border p-3 text-left">Primary Expat Roles</th>
-                <th class="border border-border p-3 text-left">Market Demand (2025)</th>
+                <th class="border border-border p-3 text-left">Market Demand (2026)</th>
               </tr>
             </thead>
             <tbody>
@@ -775,7 +775,7 @@ const BlogPost = () => {
         
         <p>Under the current system, an employer must sponsor a foreign worker for their work visa and Residence Permit (RP). This means the job offer is the gateway to living and working in Qatar. The employer handles the majority of the visa application process, making the initial job offer the most critical step.</p>
 
-        <h2 id="trends">Market Trends and Challenges in 2025</h2>
+        <h2 id="trends">Market Trends and Challenges in 2026</h2>
 
         <h3>Minimum Wage and Labor Reforms</h3>
         
@@ -797,7 +797,7 @@ const BlogPost = () => {
     'housing-rent-doha-2025': {
       id: '55',
       title: "The Real Estate Landscape: Housing and Rent Prices in Doha's Current Market",
-      date: 'June 4, 2025',
+      date: 'June 4, 2026',
       author: 'Experience Doha Team',
       readTime: '16 min read',
       category: 'Expat-Tips',
@@ -806,9 +806,9 @@ const BlogPost = () => {
       content: `
         <p class="lead">The residential real estate market in Doha is a critical component of the expatriate experience, often representing the single largest monthly expenditure. Following the significant infrastructure boom leading up to the 2022 FIFA World Cup, the market has entered a phase of stabilization, yet rent prices in prime expat areas remain high.</p>
 
-        <h2 id="market">Current Market Dynamics (2025)</h2>
+        <h2 id="market">Current Market Dynamics (2026)</h2>
         
-        <p>The Doha residential market in 2025 is characterized by a mixed performance, with stability in capital values but fluctuating rental rates heavily dependent on location and quality.</p>
+        <p>The Doha residential market in 2026 is characterized by a mixed performance, with stability in capital values but fluctuating rental rates heavily dependent on location and quality.</p>
 
         <h3>Post-World Cup Stabilization</h3>
         
@@ -886,7 +886,7 @@ const BlogPost = () => {
               </tr>
             </tbody>
           </table>
-          <p class="text-sm text-muted-foreground mt-2"><em>Note: Prices are estimates for Q4 2025 and vary significantly based on furnishing, age of the property, and specific location.</em></p>
+          <p class="text-sm text-muted-foreground mt-2"><em>Note: Prices are estimates for Q4 2026 and vary significantly based on furnishing, age of the property, and specific location.</em></p>
         </div>
 
         <h3>Strategies for Affordability</h3>
@@ -918,7 +918,7 @@ const BlogPost = () => {
     'cost-of-living-doha-dubai-riyadh': {
       id: '54',
       title: 'The Price of Paradise: Cost of Living in Doha and a Comparison to Dubai and Riyadh',
-      date: 'June 3, 2025',
+      date: 'June 3, 2026',
       author: 'Experience Doha Team',
       readTime: '14 min read',
       category: 'Expat-Tips',
@@ -980,7 +980,7 @@ const BlogPost = () => {
               </tr>
             </tbody>
           </table>
-          <p class="text-sm text-muted-foreground mt-2"><em>Source: Based on Q4 2025 data from various CoL databases.</em></p>
+          <p class="text-sm text-muted-foreground mt-2"><em>Source: Based on Q4 2026 data from various CoL databases.</em></p>
         </div>
 
         <h3>Detailed Comparison by Category</h3>
@@ -1038,8 +1038,8 @@ const BlogPost = () => {
     },
     'alcohol-guide-doha': {
       id: '53',
-      title: 'Alcohol Rules in Qatar 2025: QDC, Licenses, and Complete Legal Guide',
-      date: 'June 2, 2025',
+      title: 'Alcohol Rules in Qatar 2026: QDC, Licenses, and Complete Legal Guide',
+      date: 'June 2, 2026',
       author: 'Experience Doha Team',
       readTime: '18 min read',
       category: 'Expat-Tips',
@@ -2164,8 +2164,8 @@ const BlogPost = () => {
     },
     'hiring-maid-nanny-qatar-guide': {
       id: '50',
-      title: 'Hiring Maids and Nannies in Doha Qatar 2025: Complete Legal Guide',
-      date: 'May 30, 2025',
+      title: 'Hiring Maids and Nannies in Doha Qatar 2026: Complete Legal Guide',
+      date: 'May 30, 2026',
       author: 'Experience Doha Team',
       readTime: '19 min read',
       category: 'Expat-Tips',
@@ -2289,7 +2289,7 @@ const BlogPost = () => {
           <li>Legal requirement in Qatar</li>
         </ul>
 
-        <h2 id="salary">Salary Expectations 2025</h2>
+        <h2 id="salary">Salary Expectations 2026</h2>
         
         <h3>Current Market Rates</h3>
         <table>
@@ -3233,7 +3233,7 @@ const BlogPost = () => {
           <li>Weekend service limitations</li>
         </ul>
 
-        <h2 id="faq">FAQ: Doha Metro 2025</h2>
+        <h2 id="faq">FAQ: Doha Metro 2026</h2>
         
         <h3>Is Doha Metro safe?</h3>
         <p>Extremely safe. 24/7 security, CCTV coverage throughout, and emergency assistance readily available.</p>
@@ -3253,8 +3253,8 @@ const BlogPost = () => {
     },
     'grocery-shopping-doha-guide': {
       id: '47',
-      title: 'Grocery Shopping Hacks in Doha 2025: Carrefour vs Lulu Complete Guide',
-      date: 'May 27, 2025',
+      title: 'Grocery Shopping Hacks in Doha 2026: Carrefour vs Lulu Complete Guide',
+      date: 'May 27, 2026',
       author: 'Experience Doha Team',
       readTime: '18 min read',
       category: 'Expat-Tips',
@@ -4091,8 +4091,8 @@ const BlogPost = () => {
     },
     'lgbtq-experiences-qatar-2025': {
       id: '44',
-      title: 'LGBTQ+ Experiences in Qatar: What Expats Need to Know 2025',
-      date: 'May 24, 2025',
+      title: 'LGBTQ+ Experiences in Qatar: What Expats Need to Know 2026',
+      date: 'May 24, 2026',
       author: 'Experience Doha Team',
       readTime: '14 min read',
       category: 'Expat-Tips',
@@ -5149,8 +5149,8 @@ const BlogPost = () => {
     },
     'qatar-visa-rules-expats-2025': {
       id: '41',
-      title: 'New Qatar Visa Rules for Expats 2025: Complete Immigration Guide',
-      date: 'May 20, 2025',
+      title: 'New Qatar Visa Rules for Expats 2026: Complete Immigration Guide',
+      date: 'May 20, 2026',
       author: 'Experience Doha Team',
       readTime: '18 min read',
       category: 'Expat-Tips',
@@ -5158,11 +5158,11 @@ const BlogPost = () => {
       tags: ['Qatar visa', 'work permit', 'residency', 'golden visa', 'immigration'],
       metaDescription: 'The Golden Ticket: Complete guide to Qatar work visas, family sponsorship, and hayya card rules for 2026.',
       content: `
-        <p class="lead">Qatar's immigration policies have evolved significantly, reflecting both economic ambitions and workforce flexibility goals. The 2025 visa regulations offer more pathways for residency while maintaining structured sponsorship systems.</p>
+        <p class="lead">Qatar's immigration policies have evolved significantly, reflecting both economic ambitions and workforce flexibility goals. The 2026 visa regulations offer more pathways for residency while maintaining structured sponsorship systems.</p>
         
         <p>Understanding these changes helps expats navigate legal requirements effectively.</p>
         
-        <h2 id="work-visa">Employment Visa (Work Permit) 2025 Requirements</h2>
+        <h2 id="work-visa">Employment Visa (Work Permit) 2026 Requirements</h2>
         
         <h3>Eligibility Criteria:</h3>
         <ul>
@@ -5193,7 +5193,7 @@ const BlogPost = () => {
           <li>Qatar ID: QAR 100-200</li>
         </ul>
         
-        <h3>Important 2025 Changes:</h3>
+        <h3>Important 2026 Changes:</h3>
         <ul>
           <li><strong>Kafala system modifications</strong> - Greater worker mobility</li>
           <li><strong>Exit permit elimination</strong> - Workers can leave without employer permission</li>
@@ -5222,7 +5222,7 @@ const BlogPost = () => {
           <li>Qatar IDs issued for dependents</li>
         </ol>
         
-        <h3>Key Points 2025:</h3>
+        <h3>Key Points 2026:</h3>
         <ul>
           <li>Spouses can obtain work permits independently after arrival</li>
           <li>Children sponsored until age 25 (extended from 21)</li>
@@ -5235,7 +5235,7 @@ const BlogPost = () => {
           <li>Obtain entry visa under spouse sponsorship</li>
           <li>Find employment</li>
           <li>Transfer sponsorship to employer</li>
-          <li>No NOC required from husband's employer (major 2025 change)</li>
+          <li>No NOC required from husband's employer (major 2026 change)</li>
         </ol>
         
         <h2 id="permanent">Qatar Permanent Residency Program</h2>
@@ -5261,7 +5261,7 @@ const BlogPost = () => {
         
         <p><strong>Application:</strong> Submit through Ministry of Interior with comprehensive documentation. Approval rates remain selective, with applications reviewed case-by-case.</p>
         
-        <h2 id="golden-visa">Golden Visa Qatar 2025</h2>
+        <h2 id="golden-visa">Golden Visa Qatar 2026</h2>
         
         <h3>Investment-Based Residency:</h3>
         <p>Qatar's Golden Visa program attracts investors and high-value individuals:</p>
@@ -5415,7 +5415,7 @@ const BlogPost = () => {
           <li>Retirement visa possibilities being explored</li>
         </ul>
         
-        <h2 id="faq">FAQ: Qatar Visa Rules 2025</h2>
+        <h2 id="faq">FAQ: Qatar Visa Rules 2026</h2>
         
         <h3>Can I change employers in Qatar?</h3>
         <p>Yes. Recent reforms allow job changes without employer NOC. Notice periods still apply per contract.</p>
@@ -5435,19 +5435,19 @@ const BlogPost = () => {
     },
     'international-schools-qatar-2025': {
       id: '40',
-      title: 'International Schools in Qatar 2025: Waitlists, Fees, and Application Guide',
-      date: 'May 19, 2025',
+      title: 'International Schools in Qatar 2026: Waitlists, Fees, and Application Guide',
+      date: 'May 19, 2026',
       author: 'Experience Doha Team',
       readTime: '16 min read',
       category: 'Expat-Tips',
       imageUrl: internationalSchoolsImage,
       tags: ['international schools', 'school fees', 'education Qatar', 'British schools', 'American schools'],
       content: `
-        <p class="lead">Qatar hosts over 170 international schools serving its expatriate population, offering British, American, IB, French, Indian, and other curricula. The 2025 school year sees continued high demand with waitlists common at top-tier institutions, making early planning essential.</p>
+        <p class="lead">Qatar hosts over 170 international schools serving its expatriate population, offering British, American, IB, French, Indian, and other curricula. The 2026 school year sees continued high demand with waitlists common at top-tier institutions, making early planning essential.</p>
         
         <p>Understanding the fee structures, waitlist situations, and application timelines helps families secure quality education for their children.</p>
         
-        <h2 id="fees">School Fees in Qatar 2025: Complete Breakdown</h2>
+        <h2 id="fees">School Fees in Qatar 2026: Complete Breakdown</h2>
         
         <h3>Premium Tier Schools (QAR 80,000-120,000/year)</h3>
         <p>These elite institutions offer world-class facilities, small class sizes, and extensive extracurricular programs:</p>
@@ -5488,7 +5488,7 @@ const BlogPost = () => {
         
         <p><strong>Total annual cost premium schools:</strong> QAR 100,000-150,000 per child</p>
         
-        <h2 id="waitlists">Understanding 2025 Waitlist Situations</h2>
+        <h2 id="waitlists">Understanding 2026 Waitlist Situations</h2>
         
         <h3>Schools with Longest Waitlists:</h3>
         <ul>
@@ -5516,37 +5516,37 @@ const BlogPost = () => {
           <li><strong>Direct contact</strong> - Regular follow-ups show serious interest</li>
         </ul>
         
-        <h2 id="timeline">Application Timeline for September 2025</h2>
+        <h2 id="timeline">Application Timeline for September 2026</h2>
         
-        <h3>October-November 2024</h3>
+        <h3>October-November 2025</h3>
         <ul>
           <li>Research schools matching your curriculum preference</li>
           <li>Attend virtual school tours</li>
           <li>Gather required documents</li>
         </ul>
         
-        <h3>December 2024-January 2025</h3>
+        <h3>December 2025-January 2026</h3>
         <ul>
           <li>Submit applications (most open January 1)</li>
           <li>Pay registration fees</li>
           <li>Complete assessment bookings</li>
         </ul>
         
-        <h3>February-March 2025</h3>
+        <h3>February-March 2026</h3>
         <ul>
           <li>Student assessments conducted</li>
           <li>Interview processes (some schools)</li>
           <li>Waitlist placements confirmed</li>
         </ul>
         
-        <h3>April-May 2025</h3>
+        <h3>April-May 2026</h3>
         <ul>
           <li>Offers extended</li>
           <li>Accept and pay deposits</li>
           <li>Confirm enrollment</li>
         </ul>
         
-        <h3>June-August 2025</h3>
+        <h3>June-August 2026</h3>
         <ul>
           <li>Uniform fittings</li>
           <li>Orientation programs</li>
@@ -5653,7 +5653,7 @@ const BlogPost = () => {
         
         <p>This represents significant salary percentage, making education allowance negotiations crucial to expat package acceptability.</p>
         
-        <h2 id="faq">FAQ: International Schools Qatar 2025</h2>
+        <h2 id="faq">FAQ: International Schools Qatar 2026</h2>
         
         <h3>When should I apply for Qatar schools?</h3>
         <p>Apply 12-18 months before intended start date, especially for premium schools with long waitlists.</p>
@@ -5673,8 +5673,8 @@ const BlogPost = () => {
     },
     'women-safety-dress-code-doha-qatar': {
       id: '39',
-      title: 'Women\'s Safety and Dress Code in Doha, Qatar: Complete 2025 Guide',
-      date: 'May 18, 2025',
+      title: 'Women\'s Safety and Dress Code in Doha, Qatar: Complete 2026 Guide',
+      date: 'May 18, 2026',
       author: 'Experience Doha Team',
       readTime: '14 min read',
       category: 'Expat-Tips',
@@ -5685,7 +5685,7 @@ const BlogPost = () => {
         
         <p>However, safety in Qatar extends beyond physical security to understanding <strong>cultural norms, dress expectations, and social boundaries</strong> that differ from Western countries.</p>
         
-        <h2 id="safety">Is Doha Safe for Women in 2025?</h2>
+        <h2 id="safety">Is Doha Safe for Women in 2026?</h2>
         <p>Qatar's crime rate is exceptionally low, violent crime is rare, and police presence is visible throughout Doha. Women can travel independently, work professionally, and maintain active social lives with confidence.</p>
         
         <h2 id="dress-code">Understanding Qatar's Dress Code for Women</h2>
@@ -5855,7 +5855,7 @@ const BlogPost = () => {
     'cost-of-living-doha-2025': {
       id: '38',
       title: 'Cost of Living in Doha (2026 Update): Rent, Food & Hidden Costs',
-      date: 'May 17, 2025',
+      date: 'May 17, 2026',
       author: 'Experience Doha Team',
       readTime: '12 min read',
       category: 'Expat-Tips',
@@ -6044,7 +6044,7 @@ const BlogPost = () => {
     'doha-changing-middle-east': {
       id: '37',
       title: 'Doha: The City That\'s Changing the Middle East',
-      date: 'May 16, 2025',
+      date: 'May 16, 2026',
       author: 'Experience Doha Team',
       readTime: '16 min read',
       category: 'Culture',
@@ -6243,7 +6243,7 @@ const BlogPost = () => {
     'hamad-international-airport-guide': {
       id: '36',
       title: 'Hamad International Airport: The Ultimate Guide to Qatar\'s Award-Winning Aviation Hub',
-      date: 'May 15, 2025',
+      date: 'May 15, 2026',
       author: 'Experience Doha Team',
       readTime: '15 min read',
       category: 'Expat-Tips',
@@ -7156,8 +7156,8 @@ const BlogPost = () => {
     },
     'prostitution-laws-doha-qatar-guide': {
       id: '32',
-      title: 'Prostitution in Doha, Qatar: Is It Legal? (2025 Complete Guide)',
-      date: 'May 11, 2025',
+      title: 'Prostitution in Doha, Qatar: Is It Legal? (2026 Complete Guide)',
+      date: 'May 11, 2026',
       author: 'Experience Doha Team',
       readTime: '11 min read',
       category: 'Expat-Tips',
@@ -7169,7 +7169,7 @@ const BlogPost = () => {
         
         <p>The short and clear answer is: <strong>NO. Prostitution is illegal in Qatar.</strong></p>
         
-        <p>This article provides a complete, 2025 guide explaining the laws, penalties, myths, safety tips, and what tourists should know to avoid legal trouble.</p>
+        <p>This article provides a complete, 2026 guide explaining the laws, penalties, myths, safety tips, and what tourists should know to avoid legal trouble.</p>
         
         <h2 id="legal">Is Prostitution Legal in Doha, Qatar?</h2>
         <p><strong>Prostitution is 100% illegal in Doha and across Qatar.</strong></p>
@@ -7408,8 +7408,8 @@ const BlogPost = () => {
     },
     'alcohol-allowed-doha-qatar-guide': {
       id: '31',
-      title: 'Is Drinking Alcohol Allowed in Doha, Qatar? (2025 Full Guide)',
-      date: 'May 10, 2025',
+      title: 'Is Drinking Alcohol Allowed in Doha, Qatar? (2026 Full Guide)',
+      date: 'May 10, 2026',
       author: 'Experience Doha Team',
       readTime: '12 min read',
       category: 'Expat-Tips',
@@ -7638,7 +7638,7 @@ const BlogPost = () => {
     'desert-safari-inland-sea-khor-al-adaid': {
       id: '30',
       title: 'The Ultimate Arabian Adventure: Desert Safari and the Majestic Inland Sea (Khor Al Adaid)',
-      date: 'May 9, 2025',
+      date: 'May 9, 2026',
       author: 'Experience Doha Team',
       readTime: '10 min read',
       category: 'Attractions',
@@ -8079,7 +8079,7 @@ const BlogPost = () => {
     'qatar-airways-stopover-packages-lounge': {
       id: '26',
       title: 'Two Holidays in One: Unpacking the Qatar Airways Stopover Packages and the Privilege of Lounge Access',
-      date: 'May 5, 2025',
+      date: 'May 5, 2026',
       author: 'Experience Doha Team',
       readTime: '10 min read',
       category: 'Expat-Tips',
@@ -8194,7 +8194,7 @@ const BlogPost = () => {
     'doha-global-mediation-hub-congo-peace': {
       id: '25',
       title: 'Beyond the Horizon: Doha as a Global Mediation Hub and the Significance of the Congo Peace Talks',
-      date: 'May 4, 2025',
+      date: 'May 4, 2026',
       author: 'Experience Doha Team',
       readTime: '9 min read',
       category: 'Culture',
@@ -9020,7 +9020,7 @@ const BlogPost = () => {
     'doha-layover-time-guide': {
       id: '15',
       title: 'Layover in Doha Guide: What to Do in 2–12 Hours',
-      date: 'Feb 1, 2025',
+      date: 'Feb 1, 2026',
       author: 'Experience Doha Team',
       readTime: '9 min read',
       category: 'Expat-Tips',
@@ -9071,7 +9071,7 @@ const BlogPost = () => {
     'perfect-layover-doha-guide': {
       id: '14',
       title: 'How to Spend the Perfect Layover in Doha, Qatar',
-      date: 'Feb 3, 2025',
+      date: 'Feb 3, 2026',
       author: 'Experience Doha Team',
       readTime: '8 min read',
       category: 'Expat-Tips',
@@ -9125,8 +9125,8 @@ const BlogPost = () => {
     },
     'things-to-do-doha-layover': {
       id: '13',
-      title: '10 Unmissable Things To Do In Doha On A Layover (2025)',
-      date: 'Feb 5, 2025',
+      title: '10 Unmissable Things To Do In Doha On A Layover (2026)',
+      date: 'Feb 5, 2026',
       author: 'Experience Doha Team',
       readTime: '10 min read',
       category: 'Attractions',
@@ -9181,7 +9181,7 @@ const BlogPost = () => {
     'hamad-airport-transfers-guide': {
       id: '12',
       title: 'Transfers at Hamad International Airport: Complete Guide',
-      date: 'Feb 8, 2025',
+      date: 'Feb 8, 2026',
       author: 'Experience Doha Team',
       readTime: '7 min read',
       category: 'Expat-Tips',
@@ -9236,7 +9236,7 @@ const BlogPost = () => {
     'qatar-stopover-program-guide': {
       id: '11',
       title: 'Complete Doha Layover Guide: Qatar Stopover Program Explained',
-      date: 'Feb 10, 2025',
+      date: 'Feb 10, 2026',
       author: 'Experience Doha Team',
       readTime: '9 min read',
       category: 'Expat-Tips',
