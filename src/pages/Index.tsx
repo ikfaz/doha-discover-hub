@@ -45,6 +45,15 @@ import endOfServiceGratuityImage from '@/assets/end-of-service-gratuity-qatar-20
 const Index = () => {
   const featuredBlogs = [
     {
+      id: '30',
+      title: 'The Ultimate Arabian Adventure: Desert Safari and Inland Sea',
+      excerpt: 'Experience the thrill of dune bashing and the serenity of Khor Al Adaid - your complete guide to Qatar\'s quintessential desert safari adventure.',
+      imageUrl: desertSafariImage,
+      category: 'Attractions',
+      date: 'May 9, 2026',
+      slug: 'desert-safari-inland-sea-khor-al-adaid',
+    },
+    {
       id: '61',
       title: 'The Final Payout: End-of-Service Benefits and Gratuity Calculations in Qatar',
       excerpt: 'Complete guide to end-of-service gratuity (EOSG) in Qatar. Eligibility, calculation formula, resignation vs termination scenarios, and financial planning tips for expats.',

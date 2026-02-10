@@ -77,6 +77,15 @@ const Blog = () => {
   
   const allPosts = [
     {
+      id: '30',
+      title: 'The Ultimate Arabian Adventure: Desert Safari and Inland Sea',
+      excerpt: 'Experience the thrill of dune bashing and the serenity of Khor Al Adaid - your complete guide to Qatar\'s quintessential desert safari adventure.',
+      imageUrl: desertSafariImage,
+      category: 'Attractions',
+      date: 'May 9, 2026',
+      slug: 'desert-safari-inland-sea-khor-al-adaid',
+    },
+    {
       id: '61',
       title: 'The Final Payout: End-of-Service Benefits and Gratuity Calculations in Qatar',
       excerpt: 'Complete guide to end-of-service gratuity (EOSG) in Qatar. Eligibility, calculation formula, resignation vs termination scenarios, and financial planning tips for expats.',
@@ -378,15 +387,6 @@ const Blog = () => {
       category: 'Expat-Tips',
       date: 'May 10, 2026',
       slug: 'alcohol-allowed-doha-qatar-guide',
-    },
-    {
-      id: '30',
-      title: 'The Ultimate Arabian Adventure: Desert Safari and Inland Sea',
-      excerpt: 'Experience the thrill of dune bashing and the serenity of Khor Al Adaid - your complete guide to Qatar\'s quintessential desert safari adventure.',
-      imageUrl: desertSafariImage,
-      category: 'Attractions',
-      date: 'May 9, 2026',
-      slug: 'desert-safari-inland-sea-khor-al-adaid',
     },
     {
       id: '29',
@@ -882,14 +882,14 @@ const Blog = () => {
                   <Button 
                     variant="outline" 
                     className="flex-1 border-qatar-maroon text-qatar-maroon hover:bg-qatar-maroon/10"
-                    onClick={() => window.open('https://www.youtube.com/@ExperienceDoha', '_blank')}
+                    onClick={() => window.open('https://www.youtube.com/@ExperienceDoha', '_blank', 'noopener,noreferrer')}
                   >
                     YouTube
                   </Button>
                   <Button 
                     variant="outline" 
                     className="flex-1 border-qatar-maroon text-qatar-maroon hover:bg-qatar-maroon/10"
-                    onClick={() => window.open('https://instagram.com', '_blank')}
+                    onClick={() => window.open('https://instagram.com', '_blank', 'noopener,noreferrer')}
                   >
                     Instagram
                   </Button>
