@@ -1,12 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 import BlogCard from '@/components/BlogCard';
 import Newsletter from '@/components/Newsletter';
 import SEOHead from '@/components/SEOHead';
-import { Button } from '@/components/ui/button';
-import { Diamond, Crown, Trophy } from 'lucide-react';
 
 import alcoholGuideImage from '@/assets/alcohol-guide-doha.jpg';
 import bankAccountQatarImage from '@/assets/bank-account-qatar-guide.jpg';
@@ -423,7 +421,7 @@ const Index = () => {
       url: 'https://www.experiencedoha.com/',
     },
     inLanguage: 'en-US',
-    copyrightYear: 2024,
+    copyrightYear: new Date().getFullYear(),
     publisher: {
       '@type': 'Organization',
       name: 'Experience Doha',
@@ -444,6 +442,16 @@ const Index = () => {
       'https://twitter.com/experiencedoha',
     ],
   };
+
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.innerHTML = JSON.stringify(structuredData);
+    document.head.appendChild(script);
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, []);
 
   return (
     <div className="min-h-screen flex flex-col">

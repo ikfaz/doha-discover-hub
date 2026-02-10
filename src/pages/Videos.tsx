@@ -58,7 +58,7 @@ const Videos = () => {
           <div className="mt-8">
             <Button 
               className="bg-qatar-gold hover:bg-qatar-gold/90 text-qatar-maroon font-bold"
-              onClick={() => window.open('https://www.youtube.com/channel/UC-wTo4Yzj8H4KHid3QoFWGA', '_blank')}
+              onClick={() => window.open('https://www.youtube.com/channel/UC-wTo4Yzj8H4KHid3QoFWGA', '_blank', 'noopener,noreferrer')}
             >
               <Youtube className="mr-2 h-5 w-5" />
               Subscribe to Our Channel
@@ -165,6 +165,7 @@ const Videos = () => {
                             title={video.title}
                             frameBorder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            sandbox="allow-scripts allow-same-origin allow-presentation"
                             allowFullScreen
                             loading="lazy"
                           ></iframe>
@@ -198,7 +199,7 @@ const Videos = () => {
                             variant="outline" 
                             size="sm" 
                             className="w-full"
-                            onClick={() => window.open(`https://www.youtube.com/watch?v=${video.videoId}`, '_blank')}
+                            onClick={() => window.open(`https://www.youtube.com/watch?v=${video.videoId}`, '_blank', 'noopener,noreferrer')}
                           >
                             <ExternalLink className="mr-2 h-4 w-4" />
                             Watch on YouTube
@@ -234,6 +235,7 @@ const Videos = () => {
                   title="Doha's Hidden Gems Playlist"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  sandbox="allow-scripts allow-same-origin allow-presentation"
                   allowFullScreen
                   loading="lazy"
                 ></iframe>
@@ -247,7 +249,7 @@ const Videos = () => {
                 </p>
                 <Button 
                   className="w-full bg-qatar-maroon hover:bg-qatar-maroon/90 text-white"
-                  onClick={() => window.open('https://www.youtube.com/channel/UC-wTo4Yzj8H4KHid3QoFWGA/playlists', '_blank')}
+                  onClick={() => window.open('https://www.youtube.com/channel/UC-wTo4Yzj8H4KHid3QoFWGA/playlists', '_blank', 'noopener,noreferrer')}
                 >
                   Watch Playlist
                 </Button>

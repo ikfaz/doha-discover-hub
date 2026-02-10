@@ -222,6 +222,8 @@ const Contact = () => {
               style={{ border: 0 }} 
               allowFullScreen 
               loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              sandbox="allow-scripts allow-same-origin allow-popups"
               title="Map of Doha"
             ></iframe>
           </div>
