@@ -1412,7 +1412,7 @@ const BlogPost = () => {
     'remote-work-cafes-doha-guide': {
       id: '52',
       title: 'Best Cafes for Remote Work in Doha Qatar 2025: Digital Nomad Guide',
-      date: 'June 1, 2025',
+      date: 'June 1, 2026',
       author: 'Experience Doha Team',
       readTime: '16 min read',
       category: 'Expat-Tips',
@@ -1766,7 +1766,7 @@ const BlogPost = () => {
     'gyms-fitness-doha-guide': {
       id: '51',
       title: 'Gyms and Fitness Trends in Doha Qatar 2025: Complete Guide',
-      date: 'May 31, 2025',
+      date: 'May 31, 2026',
       author: 'Experience Doha Team',
       readTime: '17 min read',
       category: 'Expat-Tips',
@@ -2597,7 +2597,7 @@ const BlogPost = () => {
     'pet-import-qatar-guide': {
       id: '49',
       title: 'Pet Import Rules and Veterinary Care in Qatar 2025: Complete Guide',
-      date: 'May 29, 2025',
+      date: 'May 29, 2026',
       author: 'Experience Doha Team',
       readTime: '18 min read',
       category: 'Expat-Tips',
@@ -2950,7 +2950,7 @@ const BlogPost = () => {
     'doha-metro-2025-guide': {
       id: '48',
       title: 'Doha Metro 2025: New Lines, Expansions, and Complete Network Guide',
-      date: 'May 28, 2025',
+      date: 'May 28, 2026',
       author: 'Experience Doha Team',
       readTime: '16 min read',
       category: 'Expat-Tips',
@@ -3549,7 +3549,7 @@ const BlogPost = () => {
     'mobile-plans-qatar-guide': {
       id: '46',
       title: 'Best Mobile and Data Plans in Qatar 2025: Ooredoo vs Vodafone Complete Guide',
-      date: 'May 26, 2025',
+      date: 'May 26, 2026',
       author: 'Experience Doha Team',
       readTime: '16 min read',
       category: 'Expat-Tips',
@@ -3826,7 +3826,7 @@ const BlogPost = () => {
     'bank-account-qatar-guide': {
       id: '45',
       title: 'Opening a Bank Account in Qatar: QNB vs International Banks Guide',
-      date: 'May 25, 2025',
+      date: 'May 25, 2026',
       author: 'Experience Doha Team',
       readTime: '15 min read',
       category: 'Expat-Tips',
@@ -4427,7 +4427,7 @@ const BlogPost = () => {
     'driving-doha-2025-guide': {
       id: '43',
       title: 'Driving in Doha 2025: Traffic Updates, Rules, and Survival Guide',
-      date: 'May 23, 2025',
+      date: 'May 23, 2026',
       author: 'Experience Doha Team',
       readTime: '16 min read',
       category: 'Expat-Tips',
@@ -4842,7 +4842,7 @@ const BlogPost = () => {
     'renting-doha-west-bay-al-waab-2025': {
       id: '42',
       title: 'Renting in Doha: West Bay vs Al Waab Comparison Guide 2025',
-      date: 'May 22, 2025',
+      date: 'May 22, 2026',
       author: 'Experience Doha Team',
       readTime: '15 min read',
       category: 'Expat-Tips',
@@ -6435,7 +6435,7 @@ const BlogPost = () => {
     'qatari-dishes-doha-culinary-guide': {
       id: '35',
       title: 'Qatari Dishes You Must Try in Doha: A Complete Culinary Guide',
-      date: 'May 14, 2025',
+      date: 'May 14, 2026',
       author: 'Experience Doha Team',
       readTime: '14 min read',
       category: 'Food',
@@ -6622,7 +6622,7 @@ const BlogPost = () => {
     'women-driving-qatar-guide': {
       id: '34',
       title: 'Can Women Drive in Qatar? (2025 Guide for Tourists, Expats & Families)',
-      date: 'May 13, 2025',
+      date: 'May 13, 2026',
       author: 'Experience Doha Team',
       readTime: '12 min read',
       category: 'Expat-Tips',
@@ -6890,7 +6890,7 @@ const BlogPost = () => {
     'doha-safety-guide-tourists-expats': {
       id: '33',
       title: 'How Safe Is Doha, Qatar? (2025 Full Safety Guide for Tourists & Expats)',
-      date: 'May 12, 2025',
+      date: 'May 12, 2026',
       author: 'Experience Doha Team',
       readTime: '13 min read',
       category: 'Expat-Tips',
@@ -7740,7 +7740,7 @@ const BlogPost = () => {
     'mia-nmoq-museum-combo-guide': {
       id: '29',
       title: 'A Tale of Two Museums: Unlocking Qatar\'s Past and Present with the MIA + NMoQ Combo',
-      date: 'May 11, 2025',
+      date: 'May 11, 2026',
       author: 'Experience Doha Team',
       readTime: '12 min read',
       category: 'Culture',
@@ -7845,7 +7845,7 @@ const BlogPost = () => {
     'souq-waqif-night-experiences-haggling': {
       id: '28',
       title: 'The Heart of Doha After Dark: Souq Waqif Night Experiences and the Art of Haggling',
-      date: 'May 13, 2025',
+      date: 'May 13, 2026',
       author: 'Experience Doha Team',
       readTime: '9 min read',
       category: 'Culture',
@@ -7943,7 +7943,7 @@ const BlogPost = () => {
     'ultimate-doha-layover-24-48-hours': {
       id: '27',
       title: 'The Ultimate 24-48 Hour Layover in Doha: A Guide to Maximizing Your Stopover',
-      date: 'May 6, 2025',
+      date: 'May 6, 2026',
       author: 'Experience Doha Team',
       readTime: '12 min read',
       category: 'Expat-Tips',
@@ -8288,7 +8288,7 @@ const BlogPost = () => {
     'fifa-u17-world-cup-qatar-2025': {
       id: '24',
       title: 'The Stars of Tomorrow: A Guide to the FIFA U-17 World Cup Qatar 2025™ Matches and Tickets',
-      date: 'May 3, 2025',
+      date: 'May 3, 2026',
       author: 'Experience Doha Team',
       readTime: '8 min read',
       category: 'Events',
@@ -8393,7 +8393,7 @@ const BlogPost = () => {
     'corniche-sunset-dhow-cruise-guide': {
       id: '23',
       title: 'The Golden Hour in Doha: Corniche Sunset Walks and the Magic of the Dhow Cruise',
-      date: 'May 2, 2025',
+      date: 'May 2, 2026',
       author: 'Experience Doha Team',
       readTime: '8 min read',
       category: 'Attractions',
@@ -8526,7 +8526,7 @@ const BlogPost = () => {
     'pearl-qatar-luxury-shopping-dining': {
       id: '22',
       title: 'The Jewel of Doha: A Guide to Luxury Shopping and Fine Dining at The Pearl-Qatar',
-      date: 'May 1, 2025',
+      date: 'May 1, 2026',
       author: 'Experience Doha Team',
       readTime: '9 min read',
       category: 'Lifestyle',
@@ -8620,7 +8620,7 @@ const BlogPost = () => {
     'katara-cultural-village-events-2025': {
       id: '21',
       title: 'A Year of Culture: Katara Cultural Village Events Calendar 2025',
-      date: 'April 30, 2025',
+      date: 'April 30, 2026',
       author: 'Experience Doha Team',
       readTime: '10 min read',
       category: 'Events',
@@ -8745,7 +8745,7 @@ const BlogPost = () => {
     'doha-airport-layover-activities': {
       id: '20',
       title: 'Ten Ways to Enjoy a Layover at Doha Airport',
-      date: 'Jan 15, 2025',
+      date: 'Jan 15, 2026',
       author: 'Experience Doha Team',
       readTime: '8 min read',
       category: 'Expat-Tips',
@@ -8808,7 +8808,7 @@ const BlogPost = () => {
     'five-best-things-doha-layover': {
       id: '19',
       title: 'The Five Best Things to Do on a Layover in Doha',
-      date: 'Jan 18, 2025',
+      date: 'Jan 18, 2026',
       author: 'Experience Doha Team',
       readTime: '7 min read',
       category: 'Attractions',
@@ -8847,7 +8847,7 @@ const BlogPost = () => {
     '9-hour-stopover-qatar-worth-it': {
       id: '18',
       title: '9-Hour Stopover in Qatar: Is It Worth Exploring?',
-      date: 'April 27, 2025',
+      date: 'April 27, 2026',
       author: 'Experience Doha Team',
       readTime: '10 min read',
       category: 'Expat-Tips',
@@ -8902,7 +8902,7 @@ const BlogPost = () => {
     'discover-qatar-stopover-guide': {
       id: '17',
       title: 'Stopover in Qatar: Discover Qatar - Why Visit',
-      date: 'April 26, 2025',
+      date: 'April 26, 2026',
       author: 'Experience Doha Team',
       readTime: '11 min read',
       category: 'Culture',
@@ -8961,7 +8961,7 @@ const BlogPost = () => {
     '24-hours-doha-qatar-airways': {
       id: '16',
       title: '24 Hours in Doha: Complete Qatar Airways Itinerary',
-      date: 'April 25, 2025',
+      date: 'April 25, 2026',
       author: 'Experience Doha Team',
       readTime: '12 min read',
       category: 'Attractions',
@@ -9295,7 +9295,7 @@ const BlogPost = () => {
     'default': {
       id: '1',
       title: 'Top 10 Must-Visit Attractions in Doha',
-      date: 'March 1, 2025',
+      date: 'March 1, 2026',
       author: 'Experience Doha Team',
       readTime: '10 min read',
       category: 'Attractions',
@@ -9348,7 +9348,7 @@ const BlogPost = () => {
       excerpt: 'Taste the traditional flavors of Qatar at these local favorite dining spots.',
       imageUrl: qatariCuisineImage,
       category: 'Food',
-      date: 'April 10, 2025',
+      date: 'April 10, 2026',
       slug: 'authentic-qatari-cuisine',
     },
     {
@@ -9357,7 +9357,7 @@ const BlogPost = () => {
       excerpt: 'Mark your calendar for these exciting cultural festivals and events.',
       imageUrl: culturalEventsImage,
       category: 'Events',
-      date: 'April 5, 2025',
+      date: 'April 5, 2026',
       slug: 'summer-cultural-events',
     },
     {
@@ -9366,7 +9366,7 @@ const BlogPost = () => {
       excerpt: 'Explore one of Doha\'s most iconic architectural landmarks and its world-class collections.',
       imageUrl: miaMuseumImage,
       category: 'Attractions',
-      date: 'April 2, 2025',
+      date: 'April 2, 2026',
       slug: 'museum-islamic-art',
     },
   ];
