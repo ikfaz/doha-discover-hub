@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 import Newsletter from '@/components/Newsletter';
+import ViatorBanner from '@/components/ViatorBanner';
 import SEOHead from '@/components/SEOHead';
 import SchoolComparisonTool from '@/components/SchoolComparisonTool';
 import SchoolFeeCalculator from '@/components/SchoolFeeCalculator';
@@ -9903,6 +9904,11 @@ const BlogPost = () => {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Viator Banner */}
+        <div className="max-w-4xl mx-auto px-4">
+          <ViatorBanner />
         </div>
 
         {/* Related Articles */}
