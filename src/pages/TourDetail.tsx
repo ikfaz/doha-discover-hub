@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Clock, Users, Globe, MapPin, Star, ChevronLeft, Check, X, Share2 } from 'lucide-react';
@@ -10,10 +10,65 @@ import TourItineraryTimeline from '@/components/TourItineraryTimeline';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { getTourBySlug } from '@/data/tours';
 
+const BASE_URL = 'https://experiencedoha.com';
+
 const TourDetail = () => {
   const { slug } = useParams<{ slug: string }>();
   const { t } = useTranslation();
   const tour = getTourBySlug(slug || '');
+
+  // Convert USD price to QAR (1 USD ≈ 3.64 QAR)
+  const priceQAR = tour ? Math.round(tour.pricePerPerson * 3.64) : 0;
+
+  const jsonLd = useMemo(() => {
+    if (!tour) return undefined;
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'TouristTrip',
+      name: tour.title,
+      description: tour.overview.split('\n\n')[0],
+      image: tour.heroImage,
+      url: `${BASE_URL}/tour/${tour.slug}`,
+      touristType: tour.category,
+      offers: {
+        '@type': 'Offer',
+        price: priceQAR,
+        priceCurrency: 'QAR',
+        availability: 'https://schema.org/InStock',
+        url: tour.viatorUrl,
+        validFrom: '2026-01-01',
+      },
+      aggregateRating: {
+        '@type': 'AggregateRating',
+        ratingValue: tour.rating,
+        reviewCount: tour.reviewCount,
+        bestRating: 5,
+        worstRating: 1,
+      },
+      provider: {
+        '@type': 'Organization',
+        name: 'Experience Doha',
+        url: BASE_URL,
+      },
+      itinerary: {
+        '@type': 'ItemList',
+        numberOfItems: tour.itinerary.length,
+        itemListElement: tour.itinerary.map((stop, i) => ({
+          '@type': 'ListItem',
+          position: i + 1,
+          name: stop.title,
+          description: stop.description,
+        })),
+      },
+      review: tour.reviews.slice(0, 3).map((r) => ({
+        '@type': 'Review',
+        author: { '@type': 'Person', name: r.name },
+        reviewRating: { '@type': 'Rating', ratingValue: r.rating, bestRating: 5 },
+        reviewBody: r.comment,
+        datePublished: r.date,
+      })),
+    };
+  }, [tour, priceQAR]);
 
   if (!tour) {
     return (
@@ -33,11 +88,21 @@ const TourDetail = () => {
     );
   }
 
+  // Append &fm=webp to Unsplash URLs for WebP format
+  const toWebP = (url: string) => {
+    if (url.includes('unsplash.com')) {
+      return url.includes('&fm=') ? url : `${url}&fm=webp`;
+    }
+    return url;
+  };
+
   return (
     <div className="min-h-screen flex flex-col font-sans">
       <SEOHead
-        title={`${tour.title} | Experience Doha`}
-        description={tour.subtitle}
+        title={`${tour.title} – Book from ${priceQAR} QAR | Experience Doha`}
+        description={`${tour.subtitle}. ${tour.duration} tour with ${tour.rating}★ rating from ${tour.reviewCount} reviews. Book now from ${priceQAR} QAR per person.`}
+        image={toWebP(tour.heroImage)}
+        jsonLd={jsonLd}
       />
       <NavBar />
 
@@ -45,14 +110,13 @@ const TourDetail = () => {
         {/* Hero Section */}
         <section className="relative h-[50vh] md:h-[60vh] overflow-hidden">
           <img
-            src={tour.heroImage}
-            alt={tour.title}
+            src={toWebP(tour.heroImage)}
+            alt={`${tour.title} – ${tour.category} tour in Doha, Qatar`}
             className="w-full h-full object-cover"
             loading="eager"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-charcoal/70 via-charcoal/30 to-transparent" />
 
-          {/* Breadcrumb */}
           <div className="absolute top-6 start-6 z-10">
             <Link
               to="/"
@@ -63,7 +127,6 @@ const TourDetail = () => {
             </Link>
           </div>
 
-          {/* Share button */}
           <button
             onClick={() => navigator.clipboard?.writeText(window.location.href)}
             className="absolute top-6 end-6 z-10 text-white/90 hover:text-white bg-charcoal/30 backdrop-blur-sm p-3 rounded-full transition-colors"
@@ -72,7 +135,6 @@ const TourDetail = () => {
             <Share2 className="w-5 h-5" />
           </button>
 
-          {/* Hero text */}
           <div className="absolute bottom-0 start-0 end-0 p-6 md:p-12 z-10">
             <div className="max-w-4xl">
               <span className="inline-block bg-sand-gold text-charcoal text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-3">
@@ -83,7 +145,6 @@ const TourDetail = () => {
               </h1>
               <p className="text-lg text-white/80 max-w-2xl">{tour.subtitle}</p>
 
-              {/* Quick info pills */}
               <div className="flex flex-wrap gap-3 mt-4">
                 {[
                   { icon: Clock, text: tour.duration },
@@ -103,25 +164,15 @@ const TourDetail = () => {
         {/* Content + Sidebar */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
           <div className="flex flex-col lg:flex-row gap-10">
-            {/* Main Content */}
             <div className="flex-1 min-w-0">
               <Tabs defaultValue="overview" className="w-full">
                 <TabsList className="w-full justify-start bg-muted/50 rounded-xl p-1 h-auto flex-wrap">
-                  <TabsTrigger value="overview" className="rounded-lg data-[state=active]:bg-white data-[state=active]:shadow-sm px-5 py-2.5 text-sm font-medium">
-                    Overview
-                  </TabsTrigger>
-                  <TabsTrigger value="itinerary" className="rounded-lg data-[state=active]:bg-white data-[state=active]:shadow-sm px-5 py-2.5 text-sm font-medium">
-                    Itinerary
-                  </TabsTrigger>
-                  <TabsTrigger value="inclusions" className="rounded-lg data-[state=active]:bg-white data-[state=active]:shadow-sm px-5 py-2.5 text-sm font-medium">
-                    Inclusions
-                  </TabsTrigger>
-                  <TabsTrigger value="reviews" className="rounded-lg data-[state=active]:bg-white data-[state=active]:shadow-sm px-5 py-2.5 text-sm font-medium">
-                    Reviews ({tour.reviewCount})
-                  </TabsTrigger>
+                  <TabsTrigger value="overview" className="rounded-lg data-[state=active]:bg-white data-[state=active]:shadow-sm px-5 py-2.5 text-sm font-medium">Overview</TabsTrigger>
+                  <TabsTrigger value="itinerary" className="rounded-lg data-[state=active]:bg-white data-[state=active]:shadow-sm px-5 py-2.5 text-sm font-medium">Itinerary</TabsTrigger>
+                  <TabsTrigger value="inclusions" className="rounded-lg data-[state=active]:bg-white data-[state=active]:shadow-sm px-5 py-2.5 text-sm font-medium">Inclusions</TabsTrigger>
+                  <TabsTrigger value="reviews" className="rounded-lg data-[state=active]:bg-white data-[state=active]:shadow-sm px-5 py-2.5 text-sm font-medium">Reviews ({tour.reviewCount})</TabsTrigger>
                 </TabsList>
 
-                {/* Overview Tab */}
                 <TabsContent value="overview" className="mt-8 space-y-8">
                   <div>
                     <h2 className="text-2xl font-bold text-secondary mb-4 font-heading">About This Tour</h2>
@@ -142,7 +193,6 @@ const TourDetail = () => {
                     </div>
                   </div>
 
-                  {/* Map placeholder */}
                   <div>
                     <h3 className="text-xl font-bold text-secondary mb-4 font-heading flex items-center gap-2">
                       <MapPin className="w-5 h-5 text-sand-gold" aria-hidden="true" />
@@ -150,9 +200,10 @@ const TourDetail = () => {
                     </h3>
                     <div className="relative rounded-2xl overflow-hidden shadow-md h-[300px]">
                       <img
-                        src={tour.mapImage}
-                        alt={`Route map for ${tour.title}`}
+                        src={toWebP(tour.mapImage)}
+                        alt={`Route map showing ${tour.itinerary.length} stops for ${tour.title}`}
                         className="w-full h-full object-cover"
+                        loading="lazy"
                       />
                       <div className="absolute inset-0 bg-charcoal/10" />
                       <div className="absolute bottom-4 start-4 bg-white/90 backdrop-blur-sm rounded-lg px-4 py-2 shadow-md">
@@ -165,13 +216,11 @@ const TourDetail = () => {
                   </div>
                 </TabsContent>
 
-                {/* Itinerary Tab */}
                 <TabsContent value="itinerary" className="mt-8">
                   <h2 className="text-2xl font-bold text-secondary mb-6 font-heading">Your Day, Step by Step</h2>
                   <TourItineraryTimeline stops={tour.itinerary} />
                 </TabsContent>
 
-                {/* Inclusions Tab */}
                 <TabsContent value="inclusions" className="mt-8 space-y-8">
                   <div>
                     <h2 className="text-2xl font-bold text-secondary mb-4 font-heading">What's Included</h2>
@@ -197,7 +246,6 @@ const TourDetail = () => {
                   </div>
                 </TabsContent>
 
-                {/* Reviews Tab */}
                 <TabsContent value="reviews" className="mt-8">
                   <div className="flex items-center gap-4 mb-8">
                     <div className="bg-secondary text-secondary-foreground rounded-2xl p-5 text-center min-w-[100px]">
@@ -240,7 +288,6 @@ const TourDetail = () => {
               </Tabs>
             </div>
 
-            {/* Sticky Sidebar */}
             <aside className="lg:w-[380px] flex-shrink-0">
               <div className="lg:sticky lg:top-24">
                 <TourBookingSidebar tour={tour} />

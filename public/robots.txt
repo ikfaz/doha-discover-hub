@@ -1,6 +1,27 @@
 # Allow all search engines to crawl the site
 User-agent: *
 Allow: /
+Allow: /tour/
+Allow: /blog/
+Allow: /gallery
+Allow: /videos
+Allow: /about
+Allow: /contact
+Allow: /budget-planner
+
+# Block administrative and utility routes
+Disallow: /admin
+Disallow: /api/
+Disallow: /_internal/
+Disallow: /debug/
+
+# Block non-content pages from indexing
+Disallow: /cookie-policy
+Disallow: /terms-of-service
+Disallow: /privacy-policy
+
+# Crawl-delay for politeness
+Crawl-delay: 1
 
 # Sitemap location
 Sitemap: https://experiencedoha.com/sitemap.xml
