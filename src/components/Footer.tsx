@@ -1,109 +1,91 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { Facebook, Instagram, Twitter, Youtube, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   const handleSubscribe = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle newsletter subscription
     console.log('Newsletter subscription submitted');
   };
 
   return (
-    <footer className="bg-qatar-maroon text-white pt-12 pb-6">
+    <footer className="bg-secondary text-secondary-foreground pt-12 pb-6" role="contentinfo">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* About Section */}
           <div className="md:col-span-1">
             <h3 className="text-xl font-bold mb-4">Experience Doha</h3>
-            <p className="mb-4 text-sm">
-              Your ultimate guide to exploring the vibrant culture, modern attractions, 
-              and hidden gems of Doha, Qatar.
-            </p>
+            <p className="mb-4 text-sm text-secondary-foreground/80">{t('footer.description')}</p>
           </div>
 
-          {/* Quick Links */}
           <div className="md:col-span-1">
-            <h3 className="text-xl font-bold mb-4">Quick Links</h3>
+            <h3 className="text-xl font-bold mb-4">{t('footer.quickLinks')}</h3>
             <ul className="space-y-2">
-              <li><Link to="/" className="text-sm hover:text-qatar-gold transition-colors">Home</Link></li>
-              <li><Link to="/about" className="text-sm hover:text-qatar-gold transition-colors">About</Link></li>
-              <li><Link to="/blog" className="text-sm hover:text-qatar-gold transition-colors">Blog</Link></li>
-              <li><Link to="/videos" className="text-sm hover:text-qatar-gold transition-colors">Videos</Link></li>
-              <li><Link to="/gallery" className="text-sm hover:text-qatar-gold transition-colors">Gallery</Link></li>
-              <li><Link to="/contact" className="text-sm hover:text-qatar-gold transition-colors">Contact</Link></li>
+              <li><Link to="/" className="text-sm text-secondary-foreground/80 hover:text-sand-gold transition-colors">{t('nav.home')}</Link></li>
+              <li><Link to="/about" className="text-sm text-secondary-foreground/80 hover:text-sand-gold transition-colors">{t('nav.about')}</Link></li>
+              <li><Link to="/blog" className="text-sm text-secondary-foreground/80 hover:text-sand-gold transition-colors">{t('nav.blog')}</Link></li>
+              <li><Link to="/videos" className="text-sm text-secondary-foreground/80 hover:text-sand-gold transition-colors">{t('nav.videos')}</Link></li>
+              <li><Link to="/gallery" className="text-sm text-secondary-foreground/80 hover:text-sand-gold transition-colors">{t('nav.gallery')}</Link></li>
+              <li><Link to="/contact" className="text-sm text-secondary-foreground/80 hover:text-sand-gold transition-colors">{t('nav.contact')}</Link></li>
             </ul>
           </div>
 
-          {/* Categories */}
           <div className="md:col-span-1">
-            <h3 className="text-xl font-bold mb-4">Categories</h3>
+            <h3 className="text-xl font-bold mb-4">{t('footer.categories')}</h3>
             <ul className="space-y-2">
-              <li><Link to="/blog/category/attractions" className="text-sm hover:text-qatar-gold transition-colors">Attractions</Link></li>
-              <li><Link to="/blog/category/food" className="text-sm hover:text-qatar-gold transition-colors">Food & Dining</Link></li>
-              <li><Link to="/blog/category/culture" className="text-sm hover:text-qatar-gold transition-colors">Cultural Experiences</Link></li>
-              <li><Link to="/blog/category/events" className="text-sm hover:text-qatar-gold transition-colors">Local Events</Link></li>
-              <li><Link to="/blog/category/expat-tips" className="text-sm hover:text-qatar-gold transition-colors">Expat Tips</Link></li>
+              <li><Link to="/blog/category/attractions" className="text-sm text-secondary-foreground/80 hover:text-sand-gold transition-colors">{t('home.attractions')}</Link></li>
+              <li><Link to="/blog/category/food" className="text-sm text-secondary-foreground/80 hover:text-sand-gold transition-colors">{t('home.foodDining')}</Link></li>
+              <li><Link to="/blog/category/culture" className="text-sm text-secondary-foreground/80 hover:text-sand-gold transition-colors">{t('footer.culturalExperiences')}</Link></li>
+              <li><Link to="/blog/category/events" className="text-sm text-secondary-foreground/80 hover:text-sand-gold transition-colors">{t('footer.localEvents')}</Link></li>
+              <li><Link to="/blog/category/expat-tips" className="text-sm text-secondary-foreground/80 hover:text-sand-gold transition-colors">{t('footer.expatTips')}</Link></li>
             </ul>
           </div>
 
-          {/* Newsletter */}
           <div className="md:col-span-1">
-            <h3 className="text-xl font-bold mb-4">Newsletter</h3>
-            <p className="mb-4 text-sm">
-              Subscribe to get updates about Doha events and new content.
-            </p>
+            <h3 className="text-xl font-bold mb-4">{t('footer.newsletter')}</h3>
+            <p className="mb-4 text-sm text-secondary-foreground/80">{t('footer.newsletterDesc')}</p>
             <form onSubmit={handleSubscribe} className="space-y-2">
               <Input 
                 type="email" 
-                placeholder="Your email" 
-                className="w-full bg-white/10 border-qatar-gold text-white placeholder:text-white/70"
+                placeholder={t('footer.emailPlaceholder')}
+                className="w-full bg-white/10 border-sand-gold/30 text-white placeholder:text-white/60"
                 required
+                aria-label={t('footer.emailPlaceholder')}
               />
-              <Button type="submit" className="w-full bg-qatar-gold text-qatar-maroon hover:bg-qatar-sand">
-                Subscribe
+              <Button type="submit" className="w-full bg-sand-gold text-charcoal hover:bg-sand-gold/90 font-medium">
+                {t('footer.subscribe')}
               </Button>
             </form>
           </div>
         </div>
 
-        {/* Legal Links and Social Media */}
         <div className="mt-12 pt-8 border-t border-white/20">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex space-x-6 mb-4 md:mb-0">
-              <Link to="/privacy-policy" className="text-sm hover:text-qatar-gold transition-colors">Privacy Policy</Link>
-              <Link to="/terms-of-service" className="text-sm hover:text-qatar-gold transition-colors">Terms of Service</Link>
-              <Link to="/cookie-policy" className="text-sm hover:text-qatar-gold transition-colors">Cookie Policy</Link>
+              <Link to="/privacy-policy" className="text-sm text-secondary-foreground/80 hover:text-sand-gold transition-colors">{t('footer.privacyPolicy')}</Link>
+              <Link to="/terms-of-service" className="text-sm text-secondary-foreground/80 hover:text-sand-gold transition-colors">{t('footer.termsOfService')}</Link>
+              <Link to="/cookie-policy" className="text-sm text-secondary-foreground/80 hover:text-sand-gold transition-colors">{t('footer.cookiePolicy')}</Link>
             </div>
             
-            {/* Social Media Links */}
             <div className="flex space-x-6">
-              <a 
-                href="https://www.facebook.com/Experiencedohaqatar" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="hover:text-qatar-gold transition-colors"
-              >
-                <Facebook size={20} />
+              <a href="https://www.facebook.com/Experiencedohaqatar" target="_blank" rel="noopener noreferrer" className="text-secondary-foreground/80 hover:text-sand-gold transition-colors" aria-label="Facebook">
+                <Facebook size={20} aria-hidden="true" />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-qatar-gold transition-colors">
-                <Instagram size={20} />
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-secondary-foreground/80 hover:text-sand-gold transition-colors" aria-label="Instagram">
+                <Instagram size={20} aria-hidden="true" />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-qatar-gold transition-colors">
-                <Twitter size={20} />
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-secondary-foreground/80 hover:text-sand-gold transition-colors" aria-label="Twitter">
+                <Twitter size={20} aria-hidden="true" />
               </a>
-              <a 
-                href="https://www.youtube.com/@ExperienceDoha" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="hover:text-qatar-gold transition-colors"
-              >
-                <Youtube size={20} />
+              <a href="https://www.youtube.com/@ExperienceDoha" target="_blank" rel="noopener noreferrer" className="text-secondary-foreground/80 hover:text-sand-gold transition-colors" aria-label="YouTube">
+                <Youtube size={20} aria-hidden="true" />
               </a>
-              <a href="mailto:info@experiencedoha.com" className="hover:text-qatar-gold transition-colors">
-                <Mail size={20} />
+              <a href="mailto:info@experiencedoha.com" className="text-secondary-foreground/80 hover:text-sand-gold transition-colors" aria-label="Email">
+                <Mail size={20} aria-hidden="true" />
               </a>
             </div>
           </div>

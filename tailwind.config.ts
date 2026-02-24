@@ -25,12 +25,15 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				'sand-gold': '#C2B280',
+				'pearl-white': '#FDFDFD',
+				charcoal: '#36454F',
 				qatar: {
-					maroon: '#800000',
-					gold: '#D4AF37',
-					sand: '#E8D8B0',
-					pearl: '#F5F5F5',
-					navy: '#1A2D53'
+					maroon: '#36454F',
+					gold: '#C2B280',
+					sand: '#E8DCC8',
+					pearl: '#FDFDFD',
+					navy: '#2A3A46'
 				},
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
