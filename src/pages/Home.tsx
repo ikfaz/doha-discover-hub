@@ -4,6 +4,7 @@ import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 import Newsletter from '@/components/Newsletter';
 import SEOHead from '@/components/SEOHead';
+import ViatorBanner from '@/components/ViatorBanner';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { ArrowRight, MapPin, Calendar, Camera, Coffee, Sun } from 'lucide-react';
@@ -225,6 +226,13 @@ const Home = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Viator Banner */}
+        <section className="bg-gray-50">
+          <div className="max-w-4xl mx-auto px-4">
+            <ViatorBanner />
           </div>
         </section>
 
