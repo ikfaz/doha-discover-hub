@@ -143,6 +143,49 @@ const Home = () => {
           </div>
         </section>
 
+        {/* Desert Safari Affiliate CTA */}
+        <section className="py-20 bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col md:flex-row items-center gap-12">
+              <div className="md:w-1/2 w-full">
+                <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                  <img
+                    src="https://images.unsplash.com/photo-1528702748617-c64d49f918af?q=80&w=2670&auto=format&fit=crop"
+                    alt="Desert Safari in Qatar - Dune Bashing and Camel Rides"
+                    className="w-full h-[400px] object-cover"
+                  />
+                  <div className="absolute top-4 left-4 bg-qatar-gold text-qatar-maroon text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                    Most Popular Tour
+                  </div>
+                </div>
+              </div>
+              <div className="md:w-1/2 space-y-6">
+                <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+                  Private Desert Safari <span className="text-qatar-maroon">Adventure</span>
+                </h2>
+                <p className="text-lg text-gray-600 leading-relaxed">
+                  Experience the thrill of dune bashing, ride a camel across golden sands, try sandboarding, and visit the breathtaking Inland Sea — all in one unforgettable private tour.
+                </p>
+                <ul className="space-y-3 text-gray-700">
+                  <li className="flex items-center gap-2"><Sun className="w-5 h-5 text-qatar-gold" /> Private dune bashing experience</li>
+                  <li className="flex items-center gap-2"><MapPin className="w-5 h-5 text-qatar-gold" /> Visit the stunning Inland Sea (Khor Al Adaid)</li>
+                  <li className="flex items-center gap-2"><Camera className="w-5 h-5 text-qatar-gold" /> Camel rides & sandboarding included</li>
+                </ul>
+                <div className="pt-4">
+                  <a
+                    href="https://www.viator.com/tours/Doha/Private-Desert-Safari-Dune-Bashing-Camel-Ride-Sand-Boarding-Inland-Sea-Visit/d4453-41683P18?medium=link&pid=P00290081&mcid=42383"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center bg-qatar-maroon hover:bg-qatar-maroon/90 text-white text-lg font-bold px-8 py-4 rounded-full shadow-lg transition-transform hover:scale-105"
+                  >
+                    Book This Tour <ArrowRight className="ml-2 w-5 h-5" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Video Teaser Section */}
         <section className="py-20 bg-qatar-maroon text-white overflow-hidden relative">
           <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
