@@ -6,6 +6,7 @@ import Footer from '@/components/Footer';
 import Newsletter from '@/components/Newsletter';
 import SEOHead from '@/components/SEOHead';
 import ViatorBanner from '@/components/ViatorBanner';
+import GetYourGuideWidget from '@/components/GetYourGuideWidget';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { ArrowRight, MapPin, Calendar, Camera, Coffee, Sun } from 'lucide-react';
@@ -210,6 +211,14 @@ const Home = () => {
         <section className="bg-muted/50">
           <div className="max-w-4xl mx-auto px-4">
             <ViatorBanner />
+          </div>
+        </section>
+
+        {/* GetYourGuide Widget */}
+        <section className="py-16 bg-background">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-secondary mb-8 text-center">Popular Tours & Activities in Doha</h2>
+            <GetYourGuideWidget />
           </div>
         </section>
 
