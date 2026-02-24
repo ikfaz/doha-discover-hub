@@ -4,6 +4,7 @@ import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 import Newsletter from '@/components/Newsletter';
 import ViatorBanner from '@/components/ViatorBanner';
+import ViatorArticleBanner from '@/components/ViatorArticleBanner';
 import SEOHead from '@/components/SEOHead';
 import SchoolComparisonTool from '@/components/SchoolComparisonTool';
 import SchoolFeeCalculator from '@/components/SchoolFeeCalculator';
@@ -9859,10 +9860,29 @@ const BlogPost = () => {
                   <div dangerouslySetInnerHTML={{ __html: '<h2 id="hours">' + post.content.split('<h2 id="hours">')[1] }} />
                 </div>
               ) : (
-                <div 
-                  className="prose prose-lg max-w-none"
-                  dangerouslySetInnerHTML={{ __html: post.content }}
-                />
+                <div className="prose prose-lg max-w-none">
+                  <div dangerouslySetInnerHTML={{ __html: (() => {
+                    const content = post.content;
+                    const h2Matches = [...content.matchAll(/<h2[\s>]/gi)];
+                    if (h2Matches.length >= 2) {
+                      const midIndex = Math.floor(h2Matches.length / 2);
+                      const splitPos = h2Matches[midIndex].index;
+                      return content.substring(0, splitPos);
+                    }
+                    return content.substring(0, Math.floor(content.length / 2));
+                  })() }} />
+                  <ViatorArticleBanner />
+                  <div dangerouslySetInnerHTML={{ __html: (() => {
+                    const content = post.content;
+                    const h2Matches = [...content.matchAll(/<h2[\s>]/gi)];
+                    if (h2Matches.length >= 2) {
+                      const midIndex = Math.floor(h2Matches.length / 2);
+                      const splitPos = h2Matches[midIndex].index;
+                      return content.substring(splitPos);
+                    }
+                    return content.substring(Math.floor(content.length / 2));
+                  })() }} />
+                </div>
               )}
 
               {/* Tags */}
