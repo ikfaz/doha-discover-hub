@@ -498,9 +498,13 @@ const Index = () => {
               Book Desert Safari
             </a>
           </div>
-          <div className="mt-8">
-            <ViatorBanner />
-          </div>
+        </div>
+      </section>
+
+      {/* Viator Widget */}
+      <section className="py-8">
+        <div className="content-container">
+          <ViatorBanner />
         </div>
       </section>
 
