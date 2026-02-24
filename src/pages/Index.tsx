@@ -471,36 +471,6 @@ const Index = () => {
       />
       <NavBar />
 
-      {/* Hero Section */}
-      <section className="hero-section bg-qatar-maroon text-white py-20">
-        <div className="content-container">
-          <h1 className="text-5xl md:text-6xl font-bold font-heading mb-6">
-            Discover Doha
-          </h1>
-          <p className="text-xl max-w-3xl mb-8">
-            Your ultimate guide to exploring Qatar's vibrant capital. Discover
-            top attractions, cultural insights, expat tips, and hidden gems in
-            Doha.
-          </p>
-          <div className="flex flex-wrap gap-4">
-            <Link
-              to="/blog"
-              className="bg-qatar-gold text-qatar-maroon font-bold py-3 px-8 rounded-md hover:bg-qatar-gold/90 transition-colors"
-            >
-              Explore the Blog
-            </Link>
-            <a
-              href="https://www.viator.com/tours/Doha/Private-Desert-Safari-Dune-Bashing-Camel-Ride-Sand-Boarding-Inland-Sea-Visit/d4453-41683P18?medium=link&pid=P00290081&mcid=42383"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-white text-qatar-maroon font-bold py-3 px-8 rounded-md hover:bg-white/90 transition-colors"
-            >
-              Book Desert Safari
-            </a>
-          </div>
-        </div>
-      </section>
-
       {/* Viator Widget */}
       <section className="py-8">
         <div className="content-container">
