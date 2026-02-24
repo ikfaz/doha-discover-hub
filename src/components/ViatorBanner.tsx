@@ -6,18 +6,14 @@ const ViatorBanner = () => {
   useEffect(() => {
     if (!containerRef.current) return;
 
-    const bannerDiv = document.createElement('div');
-    bannerDiv.setAttribute('data-id', 'viator-banner');
-    bannerDiv.setAttribute('data-partner-id', 'P00290081');
-    bannerDiv.setAttribute('data-url', 'https://www.viator.com/Doha/d4453-ttd');
-    bannerDiv.setAttribute('data-banner-width', '728');
-    bannerDiv.setAttribute('data-banner-height', '90');
-    bannerDiv.setAttribute('data-banner-language', 'en');
-    bannerDiv.setAttribute('data-banner-selection', 'banner1');
-    containerRef.current.appendChild(bannerDiv);
+    const widgetDiv = document.createElement('div');
+    widgetDiv.setAttribute('data-vi-partner-id', 'P00290081');
+    widgetDiv.setAttribute('data-vi-widget-ref', 'W-a029452c-11cd-40b1-a70b-255a8b3834a0');
+    widgetDiv.setAttribute('data-vi-search-term', 'Doha');
+    containerRef.current.appendChild(widgetDiv);
 
     const script = document.createElement('script');
-    script.src = 'https://partners.vtrcdn.com/static/scripts/banners/banners.js';
+    script.src = 'https://www.viator.com/orion/partner/widget.js';
     script.async = true;
     document.body.appendChild(script);
 
