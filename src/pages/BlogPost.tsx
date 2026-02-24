@@ -6427,6 +6427,12 @@ const BlogPost = () => {
           <li>If you're flying Qatar Airways, take advantage of the incredible lounge network</li>
         </ul>
         
+        <div style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); border-radius: 1rem; padding: 2rem; margin: 2rem 0; text-align: center; border: 1px solid rgba(212, 168, 83, 0.3);">
+          <h3 style="color: #d4a853; margin-bottom: 0.5rem; font-size: 1.5rem;">🛫 Book Your Airport Transfer or Doha Tour</h3>
+          <p style="color: #e5e5e5; margin-bottom: 1rem;">Make the most of your time at Hamad International Airport — book a city tour, airport transfer, or layover experience in advance.</p>
+          <a href="https://gyg.me/wvRpxzi0" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: #ff5533; color: #ffffff; font-weight: bold; padding: 0.75rem 2rem; border-radius: 9999px; text-decoration: none; font-size: 1.1rem;">Book on GetYourGuide →</a>
+        </div>
+
         <h2 id="final">Final Thoughts</h2>
         <p>Hamad International Airport is more than a transit point—it's a complete luxury travel experience. With world-class architecture, exceptional dining, high-end shopping, and smooth connectivity to Doha, it remains one of the world's most impressive airports.</p>
         
