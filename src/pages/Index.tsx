@@ -472,7 +472,7 @@ const Index = () => {
       <NavBar />
 
       {/* Viator Widget */}
-      <section className="py-8">
+      <section className="py-2">
         <div className="content-container">
           <ViatorBanner />
         </div>
