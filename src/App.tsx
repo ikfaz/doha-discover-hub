@@ -20,6 +20,7 @@ import TermsOfService from "./pages/TermsOfService";
 import CookiePolicy from "./pages/CookiePolicy";
 import Listing from "./pages/Listing";
 import BudgetPlanner from "./pages/BudgetPlanner";
+import TourDetail from "./pages/TourDetail";
 
 const queryClient = new QueryClient();
 
@@ -43,7 +44,8 @@ const AppContent = () => {
         <Route path="/videos" element={<Videos />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/budget-planner" element={<BudgetPlanner />} />
+            <Route path="/budget-planner" element={<BudgetPlanner />} />
+            <Route path="/tour/:slug" element={<TourDetail />} />
         <Route path="/listing/:slug" element={<Listing />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-of-service" element={<TermsOfService />} />
