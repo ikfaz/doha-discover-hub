@@ -6,7 +6,6 @@ const ViatorBanner = () => {
   useEffect(() => {
     if (!containerRef.current) return;
 
-    // Create the banner div
     const bannerDiv = document.createElement('div');
     bannerDiv.setAttribute('data-id', 'viator-banner');
     bannerDiv.setAttribute('data-partner-id', 'P00290081');
@@ -17,7 +16,6 @@ const ViatorBanner = () => {
     bannerDiv.setAttribute('data-banner-selection', 'banner1');
     containerRef.current.appendChild(bannerDiv);
 
-    // Load the script
     const script = document.createElement('script');
     script.src = 'https://partners.vtrcdn.com/static/scripts/banners/banners.js';
     script.async = true;
