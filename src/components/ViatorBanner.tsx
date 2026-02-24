@@ -25,7 +25,7 @@ const ViatorBanner = () => {
   }, []);
 
   return (
-    <div className="w-full flex justify-center py-6">
+    <div className="w-full flex justify-center">
       <div ref={containerRef} />
     </div>
   );
