@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import BlogCard from '@/components/BlogCard';
 import Newsletter from '@/components/Newsletter';
 import SEOHead from '@/components/SEOHead';
+import ViatorBanner from '@/components/ViatorBanner';
 
 import alcoholGuideImage from '@/assets/alcohol-guide-doha.jpg';
 import bankAccountQatarImage from '@/assets/bank-account-qatar-guide.jpg';
@@ -497,6 +498,13 @@ const Index = () => {
               Book Desert Safari
             </a>
           </div>
+        </div>
+      </section>
+
+      {/* Viator Widget */}
+      <section className="py-8">
+        <div className="content-container">
+          <ViatorBanner />
         </div>
       </section>
 
