@@ -481,12 +481,22 @@ const Index = () => {
             top attractions, cultural insights, expat tips, and hidden gems in
             Doha.
           </p>
-          <Link
-            to="/blog"
-            className="bg-qatar-gold text-qatar-maroon font-bold py-3 px-8 rounded-md hover:bg-qatar-gold/90 transition-colors"
-          >
-            Explore the Blog
-          </Link>
+          <div className="flex flex-wrap gap-4">
+            <Link
+              to="/blog"
+              className="bg-qatar-gold text-qatar-maroon font-bold py-3 px-8 rounded-md hover:bg-qatar-gold/90 transition-colors"
+            >
+              Explore the Blog
+            </Link>
+            <a
+              href="https://www.viator.com/tours/Doha/Private-Desert-Safari-Dune-Bashing-Camel-Ride-Sand-Boarding-Inland-Sea-Visit/d4453-41683P18?medium=link&pid=P00290081&mcid=42383"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white text-qatar-maroon font-bold py-3 px-8 rounded-md hover:bg-white/90 transition-colors"
+            >
+              Book Desert Safari
+            </a>
+          </div>
         </div>
       </section>
 
