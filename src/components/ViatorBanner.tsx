@@ -14,8 +14,7 @@ const ViatorBanner = () => {
 
     const script = document.createElement('script');
     script.src = 'https://www.viator.com/orion/partner/widget.js';
-    script.async = true;
-    document.body.appendChild(script);
+    containerRef.current.appendChild(script);
 
     return () => {
       if (containerRef.current) {
