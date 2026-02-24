@@ -6,15 +6,21 @@ const ViatorBanner = () => {
   useEffect(() => {
     if (!containerRef.current) return;
 
+    // Clear any previous content
+    containerRef.current.innerHTML = '';
+
+    // Create widget div
     const widgetDiv = document.createElement('div');
     widgetDiv.setAttribute('data-vi-partner-id', 'P00290081');
     widgetDiv.setAttribute('data-vi-widget-ref', 'W-a029452c-11cd-40b1-a70b-255a8b3834a0');
     widgetDiv.setAttribute('data-vi-search-term', 'Doha');
     containerRef.current.appendChild(widgetDiv);
 
+    // Load script
     const script = document.createElement('script');
+    script.async = true;
     script.src = 'https://www.viator.com/orion/partner/widget.js';
-    containerRef.current.appendChild(script);
+    document.body.appendChild(script);
 
     return () => {
       if (containerRef.current) {
@@ -24,11 +30,7 @@ const ViatorBanner = () => {
     };
   }, []);
 
-  return (
-    <div className="w-full flex justify-center">
-      <div ref={containerRef} />
-    </div>
-  );
+  return <div ref={containerRef} className="w-full" />;
 };
 
 export default ViatorBanner;
