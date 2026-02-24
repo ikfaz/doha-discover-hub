@@ -7730,7 +7730,8 @@ const BlogPost = () => {
         <div style="margin-top: 2rem; padding: 1.5rem; background: linear-gradient(135deg, #5c0a1a, #8b1538); border-radius: 1rem; text-align: center;">
           <h3 style="color: #d4a853; font-size: 1.5rem; margin-bottom: 0.5rem;">Ready to Experience the Desert?</h3>
           <p style="color: #e5e5e5; margin-bottom: 1rem;">Book a private desert safari with dune bashing, camel rides, sandboarding, and an Inland Sea visit — all in one unforgettable tour.</p>
-          <a href="https://www.viator.com/tours/Doha/Private-Desert-Safari-Dune-Bashing-Camel-Ride-Sand-Boarding-Inland-Sea-Visit/d4453-41683P18?medium=link&pid=P00290081&mcid=42383" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: #d4a853; color: #5c0a1a; font-weight: bold; padding: 0.75rem 2rem; border-radius: 9999px; text-decoration: none; font-size: 1.1rem;">Book This Tour Now →</a>
+          <a href="https://www.viator.com/tours/Doha/Private-Desert-Safari-Dune-Bashing-Camel-Ride-Sand-Boarding-Inland-Sea-Visit/d4453-41683P18?medium=link&pid=P00290081&mcid=42383" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: #d4a853; color: #5c0a1a; font-weight: bold; padding: 0.75rem 2rem; border-radius: 9999px; text-decoration: none; font-size: 1.1rem;">Book on Viator →</a>
+          <a href="https://gyg.me/Vq8NLqWB" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: #ff5533; color: #ffffff; font-weight: bold; padding: 0.75rem 2rem; border-radius: 9999px; text-decoration: none; font-size: 1.1rem; margin-left: 0.75rem; margin-top: 0.5rem;">Book on GetYourGuide →</a>
         </div>
       `,
       tableOfContents: [
