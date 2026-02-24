@@ -16,16 +16,10 @@ const GetYourGuideWidget = () => {
     widgetDiv.setAttribute('data-gyg-partner-id', '68DXBIL');
     containerRef.current.appendChild(widgetDiv);
 
-    const script = document.createElement('script');
-    script.async = true;
-    script.src = 'https://widget.getyourguide.com/dist/pa.umd.production.min.js';
-    document.body.appendChild(script);
-
     return () => {
       if (containerRef.current) {
         containerRef.current.innerHTML = '';
       }
-      script.remove();
     };
   }, []);
 
