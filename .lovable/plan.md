@@ -1,61 +1,45 @@
 
 
-# Article Readability & Visual Hierarchy Fix
+# Google Crawlability Audit
 
-## Problems Identified
+## Critical Issues Found
 
-From inspecting the live article rendering:
+### 1. Sitemap contains 15 broken blog URLs (HIGH)
+The `public/sitemap.xml` still lists all 15 "seed" slugs that were removed from `Blog.tsx` in the broken links fix (`top-attractions-doha`, `authentic-qatari-cuisine`, `summer-cultural-events`, etc. -- lines 378-466). When Googlebot follows these URLs, it gets redirected to `/blog`, wasting crawl budget and generating soft 404 signals. Google Search Console will flag these as errors.
 
-1. **Lists have no bullets or indentation** -- `<ul>` and `<li>` elements render as plain text lines with zero visual distinction from paragraphs. There are no bullet markers, no padding, and no left margin.
-2. **Headings lack visual hierarchy** -- `h2` and `h3` both use similar charcoal text with only a size difference. No decorative accents, borders, or spacing cues distinguish sections from one another.
-3. **Lead paragraphs look identical to body text** -- The `<p class="lead">` intro paragraph has no distinct styling (larger font, different weight, or color).
-4. **No blockquote or callout styling** -- Important notes and tips blend into the body text.
-5. **No horizontal rules or section dividers** -- Long articles read as a monotonous wall of text with no visual breathing room.
-6. **Missing styles for `h4`** -- Some articles use `h4` elements with no custom styling.
-7. **Spacing between sections is too tight** -- `h2` has only `mt-8` (2rem top margin), insufficient for scanning a 3000+ word article.
+### 2. Legal pages conflict between robots.txt and sitemap (MEDIUM)
+`robots.txt` blocks `/cookie-policy`, `/terms-of-service`, and `/privacy-policy` with `Disallow`, but `sitemap.xml` includes them (lines 474-492). This sends contradictory signals to Google. The sitemap says "index this" while robots.txt says "don't crawl this."
+
+### 3. Organization logo URL will 404 in production (MEDIUM)
+The JSON-LD in `index.html` references `https://experiencedoha.com/src/assets/logo.png`. Vite bundles assets with hashed filenames, so this path does not resolve in production. Google will flag a broken logo in Search Console's structured data report.
+
+### 4. SPA rendering -- no prerendering or SSR (LOW-MEDIUM)
+The site is a client-side React SPA. Google can render JavaScript, but it is slower (days vs hours for static HTML) and less reliable. The `<noscript>` fallback in `index.html` provides minimal content but no article text. This means the initial crawl of every page sees only the shell until Google's rendering queue processes it.
+
+This is a known tradeoff of SPAs and not a blocker, but it does slow indexing of new content.
+
+### 5. Missing tour pages from sitemap (LOW)
+Only 2 tour pages are in the sitemap. If more tours are added later, they will not be discovered unless the sitemap is updated. Currently this matches the 2 tours in `tours.ts`, so it is correct today.
+
+---
 
 ## Plan
 
-### File: `src/index.css` -- Expand prose styles
+### Step 1: Remove 15 broken blog URLs from sitemap.xml
+Delete the `<url>` entries for all 15 non-existent slugs (lines 378-466 in `public/sitemap.xml`). These are the same slugs removed from `Blog.tsx` earlier: `top-attractions-doha`, `authentic-qatari-cuisine`, `summer-cultural-events`, `museum-islamic-art`, `doha-shopping-guide`, `qatar-expat-guide`, `arabic-coffee-culture`, `desert-adventures`, `doha-architecture`, `family-activities`, `weekend-getaways`, `qatari-crafts`, `doha-beaches`, `ramadan-guide`, `sustainable-tourism`.
 
-Add comprehensive typography rules inside the existing `/* Article content styling */` section:
+### Step 2: Remove legal pages from sitemap OR remove them from robots.txt Disallow
+Pick one consistent signal. Since these pages have `noindex` via `SEOHead` and are low-value for SEO, the best approach is to **remove them from the sitemap** (lines 474-492) and keep the `robots.txt` Disallow. This saves crawl budget and avoids contradictions.
 
-**Headings:**
-- `h2`: Add a Sand Gold left border (4px), left padding, larger top margin (3rem), and bottom border to act as a section separator. Font size bumped to `text-3xl`.
-- `h3`: Add a subtle left border (2px, lighter gold), slightly larger size, and more top spacing.
-- `h4`: New rule -- semibold, slightly smaller than h3, with top margin.
+### Step 3: Fix the Organization logo URL
+Move `logo.png` to the `public/` directory (e.g., `public/logo.png`) so it is served at a stable URL (`https://experiencedoha.com/logo.png`). Update the JSON-LD in `index.html` to reference this new path.
 
-**Lead paragraph:**
-- `.prose .lead` or `.prose p.lead`: Larger font size (`text-xl`), lighter color (`text-muted-foreground`), more generous line-height, and a bottom border to separate from the body.
+### Step 4: Add `<link rel="canonical">` to index.html as a static fallback
+Add `<link rel="canonical" href="https://experiencedoha.com/" />` in the `<head>` of `index.html`. Helmet will override it on client-side navigation, but this ensures crawlers that don't execute JS see a canonical on the initial HTML response.
 
-**Lists:**
-- `.prose ul`: `list-disc`, `pl-6` (left padding), `mb-4`, `space-y-2` for vertical rhythm.
-- `.prose ol`: `list-decimal`, `pl-6`, `mb-4`, `space-y-2`.
-- `.prose li`: Proper `leading-relaxed`, text color matching paragraphs.
-
-**Blockquotes:**
-- `.prose blockquote`: Left border in Sand Gold, italic, padding, background tint.
-
-**Horizontal rules:**
-- `.prose hr`: Styled separator with margin.
-
-**Tables (if any):**
-- Basic table styling with borders and padding.
-
-**Links:**
-- Already styled but update to use Sand Gold with better hover state.
-
-**Images inside prose:**
-- `.prose img`: Rounded corners, shadow, margin.
-
-### File: `src/pages/BlogPost.tsx` -- Minor layout tweaks
-
-- Add a `drop-cap` effect or larger first letter on the lead paragraph (via CSS class).
-- Ensure the `prose` wrapper has proper `prose-lg` sizing applied consistently.
-
-## Technical Details
-
-All changes are CSS-only in `src/index.css` (the existing prose rules block, lines 122-141). No article data or HTML content needs to change -- the HTML already uses semantic tags (`h2`, `h3`, `ul`, `li`, `p`, `strong`). The styles just need to target them properly.
-
-The Tailwind `@apply` directive will be used to keep consistency with the design system (Sand Gold `#C2B280`, Charcoal `#36454F`, Pearl White `#FDFDFD`).
+### Files to edit
+- `public/sitemap.xml` -- Remove 15 broken blog URLs and 3 legal page URLs
+- `public/robots.txt` -- No changes needed (already correct)
+- `index.html` -- Fix logo URL in JSON-LD, add static canonical link
+- `public/logo.png` -- Copy logo asset to public directory for stable URL
 
