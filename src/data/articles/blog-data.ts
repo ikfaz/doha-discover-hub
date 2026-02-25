@@ -65,7 +65,7 @@ export const blogPosts: Record<string, ArticleData> = {
       readTime: '18 min read',
       category: 'Expat-Tips',
       imageUrl: endOfServiceGratuityImage,
-      tags: ['EOSG Qatar', 'gratuity calculation', 'end of service', 'labor benefits', 'expat compensation'],
+      tags: ['end of service gratuity Qatar', 'EOSG calculation formula', 'Qatar severance pay', 'gratuity resignation vs termination', 'Qatar labor law benefits 2025', 'how to calculate EOSG Qatar'],
       content: `
         <p>For expatriates working in Qatar, the <strong>End-of-Service Gratuity (EOSG)</strong> is a legally mandated lump-sum payment that serves as a retirement or severance benefit. Governed by the <strong>Qatar Labour Law (Law No. 14 of 2004)</strong>, this gratuity is a crucial component of the total compensation package and represents a significant financial asset upon the termination of employment. Understanding the eligibility criteria and the precise calculation method is essential for any expat planning their financial future in Doha.</p>
 
@@ -177,7 +177,7 @@ export const blogPosts: Record<string, ArticleData> = {
       readTime: '16 min read',
       category: 'Expat-Tips',
       imageUrl: qatarLaborLawReformsImage,
-      tags: ['Qatar labor law', 'Kafala reform', 'NOC abolished', 'worker rights', 'job mobility Qatar'],
+      tags: ['Qatar Kafala system abolished', 'NOC removal Qatar 2025', 'Qatar minimum wage', 'worker rights Qatar', 'job change without NOC Qatar', 'Qatar labor reform update'],
       content: `
         <p>Qatar has undergone a period of unprecedented labor reform, fundamentally reshaping the relationship between employers and the vast expatriate workforce. Driven by international scrutiny and a commitment to modernizing its labor market, the government has dismantled key components of the traditional <strong>Kafala (sponsorship) system</strong>. These reforms, particularly the <strong>abolition of the No-Objection Certificate (NOC)</strong> and the introduction of a <strong>non-discriminatory minimum wage</strong>, have significantly enhanced worker mobility and protection, making the Qatari labor market more dynamic and fair.</p>
 
@@ -279,7 +279,7 @@ export const blogPosts: Record<string, ArticleData> = {
       readTime: '14 min read',
       category: 'Expat-Tips',
       imageUrl: qatarWorkVisaGuideImage,
-      tags: ['Qatar visa', 'work permit', 'residence permit', 'QID card', 'visa requirements'],
+      tags: ['Qatar work visa application', 'residence permit Qatar process', 'QID card requirements', 'how to get work visa Qatar', 'employer sponsorship Qatar', 'Qatar RP renewal'],
       content: `
         <p>For any expatriate planning to live and work in Doha, the <strong>Work Visa and Residence Permit (RP)</strong> is the single most important document. It is the legal foundation of their stay, granting them the right to reside, work, and access essential services in Qatar. The process is primarily employer-driven, with the sponsoring company taking the lead. Understanding the step-by-step requirements and the necessary documentation is crucial for a smooth and efficient transition to life in Qatar.</p>
 
@@ -404,7 +404,7 @@ export const blogPosts: Record<string, ArticleData> = {
       readTime: '12 min read',
       category: 'Expat-Tips',
       imageUrl: qatarTaxGuideImage,
-      tags: ['Qatar tax', 'tax-free income', 'VAT Qatar', 'property tax', 'income tax Qatar'],
+      tags: ['is Qatar tax free', 'Qatar income tax expats', 'VAT in Qatar 2025', 'property tax Doha', 'Qatar corporate tax rate', 'tax free salary Qatar'],
       content: `
         <p>One of the most compelling reasons for expatriates to relocate to Doha is the highly favorable tax environment. Qatar operates a tax system that is designed to attract foreign investment and talent, offering significant financial advantages over most Western and developed economies. For the individual expatriate, the system is characterized by the <strong>absence of personal income tax</strong>. However, a complete understanding of the Qatari tax landscape requires knowledge of corporate taxes, property taxes, and the ongoing discussions surrounding the potential introduction of a Value Added Tax (VAT).</p>
 
@@ -523,7 +523,7 @@ export const blogPosts: Record<string, ArticleData> = {
       readTime: '18 min read',
       category: 'Expat-Tips',
       imageUrl: expatSalariesDohaImage,
-      tags: ['Qatar salaries', 'expat compensation', 'salary negotiation', 'tax-free income', 'housing allowance'],
+      tags: ['average salary Doha expats', 'Qatar salary guide 2025', 'expat pay package Qatar', 'salary negotiation tips Qatar', 'housing allowance Doha', 'engineer salary Qatar'],
       content: `
         <p>One of the primary drivers for expatriates moving to Doha is the opportunity to earn a competitive, tax-free salary. The compensation structure in Qatar is highly attractive, but salaries vary significantly based on industry, experience, nationality, and the specific role. Understanding the typical salary ranges for various expat roles is crucial for negotiating a fair and financially rewarding employment package.</p>
 
@@ -660,7 +660,7 @@ export const blogPosts: Record<string, ArticleData> = {
       readTime: '15 min read',
       category: 'Expat-Tips',
       imageUrl: jobMarketQatarImage,
-      tags: ['Qatar jobs', 'expat employment', 'work visa Qatar', 'Qatar job market', 'career opportunities'],
+      tags: ['jobs in Qatar for foreigners', 'Qatar hiring 2025', 'best sectors to work Qatar', 'how to find job Doha', 'Qatar Vision 2030 jobs', 'LinkedIn Qatar job search'],
       content: `
         <p class="lead">Qatar's economy, fueled by its vast natural gas reserves and ambitious national vision, has created a dynamic and competitive job market that is heavily reliant on expatriate talent. With foreigners making up the vast majority of the workforce, the employment landscape in Doha is characterized by high demand in specific sectors, a focus on skilled professionals, and a continuous push for economic diversification under Qatar National Vision 2030.</p>
 
@@ -780,7 +780,7 @@ export const blogPosts: Record<string, ArticleData> = {
       readTime: '16 min read',
       category: 'Expat-Tips',
       imageUrl: housingRentDohaImage,
-      tags: ['housing Doha', 'rent prices Qatar', 'The Pearl Qatar', 'Lusail City', 'expat housing'],
+      tags: ['rent prices Doha 2025', 'cheapest areas to rent Doha', 'Pearl Qatar rent', 'Lusail apartment prices', 'furnished vs unfurnished Qatar', 'expat housing Doha guide'],
       content: `
         <p class="lead">The residential real estate market in Doha is a critical component of the expatriate experience, often representing the single largest monthly expenditure. Following the significant infrastructure boom leading up to the 2022 FIFA World Cup, the market has entered a phase of stabilization, yet rent prices in prime expat areas remain high.</p>
 
@@ -904,7 +904,7 @@ export const blogPosts: Record<string, ArticleData> = {
       readTime: '14 min read',
       category: 'Expat-Tips',
       imageUrl: costOfLivingImage,
-      tags: ['cost of living Doha', 'Doha vs Dubai', 'Qatar housing costs', 'expat budget Qatar', 'living expenses Qatar'],
+      tags: ['cost of living Doha vs Dubai', 'Doha vs Riyadh expenses', 'cheapest Gulf city for expats', 'monthly expenses Doha 2025', 'grocery prices Qatar vs UAE', 'rent comparison Gulf cities'],
       content: `
         <p class="lead">The decision to relocate to Doha, Qatar, is often driven by the promise of a tax-free salary and a high quality of life. However, maximizing the financial benefits of an expatriate package requires a clear understanding of the cost of living (CoL).</p>
 
@@ -1028,7 +1028,7 @@ export const blogPosts: Record<string, ArticleData> = {
       readTime: '18 min read',
       category: 'Expat-Tips',
       imageUrl: alcoholGuideImage,
-      tags: ['alcohol rules Qatar', 'QDC Qatar', 'alcohol license Doha', 'legal drinking Qatar', 'alcohol permit'],
+      tags: ['can you drink alcohol in Qatar', 'QDC permit Doha', 'alcohol prices Qatar', 'hotel bars Doha', 'nightlife Doha 2025', 'drinking laws Qatar tourists', 'best bars Doha'],
       content: `
         <p class="lead">Qatar, as a Muslim-majority country following Islamic principles, maintains strict alcohol regulations. However, alcohol is not completely banned for non-Muslim residents and visitors. Understanding the legal framework ensures compliance while accessing permitted alcohol consumption.</p>
 
@@ -1404,7 +1404,7 @@ export const blogPosts: Record<string, ArticleData> = {
       readTime: '16 min read',
       category: 'Expat-Tips',
       imageUrl: remoteWorkCafesImage,
-      tags: ['remote work cafes Doha', 'coworking Doha', 'WiFi cafes Qatar', 'digital nomads', 'laptop-friendly cafes'],
+      tags: ['best cafes for working Doha', 'coworking spaces Qatar', 'digital nomad Doha', 'wifi cafes Doha', 'remote work Qatar', 'freelancer cafes Doha 2025'],
       content: `
         <p class="lead">Qatar's remote work scene has matured significantly, with cafes increasingly recognizing the laptop-wielding customer segment. While traditional cafe culture in Qatar centers on socializing, numerous establishments now welcome remote workers with reliable WiFi, abundant power outlets, and productivity-conducive environments.</p>
 
@@ -1761,7 +1761,7 @@ export const blogPosts: Record<string, ArticleData> = {
       readTime: '17 min read',
       category: 'Expat-Tips',
       imageUrl: gymsFitnessDohaImage,
-      tags: ['gyms Doha Qatar', 'fitness centers Qatar', 'gym membership', 'best gyms Qatar', 'fitness trends'],
+      tags: ['best gyms in Doha', 'gym membership prices Qatar', 'ladies only gym Doha', 'CrossFit Doha', 'fitness centers Qatar 2025', 'personal trainer Doha cost'],
       content: `
         <p class="lead">Qatar's fitness scene has exploded in recent years, driven by expatriate demand, government health initiatives, and World Cup legacy infrastructure. From budget-friendly chains to ultra-luxury facilities, Doha offers diverse workout options for every preference and budget.</p>
         
@@ -2163,7 +2163,7 @@ export const blogPosts: Record<string, ArticleData> = {
       readTime: '19 min read',
       category: 'Expat-Tips',
       imageUrl: hiringMaidNannyImage,
-      tags: ['hiring maid Qatar', 'nanny Doha', 'domestic worker visa', 'housemaid salary', 'sponsorship'],
+      tags: ['hiring maid Qatar legal process', 'nanny cost Doha', 'domestic worker visa Qatar', 'housemaid salary Qatar 2025', 'nanny agency Doha', 'maid sponsorship Qatar'],
       content: `
         <p class="lead">Hiring domestic workers in Qatar involves legal sponsorship responsibilities, cultural considerations, and ethical employment practices. With approximately 150,000 domestic workers in Qatar, the sector operates within specific regulatory frameworks that protect both employers and employees.</p>
         
@@ -2598,7 +2598,7 @@ export const blogPosts: Record<string, ArticleData> = {
       readTime: '18 min read',
       category: 'Expat-Tips',
       imageUrl: petImportQatarImage,
-      tags: ['pet import Qatar', 'bringing pets to Doha', 'veterinary clinics', 'animal permit', 'pet relocation'],
+      tags: ['how to bring pets to Qatar', 'pet import rules Qatar', 'vet clinics Doha', 'pet quarantine Qatar', 'dog friendly places Doha', 'pet relocation Qatar cost'],
       content: `
         <p class="lead">Relocating pets to Qatar involves bureaucratic navigation, but thousands of expats successfully bring cats and dogs to Doha annually. Understanding Qatar's pet import regulations and preparing documentation correctly ensures smooth entry for your furry family members.</p>
         
@@ -2954,7 +2954,7 @@ export const blogPosts: Record<string, ArticleData> = {
       readTime: '16 min read',
       category: 'Expat-Tips',
       imageUrl: dohaMetro2025Image,
-      tags: ['Doha Metro', 'public transport', 'Qatar Rail', 'commuting', 'metro fares'],
+      tags: ['Doha metro map 2025', 'metro ticket price Qatar', 'Doha metro stations', 'metro to airport Doha', 'public transport Qatar guide', 'metro card Doha'],
       content: `
         <p class="lead">The Doha Metro represents Qatar's most ambitious public transportation project, designed to reduce traffic congestion and provide world-class transit options. Since its 2019 launch, the network has expanded significantly, with 2025 seeing continued developments that reshape how residents navigate the capital.</p>
         
@@ -3261,7 +3261,7 @@ export const blogPosts: Record<string, ArticleData> = {
       readTime: '18 min read',
       category: 'Expat-Tips',
       imageUrl: groceryShoppingDohaImage,
-      tags: ['grocery shopping', 'Carrefour', 'Lulu Hypermarket', 'money saving', 'expat life'],
+      tags: ['Carrefour vs Lulu Doha', 'grocery prices Qatar', 'cheapest supermarket Doha', 'online grocery delivery Qatar', 'food budget Doha expat', 'where to buy groceries Doha'],
       content: `
         <p class="lead">Grocery expenses represent significant monthly costs for Doha residents, with families spending QAR 2,500-4,500 monthly on food. Understanding the major players—particularly Carrefour and Lulu Hypermarket—and implementing strategic shopping habits can reduce these expenses by 20-30% while maintaining quality.</p>
         
@@ -3559,7 +3559,7 @@ export const blogPosts: Record<string, ArticleData> = {
       readTime: '16 min read',
       category: 'Expat-Tips',
       imageUrl: mobilePlansQatarImage,
-      tags: ['mobile plans', 'Ooredoo', 'Vodafone', 'telecom Qatar', 'data packages'],
+      tags: ['Ooredoo vs Vodafone Qatar', 'best SIM card Qatar tourist', 'cheapest data plan Qatar', 'mobile internet Qatar', 'prepaid SIM Doha', '5G coverage Qatar'],
       content: `
         <p class="lead">Qatar's mobile market features two providers: Ooredoo (formerly Qtel) and Vodafone Qatar. This duopoly means limited competition but also simplified choice. Understanding each provider's strengths, coverage, and pricing helps expats select optimal plans for their communication needs.</p>
         
@@ -3839,7 +3839,7 @@ export const blogPosts: Record<string, ArticleData> = {
       readTime: '15 min read',
       category: 'Expat-Tips',
       imageUrl: bankAccountQatarImage,
-      tags: ['Qatar banking', 'QNB', 'expat finance', 'international banks', 'account opening'],
+      tags: ['how to open bank account Qatar', 'best bank for expats Qatar', 'QNB vs HSBC Qatar', 'bank account requirements Qatar', 'online banking Doha', 'salary account Qatar'],
       content: `
         <p class="lead">Choosing the right bank in Qatar affects your daily financial life significantly—from salary transfers and bill payments to international transfers and loan access. While Qatar National Bank (QNB) dominates the local market, international banks offer alternatives worth considering.</p>
         
@@ -4108,7 +4108,7 @@ export const blogPosts: Record<string, ArticleData> = {
       readTime: '14 min read',
       category: 'Expat-Tips',
       imageUrl: lgbtqQatarImage,
-      tags: ['LGBTQ Qatar', 'expat life', 'safety guide', 'legal information', 'diversity'],
+      tags: ['is Qatar safe for LGBTQ', 'LGBTQ laws Qatar', 'gay rights Qatar 2025', 'LGBTQ expat Qatar', 'mental health support Doha', 'Qatar LGBTQ travel advice'],
       content: `
         <p class="lead">Qatar presents complex realities for LGBTQ+ individuals considering relocation or travel. The country's legal framework, rooted in Islamic Sharia law, criminalizes homosexual acts, yet enforcement and daily experiences vary considerably from legal severity.</p>
         
@@ -4446,7 +4446,7 @@ export const blogPosts: Record<string, ArticleData> = {
       readTime: '16 min read',
       category: 'Expat-Tips',
       imageUrl: drivingDohaImage,
-      tags: ['driving Doha', 'Qatar license', 'traffic rules', 'road safety', 'expat driving'],
+      tags: ['driving license Qatar process', 'traffic rules Qatar', 'driving test Doha', 'road fines Qatar', 'parking Doha tips', 'international driving permit Qatar'],
       content: `
         <p class="lead">Driving in Doha has evolved significantly with infrastructure improvements, yet traffic congestion remains a daily challenge for residents. Understanding traffic patterns, mastering road rules, and developing defensive driving skills ensures safer, less stressful commutes in Qatar's capital.</p>
         
@@ -4864,7 +4864,7 @@ export const blogPosts: Record<string, ArticleData> = {
       readTime: '15 min read',
       category: 'Expat-Tips',
       imageUrl: westBayAlWaabImage,
-      tags: ['Doha neighborhoods', 'West Bay', 'Al Waab', 'rental guide', 'expat housing'],
+      tags: ['West Bay vs Al Waab Doha', 'best neighborhoods Doha rent', 'apartment prices West Bay', 'family areas Doha', 'where to live Doha expats'],
       content: `
         <p class="lead">Choosing between West Bay and Al Waab represents more than a rental decision—it's a lifestyle choice. West Bay offers urban high-rise living with business district convenience, while Al Waab provides suburban villa life with family-oriented amenities.</p>
         
@@ -5175,7 +5175,7 @@ export const blogPosts: Record<string, ArticleData> = {
       readTime: '18 min read',
       category: 'Expat-Tips',
       imageUrl: qatarVisaRulesImage,
-      tags: ['Qatar visa', 'work permit', 'residency', 'golden visa', 'immigration'],
+      tags: ['Qatar visa rules 2025', 'family visa Qatar', 'dependent visa Qatar', 'exit permit abolished Qatar', 'Qatar immigration update', 'visa on arrival Qatar'],
       
       content: `
         <p class="lead">Qatar's immigration policies have evolved significantly, reflecting both economic ambitions and workforce flexibility goals. The 2026 visa regulations offer more pathways for residency while maintaining structured sponsorship systems.</p>
@@ -5464,7 +5464,7 @@ export const blogPosts: Record<string, ArticleData> = {
       readTime: '16 min read',
       category: 'Expat-Tips',
       imageUrl: internationalSchoolsImage,
-      tags: ['international schools', 'school fees', 'education Qatar', 'British schools', 'American schools'],
+      tags: ['best international schools Qatar', 'school fees Doha 2025', 'British schools Qatar', 'IB schools Doha', 'school admission Qatar', 'education cost Qatar expats'],
       content: `
         <p class="lead">Qatar hosts over 170 international schools serving its expatriate population, offering British, American, IB, French, Indian, and other curricula. The 2026 school year sees continued high demand with waitlists common at top-tier institutions, making early planning essential.</p>
         
@@ -5705,7 +5705,7 @@ export const blogPosts: Record<string, ArticleData> = {
       readTime: '14 min read',
       category: 'Expat-Tips',
       imageUrl: womenSafetyDressCodeImage,
-      tags: ['women safety', 'dress code', 'female expat', 'cultural norms', 'modest dress'],
+      tags: ['is Doha safe for women', 'dress code Qatar women', 'what to wear in Qatar', 'female travel Qatar tips', 'women rights Qatar', 'modest clothing Doha'],
       content: `
         <p class="lead">Doha consistently ranks among the world's safest cities for women, with Qatar maintaining extremely low crime rates. Female expats and tourists regularly report feeling secure walking alone, using public transportation, and navigating the city independently—even at night.</p>
         
@@ -5889,7 +5889,7 @@ export const blogPosts: Record<string, ArticleData> = {
       readTime: '12 min read',
       category: 'Expat-Tips',
       imageUrl: costOfLivingImage,
-      tags: ['cost of living', 'rent prices', 'expat budget', 'Qatar inflation', 'monthly expenses'],
+      tags: ['cost of living Doha 2025', 'monthly budget Qatar', 'rent prices Doha', 'is Qatar expensive', 'expat budget Doha', 'utility bills Qatar'],
       
       content: `
         <div class="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-lg mb-8">
@@ -6270,7 +6270,7 @@ export const blogPosts: Record<string, ArticleData> = {
         
         <p>Whether you're a traveler, investor, or someone simply curious about the region, Doha is a destination that deserves your attention. It's not just changing Qatar—<strong>Doha is helping shape the future of the entire Middle East</strong>.</p>
       `,
-      tags: ['Doha Development', 'Vision 2030', 'Middle East', 'Innovation', 'Smart City']
+      tags: ['Qatar Vision 2030', 'Doha smart city', 'Qatar economic diversification', 'Lusail development', 'mega projects Qatar', 'future of Doha']
     },
     'hamad-international-airport-guide': {
       id: '36',
@@ -6471,7 +6471,7 @@ export const blogPosts: Record<string, ArticleData> = {
         
         <p>Whether you're arriving in Doha for the first time or just passing through on a layover, HIA ensures your journey is comfortable, modern, and unforgettable.</p>
       `,
-      tags: ['Hamad Airport', 'HIA', 'Airport Guide', 'Transit', 'Lounges']
+      tags: ['Hamad International Airport guide', 'HIA lounges', 'best airport in world', 'transit hotel Doha airport', 'duty free Doha airport', 'sleep pods HIA']
     },
     'qatari-dishes-doha-culinary-guide': {
       id: '35',
@@ -6661,7 +6661,7 @@ export const blogPosts: Record<string, ArticleData> = {
         <h2 id="conclusion">Final Thoughts</h2>
         <p>Exploring Qatari dishes in Doha is more than just eating—it's a journey through the country's culture, heritage, and hospitality. Whether you're indulging in Machboos by the Corniche, savoring Luqaimat during a desert safari, or sipping Karak in a bustling souq, Qatari cuisine offers flavors you'll remember long after your trip ends.</p>
       `,
-      tags: ['Qatari Food', 'Traditional Cuisine', 'Restaurants', 'Machboos', 'Doha Dining']
+      tags: ['traditional Qatari food', 'Machboos recipe', 'best Qatari restaurants Doha', 'Souq Waqif food', 'Luqaimat dessert', 'Karak tea Doha', 'what to eat in Qatar']
     },
     'women-driving-qatar-guide': {
       id: '34',
@@ -6932,7 +6932,7 @@ export const blogPosts: Record<string, ArticleData> = {
         
         <p>Women in Qatar enjoy the same driving rights as men — and driving is an everyday, normal part of life.</p>
       `,
-      tags: ['Women Rights', 'Driving License', 'Expat Guide', 'Tourist Tips', 'Qatar Laws']
+      tags: ['can women drive in Qatar', 'women driving laws Qatar', 'female driving Qatar', 'car rental women Qatar', 'driving license women Doha']
     },
     'doha-safety-guide-tourists-expats': {
       id: '33',
@@ -7202,7 +7202,7 @@ export const blogPosts: Record<string, ArticleData> = {
         
         <p>If you follow local laws and respect Qatar's culture, you will have a smooth, enjoyable, and safe trip.</p>
       `,
-      tags: ['Safety Guide', 'Crime Rates', 'Travel Tips', 'Tourist Safety', 'Doha']
+      tags: ['is Doha safe for tourists', 'Qatar crime rate', 'safety tips Qatar', 'solo travel Doha', 'safest cities Middle East', 'emergency numbers Qatar']
     },
     'prostitution-laws-doha-qatar-guide': {
       id: '32',
@@ -7457,7 +7457,7 @@ export const blogPosts: Record<string, ArticleData> = {
         
         <p>By understanding the rules and staying aware, tourists can enjoy a smooth, comfortable, and memorable stay in one of the Middle East's most impressive cities.</p>
       `,
-      tags: ['Legal Guide', 'Safety', 'Laws', 'Tourist Information', 'Doha']
+      tags: ['is prostitution legal Qatar', 'escort laws Doha', 'Qatar criminal law', 'tourist safety Qatar legal', 'online scams Qatar']
     },
     'alcohol-allowed-doha-qatar-guide': {
       id: '31',
@@ -7689,7 +7689,7 @@ export const blogPosts: Record<string, ArticleData> = {
         
         <p>Doha offers a safe, premium, and relaxed nightlife experience — perfect for tourists who want to enjoy their vacation responsibly.</p>
       `,
-      tags: ['Alcohol Laws', 'Nightlife', 'Legal Guide', 'Hotel Bars', 'Doha']
+      tags: ['can you drink alcohol in Doha', 'nightlife Doha guide', 'hotel bars Qatar', 'alcohol prices Doha', 'drinking age Qatar', 'Ramadan alcohol rules']
     },
     'desert-safari-inland-sea-khor-al-adaid': {
       id: '30',
@@ -7801,7 +7801,7 @@ export const blogPosts: Record<string, ArticleData> = {
         { id: 'overnight', title: 'The Overnight Experience', level: 3 },
         { id: 'practical-tips', title: 'Practical Tips for the Desert Safari', level: 2 },
       ],
-      tags: ['Desert', 'Adventure', 'Nature', 'Attractions', 'Tours']
+      tags: ['desert safari Qatar price', 'Khor Al Adaid tour', 'dune bashing Doha', 'overnight desert camp Qatar', 'camel ride Qatar', 'sandboarding Doha', 'inland sea Qatar']
     },
     'mia-nmoq-museum-combo-guide': {
       id: '29',
@@ -7909,7 +7909,7 @@ export const blogPosts: Record<string, ArticleData> = {
         { id: 'combo', title: 'The Combo Advantage: Practicality and Value', level: 2 },
         { id: 'discover-pass', title: 'The Discover One Pass', level: 3 },
       ],
-      tags: ['Museums', 'Culture', 'Architecture', 'Art', 'Attractions']
+      tags: ['Museum of Islamic Art Doha', 'National Museum Qatar', 'MIA tickets', 'NMoQ opening hours', 'best museums Doha', 'Qatar museums guide']
     },
     'souq-waqif-night-experiences-haggling': {
       id: '28',
@@ -8010,7 +8010,7 @@ export const blogPosts: Record<string, ArticleData> = {
         { id: 'golden-rules', title: 'The Golden Rules of Negotiation', level: 3 },
         { id: 'practical-tips', title: 'Practical Tips for a Night Visit', level: 2 },
       ],
-      tags: ['Culture', 'Shopping', 'Food', 'Souq Waqif', 'Nightlife']
+      tags: ['Souq Waqif Doha guide', 'shopping Souq Waqif', 'haggling tips Qatar', 'Souq Waqif at night', 'spice market Doha', 'falcon souq Qatar']
     },
     'ultimate-doha-layover-24-48-hours': {
       id: '27',
@@ -8149,7 +8149,7 @@ export const blogPosts: Record<string, ArticleData> = {
         { id: 'day-2', title: 'Day 2: Modernity and Adventure', level: 3 },
         { id: 'logistics', title: 'Stopover Logistics: The Discover Qatar Program', level: 2 },
       ],
-      tags: ['Expat-Tips', 'Layover', 'Itinerary', 'Travel', 'Attractions']
+      tags: ['Doha layover itinerary', '24 hours in Doha', '48 hour stopover Qatar', 'what to do Doha transit', 'Qatar Airways stopover', 'layover guide Doha']
     },
     'qatar-airways-stopover-packages-lounge': {
       id: '26',
@@ -8267,7 +8267,7 @@ export const blogPosts: Record<string, ArticleData> = {
         { title: 'The Lounge Access Distinction', id: 'distinction' },
         { title: 'A Seamless Travel Experience', id: 'conclusion' }
       ],
-      tags: ['Qatar Airways', 'Stopover Package', 'Lounge Access', 'Travel Deals', 'Luxury Travel']
+      tags: ['Qatar Airways stopover package', 'Discover Qatar hotel deal', 'Al Mourjan lounge review', 'stopover Doha $14', 'HIA lounge access', 'Qatar Airways transit hotel']
     },
     'doha-global-mediation-hub-congo-peace': {
       id: '25',
@@ -8364,7 +8364,7 @@ export const blogPosts: Record<string, ArticleData> = {
         { title: 'Doha: A Global Nexus for Peace', id: 'global-nexus' },
         { title: 'The Future of Qatari Diplomacy', id: 'future' }
       ],
-      tags: ['Diplomacy', 'Peace Talks', 'Global Politics', 'Mediation', 'International Relations']
+      tags: ['Doha mediation hub', 'Qatar peace talks', 'Congo peace agreement Doha', 'Qatar diplomacy', 'international mediation Qatar']
     },
     'fifa-u17-world-cup-qatar-2025': {
       id: '24',
@@ -8472,7 +8472,7 @@ export const blogPosts: Record<string, ArticleData> = {
         { title: 'Why Attend the U-17 World Cup?', id: 'why-attend' },
         { title: 'A Celebration of Youth Football', id: 'conclusion' }
       ],
-      tags: ['FIFA U-17', 'World Cup', 'Football', 'Sports Events', 'Tickets']
+      tags: ['FIFA U-17 World Cup Qatar', 'football tickets Doha', 'Qatar sports events 2025', 'Lusail Stadium events', 'youth football World Cup']
     },
     'corniche-sunset-dhow-cruise-guide': {
       id: '23',
@@ -8608,7 +8608,7 @@ export const blogPosts: Record<string, ArticleData> = {
         { title: 'Practical Considerations', id: 'practical' },
         { title: 'A Lasting Memory', id: 'conclusion' }
       ],
-      tags: ['Corniche', 'Sunset', 'Dhow Cruise', 'Photography', 'Romantic Activities']
+      tags: ['Doha Corniche walk', 'dhow cruise Doha', 'sunset Doha', 'best photo spots Doha', 'romantic things to do Doha', 'boat tour Qatar']
     },
     'pearl-qatar-luxury-shopping-dining': {
       id: '22',
@@ -8705,7 +8705,7 @@ export const blogPosts: Record<string, ArticleData> = {
         { title: 'Practical Tips for a Luxury Visit', id: 'practical-tips' },
         { title: 'A Lifestyle Destination', id: 'conclusion' }
       ],
-      tags: ['The Pearl', 'Luxury Shopping', 'Fine Dining', 'Porto Arabia', 'Lifestyle']
+      tags: ['Pearl Qatar restaurants', 'Porto Arabia shopping', 'Qanat Quartier Doha', 'luxury dining Doha', 'Pearl Island Qatar', 'things to do Pearl Qatar']
     },
     'katara-cultural-village-events-2025': {
       id: '21',
@@ -8833,7 +8833,7 @@ export const blogPosts: Record<string, ArticleData> = {
         { title: 'Planning Your 2025 Visit', id: 'planning' },
         { title: 'A Bridge Between Cultures', id: 'conclusion' }
       ],
-      tags: ['Katara', 'Events Calendar', 'Festivals', 'Cultural Events', '2025 Guide']
+      tags: ['Katara Cultural Village events', 'Doha festivals 2025', 'Katara beach', 'art exhibitions Doha', 'Dhow Festival Qatar', 'cultural events Qatar']
     },
     'doha-airport-layover-activities': {
       id: '20',
@@ -8899,7 +8899,7 @@ export const blogPosts: Record<string, ArticleData> = {
         { title: 'Bonus: Architectural Exploration', id: 'bonus' },
         { title: 'Airport as Destination', id: 'conclusion' }
       ],
-      tags: ['Airport Guide', 'Hamad Airport', 'Airport Facilities', 'Layover Tips', 'Airport Activities']
+      tags: ['Hamad Airport layover activities', 'things to do Doha airport', 'HIA spa and lounge', 'sleep pods Hamad Airport', 'duty free Doha airport']
     },
     'five-best-things-doha-layover': {
       id: '19',
@@ -8941,7 +8941,7 @@ export const blogPosts: Record<string, ArticleData> = {
         { title: '5. Katara Cultural Village', id: 'katara' },
         { title: 'Why These Five Matter', id: 'conclusion' }
       ],
-      tags: ['Top 5', 'Best Activities', 'Must-Do', 'Layover Guide', 'Essential Doha']
+      tags: ['best things to do Doha layover', 'top Doha attractions', 'quick Doha visit', 'layover activities Hamad Airport', 'must see Doha']
     },
     '9-hour-stopover-qatar-worth-it': {
       id: '18',
@@ -8999,7 +8999,7 @@ export const blogPosts: Record<string, ArticleData> = {
         { title: 'The Middle-Ground Approach', id: 'middle-ground' },
         { title: 'The Final Verdict', id: 'verdict' }
       ],
-      tags: ['Decision Making', '9 Hours', 'Layover Planning', 'Risk Assessment', 'Travel Tips']
+      tags: ['9 hour layover Doha', 'should I leave airport Doha', 'short stopover Qatar', 'Doha transit tips', 'airport to city Doha time']
     },
     'discover-qatar-stopover-guide': {
       id: '17',
@@ -9061,7 +9061,7 @@ export const blogPosts: Record<string, ArticleData> = {
         { title: 'Family-Friendly Destination', id: 'family-friendly' },
         { title: 'The Qatar Promise', id: 'conclusion' }
       ],
-      tags: ['Discover Qatar', 'Tourism', 'Cultural Attractions', 'Safety', 'Family Travel']
+      tags: ['Discover Qatar program', 'why visit Qatar', 'Qatar tourist visa', 'Qatar family holiday', 'is Qatar worth visiting', 'Qatar tourism guide']
     },
     '24-hours-doha-qatar-airways': {
       id: '16',
@@ -9123,7 +9123,7 @@ export const blogPosts: Record<string, ArticleData> = {
         { title: 'Getting Around', id: 'transportation' },
         { title: "Qatar Airways' Vision Realized", id: 'conclusion' }
       ],
-      tags: ['24 Hours', 'Full Day Itinerary', 'Qatar Airways', 'Complete Guide', 'Doha']
+      tags: ['one day in Doha itinerary', '24 hours Doha guide', 'Qatar Airways city tour', 'best day trip Doha', 'Doha in a day']
     },
     'doha-layover-time-guide': {
       id: '15',
@@ -9177,7 +9177,7 @@ export const blogPosts: Record<string, ArticleData> = {
         { title: 'Weather-Conscious Planning', id: 'seasonal-planning' },
         { title: 'Quality Over Quantity', id: 'quality-over-quantity' }
       ],
-      tags: ['Layover Planning', 'Time Management', 'Travel Tips', 'Itineraries', 'Doha']
+      tags: ['Doha layover what to do', 'how long layover Doha', '4 hour layover Doha', '6 hour layover Qatar', 'transit time Hamad Airport']
     },
     'perfect-layover-doha-guide': {
       id: '14',
@@ -9235,7 +9235,7 @@ export const blogPosts: Record<string, ArticleData> = {
         { title: 'Safety and Etiquette', id: 'safety' },
         { title: 'The Perfect Layover Philosophy', id: 'conclusion' }
       ],
-      tags: ['Layover Tips', 'Travel Planning', 'Doha Guide', 'Transportation', 'Cultural Tips']
+      tags: ['perfect Doha layover plan', 'best layover itinerary Doha', 'what to do during layover Qatar', 'Doha stopover tips', 'layover packing list']
     },
     'things-to-do-doha-layover': {
       id: '13',
@@ -9293,7 +9293,7 @@ export const blogPosts: Record<string, ArticleData> = {
         { title: '9. Culinary Exploration', id: 'culinary' },
         { title: '10. Spa and Wellness', id: 'spa-wellness' }
       ],
-      tags: ['Activities', 'Layover Guide', 'Attractions', 'Things To Do', 'Doha']
+      tags: ['top 10 things to do Doha', 'must see Doha attractions', 'bucket list Qatar', 'best experiences Doha', 'Doha tourist guide 2025']
     },
     'hamad-airport-transfers-guide': {
       id: '12',
@@ -9351,7 +9351,7 @@ export const blogPosts: Record<string, ArticleData> = {
         { title: 'The Airport Experience', id: 'airport-experience' },
         { title: 'Premium Lounge Access', id: 'lounge-access' }
       ],
-      tags: ['Airport Guide', 'Travel Tips', 'Hamad Airport', 'Transit', 'Doha']
+      tags: ['Hamad Airport to city transfer', 'taxi Doha airport', 'metro from airport Doha', 'Uber Doha airport', 'airport transfer Qatar cost']
     },
     'qatar-stopover-program-guide': {
       id: '11',
@@ -9413,7 +9413,7 @@ export const blogPosts: Record<string, ArticleData> = {
         { title: 'Strategic Travel Planning', id: 'travel-planning' },
         { title: 'Conclusion', id: 'conclusion' }
       ],
-      tags: ['Travel Tips', 'Qatar Airways', 'Stopover', 'Doha', 'Travel Planning']
+      tags: ['Qatar stopover package', 'free hotel Qatar transit', 'Discover Qatar stopover', 'Qatar Airways layover deal']
     },
     'default': {
       id: '1',
@@ -9458,6 +9458,6 @@ export const blogPosts: Record<string, ArticleData> = {
         
         <p>Whether you're a first-time visitor or a long-time resident, these attractions showcase the best of what Doha has to offer. Each destination tells a part of Qatar's story, from its ancient trading heritage to its modern ambitions. Plan your visit to include these highlights, and you'll leave with a deeper appreciation for this remarkable city.</p>
       `,
-      tags: ['Attractions', 'Museums', 'Culture', 'Shopping', 'Architecture']
+      tags: ['things to do in Doha', 'top attractions Qatar', 'Doha travel guide', 'best places to visit Doha', 'Qatar sightseeing']
     }
 };

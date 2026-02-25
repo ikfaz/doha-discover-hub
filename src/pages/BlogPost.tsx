@@ -268,6 +268,7 @@ const BlogPost = () => {
         type="article"
         publishedTime={articleIsoDate}
         jsonLd={articleJsonLd}
+        keywords={post.tags.join(', ')}
       />
       <NavBar />
       
