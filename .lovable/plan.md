@@ -1,52 +1,71 @@
 
 
-# Optimize Meta Descriptions: Compelling, Under 160 Characters
+# H1 & Heading Hierarchy Optimization
 
-## Current State
+## Findings
 
-All blog articles already have a `metaDescription` field, and `BlogPost.tsx` correctly prioritizes it via `post.metaDescription || post.excerpt || post.content.substring(0, 155)`. However, there are two areas to improve:
+After auditing all pages, here is the current state:
 
-1. **Static page descriptions** are generic and lack click-driving language (e.g., "Learn about Experience Doha, your comprehensive guide to Qatar's vibrant capital city.")
-2. **Some blog `metaDescription` values** exceed 160 characters or could be more compelling with action verbs, numbers, and benefit-driven copy
+### Pages with exactly one H1 (correct)
+- `About.tsx` -- H1 via translation key
+- `Blog.tsx` -- H1 "Experience Doha Blog - Qatar Travel Guide"
+- `BlogPost.tsx` -- H1 = post title
+- `BlogCategory.tsx` -- H1 = category title
+- `BudgetPlanner.tsx` -- H1 "Doha Expat Budget Planner"
+- `Contact.tsx` -- H1 via translation key
+- `Gallery.tsx` -- H1 via `GalleryHeader` component
+- `Videos.tsx` -- H1 "Experience Doha Videos"
+- `TourDetail.tsx` -- H1 = tour title (+ separate H1 for "Tour Not Found" state, which is fine since only one renders)
+- `PrivacyPolicy.tsx` -- H1 "Privacy Policy"
+- `TermsOfService.tsx` -- H1 "Terms of Service"
+- `CookiePolicy.tsx` -- H1 "Cookie Policy"
+- `NotFound.tsx` -- H1 "404"
+- `Listing.tsx` -- H1 = listing title
 
-## What Changes
+### Pages MISSING an H1
+- **`Index.tsx`** -- No H1 at all. The "Featured Articles" heading is an H2. The homepage has zero H1 tags, which is the most critical SEO issue.
 
-### 1. Static Page Descriptions (7 pages)
+### Heading hierarchy issues
+- **`Index.tsx`** -- Only has an H2 for "Featured Articles" and whatever Newsletter renders (H2). No H1.
+- **`Videos.tsx`** -- Uses H3 tags for video titles inside a grid. This is correct hierarchy (H1 > H2 "Featured Playlist" > H3 video cards).
+- **`BlogPost.tsx`** -- Table of Contents heading uses H3 which is fine. The blog content itself uses H2/H3 from the CMS HTML, which is correct.
 
-| Page | Current Description | New Description (under 160 chars) |
-|------|---|---|
-| **Index.tsx** | "The ultimate guide to living in and visiting Doha, Qatar. Updated for 2026 with visa rules, cost of living, and stopover tips." (127) | "Plan your Doha trip or move with confidence. 2026 guides on visa rules, cost of living, layovers, salaries, and hidden gems in Qatar." (134) |
-| **About.tsx** | "Learn about Experience Doha, your comprehensive guide to Qatar's vibrant capital city." (86) | "Meet the team behind Experience Doha — expat-tested guides, honest tips, and insider knowledge for tourists and residents in Qatar." (130) |
-| **Blog.tsx** | "Expert insights, guides, and stories about life and travel in Qatar's vibrant capital. Tips for expats, tourists, and anyone curious about Doha." (145) | "Browse 60+ expert guides on Doha — from layover itineraries and expat tips to visa rules and hidden restaurants. Updated weekly." (127) |
-| **Gallery.tsx** | "Browse stunning photos of Doha's skyline, landmarks, culture, and attractions. Visual inspiration for your Qatar trip." (119) | "Stunning Doha photos: skyline views, Souq Waqif nights, desert sunsets, and cultural landmarks. Free to browse and share." (122) |
-| **Videos.tsx** | "Watch videos about Doha attractions, culture, food, and travel experiences. Visual guides to help you explore Qatar's capital." (124) | "Watch Doha travel videos — attraction tours, food reviews, cultural events, and insider tips. Your visual guide to Qatar." (120) |
-| **Contact.tsx** | "Get in touch with Experience Doha. Questions about Qatar travel, suggestions, or partnerships." (93) | "Have a question about Doha or Qatar? Reach out for travel tips, partnership inquiries, or content suggestions. We reply fast." (124) |
-| **BudgetPlanner.tsx** | "Plan your monthly expenses in Doha with our interactive budget planner. Calculate costs for singles or families, convert currencies, and estimate savings potential." (163 -- over limit!) | "Free Doha budget calculator: estimate rent, groceries, transport, and school fees. Plan monthly costs for singles or families in Qatar." (141) |
+## Plan
 
-### 2. SEOHead Default Description
+### 1. Add H1 to Index.tsx (homepage)
 
-The default in `SEOHead.tsx` is already 148 chars and decent, but could be more action-oriented:
-- Current: "Discover the best things to do in Doha, Qatar. Expert guides on attractions, culture, food, layovers, and experiences. Plan your perfect Qatar visit." (150)
-- New: "Your go-to Doha guide: attractions, layover tips, expat advice, food, and culture. Plan your perfect Qatar trip with 60+ expert articles." (139)
+Add a visually prominent but SEO-meaningful H1 above the featured articles section. The homepage is the most important page to have an H1.
 
-### 3. Blog Article `metaDescription` Audit
+**File: `src/pages/Index.tsx`**
 
-All existing blog metaDescriptions are already well-crafted and under 160 characters. No changes needed for blog-data.ts.
+Add an H1 hero section between NavBar and the Viator widget:
+
+```html
+<section className="bg-qatar-maroon text-white py-16">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h1 className="text-4xl md:text-5xl font-bold font-heading mb-6">
+      Experience Doha: Your Guide to Qatar
+    </h1>
+    <p className="text-xl max-w-3xl mx-auto text-white/80">
+      Expert guides on attractions, food, culture, layovers, and expat life in Qatar's capital
+    </p>
+  </div>
+</section>
+```
+
+This matches the visual pattern used on Blog, About, Contact, and Videos pages.
+
+### 2. No other changes needed
+
+All other pages already have exactly one H1 and use proper H2-H6 hierarchy. The blog article content from `blog-data.ts` uses H2 for sections and H3 for subsections, which is the correct semantic structure under the H1 title.
 
 ## Files to Edit
 
-1. `src/components/SEOHead.tsx` -- Update default description
-2. `src/pages/Index.tsx` -- Update description
-3. `src/pages/About.tsx` -- Update description
-4. `src/pages/Blog.tsx` -- Update description
-5. `src/pages/Gallery.tsx` -- Update description
-6. `src/pages/Videos.tsx` -- Update description
-7. `src/pages/Contact.tsx` -- Update description
-8. `src/pages/BudgetPlanner.tsx` -- Update description (currently over 160 chars)
+1. **`src/pages/Index.tsx`** -- Add H1 hero section (the only page missing an H1)
 
 ## Technical Notes
 
-- The `description` prop flows through `SEOHead` into both `<meta name="description">` and `<meta property="og:description">`, so a single edit covers both.
-- Blog articles are unaffected since they already have dedicated `metaDescription` fields under 160 chars.
-- Each new description includes a primary keyword, a benefit or number, and action-oriented language to maximize CTR.
+- The H1 text "Experience Doha: Your Guide to Qatar" contains the site's primary keyword and matches the brand.
+- The subtitle reuses language from the meta description for consistency.
+- The visual style (maroon background, white text, centered) matches every other page header for design consistency.
 
