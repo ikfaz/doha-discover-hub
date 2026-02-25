@@ -16,7 +16,7 @@ interface SEOHeadProps {
 const BASE_URL = 'https://experiencedoha.com';
 
 export const SEOHead = ({
-  title = 'Experience Doha - Ultimate Guide to Qatar Travel & Attractions 2026',
+  title = 'Experience Doha - Qatar Travel & Attractions Guide 2026',
   description = 'Discover the best things to do in Doha, Qatar. Expert guides on attractions, culture, food, layovers, and experiences. Plan your perfect Qatar visit.',
   image = 'https://images.unsplash.com/photo-1496307653780-42ee777d4833?q=80&w=2670&auto=format&fit=crop',
   type = 'website',
