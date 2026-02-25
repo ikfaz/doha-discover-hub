@@ -33,7 +33,7 @@ const Contact = () => {
     <div className="min-h-screen flex flex-col">
       <SEOHead 
         title="Contact Us - Experience Doha"
-        description="Get in touch with Experience Doha. Questions about Qatar travel, suggestions, or partnerships."
+        description="Have a question about Doha or Qatar? Reach out for travel tips, partnership inquiries, or content suggestions. We reply fast."
       />
       <NavBar />
       
