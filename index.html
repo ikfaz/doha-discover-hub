@@ -33,18 +33,8 @@
     <link rel="alternate icon" type="image/png" href="/logo.png">
     <link rel="canonical" href="https://experiencedoha.com/" />
 
-    <!-- Google Analytics -->
+    <!-- Google Analytics (async loader) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-8TYDL7HNV8"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-8TYDL7HNV8');
-    </script>
-    <!-- End Google Analytics -->
-
-    <!-- GetYourGuide Analytics -->
-    <script async defer src="https://widget.getyourguide.com/dist/pa.umd.production.min.js" data-gyg-partner-id="68DXBIL"></script>
 
     <!-- Organization Structured Data for Google -->
     <script type="application/ld+json">
@@ -93,5 +83,11 @@
     <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
     <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-8TYDL7HNV8');
+    </script>
   </body>
 </html>
