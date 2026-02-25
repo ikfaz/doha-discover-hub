@@ -222,53 +222,48 @@ function renderArticleContent(slug: string, content: string) {
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   const post = blogPosts[slug || 'default'] || blogPosts['default'];
+  const articleDescription = post.metaDescription || post.excerpt || post.content.substring(0, 155).replace(/<[^>]*>/g, '');
+  const articleIsoDate = post.isoDate || post.date;
 
   const handleCopyLink = () => {
     navigator.clipboard.writeText(window.location.href);
   };
 
-  // Structured Data for SEO
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.innerHTML = JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": post.title,
-      "image": post.imageUrl,
-      "author": {
-        "@type": "Organization",
-        "name": post.author
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "ExperienceDoha.com",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://experiencedoha.com/logo.png"
-        }
-      },
-      "datePublished": post.date,
-      "description": post.excerpt || post.content.substring(0, 160).replace(/<[^>]*>/g, ''),
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": `https://experiencedoha.com/blog/${slug}`
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": post.title,
+    "image": typeof post.imageUrl === 'string' ? post.imageUrl : undefined,
+    "author": {
+      "@type": "Organization",
+      "name": post.author
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "ExperienceDoha.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://experiencedoha.com/logo.png"
       }
-    });
-    document.head.appendChild(script);
-    return () => {
-      document.head.removeChild(script);
-    };
-  }, [post, slug]);
+    },
+    "datePublished": articleIsoDate,
+    "dateModified": articleIsoDate,
+    "description": articleDescription,
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `https://experiencedoha.com/blog/${slug}`
+    }
+  };
 
   return (
     <div className="min-h-screen flex flex-col">
       <SEOHead 
         title={`${post.title} - Experience Doha`}
-        description={post.metaDescription || post.excerpt}
+        description={articleDescription}
         image={typeof post.imageUrl === 'string' ? post.imageUrl : undefined}
         type="article"
-        publishedTime={post.date}
+        publishedTime={articleIsoDate}
+        jsonLd={articleJsonLd}
       />
       <NavBar />
       

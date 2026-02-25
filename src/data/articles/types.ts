@@ -8,6 +8,7 @@ export interface ArticleData {
   id: string;
   title: string;
   date: string;
+  isoDate?: string;
   author: string;
   readTime: string;
   category: string;
