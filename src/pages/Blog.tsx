@@ -613,7 +613,7 @@ const Blog = () => {
     <div className="min-h-screen flex flex-col">
       <SEOHead 
         title="Experience Doha Blog - Qatar Travel Guide & Expat Tips"
-        description="Expert insights, guides, and stories about life and travel in Qatar's vibrant capital. Tips for expats, tourists, and anyone curious about Doha."
+        description="Browse 60+ expert guides on Doha — from layover itineraries and expat tips to visa rules and hidden restaurants. Updated weekly."
       />
       <NavBar />
       

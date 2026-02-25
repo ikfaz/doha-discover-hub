@@ -44,7 +44,7 @@ const Videos = () => {
     <div className="min-h-screen flex flex-col">
       <SEOHead 
         title="Doha Travel Videos - Experience Doha"
-        description="Watch videos about Doha attractions, culture, food, and travel experiences. Visual guides to help you explore Qatar's capital."
+        description="Watch Doha travel videos — attraction tours, food reviews, cultural events, and insider tips. Your visual guide to Qatar."
       />
       <NavBar />
       

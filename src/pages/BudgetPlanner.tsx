@@ -162,7 +162,7 @@ const BudgetPlanner = () => {
     <div className="min-h-screen flex flex-col">
       <SEOHead 
         title="Doha Expat Budget Planner - Calculate Living Costs in Qatar"
-        description="Plan your monthly expenses in Doha with our interactive budget planner. Calculate costs for singles or families, convert currencies, and estimate savings potential."
+        description="Free Doha budget calculator: estimate rent, groceries, transport, and school fees. Plan monthly costs for singles or families in Qatar."
       />
       <NavBar />
       

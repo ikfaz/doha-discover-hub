@@ -146,7 +146,7 @@ const Gallery = () => {
     <div className="min-h-screen flex flex-col">
       <SEOHead 
         title="Doha Photo Gallery - Experience Doha"
-        description="Browse stunning photos of Doha's skyline, landmarks, culture, and attractions. Visual inspiration for your Qatar trip."
+        description="Stunning Doha photos: skyline views, Souq Waqif nights, desert sunsets, and cultural landmarks. Free to browse and share."
       />
       <NavBar />
       <GalleryHeader />
