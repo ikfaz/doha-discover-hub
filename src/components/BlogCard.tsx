@@ -74,6 +74,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
             src={imgSrc}
             alt={`${title} - ${category} guide image`}
             className="w-full h-full object-cover transition-opacity duration-300"
+            loading="lazy"
             style={{ opacity: isLoading ? 0 : 1 }}
           />
         </div>
