@@ -56,7 +56,7 @@ import endOfServiceGratuityImage from '@/assets/end-of-service-gratuity-qatar-20
 export const blogPosts: Record<string, ArticleData> = {
     'end-of-service-gratuity-qatar-2025': {
       id: '61',
-      title: 'The Final Payout: End-of-Service Benefits and Gratuity Calculations in Qatar',
+      title: 'End-of-Service Gratuity in Qatar 2025',
       date: 'June 10, 2026',
       isoDate: '2026-06-10',
       metaDescription: 'Calculate your end-of-service gratuity in Qatar. Complete 2025 guide to EOSG eligibility, calculation formula, and resignation vs termination payouts.',
@@ -168,7 +168,7 @@ export const blogPosts: Record<string, ArticleData> = {
     },
     'qatar-labor-law-reforms-2025': {
       id: '60',
-      title: 'A New Era of Mobility: Labor Laws and the Sponsorship (Kafala) System Reforms in Qatar',
+      title: 'Qatar Kafala & Labor Law Reforms 2025',
       date: 'June 9, 2026',
       isoDate: '2026-06-09',
       metaDescription: 'Qatar Kafala reforms 2025: new labor mobility rules, contract switching, exit permits abolished. Complete guide for expat workers in Doha.',
@@ -270,7 +270,7 @@ export const blogPosts: Record<string, ArticleData> = {
     },
     'qatar-work-visa-guide-2025': {
       id: '59',
-      title: 'The Golden Ticket: Work Visa and Residence Permit (RP) Application Process in Qatar',
+      title: 'Qatar Work Visa & RP Guide 2025',
       date: 'June 8, 2026',
       isoDate: '2026-06-08',
       metaDescription: 'Step-by-step Qatar work visa and residence permit guide 2025. Requirements, processing times, medical tests, and RP renewal for expats.',
@@ -395,7 +395,7 @@ export const blogPosts: Record<string, ArticleData> = {
     },
     'qatar-tax-guide-2025': {
       id: '58',
-      title: 'The Tax-Free Promise: Taxation in Qatar – Income Tax, Property Tax, and the VAT Outlook',
+      title: 'Qatar Tax Guide 2025: Is It Tax-Free?',
       date: 'June 7, 2026',
       isoDate: '2026-06-07',
       metaDescription: 'Is Qatar really tax-free? 2025 guide to income tax, corporate tax, property tax, and the VAT outlook for expats and businesses in Doha.',
@@ -514,7 +514,7 @@ export const blogPosts: Record<string, ArticleData> = {
     },
     'expat-salaries-doha-2025': {
       id: '57',
-      title: 'The Compensation Landscape: Average and Typical Salaries for Various Expat Roles in Doha',
+      title: 'Expat Salaries in Doha 2025: By Role',
       date: 'June 6, 2026',
       isoDate: '2026-06-06',
       metaDescription: 'Average expat salaries in Doha 2025 by role: engineering, finance, healthcare, IT. Salary benchmarks, packages, and negotiation tips for Qatar.',
@@ -651,7 +651,7 @@ export const blogPosts: Record<string, ArticleData> = {
     },
     'job-market-qatar-2025': {
       id: '56',
-      title: 'The Gateway to Opportunity: Job Market and Employment for Foreigners in Qatar',
+      title: 'Qatar Job Market for Foreigners 2025',
       date: 'June 5, 2026',
       isoDate: '2026-06-05',
       metaDescription: 'Qatar job market 2025: top industries hiring, salary trends, job search strategies, and CV tips for foreigners seeking employment in Doha.',
@@ -771,7 +771,7 @@ export const blogPosts: Record<string, ArticleData> = {
     },
     'housing-rent-doha-2025': {
       id: '55',
-      title: "The Real Estate Landscape: Housing and Rent Prices in Doha's Current Market",
+      title: 'Housing & Rent Prices in Doha 2025',
       date: 'June 4, 2026',
       isoDate: '2026-06-04',
       metaDescription: 'Doha rent prices 2025: apartments and villas in West Bay, The Pearl, Al Sadd. Average rents, lease tips, and tenant rights in Qatar.',
@@ -895,7 +895,7 @@ export const blogPosts: Record<string, ArticleData> = {
     },
     'cost-of-living-doha-dubai-riyadh': {
       id: '54',
-      title: 'The Price of Paradise: Cost of Living in Doha and a Comparison to Dubai and Riyadh',
+      title: 'Cost of Living: Doha vs Dubai vs Riyadh',
       date: 'June 3, 2026',
       isoDate: '2026-06-03',
       metaDescription: 'Doha vs Dubai vs Riyadh cost of living 2025: rent, groceries, transport, schools compared. Which Gulf city offers the best value for expats?',
@@ -1019,7 +1019,7 @@ export const blogPosts: Record<string, ArticleData> = {
     },
     'alcohol-guide-doha': {
       id: '53',
-      title: 'Alcohol Rules in Qatar 2026: QDC, Licenses, and Complete Legal Guide',
+      title: 'Alcohol Rules in Qatar 2026: Full Guide',
       date: 'June 2, 2026',
       isoDate: '2026-06-02',
       metaDescription: 'Qatar alcohol laws 2026: QDC permit guide, hotel bar rules, drinking age, prices, and penalties. Everything expats and tourists need to know.',
@@ -1395,7 +1395,7 @@ export const blogPosts: Record<string, ArticleData> = {
     },
     'remote-work-cafes-doha-guide': {
       id: '52',
-      title: 'Best Cafes for Remote Work in Doha Qatar 2025: Digital Nomad Guide',
+      title: 'Best Remote Work Cafes in Doha 2025',
       date: 'June 1, 2026',
       isoDate: '2026-06-01',
       metaDescription: 'Best remote work cafes in Doha 2025: WiFi speeds, power outlets, coffee prices. Top spots for freelancers and digital nomads in Qatar.',
@@ -1752,7 +1752,7 @@ export const blogPosts: Record<string, ArticleData> = {
     },
     'gyms-fitness-doha-guide': {
       id: '51',
-      title: 'Gyms and Fitness Trends in Doha Qatar 2025: Complete Guide',
+      title: 'Gyms & Fitness in Doha 2025: Full Guide',
       date: 'May 31, 2026',
       isoDate: '2026-05-31',
       metaDescription: 'Best gyms in Doha 2025: membership prices, ladies-only facilities, CrossFit, yoga, and outdoor fitness options across Qatar.',
@@ -2154,7 +2154,7 @@ export const blogPosts: Record<string, ArticleData> = {
     },
     'hiring-maid-nanny-qatar-guide': {
       id: '50',
-      title: 'Hiring Maids and Nannies in Doha Qatar 2026: Complete Legal Guide',
+      title: 'Hiring a Maid or Nanny in Qatar 2026',
       date: 'May 30, 2026',
       isoDate: '2026-05-30',
       metaDescription: 'Hiring a maid or nanny in Qatar 2026: legal requirements, visa costs, salary ranges, contracts, and agency vs direct hire comparison.',
@@ -2589,7 +2589,7 @@ export const blogPosts: Record<string, ArticleData> = {
     },
     'pet-import-qatar-guide': {
       id: '49',
-      title: 'Pet Import Rules and Veterinary Care in Qatar 2025: Complete Guide',
+      title: 'Pet Import Rules in Qatar 2025: Guide',
       date: 'May 29, 2026',
       isoDate: '2026-05-29',
       metaDescription: 'Pet import Qatar 2025: required vaccinations, WOAH health certificates, quarantine rules, and best veterinary clinics in Doha for cats and dogs.',
@@ -2945,7 +2945,7 @@ export const blogPosts: Record<string, ArticleData> = {
     },
     'doha-metro-2025-guide': {
       id: '48',
-      title: 'Doha Metro 2025: New Lines, Expansions, and Complete Network Guide',
+      title: 'Doha Metro Guide 2025: Map & Fares',
       date: 'May 28, 2026',
       isoDate: '2026-05-28',
       metaDescription: 'Doha Metro guide 2025: new Lusail tram, Gold Line expansion, fares, stations, and travel card options. Complete network map and tips.',
@@ -3252,7 +3252,7 @@ export const blogPosts: Record<string, ArticleData> = {
     },
     'grocery-shopping-doha-guide': {
       id: '47',
-      title: 'Grocery Shopping Hacks in Doha 2026: Carrefour vs Lulu Complete Guide',
+      title: 'Grocery Shopping Doha: Carrefour vs Lulu',
       date: 'May 27, 2026',
       isoDate: '2026-05-27',
       metaDescription: 'Grocery shopping Doha 2026: Carrefour vs Lulu vs Al Meera price comparison, best delivery apps, and money-saving hacks for expats.',
@@ -3550,7 +3550,7 @@ export const blogPosts: Record<string, ArticleData> = {
     },
     'mobile-plans-qatar-guide': {
       id: '46',
-      title: 'Best Mobile and Data Plans in Qatar 2025: Ooredoo vs Vodafone Complete Guide',
+      title: 'Ooredoo vs Vodafone Qatar 2025: Plans',
       date: 'May 26, 2026',
       isoDate: '2026-05-26',
       metaDescription: 'Ooredoo vs Vodafone Qatar 2025: best mobile plans, data packages, 5G coverage, tourist SIM cards, and roaming costs compared.',
@@ -3830,7 +3830,7 @@ export const blogPosts: Record<string, ArticleData> = {
     },
     'bank-account-qatar-guide': {
       id: '45',
-      title: 'Opening a Bank Account in Qatar: QNB vs International Banks Guide',
+      title: 'Open a Bank Account in Qatar: Guide',
       date: 'May 25, 2026',
       isoDate: '2026-05-25',
       metaDescription: 'Opening a bank account in Qatar 2025: QNB vs HSBC vs Standard Chartered. Required documents, fees, and best banks for expat salary accounts.',
@@ -4099,7 +4099,7 @@ export const blogPosts: Record<string, ArticleData> = {
     },
     'lgbtq-experiences-qatar-2025': {
       id: '44',
-      title: 'LGBTQ+ Experiences in Qatar: What Expats Need to Know 2026',
+      title: 'LGBTQ+ in Qatar: What Expats Must Know',
       date: 'May 24, 2026',
       isoDate: '2026-05-24',
       metaDescription: 'LGBTQ+ life in Qatar 2026: laws, safety tips, mental health resources, and what expats and travelers need to know before visiting Doha.',
@@ -4437,7 +4437,7 @@ export const blogPosts: Record<string, ArticleData> = {
     },
     'driving-doha-2025-guide': {
       id: '43',
-      title: 'Driving in Doha 2025: Traffic Updates, Rules, and Survival Guide',
+      title: 'Driving in Doha 2025: Rules & Tips',
       date: 'May 23, 2026',
       isoDate: '2026-05-23',
       metaDescription: 'Driving in Doha 2025: traffic rules, license conversion, speed cameras, parking tips, and road safety guide for expats and tourists.',
@@ -4855,7 +4855,7 @@ export const blogPosts: Record<string, ArticleData> = {
     },
     'renting-doha-west-bay-al-waab-2025': {
       id: '42',
-      title: 'Renting in Doha: West Bay vs Al Waab Comparison Guide 2025',
+      title: 'West Bay vs Al Waab: Renting in Doha',
       date: 'May 22, 2026',
       isoDate: '2026-05-22',
       metaDescription: 'West Bay vs Al Waab rent comparison 2025: apartment prices, lifestyle, schools, commute times. Which Doha neighborhood is right for you?',
@@ -5166,7 +5166,7 @@ export const blogPosts: Record<string, ArticleData> = {
     },
     'qatar-visa-rules-expats-2025': {
       id: '41',
-      title: 'New Qatar Visa Rules for Expats 2026: Complete Immigration Guide',
+      title: 'Qatar Visa Rules for Expats 2026',
       date: 'May 20, 2026',
       isoDate: '2026-05-20',
       metaDescription: 'Qatar visa rules 2026: work permits, family sponsorship, golden visa, tourist visas. Complete immigration guide for expats moving to Doha.',
@@ -5455,7 +5455,7 @@ export const blogPosts: Record<string, ArticleData> = {
     },
     'international-schools-qatar-2025': {
       id: '40',
-      title: 'International Schools in Qatar 2026: Waitlists, Fees, and Application Guide',
+      title: 'International Schools Qatar 2026: Fees',
       date: 'May 19, 2026',
       isoDate: '2026-05-19',
       metaDescription: 'International schools in Qatar 2026: fees, waitlists, curriculum options (IB, British, American), and application tips for expat families in Doha.',
@@ -5696,7 +5696,7 @@ export const blogPosts: Record<string, ArticleData> = {
     },
     'women-safety-dress-code-doha-qatar': {
       id: '39',
-      title: 'Women\'s Safety and Dress Code in Doha, Qatar: Complete 2026 Guide',
+      title: 'Women\'s Safety & Dress Code in Doha',
       date: 'May 18, 2026',
       isoDate: '2026-05-18',
       metaDescription: 'Women\'s safety in Doha 2026: dress code rules, cultural tips, solo travel advice, and practical safety guide for female tourists and expats in Qatar.',
@@ -5880,7 +5880,7 @@ export const blogPosts: Record<string, ArticleData> = {
     },
     'cost-of-living-doha-2025': {
       id: '38',
-      title: 'Cost of Living in Doha (2026 Update): Rent, Food & Hidden Costs',
+      title: 'Cost of Living in Doha 2026: Budget Guide',
       date: 'May 17, 2026',
       isoDate: '2026-05-17',
       metaDescription: 'Cost of living in Doha 2026: rent, groceries, transport, utilities, and hidden costs. Realistic monthly budget breakdown for expats in Qatar.',
@@ -6274,7 +6274,7 @@ export const blogPosts: Record<string, ArticleData> = {
     },
     'hamad-international-airport-guide': {
       id: '36',
-      title: 'Hamad International Airport: The Ultimate Guide to Qatar\'s Award-Winning Aviation Hub',
+      title: 'Hamad Airport Guide: Lounges & Tips',
       date: 'May 15, 2026',
       isoDate: '2026-05-15',
       metaDescription: 'Hamad International Airport guide: lounges, dining, duty-free shopping, transit hotel, metro access, and tips for layover travelers in Doha.',
@@ -6475,7 +6475,7 @@ export const blogPosts: Record<string, ArticleData> = {
     },
     'qatari-dishes-doha-culinary-guide': {
       id: '35',
-      title: 'Qatari Dishes You Must Try in Doha: A Complete Culinary Guide',
+      title: 'Qatari Dishes to Try in Doha: Guide',
       date: 'May 14, 2026',
       isoDate: '2026-05-14',
       metaDescription: 'Must-try Qatari dishes in Doha: Machboos, Harees, Luqaimat, and Karak tea. Best traditional restaurants in Souq Waqif and Katara.',
@@ -6665,7 +6665,7 @@ export const blogPosts: Record<string, ArticleData> = {
     },
     'women-driving-qatar-guide': {
       id: '34',
-      title: 'Can Women Drive in Qatar? (2025 Guide for Tourists, Expats & Families)',
+      title: 'Can Women Drive in Qatar? 2025 Guide',
       date: 'May 13, 2026',
       isoDate: '2026-05-13',
       metaDescription: 'Can women drive in Qatar? Yes — complete 2025 guide for tourists and expats. License rules, rental cars, safety tips, and driving rights for women.',
@@ -6936,7 +6936,7 @@ export const blogPosts: Record<string, ArticleData> = {
     },
     'doha-safety-guide-tourists-expats': {
       id: '33',
-      title: 'How Safe Is Doha, Qatar? (2025 Full Safety Guide for Tourists & Expats)',
+      title: 'Is Doha Safe? Safety Guide for Tourists',
       date: 'May 12, 2026',
       isoDate: '2026-05-12',
       metaDescription: 'Is Doha safe? 2025 safety guide: crime rates, night safety, transport, scams, and tips for solo female travelers, families, and tourists in Qatar.',
@@ -7206,7 +7206,7 @@ export const blogPosts: Record<string, ArticleData> = {
     },
     'prostitution-laws-doha-qatar-guide': {
       id: '32',
-      title: 'Prostitution in Doha, Qatar: Is It Legal? (2026 Complete Guide)',
+      title: 'Is Prostitution Legal in Qatar? 2026',
       date: 'May 11, 2026',
       isoDate: '2026-05-11',
       metaDescription: 'Is prostitution legal in Qatar? No — complete 2026 guide to laws, penalties, escort scams, and safety tips for tourists visiting Doha.',
@@ -7461,7 +7461,7 @@ export const blogPosts: Record<string, ArticleData> = {
     },
     'alcohol-allowed-doha-qatar-guide': {
       id: '31',
-      title: 'Is Drinking Alcohol Allowed in Doha, Qatar? (2026 Full Guide)',
+      title: 'Alcohol in Doha Qatar: Is It Allowed?',
       date: 'May 10, 2026',
       isoDate: '2026-05-10',
       metaDescription: 'Is alcohol allowed in Doha? Yes, at licensed hotels. Complete 2026 guide to drinking laws, bar prices, nightlife, and penalties in Qatar.',
@@ -7693,7 +7693,7 @@ export const blogPosts: Record<string, ArticleData> = {
     },
     'desert-safari-inland-sea-khor-al-adaid': {
       id: '30',
-      title: 'The Ultimate Arabian Adventure: Desert Safari and the Majestic Inland Sea (Khor Al Adaid)',
+      title: 'Desert Safari & Inland Sea Qatar Guide',
       date: 'May 9, 2026',
       isoDate: '2026-05-09',
       metaDescription: 'Qatar desert safari guide: dune bashing, camel rides, sandboarding, and Inland Sea (Khor Al Adaid). Book half-day, full-day, or overnight trips.',
@@ -7805,7 +7805,7 @@ export const blogPosts: Record<string, ArticleData> = {
     },
     'mia-nmoq-museum-combo-guide': {
       id: '29',
-      title: 'A Tale of Two Museums: Unlocking Qatar\'s Past and Present with the MIA + NMoQ Combo',
+      title: 'MIA & NMoQ Museum Combo Guide Doha',
       date: 'May 11, 2026',
       isoDate: '2026-05-11',
       metaDescription: 'MIA and NMoQ museum combo guide: tickets, Discover One Pass, highlights, and how to visit both Doha museums in one cultural day trip.',
@@ -7913,7 +7913,7 @@ export const blogPosts: Record<string, ArticleData> = {
     },
     'souq-waqif-night-experiences-haggling': {
       id: '28',
-      title: 'The Heart of Doha After Dark: Souq Waqif Night Experiences and the Art of Haggling',
+      title: 'Souq Waqif at Night: Shopping & Haggling',
       date: 'May 13, 2026',
       isoDate: '2026-05-13',
       metaDescription: 'Souq Waqif at night: haggling tips, best restaurants, spice shopping, falcon souq, and cultural experiences in Doha\'s historic market after dark.',
@@ -8014,7 +8014,7 @@ export const blogPosts: Record<string, ArticleData> = {
     },
     'ultimate-doha-layover-24-48-hours': {
       id: '27',
-      title: 'The Ultimate 24-48 Hour Layover in Doha: A Guide to Maximizing Your Stopover',
+      title: 'Doha Layover Guide: 24 & 48 Hour Plans',
       date: 'May 6, 2026',
       isoDate: '2026-05-06',
       metaDescription: '24-48 hour Doha layover itinerary: MIA, Souq Waqif, The Pearl, desert safari, and Qatar Airways stopover program. Maximize your stopover.',
@@ -8153,7 +8153,7 @@ export const blogPosts: Record<string, ArticleData> = {
     },
     'qatar-airways-stopover-packages-lounge': {
       id: '26',
-      title: 'Two Holidays in One: Unpacking the Qatar Airways Stopover Packages and the Privilege of Lounge Access',
+      title: 'Qatar Airways Stopover & Lounge Guide',
       date: 'May 5, 2026',
       isoDate: '2026-05-05',
       metaDescription: 'Qatar Airways stopover packages from $14/night: hotel tiers, lounge access guide, Al Mourjan and Al Safwa reviews. Book your Doha mini-vacation.',
@@ -8271,7 +8271,7 @@ export const blogPosts: Record<string, ArticleData> = {
     },
     'doha-global-mediation-hub-congo-peace': {
       id: '25',
-      title: 'Beyond the Horizon: Doha as a Global Mediation Hub and the Significance of the Congo Peace Talks',
+      title: 'Doha as a Global Mediation Hub',
       date: 'May 4, 2026',
       isoDate: '2026-05-04',
       metaDescription: 'Doha as a global peace hub: Qatar\'s mediation strategy, Congo peace talks, Darfur agreement, and US-Taliban negotiations. How diplomacy shapes Qatar.',
@@ -8368,7 +8368,7 @@ export const blogPosts: Record<string, ArticleData> = {
     },
     'fifa-u17-world-cup-qatar-2025': {
       id: '24',
-      title: 'The Stars of Tomorrow: A Guide to the FIFA U-17 World Cup Qatar 2025™ Matches and Tickets',
+      title: 'FIFA U-17 World Cup Qatar 2025 Guide',
       date: 'May 3, 2026',
       isoDate: '2026-05-03',
       metaDescription: 'FIFA U-17 World Cup Qatar 2025: 48 teams, 104 matches, ticket prices, stadiums, and fan guide. How to attend youth football\'s biggest event.',
@@ -8476,7 +8476,7 @@ export const blogPosts: Record<string, ArticleData> = {
     },
     'corniche-sunset-dhow-cruise-guide': {
       id: '23',
-      title: 'The Golden Hour in Doha: Corniche Sunset Walks and the Magic of the Dhow Cruise',
+      title: 'Doha Corniche Sunset & Dhow Cruise',
       date: 'May 2, 2026',
       isoDate: '2026-05-02',
       metaDescription: 'Doha Corniche sunset walk and dhow cruise guide: best routes, photography tips, dinner cruises, and booking options for an unforgettable evening.',
@@ -8612,7 +8612,7 @@ export const blogPosts: Record<string, ArticleData> = {
     },
     'pearl-qatar-luxury-shopping-dining': {
       id: '22',
-      title: 'The Jewel of Doha: A Guide to Luxury Shopping and Fine Dining at The Pearl-Qatar',
+      title: 'Pearl Qatar: Shopping & Dining Guide',
       date: 'May 1, 2026',
       isoDate: '2026-05-01',
       metaDescription: 'The Pearl-Qatar guide: luxury shopping, fine dining, Porto Arabia, Qanat Quartier. Best restaurants, boutiques, and tips for visiting Doha\'s island.',
@@ -8709,7 +8709,7 @@ export const blogPosts: Record<string, ArticleData> = {
     },
     'katara-cultural-village-events-2025': {
       id: '21',
-      title: 'A Year of Culture: Katara Cultural Village Events Calendar 2025',
+      title: 'Katara Cultural Village Events 2025',
       date: 'April 30, 2026',
       isoDate: '2026-04-30',
       metaDescription: 'Katara Cultural Village events 2025: Dhow Festival, Jazz Festival, art exhibitions, and year-round activities. Plan your cultural visit to Doha.',
@@ -9239,7 +9239,7 @@ export const blogPosts: Record<string, ArticleData> = {
     },
     'things-to-do-doha-layover': {
       id: '13',
-      title: '10 Unmissable Things To Do In Doha On A Layover (2026)',
+      title: '10 Things To Do in Doha on a Layover',
       date: 'Feb 5, 2026',
       isoDate: '2026-02-05',
       metaDescription: '10 unmissable Doha layover activities 2026: Souq Waqif, MIA, desert safari, dhow cruise, The Pearl, and more. Make every hour count.',
@@ -9297,7 +9297,7 @@ export const blogPosts: Record<string, ArticleData> = {
     },
     'hamad-airport-transfers-guide': {
       id: '12',
-      title: 'Transfers at Hamad International Airport: Complete Guide',
+      title: 'Hamad Airport Transfers: Complete Guide',
       date: 'Feb 8, 2026',
       isoDate: '2026-02-08',
       metaDescription: 'Hamad Airport transfer guide: taxi, Uber, metro, hotel shuttles, and car rental. How to get from HIA to Doha hotels quickly and affordably.',

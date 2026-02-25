@@ -262,7 +262,7 @@ const BlogPost = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <SEOHead 
-        title={`${post.title} - Experience Doha`}
+        title={`${post.title} | Doha Guide`}
         description={articleDescription}
         image={typeof post.imageUrl === 'string' ? post.imageUrl : undefined}
         type="article"
