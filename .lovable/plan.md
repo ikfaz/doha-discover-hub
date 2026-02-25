@@ -1,71 +1,38 @@
 
 
-# H1 & Heading Hierarchy Optimization
+# Optimize Image Alt Text for Accessibility & SEO
 
-## Findings
+## Audit Results
 
-After auditing all pages, here is the current state:
+| Location | Current Alt | Issue | Fix |
+|---|---|---|---|
+| **Gallery.tsx lightbox** | `"Gallery"` | Generic, non-descriptive. Loses the photo's actual alt text when opened in lightbox. | Store selected photo object (not just URL), use `photo.alt` + `photo.caption` |
+| **BlogCard.tsx** | `{title}` (article title) | Acceptable but could be more descriptive for image context | Change to `{title} - article thumbnail` |
+| **NavBar.tsx logo** | `alt=""` with `aria-hidden="true"` | Correct pattern for decorative logo next to text. No change needed. | Keep as is |
+| **Videos.tsx thumbnails** | `{video.title}` | Good for video thumbnails. | Keep as is |
+| **Blog.tsx featured** | `` `${featuredPost.title} - Featured guide...` `` | Already optimized. | Keep as is |
+| **BlogPost.tsx hero** | `` `${post.title} - ${post.category} guide...` `` | Already optimized. | Keep as is |
+| **TourDetail.tsx hero** | `` `${tour.title} – ${tour.category} tour...` `` | Already optimized. | Keep as is |
+| **TourDetail.tsx map** | `` `Route map showing ${tour.itinerary.length} stops...` `` | Already optimized. | Keep as is |
+| **About.tsx** | `"Experience Doha team exploring Qatar's attractions..."` | Already optimized. | Keep as is |
+| **PhotoGallery.tsx** | `{photo.alt}` | Passes through from data. Fine. | Keep as is |
 
-### Pages with exactly one H1 (correct)
-- `About.tsx` -- H1 via translation key
-- `Blog.tsx` -- H1 "Experience Doha Blog - Qatar Travel Guide"
-- `BlogPost.tsx` -- H1 = post title
-- `BlogCategory.tsx` -- H1 = category title
-- `BudgetPlanner.tsx` -- H1 "Doha Expat Budget Planner"
-- `Contact.tsx` -- H1 via translation key
-- `Gallery.tsx` -- H1 via `GalleryHeader` component
-- `Videos.tsx` -- H1 "Experience Doha Videos"
-- `TourDetail.tsx` -- H1 = tour title (+ separate H1 for "Tour Not Found" state, which is fine since only one renders)
-- `PrivacyPolicy.tsx` -- H1 "Privacy Policy"
-- `TermsOfService.tsx` -- H1 "Terms of Service"
-- `CookiePolicy.tsx` -- H1 "Cookie Policy"
-- `NotFound.tsx` -- H1 "404"
-- `Listing.tsx` -- H1 = listing title
+## Changes
 
-### Pages MISSING an H1
-- **`Index.tsx`** -- No H1 at all. The "Featured Articles" heading is an H2. The homepage has zero H1 tags, which is the most critical SEO issue.
+### 1. Gallery.tsx -- Fix lightbox alt text (the main issue)
 
-### Heading hierarchy issues
-- **`Index.tsx`** -- Only has an H2 for "Featured Articles" and whatever Newsletter renders (H2). No H1.
-- **`Videos.tsx`** -- Uses H3 tags for video titles inside a grid. This is correct hierarchy (H1 > H2 "Featured Playlist" > H3 video cards).
-- **`BlogPost.tsx`** -- Table of Contents heading uses H3 which is fine. The blog content itself uses H2/H3 from the CMS HTML, which is correct.
+Currently `selectedImage` stores only a URL string, so the lightbox renders `alt="Gallery"`. Change state to store the full photo object so we can use `photo.alt` in the lightbox.
 
-## Plan
+- Change `selectedImage` from `string | null` to `{ url: string; alt: string; caption?: string } | null`
+- Update `setSelectedImage` calls to pass the photo object
+- Use `selectedImage.alt` in the lightbox `<img>`
 
-### 1. Add H1 to Index.tsx (homepage)
+### 2. BlogCard.tsx -- Slightly improve alt text
 
-Add a visually prominent but SEO-meaningful H1 above the featured articles section. The homepage is the most important page to have an H1.
-
-**File: `src/pages/Index.tsx`**
-
-Add an H1 hero section between NavBar and the Viator widget:
-
-```html
-<section className="bg-qatar-maroon text-white py-16">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <h1 className="text-4xl md:text-5xl font-bold font-heading mb-6">
-      Experience Doha: Your Guide to Qatar
-    </h1>
-    <p className="text-xl max-w-3xl mx-auto text-white/80">
-      Expert guides on attractions, food, culture, layovers, and expat life in Qatar's capital
-    </p>
-  </div>
-</section>
-```
-
-This matches the visual pattern used on Blog, About, Contact, and Videos pages.
-
-### 2. No other changes needed
-
-All other pages already have exactly one H1 and use proper H2-H6 hierarchy. The blog article content from `blog-data.ts` uses H2 for sections and H3 for subsections, which is the correct semantic structure under the H1 title.
+Change `alt={title}` to `alt={`${title} - ${category} guide image`}` to add image context beyond just repeating the heading text (better for screen readers and image search).
 
 ## Files to Edit
 
-1. **`src/pages/Index.tsx`** -- Add H1 hero section (the only page missing an H1)
-
-## Technical Notes
-
-- The H1 text "Experience Doha: Your Guide to Qatar" contains the site's primary keyword and matches the brand.
-- The subtitle reuses language from the meta description for consistency.
-- The visual style (maroon background, white text, centered) matches every other page header for design consistency.
+1. `src/pages/Gallery.tsx` -- Fix lightbox to use descriptive alt text from photo data
+2. `src/components/BlogCard.tsx` -- Enhance alt with category context
 
