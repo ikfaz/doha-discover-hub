@@ -26,7 +26,7 @@ import galleryDhow from '@/assets/gallery-dhow.jpg';
 
 const Gallery = () => {
   const [currentCategory, setCurrentCategory] = useState('all');
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [selectedImage, setSelectedImage] = useState<{ url: string; alt: string; caption?: string } | null>(null);
   
   // Gallery data with categorized photos
   const allPhotos = [
@@ -168,7 +168,7 @@ const Gallery = () => {
                   <div 
                     key={photo.id} 
                     className="relative group overflow-hidden rounded-lg cursor-pointer transform transition-all duration-300 hover:scale-105"
-                    onClick={() => setSelectedImage(photo.url)}
+                    onClick={() => setSelectedImage({ url: photo.url, alt: photo.alt, caption: photo.caption })}
                   >
                     <img
                       src={photo.url}
@@ -197,11 +197,11 @@ const Gallery = () => {
       
       {/* Image Lightbox */}
       {selectedImage && (
-        <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
+      <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
           <DialogContent className="max-w-4xl p-0 bg-transparent border-0">
             <img
-              src={selectedImage}
-              alt="Gallery"
+              src={selectedImage.url}
+              alt={selectedImage.alt}
               className="w-full h-auto max-h-[80vh] object-contain"
             />
           </DialogContent>
