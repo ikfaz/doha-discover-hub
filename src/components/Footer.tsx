@@ -71,14 +71,14 @@ const Footer = () => {
               <Link to="/cookie-policy" className="text-sm text-secondary-foreground/80 hover:text-sand-gold transition-colors">{t('footer.cookiePolicy')}</Link>
             </div>
             
-            <div className="flex space-x-6">
+            <div className="flex space-x-6 mb-4 md:mb-0">
               <a href="https://www.facebook.com/Experiencedohaqatar" target="_blank" rel="noopener noreferrer" className="text-secondary-foreground/80 hover:text-sand-gold transition-colors" aria-label="Facebook">
                 <Facebook size={20} aria-hidden="true" />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-secondary-foreground/80 hover:text-sand-gold transition-colors" aria-label="Instagram">
+              <a href="https://www.instagram.com/experiencedoha" target="_blank" rel="noopener noreferrer" className="text-secondary-foreground/80 hover:text-sand-gold transition-colors" aria-label="Instagram">
                 <Instagram size={20} aria-hidden="true" />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-secondary-foreground/80 hover:text-sand-gold transition-colors" aria-label="Twitter">
+              <a href="https://twitter.com/experiencedoha" target="_blank" rel="noopener noreferrer" className="text-secondary-foreground/80 hover:text-sand-gold transition-colors" aria-label="Twitter">
                 <Twitter size={20} aria-hidden="true" />
               </a>
               <a href="https://www.youtube.com/@ExperienceDoha" target="_blank" rel="noopener noreferrer" className="text-secondary-foreground/80 hover:text-sand-gold transition-colors" aria-label="YouTube">
@@ -88,6 +88,9 @@ const Footer = () => {
                 <Mail size={20} aria-hidden="true" />
               </a>
             </div>
+          </div>
+          <div className="mt-6 text-center">
+            <p className="text-sm text-secondary-foreground/60">© {new Date().getFullYear()} ExperienceDoha.com. All rights reserved.</p>
           </div>
         </div>
       </div>
