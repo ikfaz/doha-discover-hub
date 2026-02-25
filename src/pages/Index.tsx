@@ -471,6 +471,18 @@ const Index = () => {
       />
       <NavBar />
 
+      {/* Hero H1 Section */}
+      <section className="bg-secondary text-secondary-foreground py-12 md:py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold font-heading mb-4">
+            Experience Doha: Your Guide to Qatar
+          </h1>
+          <p className="text-xl max-w-3xl mx-auto text-secondary-foreground/80">
+            Expert guides on attractions, food, culture, layovers, and expat life in Qatar's capital
+          </p>
+        </div>
+      </section>
+
       {/* Viator Widget */}
       <section className="py-2">
         <div className="content-container">
