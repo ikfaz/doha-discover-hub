@@ -1,38 +1,57 @@
 
 
-# Optimize Image Alt Text for Accessibility & SEO
+# SEO-Friendly URLs: Audit Results
 
-## Audit Results
+## Current State
 
-| Location | Current Alt | Issue | Fix |
-|---|---|---|---|
-| **Gallery.tsx lightbox** | `"Gallery"` | Generic, non-descriptive. Loses the photo's actual alt text when opened in lightbox. | Store selected photo object (not just URL), use `photo.alt` + `photo.caption` |
-| **BlogCard.tsx** | `{title}` (article title) | Acceptable but could be more descriptive for image context | Change to `{title} - article thumbnail` |
-| **NavBar.tsx logo** | `alt=""` with `aria-hidden="true"` | Correct pattern for decorative logo next to text. No change needed. | Keep as is |
-| **Videos.tsx thumbnails** | `{video.title}` | Good for video thumbnails. | Keep as is |
-| **Blog.tsx featured** | `` `${featuredPost.title} - Featured guide...` `` | Already optimized. | Keep as is |
-| **BlogPost.tsx hero** | `` `${post.title} - ${post.category} guide...` `` | Already optimized. | Keep as is |
-| **TourDetail.tsx hero** | `` `${tour.title} – ${tour.category} tour...` `` | Already optimized. | Keep as is |
-| **TourDetail.tsx map** | `` `Route map showing ${tour.itinerary.length} stops...` `` | Already optimized. | Keep as is |
-| **About.tsx** | `"Experience Doha team exploring Qatar's attractions..."` | Already optimized. | Keep as is |
-| **PhotoGallery.tsx** | `{photo.alt}` | Passes through from data. Fine. | Keep as is |
+All URLs in the project are already SEO-friendly, short, and descriptive. No changes needed.
 
-## Changes
+### Route Structure (all clean)
 
-### 1. Gallery.tsx -- Fix lightbox alt text (the main issue)
+| Route | Pattern | Example |
+|---|---|---|
+| `/` | Homepage | Clean |
+| `/about` | Static page | Clean |
+| `/blog` | Blog index | Clean |
+| `/blog/:slug` | Blog article | `/blog/qatar-tax-guide-2025` |
+| `/blog/category/:category` | Category page | `/blog/category/expat-tips` |
+| `/videos` | Videos page | Clean |
+| `/gallery` | Gallery page | Clean |
+| `/contact` | Contact page | Clean |
+| `/budget-planner` | Tool page | Clean |
+| `/tour/:slug` | Tour detail | `/tour/private-desert-safari` |
+| `/listing/:slug` | Listing detail | Clean |
+| `/privacy-policy` | Legal page | Clean |
+| `/terms-of-service` | Legal page | Clean |
+| `/cookie-policy` | Legal page | Clean |
 
-Currently `selectedImage` stores only a URL string, so the lightbox renders `alt="Gallery"`. Change state to store the full photo object so we can use `photo.alt` in the lightbox.
+### Blog Article Slugs (all clean)
 
-- Change `selectedImage` from `string | null` to `{ url: string; alt: string; caption?: string } | null`
-- Update `setSelectedImage` calls to pass the photo object
-- Use `selectedImage.alt` in the lightbox `<img>`
+The `blogPosts` object in `blog-data.ts` uses descriptive kebab-case keys as URL slugs. Examples:
 
-### 2. BlogCard.tsx -- Slightly improve alt text
+- `qatar-tax-guide-2025`
+- `cost-of-living-doha-2025`
+- `doha-metro-2025-guide`
+- `desert-safari-inland-sea-khor-al-adaid`
+- `women-safety-dress-code-doha-qatar`
 
-Change `alt={title}` to `alt={`${title} - ${category} guide image`}` to add image context beyond just repeating the heading text (better for screen readers and image search).
+### Tour Slugs (all clean)
 
-## Files to Edit
+- `private-desert-safari`
+- `doha-city-tour`
 
-1. `src/pages/Gallery.tsx` -- Fix lightbox to use descriptive alt text from photo data
-2. `src/components/BlogCard.tsx` -- Enhance alt with category context
+### Category Slugs (all clean)
+
+- `attractions`, `food`, `culture`, `events`, `expat-tips`
+
+## Conclusion
+
+There are no parameter-based URLs (like `/p=123` or `?id=456`), no numeric IDs exposed in URLs, and no unnecessarily long paths. Every URL across the site follows best practices:
+
+- Lowercase kebab-case
+- Human-readable and descriptive
+- Contains target keywords
+- No query parameters for content pages
+
+**No code changes are required.** The URL structure is already fully optimized for SEO.
 
