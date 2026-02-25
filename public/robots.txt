@@ -20,8 +20,5 @@ Disallow: /cookie-policy
 Disallow: /terms-of-service
 Disallow: /privacy-policy
 
-# Crawl-delay for politeness
-Crawl-delay: 1
-
 # Sitemap location
 Sitemap: https://experiencedoha.com/sitemap.xml
