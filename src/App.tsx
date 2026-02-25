@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
 import { useEffect, lazy, Suspense } from "react";
@@ -35,6 +35,20 @@ const PageLoader = () => (
   </div>
 );
 
+// Helper components for parameterized redirects
+const NavigateBlogSlug = () => {
+  const slug = window.location.pathname.split('/blogs/')[1];
+  return <Navigate to={`/blog/${slug}`} replace />;
+};
+const NavigateTourSlug = () => {
+  const slug = window.location.pathname.split('/tours/')[1];
+  return <Navigate to={`/tour/${slug}`} replace />;
+};
+const NavigateListingSlug = () => {
+  const slug = window.location.pathname.split('/listings/')[1];
+  return <Navigate to={`/listing/${slug}`} replace />;
+};
+
 const AppContent = () => {
   const { i18n } = useTranslation();
 
@@ -62,6 +76,17 @@ const AppContent = () => {
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
           <Route path="/cookie-policy" element={<CookiePolicy />} />
+          {/* 301-style client-side redirects */}
+          <Route path="/blogs" element={<Navigate to="/blog" replace />} />
+          <Route path="/blogs/:slug" element={<NavigateBlogSlug />} />
+          <Route path="/tours/:slug" element={<NavigateTourSlug />} />
+          <Route path="/listings/:slug" element={<NavigateListingSlug />} />
+          <Route path="/privacy" element={<Navigate to="/privacy-policy" replace />} />
+          <Route path="/terms" element={<Navigate to="/terms-of-service" replace />} />
+          <Route path="/cookies" element={<Navigate to="/cookie-policy" replace />} />
+          <Route path="/budget" element={<Navigate to="/budget-planner" replace />} />
+          <Route path="/video" element={<Navigate to="/videos" replace />} />
+          <Route path="/photos" element={<Navigate to="/gallery" replace />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
