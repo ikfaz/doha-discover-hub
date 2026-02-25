@@ -121,15 +121,29 @@
 
   /* Article content styling */
   .prose h2 {
-    @apply text-secondary font-bold text-2xl mt-8 mb-4;
+    @apply text-secondary font-bold text-2xl md:text-3xl mt-12 mb-5 pb-3 pl-5 relative;
+    border-left: 4px solid hsl(var(--primary));
+    border-bottom: 1px solid hsl(var(--border));
   }
 
   .prose h3 {
-    @apply text-secondary font-semibold text-xl mt-6 mb-3;
+    @apply text-secondary font-semibold text-xl md:text-2xl mt-8 mb-4 pl-4 relative;
+    border-left: 2px solid hsl(var(--primary) / 0.5);
+  }
+
+  .prose h4 {
+    @apply text-secondary font-semibold text-lg mt-6 mb-3;
   }
 
   .prose p {
-    @apply text-foreground leading-relaxed mb-4;
+    @apply text-foreground leading-relaxed mb-5;
+  }
+
+  .prose p.lead,
+  .prose .lead {
+    @apply text-xl leading-relaxed mb-6 pb-6;
+    color: hsl(var(--muted-foreground));
+    border-bottom: 1px solid hsl(var(--border));
   }
 
   .prose strong {
@@ -137,7 +151,60 @@
   }
 
   .prose a {
-    @apply text-primary hover:text-primary/80 underline;
+    @apply underline transition-colors duration-200;
+    color: hsl(var(--primary));
+  }
+  .prose a:hover {
+    color: hsl(var(--sand-warm));
+  }
+
+  .prose ul {
+    @apply list-disc pl-6 mb-5 space-y-2;
+  }
+
+  .prose ol {
+    @apply list-decimal pl-6 mb-5 space-y-2;
+  }
+
+  .prose li {
+    @apply text-foreground leading-relaxed;
+  }
+
+  .prose blockquote {
+    @apply italic pl-5 py-4 my-6 rounded-r-md;
+    border-left: 4px solid hsl(var(--primary));
+    background: hsl(var(--sand-light));
+    color: hsl(var(--charcoal-light));
+  }
+
+  .prose hr {
+    @apply my-10;
+    border-color: hsl(var(--border));
+  }
+
+  .prose img {
+    @apply rounded-lg shadow-md my-8;
+  }
+
+  .prose table {
+    @apply w-full mb-6 text-sm;
+    border-collapse: collapse;
+  }
+  .prose th {
+    @apply text-left font-semibold p-3;
+    background: hsl(var(--muted));
+    border-bottom: 2px solid hsl(var(--border));
+  }
+  .prose td {
+    @apply p-3;
+    border-bottom: 1px solid hsl(var(--border));
+  }
+
+  /* Drop cap for first paragraph after lead */
+  .prose .drop-cap::first-letter {
+    @apply font-heading font-bold float-left mr-3 leading-none;
+    font-size: 3.5rem;
+    color: hsl(var(--primary));
   }
 }
 
