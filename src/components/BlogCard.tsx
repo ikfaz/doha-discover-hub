@@ -72,7 +72,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
           )}
           <img
             src={imgSrc}
-            alt={title}
+            alt={`${title} - ${category} guide image`}
             className="w-full h-full object-cover transition-opacity duration-300"
             style={{ opacity: isLoading ? 0 : 1 }}
           />
