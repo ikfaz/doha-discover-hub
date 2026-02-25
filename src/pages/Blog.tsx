@@ -629,7 +629,7 @@ const Blog = () => {
       
       <section className="py-16">
         <div className="content-container">
-          <div className="flex flex-col lg:flex-row gap-12">
+          <div className="flex flex-col-reverse lg:flex-row gap-12">
             <div className="lg:w-2/3">
               <div className="mb-8">
                 <div className="relative">
@@ -698,6 +698,7 @@ const Blog = () => {
                         src={featuredPost.imageUrl} 
                         alt={`${featuredPost.title} - Featured guide for Doha, Qatar`}
                         className="object-cover w-full h-full transform hover:scale-105 transition-transform duration-300"
+                        loading="lazy"
                       />
                     </div>
                     <Badge className="bg-qatar-gold/10 text-qatar-gold hover:bg-qatar-gold/20">

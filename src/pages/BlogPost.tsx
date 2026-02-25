@@ -275,18 +275,19 @@ const BlogPost = () => {
       <main className="flex-1">
         <article>
           {/* Hero Section */}
-          <div className="relative h-[400px] w-full">
+          <div className="relative h-[280px] sm:h-[350px] md:h-[400px] w-full">
             <img
               src={post.imageUrl}
               alt={`${post.title} - ${post.category} guide for Doha, Qatar`}
               className="w-full h-full object-cover"
+              fetchPriority="high"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 content-container pb-8">
               <Badge className="mb-4 bg-qatar-gold text-qatar-maroon hover:bg-qatar-gold">
                 {post.category}
               </Badge>
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold text-white mb-4">
                 {post.title}
               </h1>
               <div className="flex items-center gap-4 text-white/90 text-sm">
@@ -317,7 +318,7 @@ const BlogPost = () => {
                         <a
                           key={item.id}
                           href={`#${item.id}`}
-                          className="block text-sm text-gray-900 hover:text-qatar-gold transition-colors py-1 hover:translate-x-1 transform duration-200 font-medium"
+                          className="block text-sm text-gray-900 hover:text-qatar-gold transition-colors py-2.5 hover:translate-x-1 transform duration-200 font-medium"
                           onClick={(e) => {
                             e.preventDefault();
                             document.getElementById(item.id)?.scrollIntoView({ behavior: 'smooth' });
@@ -331,27 +332,27 @@ const BlogPost = () => {
                 )}
 
                 {/* Share Buttons */}
-                <div className="flex items-center gap-4 mb-8 pb-8 border-b">
+                <div className="flex flex-wrap items-center gap-2 sm:gap-4 mb-8 pb-8 border-b">
                   <span className="text-sm font-medium text-gray-600">Share this article:</span>
                   <Button
                     variant="outline"
                     size="sm"
                     onClick={() => window.open(`https://www.facebook.com/sharer/sharer.php?u=${window.location.href}`, '_blank')}
                   >
-                    <Facebook className="h-4 w-4 mr-2" />
-                    Facebook
+                    <Facebook className="h-4 w-4 sm:mr-2" />
+                    <span className="hidden sm:inline">Facebook</span>
                   </Button>
                   <Button
                     variant="outline"
                     size="sm"
                     onClick={() => window.open(`https://twitter.com/intent/tweet?url=${window.location.href}&text=${post.title}`, '_blank')}
                   >
-                    <Twitter className="h-4 w-4 mr-2" />
-                    Twitter
+                    <Twitter className="h-4 w-4 sm:mr-2" />
+                    <span className="hidden sm:inline">Twitter</span>
                   </Button>
                   <Button variant="outline" size="sm" onClick={handleCopyLink}>
-                    <Share2 className="h-4 w-4 mr-2" />
-                    Copy Link
+                    <Share2 className="h-4 w-4 sm:mr-2" />
+                    <span className="hidden sm:inline">Copy Link</span>
                   </Button>
                 </div>
 
