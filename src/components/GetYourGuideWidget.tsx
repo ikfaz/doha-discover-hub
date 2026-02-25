@@ -1,7 +1,23 @@
 import { useEffect, useRef } from 'react';
 
+const GYG_SCRIPT_ID = 'gyg-partner-script';
+const GYG_SCRIPT_URL = 'https://widget.getyourguide.com/dist/pa.umd.production.min.js';
+
 const GetYourGuideWidget = () => {
   const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    // Load GYG script if not already present
+    if (!document.getElementById(GYG_SCRIPT_ID)) {
+      const script = document.createElement('script');
+      script.id = GYG_SCRIPT_ID;
+      script.src = GYG_SCRIPT_URL;
+      script.async = true;
+      script.defer = true;
+      script.setAttribute('data-gyg-partner-id', '68DXBIL');
+      document.head.appendChild(script);
+    }
+  }, []);
 
   useEffect(() => {
     if (!containerRef.current) return;
