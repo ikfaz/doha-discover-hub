@@ -1,11 +1,38 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 import BlogCard from '@/components/BlogCard';
 import Newsletter from '@/components/Newsletter';
 import SEOHead from '@/components/SEOHead';
-import ViatorBanner from '@/components/ViatorBanner';
+
+const ViatorBannerLazy = React.lazy(() => import('@/components/ViatorBanner'));
+
+const LazyViatorBanner = () => {
+  const ref = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) { setVisible(true); observer.disconnect(); } },
+      { rootMargin: '200px' }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div ref={ref} style={{ minHeight: '400px' }}>
+      {visible && (
+        <React.Suspense fallback={<div style={{ minHeight: '400px' }} />}>
+          <ViatorBannerLazy />
+        </React.Suspense>
+      )}
+    </div>
+  );
+};
 
 import alcoholGuideImage from '@/assets/alcohol-guide-doha.jpg';
 import bankAccountQatarImage from '@/assets/bank-account-qatar-guide.jpg';
@@ -486,7 +513,7 @@ const Index = () => {
       {/* Viator Widget */}
       <section className="py-2">
         <div className="content-container">
-          <ViatorBanner />
+          <LazyViatorBanner />
         </div>
       </section>
 

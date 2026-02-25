@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Calendar } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Badge } from '@/components/ui/badge';
@@ -32,50 +32,19 @@ const BlogCard: React.FC<BlogCardProps> = ({
   };
 
   const categoryClass = categoryColors[category.toLowerCase()] || 'bg-gray-100 text-gray-800';
-  
-  // Use a more reliable fallback image
   const fallbackImage = "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=800&auto=format&fit=crop";
-  
   const [imgSrc, setImgSrc] = useState(imageUrl);
-  const [isLoading, setIsLoading] = useState(true);
-
-  // Pre-load image to detect errors early
-  useEffect(() => {
-    const img = new Image();
-    img.src = imageUrl;
-    
-    img.onload = () => {
-      setImgSrc(imageUrl);
-      setIsLoading(false);
-    };
-    
-    img.onerror = () => {
-      console.log(`Failed to load image: ${imageUrl}, using fallback`);
-      setImgSrc(fallbackImage);
-      setIsLoading(false);
-    };
-    
-    return () => {
-      img.onload = null;
-      img.onerror = null;
-    };
-  }, [imageUrl]);
 
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden h-full card-hover">
       <Link to={`/blog/${slug}`}>
         <div className="relative w-full h-48 bg-gray-200">
-          {isLoading && (
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-8 h-8 border-4 border-qatar-gold border-t-transparent rounded-full animate-spin"></div>
-            </div>
-          )}
           <img
             src={imgSrc}
             alt={`${title} - ${category} guide image`}
-            className="w-full h-full object-cover transition-opacity duration-300"
+            className="w-full h-full object-cover"
             loading="lazy"
-            style={{ opacity: isLoading ? 0 : 1 }}
+            onError={() => setImgSrc(fallbackImage)}
           />
         </div>
       </Link>
