@@ -1,4 +1,4 @@
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, Navigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
@@ -221,7 +221,11 @@ function renderArticleContent(slug: string, content: string) {
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
-  const post = blogPosts[slug || 'default'] || blogPosts['default'];
+  const post = slug ? blogPosts[slug] : undefined;
+
+  if (!post) {
+    return <Navigate to="/blog" replace />;
+  }
   const articleDescription = post.metaDescription || post.excerpt || post.content.substring(0, 155).replace(/<[^>]*>/g, '');
   const articleIsoDate = post.isoDate || post.date;
 
