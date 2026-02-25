@@ -1,89 +1,56 @@
 
 
-# BlogPost.tsx Refactor Plan
+# SEO Audit: Article Content & Structure
 
-## Problem
-`BlogPost.tsx` is ~10,000 lines containing ~30+ article data objects inline plus rendering logic, all in one file. This hurts build performance (no code splitting for article content), developer experience, and maintainability.
+## Current Issues Found
 
-## Architecture
+### 1. Missing `metaDescription` on ~40 of 42 articles
+Only 2 articles (`qatar-visa-rules-expats-2025` and `cost-of-living-doha-2025`) have a `metaDescription`. The remaining ~40 articles pass `undefined` to the `SEOHead` component, which means Google sees the generic fallback: *"Discover the best things to do in Doha, Qatar..."* -- the same description for every article. This is a critical SEO problem; duplicate meta descriptions across dozens of pages will hurt rankings.
 
-```text
-src/
-├── pages/
-│   └── BlogPost.tsx          ← Lean renderer (~200 lines)
-├── data/
-│   └── articles/
-│       ├── index.ts           ← Re-exports all articles as Record<slug, ArticleData>
-│       ├── types.ts           ← ArticleData interface
-│       ├── related-posts.ts   ← Related posts array
-│       ├── end-of-service-gratuity-qatar-2025.ts
-│       ├── qatar-labor-law-reforms-2025.ts
-│       ├── qatar-work-visa-guide-2025.ts
-│       ├── qatar-tax-guide-2025.ts
-│       ├── expat-salaries-doha-2025.ts
-│       ├── job-market-qatar-2025.ts
-│       ├── housing-rent-doha-2025.ts
-│       ├── cost-of-living-doha-dubai-riyadh.ts
-│       ├── alcohol-guide-doha.ts
-│       ├── remote-work-cafes-doha-guide.ts
-│       ├── gyms-fitness-doha-guide.ts
-│       ├── hiring-maid-nanny-qatar-guide.ts
-│       ├── pet-import-qatar-guide.ts
-│       ├── doha-metro-2025-guide.ts
-│       ├── grocery-shopping-doha-guide.ts
-│       ├── mobile-plans-qatar-guide.ts
-│       ├── bank-account-qatar-guide.ts
-│       ├── lgbtq-experiences-qatar-2025.ts
-│       ├── driving-doha-2025-guide.ts
-│       ├── renting-doha-west-bay-al-waab-2025.ts
-│       ├── qatar-visa-rules-expats-2025.ts
-│       ├── international-schools-qatar-2025.ts
-│       ├── women-safety-dress-code-doha-qatar.ts
-│       ├── cost-of-living-doha-2025.ts
-│       ├── doha-changing-middle-east.ts
-│       └── ... (remaining ~30 articles, one file each)
-```
+### 2. Missing `excerpt` on all 42 articles
+No articles have an `excerpt` field. The JSON-LD structured data falls back to `post.content.substring(0, 160).replace(/<[^>]*>/g, '')`, which strips HTML but may cut mid-word or include formatting artifacts. The `SEOHead` description also falls through to the default when both `metaDescription` and `excerpt` are undefined.
 
-## Detailed Steps
+### 3. Image `alt` text is generic
+The hero image alt text uses a template: `${post.title} - ${post.category} guide for Doha, Qatar`. This is acceptable but could be more descriptive per article.
 
-### 1. Create `src/data/articles/types.ts`
-Define an `ArticleData` interface with fields: `id`, `title`, `date`, `author`, `readTime`, `category`, `imageUrl`, `tags`, `content`, `excerpt?`, `metaDescription?`, `tableOfContents?`. Also define a `RelatedPost` type.
+### 4. Duplicate JSON-LD injection
+The `SEOHead` component injects JSON-LD via its `jsonLd` prop, but `BlogPost.tsx` also manually creates a second `<script type="application/ld+json">` via `useEffect` (lines 231-262). This results in duplicate structured data -- one from Helmet and one from DOM manipulation. The `useEffect` version should be the only one (since `SEOHead` is not passed `jsonLd` for articles), but the approach is fragile.
 
-### 2. Create one file per article (~30 files)
-Each file in `src/data/articles/` exports a single `ArticleData` object. The file imports its own image asset and contains only its data. Example:
+### 5. `datePublished` format is human-readable, not ISO 8601
+Dates like `"June 10, 2026"` are used in JSON-LD's `datePublished`. Google expects ISO 8601 format (`2026-06-10`). This may cause Google to ignore the date or display it incorrectly in search results.
 
-```ts
-// src/data/articles/end-of-service-gratuity-qatar-2025.ts
-import { ArticleData } from './types';
-import endOfServiceGratuityImage from '@/assets/end-of-service-gratuity-qatar-2025.jpg';
+### 6. Missing `dateModified` in structured data
+Google recommends both `datePublished` and `dateModified` for article schema. Currently only `datePublished` is present.
 
-export const article: ArticleData = {
-  id: '61',
-  title: 'The Final Payout: ...',
-  // ... all fields
-};
-```
+### 7. No `description` in Open Graph when meta is missing
+When `metaDescription` and `excerpt` are both undefined, the OG description defaults to the site-wide generic text, making social media shares for articles look identical.
 
-### 3. Create `src/data/articles/index.ts`
-Imports all individual article files and re-exports them as a single `Record<string, ArticleData>` map keyed by slug.
+---
 
-### 4. Create `src/data/articles/related-posts.ts`
-Extracts the `relatedPosts` array currently hardcoded in `BlogPost.tsx`.
+## Plan
 
-### 5. Rewrite `BlogPost.tsx` as a lean renderer (~200 lines)
-- Import `blogPosts` from `@/data/articles`
-- Import `relatedPosts` from `@/data/articles/related-posts`
-- Keep the slug-based conditional rendering for interactive components (the `slug === 'x' ? ...` blocks around lines 9520-9880) since those inject React components inline with content
-- Remove all article data objects and image imports
-- Keep: SEO head, hero, table of contents, share buttons, content rendering, sidebar, Viator banner, related articles, newsletter, footer
+### Step 1: Add `metaDescription` and `excerpt` to all ~42 articles
+Add unique, keyword-rich `metaDescription` (max 160 chars) and `excerpt` (2-3 sentence summary) to every article in `blog-data.ts`. The metaDescription will be crafted for search intent; the excerpt for social sharing and JSON-LD.
 
-### 6. Slug-based component injection
-The current pattern splits HTML content at specific `<h2>` tags to inject interactive components (calculators, comparison tools). This logic stays in `BlogPost.tsx` as it's rendering logic, not data. A helper map `slugComponents: Record<string, { splitAt: string, component: ReactNode }>` can clean up the if/else chain.
+### Step 2: Add `isoDate` field to ArticleData type
+Add an `isoDate: string` field (e.g., `"2026-06-10"`) to the `ArticleData` interface and populate it for all articles. This will be used in JSON-LD `datePublished` and OG `article:published_time`.
+
+### Step 3: Fix JSON-LD in BlogPost.tsx
+- Remove the manual `useEffect` DOM injection
+- Pass a properly structured `jsonLd` object to `SEOHead` instead, using `isoDate` for dates
+- Add `dateModified` (can default to `isoDate` initially)
+
+### Step 4: Fix SEOHead fallback chain
+Update `BlogPost.tsx` to always pass a description: `post.metaDescription || post.excerpt || post.content.substring(0, 155).replace(/<[^>]*>/g, '')`. This ensures no article ever uses the site-wide default.
+
+### Step 5: Add `keywords` meta tag support (optional)
+While Google doesn't use `<meta name="keywords">`, having keyword-rich tags in the article data already exists (`tags` field). These could be added as a meta tag for other search engines.
+
+---
 
 ## Impact
-- Each article file: ~50-500 lines (manageable)
-- `BlogPost.tsx`: drops from ~10,000 to ~300 lines
-- No behavioral changes -- purely structural refactor
-- Image imports are distributed to their respective article files, reducing the import block
-- Future articles are added by creating a single new file and adding one import to `index.ts`
+- Every article gets a unique, search-optimized meta description visible in Google results
+- JSON-LD structured data uses proper ISO dates, improving rich snippet eligibility
+- Social media shares show article-specific descriptions instead of generic site text
+- No duplicate structured data injection
 
