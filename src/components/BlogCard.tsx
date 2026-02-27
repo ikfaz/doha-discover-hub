@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Calendar } from 'lucide-react';
+import { Calendar, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Badge } from '@/components/ui/badge';
 
@@ -67,20 +67,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
           className="text-qatar-maroon font-medium hover:text-qatar-gold transition-colors inline-flex items-center"
         >
           Read More
-          <svg
-            className="ml-1 w-4 h-4"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M9 5l7 7-7 7"
-            ></path>
-          </svg>
+          <ChevronRight className="ml-1 w-4 h-4" />
         </Link>
       </div>
     </div>
