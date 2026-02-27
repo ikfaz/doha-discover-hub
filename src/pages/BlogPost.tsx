@@ -1,5 +1,5 @@
 import { useParams, Link, Navigate } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useMemo } from 'react';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 import Newsletter from '@/components/Newsletter';
@@ -20,7 +20,15 @@ import { WeeklyMealPlanner } from '@/components/WeeklyMealPlanner';
 import { MetroFareCalculator } from '@/components/MetroFareCalculator';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Calendar, Clock, Facebook, Twitter, Share2 } from 'lucide-react';
+import {
+  Breadcrumb,
+  BreadcrumbList,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from '@/components/ui/breadcrumb';
+import { Calendar, Clock, Facebook, Twitter, Share2, Home } from 'lucide-react';
 import BlogCard from '@/components/BlogCard';
 import PetImportChecklist from '@/components/PetImportChecklist';
 import VeterinaryCostEstimator from '@/components/VeterinaryCostEstimator';
@@ -40,7 +48,7 @@ import { VisaApplicationTracker } from '@/components/VisaApplicationTracker';
 import { LaborRightsCalculator } from '@/components/LaborRightsCalculator';
 import { EOSGCalculator } from '@/components/EOSGCalculator';
 import { ContractNegotiationChecklist } from '@/components/ContractNegotiationChecklist';
-import { blogPosts, relatedPosts } from '@/data/articles';
+import { blogPosts } from '@/data/articles';
 import type { ReactNode } from 'react';
 
 // Slug-based component injection map
@@ -223,11 +231,43 @@ const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   const post = slug ? blogPosts[slug] : undefined;
 
+  // Dynamic related articles based on matching category and tags
+  const dynamicRelated = useMemo(() => {
+    if (!post || !slug) return [];
+    const allSlugs = Object.keys(blogPosts);
+    const scored = allSlugs
+      .filter(s => s !== slug)
+      .map(s => {
+        const p = blogPosts[s];
+        let score = 0;
+        if (p.category === post.category) score += 3;
+        if (post.tags && p.tags) {
+          const overlap = post.tags.filter(t => p.tags.includes(t)).length;
+          score += overlap;
+        }
+        return { slug: s, post: p, score };
+      })
+      .filter(x => x.score > 0)
+      .sort((a, b) => b.score - a.score)
+      .slice(0, 3);
+    return scored.map(x => ({
+      id: x.post.id,
+      title: x.post.title,
+      excerpt: x.post.excerpt || x.post.content.substring(0, 120).replace(/<[^>]*>/g, ''),
+      imageUrl: x.post.imageUrl,
+      category: x.post.category,
+      date: x.post.date,
+      slug: x.slug,
+    }));
+  }, [slug, post]);
+
   if (!post) {
     return <Navigate to="/blog" replace />;
   }
+
   const articleDescription = post.metaDescription || post.excerpt || post.content.substring(0, 155).replace(/<[^>]*>/g, '');
   const articleIsoDate = post.isoDate || post.date;
+  const categorySlug = post.category.toLowerCase();
 
   const handleCopyLink = () => {
     navigator.clipboard.writeText(window.location.href);
@@ -259,6 +299,17 @@ const BlogPost = () => {
     }
   };
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://experiencedoha.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://experiencedoha.com/blog" },
+      { "@type": "ListItem", "position": 3, "name": post.category, "item": `https://experiencedoha.com/blog/category/${categorySlug}` },
+      { "@type": "ListItem", "position": 4, "name": post.title }
+    ]
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
       <SEOHead 
@@ -267,13 +318,42 @@ const BlogPost = () => {
         image={typeof post.imageUrl === 'string' ? post.imageUrl : undefined}
         type="article"
         publishedTime={articleIsoDate}
-        jsonLd={articleJsonLd}
+        jsonLd={[articleJsonLd, breadcrumbJsonLd]}
         keywords={post.tags.join(', ')}
       />
       <NavBar />
       
       <main className="flex-1">
         <article>
+          {/* Breadcrumb Navigation */}
+          <div className="content-container pt-4 pb-2">
+            <Breadcrumb>
+              <BreadcrumbList>
+                <BreadcrumbItem>
+                  <BreadcrumbLink asChild>
+                    <Link to="/"><Home className="h-4 w-4" /></Link>
+                  </BreadcrumbLink>
+                </BreadcrumbItem>
+                <BreadcrumbSeparator />
+                <BreadcrumbItem>
+                  <BreadcrumbLink asChild>
+                    <Link to="/blog">Blog</Link>
+                  </BreadcrumbLink>
+                </BreadcrumbItem>
+                <BreadcrumbSeparator />
+                <BreadcrumbItem>
+                  <BreadcrumbLink asChild>
+                    <Link to={`/blog/category/${categorySlug}`}>{post.category}</Link>
+                  </BreadcrumbLink>
+                </BreadcrumbItem>
+                <BreadcrumbSeparator />
+                <BreadcrumbItem>
+                  <BreadcrumbPage className="line-clamp-1 max-w-[200px] sm:max-w-[400px]">{post.title}</BreadcrumbPage>
+                </BreadcrumbItem>
+              </BreadcrumbList>
+            </Breadcrumb>
+          </div>
+
           {/* Hero Section */}
           <div className="relative h-[280px] sm:h-[350px] md:h-[400px] w-full">
             <img
@@ -319,8 +399,7 @@ const BlogPost = () => {
                           key={item.id}
                           href={`#${item.id}`}
                           className="block text-sm text-gray-900 hover:text-qatar-gold transition-colors py-2.5 hover:translate-x-1 transform duration-200 font-medium"
-                          onClick={(e) => {
-                            e.preventDefault();
+                          onClick={() => {
                             document.getElementById(item.id)?.scrollIntoView({ behavior: 'smooth' });
                           }}
                         >
@@ -364,9 +443,11 @@ const BlogPost = () => {
                   <h3 className="text-sm font-medium text-gray-600 mb-4">Tags:</h3>
                   <div className="flex flex-wrap gap-2">
                     {post.tags.map((tag: string) => (
-                      <Badge key={tag} variant="secondary">
-                        {tag}
-                      </Badge>
+                      <Link key={tag} to={`/blog/category/${tag.toLowerCase().replace(/\s+/g, '-')}`}>
+                        <Badge variant="secondary" className="cursor-pointer hover:bg-secondary/60">
+                          {tag}
+                        </Badge>
+                      </Link>
                     ))}
                   </div>
                 </div>
@@ -405,16 +486,18 @@ const BlogPost = () => {
           </div>
 
           {/* Related Articles */}
-          <div className="bg-gray-50 py-16">
-            <div className="content-container">
-              <h2 className="section-title">Related Articles</h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {relatedPosts.map((relatedPost) => (
-                  <BlogCard key={relatedPost.id} {...relatedPost} />
-                ))}
+          {dynamicRelated.length > 0 && (
+            <div className="bg-gray-50 py-16">
+              <div className="content-container">
+                <h2 className="section-title">Related Articles</h2>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                  {dynamicRelated.map((relatedPost) => (
+                    <BlogCard key={relatedPost.id} {...relatedPost} />
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
+          )}
 
           {/* Newsletter Section */}
           <Newsletter />
