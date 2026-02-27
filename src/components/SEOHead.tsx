@@ -8,7 +8,7 @@ interface SEOHeadProps {
   type?: 'website' | 'article';
   publishedTime?: string;
   author?: string;
-  jsonLd?: Record<string, unknown>;
+  jsonLd?: Record<string, unknown> | Record<string, unknown>[];
   noindex?: boolean;
   keywords?: string;
 }
@@ -53,11 +53,11 @@ export const SEOHead = ({
       <meta name="twitter:image" content={image} />
       <meta name="twitter:site" content="@experiencedoha" />
 
-      {jsonLd && (
-        <script type="application/ld+json">
-          {JSON.stringify(jsonLd)}
+      {jsonLd && (Array.isArray(jsonLd) ? jsonLd : [jsonLd]).map((ld, i) => (
+        <script key={i} type="application/ld+json">
+          {JSON.stringify(ld)}
         </script>
-      )}
+      ))}
     </Helmet>
   );
 };

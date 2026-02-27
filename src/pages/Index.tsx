@@ -562,6 +562,24 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Browse by Category */}
+      <section className="py-12">
+        <div className="content-container">
+          <h2 className="text-3xl font-bold font-heading mb-6 text-qatar-maroon">Browse by Category</h2>
+          <div className="flex flex-wrap gap-3">
+            {['Attractions', 'Food', 'Culture', 'Events', 'Lifestyle', 'Expat-Tips'].map(cat => (
+              <Link
+                key={cat}
+                to={`/blog/category/${cat.toLowerCase()}`}
+                className="px-5 py-2.5 rounded-full border border-qatar-maroon/20 text-qatar-maroon font-medium hover:bg-qatar-maroon hover:text-white transition-colors"
+              >
+                {cat}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Newsletter Section */}
       <section className="bg-gray-50 py-16">
         <div className="content-container">
