@@ -28,7 +28,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from '@/components/ui/breadcrumb';
-import { Calendar, Clock, Facebook, Twitter, Share2, Home } from 'lucide-react';
+import { Clock, Facebook, Twitter, Share2, Home } from 'lucide-react';
 import BlogCard from '@/components/BlogCard';
 import PetImportChecklist from '@/components/PetImportChecklist';
 import VeterinaryCostEstimator from '@/components/VeterinaryCostEstimator';
@@ -49,6 +49,13 @@ import { LaborRightsCalculator } from '@/components/LaborRightsCalculator';
 import { EOSGCalculator } from '@/components/EOSGCalculator';
 import { ContractNegotiationChecklist } from '@/components/ContractNegotiationChecklist';
 import { blogPosts } from '@/data/articles';
+import OptimizedImage from '@/components/OptimizedImage';
+import AuthorBio from '@/components/AuthorBio';
+import TableOfContents from '@/components/TableOfContents';
+import ResourceSidebar from '@/components/ResourceSidebar';
+import PrintableItinerary from '@/components/PrintableItinerary';
+import LastUpdated from '@/components/LastUpdated';
+import DesertSafariCTA from '@/components/DesertSafariCTA';
 import type { ReactNode } from 'react';
 
 // Slug-based component injection map
@@ -116,6 +123,10 @@ const slugComponents: Record<string, { splitAt: string; component: ReactNode; sp
   ],
   'doha-metro-2025-guide': [
     { splitAt: '<h2 id="hours">', component: <MetroFareCalculator /> },
+  ],
+  '7-day-doha-itinerary': [
+    { splitAt: '<h2 id="day-1">', component: <PrintableItinerary /> },
+    { splitAt: '<h2 id="day-5">', component: <DesertSafariCTA /> },
   ],
 };
 
@@ -320,6 +331,7 @@ const BlogPost = () => {
         publishedTime={articleIsoDate}
         jsonLd={[articleJsonLd, breadcrumbJsonLd]}
         keywords={post.tags.join(', ')}
+        preloadImage={typeof post.imageUrl === 'string' ? post.imageUrl : undefined}
       />
       <NavBar />
       
@@ -356,25 +368,25 @@ const BlogPost = () => {
 
           {/* Hero Section */}
           <div className="relative h-[280px] sm:h-[350px] md:h-[400px] w-full">
-            <img
+            <OptimizedImage
               src={post.imageUrl}
               alt={`${post.title} - ${post.category} guide for Doha, Qatar`}
               className="w-full h-full object-cover"
-              fetchPriority="high"
+              priority={true}
+              sizes="100vw"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 content-container pb-8">
-              <Badge className="mb-4 bg-qatar-gold text-qatar-maroon hover:bg-qatar-gold">
-                {post.category}
-              </Badge>
+              <div className="flex flex-wrap items-center gap-3 mb-4">
+                <Badge className="bg-qatar-gold text-qatar-maroon hover:bg-qatar-gold">
+                  {post.category}
+                </Badge>
+                <LastUpdated date={post.date} className="bg-white/10 border-white/20 text-white" />
+              </div>
               <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold text-white mb-4">
                 {post.title}
               </h1>
               <div className="flex items-center gap-4 text-white/90 text-sm">
-                <div className="flex items-center gap-2">
-                  <Calendar className="h-4 w-4" />
-                  {post.date}
-                </div>
                 <div className="flex items-center gap-2">
                   <Clock className="h-4 w-4" />
                   {post.readTime}
@@ -391,23 +403,7 @@ const BlogPost = () => {
               <div className="lg:col-span-2">
                 {/* Table of Contents */}
                 {post.tableOfContents && (
-                  <div className="mb-8 p-6 bg-gray-50 rounded-lg border-2 border-qatar-maroon">
-                    <h3 className="text-lg font-bold mb-4 text-qatar-maroon">Table of Contents</h3>
-                    <nav className="space-y-2">
-                      {post.tableOfContents.map((item: { title: string; id: string }) => (
-                        <a
-                          key={item.id}
-                          href={`#${item.id}`}
-                          className="block text-sm text-gray-900 hover:text-qatar-gold transition-colors py-2.5 hover:translate-x-1 transform duration-200 font-medium"
-                          onClick={() => {
-                            document.getElementById(item.id)?.scrollIntoView({ behavior: 'smooth' });
-                          }}
-                        >
-                          → {item.title}
-                        </a>
-                      ))}
-                    </nav>
-                  </div>
+                  <TableOfContents items={post.tableOfContents} />
                 )}
 
                 {/* Share Buttons */}
@@ -453,28 +449,34 @@ const BlogPost = () => {
                 </div>
 
                 {/* Author Box */}
-                <div className="mt-8 p-6 bg-gray-50 rounded-lg">
-                  <h3 className="font-bold text-xl mb-2">About the Author</h3>
-                  <p className="text-gray-600">
-                    The Experience Doha Team consists of local experts and passionate travelers dedicated to bringing you the most authentic and up-to-date information about Qatar's vibrant capital.
-                  </p>
-                </div>
+                <AuthorBio 
+                  name={post.author}
+                  bio="The Experience Doha Team consists of local experts and passionate travelers dedicated to bringing you the most authentic and up-to-date information about Qatar's vibrant capital."
+                  credentials={["5+ Years in Qatar", "Certified Tour Guide", "Local Resident"]}
+                  socials={[
+                    { platform: 'twitter', url: 'https://twitter.com/experiencedoha' },
+                    { platform: 'instagram', url: 'https://instagram.com/experiencedoha' },
+                    { platform: 'website', url: 'https://experiencedoha.com' }
+                  ]}
+                />
               </div>
 
               {/* Sidebar */}
               <div className="space-y-8">
-                <div className="sticky top-8">
-                  <div className="bg-qatar-maroon text-white p-6 rounded-lg">
-                    <h3 className="text-xl font-bold mb-2">Stay Updated</h3>
-                    <p className="text-sm mb-4 text-white/90">
-                      Get the latest articles and travel tips delivered to your inbox.
-                    </p>
-                    <Link to="/#newsletter">
-                      <Button className="w-full bg-qatar-gold text-qatar-maroon hover:bg-qatar-gold/90">
-                        Subscribe Now
-                      </Button>
-                    </Link>
-                  </div>
+                <div className="bg-qatar-maroon text-white p-6 rounded-lg">
+                  <h3 className="text-xl font-bold mb-2">Stay Updated</h3>
+                  <p className="text-sm mb-4 text-white/90">
+                    Get the latest articles and travel tips delivered to your inbox.
+                  </p>
+                  <Link to="/#newsletter">
+                    <Button className="w-full bg-qatar-gold text-qatar-maroon hover:bg-qatar-gold/90">
+                      Subscribe Now
+                    </Button>
+                  </Link>
+                </div>
+
+                <div className="sticky top-24">
+                  <ResourceSidebar />
                 </div>
               </div>
             </div>

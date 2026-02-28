@@ -467,23 +467,42 @@ const Index = () => {
       <SEOHead
         title="Experience Doha - Ultimate Guide to Qatar Travel & Living"
         description="Plan your Doha trip or move with confidence. 2026 guides on visa rules, cost of living, layovers, salaries, and hidden gems in Qatar."
+        preloadImage={cornicheSunsetImage}
       />
       <NavBar />
 
-      {/* Hero H1 Section */}
-      <section className="bg-secondary text-secondary-foreground py-12 md:py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold font-heading mb-4">
-            Experience Doha: Your Guide to Qatar
+      {/* Hero Section */}
+      <section className="relative h-[80vh] min-h-[600px] flex items-center justify-center text-white overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <img 
+            src={cornicheSunsetImage} 
+            alt="Doha Skyline" 
+            className="w-full h-full object-cover"
+            fetchPriority="high"
+          />
+          <div className="absolute inset-0 bg-black/40" />
+        </div>
+        
+        {/* Content */}
+        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-5xl md:text-7xl font-bold font-heading mb-6 leading-tight">
+            The Ultimate Local Guide to Doha
           </h1>
-          <p className="text-xl max-w-3xl mx-auto text-secondary-foreground/80">
-            Expert guides on attractions, food, culture, layovers, and expat life in Qatar's capital
+          <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto text-white/90">
+            Discover the hidden gems, luxury experiences, and cultural treasures of Qatar's vibrant capital.
           </p>
+          <button 
+            onClick={() => document.getElementById('featured-blogs')?.scrollIntoView({ behavior: 'smooth' })}
+            className="bg-qatar-maroon hover:bg-qatar-maroon/90 text-white font-bold py-4 px-8 rounded-full transition-all transform hover:scale-105 shadow-lg"
+          >
+            Start Exploring
+          </button>
         </div>
       </section>
 
       {/* Featured Blog Posts */}
-      <section className="featured-blogs py-16">
+      <section id="featured-blogs" className="featured-blogs py-16">
         <div className="content-container">
           <h2 className="text-3xl font-bold font-heading mb-8 text-qatar-maroon">
             Featured Articles
