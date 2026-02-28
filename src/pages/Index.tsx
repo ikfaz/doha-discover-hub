@@ -103,7 +103,7 @@ const Index = () => {
                 imageUrl={blog.imageUrl}
                 category={blog.category}
                 date={blog.date}
-                slug={blog.id}
+                slug={blog.slug}
               />
             ))}
           </div>
