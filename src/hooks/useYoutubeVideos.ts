@@ -15,6 +15,14 @@ interface YouTubeVideo {
 const mockVideos: YouTubeVideo[] = [
   {
     videoId: 'NJaD4HZOGG0',
+    title: 'The Real Qatar Beyond The Headlines',
+    description: 'Experience the authentic side of Qatar, going beyond the skyscrapers to discover the rich culture and traditions.',
+    date: 'May 1, 2025',
+    category: 'attractions',
+    thumbnailUrl: 'https://i.ytimg.com/vi/NJaD4HZOGG0/hqdefault.jpg'
+  },
+  {
+    videoId: 'NJaD4HZOGG1',
     title: 'Exploring Doha\'s Cultural Districts',
     description: 'Join us as we explore the rich cultural heritage and modern attractions in Doha\'s most vibrant neighborhoods.',
     date: 'April 15, 2025',
@@ -22,7 +30,7 @@ const mockVideos: YouTubeVideo[] = [
     thumbnailUrl: 'https://i.ytimg.com/vi/NJaD4HZOGG0/hqdefault.jpg'
   },
   {
-    videoId: 'NJaD4HZOGG0',
+    videoId: 'NJaD4HZOGG2',
     title: 'Best Street Food in Doha',
     description: 'Discover the most delicious street food options in Qatar\'s capital city.',
     date: 'April 10, 2025',
@@ -30,7 +38,7 @@ const mockVideos: YouTubeVideo[] = [
     thumbnailUrl: 'https://i.ytimg.com/vi/NJaD4HZOGG0/hqdefault.jpg'
   },
   {
-    videoId: 'NJaD4HZOGG0',
+    videoId: 'NJaD4HZOGG3',
     title: 'Qatar Cultural Festival 2025',
     description: 'Highlights from the annual cultural festival showcasing Qatar\'s rich traditions.',
     date: 'April 5, 2025',
@@ -38,7 +46,7 @@ const mockVideos: YouTubeVideo[] = [
     thumbnailUrl: 'https://i.ytimg.com/vi/NJaD4HZOGG0/hqdefault.jpg'
   },
   {
-    videoId: 'NJaD4HZOGG0',
+    videoId: 'NJaD4HZOGG4',
     title: 'Living in Doha: An Expat\'s Guide',
     description: 'Essential tips for expatriates living in or moving to Doha, Qatar.',
     date: 'March 25, 2025',
@@ -46,7 +54,7 @@ const mockVideos: YouTubeVideo[] = [
     thumbnailUrl: 'https://i.ytimg.com/vi/NJaD4HZOGG0/hqdefault.jpg'
   },
   {
-    videoId: 'NJaD4HZOGG0',
+    videoId: 'NJaD4HZOGG5',
     title: 'Luxury Shopping in Doha',
     description: 'Tour the most exclusive shopping destinations in Qatar\'s cosmopolitan capital.',
     date: 'March 15, 2025',
