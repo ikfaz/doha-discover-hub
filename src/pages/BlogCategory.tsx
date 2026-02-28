@@ -6,7 +6,6 @@ import Footer from '@/components/Footer';
 import BlogCard from '@/components/BlogCard';
 import Newsletter from '@/components/Newsletter';
 import SEOHead from '@/components/SEOHead';
-import { blogPosts } from '@/data/articles/blog-data';
 
 const BlogCategory = () => {
   const { category } = useParams<{ category: string }>();
@@ -33,21 +32,75 @@ const BlogCategory = () => {
       title: 'Expat Tips',
       description: 'Helpful guides and tips for expatriates living in or moving to Qatar.',
     },
-    lifestyle: {
-      title: 'Lifestyle in Doha',
-      description: 'Discover luxury shopping, wellness, and modern living in Qatar.',
-    },
   };
   
-  const currentCategory = category && categoryInfo[category.toLowerCase()] ? categoryInfo[category.toLowerCase()] : { 
-    title: category ? category.charAt(0).toUpperCase() + category.slice(1) : 'Category', 
-    description: `Blog posts in ${category || 'this'} category` 
+  const currentCategory = category ? categoryInfo[category] : { 
+    title: 'Category', 
+    description: 'Blog posts in this category' 
   };
+  
+  // Mock blog post data
+  const allPosts = [
+    {
+      id: '1',
+      title: 'Top 10 Must-Visit Attractions in Doha',
+      excerpt: 'Discover the most spectacular sights and experiences in Qatar\'s vibrant capital city.',
+      imageUrl: 'https://images.unsplash.com/photo-1518182170546-07661fd94144?q=80&w=2668&auto=format&fit=crop',
+      category: 'attractions',
+      date: 'April 15, 2026',
+      slug: 'top-attractions-doha',
+    },
+    {
+      id: '4',
+      title: 'A Day at the Museum of Islamic Art',
+      excerpt: 'Explore one of Doha\'s most iconic architectural landmarks and its world-class collections.',
+      imageUrl: 'https://images.unsplash.com/photo-1558227108-af6eec1a0bb4?q=80&w=2574&auto=format&fit=crop',
+      category: 'attractions',
+      date: 'April 2, 2026',
+      slug: 'museum-islamic-art',
+    },
+    {
+      id: '2',
+      title: 'Best Local Restaurants for Authentic Qatari Cuisine',
+      excerpt: 'Taste the traditional flavors of Qatar at these local favorite dining spots.',
+      imageUrl: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=2574&auto=format&fit=crop',
+      category: 'food',
+      date: 'April 10, 2026',
+      slug: 'authentic-qatari-cuisine',
+    },
+    {
+      id: '3',
+      title: 'Upcoming Cultural Events in Doha This Summer',
+      excerpt: 'Mark your calendar for these exciting cultural festivals and events.',
+      imageUrl: 'https://images.unsplash.com/photo-1526285759704-71d51dd482ab?q=80&w=2670&auto=format&fit=crop',
+      category: 'events',
+      date: 'April 5, 2026',
+      slug: 'summer-cultural-events',
+    },
+    {
+      id: '5',
+      title: 'Shopping Guide: From Traditional Souqs to Luxury Malls',
+      excerpt: 'Navigate Doha\'s diverse shopping scene with this comprehensive guide.',
+      imageUrl: 'https://images.unsplash.com/photo-1528698827591-e19ccd7bc23d?q=80&w=2576&auto=format&fit=crop',
+      category: 'lifestyle',
+      date: 'March 28, 2026',
+      slug: 'doha-shopping-guide',
+    },
+    {
+      id: '6',
+      title: 'Essential Tips for Expats Moving to Qatar',
+      excerpt: 'Everything you need to know about settling into life in Doha as an expatriate.',
+      imageUrl: 'https://images.unsplash.com/photo-1599946347371-68eb71b16afc?q=80&w=2670&auto=format&fit=crop',
+      category: 'expat-tips',
+      date: 'March 25, 2026',
+      slug: 'qatar-expat-guide',
+    },
+  ];
   
   // Filter posts based on category
-  const posts = Object.values(blogPosts).filter(post => 
-    category ? post.category.toLowerCase() === category.toLowerCase() : true
-  );
+  const posts = category 
+    ? allPosts.filter(post => post.category.toLowerCase() === category.toLowerCase())
+    : allPosts;
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -77,10 +130,8 @@ const BlogCategory = () => {
               {posts.map(post => (
                 <BlogCard 
                   key={post.id} 
-                  {...post}
-                  slug={post.id}
+                  {...post} 
                   category={post.category.charAt(0).toUpperCase() + post.category.slice(1)}
-                  excerpt={post.excerpt || post.content.substring(0, 150)}
                 />
               ))}
             </div>
