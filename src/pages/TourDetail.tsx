@@ -1,12 +1,10 @@
 import React, { useMemo } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { Clock, Users, Globe, MapPin, ChevronLeft, Check, X, Share2 } from 'lucide-react';
+import { Clock, Users, Globe, MapPin, Star, ChevronLeft, Check, X, Share2 } from 'lucide-react';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 import SEOHead from '@/components/SEOHead';
-import OptimizedImage from '@/components/OptimizedImage';
-import RatingSystem from '@/components/RatingSystem';
 import TourBookingSidebar from '@/components/TourBookingSidebar';
 import TourItineraryTimeline from '@/components/TourItineraryTimeline';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -105,19 +103,17 @@ const TourDetail = () => {
         description={`${tour.subtitle}. ${tour.duration} tour with ${tour.rating}★ rating from ${tour.reviewCount} reviews. Book now from ${priceQAR} QAR per person.`}
         image={toWebP(tour.heroImage)}
         jsonLd={jsonLd}
-        preloadImage={toWebP(tour.heroImage)}
       />
       <NavBar />
 
       <main className="flex-grow">
         {/* Hero Section */}
         <section className="relative h-[50vh] md:h-[60vh] overflow-hidden">
-          <OptimizedImage
-            src={tour.heroImage}
+          <img
+            src={toWebP(tour.heroImage)}
             alt={`${tour.title} – ${tour.category} tour in Doha, Qatar`}
             className="w-full h-full object-cover"
-            priority={true}
-            sizes="100vw"
+            loading="eager"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-charcoal/70 via-charcoal/30 to-transparent" />
 
@@ -203,11 +199,11 @@ const TourDetail = () => {
                       Tour Route
                     </h3>
                     <div className="relative rounded-2xl overflow-hidden shadow-md h-[300px]">
-                      <OptimizedImage
-                        src={tour.mapImage}
+                      <img
+                        src={toWebP(tour.mapImage)}
                         alt={`Route map showing ${tour.itinerary.length} stops for ${tour.title}`}
                         className="w-full h-full object-cover"
-                        sizes="(max-width: 768px) 100vw, 800px"
+                        loading="lazy"
                       />
                       <div className="absolute inset-0 bg-charcoal/10" />
                       <div className="absolute bottom-4 start-4 bg-white/90 backdrop-blur-sm rounded-lg px-4 py-2 shadow-md">
@@ -255,7 +251,9 @@ const TourDetail = () => {
                     <div className="bg-secondary text-secondary-foreground rounded-2xl p-5 text-center min-w-[100px]">
                       <div className="text-3xl font-bold">{tour.rating}</div>
                       <div className="flex justify-center mt-1">
-                        <RatingSystem rating={tour.rating} readOnly size="sm" />
+                        {[...Array(5)].map((_, i) => (
+                          <Star key={i} className={`w-4 h-4 ${i < Math.floor(tour.rating) ? 'text-sand-gold fill-sand-gold' : 'text-gray-400'}`} aria-hidden="true" />
+                        ))}
                       </div>
                       <div className="text-xs mt-1 text-secondary-foreground/70">{tour.reviewCount} reviews</div>
                     </div>
@@ -277,7 +275,9 @@ const TourDetail = () => {
                             <p className="text-xs text-muted-foreground">{review.country} · {review.date}</p>
                           </div>
                           <div className="ms-auto flex">
-                            <RatingSystem rating={review.rating} readOnly size="sm" />
+                            {[...Array(5)].map((_, j) => (
+                              <Star key={j} className={`w-3.5 h-3.5 ${j < review.rating ? 'text-sand-gold fill-sand-gold' : 'text-gray-200'}`} aria-hidden="true" />
+                            ))}
                           </div>
                         </div>
                         <p className="text-sm text-muted-foreground leading-relaxed">{review.comment}</p>

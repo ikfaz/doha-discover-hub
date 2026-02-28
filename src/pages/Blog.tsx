@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 import BlogCard from '@/components/BlogCard';
-import BlogCardSkeleton from '@/components/BlogCardSkeleton';
 import Newsletter from '@/components/Newsletter';
 import SEOHead from '@/components/SEOHead';
 import { Input } from '@/components/ui/input';
@@ -64,15 +63,7 @@ import endOfServiceGratuityImage from '@/assets/end-of-service-gratuity-qatar-20
 
 const Blog = () => {
   const [searchQuery, setSearchQuery] = useState('');
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    // Simulate loading delay for skeleton demonstration
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 800);
-    return () => clearTimeout(timer);
-  }, []);
+  const [isLoading, setIsLoading] = useState(false);
   
   const allPosts = [
     {
@@ -656,18 +647,12 @@ const Blog = () => {
               </div>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {isLoading ? (
-                  Array.from({ length: 6 }).map((_, index) => (
-                    <BlogCardSkeleton key={index} />
-                  ))
-                ) : (
-                  filteredPosts.map(post => (
-                    <BlogCard key={post.id} {...post} />
-                  ))
-                )}
+                {filteredPosts.map(post => (
+                  <BlogCard key={post.id} {...post} />
+                ))}
               </div>
               
-              {!isLoading && filteredPosts.length === 0 && (
+              {filteredPosts.length === 0 && (
                 <div className="text-center py-12">
                   <h3 className="text-xl font-medium text-gray-700 mb-2">No posts found</h3>
                   <p className="text-gray-500">Try adjusting your search query</p>

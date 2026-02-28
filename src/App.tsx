@@ -6,7 +6,6 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
 import { useEffect, lazy, Suspense } from "react";
-import SEOHead from "@/components/SEOHead";
 
 // Lazy load all route-level components
 const Index = lazy(() => import("./pages/Index"));
@@ -61,10 +60,6 @@ const AppContent = () => {
 
   return (
     <BrowserRouter>
-      <SEOHead 
-        titleTemplate="%s | Experience Doha"
-        defaultTitle="Experience Doha - Qatar Travel & Attractions Guide 2026"
-      />
       <Suspense fallback={<PageLoader />}>
         <Routes>
           <Route path="/" element={<Index />} />

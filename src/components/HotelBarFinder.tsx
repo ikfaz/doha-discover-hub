@@ -4,8 +4,7 @@ import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { MapPin, Clock, DollarSign, Users, Shirt, Phone } from 'lucide-react';
-import RatingSystem from '@/components/RatingSystem';
+import { MapPin, Clock, DollarSign, Users, Shirt, Star, Phone } from 'lucide-react';
 
 interface HotelBar {
   id: number;
@@ -316,7 +315,7 @@ const HotelBarFinder = () => {
                     </CardDescription>
                   </div>
                   <div className="flex items-center gap-1">
-                    <RatingSystem rating={bar.rating} readOnly size="sm" />
+                    <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
                     <span className="text-sm font-medium">{bar.rating}</span>
                   </div>
                 </div>

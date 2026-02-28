@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import { Calendar, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Badge } from '@/components/ui/badge';
-import OptimizedImage from '@/components/OptimizedImage';
 
 interface BlogCardProps {
   id: string;
@@ -40,11 +39,11 @@ const BlogCard: React.FC<BlogCardProps> = ({
     <div className="bg-white rounded-lg shadow-md overflow-hidden h-full card-hover">
       <Link to={`/blog/${slug}`}>
         <div className="relative w-full h-48 bg-gray-200">
-          <OptimizedImage
+          <img
             src={imgSrc}
             alt={`${title} - ${category} guide image`}
             className="w-full h-full object-cover"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            loading="lazy"
             onError={() => setImgSrc(fallbackImage)}
           />
         </div>
