@@ -44,22 +44,6 @@ const mockVideos: YouTubeVideo[] = [
     date: 'April 5, 2025',
     category: 'events',
     thumbnailUrl: 'https://i.ytimg.com/vi/NJaD4HZOGG0/hqdefault.jpg'
-  },
-  {
-    videoId: 'NJaD4HZOGG4',
-    title: 'Living in Doha: An Expat\'s Guide',
-    description: 'Essential tips for expatriates living in or moving to Doha, Qatar.',
-    date: 'March 25, 2025',
-    category: 'expat-tips',
-    thumbnailUrl: 'https://i.ytimg.com/vi/NJaD4HZOGG0/hqdefault.jpg'
-  },
-  {
-    videoId: 'NJaD4HZOGG5',
-    title: 'Luxury Shopping in Doha',
-    description: 'Tour the most exclusive shopping destinations in Qatar\'s cosmopolitan capital.',
-    date: 'March 15, 2025',
-    category: 'lifestyle',
-    thumbnailUrl: 'https://i.ytimg.com/vi/NJaD4HZOGG0/hqdefault.jpg'
   }
 ];
 

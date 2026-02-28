@@ -488,8 +488,8 @@ const Index = () => {
           <h2 className="text-3xl font-bold font-heading mb-8 text-qatar-maroon">
             Featured Articles
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredBlogs.map((blog) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {featuredBlogs.slice(0, 4).map((blog) => (
               <BlogCard
                 key={blog.id}
                 id={blog.id}
