@@ -1,16 +1,60 @@
-import React, { useMemo } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 import BlogCard from '@/components/BlogCard';
 import Newsletter from '@/components/Newsletter';
 import SEOHead from '@/components/SEOHead';
-import { categoryToSlug, getBlogList, getCategoryCounts } from '@/lib/blog';
+import { categoryToSlug, getCategoryCounts, loadBlogList } from '@/lib/blog';
+import type { BlogListItem } from '@/lib/blog';
 
 const Index = () => {
-  const posts = useMemo(() => getBlogList(), []);
+  const [posts, setPosts] = useState<BlogListItem[]>([]);
+
+  useEffect(() => {
+    let cancelled = false;
+
+    const loadPosts = async () => {
+      const loadedPosts = await loadBlogList();
+      if (!cancelled) {
+        setPosts(loadedPosts);
+      }
+    };
+
+    loadPosts();
+
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
   const featuredBlogs = useMemo(() => posts.slice(0, 4), [posts]);
   const categories = useMemo(() => getCategoryCounts(posts), [posts]);
+  const faqItems = useMemo(
+    () => [
+      {
+        question: 'What are the best things to do in Doha for first-time visitors?',
+        answer:
+          'Start with Souq Waqif, the Museum of Islamic Art, Katara Cultural Village, a Corniche sunset, and a desert safari for a complete first trip.',
+      },
+      {
+        question: 'Is 24 to 48 hours enough for a Doha layover?',
+        answer:
+          'Yes. With a clear itinerary, you can cover major highlights, local food, and either a city tour or short desert experience.',
+      },
+      {
+        question: 'How expensive is Doha for expats and travelers in 2026?',
+        answer:
+          'Costs vary by housing and lifestyle. Our budget planner and cost guides help estimate rent, transport, food, and family expenses.',
+      },
+      {
+        question: 'Do I need a visa to visit or move to Qatar?',
+        answer:
+          'Visa requirements depend on nationality and trip purpose. Check official rules, then use our visa and relocation guides for practical next steps.',
+      },
+    ],
+    [],
+  );
 
   const structuredData = useMemo(
     () => ({
@@ -19,7 +63,7 @@ const Index = () => {
       name: 'Experience Doha',
       url: 'https://experiencedoha.com/',
       description:
-        'Your guide to exploring Doha, Qatar. Discover attractions, expat tips, layover guides, and local insights.',
+        'Doha travel and expat guides with practical costs, visa help, and layover itineraries.',
       inLanguage: 'en-US',
       publisher: {
         '@type': 'Organization',
@@ -43,13 +87,28 @@ const Index = () => {
     }),
     [],
   );
+  const faqJsonLd = useMemo(
+    () => ({
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faqItems.map((faq) => ({
+        '@type': 'Question',
+        name: faq.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: faq.answer,
+        },
+      })),
+    }),
+    [faqItems],
+  );
 
   return (
     <div className="min-h-screen flex flex-col">
       <SEOHead
-        title="Experience Doha - Ultimate Guide to Qatar Travel & Living"
-        description="Plan your Doha trip or move with confidence. Practical guides on visa rules, cost of living, layovers, and local experiences in Qatar."
-        jsonLd={structuredData}
+        title="Doha Travel Guide 2026: Things To Do, Costs, Visa Tips | Experience Doha"
+        description="Planning Doha in 2026? Explore top attractions, realistic living costs, visa guidance, and layover itineraries from local experts."
+        jsonLd={[structuredData, faqJsonLd]}
       />
       <NavBar />
 
@@ -113,6 +172,20 @@ const Index = () => {
               >
                 {cat.name} ({cat.count})
               </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 bg-muted/20">
+        <div className="content-container">
+          <h2 className="text-3xl font-bold font-heading mb-6 text-qatar-maroon">Doha Travel FAQs</h2>
+          <div className="space-y-4">
+            {faqItems.map((faq) => (
+              <article key={faq.question} className="rounded-lg border bg-background p-5">
+                <h3 className="text-lg font-semibold text-foreground">{faq.question}</h3>
+                <p className="mt-2 text-muted-foreground">{faq.answer}</p>
+              </article>
             ))}
           </div>
         </div>

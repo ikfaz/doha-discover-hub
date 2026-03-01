@@ -17,8 +17,8 @@ const About = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <SEOHead 
-        title="About Experience Doha - Your Qatar Travel Guide"
-        description="Meet the team behind Experience Doha — expat-tested guides, honest tips, and insider knowledge for tourists and residents in Qatar."
+        title="About Experience Doha: Local Qatar Travel & Expat Experts"
+        description="Meet the Experience Doha team and editorial approach. We publish practical, expat-tested guides for traveling and living in Qatar."
       />
       <NavBar />
       

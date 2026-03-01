@@ -1,32 +1,87 @@
-import React, { useMemo } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 import BlogCard from '@/components/BlogCard';
 import Newsletter from '@/components/Newsletter';
 import SEOHead from '@/components/SEOHead';
-import { categoryToSlug, filterByCategorySlug, getBlogList, getCategoryCounts } from '@/lib/blog';
+import { categoryToSlug, filterByCategorySlug, getCategoryCounts, loadBlogList } from '@/lib/blog';
+import type { BlogListItem } from '@/lib/blog';
 
 const BlogCategory = () => {
   const { category } = useParams<{ category: string }>();
   const categorySlug = category ?? '';
 
-  const posts = useMemo(() => getBlogList(), []);
+  const [posts, setPosts] = useState<BlogListItem[]>([]);
+  const [isLoadingPosts, setIsLoadingPosts] = useState(true);
+
+  useEffect(() => {
+    let cancelled = false;
+
+    const loadPosts = async () => {
+      const loadedPosts = await loadBlogList();
+      if (!cancelled) {
+        setPosts(loadedPosts);
+        setIsLoadingPosts(false);
+      }
+    };
+
+    loadPosts();
+
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
   const categories = useMemo(() => getCategoryCounts(posts), [posts]);
   const currentCategory = categories.find((item) => item.slug === categorySlug);
   const categoryPosts = useMemo(() => filterByCategorySlug(posts, categorySlug), [posts, categorySlug]);
 
   const title = currentCategory ? `${currentCategory.name} in Doha` : 'Category';
+  const seoTitle = currentCategory
+    ? `${currentCategory.name} Guides in Doha 2026 | Experience Doha Blog`
+    : 'Doha Blog Categories | Experience Doha';
   const description = currentCategory
-    ? `Browse ${currentCategory.count} article(s) in ${currentCategory.name}.`
+    ? `Read ${currentCategory.count} practical ${currentCategory.name.toLowerCase()} guide(s) for Doha expats and visitors, including costs, planning tips, and local advice.`
     : 'Browse blog posts by topic.';
+  const categoryUrl = currentCategory ? `https://experiencedoha.com/blog/category/${categorySlug}` : null;
+
+  const categoryJsonLd = useMemo(() => {
+    if (!currentCategory || !categoryUrl) return null;
+
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      name: `${currentCategory.name} Guides for Doha`,
+      description,
+      url: categoryUrl,
+    };
+  }, [currentCategory, categoryUrl, description]);
+
+  const itemListJsonLd = useMemo(() => {
+    if (!currentCategory || !categoryUrl) return null;
+
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      itemListOrder: 'https://schema.org/ItemListOrderDescending',
+      numberOfItems: categoryPosts.length,
+      itemListElement: categoryPosts.slice(0, 12).map((post, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        name: post.title,
+        url: `https://experiencedoha.com/blog/${post.slug}`,
+      })),
+    };
+  }, [currentCategory, categoryUrl, categoryPosts]);
 
   return (
     <div className="min-h-screen flex flex-col">
       <SEOHead
-        title={`${title} - Experience Doha Blog`}
+        title={seoTitle}
         description={description}
         noindex={!currentCategory}
+        jsonLd={[categoryJsonLd, itemListJsonLd].filter(Boolean)}
       />
       <NavBar />
 
@@ -44,6 +99,10 @@ const BlogCategory = () => {
               {categoryPosts.map((post) => (
                 <BlogCard key={post.id} {...post} />
               ))}
+            </div>
+          ) : isLoadingPosts ? (
+            <div className="text-center py-12">
+              <p className="text-gray-500">Loading posts...</p>
             </div>
           ) : (
             <div className="text-center py-12">

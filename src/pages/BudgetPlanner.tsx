@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 import BudgetCharts from '@/components/BudgetCharts';
@@ -65,6 +65,31 @@ const BudgetPlanner = () => {
   const [expenses, setExpenses] = useState<ExpenseCategory[]>(singleTemplate);
   const [newCategoryName, setNewCategoryName] = useState('');
   const [salary, setSalary] = useState<number>(20000);
+  const faqItems = useMemo(
+    () => [
+      {
+        question: 'What monthly salary is enough for a single expat in Doha?',
+        answer:
+          'It depends on rent and lifestyle, but many single professionals target a salary that allows at least a 20% savings rate after essentials.',
+      },
+      {
+        question: 'How much should families budget for living in Doha?',
+        answer:
+          'Families usually spend most on housing, schooling, and transport. Use the family template as a baseline, then adjust to your neighborhood and school choices.',
+      },
+      {
+        question: 'Are the exchange rates in this planner exact?',
+        answer:
+          'Rates are approximate planning values. For final financial decisions, verify rates with your bank or transfer provider on the day you transact.',
+      },
+      {
+        question: 'Does this planner include Qatar income tax?',
+        answer:
+          'No personal income tax is applied in Qatar. The planner focuses on monthly living expenses and savings potential.',
+      },
+    ],
+    [],
+  );
 
   useEffect(() => {
     setExpenses(template === 'single' ? singleTemplate : familyTemplate);
@@ -78,6 +103,39 @@ const BudgetPlanner = () => {
   const convertCurrency = (amount: number) => {
     return (amount * currencyRates[currency]).toFixed(2);
   };
+  const toolJsonLd = useMemo(
+    () => ({
+      '@context': 'https://schema.org',
+      '@type': 'WebApplication',
+      name: 'Doha Expat Budget Planner',
+      url: 'https://experiencedoha.com/budget-planner',
+      applicationCategory: 'FinanceApplication',
+      operatingSystem: 'Any',
+      offers: {
+        '@type': 'Offer',
+        price: '0',
+        priceCurrency: 'USD',
+      },
+      description:
+        'Interactive Doha budget calculator for expats to estimate monthly costs, compare templates, and plan savings.',
+    }),
+    [],
+  );
+  const faqJsonLd = useMemo(
+    () => ({
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faqItems.map((faq) => ({
+        '@type': 'Question',
+        name: faq.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: faq.answer,
+        },
+      })),
+    }),
+    [faqItems],
+  );
 
   const handleAddCategory = () => {
     if (!newCategoryName.trim()) {
@@ -161,8 +219,9 @@ const BudgetPlanner = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <SEOHead 
-        title="Doha Expat Budget Planner - Calculate Living Costs in Qatar"
-        description="Free Doha budget calculator: estimate rent, groceries, transport, and school fees. Plan monthly costs for singles or families in Qatar."
+        title="Doha Budget Planner 2026: Estimate Expat Living Costs Free"
+        description="Free Doha budget planner for expats. Estimate rent, food, transport, and school fees, then track your monthly savings target."
+        jsonLd={[toolJsonLd, faqJsonLd]}
       />
       <NavBar />
       
@@ -426,6 +485,20 @@ const BudgetPlanner = () => {
             </div>
           </div>
         </div>
+
+        <section className="py-12">
+          <div className="content-container">
+            <h2 className="text-3xl font-bold font-heading mb-6 text-primary">Budget Planner FAQs</h2>
+            <div className="space-y-4">
+              {faqItems.map((faq) => (
+                <article key={faq.question} className="rounded-lg border bg-background p-5">
+                  <h3 className="text-lg font-semibold text-foreground">{faq.question}</h3>
+                  <p className="mt-2 text-muted-foreground">{faq.answer}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
       </main>
 
       <Footer />

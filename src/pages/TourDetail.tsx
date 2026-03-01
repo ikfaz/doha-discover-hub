@@ -69,6 +69,44 @@ const TourDetail = () => {
       })),
     };
   }, [tour, priceQAR]);
+  const faqItems = useMemo(() => {
+    if (!tour) return [];
+
+    return [
+      {
+        question: `How long is the ${tour.title} tour?`,
+        answer: `The tour lasts about ${tour.duration} and includes guided stops based on live conditions and pickup location.`,
+      },
+      {
+        question: `How much does ${tour.title} cost?`,
+        answer: `Current starting price is ${priceQAR} QAR per person, with final pricing shown on the booking page.`,
+      },
+      {
+        question: 'What is included in this Doha tour?',
+        answer: `Inclusions typically cover transport, guide support, and listed activities. Review the "What's Included" tab before booking.`,
+      },
+      {
+        question: 'Is this tour suitable for first-time visitors to Doha?',
+        answer: 'Yes. This tour is designed for visitors who want a structured experience with clear logistics and local guidance.',
+      },
+    ];
+  }, [tour, priceQAR]);
+  const faqJsonLd = useMemo(() => {
+    if (!faqItems.length) return undefined;
+
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faqItems.map((faq) => ({
+        '@type': 'Question',
+        name: faq.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: faq.answer,
+        },
+      })),
+    };
+  }, [faqItems]);
 
   if (!tour) {
     return (
@@ -99,10 +137,10 @@ const TourDetail = () => {
   return (
     <div className="min-h-screen flex flex-col font-sans">
       <SEOHead
-        title={`${tour.title} – Book from ${priceQAR} QAR | Experience Doha`}
-        description={`${tour.subtitle}. ${tour.duration} tour with ${tour.rating}★ rating from ${tour.reviewCount} reviews. Book now from ${priceQAR} QAR per person.`}
+        title={`${tour.title} - Book from ${priceQAR} QAR | Doha Tours 2026`}
+        description={`${tour.subtitle}. ${tour.duration} experience rated ${tour.rating}/5 from ${tour.reviewCount} reviews. Reserve your Doha tour from ${priceQAR} QAR.`}
         image={toWebP(tour.heroImage)}
-        jsonLd={jsonLd}
+        jsonLd={faqJsonLd ? [jsonLd, faqJsonLd] : jsonLd}
       />
       <NavBar />
 
@@ -111,7 +149,7 @@ const TourDetail = () => {
         <section className="relative h-[50vh] md:h-[60vh] overflow-hidden">
           <img
             src={toWebP(tour.heroImage)}
-            alt={`${tour.title} – ${tour.category} tour in Doha, Qatar`}
+            alt={`${tour.title} - ${tour.category} tour in Doha, Qatar`}
             className="w-full h-full object-cover"
             loading="eager"
           />
@@ -209,7 +247,7 @@ const TourDetail = () => {
                       <div className="absolute bottom-4 start-4 bg-white/90 backdrop-blur-sm rounded-lg px-4 py-2 shadow-md">
                         <p className="text-sm font-medium text-charcoal flex items-center gap-2">
                           <MapPin className="w-4 h-4 text-sand-gold" aria-hidden="true" />
-                          {tour.itinerary.length} stops · {tour.duration}
+                          {tour.itinerary.length} stops - {tour.duration}
                         </p>
                       </div>
                     </div>
@@ -272,7 +310,7 @@ const TourDetail = () => {
                           </div>
                           <div>
                             <p className="font-medium text-foreground text-sm">{review.name}</p>
-                            <p className="text-xs text-muted-foreground">{review.country} · {review.date}</p>
+                            <p className="text-xs text-muted-foreground">{review.country} - {review.date}</p>
                           </div>
                           <div className="ms-auto flex">
                             {[...Array(5)].map((_, j) => (
@@ -293,6 +331,18 @@ const TourDetail = () => {
                 <TourBookingSidebar tour={tour} />
               </div>
             </aside>
+          </div>
+        </section>
+
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
+          <h2 className="text-2xl font-bold text-secondary mb-5 font-heading">Tour FAQs</h2>
+          <div className="space-y-4">
+            {faqItems.map((faq) => (
+              <article key={faq.question} className="rounded-lg border bg-background p-5">
+                <h3 className="text-lg font-semibold text-foreground">{faq.question}</h3>
+                <p className="mt-2 text-muted-foreground">{faq.answer}</p>
+              </article>
+            ))}
           </div>
         </section>
       </main>
