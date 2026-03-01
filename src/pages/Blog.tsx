@@ -72,6 +72,7 @@ const Blog = () => {
       <SEOHead
         title="Experience Doha Blog - Qatar Travel Guide & Expat Tips"
         description="Browse expert Doha guides, layover itineraries, expat tips, visa updates, and local insights. Search by topic, category, or tag."
+        noindex={Boolean(query)}
       />
       <NavBar />
 

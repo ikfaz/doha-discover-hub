@@ -44,6 +44,10 @@ const BlogCard: React.FC<BlogCardProps> = ({
             alt={`${title} - ${category} guide image`}
             className="w-full h-full object-cover"
             loading="lazy"
+            decoding="async"
+            fetchPriority="low"
+            width={800}
+            height={600}
             onError={() => setImgSrc(fallbackImage)}
           />
         </div>

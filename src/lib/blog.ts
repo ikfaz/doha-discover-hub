@@ -1,5 +1,5 @@
-import { blogPosts } from '@/data/articles';
-import { fixMojibake, slugify, stripHtml } from '@/lib/text';
+import { blogMetaPosts } from '@/data/articles/blog-meta';
+import { fixMojibake, slugify } from '@/lib/text';
 
 export interface BlogListItem {
   id: string;
@@ -22,13 +22,13 @@ const toTimestamp = (value: { isoDate?: string; date: string }): number => {
 };
 
 export const getBlogList = (): BlogListItem[] =>
-  Object.entries(blogPosts)
+  Object.entries(blogMetaPosts)
     .filter(([slug]) => !EXCLUDED_SLUGS.has(slug))
     .map(([slug, post]) => ({
       id: post.id,
       slug,
       title: fixMojibake(post.title),
-      excerpt: fixMojibake(post.excerpt ?? stripHtml(post.content).slice(0, 160)),
+      excerpt: fixMojibake(post.excerpt ?? post.metaDescription ?? post.title),
       imageUrl: post.imageUrl,
       category: fixMojibake(post.category),
       date: fixMojibake(post.date),

@@ -1,23 +1,11 @@
 import { useParams, Link, Navigate } from 'react-router-dom';
-import { useMemo } from 'react';
+import { lazy, Suspense, useEffect, useMemo, useState } from 'react';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 import Newsletter from '@/components/Newsletter';
 import ViatorBanner from '@/components/ViatorBanner';
 import ViatorArticleBanner from '@/components/ViatorArticleBanner';
 import SEOHead from '@/components/SEOHead';
-import SchoolComparisonTool from '@/components/SchoolComparisonTool';
-import SchoolFeeCalculator from '@/components/SchoolFeeCalculator';
-import VisaChecklistGenerator from '@/components/VisaChecklistGenerator';
-import DrivingLicenseChecker from '@/components/DrivingLicenseChecker';
-import MentalHealthDirectory from '@/components/MentalHealthDirectory';
-import { TherapyCostCalculator } from '@/components/TherapyCostCalculator';
-import { BankComparison } from '@/components/BankComparison';
-import { MobilePlanComparison } from '@/components/MobilePlanComparison';
-import { RoamingCostComparison } from '@/components/RoamingCostComparison';
-import { GroceryPriceComparison } from '@/components/GroceryPriceComparison';
-import { WeeklyMealPlanner } from '@/components/WeeklyMealPlanner';
-import { MetroFareCalculator } from '@/components/MetroFareCalculator';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import {
@@ -30,99 +18,233 @@ import {
 } from '@/components/ui/breadcrumb';
 import { Calendar, Clock, Facebook, Twitter, Share2, Home } from 'lucide-react';
 import BlogCard from '@/components/BlogCard';
-import PetImportChecklist from '@/components/PetImportChecklist';
-import VeterinaryCostEstimator from '@/components/VeterinaryCostEstimator';
-import DomesticWorkerCostCalculator from '@/components/DomesticWorkerCostCalculator';
-import GymMembershipComparison from '@/components/GymMembershipComparison';
-import RemoteWorkCafeFinder from '@/components/RemoteWorkCafeFinder';
-import QDCPermitCalculator from '@/components/QDCPermitCalculator';
-import HotelBarFinder from '@/components/HotelBarFinder';
-import CityCostComparison from '@/components/CityCostComparison';
-import RentPriceComparison from '@/components/RentPriceComparison';
-import JobSearchStrategyGuide from '@/components/JobSearchStrategyGuide';
-import { CVTemplateGenerator } from '@/components/CVTemplateGenerator';
-import { SalaryCalculator } from '@/components/SalaryCalculator';
-import { TaxSavingsCalculator } from '@/components/TaxSavingsCalculator';
-import { RentalPropertyROICalculator } from '@/components/RentalPropertyROICalculator';
-import { VisaApplicationTracker } from '@/components/VisaApplicationTracker';
-import { LaborRightsCalculator } from '@/components/LaborRightsCalculator';
-import { EOSGCalculator } from '@/components/EOSGCalculator';
-import { ContractNegotiationChecklist } from '@/components/ContractNegotiationChecklist';
-import { blogPosts } from '@/data/articles';
-import { categoryToSlug, tagToSlug } from '@/lib/blog';
+import { loadBlogPostBySlug } from '@/data/articles/blog-post-loaders';
+import { categoryToSlug, getBlogList, tagToSlug } from '@/lib/blog';
 import { fixMojibake } from '@/lib/text';
 import type { ReactNode } from 'react';
+import type { ArticleData } from '@/data/articles/types';
+
+const SchoolComparisonTool = lazy(() => import('@/components/SchoolComparisonTool'));
+const SchoolFeeCalculator = lazy(() => import('@/components/SchoolFeeCalculator'));
+const VisaChecklistGenerator = lazy(() => import('@/components/VisaChecklistGenerator'));
+const DrivingLicenseChecker = lazy(() => import('@/components/DrivingLicenseChecker'));
+const MentalHealthDirectory = lazy(() => import('@/components/MentalHealthDirectory'));
+const TherapyCostCalculator = lazy(() =>
+  import('@/components/TherapyCostCalculator').then((module) => ({
+    default: module.TherapyCostCalculator,
+  })),
+);
+const BankComparison = lazy(() =>
+  import('@/components/BankComparison').then((module) => ({
+    default: module.BankComparison,
+  })),
+);
+const MobilePlanComparison = lazy(() =>
+  import('@/components/MobilePlanComparison').then((module) => ({
+    default: module.MobilePlanComparison,
+  })),
+);
+const RoamingCostComparison = lazy(() =>
+  import('@/components/RoamingCostComparison').then((module) => ({
+    default: module.RoamingCostComparison,
+  })),
+);
+const GroceryPriceComparison = lazy(() =>
+  import('@/components/GroceryPriceComparison').then((module) => ({
+    default: module.GroceryPriceComparison,
+  })),
+);
+const WeeklyMealPlanner = lazy(() =>
+  import('@/components/WeeklyMealPlanner').then((module) => ({
+    default: module.WeeklyMealPlanner,
+  })),
+);
+const MetroFareCalculator = lazy(() =>
+  import('@/components/MetroFareCalculator').then((module) => ({
+    default: module.MetroFareCalculator,
+  })),
+);
+const PetImportChecklist = lazy(() => import('@/components/PetImportChecklist'));
+const VeterinaryCostEstimator = lazy(() => import('@/components/VeterinaryCostEstimator'));
+const DomesticWorkerCostCalculator = lazy(() => import('@/components/DomesticWorkerCostCalculator'));
+const GymMembershipComparison = lazy(() => import('@/components/GymMembershipComparison'));
+const RemoteWorkCafeFinder = lazy(() => import('@/components/RemoteWorkCafeFinder'));
+const QDCPermitCalculator = lazy(() => import('@/components/QDCPermitCalculator'));
+const HotelBarFinder = lazy(() => import('@/components/HotelBarFinder'));
+const CityCostComparison = lazy(() => import('@/components/CityCostComparison'));
+const RentPriceComparison = lazy(() => import('@/components/RentPriceComparison'));
+const JobSearchStrategyGuide = lazy(() => import('@/components/JobSearchStrategyGuide'));
+const CVTemplateGenerator = lazy(() =>
+  import('@/components/CVTemplateGenerator').then((module) => ({
+    default: module.CVTemplateGenerator,
+  })),
+);
+const SalaryCalculator = lazy(() =>
+  import('@/components/SalaryCalculator').then((module) => ({
+    default: module.SalaryCalculator,
+  })),
+);
+const TaxSavingsCalculator = lazy(() =>
+  import('@/components/TaxSavingsCalculator').then((module) => ({
+    default: module.TaxSavingsCalculator,
+  })),
+);
+const RentalPropertyROICalculator = lazy(() =>
+  import('@/components/RentalPropertyROICalculator').then((module) => ({
+    default: module.RentalPropertyROICalculator,
+  })),
+);
+const VisaApplicationTracker = lazy(() =>
+  import('@/components/VisaApplicationTracker').then((module) => ({
+    default: module.VisaApplicationTracker,
+  })),
+);
+const LaborRightsCalculator = lazy(() =>
+  import('@/components/LaborRightsCalculator').then((module) => ({
+    default: module.LaborRightsCalculator,
+  })),
+);
+const EOSGCalculator = lazy(() =>
+  import('@/components/EOSGCalculator').then((module) => ({
+    default: module.EOSGCalculator,
+  })),
+);
+const ContractNegotiationChecklist = lazy(() =>
+  import('@/components/ContractNegotiationChecklist').then((module) => ({
+    default: module.ContractNegotiationChecklist,
+  })),
+);
+
+const InteractiveToolFallback = () => (
+  <div className="rounded-lg border border-border/60 bg-muted/30 px-4 py-3 text-sm text-muted-foreground">
+    Loading interactive tool...
+  </div>
+);
+
+const withLazyTool = (component: ReactNode): ReactNode => (
+  <Suspense fallback={<InteractiveToolFallback />}>{component}</Suspense>
+);
 
 // Slug-based component injection map
 const slugComponents: Record<string, { splitAt: string; component: ReactNode; splitAt2?: string; component2?: ReactNode }[]> = {
   'end-of-service-gratuity-qatar-2025': [
-    { splitAt: '<h2 id="calculation">', component: <EOSGCalculator /> },
+    { splitAt: '<h2 id="calculation">', component: withLazyTool(<EOSGCalculator />) },
   ],
   'qatar-labor-law-reforms-2025': [
-    { splitAt: '<h2 id="protection">', component: <LaborRightsCalculator /> },
+    { splitAt: '<h2 id="protection">', component: withLazyTool(<LaborRightsCalculator />) },
   ],
   'qatar-work-visa-guide-2025': [
-    { splitAt: '<h2 id="phase-2">', component: <VisaApplicationTracker /> },
+    { splitAt: '<h2 id="phase-2">', component: withLazyTool(<VisaApplicationTracker />) },
   ],
   'qatar-tax-guide-2025': [
-    { splitAt: '<h2 id="corporate-tax">', component: <TaxSavingsCalculator />, splitAt2: '<h2 id="vat">', component2: <RentalPropertyROICalculator /> },
+    {
+      splitAt: '<h2 id="corporate-tax">',
+      component: withLazyTool(<TaxSavingsCalculator />),
+      splitAt2: '<h2 id="vat">',
+      component2: withLazyTool(<RentalPropertyROICalculator />),
+    },
   ],
   'expat-salaries-doha-2025': [
-    { splitAt: '<h2 id="benchmarks">', component: <TaxSavingsCalculator />, splitAt2: '<h2 id="package">', component2: <SalaryCalculator /> },
+    {
+      splitAt: '<h2 id="benchmarks">',
+      component: withLazyTool(<TaxSavingsCalculator />),
+      splitAt2: '<h2 id="package">',
+      component2: withLazyTool(<SalaryCalculator />),
+    },
   ],
   'job-market-qatar-2025': [
-    { splitAt: '<h2 id="trends">', component: <><JobSearchStrategyGuide /><div className="not-prose my-12"><CVTemplateGenerator /></div></> },
+    {
+      splitAt: '<h2 id="trends">',
+      component: withLazyTool(
+        <>
+          <JobSearchStrategyGuide />
+          <div className="not-prose my-12">
+            <CVTemplateGenerator />
+          </div>
+        </>,
+      ),
+    },
   ],
   'housing-rent-doha-2025': [
-    { splitAt: '<h2 id="legal">', component: <RentPriceComparison /> },
+    { splitAt: '<h2 id="legal">', component: withLazyTool(<RentPriceComparison />) },
   ],
   'cost-of-living-doha-dubai-riyadh': [
-    { splitAt: '<h2 id="strategies">', component: <CityCostComparison /> },
+    { splitAt: '<h2 id="strategies">', component: withLazyTool(<CityCostComparison />) },
   ],
   'international-schools-qatar-2025': [
-    { splitAt: '<h2 id="fees">', component: <SchoolFeeCalculator /> },
-    { splitAt: '<h2 id="budget">', component: <SchoolComparisonTool /> },
+    { splitAt: '<h2 id="fees">', component: withLazyTool(<SchoolFeeCalculator />) },
+    { splitAt: '<h2 id="budget">', component: withLazyTool(<SchoolComparisonTool />) },
   ],
   'qatar-visa-rules-expats-2025': [
-    { splitAt: '<h2 id="family-visa">', component: <VisaChecklistGenerator /> },
+    { splitAt: '<h2 id="family-visa">', component: withLazyTool(<VisaChecklistGenerator />) },
   ],
   'driving-doha-2025-guide': [
-    { splitAt: '<h2 id="rules">', component: <DrivingLicenseChecker /> },
+    { splitAt: '<h2 id="rules">', component: withLazyTool(<DrivingLicenseChecker />) },
   ],
   'lgbtq-experiences-qatar-2025': [
-    { splitAt: '<h2 id="community">', component: <><MentalHealthDirectory /><div className="not-prose my-12"><TherapyCostCalculator /></div></> },
+    {
+      splitAt: '<h2 id="community">',
+      component: withLazyTool(
+        <>
+          <MentalHealthDirectory />
+          <div className="not-prose my-12">
+            <TherapyCostCalculator />
+          </div>
+        </>,
+      ),
+    },
   ],
   'bank-account-qatar-guide': [
-    { splitAt: '<h2 id="decision">', component: <BankComparison /> },
+    { splitAt: '<h2 id="decision">', component: withLazyTool(<BankComparison />) },
   ],
   'mobile-plans-qatar-guide': [
-    { splitAt: '<h2 id="internet">', component: <MobilePlanComparison />, splitAt2: '<h2 id="5g">', component2: <RoamingCostComparison /> },
+    {
+      splitAt: '<h2 id="internet">',
+      component: withLazyTool(<MobilePlanComparison />),
+      splitAt2: '<h2 id="5g">',
+      component2: withLazyTool(<RoamingCostComparison />),
+    },
   ],
   'grocery-shopping-doha-guide': [
-    { splitAt: '<h2 id="others">', component: <GroceryPriceComparison />, splitAt2: '<h2 id="delivery">', component2: <WeeklyMealPlanner /> },
+    {
+      splitAt: '<h2 id="others">',
+      component: withLazyTool(<GroceryPriceComparison />),
+      splitAt2: '<h2 id="delivery">',
+      component2: withLazyTool(<WeeklyMealPlanner />),
+    },
   ],
   'remote-work-cafes-doha-guide': [
-    { splitAt: '<h2 id="coworking">', component: <RemoteWorkCafeFinder /> },
+    { splitAt: '<h2 id="coworking">', component: withLazyTool(<RemoteWorkCafeFinder />) },
   ],
   'alcohol-guide-doha': [
-    { splitAt: '<h2 id="spending-limits">', component: <QDCPermitCalculator />, splitAt2: '<h2 id="prohibited">', component2: <HotelBarFinder /> },
+    {
+      splitAt: '<h2 id="spending-limits">',
+      component: withLazyTool(<QDCPermitCalculator />),
+      splitAt2: '<h2 id="prohibited">',
+      component2: withLazyTool(<HotelBarFinder />),
+    },
   ],
   'gyms-fitness-doha-guide': [
-    { splitAt: '<h2 id="ladies">', component: <GymMembershipComparison /> },
+    { splitAt: '<h2 id="ladies">', component: withLazyTool(<GymMembershipComparison />) },
   ],
   'hiring-maid-nanny-qatar-guide': [
-    { splitAt: '<h2 id="contracts">', component: <DomesticWorkerCostCalculator /> },
+    { splitAt: '<h2 id="contracts">', component: withLazyTool(<DomesticWorkerCostCalculator />) },
   ],
   'pet-import-qatar-guide': [
-    { splitAt: '<h2 id="quarantine">', component: <PetImportChecklist />, splitAt2: '<h2 id="living">', component2: <VeterinaryCostEstimator /> },
+    {
+      splitAt: '<h2 id="quarantine">',
+      component: withLazyTool(<PetImportChecklist />),
+      splitAt2: '<h2 id="living">',
+      component2: withLazyTool(<VeterinaryCostEstimator />),
+    },
   ],
   'doha-metro-2025-guide': [
-    { splitAt: '<h2 id="hours">', component: <MetroFareCalculator /> },
+    { splitAt: '<h2 id="hours">', component: withLazyTool(<MetroFareCalculator />) },
   ],
 };
 
 // Extra component for end-of-service article
-const endOfServiceExtra = <ContractNegotiationChecklist />;
+const endOfServiceExtra = withLazyTool(<ContractNegotiationChecklist />);
 
 function renderArticleContent(slug: string, content: string) {
   // Special case: end-of-service has an extra component at the end
@@ -134,7 +256,7 @@ function renderArticleContent(slug: string, content: string) {
       return (
         <div className="prose prose-lg max-w-none space-y-8">
           <div dangerouslySetInnerHTML={{ __html: parts[0] }} />
-          <div className="not-prose my-12"><EOSGCalculator /></div>
+          <div className="not-prose my-12">{withLazyTool(<EOSGCalculator />)}</div>
           <div dangerouslySetInnerHTML={{ __html: splitAt + parts[1] }} />
           <div className="not-prose my-12">{endOfServiceExtra}</div>
         </div>
@@ -150,10 +272,10 @@ function renderArticleContent(slug: string, content: string) {
     return (
       <div className="prose prose-lg max-w-none space-y-8">
         <div dangerouslySetInnerHTML={{ __html: feeParts[0] }} />
-        <div className="not-prose my-12"><SchoolFeeCalculator /></div>
+        <div className="not-prose my-12">{withLazyTool(<SchoolFeeCalculator />)}</div>
         <div dangerouslySetInnerHTML={{ __html: '<h2 id="fees">' + waitlistParts[0] }} />
         <div dangerouslySetInnerHTML={{ __html: '<h2 id="waitlists">' + budgetParts[0] }} />
-        <div className="not-prose my-12"><SchoolComparisonTool /></div>
+        <div className="not-prose my-12">{withLazyTool(<SchoolComparisonTool />)}</div>
         <div dangerouslySetInnerHTML={{ __html: '<h2 id="budget">' + budgetParts[1] }} />
       </div>
     );
@@ -166,9 +288,9 @@ function renderArticleContent(slug: string, content: string) {
     return (
       <div className="prose prose-lg max-w-none space-y-8">
         <div dangerouslySetInnerHTML={{ __html: benchParts[0] }} />
-        <div className="not-prose my-12"><TaxSavingsCalculator /></div>
+        <div className="not-prose my-12">{withLazyTool(<TaxSavingsCalculator />)}</div>
         <div dangerouslySetInnerHTML={{ __html: '<h2 id="benchmarks">' + pkgParts[0] }} />
-        <div className="not-prose my-12"><SalaryCalculator /></div>
+        <div className="not-prose my-12">{withLazyTool(<SalaryCalculator />)}</div>
         <div dangerouslySetInnerHTML={{ __html: '<h2 id="package">' + pkgParts[1] }} />
       </div>
     );
@@ -231,37 +353,84 @@ function renderArticleContent(slug: string, content: string) {
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
-  const post = slug ? blogPosts[slug] : undefined;
+  const posts = useMemo(() => getBlogList(), []);
+  const [post, setPost] = useState<ArticleData | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    let isCancelled = false;
+
+    const loadPost = async () => {
+      if (!slug) {
+        if (!isCancelled) {
+          setPost(null);
+          setIsLoading(false);
+        }
+        return;
+      }
+
+      setIsLoading(true);
+      const loadedPost = await loadBlogPostBySlug(slug);
+
+      if (!isCancelled) {
+        setPost(loadedPost);
+        setIsLoading(false);
+      }
+    };
+
+    loadPost();
+
+    return () => {
+      isCancelled = true;
+    };
+  }, [slug]);
 
   // Dynamic related articles based on matching category and tags
   const dynamicRelated = useMemo(() => {
     if (!post || !slug) return [];
-    const allSlugs = Object.keys(blogPosts);
-    const scored = allSlugs
-      .filter(s => s !== slug)
-      .map(s => {
-        const p = blogPosts[s];
+
+    const scored = posts
+      .filter((candidate) => candidate.slug !== slug)
+      .map((candidate) => {
         let score = 0;
-        if (p.category === post.category) score += 3;
-        if (post.tags && p.tags) {
-          const overlap = post.tags.filter(t => p.tags.includes(t)).length;
-          score += overlap;
+        if (candidate.category === post.category) {
+          score += 3;
         }
-        return { slug: s, post: p, score };
+
+        const overlap = post.tags.filter((tag) => candidate.tags.includes(tag)).length;
+        score += overlap;
+
+        return { post: candidate, score };
       })
-      .filter(x => x.score > 0)
+      .filter((item) => item.score > 0)
       .sort((a, b) => b.score - a.score)
       .slice(0, 3);
-    return scored.map(x => ({
-      id: x.post.id,
-      title: x.post.title,
-      excerpt: x.post.excerpt || x.post.content.substring(0, 120).replace(/<[^>]*>/g, ''),
-      imageUrl: x.post.imageUrl,
-      category: x.post.category,
-      date: x.post.date,
-      slug: x.slug,
+
+    return scored.map((item) => ({
+      id: item.post.id,
+      title: item.post.title,
+      excerpt: item.post.excerpt,
+      imageUrl: item.post.imageUrl,
+      category: item.post.category,
+      date: item.post.date,
+      slug: item.post.slug,
     }));
-  }, [slug, post]);
+  }, [slug, post, posts]);
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen flex flex-col">
+        <NavBar />
+        <main className="flex-1 flex items-center justify-center">
+          <div className="flex flex-col items-center gap-3">
+            <div className="h-10 w-10 rounded-full border-4 border-primary border-t-transparent animate-spin" />
+            <p className="text-sm text-muted-foreground">Loading article...</p>
+          </div>
+        </main>
+        <Footer />
+      </div>
+    );
+  }
 
   if (!post) {
     return <Navigate to="/blog" replace />;
@@ -369,6 +538,10 @@ const BlogPost = () => {
               alt={`${safeTitle} - ${safeCategory} guide for Doha, Qatar`}
               className="w-full h-full object-cover"
               fetchPriority="high"
+              loading="eager"
+              decoding="async"
+              width={1600}
+              height={900}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 content-container pb-8">
@@ -411,7 +584,7 @@ const BlogPost = () => {
                             document.getElementById(item.id)?.scrollIntoView({ behavior: 'smooth' });
                           }}
                         >
-                          → {item.title}
+                          {"->"} {item.title}
                         </a>
                       ))}
                     </nav>
