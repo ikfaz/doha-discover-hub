@@ -10,8 +10,8 @@ export const postsChunk6: Record<string, ArticleData> = {
     'alcohol-allowed-doha-qatar-guide': {
       id: '31',
       title: 'Alcohol in Doha Qatar: Is It Allowed?',
-      date: 'May 10, 2026',
-      isoDate: '2026-05-10',
+      date: 'May 10, 2025',
+      isoDate: '2025-05-10',
       metaDescription: 'Is alcohol allowed in Doha? Yes, at licensed hotels. Complete 2026 guide to drinking laws, bar prices, nightlife, and penalties in Qatar.',
       excerpt: 'Alcohol is legal at licensed venues in Qatar. Learn where to drink, hotel bar prices, QDC permits, Ramadan rules, and penalties for public intoxication.',
       author: 'Experience Doha Team',
@@ -243,8 +243,8 @@ export const postsChunk6: Record<string, ArticleData> = {
     'desert-safari-inland-sea-khor-al-adaid': {
       id: '30',
       title: 'Desert Safari & Inland Sea Qatar Guide',
-      date: 'May 9, 2026',
-      isoDate: '2026-05-09',
+      date: 'May 9, 2025',
+      isoDate: '2025-05-09',
       metaDescription: 'Qatar desert safari guide: dune bashing, camel rides, sandboarding, and Inland Sea (Khor Al Adaid). Book half-day, full-day, or overnight trips.',
       excerpt: 'Experience the ultimate Arabian desert adventure — dune bashing, camel riding, sandboarding, and the stunning UNESCO-recognized Inland Sea near Doha.',
       author: 'Experience Doha Team',
@@ -356,8 +356,8 @@ export const postsChunk6: Record<string, ArticleData> = {
     'mia-nmoq-museum-combo-guide': {
       id: '29',
       title: 'MIA & NMoQ Museum Combo Guide Doha',
-      date: 'May 11, 2026',
-      isoDate: '2026-05-11',
+      date: 'May 11, 2025',
+      isoDate: '2025-05-11',
       metaDescription: 'MIA and NMoQ museum combo guide: tickets, Discover One Pass, highlights, and how to visit both Doha museums in one cultural day trip.',
       excerpt: 'Visit Doha\'s two must-see museums in one day — the Museum of Islamic Art and National Museum of Qatar. Combo tickets, highlights, and planning tips.',
       author: 'Experience Doha Team',
@@ -465,8 +465,8 @@ export const postsChunk6: Record<string, ArticleData> = {
     'souq-waqif-night-experiences-haggling': {
       id: '28',
       title: 'Souq Waqif at Night: Shopping & Haggling',
-      date: 'May 13, 2026',
-      isoDate: '2026-05-13',
+      date: 'May 13, 2025',
+      isoDate: '2025-05-13',
       metaDescription: 'Souq Waqif at night: haggling tips, best restaurants, spice shopping, falcon souq, and cultural experiences in Doha\'s historic market after dark.',
       excerpt: 'Experience Souq Waqif after dark — master the art of haggling, explore spice alleys, dine at traditional restaurants, and soak in Doha\'s cultural heart.',
       author: 'Experience Doha Team',
@@ -567,8 +567,8 @@ export const postsChunk6: Record<string, ArticleData> = {
     'ultimate-doha-layover-24-48-hours': {
       id: '27',
       title: 'Doha Layover Guide: 24 & 48 Hour Plans',
-      date: 'May 6, 2026',
-      isoDate: '2026-05-06',
+      date: 'May 6, 2025',
+      isoDate: '2025-05-06',
       metaDescription: '24-48 hour Doha layover itinerary: MIA, Souq Waqif, The Pearl, desert safari, and Qatar Airways stopover program. Maximize your stopover.',
       excerpt: 'Plan the ultimate 24-48 hour Doha layover — hour-by-hour itineraries covering museums, markets, desert adventures, and the Qatar Airways stopover program.',
       author: 'Experience Doha Team',
@@ -707,8 +707,8 @@ export const postsChunk6: Record<string, ArticleData> = {
     'qatar-airways-stopover-packages-lounge': {
       id: '26',
       title: 'Qatar Airways Stopover & Lounge Guide',
-      date: 'May 5, 2026',
-      isoDate: '2026-05-05',
+      date: 'May 5, 2025',
+      isoDate: '2025-05-05',
       metaDescription: 'Qatar Airways stopover packages from $14/night: hotel tiers, lounge access guide, Al Mourjan and Al Safwa reviews. Book your Doha mini-vacation.',
       excerpt: 'Turn your layover into a luxury mini-vacation — Qatar Airways stopover packages from $14/night, plus a guide to HIA\'s world-class Al Mourjan and Al Safwa lounges.',
       author: 'Experience Doha Team',
@@ -823,3 +823,5 @@ export const postsChunk6: Record<string, ArticleData> = {
       tags: ['Qatar Airways stopover package', 'Discover Qatar hotel deal', 'Al Mourjan lounge review', 'stopover Doha $14', 'HIA lounge access', 'Qatar Airways transit hotel']
     },
 };
+
+
