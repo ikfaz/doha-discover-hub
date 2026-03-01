@@ -8,8 +8,8 @@ export const postsChunk9: Record<string, ArticleData> = {
     'things-to-do-doha-layover': {
       id: '13',
       title: '10 Things To Do in Doha on a Layover',
-      date: 'Feb 5, 2025',
-      isoDate: '2025-02-05',
+      date: 'Feb 5, 2026',
+      isoDate: '2026-02-05',
       metaDescription: '10 unmissable Doha layover activities 2026: Souq Waqif, MIA, desert safari, dhow cruise, The Pearl, and more. Make every hour count.',
       excerpt: 'Don\'t waste your Doha layover — 10 must-do activities from Souq Waqif and the Museum of Islamic Art to desert safaris and dhow cruises.',
       author: 'Experience Doha Team',
@@ -67,8 +67,8 @@ export const postsChunk9: Record<string, ArticleData> = {
     'hamad-airport-transfers-guide': {
       id: '12',
       title: 'Hamad Airport Transfers: Complete Guide',
-      date: 'Feb 8, 2025',
-      isoDate: '2025-02-08',
+      date: 'Feb 8, 2026',
+      isoDate: '2026-02-08',
       metaDescription: 'Hamad Airport transfer guide: taxi, Uber, metro, hotel shuttles, and car rental. How to get from HIA to Doha hotels quickly and affordably.',
       excerpt: 'All transfer options from Hamad International Airport — taxis, Uber, metro Red Line, hotel shuttles, and car rental. Prices and tips for every budget.',
       author: 'Experience Doha Team',
@@ -126,8 +126,8 @@ export const postsChunk9: Record<string, ArticleData> = {
     'qatar-stopover-program-guide': {
       id: '11',
       title: 'Complete Doha Layover Guide: Qatar Stopover Program Explained',
-      date: 'Feb 10, 2025',
-      isoDate: '2025-02-10',
+      date: 'Feb 10, 2026',
+      isoDate: '2026-02-10',
       metaDescription: 'Qatar stopover program explained: hotel packages from $14/night, eligibility, booking steps, and tips for maximizing your Doha layover.',
       excerpt: 'Everything about Qatar\'s stopover program — hotel packages from $14/night, eligibility criteria, booking process, and how to plan your perfect Doha layover.',
       author: 'Experience Doha Team',
@@ -189,7 +189,7 @@ export const postsChunk9: Record<string, ArticleData> = {
     'default': {
       id: '1',
       title: 'Top 10 Must-Visit Attractions in Doha',
-      date: 'March 1, 2025',
+      date: 'March 1, 2026',
       author: 'Experience Doha Team',
       readTime: '10 min read',
       category: 'Attractions',
@@ -232,5 +232,3 @@ export const postsChunk9: Record<string, ArticleData> = {
       tags: ['things to do in Doha', 'top attractions Qatar', 'Doha travel guide', 'best places to visit Doha', 'Qatar sightseeing']
     }
 };
-
-

@@ -1,87 +1,32 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useMemo } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 import BlogCard from '@/components/BlogCard';
 import Newsletter from '@/components/Newsletter';
 import SEOHead from '@/components/SEOHead';
-import { filterByTagSlug, getTagCounts, loadBlogList, tagToSlug } from '@/lib/blog';
-import type { BlogListItem } from '@/lib/blog';
+import { filterByTagSlug, getBlogList, getTagCounts, tagToSlug } from '@/lib/blog';
 
 const BlogTag = () => {
   const { tag } = useParams<{ tag: string }>();
   const tagSlug = tag ?? '';
 
-  const [posts, setPosts] = useState<BlogListItem[]>([]);
-  const [isLoadingPosts, setIsLoadingPosts] = useState(true);
-
-  useEffect(() => {
-    let cancelled = false;
-
-    const loadPosts = async () => {
-      const loadedPosts = await loadBlogList();
-      if (!cancelled) {
-        setPosts(loadedPosts);
-        setIsLoadingPosts(false);
-      }
-    };
-
-    loadPosts();
-
-    return () => {
-      cancelled = true;
-    };
-  }, []);
-
+  const posts = useMemo(() => getBlogList(), []);
   const tags = useMemo(() => getTagCounts(posts), [posts]);
   const currentTag = tags.find((item) => item.slug === tagSlug);
   const taggedPosts = useMemo(() => filterByTagSlug(posts, tagSlug), [posts, tagSlug]);
 
-  const title = currentTag ? `${currentTag.name} Guides in Doha` : 'Tag';
-  const seoTitle = currentTag
-    ? `${currentTag.name} Doha Guides 2026 | Experience Doha Blog`
-    : 'Doha Blog Tags | Experience Doha';
+  const title = currentTag ? `Posts tagged: ${currentTag.name}` : 'Tag';
   const description = currentTag
-    ? `Explore ${currentTag.count} Doha guide(s) tagged "${currentTag.name}" with practical travel, relocation, and expat planning advice.`
+    ? `Browse ${currentTag.count} article(s) tagged with "${currentTag.name}".`
     : 'Browse blog posts by tag.';
-  const tagUrl = currentTag ? `https://experiencedoha.com/blog/tag/${tagSlug}` : null;
-
-  const tagJsonLd = useMemo(() => {
-    if (!currentTag || !tagUrl) return null;
-
-    return {
-      '@context': 'https://schema.org',
-      '@type': 'CollectionPage',
-      name: `${currentTag.name} guides for Doha`,
-      description,
-      url: tagUrl,
-    };
-  }, [currentTag, tagUrl, description]);
-
-  const itemListJsonLd = useMemo(() => {
-    if (!currentTag || !tagUrl) return null;
-
-    return {
-      '@context': 'https://schema.org',
-      '@type': 'ItemList',
-      itemListOrder: 'https://schema.org/ItemListOrderDescending',
-      numberOfItems: taggedPosts.length,
-      itemListElement: taggedPosts.slice(0, 12).map((post, index) => ({
-        '@type': 'ListItem',
-        position: index + 1,
-        name: post.title,
-        url: `https://experiencedoha.com/blog/${post.slug}`,
-      })),
-    };
-  }, [currentTag, tagUrl, taggedPosts]);
 
   return (
     <div className="min-h-screen flex flex-col">
       <SEOHead
-        title={seoTitle}
+        title={`${title} - Experience Doha Blog`}
         description={description}
         noindex={!currentTag}
-        jsonLd={[tagJsonLd, itemListJsonLd].filter(Boolean)}
       />
       <NavBar />
 
@@ -99,10 +44,6 @@ const BlogTag = () => {
               {taggedPosts.map((post) => (
                 <BlogCard key={post.id} {...post} />
               ))}
-            </div>
-          ) : isLoadingPosts ? (
-            <div className="text-center py-12">
-              <p className="text-gray-500">Loading posts...</p>
             </div>
           ) : (
             <div className="text-center py-12">

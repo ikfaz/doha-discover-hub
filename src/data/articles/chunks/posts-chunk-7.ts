@@ -10,8 +10,8 @@ export const postsChunk7: Record<string, ArticleData> = {
     'doha-global-mediation-hub-congo-peace': {
       id: '25',
       title: 'Doha as a Global Mediation Hub',
-      date: 'May 4, 2025',
-      isoDate: '2025-05-04',
+      date: 'May 4, 2026',
+      isoDate: '2026-05-04',
       metaDescription: 'Doha as a global peace hub: Qatar\'s mediation strategy, Congo peace talks, Darfur agreement, and US-Taliban negotiations. How diplomacy shapes Qatar.',
       excerpt: 'How Doha became a global mediation hub — from the Congo peace framework to US-Taliban talks. Explore Qatar\'s diplomatic strategy and neutrality.',
       author: 'Experience Doha Team',
@@ -108,8 +108,8 @@ export const postsChunk7: Record<string, ArticleData> = {
     'fifa-u17-world-cup-qatar-2025': {
       id: '24',
       title: 'FIFA U-17 World Cup Qatar 2025 Guide',
-      date: 'May 3, 2025',
-      isoDate: '2025-05-03',
+      date: 'May 3, 2026',
+      isoDate: '2026-05-03',
       metaDescription: 'FIFA U-17 World Cup Qatar 2025: 48 teams, 104 matches, ticket prices, stadiums, and fan guide. How to attend youth football\'s biggest event.',
       excerpt: 'Everything about the FIFA U-17 World Cup Qatar 2025 — expanded 48-team format, ticket purchasing, stadium access, and fan experience in Doha.',
       author: 'Experience Doha Team',
@@ -217,8 +217,8 @@ export const postsChunk7: Record<string, ArticleData> = {
     'corniche-sunset-dhow-cruise-guide': {
       id: '23',
       title: 'Doha Corniche Sunset & Dhow Cruise',
-      date: 'May 2, 2025',
-      isoDate: '2025-05-02',
+      date: 'May 2, 2026',
+      isoDate: '2026-05-02',
       metaDescription: 'Doha Corniche sunset walk and dhow cruise guide: best routes, photography tips, dinner cruises, and booking options for an unforgettable evening.',
       excerpt: 'Experience Doha\'s golden hour — walk the iconic Corniche at sunset, then sail on a traditional dhow cruise with stunning skyline views and optional dinner.',
       author: 'Experience Doha Team',
@@ -354,8 +354,8 @@ export const postsChunk7: Record<string, ArticleData> = {
     'pearl-qatar-luxury-shopping-dining': {
       id: '22',
       title: 'Pearl Qatar: Shopping & Dining Guide',
-      date: 'May 1, 2025',
-      isoDate: '2025-05-01',
+      date: 'May 1, 2026',
+      isoDate: '2026-05-01',
       metaDescription: 'The Pearl-Qatar guide: luxury shopping, fine dining, Porto Arabia, Qanat Quartier. Best restaurants, boutiques, and tips for visiting Doha\'s island.',
       excerpt: 'Explore The Pearl-Qatar — luxury shopping at Porto Arabia, canal-side dining in Qanat Quartier, and practical tips for visiting Doha\'s Arabian Riviera.',
       author: 'Experience Doha Team',
@@ -452,8 +452,8 @@ export const postsChunk7: Record<string, ArticleData> = {
     'katara-cultural-village-events-2025': {
       id: '21',
       title: 'Katara Cultural Village Events 2025',
-      date: 'April 30, 2025',
-      isoDate: '2025-04-30',
+      date: 'April 30, 2026',
+      isoDate: '2026-04-30',
       metaDescription: 'Katara Cultural Village events 2025: Dhow Festival, Jazz Festival, art exhibitions, and year-round activities. Plan your cultural visit to Doha.',
       excerpt: 'Discover Katara Cultural Village\'s 2025 events calendar — from the Dhow Festival and Jazz Festival to year-round art exhibitions and performances in Doha.',
       author: 'Experience Doha Team',
@@ -581,8 +581,8 @@ export const postsChunk7: Record<string, ArticleData> = {
     'doha-airport-layover-activities': {
       id: '20',
       title: 'Ten Ways to Enjoy a Layover at Doha Airport',
-      date: 'Jan 15, 2025',
-      isoDate: '2025-01-15',
+      date: 'Jan 15, 2026',
+      isoDate: '2026-01-15',
       metaDescription: '10 things to do during a Doha airport layover: spa, shopping, art, dining, sleep pods, and the indoor tropical garden at Hamad International.',
       excerpt: 'Make the most of your Doha airport layover — top 10 activities inside Hamad International Airport including spa, shopping, art installations, and dining.',
       author: 'Experience Doha Team',
@@ -645,5 +645,3 @@ export const postsChunk7: Record<string, ArticleData> = {
       tags: ['Hamad Airport layover activities', 'things to do Doha airport', 'HIA spa and lounge', 'sleep pods Hamad Airport', 'duty free Doha airport']
     },
 };
-
-

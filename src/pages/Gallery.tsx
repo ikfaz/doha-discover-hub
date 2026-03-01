@@ -145,8 +145,8 @@ const Gallery = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <SEOHead 
-        title="Doha Photo Gallery 2026: Skyline, Souq, Desert & Culture"
-        description="Explore Doha photos from major landmarks, local markets, museums, and desert scenes. Browse visual inspiration before your trip."
+        title="Doha Photo Gallery - Experience Doha"
+        description="Stunning Doha photos: skyline views, Souq Waqif nights, desert sunsets, and cultural landmarks. Free to browse and share."
       />
       <NavBar />
       <GalleryHeader />

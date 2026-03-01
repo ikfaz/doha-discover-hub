@@ -19,11 +19,10 @@ import {
 import { Calendar, Clock, Facebook, Twitter, Share2, Home } from 'lucide-react';
 import BlogCard from '@/components/BlogCard';
 import { loadBlogPostBySlug } from '@/data/articles/blog-post-loaders';
-import { categoryToSlug, loadBlogList, tagToSlug } from '@/lib/blog';
+import { categoryToSlug, getBlogList, tagToSlug } from '@/lib/blog';
 import { fixMojibake } from '@/lib/text';
 import type { ReactNode } from 'react';
 import type { ArticleData } from '@/data/articles/types';
-import type { BlogListItem } from '@/lib/blog';
 
 const SchoolComparisonTool = lazy(() => import('@/components/SchoolComparisonTool'));
 const SchoolFeeCalculator = lazy(() => import('@/components/SchoolFeeCalculator'));
@@ -247,28 +246,6 @@ const slugComponents: Record<string, { splitAt: string; component: ReactNode; sp
 // Extra component for end-of-service article
 const endOfServiceExtra = withLazyTool(<ContractNegotiationChecklist />);
 
-const stripHtml = (value: string) => value.replace(/<[^>]*>/g, ' ');
-const normalizeWhitespace = (value: string) => value.replace(/\s+/g, ' ').trim();
-
-const extractFaqItems = (html: string) => {
-  const faqHeadingMatch = html.match(/<h2[^>]*id=["']faq["'][^>]*>/i);
-  if (!faqHeadingMatch || faqHeadingMatch.index === undefined) {
-    return [];
-  }
-
-  const faqSection = html.slice(faqHeadingMatch.index);
-  const qaMatches = [...faqSection.matchAll(/<h3[^>]*>([\s\S]*?)<\/h3>\s*<p[^>]*>([\s\S]*?)<\/p>/gi)];
-
-  return qaMatches
-    .slice(0, 6)
-    .map((match) => {
-      const question = fixMojibake(normalizeWhitespace(stripHtml(match[1] || '')));
-      const answer = fixMojibake(normalizeWhitespace(stripHtml(match[2] || '')));
-      return { question, answer };
-    })
-    .filter((item) => item.question.length > 0 && item.answer.length > 0);
-};
-
 function renderArticleContent(slug: string, content: string) {
   // Special case: end-of-service has an extra component at the end
   if (slug === 'end-of-service-gratuity-qatar-2025') {
@@ -376,27 +353,9 @@ function renderArticleContent(slug: string, content: string) {
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
-  const [posts, setPosts] = useState<BlogListItem[]>([]);
+  const posts = useMemo(() => getBlogList(), []);
   const [post, setPost] = useState<ArticleData | null>(null);
   const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    let isCancelled = false;
-
-    const loadPosts = async () => {
-      const loadedPosts = await loadBlogList();
-
-      if (!isCancelled) {
-        setPosts(loadedPosts);
-      }
-    };
-
-    loadPosts();
-
-    return () => {
-      isCancelled = true;
-    };
-  }, []);
 
   useEffect(() => {
     let isCancelled = false;
@@ -478,22 +437,14 @@ const BlogPost = () => {
   }
 
   const articleDescription = fixMojibake(post.metaDescription || post.excerpt || post.content.substring(0, 155).replace(/<[^>]*>/g, ''));
-  const normalizedDescription = normalizeWhitespace(articleDescription);
-  const seoDescription = normalizedDescription.length > 158
-    ? `${normalizedDescription.slice(0, 155).trimEnd()}...`
-    : normalizedDescription;
   const articleIsoDate = post.isoDate || post.date;
   const categorySlug = categoryToSlug(post.category);
   const safeTitle = fixMojibake(post.title);
-  const titleHasYear = /\b20\d{2}\b/.test(safeTitle);
-  const seoTitle = titleHasYear ? `${safeTitle} | Experience Doha` : `${safeTitle} (2026) | Experience Doha`;
   const safeCategory = fixMojibake(post.category);
   const safeDate = fixMojibake(post.date);
   const safeAuthor = fixMojibake(post.author);
   const safeTags = post.tags.map((tag) => fixMojibake(tag));
   const safeContent = fixMojibake(post.content);
-  const faqItems = extractFaqItems(safeContent);
-  const wordCount = normalizeWhitespace(stripHtml(safeContent)).split(' ').filter(Boolean).length;
 
   const handleCopyLink = () => {
     navigator.clipboard.writeText(window.location.href);
@@ -518,10 +469,7 @@ const BlogPost = () => {
     },
     "datePublished": articleIsoDate,
     "dateModified": articleIsoDate,
-    "description": seoDescription,
-    "articleSection": safeCategory,
-    "keywords": safeTags.join(', '),
-    "wordCount": wordCount,
+    "description": articleDescription,
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": `https://experiencedoha.com/blog/${slug}`
@@ -539,30 +487,15 @@ const BlogPost = () => {
     ]
   };
 
-  const faqJsonLd = faqItems.length > 1
-    ? {
-        '@context': 'https://schema.org',
-        '@type': 'FAQPage',
-        mainEntity: faqItems.map((item) => ({
-          '@type': 'Question',
-          name: item.question,
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: item.answer,
-          },
-        })),
-      }
-    : null;
-
   return (
     <div className="min-h-screen flex flex-col">
       <SEOHead 
-        title={seoTitle}
-        description={seoDescription}
+        title={`${safeTitle} | Doha Guide`}
+        description={articleDescription}
         image={typeof post.imageUrl === 'string' ? post.imageUrl : undefined}
         type="article"
         publishedTime={articleIsoDate}
-        jsonLd={[articleJsonLd, breadcrumbJsonLd, faqJsonLd].filter(Boolean)}
+        jsonLd={[articleJsonLd, breadcrumbJsonLd]}
         keywords={safeTags.join(', ')}
       />
       <NavBar />

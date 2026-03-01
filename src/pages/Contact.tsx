@@ -61,8 +61,8 @@ const Contact = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <SEOHead 
-        title="Contact Experience Doha: Travel, Expat & Partnership Inquiries"
-        description="Questions about Doha travel or relocation? Contact Experience Doha for guide feedback, partnerships, and media requests."
+        title="Contact Us - Experience Doha"
+        description="Have a question about Doha or Qatar? Reach out for travel tips, partnership inquiries, or content suggestions. We reply fast."
       />
       <NavBar />
       

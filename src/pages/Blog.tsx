@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
@@ -8,58 +8,13 @@ import SEOHead from '@/components/SEOHead';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { Search } from 'lucide-react';
-import { categoryToSlug, getCategoryCounts, getTagCounts, loadBlogList, tagToSlug } from '@/lib/blog';
-import type { BlogListItem } from '@/lib/blog';
+import { categoryToSlug, getBlogList, getCategoryCounts, getTagCounts, tagToSlug } from '@/lib/blog';
 
 const Blog = () => {
   const [searchParams, setSearchParams] = useSearchParams();
-  const [posts, setPosts] = useState<BlogListItem[]>([]);
-  const [isLoadingPosts, setIsLoadingPosts] = useState(true);
-
-  useEffect(() => {
-    let cancelled = false;
-
-    const loadPosts = async () => {
-      const loadedPosts = await loadBlogList();
-      if (!cancelled) {
-        setPosts(loadedPosts);
-        setIsLoadingPosts(false);
-      }
-    };
-
-    loadPosts();
-
-    return () => {
-      cancelled = true;
-    };
-  }, []);
+  const posts = useMemo(() => getBlogList(), []);
   const categories = useMemo(() => getCategoryCounts(posts), [posts]);
   const popularTags = useMemo(() => getTagCounts(posts).slice(0, 12), [posts]);
-  const faqItems = useMemo(
-    () => [
-      {
-        question: 'How often is the Experience Doha blog updated?',
-        answer:
-          'We update guides regularly and prioritize pages affected by policy changes, pricing shifts, and seasonal events in Doha.',
-      },
-      {
-        question: 'Can I find visa, cost of living, and expat guides here?',
-        answer:
-          'Yes. The blog covers visa workflows, salary and rent benchmarks, transport, schooling, and practical expat setup checklists.',
-      },
-      {
-        question: 'What should I read first as a new visitor to Doha?',
-        answer:
-          'Start with layover itineraries, top attraction guides, and local culture essentials, then move to neighborhood and transport guides.',
-      },
-      {
-        question: 'Can I search the blog by topic?',
-        answer:
-          'Yes. Use the search bar or browse by category and tag to quickly find articles relevant to your travel or relocation plan.',
-      },
-    ],
-    [],
-  );
 
   const query = searchParams.get('q')?.trim() ?? '';
   const queryLower = query.toLowerCase();
@@ -82,12 +37,15 @@ const Blog = () => {
   );
 
   const featuredPost = posts[0];
-  const blogJsonLd = useMemo(
-    () => ({
+
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.innerHTML = JSON.stringify({
       '@context': 'https://schema.org',
       '@type': 'Blog',
       name: 'Experience Doha Blog',
-      description: 'Actionable Doha guides for travel planning, expat life, and relocation decisions.',
+      description: 'Insights, guides, and stories about life and travel in Qatar',
       url: 'https://experiencedoha.com/blog',
       publisher: {
         '@type': 'Organization',
@@ -101,31 +59,19 @@ const Blog = () => {
         description: post.excerpt,
         url: `https://experiencedoha.com/blog/${post.slug}`,
       })),
-    }),
-    [posts],
-  );
-  const faqJsonLd = useMemo(
-    () => ({
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      mainEntity: faqItems.map((faq) => ({
-        '@type': 'Question',
-        name: faq.question,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: faq.answer,
-        },
-      })),
-    }),
-    [faqItems],
-  );
+    });
+
+    document.head.appendChild(script);
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, [posts]);
 
   return (
     <div className="min-h-screen flex flex-col">
       <SEOHead
-        title="Doha Blog 2026: Expat Guides, Costs, Visa & Travel Tips"
-        description="Browse expert Doha articles on costs, visas, neighborhoods, layovers, and relocation planning. Find answers fast by category or tag."
-        jsonLd={[blogJsonLd, faqJsonLd]}
+        title="Experience Doha Blog - Qatar Travel Guide & Expat Tips"
+        description="Browse expert Doha guides, layover itineraries, expat tips, visa updates, and local insights. Search by topic, category, or tag."
         noindex={Boolean(query)}
       />
       <NavBar />
@@ -172,13 +118,7 @@ const Blog = () => {
                   ))}
                 </div>
 
-                {isLoadingPosts && (
-                  <div className="text-center py-12">
-                    <p className="text-gray-500">Loading posts...</p>
-                  </div>
-                )}
-
-                {!isLoadingPosts && filteredPosts.length === 0 && (
+                {filteredPosts.length === 0 && (
                   <div className="text-center py-12">
                     <h3 className="text-xl font-medium text-gray-700 mb-2">No posts found</h3>
                     <p className="text-gray-500">Try a different keyword.</p>
@@ -246,15 +186,6 @@ const Blog = () => {
 
         <section className="bg-gray-50 py-16">
           <div className="content-container">
-            <h2 className="text-3xl font-bold font-heading mb-6 text-qatar-maroon">Blog FAQs</h2>
-            <div className="space-y-4 mb-12">
-              {faqItems.map((faq) => (
-                <article key={faq.question} className="rounded-lg border bg-background p-5">
-                  <h3 className="text-lg font-semibold text-foreground">{faq.question}</h3>
-                  <p className="mt-2 text-muted-foreground">{faq.answer}</p>
-                </article>
-              ))}
-            </div>
             <Newsletter />
           </div>
         </section>

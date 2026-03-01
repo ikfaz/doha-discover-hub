@@ -10,8 +10,8 @@ export const postsChunk1: Record<string, ArticleData> = {
     'end-of-service-gratuity-qatar-2025': {
       id: '61',
       title: 'End-of-Service Gratuity in Qatar 2025',
-      date: 'June 10, 2025',
-      isoDate: '2025-06-10',
+      date: 'June 10, 2026',
+      isoDate: '2026-06-10',
       metaDescription: 'Calculate your end-of-service gratuity in Qatar. Complete 2025 guide to EOSG eligibility, calculation formula, and resignation vs termination payouts.',
       excerpt: 'Understand Qatar\'s End-of-Service Gratuity (EOSG) — eligibility criteria, the statutory calculation formula, and how resignation vs termination affects your payout.',
       author: 'Experience Doha Team',
@@ -123,8 +123,8 @@ export const postsChunk1: Record<string, ArticleData> = {
     'qatar-labor-law-reforms-2025': {
       id: '60',
       title: 'Qatar Kafala & Labor Law Reforms 2025',
-      date: 'June 9, 2025',
-      isoDate: '2025-06-09',
+      date: 'June 9, 2026',
+      isoDate: '2026-06-09',
       metaDescription: 'Qatar Kafala reforms 2025: new labor mobility rules, contract switching, exit permits abolished. Complete guide for expat workers in Doha.',
       excerpt: 'Explore Qatar\'s landmark labor law reforms including the abolition of the Kafala sponsorship system, new contract-switching rules, and enhanced worker protections.',
       author: 'Experience Doha Team',
@@ -226,8 +226,8 @@ export const postsChunk1: Record<string, ArticleData> = {
     'qatar-work-visa-guide-2025': {
       id: '59',
       title: 'Qatar Work Visa & RP Guide 2025',
-      date: 'June 8, 2025',
-      isoDate: '2025-06-08',
+      date: 'June 8, 2026',
+      isoDate: '2026-06-08',
       metaDescription: 'Step-by-step Qatar work visa and residence permit guide 2025. Requirements, processing times, medical tests, and RP renewal for expats.',
       excerpt: 'A complete walkthrough of Qatar\'s work visa and residence permit process — from job offer to RP issuance, including documents, medical exams, and renewal steps.',
       author: 'Experience Doha Team',
@@ -352,8 +352,8 @@ export const postsChunk1: Record<string, ArticleData> = {
     'qatar-tax-guide-2025': {
       id: '58',
       title: 'Qatar Tax Guide 2025: Is It Tax-Free?',
-      date: 'June 7, 2025',
-      isoDate: '2025-06-07',
+      date: 'June 7, 2026',
+      isoDate: '2026-06-07',
       metaDescription: 'Is Qatar really tax-free? 2025 guide to income tax, corporate tax, property tax, and the VAT outlook for expats and businesses in Doha.',
       excerpt: 'Discover Qatar\'s tax landscape — zero personal income tax, corporate tax rules, property taxation, and the latest on VAT implementation for residents and businesses.',
       author: 'Experience Doha Team',
@@ -472,8 +472,8 @@ export const postsChunk1: Record<string, ArticleData> = {
     'expat-salaries-doha-2025': {
       id: '57',
       title: 'Expat Salaries in Doha 2025: By Role',
-      date: 'June 6, 2025',
-      isoDate: '2025-06-06',
+      date: 'June 6, 2026',
+      isoDate: '2026-06-06',
       metaDescription: 'Average expat salaries in Doha 2025 by role: engineering, finance, healthcare, IT. Salary benchmarks, packages, and negotiation tips for Qatar.',
       excerpt: 'Comprehensive salary data for expat roles in Doha — benchmarks across industries, typical compensation packages, housing allowances, and negotiation strategies.',
       author: 'Experience Doha Team',
@@ -610,8 +610,8 @@ export const postsChunk1: Record<string, ArticleData> = {
     'job-market-qatar-2025': {
       id: '56',
       title: 'Qatar Job Market for Foreigners 2025',
-      date: 'June 5, 2025',
-      isoDate: '2025-06-05',
+      date: 'June 5, 2026',
+      isoDate: '2026-06-05',
       metaDescription: 'Qatar job market 2025: top industries hiring, salary trends, job search strategies, and CV tips for foreigners seeking employment in Doha.',
       excerpt: 'Navigate Qatar\'s job market as a foreigner — discover top hiring industries, in-demand roles, effective job search strategies, and how to craft a winning CV.',
       author: 'Experience Doha Team',
@@ -728,5 +728,3 @@ export const postsChunk1: Record<string, ArticleData> = {
       `,
     },
 };
-
-
