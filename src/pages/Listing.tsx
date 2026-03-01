@@ -12,6 +12,7 @@ const Listing = () => {
       <SEOHead 
         title={`${title} - Experience Doha`}
         description={`Details about ${title} in Doha, Qatar.`}
+        noindex
       />
       <NavBar />
       <main className="flex-1">

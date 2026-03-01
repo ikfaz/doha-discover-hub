@@ -7,7 +7,6 @@ import Footer from "@/components/Footer";
 
 const KNOWN_PAGES = [
   { path: "/blog", label: "Blog" },
-  { path: "/videos", label: "Videos" },
   { path: "/gallery", label: "Gallery" },
   { path: "/about", label: "About" },
   { path: "/contact", label: "Contact" },
@@ -27,7 +26,7 @@ function getSuggestions(pathname: string) {
     );
   });
   if (suggestions.length === 0) {
-    return [KNOWN_PAGES[0], KNOWN_PAGES[3]]; // Blog & About as defaults
+    return [KNOWN_PAGES[0], KNOWN_PAGES[3]]; // Blog and Contact as defaults
   }
   return suggestions.slice(0, 3);
 }

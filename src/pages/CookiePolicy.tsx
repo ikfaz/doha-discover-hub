@@ -16,7 +16,7 @@ const CookiePolicy = () => {
         <h1 className="text-4xl font-bold text-qatar-maroon mb-8">Cookie Policy</h1>
         
         <div className="prose prose-lg max-w-none">
-          <p className="mb-6">Last updated: April 20, 2025</p>
+          <p className="mb-6">Last updated: March 1, 2026</p>
           
           <h2 className="text-2xl font-semibold text-qatar-maroon mt-8 mb-4">1. What Are Cookies?</h2>
           <p>Cookies are small text files that are placed on your device when you visit our website. They help us provide you with a better experience and understand how visitors use our site.</p>

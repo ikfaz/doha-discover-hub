@@ -49,6 +49,8 @@ import { LaborRightsCalculator } from '@/components/LaborRightsCalculator';
 import { EOSGCalculator } from '@/components/EOSGCalculator';
 import { ContractNegotiationChecklist } from '@/components/ContractNegotiationChecklist';
 import { blogPosts } from '@/data/articles';
+import { categoryToSlug, tagToSlug } from '@/lib/blog';
+import { fixMojibake } from '@/lib/text';
 import type { ReactNode } from 'react';
 
 // Slug-based component injection map
@@ -265,9 +267,15 @@ const BlogPost = () => {
     return <Navigate to="/blog" replace />;
   }
 
-  const articleDescription = post.metaDescription || post.excerpt || post.content.substring(0, 155).replace(/<[^>]*>/g, '');
+  const articleDescription = fixMojibake(post.metaDescription || post.excerpt || post.content.substring(0, 155).replace(/<[^>]*>/g, ''));
   const articleIsoDate = post.isoDate || post.date;
-  const categorySlug = post.category.toLowerCase();
+  const categorySlug = categoryToSlug(post.category);
+  const safeTitle = fixMojibake(post.title);
+  const safeCategory = fixMojibake(post.category);
+  const safeDate = fixMojibake(post.date);
+  const safeAuthor = fixMojibake(post.author);
+  const safeTags = post.tags.map((tag) => fixMojibake(tag));
+  const safeContent = fixMojibake(post.content);
 
   const handleCopyLink = () => {
     navigator.clipboard.writeText(window.location.href);
@@ -276,11 +284,11 @@ const BlogPost = () => {
   const articleJsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": post.title,
+    "headline": safeTitle,
     "image": typeof post.imageUrl === 'string' ? post.imageUrl : undefined,
     "author": {
       "@type": "Organization",
-      "name": post.author
+      "name": safeAuthor
     },
     "publisher": {
       "@type": "Organization",
@@ -305,21 +313,21 @@ const BlogPost = () => {
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://experiencedoha.com/" },
       { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://experiencedoha.com/blog" },
-      { "@type": "ListItem", "position": 3, "name": post.category, "item": `https://experiencedoha.com/blog/category/${categorySlug}` },
-      { "@type": "ListItem", "position": 4, "name": post.title }
+      { "@type": "ListItem", "position": 3, "name": safeCategory, "item": `https://experiencedoha.com/blog/category/${categorySlug}` },
+      { "@type": "ListItem", "position": 4, "name": safeTitle }
     ]
   };
 
   return (
     <div className="min-h-screen flex flex-col">
       <SEOHead 
-        title={`${post.title} | Doha Guide`}
+        title={`${safeTitle} | Doha Guide`}
         description={articleDescription}
         image={typeof post.imageUrl === 'string' ? post.imageUrl : undefined}
         type="article"
         publishedTime={articleIsoDate}
         jsonLd={[articleJsonLd, breadcrumbJsonLd]}
-        keywords={post.tags.join(', ')}
+        keywords={safeTags.join(', ')}
       />
       <NavBar />
       
@@ -343,12 +351,12 @@ const BlogPost = () => {
                 <BreadcrumbSeparator />
                 <BreadcrumbItem>
                   <BreadcrumbLink asChild>
-                    <Link to={`/blog/category/${categorySlug}`}>{post.category}</Link>
+                    <Link to={`/blog/category/${categorySlug}`}>{safeCategory}</Link>
                   </BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator />
                 <BreadcrumbItem>
-                  <BreadcrumbPage className="line-clamp-1 max-w-[200px] sm:max-w-[400px]">{post.title}</BreadcrumbPage>
+                  <BreadcrumbPage className="line-clamp-1 max-w-[200px] sm:max-w-[400px]">{safeTitle}</BreadcrumbPage>
                 </BreadcrumbItem>
               </BreadcrumbList>
             </Breadcrumb>
@@ -358,28 +366,28 @@ const BlogPost = () => {
           <div className="relative h-[280px] sm:h-[350px] md:h-[400px] w-full">
             <img
               src={post.imageUrl}
-              alt={`${post.title} - ${post.category} guide for Doha, Qatar`}
+              alt={`${safeTitle} - ${safeCategory} guide for Doha, Qatar`}
               className="w-full h-full object-cover"
               fetchPriority="high"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 content-container pb-8">
               <Badge className="mb-4 bg-qatar-gold text-qatar-maroon hover:bg-qatar-gold">
-                {post.category}
+                {safeCategory}
               </Badge>
               <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold text-white mb-4">
-                {post.title}
+                {safeTitle}
               </h1>
               <div className="flex items-center gap-4 text-white/90 text-sm">
                 <div className="flex items-center gap-2">
                   <Calendar className="h-4 w-4" />
-                  {post.date}
+                  {safeDate}
                 </div>
                 <div className="flex items-center gap-2">
                   <Clock className="h-4 w-4" />
                   {post.readTime}
                 </div>
-                <span>By {post.author}</span>
+                <span>By {safeAuthor}</span>
               </div>
             </div>
           </div>
@@ -424,7 +432,7 @@ const BlogPost = () => {
                   <Button
                     variant="outline"
                     size="sm"
-                    onClick={() => window.open(`https://twitter.com/intent/tweet?url=${window.location.href}&text=${post.title}`, '_blank')}
+                    onClick={() => window.open(`https://twitter.com/intent/tweet?url=${window.location.href}&text=${safeTitle}`, '_blank')}
                   >
                     <Twitter className="h-4 w-4 sm:mr-2" />
                     <span className="hidden sm:inline">Twitter</span>
@@ -436,14 +444,14 @@ const BlogPost = () => {
                 </div>
 
                 {/* Article Content with Component Injection */}
-                {renderArticleContent(slug || 'default', post.content)}
+                {renderArticleContent(slug || 'default', safeContent)}
 
                 {/* Tags */}
                 <div className="mt-12 pt-8 border-t">
                   <h3 className="text-sm font-medium text-gray-600 mb-4">Tags:</h3>
                   <div className="flex flex-wrap gap-2">
-                    {post.tags.map((tag: string) => (
-                      <Link key={tag} to={`/blog/category/${tag.toLowerCase().replace(/\s+/g, '-')}`}>
+                    {safeTags.map((tag: string) => (
+                      <Link key={tag} to={`/blog/tag/${tagToSlug(tag)}`}>
                         <Badge variant="secondary" className="cursor-pointer hover:bg-secondary/60">
                           {tag}
                         </Badge>

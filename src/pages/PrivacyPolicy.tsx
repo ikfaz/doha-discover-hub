@@ -16,7 +16,7 @@ const PrivacyPolicy = () => {
         <h1 className="text-4xl font-bold text-qatar-maroon mb-8">Privacy Policy</h1>
         
         <div className="prose prose-lg max-w-none">
-          <p className="mb-6">Last updated: April 20, 2025</p>
+          <p className="mb-6">Last updated: March 1, 2026</p>
           
           <h2 className="text-2xl font-semibold text-qatar-maroon mt-8 mb-4">1. Introduction</h2>
           <p>Experience Doha ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you visit our website.</p>

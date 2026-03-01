@@ -13,7 +13,7 @@ const About = lazy(() => import("./pages/About"));
 const Blog = lazy(() => import("./pages/Blog"));
 const BlogPost = lazy(() => import("./pages/BlogPost"));
 const BlogCategory = lazy(() => import("./pages/BlogCategory"));
-const Videos = lazy(() => import("./pages/Videos"));
+const BlogTag = lazy(() => import("./pages/BlogTag"));
 const Gallery = lazy(() => import("./pages/Gallery"));
 const Contact = lazy(() => import("./pages/Contact"));
 const NotFound = lazy(() => import("./pages/NotFound"));
@@ -67,7 +67,8 @@ const AppContent = () => {
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/blog/category/:category" element={<BlogCategory />} />
-          <Route path="/videos" element={<Videos />} />
+          <Route path="/blog/tag/:tag" element={<BlogTag />} />
+          <Route path="/videos" element={<Navigate to="/blog" replace />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/budget-planner" element={<BudgetPlanner />} />
@@ -85,7 +86,7 @@ const AppContent = () => {
           <Route path="/terms" element={<Navigate to="/terms-of-service" replace />} />
           <Route path="/cookies" element={<Navigate to="/cookie-policy" replace />} />
           <Route path="/budget" element={<Navigate to="/budget-planner" replace />} />
-          <Route path="/video" element={<Navigate to="/videos" replace />} />
+          <Route path="/video" element={<Navigate to="/blog" replace />} />
           <Route path="/photos" element={<Navigate to="/gallery" replace />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

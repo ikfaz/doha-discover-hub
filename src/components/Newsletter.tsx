@@ -9,14 +9,43 @@ const Newsletter = () => {
   const [email, setEmail] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsLoading(true);
-    setTimeout(() => {
-      setIsLoading(false);
+
+    const endpoint = import.meta.env.VITE_NEWSLETTER_ENDPOINT as string | undefined;
+    if (!endpoint) {
+      toast({
+        title: 'Newsletter unavailable',
+        description: 'Set VITE_NEWSLETTER_ENDPOINT to enable subscriptions.',
+        variant: 'destructive',
+      });
+      return;
+    }
+
+    try {
+      setIsLoading(true);
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, source: 'newsletter-section' }),
+      });
+
+      if (!response.ok) {
+        throw new Error(`Newsletter request failed: ${response.status}`);
+      }
+
       setEmail('');
-      toast({ title: "Success!", description: "You've been subscribed to our newsletter." });
-    }, 1000);
+      toast({ title: 'Subscribed', description: "You've been subscribed to our newsletter." });
+    } catch (error) {
+      console.error(error);
+      toast({
+        title: 'Subscription failed',
+        description: 'Please try again in a moment.',
+        variant: 'destructive',
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (

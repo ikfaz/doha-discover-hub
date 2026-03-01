@@ -1,16 +1,53 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Facebook, Instagram, Twitter, Youtube, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import { toast } from '@/components/ui/use-toast';
 
 const Footer = () => {
   const { t } = useTranslation();
+  const [email, setEmail] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubscribe = (e: React.FormEvent) => {
+  const handleSubscribe = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Newsletter subscription submitted');
+
+    const endpoint = import.meta.env.VITE_NEWSLETTER_ENDPOINT as string | undefined;
+    if (!endpoint) {
+      toast({
+        title: 'Newsletter unavailable',
+        description: 'Set VITE_NEWSLETTER_ENDPOINT to enable subscriptions.',
+        variant: 'destructive',
+      });
+      return;
+    }
+
+    try {
+      setIsSubmitting(true);
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, source: 'footer' }),
+      });
+
+      if (!response.ok) {
+        throw new Error(`Subscription failed: ${response.status}`);
+      }
+
+      setEmail('');
+      toast({ title: 'Subscribed', description: 'You have been added to the newsletter.' });
+    } catch (error) {
+      console.error(error);
+      toast({
+        title: 'Subscription failed',
+        description: 'Please try again in a moment.',
+        variant: 'destructive',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -28,7 +65,6 @@ const Footer = () => {
               <li><Link to="/" className="text-sm text-secondary-foreground/80 hover:text-sand-gold transition-colors">{t('nav.home')}</Link></li>
               <li><Link to="/about" className="text-sm text-secondary-foreground/80 hover:text-sand-gold transition-colors">{t('nav.about')}</Link></li>
               <li><Link to="/blog" className="text-sm text-secondary-foreground/80 hover:text-sand-gold transition-colors">{t('nav.blog')}</Link></li>
-              <li><Link to="/videos" className="text-sm text-secondary-foreground/80 hover:text-sand-gold transition-colors">{t('nav.videos')}</Link></li>
               <li><Link to="/gallery" className="text-sm text-secondary-foreground/80 hover:text-sand-gold transition-colors">{t('nav.gallery')}</Link></li>
               <li><Link to="/contact" className="text-sm text-secondary-foreground/80 hover:text-sand-gold transition-colors">{t('nav.contact')}</Link></li>
             </ul>
@@ -49,15 +85,21 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-4">{t('footer.newsletter')}</h3>
             <p className="mb-4 text-sm text-secondary-foreground/80">{t('footer.newsletterDesc')}</p>
             <form onSubmit={handleSubscribe} className="space-y-2">
-              <Input 
-                type="email" 
+              <Input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 placeholder={t('footer.emailPlaceholder')}
                 className="w-full bg-white/10 border-sand-gold/30 text-white placeholder:text-white/60"
                 required
                 aria-label={t('footer.emailPlaceholder')}
               />
-              <Button type="submit" className="w-full bg-sand-gold text-charcoal hover:bg-sand-gold/90 font-medium">
-                {t('footer.subscribe')}
+              <Button
+                type="submit"
+                disabled={isSubmitting}
+                className="w-full bg-sand-gold text-charcoal hover:bg-sand-gold/90 font-medium"
+              >
+                {isSubmitting ? 'Submitting...' : t('footer.subscribe')}
               </Button>
             </form>
           </div>
@@ -70,7 +112,7 @@ const Footer = () => {
               <Link to="/terms-of-service" className="text-sm text-secondary-foreground/80 hover:text-sand-gold transition-colors">{t('footer.termsOfService')}</Link>
               <Link to="/cookie-policy" className="text-sm text-secondary-foreground/80 hover:text-sand-gold transition-colors">{t('footer.cookiePolicy')}</Link>
             </div>
-            
+
             <div className="flex space-x-6 mb-4 md:mb-0">
               <a href="https://www.facebook.com/Experiencedohaqatar" target="_blank" rel="noopener noreferrer" className="text-secondary-foreground/80 hover:text-sand-gold transition-colors" aria-label="Facebook">
                 <Facebook size={20} aria-hidden="true" />
@@ -90,7 +132,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="mt-6 text-center">
-            <p className="text-sm text-secondary-foreground/60">© {new Date().getFullYear()} ExperienceDoha.com. All rights reserved.</p>
+            <p className="text-sm text-secondary-foreground/60">&copy; {new Date().getFullYear()} ExperienceDoha.com. All rights reserved.</p>
           </div>
         </div>
       </div>

@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { toast } from '@/components/ui/use-toast';
-import { Mail, Phone, Globe, MapPin, Instagram, Youtube, Facebook, Twitter } from 'lucide-react';
+import { Mail, Globe, MapPin, Instagram, Youtube, Facebook, Twitter } from 'lucide-react';
 
 const Contact = () => {
   const { t } = useTranslation();
@@ -19,14 +19,43 @@ const Contact = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
-    setTimeout(() => {
-      setIsSubmitting(false);
+    const endpoint = import.meta.env.VITE_CONTACT_ENDPOINT as string | undefined;
+
+    if (!endpoint) {
+      toast({
+        title: 'Contact unavailable',
+        description: 'Set VITE_CONTACT_ENDPOINT to enable contact submissions.',
+        variant: 'destructive',
+      });
+      return;
+    }
+
+    try {
+      setIsSubmitting(true);
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error(`Contact request failed: ${response.status}`);
+      }
+
       setFormData({ name: '', email: '', subject: '', message: '' });
       toast({ title: t('contact.messageSent'), description: t('contact.messageDesc') });
-    }, 1000);
+    } catch (error) {
+      console.error(error);
+      toast({
+        title: 'Message failed',
+        description: 'Please try again shortly.',
+        variant: 'destructive',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -102,10 +131,10 @@ const Contact = () => {
                   <p className="font-medium mb-4">{t('contact.followUs')}</p>
                   <div className="flex space-x-4">
                     {[
-                      { href: 'https://youtube.com', icon: Youtube, label: 'YouTube' },
-                      { href: 'https://instagram.com', icon: Instagram, label: 'Instagram' },
-                      { href: 'https://facebook.com', icon: Facebook, label: 'Facebook' },
-                      { href: 'https://twitter.com', icon: Twitter, label: 'Twitter' },
+                      { href: 'https://www.youtube.com/@ExperienceDoha', icon: Youtube, label: 'YouTube' },
+                      { href: 'https://www.instagram.com/experiencedoha', icon: Instagram, label: 'Instagram' },
+                      { href: 'https://www.facebook.com/Experiencedohaqatar', icon: Facebook, label: 'Facebook' },
+                      { href: 'https://twitter.com/experiencedoha', icon: Twitter, label: 'Twitter' },
                     ].map((s) => (
                       <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer" className="bg-white/10 hover:bg-white/20 p-3 rounded-full transition-colors" aria-label={s.label}>
                         <s.icon className="w-5 h-5 text-sand-gold" aria-hidden="true" />
@@ -118,7 +147,10 @@ const Contact = () => {
               <div className="bg-white shadow-md rounded-lg p-8">
                 <h2 className="text-2xl font-bold mb-6 text-secondary">{t('contact.collaboration')}</h2>
                 <p className="text-muted-foreground mb-6">{t('contact.collaborationDesc')}</p>
-                <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-medium">
+                <Button
+                  className="bg-primary hover:bg-primary/90 text-primary-foreground font-medium"
+                  onClick={() => window.open('mailto:info@experiencedoha.com?subject=Collaboration%20Inquiry', '_self')}
+                >
                   <Mail className="me-2 h-4 w-4" aria-hidden="true" />
                   {t('contact.contactCollaboration')}
                 </Button>
