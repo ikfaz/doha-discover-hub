@@ -10,10 +10,11 @@
     "taxonomy:check": "node scripts/check-topic-taxonomy.cjs",
     "sitemap:generate": "node scripts/generate-sitemap.cjs",
     "sitemap:images:generate": "node scripts/generate-image-sitemaps.cjs",
+    "sitemap:index:generate": "node scripts/generate-sitemap-index.cjs",
     "prerender:routes": "node scripts/prerender-routes.cjs",
     "prebuild": "npm run taxonomy:check && node scripts/check-internal-link-budget.cjs && npm run sitemap:generate",
     "build": "vite build",
-    "postbuild": "npm run prerender:routes && npm run sitemap:images:generate",
+    "postbuild": "npm run prerender:routes && npm run sitemap:images:generate && npm run sitemap:index:generate",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview"
