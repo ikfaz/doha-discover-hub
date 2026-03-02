@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo } from 'react';
+import React, { useMemo } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
@@ -38,10 +38,8 @@ const Blog = () => {
 
   const featuredPost = posts[0];
 
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.innerHTML = JSON.stringify({
+  const blogJsonLd = useMemo(
+    () => ({
       '@context': 'https://schema.org',
       '@type': 'Blog',
       name: 'Experience Doha Blog',
@@ -59,13 +57,9 @@ const Blog = () => {
         description: post.excerpt,
         url: `https://experiencedoha.com/blog/${post.slug}`,
       })),
-    });
-
-    document.head.appendChild(script);
-    return () => {
-      document.head.removeChild(script);
-    };
-  }, [posts]);
+    }),
+    [posts],
+  );
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -73,6 +67,7 @@ const Blog = () => {
         title="Experience Doha Blog - Qatar Travel Guide & Expat Tips"
         description="Browse expert Doha guides, layover itineraries, expat tips, visa updates, and local insights. Search by topic, category, or tag."
         noindex={Boolean(query)}
+        jsonLd={blogJsonLd}
       />
       <NavBar />
 
