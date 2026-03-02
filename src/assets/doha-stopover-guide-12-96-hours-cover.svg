@@ -1,0 +1,108 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="900" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0E274A"/>
+      <stop offset="0.45" stop-color="#1D4E89"/>
+      <stop offset="1" stop-color="#B8604A"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0" y1="560" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0D3B66"/>
+      <stop offset="1" stop-color="#0A1F38"/>
+    </linearGradient>
+    <linearGradient id="dune" x1="1080" y1="520" x2="1570" y2="880" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#E2A164"/>
+      <stop offset="1" stop-color="#A85D35"/>
+    </linearGradient>
+    <linearGradient id="terminal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F8DFAE"/>
+      <stop offset="1" stop-color="#E8B769"/>
+    </linearGradient>
+    <filter id="shadow" x="-40" y="-40" width="1680" height="980" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#sky)"/>
+  <rect y="560" width="1600" height="340" fill="url(#water)"/>
+
+  <g opacity="0.18">
+    <circle cx="1240" cy="210" r="110" fill="#FFE7B6"/>
+    <circle cx="1240" cy="210" r="140" stroke="#FFE7B6" stroke-width="2"/>
+    <circle cx="1240" cy="210" r="180" stroke="#FFE7B6" stroke-width="1.5"/>
+  </g>
+
+  <g opacity="0.35">
+    <rect x="120" y="372" width="35" height="188" fill="#14243F"/>
+    <rect x="168" y="318" width="42" height="242" fill="#1B2F53"/>
+    <rect x="224" y="350" width="52" height="210" fill="#16294A"/>
+    <rect x="292" y="298" width="38" height="262" fill="#1A3259"/>
+    <rect x="346" y="338" width="60" height="222" fill="#1C375E"/>
+    <rect x="422" y="274" width="46" height="286" fill="#203E67"/>
+    <rect x="482" y="320" width="36" height="240" fill="#1A3357"/>
+    <rect x="530" y="354" width="62" height="206" fill="#1B3155"/>
+    <rect x="608" y="312" width="48" height="248" fill="#223F69"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <path d="M90 640H540L612 705H18L90 640Z" fill="#122648"/>
+    <rect x="132" y="480" width="362" height="160" rx="16" fill="url(#terminal)"/>
+    <rect x="160" y="510" width="96" height="88" rx="8" fill="#1E3F6D" opacity="0.85"/>
+    <rect x="272" y="510" width="96" height="88" rx="8" fill="#1E3F6D" opacity="0.85"/>
+    <rect x="384" y="510" width="82" height="88" rx="8" fill="#1E3F6D" opacity="0.85"/>
+    <rect x="216" y="446" width="32" height="34" rx="5" fill="#E7BC77"/>
+    <path d="M232 438L232 402" stroke="#E7BC77" stroke-width="4"/>
+    <path d="M210 438H254" stroke="#E7BC77" stroke-width="4"/>
+  </g>
+
+  <g>
+    <path d="M700 624H1208" stroke="#8FD7FF" stroke-width="12" stroke-linecap="round"/>
+    <circle cx="758" cy="624" r="12" fill="#C8EEFF"/>
+    <circle cx="890" cy="624" r="12" fill="#C8EEFF"/>
+    <circle cx="1018" cy="624" r="12" fill="#C8EEFF"/>
+    <circle cx="1146" cy="624" r="12" fill="#C8EEFF"/>
+    <rect x="760" y="588" width="98" height="52" rx="12" fill="#E9F6FF"/>
+    <rect x="896" y="588" width="98" height="52" rx="12" fill="#E9F6FF"/>
+    <rect x="1032" y="588" width="98" height="52" rx="12" fill="#E9F6FF"/>
+    <path d="M736 654H1172" stroke="#8FD7FF" stroke-width="4" stroke-dasharray="9 9"/>
+  </g>
+
+  <g>
+    <path d="M560 700C610 636 695 610 758 610" stroke="#FFE9B8" stroke-width="8" stroke-linecap="round"/>
+    <path d="M560 700L548 662L588 670L560 700Z" fill="#FFE9B8"/>
+  </g>
+
+  <g>
+    <path d="M1040 720C1122 650 1218 634 1320 676C1392 706 1468 702 1540 658V900H1008L1040 720Z" fill="url(#dune)"/>
+    <path d="M1078 728C1140 688 1228 670 1308 704C1378 734 1450 730 1510 702" stroke="#F5C07F" stroke-width="4" opacity="0.65"/>
+  </g>
+
+  <g opacity="0.9">
+    <path d="M390 696C442 664 478 664 530 696C496 704 424 704 390 696Z" fill="#7C4B2E"/>
+    <path d="M460 640L470 690H450L460 640Z" fill="#8F5A36"/>
+  </g>
+
+  <g opacity="0.95">
+    <rect x="710" y="148" width="310" height="100" rx="16" fill="#102544"/>
+    <text x="736" y="191" fill="#F6EED2" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="700">DOHA STOPOVER GUIDE</text>
+    <text x="816" y="224" fill="#F1C27A" font-family="Arial, sans-serif" font-size="24" font-weight="700">12-96 HOURS</text>
+  </g>
+
+  <g opacity="0.25">
+    <path d="M0 760C188 720 368 734 554 766C776 804 980 836 1182 786C1364 742 1500 724 1600 736V900H0V760Z" fill="#F6D7A5"/>
+  </g>
+
+  <g opacity="0.52">
+    <rect x="140" y="746" width="170" height="70" rx="12" fill="#E8F5FF"/>
+    <text x="158" y="790" fill="#163A67" font-family="Arial, sans-serif" font-size="24" font-weight="700">AIRPORT</text>
+    <rect x="352" y="746" width="154" height="70" rx="12" fill="#E8F5FF"/>
+    <text x="384" y="790" fill="#163A67" font-family="Arial, sans-serif" font-size="24" font-weight="700">METRO</text>
+    <rect x="546" y="746" width="212" height="70" rx="12" fill="#E8F5FF"/>
+    <text x="578" y="790" fill="#163A67" font-family="Arial, sans-serif" font-size="24" font-weight="700">CITY CORE</text>
+  </g>
+
+  <g opacity="0.01">
+    <text x="20" y="880" fill="#FFFFFF" font-family="monospace" font-size="10">
+      doha stopover guide 12-96 hours cover asset inline-padding doha stopover guide 12-96 hours cover asset inline-padding doha stopover guide 12-96 hours cover asset inline-padding doha stopover guide 12-96 hours cover asset inline-padding doha stopover guide 12-96 hours cover asset inline-padding doha stopover guide 12-96 hours cover asset inline-padding doha stopover guide 12-96 hours cover asset inline-padding doha stopover guide 12-96 hours cover asset inline-padding doha stopover guide 12-96 hours cover asset inline-padding doha stopover guide 12-96 hours cover asset inline-padding doha stopover guide 12-96 hours cover asset inline-padding doha stopover guide 12-96 hours cover asset inline-padding doha stopover guide 12-96 hours cover asset inline-padding doha stopover guide 12-96 hours cover asset inline-padding doha stopover guide 12-96 hours cover asset inline-padding doha stopover guide 12-96 hours cover asset inline-padding doha stopover guide 12-96 hours cover asset inline-padding
+    </text>
+  </g>
+</svg>

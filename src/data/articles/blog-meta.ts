@@ -50,10 +50,25 @@ import hamadAirportTransfersImage from '@/assets/hamad-airport-transfers.jpg';
 import stopoverProgramImage from '@/assets/stopover-program.jpg';
 import top10AttractionsImage from '@/assets/top-10-attractions.jpg';
 import bestThingsToDoInDohaCoverImage from '@/assets/best-things-to-do-in-doha-cover.svg?url';
+import dohaStopoverGuide1296CoverImage from '@/assets/doha-stopover-guide-12-96-hours-cover.svg?url';
 
 export type BlogMetaData = Omit<ArticleData, 'content' | 'tableOfContents'>;
 
 export const blogMetaPosts: Record<string, BlogMetaData> = {
+    'doha-stopover-guide-12-96-hours': {
+      id: '63',
+      title: 'Doha Stopover Guide for 12-96 Hours',
+      date: 'March 2, 2026',
+      isoDate: '2026-03-02',
+      metaDescription: 'Turn your Doha layover into a mini vacation with this practical stopover guide for 12-96 hours. Learn how to use Qatar\'s stopover hotel deals, choose the fastest airport transfer, and follow optimized itineraries for 12-24h, 24-48h, or 48-96h. Includes a comparison table, a 48-hour timeline, and a time-allocation pie chart, plus live-check reminders for flights, visas, and events.',
+      excerpt: 'A Doha stopover can be shockingly efficient: most headline sights are 15-30 minutes from the airport, and the metro links straight into the city. Use this guide\'s ready-to-run itineraries for 12-24h, 24-48h, and 48-96h with transport moves, timing, and live-check reminders before you leave the terminal.',
+      author: 'Experience Doha Team',
+      readTime: '18 min read',
+      category: 'Attractions',
+      imageUrl: dohaStopoverGuide1296CoverImage,
+      tags: ['doha stopover guide', 'doha layover itinerary', 'qatar stopover 12 96 hours', 'discover qatar stopover booking', 'qatar airways stopover hotel', 'hamad airport to city', 'doha metro from airport', '24 hours in doha', '48 hours in doha', 'souq waqif at night', 'museum of islamic art doha', 'national museum of qatar'],
+    },
+
     'best-things-to-do-in-doha': {
       id: '62',
       title: 'Best Things to Do in Doha',

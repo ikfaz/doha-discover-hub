@@ -4,8 +4,149 @@ import hamadAirportTransfersImage from '@/assets/hamad-airport-transfers.jpg';
 import stopoverProgramImage from '@/assets/stopover-program.jpg';
 import top10AttractionsImage from '@/assets/top-10-attractions.jpg';
 import bestThingsToDoInDohaCoverImage from '@/assets/best-things-to-do-in-doha-cover.svg?url';
+import dohaStopoverGuide1296CoverImage from '@/assets/doha-stopover-guide-12-96-hours-cover.svg?url';
 
 export const postsChunk9: Record<string, ArticleData> = {
+    'doha-stopover-guide-12-96-hours': {
+      id: '63',
+      title: 'Doha Stopover Guide for 12-96 Hours',
+      date: 'March 2, 2026',
+      isoDate: '2026-03-02',
+      metaDescription: 'Turn your Doha layover into a mini vacation with this practical stopover guide for 12-96 hours. Learn how to use Qatar\'s stopover hotel deals, choose the fastest airport transfer, and follow optimized itineraries for 12-24h, 24-48h, or 48-96h. Includes a comparison table, a 48-hour timeline, and a time-allocation pie chart, plus live-check reminders for flights, visas, and events.',
+      excerpt: 'A Doha stopover can be shockingly efficient: most headline sights are 15-30 minutes from the airport, and the metro links straight into the city. Use this guide\'s ready-to-run itineraries for 12-24h, 24-48h, and 48-96h with transport moves, timing, and live-check reminders before you leave the terminal.',
+      author: 'Experience Doha Team',
+      readTime: '18 min read',
+      category: 'Attractions',
+      imageUrl: dohaStopoverGuide1296CoverImage,
+      content: `
+        <p><strong>Executive summary:</strong> A Doha stopover can be shockingly efficient - most headline sights are 15-30 minutes from the airport, and the metro links straight into the city. This guide gives you three ready-to-run itineraries (12-24h, 24-48h, 48-96h), with transport moves, timing, and what to live-check before you leave the terminal.</p>
+
+        <h2 id="reality-check">Stopover Reality Check Before You Commit</h2>
+        <p>Doha is high-yield for short trips because the best stops cluster tightly: museums, waterfront walks, and market nights can fit into one afternoon and evening. For a broader attractions list, start with <a href="/blog/best-things-to-do-in-doha">Best Things to Do in Doha (Must-See List)</a>.</p>
+        <p>You still need to plan around operational volatility and Friday timing windows. As of <strong>February 28 to March 2, 2026</strong>, travelers saw disruption advisories tied to regional airspace events. Always check your flight status before leaving the airport zone.</p>
+        <ul>
+          <li><strong>Friday timing:</strong> metro starts later and some venues shift hours around Friday prayers.</li>
+          <li><strong>Heat management:</strong> keep outdoor walking for early/late windows, and place museums midday.</li>
+          <li><strong>Transit discipline:</strong> if your onward flight is tight, do not gamble on a long city loop.</li>
+        </ul>
+
+        <h2 id="entry-stopover-basics">Entry, Eligibility, and Stopover Deal Basics</h2>
+        <p>If your transit sits in the 12-96 hour window, you can often use Qatar stopover hotel packages that are marketed from low entry prices, with eligibility, routing, and inventory constraints.</p>
+        <ul>
+          <li>Qualifying itineraries usually require a minimum 12-hour transit and available inventory.</li>
+          <li>Package terms vary by room tier, inclusions, and nights (often capped).</li>
+          <li>Visa/Hayya pathways vary by nationality and can change with little notice.</li>
+        </ul>
+        <p>Before booking, live-check <a href="https://visitqatar.com/" target="_blank" rel="noopener noreferrer">Visit Qatar</a> guidance and the latest <a href="https://www.discoverqatar.qa/stopover/" target="_blank" rel="noopener noreferrer">Discover Qatar stopover</a> terms.</p>
+
+        <h2 id="airport-to-city-logistics">Airport-to-City Logistics That Keep a Stopover Painless</h2>
+        <p>Two transport moves cover almost every stopover:</p>
+        <ul>
+          <li><strong>Metro:</strong> best for light luggage and predictable transfer times. Use our <a href="/blog/doha-metro-2025-guide">Doha Metro Guide: Lines, Hours, Tickets</a> before you ride.</li>
+          <li><strong>Taxi/Ride-hail:</strong> best for heavy bags, fatigue, or last-mile convenience.</li>
+        </ul>
+        <p><strong>Pro move:</strong> metro for the long jump (airport to city), then a short taxi for final access.</p>
+
+        <h2 id="itinerary-12-24">Itinerary for 12-24 Hours</h2>
+        <p>This is the one-perfect-afternoon plus one-big-night plan.</p>
+        <p><strong>T+0:00-2:30:</strong> arrival, immigration, bag drop, and transit setup.</p>
+        <p><strong>T+2:30-5:00:</strong> Museum of Islamic Art plus waterfront time.</p>
+        <p><strong>T+5:00-6:00:</strong> Corniche sunset walk.</p>
+        <p><strong>T+6:30-10:00:</strong> Souq Waqif for dinner and atmosphere.</p>
+        <p><strong>Tip:</strong> evenings usually produce the strongest souq experience and better street energy.</p>
+
+        <h2 id="itinerary-24-48">Itinerary for 24-48 Hours</h2>
+        <p>Follow the 12-24h day-one plan, then add:</p>
+        <ul>
+          <li><strong>Morning:</strong> National Museum of Qatar (2-3 hours).</li>
+          <li><strong>Midday:</strong> Msheireb lunch and walk loop (1-2 hours).</li>
+          <li><strong>Late afternoon:</strong> Mina District photos + promenade (1.5-2.5 hours).</li>
+        </ul>
+        <p>If you need a short-trip base decision, use <a href="/blog/renting-doha-west-bay-al-waab-2025">Where to Stay in Doha: Best Areas for Short Trips</a> before locking your hotel.</p>
+
+        <h2 id="itinerary-48-96">Itinerary for 48-96 Hours</h2>
+        <p>Use the 24-48h plan as your base, then add two expansion days:</p>
+        <ul>
+          <li><strong>Desert day:</strong> Khor Al Adaid (Inland Sea) via 4x4 and experienced driver; plan 7-10 hours.</li>
+          <li><strong>Waterfront culture day:</strong> Katara in the morning, The Pearl in late afternoon/evening.</li>
+        </ul>
+        <p>This range gives enough margin for event windows, weather pacing, and recovery time between long-haul segments.</p>
+
+        <h2 id="comparison-table">Stopover Length Comparison Table</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Stopover Length</th>
+              <th>Highlights</th>
+              <th>Must-See Items</th>
+              <th>Transport Complexity</th>
+              <th>Energy Level</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>12-24 hours</td>
+              <td>One museum + skyline + market night</td>
+              <td>MIA/Corniche + Souq Waqif</td>
+              <td>Low</td>
+              <td>Medium</td>
+            </tr>
+            <tr>
+              <td>24-48 hours</td>
+              <td>Two museums + modern district + port</td>
+              <td>NMoQ + Souq Waqif + Mina</td>
+              <td>Medium</td>
+              <td>Medium-High</td>
+            </tr>
+            <tr>
+              <td>48-96 hours</td>
+              <td>Full Doha + desert day + waterfront districts</td>
+              <td>Khor Al Adaid + Katara/Pearl + city core</td>
+              <td>Medium-High</td>
+              <td>High</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2 id="planning-tools">Visual Planning Tools for a 48-Hour Stopover</h2>
+        <h3 id="timeline-48h">Sample 48-Hour Timeline</h3>
+        <ul>
+          <li><strong>Day 1:</strong> land, entry buffer, Museum of Islamic Art, Corniche sunset, Souq Waqif dinner.</li>
+          <li><strong>Day 2:</strong> National Museum, Msheireb lunch, Mina District golden hour, early night before departure.</li>
+        </ul>
+        <h3 id="pie-48h">48-Hour Time-Allocation Pie (Practical Split)</h3>
+        <ul>
+          <li><strong>Sightseeing:</strong> 18 hours</li>
+          <li><strong>Dining:</strong> 7 hours</li>
+          <li><strong>Transit:</strong> 5 hours</li>
+          <li><strong>Rest:</strong> 18 hours</li>
+        </ul>
+
+        <h2 id="live-check">What You Must Live-Check Before You Go</h2>
+        <p>These are high-change inputs and should be checked close to departure, especially if your travel date is after <strong>March 2, 2026</strong>:</p>
+        <ul>
+          <li><strong>Flight status and airport advisories:</strong> <a href="https://dohahamadairport.com/" target="_blank" rel="noopener noreferrer">Hamad International Airport</a></li>
+          <li><strong>Visa and entry pathways:</strong> <a href="https://visitqatar.com/" target="_blank" rel="noopener noreferrer">Visit Qatar</a></li>
+          <li><strong>Stopover booking and package conditions:</strong> <a href="https://www.discoverqatar.qa/stopover/" target="_blank" rel="noopener noreferrer">Discover Qatar</a></li>
+          <li><strong>Events calendar:</strong> <a href="https://www.qatartourism.com/en/events-calendar" target="_blank" rel="noopener noreferrer">Qatar Tourism Events</a></li>
+          <li><strong>Demand and timing signals:</strong> <a href="https://www.tripadvisor.com/Tourism-g294008-Doha-Vacations.html" target="_blank" rel="noopener noreferrer">TripAdvisor Doha</a></li>
+        </ul>
+        <p>Share this with your travel partner before you fly. A stopover in Doha rewards tight timing, clear transport decisions, and realistic buffers between activities.</p>
+      `,
+      tableOfContents: [
+        { title: 'Stopover Reality Check Before You Commit', id: 'reality-check' },
+        { title: 'Entry, Eligibility, and Stopover Deal Basics', id: 'entry-stopover-basics' },
+        { title: 'Airport-to-City Logistics That Keep a Stopover Painless', id: 'airport-to-city-logistics' },
+        { title: 'Itinerary for 12-24 Hours', id: 'itinerary-12-24' },
+        { title: 'Itinerary for 24-48 Hours', id: 'itinerary-24-48' },
+        { title: 'Itinerary for 48-96 Hours', id: 'itinerary-48-96' },
+        { title: 'Stopover Length Comparison Table', id: 'comparison-table' },
+        { title: 'Visual Planning Tools for a 48-Hour Stopover', id: 'planning-tools' },
+        { title: 'What You Must Live-Check Before You Go', id: 'live-check' }
+      ],
+      tags: ['doha stopover guide', 'doha layover itinerary', 'qatar stopover 12 96 hours', 'discover qatar stopover booking', 'qatar airways stopover hotel', 'hamad airport to city', 'doha metro from airport', '24 hours in doha', '48 hours in doha', 'souq waqif at night', 'museum of islamic art doha', 'national museum of qatar']
+    },
+
     'best-things-to-do-in-doha': {
       id: '62',
       title: 'Best Things to Do in Doha',
