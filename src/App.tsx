@@ -14,6 +14,7 @@ const Blog = lazy(() => import("./pages/Blog"));
 const BlogPost = lazy(() => import("./pages/BlogPost"));
 const BlogCategory = lazy(() => import("./pages/BlogCategory"));
 const BlogTag = lazy(() => import("./pages/BlogTag"));
+const BlogTopicHub = lazy(() => import("./pages/BlogTopicHub"));
 const Gallery = lazy(() => import("./pages/Gallery"));
 const Contact = lazy(() => import("./pages/Contact"));
 const NotFound = lazy(() => import("./pages/NotFound"));
@@ -64,6 +65,7 @@ const AppContent = () => {
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/blog/category/:category" element={<BlogCategory />} />
           <Route path="/blog/tag/:tag" element={<BlogTag />} />
+          <Route path="/blog/topic/:topic" element={<BlogTopicHub />} />
           <Route path="/videos" element={<Navigate to="/blog" replace />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<Contact />} />

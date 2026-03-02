@@ -21,6 +21,7 @@ import BlogCard from '@/components/BlogCard';
 import { loadBlogPostBySlug } from '@/data/articles/blog-post-loaders';
 import { blogMetaPosts } from '@/data/articles/blog-meta';
 import { categoryToSlug, getBlogList, tagToSlug } from '@/lib/blog';
+import { buildArticleInternalLinkBudget } from '@/lib/article-link-budget';
 import { toJsonLdAuthor } from '@/lib/structured-data';
 import { fixMojibake } from '@/lib/text';
 import { getHistoricalSlugCanonicalNote } from '@/lib/slug-strategy';
@@ -388,37 +389,37 @@ const BlogPost = () => {
     };
   }, [slug]);
 
-  // Dynamic related articles based on matching category and tags
-  const dynamicRelated = useMemo(() => {
-    if (!post || !slug) return [];
+  const currentListPost = useMemo(() => {
+    if (!post || !slug) {
+      return null;
+    }
 
-    const scored = posts
-      .filter((candidate) => candidate.slug !== slug)
-      .map((candidate) => {
-        let score = 0;
-        if (candidate.category === post.category) {
-          score += 3;
-        }
+    const existing = posts.find((candidate) => candidate.slug === slug);
+    if (existing) {
+      return existing;
+    }
 
-        const overlap = post.tags.filter((tag) => candidate.tags.includes(tag)).length;
-        score += overlap;
+    return {
+      id: post.id,
+      slug,
+      title: post.title,
+      excerpt: post.excerpt || post.metaDescription || '',
+      imageUrl: String(post.imageUrl || ''),
+      category: post.category,
+      date: post.date,
+      isoDate: post.isoDate,
+      tags: post.tags,
+    };
+  }, [post, posts, slug]);
 
-        return { post: candidate, score };
-      })
-      .filter((item) => item.score > 0)
-      .sort((a, b) => b.score - a.score)
-      .slice(0, 3);
+  const internalLinkBudget = useMemo(() => {
+    if (!currentListPost) {
+      return null;
+    }
+    return buildArticleInternalLinkBudget(currentListPost, posts);
+  }, [currentListPost, posts]);
 
-    return scored.map((item) => ({
-      id: item.post.id,
-      title: item.post.title,
-      excerpt: item.post.excerpt,
-      imageUrl: item.post.imageUrl,
-      category: item.post.category,
-      date: item.post.date,
-      slug: item.post.slug,
-    }));
-  }, [slug, post, posts]);
+  const dynamicRelated = internalLinkBudget?.siblingPosts ?? [];
 
   if (isLoading) {
     return (
@@ -641,6 +642,43 @@ const BlogPost = () => {
                     ))}
                   </div>
                 </div>
+
+                {internalLinkBudget?.parentHubLink && (
+                  <div className="mt-8 rounded-lg border border-qatar-maroon/20 bg-qatar-maroon/5 p-6">
+                    <h3 className="text-lg font-semibold text-qatar-maroon mb-2">Explore this topic hub</h3>
+                    <p className="text-sm text-gray-700 mb-4">
+                      Continue with the curated {internalLinkBudget.parentHubLink.name.toLowerCase()} cluster.
+                    </p>
+                    <Link
+                      to={internalLinkBudget.parentHubLink.href}
+                      className="inline-flex items-center rounded-md bg-qatar-maroon px-4 py-2 text-sm font-medium text-white hover:bg-qatar-maroon/90"
+                    >
+                      Go to {internalLinkBudget.parentHubLink.name}
+                    </Link>
+                  </div>
+                )}
+
+                {internalLinkBudget && (
+                  <div className="mt-8 rounded-lg border bg-gray-50 p-6">
+                    <h3 className="text-lg font-semibold mb-4">Explore More</h3>
+                    <div className="flex flex-wrap gap-3">
+                      <Link
+                        to={internalLinkBudget.categoryLink.href}
+                        className="px-4 py-2 rounded-full border border-qatar-maroon/20 text-qatar-maroon hover:bg-qatar-maroon hover:text-white transition-colors"
+                      >
+                        More in {safeCategory}
+                      </Link>
+                      {internalLinkBudget.parentHubLink && (
+                        <Link
+                          to={internalLinkBudget.parentHubLink.href}
+                          className="px-4 py-2 rounded-full border border-qatar-maroon/20 text-qatar-maroon hover:bg-qatar-maroon hover:text-white transition-colors"
+                        >
+                          {internalLinkBudget.parentHubLink.name} Hub
+                        </Link>
+                      )}
+                    </div>
+                  </div>
+                )}
 
                 {/* Author Box */}
                 <div className="mt-8 p-6 bg-gray-50 rounded-lg">

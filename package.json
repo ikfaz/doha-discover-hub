@@ -7,7 +7,7 @@
     "dev": "vite",
     "sitemap:generate": "node scripts/generate-sitemap.cjs",
     "prerender:routes": "node scripts/prerender-routes.cjs",
-    "prebuild": "npm run sitemap:generate",
+    "prebuild": "node scripts/check-internal-link-budget.cjs && npm run sitemap:generate",
     "build": "vite build",
     "postbuild": "npm run prerender:routes",
     "build:dev": "vite build --mode development",

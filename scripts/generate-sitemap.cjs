@@ -5,9 +5,11 @@ const SITE_URL = "https://experiencedoha.com";
 const ROOT_DIR = path.resolve(__dirname, "..");
 const BLOG_META_PATH = path.join(ROOT_DIR, "src", "data", "articles", "blog-meta.ts");
 const TOURS_PATH = path.join(ROOT_DIR, "src", "data", "tours.ts");
+const TOPIC_HUBS_PATH = path.join(ROOT_DIR, "src", "data", "articles", "topic-hubs.json");
 const SITEMAP_PATH = path.join(ROOT_DIR, "public", "sitemap.xml");
 const MIN_POSTS_TO_INDEX_CATEGORY = 2;
 const MIN_POSTS_TO_INDEX_TAG = 2;
+const MIN_POSTS_TO_INDEX_TOPIC = 2;
 
 const MOJIBAKE_PATTERN = /[\u00C2\u00C3\u00D8\u00D9]|Ã¢/;
 
@@ -83,6 +85,21 @@ const parseTourSlugs = () => {
   return [...source.matchAll(/slug:\s*'([^']+)'/g)].map((m) => m[1]);
 };
 
+const parseTopicHubs = () => {
+  const raw = fs.readFileSync(TOPIC_HUBS_PATH, "utf8");
+  const parsed = JSON.parse(raw);
+  if (!Array.isArray(parsed)) {
+    return [];
+  }
+
+  return parsed
+    .filter((item) => item && typeof item.slug === "string")
+    .map((item) => ({
+      slug: String(item.slug).trim(),
+      postSlugs: Array.isArray(item.postSlugs) ? [...new Set(item.postSlugs.map((slug) => String(slug).trim()))] : [],
+    }));
+};
+
 const toTimestamp = (isoDate) => {
   const timestamp = Date.parse(isoDate);
   return Number.isFinite(timestamp) ? timestamp : 0;
@@ -93,9 +110,11 @@ const formatDate = (isoDate) => (isoDate ? isoDate.slice(0, 10) : "2026-03-02");
 const main = () => {
   const posts = parseBlogMeta();
   const tourSlugs = parseTourSlugs();
+  const topicHubs = parseTopicHubs();
 
   const datedPosts = posts.filter((post) => post.isoDate);
   const getLastmod = (post) => post.isoModifiedDate || post.isoDate;
+  const postLastmodBySlug = new Map(datedPosts.map((post) => [post.slug, getLastmod(post)]));
   const latestPostDate = datedPosts
     .map((post) => getLastmod(post))
     .sort((a, b) => toTimestamp(b) - toTimestamp(a))[0] || "2026-03-02";
@@ -183,6 +202,24 @@ const main = () => {
     });
   }
 
+  let includedTopicHubCount = 0;
+  for (const hub of [...topicHubs].sort((a, b) => a.slug.localeCompare(b.slug))) {
+    const hubLastmods = hub.postSlugs.map((slug) => postLastmodBySlug.get(slug)).filter(Boolean);
+    if (hubLastmods.length < MIN_POSTS_TO_INDEX_TOPIC) {
+      continue;
+    }
+
+    const hubLastmod =
+      [...hubLastmods].sort((a, b) => toTimestamp(b) - toTimestamp(a))[0] || latestPostDate;
+    includedTopicHubCount += 1;
+    addUrl({
+      loc: `/blog/topic/${hub.slug}`,
+      lastmod: hubLastmod,
+      changefreq: "weekly",
+      priority: "0.7",
+    });
+  }
+
   for (const post of [...datedPosts].sort((a, b) => toTimestamp(getLastmod(b)) - toTimestamp(getLastmod(a)))) {
     addUrl({
       loc: `/blog/${post.slug}`,
@@ -211,6 +248,7 @@ const main = () => {
     `Categories included: ${includedCategoryCount} (min posts: ${MIN_POSTS_TO_INDEX_CATEGORY})`,
   );
   console.log(`Tags included: ${includedTagCount} (min posts: ${MIN_POSTS_TO_INDEX_TAG})`);
+  console.log(`Topic hubs included: ${includedTopicHubCount} (min posts: ${MIN_POSTS_TO_INDEX_TOPIC})`);
   console.log(`Blog posts included: ${datedPosts.length}`);
 };
 

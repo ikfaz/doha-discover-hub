@@ -7,6 +7,8 @@ const DIST_DIR = path.join(ROOT_DIR, "dist");
 const DIST_INDEX_PATH = path.join(DIST_DIR, "index.html");
 const BLOG_META_PATH = path.join(ROOT_DIR, "src", "data", "articles", "blog-meta.ts");
 const TOURS_PATH = path.join(ROOT_DIR, "src", "data", "tours.ts");
+const TOPIC_HUBS_PATH = path.join(ROOT_DIR, "src", "data", "articles", "topic-hubs.json");
+const ARTICLE_PRIMARY_HUB_PATH = path.join(ROOT_DIR, "src", "data", "articles", "article-primary-hub.json");
 
 const DEFAULT_IMAGE =
   "https://images.unsplash.com/photo-1496307653780-42ee777d4833?q=80&w=2670&auto=format&fit=crop";
@@ -207,6 +209,112 @@ const parseTours = () => {
   return items;
 };
 
+const parseTopicHubs = () => {
+  const raw = fs.readFileSync(TOPIC_HUBS_PATH, "utf8");
+  const parsed = JSON.parse(raw);
+  if (!Array.isArray(parsed)) {
+    return [];
+  }
+
+  return parsed
+    .filter((item) => item && typeof item.slug === "string" && typeof item.title === "string")
+    .map((item) => ({
+      slug: String(item.slug).trim(),
+      name: String(item.name || item.title).trim(),
+      title: String(item.title).trim(),
+      metaDescription: String(item.metaDescription || item.intro || "").trim(),
+      intro: String(item.intro || item.metaDescription || "").trim(),
+      postSlugs: Array.isArray(item.postSlugs) ? [...new Set(item.postSlugs.map((slug) => String(slug).trim()))] : [],
+    }));
+};
+
+const parsePrimaryHubMap = () => {
+  const raw = fs.readFileSync(ARTICLE_PRIMARY_HUB_PATH, "utf8");
+  const parsed = JSON.parse(raw);
+  if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) {
+    return {};
+  }
+
+  const map = {};
+  for (const [slug, hubSlug] of Object.entries(parsed)) {
+    if (typeof slug !== "string" || typeof hubSlug !== "string") {
+      continue;
+    }
+    map[slug.trim()] = hubSlug.trim();
+  }
+  return map;
+};
+
+const toTimestamp = (post) => {
+  const candidate = post.isoDate || "";
+  const timestamp = Date.parse(candidate);
+  return Number.isFinite(timestamp) ? timestamp : 0;
+};
+
+const byRecencyThenSlug = (left, right) => {
+  const timestampDelta = toTimestamp(right) - toTimestamp(left);
+  if (timestampDelta !== 0) {
+    return timestampDelta;
+  }
+  return left.slug.localeCompare(right.slug);
+};
+
+const countTagOverlap = (leftTags, rightTags) => {
+  if (!Array.isArray(leftTags) || !Array.isArray(rightTags) || leftTags.length === 0 || rightTags.length === 0) {
+    return 0;
+  }
+
+  const rightSet = new Set(rightTags);
+  let overlap = 0;
+  for (const tag of leftTags) {
+    if (rightSet.has(tag)) {
+      overlap += 1;
+    }
+  }
+  return overlap;
+};
+
+const getSiblingPostsForArticle = (currentPost, allPosts, primaryHubBySlug, limit = 3) => {
+  const currentPrimaryHub = primaryHubBySlug[currentPost.slug];
+  const scored = allPosts
+    .filter((candidate) => candidate.slug !== currentPost.slug)
+    .map((candidate) => {
+      let score = 0;
+      if (currentPrimaryHub && primaryHubBySlug[candidate.slug] === currentPrimaryHub) {
+        score += 100;
+      }
+      if (candidate.category === currentPost.category) {
+        score += 30;
+      }
+      score += 5 * countTagOverlap(currentPost.tags, candidate.tags);
+
+      return { post: candidate, score };
+    })
+    .sort((left, right) => {
+      if (right.score !== left.score) {
+        return right.score - left.score;
+      }
+      return byRecencyThenSlug(left.post, right.post);
+    });
+
+  const ranked = scored.filter((item) => item.score > 0).map((item) => item.post).slice(0, limit);
+  if (ranked.length > 0) {
+    return ranked;
+  }
+
+  if (currentPrimaryHub) {
+    const sameHubFallback = allPosts
+      .filter((candidate) => candidate.slug !== currentPost.slug && primaryHubBySlug[candidate.slug] === currentPrimaryHub)
+      .sort(byRecencyThenSlug)
+      .slice(0, limit);
+    if (sameHubFallback.length > 0) {
+      return sameHubFallback;
+    }
+  }
+
+  return allPosts.filter((candidate) => candidate.slug !== currentPost.slug).sort(byRecencyThenSlug).slice(0, limit);
+};
+
 const upsertTag = (html, regex, replacement, fallback) => {
   if (regex.test(html)) {
     return html.replace(regex, replacement);
@@ -288,7 +396,7 @@ const writeRoute = (html, routePath) => {
   fs.writeFileSync(path.join(targetDir, "index.html"), html, "utf8");
 };
 
-const buildPages = (blogPosts, tours) => {
+const buildPages = (blogPosts, tours, topicHubs, primaryHubBySlug) => {
   const pages = [
     {
       path: "/",
@@ -346,6 +454,7 @@ const buildPages = (blogPosts, tours) => {
 
   const categoryMap = new Map();
   const tagMap = new Map();
+  const topicHubBySlug = new Map(topicHubs.map((hub) => [hub.slug, hub]));
 
   for (const post of blogPosts) {
     if (post.category) {
@@ -368,12 +477,22 @@ const buildPages = (blogPosts, tours) => {
   for (const post of blogPosts) {
     const description = stripHtml(post.description || post.excerpt || "");
     const slugNote = getHistoricalSlugCanonicalNote(post.slug, post.title);
+    const parentHubSlug = primaryHubBySlug[post.slug];
+    const parentHub = parentHubSlug ? topicHubBySlug.get(parentHubSlug) : null;
+    const siblingPosts = getSiblingPostsForArticle(post, blogPosts, primaryHubBySlug, 3);
+    const siblingLinks = siblingPosts
+      .map((item) => `<li><a href="/blog/${item.slug}">${escapeHtml(item.title)}</a></li>`)
+      .join("");
     const articleBody = [
       "<main><article>",
       `<h1>${escapeHtml(post.title)}</h1>`,
       `<p>${escapeHtml(description)}</p>`,
       slugNote ? `<p><strong>Canonical URL note:</strong> ${escapeHtml(slugNote)}</p>` : "",
       `<p>Category: <a href="/blog/category/${slugify(post.category)}">${escapeHtml(post.category)}</a></p>`,
+      parentHub
+        ? `<p>Topic hub: <a href="/blog/topic/${escapeHtml(parentHub.slug)}">${escapeHtml(parentHub.name)}</a></p>`
+        : "",
+      siblingLinks ? `<h2>Related Articles</h2><ul>${siblingLinks}</ul>` : "",
       `<p><a href="/blog">Back to Blog</a></p>`,
       "</article></main>",
     ].join("");
@@ -436,6 +555,42 @@ const buildPages = (blogPosts, tours) => {
     });
   }
 
+  const postsBySlug = new Map(blogPosts.map((post) => [post.slug, post]));
+  for (const hub of [...topicHubs].sort((a, b) => a.slug.localeCompare(b.slug))) {
+    const hubPosts = hub.postSlugs.map((slug) => postsBySlug.get(slug)).filter(Boolean);
+    const links = hubPosts
+      .slice(0, 15)
+      .map((post) => `<li><a href="/blog/${post.slug}">${escapeHtml(post.title)}</a></li>`)
+      .join("");
+
+    pages.push({
+      path: `/blog/topic/${hub.slug}`,
+      title: `${hub.title} - Experience Doha Blog`,
+      description: hub.metaDescription || hub.intro,
+      noindex: hubPosts.length <= 1,
+      bodyHtml: `<main><h1>${escapeHtml(hub.title)}</h1><p>${escapeHtml(hub.intro)}</p><ul>${links}</ul><p><a href="/blog">View all posts</a></p></main>`,
+      jsonLd:
+        hubPosts.length > 0
+          ? {
+              "@context": "https://schema.org",
+              "@type": "CollectionPage",
+              name: hub.title,
+              description: hub.metaDescription || hub.intro,
+              url: `${SITE_URL}/blog/topic/${hub.slug}`,
+              mainEntity: {
+                "@type": "ItemList",
+                itemListElement: hubPosts.map((post, index) => ({
+                  "@type": "ListItem",
+                  position: index + 1,
+                  url: `${SITE_URL}/blog/${post.slug}`,
+                  name: post.title,
+                })),
+              },
+            }
+          : undefined,
+    });
+  }
+
   for (const tour of tours) {
     const overview = stripHtml(tour.overview).split(/\s+/).slice(0, 55).join(" ");
     pages.push({
@@ -466,7 +621,9 @@ const main = () => {
   const template = fs.readFileSync(DIST_INDEX_PATH, "utf8");
   const blogPosts = parseBlogMeta();
   const tours = parseTours();
-  const pages = buildPages(blogPosts, tours);
+  const topicHubs = parseTopicHubs();
+  const primaryHubBySlug = parsePrimaryHubMap();
+  const pages = buildPages(blogPosts, tours, topicHubs, primaryHubBySlug);
 
   for (const page of pages) {
     const html = withSeo(template, page);

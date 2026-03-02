@@ -1,0 +1,112 @@
+[
+  {
+    "slug": "visa",
+    "name": "Visa and Residency",
+    "title": "Qatar Visa and Residency Hub",
+    "metaDescription": "Visa and residency guides for expats in Qatar: work visa, RP process, reforms, and family sponsorship basics.",
+    "intro": "Editorially curated visa and residency guidance for moving to Qatar, staying compliant, and planning paperwork with fewer surprises.",
+    "postSlugs": [
+      "qatar-work-visa-guide-2025",
+      "qatar-visa-rules-expats-2025",
+      "qatar-labor-law-reforms-2025",
+      "hiring-maid-nanny-qatar-guide",
+      "pet-import-qatar-guide",
+      "prostitution-laws-doha-qatar-guide",
+      "alcohol-allowed-doha-qatar-guide"
+    ]
+  },
+  {
+    "slug": "housing",
+    "name": "Housing and Rent",
+    "title": "Doha Housing and Rent Hub",
+    "metaDescription": "Doha housing and rent guides: neighborhood comparisons, rental pricing, and practical cost planning for expats.",
+    "intro": "A practical housing hub covering where to rent, what to budget, and how to compare neighborhoods and lease tradeoffs in Doha.",
+    "postSlugs": [
+      "housing-rent-doha-2025",
+      "renting-doha-west-bay-al-waab-2025",
+      "cost-of-living-doha-2025",
+      "cost-of-living-doha-dubai-riyadh"
+    ]
+  },
+  {
+    "slug": "metro",
+    "name": "Metro and Transit",
+    "title": "Doha Metro and Transit Hub",
+    "metaDescription": "Doha Metro and transit guides: network map, fares, and airport connectivity for daily commuting and travel.",
+    "intro": "Use this transit hub to understand Doha Metro lines, fare options, and airport-linked mobility planning.",
+    "postSlugs": [
+      "doha-metro-2025-guide",
+      "hamad-airport-transfers-guide",
+      "driving-doha-2025-guide",
+      "women-driving-qatar-guide"
+    ]
+  },
+  {
+    "slug": "airport",
+    "name": "Airport and Layovers",
+    "title": "Hamad Airport and Doha Layover Hub",
+    "metaDescription": "Airport, layover, and Doha highlights guides: Hamad transfers, stopovers, short itineraries, and city experiences worth prioritizing.",
+    "intro": "A broad airport and layover cluster for transit planning, stopover logistics, and high-value Doha experiences between flights.",
+    "postSlugs": [
+      "hamad-international-airport-guide",
+      "hamad-airport-transfers-guide",
+      "doha-airport-layover-activities",
+      "doha-layover-time-guide",
+      "perfect-layover-doha-guide",
+      "things-to-do-doha-layover",
+      "five-best-things-doha-layover",
+      "9-hour-stopover-qatar-worth-it",
+      "ultimate-doha-layover-24-48-hours",
+      "qatar-stopover-program-guide",
+      "qatar-airways-stopover-packages-lounge",
+      "discover-qatar-stopover-guide",
+      "24-hours-doha-qatar-airways",
+      "doha-changing-middle-east",
+      "qatari-dishes-doha-culinary-guide",
+      "doha-safety-guide-tourists-expats",
+      "desert-safari-inland-sea-khor-al-adaid",
+      "mia-nmoq-museum-combo-guide",
+      "souq-waqif-night-experiences-haggling",
+      "doha-global-mediation-hub-congo-peace",
+      "fifa-u17-world-cup-qatar-2025",
+      "corniche-sunset-dhow-cruise-guide",
+      "pearl-qatar-luxury-shopping-dining",
+      "katara-cultural-village-events-2025"
+    ]
+  },
+  {
+    "slug": "jobs",
+    "name": "Jobs and Salaries",
+    "title": "Qatar Jobs and Salary Hub",
+    "metaDescription": "Jobs and salary guides for expats in Qatar: hiring trends, compensation benchmarks, labor rules, and payout calculations.",
+    "intro": "A curated jobs cluster focused on getting hired, understanding compensation, and navigating labor and payout rules in Qatar.",
+    "postSlugs": [
+      "job-market-qatar-2025",
+      "expat-salaries-doha-2025",
+      "end-of-service-gratuity-qatar-2025",
+      "qatar-tax-guide-2025",
+      "qatar-labor-law-reforms-2025",
+      "remote-work-cafes-doha-guide"
+    ]
+  },
+  {
+    "slug": "cost-of-living",
+    "name": "Cost of Living",
+    "title": "Doha Cost of Living Hub",
+    "metaDescription": "Cost-of-living guides for Doha and Gulf comparisons: housing, groceries, telecom, banking, and monthly budgeting.",
+    "intro": "Use this hub to benchmark living costs in Doha and compare recurring expenses that shape expat budgeting decisions.",
+    "postSlugs": [
+      "cost-of-living-doha-2025",
+      "cost-of-living-doha-dubai-riyadh",
+      "housing-rent-doha-2025",
+      "grocery-shopping-doha-guide",
+      "mobile-plans-qatar-guide",
+      "bank-account-qatar-guide",
+      "alcohol-guide-doha",
+      "gyms-fitness-doha-guide",
+      "lgbtq-experiences-qatar-2025",
+      "international-schools-qatar-2025",
+      "women-safety-dress-code-doha-qatar"
+    ]
+  }
+]

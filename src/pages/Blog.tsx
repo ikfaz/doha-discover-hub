@@ -9,6 +9,7 @@ import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { Search } from 'lucide-react';
 import { categoryToSlug, getBlogList, getCategoryCounts, getTagCounts, tagToSlug } from '@/lib/blog';
+import { getTopicHubPosts, getTopicHubs } from '@/lib/topic-hubs';
 import { toJsonLdAuthor } from '@/lib/structured-data';
 
 const Blog = () => {
@@ -16,6 +17,15 @@ const Blog = () => {
   const posts = useMemo(() => getBlogList(), []);
   const categories = useMemo(() => getCategoryCounts(posts), [posts]);
   const popularTags = useMemo(() => getTagCounts(posts).slice(0, 12), [posts]);
+  const topicHubs = useMemo(() => getTopicHubs(), []);
+  const topicHubSummaries = useMemo(
+    () =>
+      topicHubs.map((hub) => ({
+        hub,
+        count: getTopicHubPosts(posts, hub).length,
+      })),
+    [posts, topicHubs],
+  );
 
   const query = searchParams.get('q')?.trim() ?? '';
   const queryLower = query.toLowerCase();
@@ -138,6 +148,25 @@ const Blog = () => {
                         </Link>
                         <Badge variant="outline" className="bg-qatar-maroon/10">
                           {category.count}
+                        </Badge>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="bg-white shadow-md rounded-lg p-6">
+                  <h3 className="text-xl font-bold mb-4 text-qatar-maroon">Topic Hubs</h3>
+                  <div className="space-y-2">
+                    {topicHubSummaries.map(({ hub, count }) => (
+                      <div key={hub.slug} className="flex justify-between items-center">
+                        <Link
+                          to={`/blog/topic/${hub.slug}`}
+                          className="text-gray-700 hover:text-qatar-maroon transition-colors"
+                        >
+                          {hub.name}
+                        </Link>
+                        <Badge variant="outline" className="bg-qatar-maroon/10">
+                          {count}
                         </Badge>
                       </div>
                     ))}

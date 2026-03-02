@@ -79,6 +79,15 @@ const Footer = () => {
               <li><Link to="/blog/category/events" className="text-sm text-secondary-foreground/80 hover:text-sand-gold transition-colors">{t('footer.localEvents')}</Link></li>
               <li><Link to="/blog/category/expat-tips" className="text-sm text-secondary-foreground/80 hover:text-sand-gold transition-colors">{t('footer.expatTips')}</Link></li>
             </ul>
+            <h4 className="text-sm font-semibold mt-5 mb-2">Topic Hubs</h4>
+            <ul className="space-y-2">
+              <li><Link to="/blog/topic/visa" className="text-sm text-secondary-foreground/80 hover:text-sand-gold transition-colors">Visa and Residency</Link></li>
+              <li><Link to="/blog/topic/housing" className="text-sm text-secondary-foreground/80 hover:text-sand-gold transition-colors">Housing and Rent</Link></li>
+              <li><Link to="/blog/topic/metro" className="text-sm text-secondary-foreground/80 hover:text-sand-gold transition-colors">Metro and Transit</Link></li>
+              <li><Link to="/blog/topic/airport" className="text-sm text-secondary-foreground/80 hover:text-sand-gold transition-colors">Airport and Layovers</Link></li>
+              <li><Link to="/blog/topic/jobs" className="text-sm text-secondary-foreground/80 hover:text-sand-gold transition-colors">Jobs and Salaries</Link></li>
+              <li><Link to="/blog/topic/cost-of-living" className="text-sm text-secondary-foreground/80 hover:text-sand-gold transition-colors">Cost of Living</Link></li>
+            </ul>
           </div>
 
           <div className="md:col-span-1">
