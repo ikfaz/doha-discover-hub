@@ -20,7 +20,7 @@ const NotFound = lazy(() => import("./pages/NotFound"));
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 const TermsOfService = lazy(() => import("./pages/TermsOfService"));
 const CookiePolicy = lazy(() => import("./pages/CookiePolicy"));
-const Listing = lazy(() => import("./pages/Listing"));
+const LegacyListingRedirect = lazy(() => import("./pages/LegacyListingRedirect"));
 const BudgetPlanner = lazy(() => import("./pages/BudgetPlanner"));
 const TourDetail = lazy(() => import("./pages/TourDetail"));
 
@@ -43,10 +43,6 @@ const NavigateBlogSlug = () => {
 const NavigateTourSlug = () => {
   const slug = window.location.pathname.split('/tours/')[1];
   return <Navigate to={`/tour/${slug}`} replace />;
-};
-const NavigateListingSlug = () => {
-  const slug = window.location.pathname.split('/listings/')[1];
-  return <Navigate to={`/listing/${slug}`} replace />;
 };
 
 const AppContent = () => {
@@ -73,7 +69,7 @@ const AppContent = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="/budget-planner" element={<BudgetPlanner />} />
           <Route path="/tour/:slug" element={<TourDetail />} />
-          <Route path="/listing/:slug" element={<Listing />} />
+          <Route path="/listing/:slug" element={<LegacyListingRedirect />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
           <Route path="/cookie-policy" element={<CookiePolicy />} />
@@ -81,7 +77,7 @@ const AppContent = () => {
           <Route path="/blogs" element={<Navigate to="/blog" replace />} />
           <Route path="/blogs/:slug" element={<NavigateBlogSlug />} />
           <Route path="/tours/:slug" element={<NavigateTourSlug />} />
-          <Route path="/listings/:slug" element={<NavigateListingSlug />} />
+          <Route path="/listings/:slug" element={<LegacyListingRedirect />} />
           <Route path="/privacy" element={<Navigate to="/privacy-policy" replace />} />
           <Route path="/terms" element={<Navigate to="/terms-of-service" replace />} />
           <Route path="/cookies" element={<Navigate to="/cookie-policy" replace />} />
