@@ -75,6 +75,66 @@ const toJsonLdAuthor = (name) => {
   };
 };
 
+const CATEGORY_EDITORIAL_INTROS = {
+  attractions:
+    "Editorial picks for museums, souqs, waterfront walks, and signature Doha sights that are worth your time.",
+  culture:
+    "Context-rich guides to Qatari traditions, etiquette, and cultural landmarks for visitors and new residents.",
+  events: "Curated event coverage with practical planning details, timing context, and what to prioritize first.",
+  "expat-tips":
+    "Practical expat guidance on visas, housing, salaries, and daily life decisions in Doha and wider Qatar.",
+  food: "Local food coverage focused on where to start, what to order, and how to understand the Doha dining scene.",
+  lifestyle:
+    "Lifestyle coverage on neighborhoods, routines, and high-value ways to navigate day-to-day life in Doha.",
+};
+
+const getArticleLabel = (count) => `${count} article${count === 1 ? "" : "s"}`;
+
+const toCategoryList = (categories) => {
+  if (categories.length === 0) {
+    return "our Doha coverage";
+  }
+  if (categories.length === 1) {
+    return categories[0];
+  }
+  if (categories.length === 2) {
+    return `${categories[0]} and ${categories[1]}`;
+  }
+  return `${categories[0]}, ${categories[1]}, and ${categories[2]}`;
+};
+
+const buildCategoryArchiveIntro = (categoryName, posts) => {
+  if (!categoryName) {
+    return "Explore Doha blog topics with practical, editorially reviewed guides for planning and daily life.";
+  }
+
+  const count = posts.length;
+  const slug = slugify(categoryName);
+  const baseIntro =
+    CATEGORY_EDITORIAL_INTROS[slug] ||
+    `Editorial guides on ${categoryName} with practical context for traveling, living, and planning in Doha.`;
+  const leadTitle = posts[0] ? posts[0].title : "";
+  const leadSentence = leadTitle ? ` Start with "${leadTitle}" for a quick entry point.` : "";
+
+  return `${baseIntro} This archive currently includes ${getArticleLabel(count)}.${leadSentence}`;
+};
+
+const buildTagArchiveIntro = (tagName, posts) => {
+  if (!tagName) {
+    return "Browse topic tags to find specific Doha guides, comparisons, and local planning advice.";
+  }
+
+  const count = posts.length;
+  const leadTitle = posts[0] ? posts[0].title : "";
+  const relatedCategories = [...new Set(posts.map((post) => post.category))].slice(0, 3);
+  const categoryContext = toCategoryList(relatedCategories);
+  const leadSentence = leadTitle ? ` Start with "${leadTitle}".` : "";
+
+  return `Focused coverage on ${tagName} in ${categoryContext}. This tag currently includes ${getArticleLabel(
+    count,
+  )}.${leadSentence}`;
+};
+
 const getValue = (body, key) => {
   const match = body.match(new RegExp(`${key}:\\s*'((?:\\\\'|[^'])*)'`));
   if (!match) {
@@ -345,6 +405,7 @@ const buildPages = (blogPosts, tours) => {
   }
 
   for (const [slug, info] of [...categoryMap.entries()].sort((a, b) => a[0].localeCompare(b[0]))) {
+    const categoryIntro = buildCategoryArchiveIntro(info.name, info.posts);
     const links = info.posts
       .slice(0, 15)
       .map((post) => `<li><a href="/blog/${post.slug}">${escapeHtml(post.title)}</a></li>`)
@@ -352,13 +413,16 @@ const buildPages = (blogPosts, tours) => {
     pages.push({
       path: `/blog/category/${slug}`,
       title: `${info.name} in Doha - Experience Doha Blog`,
-      description: `Browse ${info.posts.length} article(s) in ${info.name}.`,
+      description: categoryIntro,
       noindex: info.posts.length <= 1,
-      bodyHtml: `<main><h1>${escapeHtml(info.name)}</h1><ul>${links}</ul><p><a href="/blog">View all posts</a></p></main>`,
+      bodyHtml: `<main><h1>${escapeHtml(info.name)}</h1><p>${escapeHtml(
+        categoryIntro,
+      )}</p><ul>${links}</ul><p><a href="/blog">View all posts</a></p></main>`,
     });
   }
 
   for (const [slug, info] of [...tagMap.entries()].sort((a, b) => a[0].localeCompare(b[0]))) {
+    const tagIntro = buildTagArchiveIntro(info.name, info.posts);
     const links = info.posts
       .slice(0, 15)
       .map((post) => `<li><a href="/blog/${post.slug}">${escapeHtml(post.title)}</a></li>`)
@@ -366,9 +430,9 @@ const buildPages = (blogPosts, tours) => {
     pages.push({
       path: `/blog/tag/${slug}`,
       title: `Posts tagged: ${info.name} - Experience Doha Blog`,
-      description: `Browse ${info.posts.length} article(s) tagged with "${info.name}".`,
+      description: tagIntro,
       noindex: info.posts.length <= 1,
-      bodyHtml: `<main><h1>${escapeHtml(info.name)}</h1><ul>${links}</ul><p><a href="/blog">View all posts</a></p></main>`,
+      bodyHtml: `<main><h1>${escapeHtml(info.name)}</h1><p>${escapeHtml(tagIntro)}</p><ul>${links}</ul><p><a href="/blog">View all posts</a></p></main>`,
     });
   }
 

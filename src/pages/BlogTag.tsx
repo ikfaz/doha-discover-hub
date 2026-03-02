@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import BlogCard from '@/components/BlogCard';
 import Newsletter from '@/components/Newsletter';
 import SEOHead from '@/components/SEOHead';
+import { getTagArchiveIntro } from '@/lib/archive-intros';
 import { filterByTagSlug, getBlogList, getTagCounts, tagToSlug } from '@/lib/blog';
 
 const BlogTag = () => {
@@ -18,7 +19,7 @@ const BlogTag = () => {
 
   const title = currentTag ? `Posts tagged: ${currentTag.name}` : 'Tag';
   const description = currentTag
-    ? `Browse ${currentTag.count} article(s) tagged with "${currentTag.name}".`
+    ? getTagArchiveIntro(currentTag.name, currentTag.count, taggedPosts)
     : 'Browse blog posts by tag.';
 
   return (

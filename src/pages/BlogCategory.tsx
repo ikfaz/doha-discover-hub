@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import BlogCard from '@/components/BlogCard';
 import Newsletter from '@/components/Newsletter';
 import SEOHead from '@/components/SEOHead';
+import { getCategoryArchiveIntro } from '@/lib/archive-intros';
 import { categoryToSlug, filterByCategorySlug, getBlogList, getCategoryCounts } from '@/lib/blog';
 
 const BlogCategory = () => {
@@ -18,7 +19,7 @@ const BlogCategory = () => {
 
   const title = currentCategory ? `${currentCategory.name} in Doha` : 'Category';
   const description = currentCategory
-    ? `Browse ${currentCategory.count} article(s) in ${currentCategory.name}.`
+    ? getCategoryArchiveIntro(currentCategory.name, currentCategory.count, categoryPosts)
     : 'Browse blog posts by topic.';
 
   return (
