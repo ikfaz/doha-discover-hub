@@ -107,7 +107,7 @@ export const postsChunk7: Record<string, ArticleData> = {
 
     'fifa-u17-world-cup-qatar-2025': {
       id: '24',
-      title: 'FIFA U-17 World Cup Qatar 2025 Guide',
+      title: 'FIFA U-17 World Cup Qatar 2026 Guide',
       date: 'May 3, 2025',
       isoDate: '2025-05-03',
       metaDescription: 'FIFA U-17 World Cup Qatar 2025: 48 teams, 104 matches, ticket prices, stadiums, and fan guide. How to attend youth football\'s biggest event.',
@@ -451,7 +451,7 @@ export const postsChunk7: Record<string, ArticleData> = {
 
     'katara-cultural-village-events-2025': {
       id: '21',
-      title: 'Katara Cultural Village Events 2025',
+      title: 'Katara Cultural Village Events 2026',
       date: 'April 30, 2025',
       isoDate: '2025-04-30',
       metaDescription: 'Katara Cultural Village events 2025: Dhow Festival, Jazz Festival, art exhibitions, and year-round activities. Plan your cultural visit to Doha.',

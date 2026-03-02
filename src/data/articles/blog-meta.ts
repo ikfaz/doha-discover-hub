@@ -55,7 +55,7 @@ export type BlogMetaData = Omit<ArticleData, 'content' | 'tableOfContents'>;
 export const blogMetaPosts: Record<string, BlogMetaData> = {
     'end-of-service-gratuity-qatar-2025': {
       id: '61',
-      title: 'End-of-Service Gratuity in Qatar 2025',
+      title: 'End-of-Service Gratuity in Qatar 2026',
       date: 'June 10, 2025',
       isoDate: '2025-06-10',
       metaDescription: 'Calculate your end-of-service gratuity in Qatar. Complete 2025 guide to EOSG eligibility, calculation formula, and resignation vs termination payouts.',
@@ -69,7 +69,7 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
 
     'qatar-labor-law-reforms-2025': {
       id: '60',
-      title: 'Qatar Kafala & Labor Law Reforms 2025',
+      title: 'Qatar Kafala & Labor Law Reforms 2026',
       date: 'June 9, 2025',
       isoDate: '2025-06-09',
       metaDescription: 'Qatar Kafala reforms 2025: new labor mobility rules, contract switching, exit permits abolished. Complete guide for expat workers in Doha.',
@@ -83,7 +83,7 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
 
     'qatar-work-visa-guide-2025': {
       id: '59',
-      title: 'Qatar Work Visa & RP Guide 2025',
+      title: 'Qatar Work Visa & RP Guide 2026',
       date: 'June 8, 2025',
       isoDate: '2025-06-08',
       metaDescription: 'Step-by-step Qatar work visa and residence permit guide 2025. Requirements, processing times, medical tests, and RP renewal for expats.',
@@ -97,7 +97,7 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
 
     'qatar-tax-guide-2025': {
       id: '58',
-      title: 'Qatar Tax Guide 2025: Is It Tax-Free?',
+      title: 'Qatar Tax Guide 2026: Is It Tax-Free?',
       date: 'June 7, 2025',
       isoDate: '2025-06-07',
       metaDescription: 'Is Qatar really tax-free? 2025 guide to income tax, corporate tax, property tax, and the VAT outlook for expats and businesses in Doha.',
@@ -111,7 +111,7 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
 
     'expat-salaries-doha-2025': {
       id: '57',
-      title: 'Expat Salaries in Doha 2025: By Role',
+      title: 'Expat Salaries in Doha 2026: By Role',
       date: 'June 6, 2025',
       isoDate: '2025-06-06',
       metaDescription: 'Average expat salaries in Doha 2025 by role: engineering, finance, healthcare, IT. Salary benchmarks, packages, and negotiation tips for Qatar.',
@@ -125,7 +125,7 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
 
     'job-market-qatar-2025': {
       id: '56',
-      title: 'Qatar Job Market for Foreigners 2025',
+      title: 'Qatar Job Market for Foreigners 2026',
       date: 'June 5, 2025',
       isoDate: '2025-06-05',
       metaDescription: 'Qatar job market 2025: top industries hiring, salary trends, job search strategies, and CV tips for foreigners seeking employment in Doha.',
@@ -139,7 +139,7 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
 
     'housing-rent-doha-2025': {
       id: '55',
-      title: 'Housing & Rent Prices in Doha 2025',
+      title: 'Housing & Rent Prices in Doha 2026',
       date: 'June 4, 2025',
       isoDate: '2025-06-04',
       metaDescription: 'Doha rent prices 2025: apartments and villas in West Bay, The Pearl, Al Sadd. Average rents, lease tips, and tenant rights in Qatar.',
@@ -181,7 +181,7 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
 
     'remote-work-cafes-doha-guide': {
       id: '52',
-      title: 'Best Remote Work Cafes in Doha 2025',
+      title: 'Best Remote Work Cafes in Doha 2026',
       date: 'June 1, 2025',
       isoDate: '2025-06-01',
       metaDescription: 'Best remote work cafes in Doha 2025: WiFi speeds, power outlets, coffee prices. Top spots for freelancers and digital nomads in Qatar.',
@@ -195,7 +195,7 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
 
     'gyms-fitness-doha-guide': {
       id: '51',
-      title: 'Gyms & Fitness in Doha 2025: Full Guide',
+      title: 'Gyms & Fitness in Doha 2026: Full Guide',
       date: 'May 31, 2025',
       isoDate: '2025-05-31',
       metaDescription: 'Best gyms in Doha 2025: membership prices, ladies-only facilities, CrossFit, yoga, and outdoor fitness options across Qatar.',
@@ -223,7 +223,7 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
 
     'pet-import-qatar-guide': {
       id: '49',
-      title: 'Pet Import Rules in Qatar 2025: Guide',
+      title: 'Pet Import Rules in Qatar 2026: Guide',
       date: 'May 29, 2025',
       isoDate: '2025-05-29',
       metaDescription: 'Pet import Qatar 2025: required vaccinations, WOAH health certificates, quarantine rules, and best veterinary clinics in Doha for cats and dogs.',
@@ -237,7 +237,7 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
 
     'doha-metro-2025-guide': {
       id: '48',
-      title: 'Doha Metro Guide 2025: Map & Fares',
+      title: 'Doha Metro Guide 2026: Map & Fares',
       date: 'May 28, 2025',
       isoDate: '2025-05-28',
       metaDescription: 'Doha Metro guide 2025: new Lusail tram, Gold Line expansion, fares, stations, and travel card options. Complete network map and tips.',
@@ -265,7 +265,7 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
 
     'mobile-plans-qatar-guide': {
       id: '46',
-      title: 'Ooredoo vs Vodafone Qatar 2025: Plans',
+      title: 'Ooredoo vs Vodafone Qatar 2026: Plans',
       date: 'May 26, 2025',
       isoDate: '2025-05-26',
       metaDescription: 'Ooredoo vs Vodafone Qatar 2025: best mobile plans, data packages, 5G coverage, tourist SIM cards, and roaming costs compared.',
@@ -307,7 +307,7 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
 
     'driving-doha-2025-guide': {
       id: '43',
-      title: 'Driving in Doha 2025: Rules & Tips',
+      title: 'Driving in Doha 2026: Rules & Tips',
       date: 'May 23, 2025',
       isoDate: '2025-05-23',
       metaDescription: 'Driving in Doha 2025: traffic rules, license conversion, speed cameras, parking tips, and road safety guide for expats and tourists.',
@@ -430,7 +430,7 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
 
     'women-driving-qatar-guide': {
       id: '34',
-      title: 'Can Women Drive in Qatar? 2025 Guide',
+      title: 'Can Women Drive in Qatar? 2026 Guide',
       date: 'May 13, 2025',
       isoDate: '2025-05-13',
       metaDescription: 'Can women drive in Qatar? Yes — complete 2025 guide for tourists and expats. License rules, rental cars, safety tips, and driving rights for women.',
@@ -560,7 +560,7 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
 
     'fifa-u17-world-cup-qatar-2025': {
       id: '24',
-      title: 'FIFA U-17 World Cup Qatar 2025 Guide',
+      title: 'FIFA U-17 World Cup Qatar 2026 Guide',
       date: 'May 3, 2025',
       isoDate: '2025-05-03',
       metaDescription: 'FIFA U-17 World Cup Qatar 2025: 48 teams, 104 matches, ticket prices, stadiums, and fan guide. How to attend youth football\'s biggest event.',
@@ -599,7 +599,7 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
 
     'katara-cultural-village-events-2025': {
       id: '21',
-      title: 'Katara Cultural Village Events 2025',
+      title: 'Katara Cultural Village Events 2026',
       date: 'April 30, 2025',
       isoDate: '2025-04-30',
       metaDescription: 'Katara Cultural Village events 2025: Dhow Festival, Jazz Festival, art exhibitions, and year-round activities. Plan your cultural visit to Doha.',

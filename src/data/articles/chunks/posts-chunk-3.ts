@@ -9,7 +9,7 @@ import lgbtqQatarImage from '@/assets/lgbtq-experiences-qatar-guide.jpg';
 export const postsChunk3: Record<string, ArticleData> = {
     'pet-import-qatar-guide': {
       id: '49',
-      title: 'Pet Import Rules in Qatar 2025: Guide',
+      title: 'Pet Import Rules in Qatar 2026: Guide',
       date: 'May 29, 2025',
       isoDate: '2025-05-29',
       metaDescription: 'Pet import Qatar 2025: required vaccinations, WOAH health certificates, quarantine rules, and best veterinary clinics in Doha for cats and dogs.',
@@ -366,7 +366,7 @@ export const postsChunk3: Record<string, ArticleData> = {
 
     'doha-metro-2025-guide': {
       id: '48',
-      title: 'Doha Metro Guide 2025: Map & Fares',
+      title: 'Doha Metro Guide 2026: Map & Fares',
       date: 'May 28, 2025',
       isoDate: '2025-05-28',
       metaDescription: 'Doha Metro guide 2025: new Lusail tram, Gold Line expansion, fares, stations, and travel card options. Complete network map and tips.',
@@ -973,7 +973,7 @@ export const postsChunk3: Record<string, ArticleData> = {
 
     'mobile-plans-qatar-guide': {
       id: '46',
-      title: 'Ooredoo vs Vodafone Qatar 2025: Plans',
+      title: 'Ooredoo vs Vodafone Qatar 2026: Plans',
       date: 'May 26, 2025',
       isoDate: '2025-05-26',
       metaDescription: 'Ooredoo vs Vodafone Qatar 2025: best mobile plans, data packages, 5G coverage, tourist SIM cards, and roaming costs compared.',

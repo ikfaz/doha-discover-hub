@@ -9,7 +9,7 @@ import costOfLivingImage from '@/assets/cost-of-living-doha-2025.jpg';
 export const postsChunk4: Record<string, ArticleData> = {
     'driving-doha-2025-guide': {
       id: '43',
-      title: 'Driving in Doha 2025: Rules & Tips',
+      title: 'Driving in Doha 2026: Rules & Tips',
       date: 'May 23, 2025',
       isoDate: '2025-05-23',
       metaDescription: 'Driving in Doha 2025: traffic rules, license conversion, speed cameras, parking tips, and road safety guide for expats and tourists.',

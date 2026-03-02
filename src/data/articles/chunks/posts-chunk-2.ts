@@ -9,7 +9,7 @@ import hiringMaidNannyImage from '@/assets/hiring-maid-nanny-qatar-guide.jpg';
 export const postsChunk2: Record<string, ArticleData> = {
     'housing-rent-doha-2025': {
       id: '55',
-      title: 'Housing & Rent Prices in Doha 2025',
+      title: 'Housing & Rent Prices in Doha 2026',
       date: 'June 4, 2025',
       isoDate: '2025-06-04',
       metaDescription: 'Doha rent prices 2025: apartments and villas in West Bay, The Pearl, Al Sadd. Average rents, lease tips, and tenant rights in Qatar.',
@@ -636,7 +636,7 @@ export const postsChunk2: Record<string, ArticleData> = {
 
     'remote-work-cafes-doha-guide': {
       id: '52',
-      title: 'Best Remote Work Cafes in Doha 2025',
+      title: 'Best Remote Work Cafes in Doha 2026',
       date: 'June 1, 2025',
       isoDate: '2025-06-01',
       metaDescription: 'Best remote work cafes in Doha 2025: WiFi speeds, power outlets, coffee prices. Top spots for freelancers and digital nomads in Qatar.',
@@ -994,7 +994,7 @@ export const postsChunk2: Record<string, ArticleData> = {
 
     'gyms-fitness-doha-guide': {
       id: '51',
-      title: 'Gyms & Fitness in Doha 2025: Full Guide',
+      title: 'Gyms & Fitness in Doha 2026: Full Guide',
       date: 'May 31, 2025',
       isoDate: '2025-05-31',
       metaDescription: 'Best gyms in Doha 2025: membership prices, ladies-only facilities, CrossFit, yoga, and outdoor fitness options across Qatar.',

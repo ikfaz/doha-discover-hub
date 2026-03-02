@@ -9,7 +9,7 @@ import jobMarketQatarImage from '@/assets/job-market-qatar-2025.jpg';
 export const postsChunk1: Record<string, ArticleData> = {
     'end-of-service-gratuity-qatar-2025': {
       id: '61',
-      title: 'End-of-Service Gratuity in Qatar 2025',
+      title: 'End-of-Service Gratuity in Qatar 2026',
       date: 'June 10, 2025',
       isoDate: '2025-06-10',
       metaDescription: 'Calculate your end-of-service gratuity in Qatar. Complete 2025 guide to EOSG eligibility, calculation formula, and resignation vs termination payouts.',
@@ -122,7 +122,7 @@ export const postsChunk1: Record<string, ArticleData> = {
 
     'qatar-labor-law-reforms-2025': {
       id: '60',
-      title: 'Qatar Kafala & Labor Law Reforms 2025',
+      title: 'Qatar Kafala & Labor Law Reforms 2026',
       date: 'June 9, 2025',
       isoDate: '2025-06-09',
       metaDescription: 'Qatar Kafala reforms 2025: new labor mobility rules, contract switching, exit permits abolished. Complete guide for expat workers in Doha.',
@@ -225,7 +225,7 @@ export const postsChunk1: Record<string, ArticleData> = {
 
     'qatar-work-visa-guide-2025': {
       id: '59',
-      title: 'Qatar Work Visa & RP Guide 2025',
+      title: 'Qatar Work Visa & RP Guide 2026',
       date: 'June 8, 2025',
       isoDate: '2025-06-08',
       metaDescription: 'Step-by-step Qatar work visa and residence permit guide 2025. Requirements, processing times, medical tests, and RP renewal for expats.',
@@ -351,7 +351,7 @@ export const postsChunk1: Record<string, ArticleData> = {
 
     'qatar-tax-guide-2025': {
       id: '58',
-      title: 'Qatar Tax Guide 2025: Is It Tax-Free?',
+      title: 'Qatar Tax Guide 2026: Is It Tax-Free?',
       date: 'June 7, 2025',
       isoDate: '2025-06-07',
       metaDescription: 'Is Qatar really tax-free? 2025 guide to income tax, corporate tax, property tax, and the VAT outlook for expats and businesses in Doha.',
@@ -471,7 +471,7 @@ export const postsChunk1: Record<string, ArticleData> = {
 
     'expat-salaries-doha-2025': {
       id: '57',
-      title: 'Expat Salaries in Doha 2025: By Role',
+      title: 'Expat Salaries in Doha 2026: By Role',
       date: 'June 6, 2025',
       isoDate: '2025-06-06',
       metaDescription: 'Average expat salaries in Doha 2025 by role: engineering, finance, healthcare, IT. Salary benchmarks, packages, and negotiation tips for Qatar.',
@@ -609,7 +609,7 @@ export const postsChunk1: Record<string, ArticleData> = {
 
     'job-market-qatar-2025': {
       id: '56',
-      title: 'Qatar Job Market for Foreigners 2025',
+      title: 'Qatar Job Market for Foreigners 2026',
       date: 'June 5, 2025',
       isoDate: '2025-06-05',
       metaDescription: 'Qatar job market 2025: top industries hiring, salary trends, job search strategies, and CV tips for foreigners seeking employment in Doha.',
