@@ -65,6 +65,16 @@ const getHistoricalSlugCanonicalNote = (slug, title) => {
   return `This URL keeps its original ${slugYear} slug for link stability. Content is updated for ${titleYear}.`;
 };
 
+const toJsonLdAuthor = (name) => {
+  const normalized = String(name || "Experience Doha Team").trim() || "Experience Doha Team";
+  const organizationAuthorPatterns = [/\bteam\b/i, /experiencedoha/i, /experience doha/i, /\.com$/i];
+  const isOrganization = organizationAuthorPatterns.some((pattern) => pattern.test(normalized));
+  return {
+    "@type": isOrganization ? "Organization" : "Person",
+    name: normalized,
+  };
+};
+
 const getValue = (body, key) => {
   const match = body.match(new RegExp(`${key}:\\s*'((?:\\\\'|[^'])*)'`));
   if (!match) {
@@ -322,10 +332,7 @@ const buildPages = (blogPosts, tours) => {
         headline: post.title,
         datePublished: post.isoDate || undefined,
         dateModified: post.isoModifiedDate || post.isoDate || undefined,
-        author: {
-          "@type": "Organization",
-          name: post.author || "Experience Doha Team",
-        },
+        author: toJsonLdAuthor(post.author || "Experience Doha Team"),
         publisher: {
           "@type": "Organization",
           name: "Experience Doha",
@@ -359,6 +366,7 @@ const buildPages = (blogPosts, tours) => {
       path: `/blog/tag/${slug}`,
       title: `Posts tagged: ${info.name} - Experience Doha Blog`,
       description: `Browse ${info.posts.length} article(s) tagged with "${info.name}".`,
+      noindex: info.posts.length <= 1,
       bodyHtml: `<main><h1>${escapeHtml(info.name)}</h1><ul>${links}</ul><p><a href="/blog">View all posts</a></p></main>`,
     });
   }

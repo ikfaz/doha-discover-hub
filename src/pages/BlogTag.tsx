@@ -26,7 +26,7 @@ const BlogTag = () => {
       <SEOHead
         title={`${title} - Experience Doha Blog`}
         description={description}
-        noindex={!currentTag}
+        noindex={!currentTag || currentTag.count <= 1}
       />
       <NavBar />
 

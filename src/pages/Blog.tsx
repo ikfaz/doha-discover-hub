@@ -9,6 +9,7 @@ import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { Search } from 'lucide-react';
 import { categoryToSlug, getBlogList, getCategoryCounts, getTagCounts, tagToSlug } from '@/lib/blog';
+import { toJsonLdAuthor } from '@/lib/structured-data';
 
 const Blog = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -54,6 +55,7 @@ const Blog = () => {
         headline: post.title,
         image: post.imageUrl,
         datePublished: post.isoDate ?? post.date,
+        author: toJsonLdAuthor('Experience Doha Team'),
         description: post.excerpt,
         url: `https://experiencedoha.com/blog/${post.slug}`,
       })),

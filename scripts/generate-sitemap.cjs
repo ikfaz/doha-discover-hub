@@ -6,6 +6,7 @@ const ROOT_DIR = path.resolve(__dirname, "..");
 const BLOG_META_PATH = path.join(ROOT_DIR, "src", "data", "articles", "blog-meta.ts");
 const TOURS_PATH = path.join(ROOT_DIR, "src", "data", "tours.ts");
 const SITEMAP_PATH = path.join(ROOT_DIR, "public", "sitemap.xml");
+const MIN_POSTS_TO_INDEX_TAG = 2;
 
 const MOJIBAKE_PATTERN = /[\u00C2\u00C3\u00D8\u00D9]|Ã¢/;
 
@@ -100,6 +101,7 @@ const main = () => {
 
   const categoryLastmod = new Map();
   const tagLastmod = new Map();
+  const tagPostCounts = new Map();
 
   for (const post of datedPosts) {
     if (post.category) {
@@ -113,6 +115,7 @@ const main = () => {
 
     for (const tag of post.tags) {
       const key = slugify(tag);
+      tagPostCounts.set(key, (tagPostCounts.get(key) || 0) + 1);
       const current = tagLastmod.get(key);
       const postLastmod = getLastmod(post);
       if (!current || toTimestamp(postLastmod) > toTimestamp(current)) {
@@ -158,7 +161,12 @@ const main = () => {
     });
   }
 
+  let includedTagCount = 0;
   for (const [slug, lastmod] of [...tagLastmod.entries()].sort((a, b) => a[0].localeCompare(b[0]))) {
+    if ((tagPostCounts.get(slug) || 0) < MIN_POSTS_TO_INDEX_TAG) {
+      continue;
+    }
+    includedTagCount += 1;
     addUrl({
       loc: `/blog/tag/${slug}`,
       lastmod,
@@ -192,7 +200,7 @@ const main = () => {
   fs.writeFileSync(SITEMAP_PATH, xml, "utf8");
   console.log(`Generated sitemap with ${urls.length} URLs.`);
   console.log(`Categories included: ${categoryLastmod.size}`);
-  console.log(`Tags included: ${tagLastmod.size}`);
+  console.log(`Tags included: ${includedTagCount} (min posts: ${MIN_POSTS_TO_INDEX_TAG})`);
   console.log(`Blog posts included: ${datedPosts.length}`);
 };
 

@@ -21,6 +21,7 @@ import BlogCard from '@/components/BlogCard';
 import { loadBlogPostBySlug } from '@/data/articles/blog-post-loaders';
 import { blogMetaPosts } from '@/data/articles/blog-meta';
 import { categoryToSlug, getBlogList, tagToSlug } from '@/lib/blog';
+import { toJsonLdAuthor } from '@/lib/structured-data';
 import { fixMojibake } from '@/lib/text';
 import { getHistoricalSlugCanonicalNote } from '@/lib/slug-strategy';
 import type { ReactNode } from 'react';
@@ -460,10 +461,7 @@ const BlogPost = () => {
     "@type": "Article",
     "headline": safeTitle,
     "image": typeof post.imageUrl === 'string' ? post.imageUrl : undefined,
-    "author": {
-      "@type": "Organization",
-      "name": safeAuthor
-    },
+    "author": toJsonLdAuthor(safeAuthor),
     "publisher": {
       "@type": "Organization",
       "name": "ExperienceDoha.com",
