@@ -7,6 +7,7 @@ interface SEOHeadProps {
   image?: string;
   type?: 'website' | 'article';
   publishedTime?: string;
+  modifiedTime?: string;
   author?: string;
   jsonLd?: Record<string, unknown> | Record<string, unknown>[];
   noindex?: boolean;
@@ -20,6 +21,7 @@ export const SEOHead = ({
   image = 'https://images.unsplash.com/photo-1496307653780-42ee777d4833?q=80&w=2670&auto=format&fit=crop',
   type = 'website',
   publishedTime,
+  modifiedTime,
   author = 'ExperienceDoha.com',
   jsonLd,
   noindex = false,
@@ -42,6 +44,7 @@ export const SEOHead = ({
       <meta property="og:image" content={image} />
       <meta property="og:site_name" content="ExperienceDoha.com" />
       {publishedTime && <meta property="article:published_time" content={publishedTime} />}
+      {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:url" content={canonicalUrl} />

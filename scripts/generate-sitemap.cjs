@@ -53,6 +53,7 @@ const parseBlogMeta = () => {
 
     const body = match[2];
     const isoDateMatch = body.match(/isoDate:\s*'([^']+)'/);
+    const isoModifiedDateMatch = body.match(/isoModifiedDate:\s*'([^']+)'/);
     const categoryMatch = body.match(/category:\s*'([^']+)'/);
     const tagsMatch = body.match(/tags:\s*\[([\s\S]*?)\]/);
 
@@ -66,6 +67,7 @@ const parseBlogMeta = () => {
     items.push({
       slug,
       isoDate: isoDateMatch ? isoDateMatch[1] : null,
+      isoModifiedDate: isoModifiedDateMatch ? isoModifiedDateMatch[1] : null,
       category: categoryMatch ? categoryMatch[1] : null,
       tags,
     });
@@ -91,8 +93,9 @@ const main = () => {
   const tourSlugs = parseTourSlugs();
 
   const datedPosts = posts.filter((post) => post.isoDate);
+  const getLastmod = (post) => post.isoModifiedDate || post.isoDate;
   const latestPostDate = datedPosts
-    .map((post) => post.isoDate)
+    .map((post) => getLastmod(post))
     .sort((a, b) => toTimestamp(b) - toTimestamp(a))[0] || "2026-03-02";
 
   const categoryLastmod = new Map();
@@ -102,16 +105,18 @@ const main = () => {
     if (post.category) {
       const key = slugify(post.category);
       const current = categoryLastmod.get(key);
-      if (!current || toTimestamp(post.isoDate) > toTimestamp(current)) {
-        categoryLastmod.set(key, post.isoDate);
+      const postLastmod = getLastmod(post);
+      if (!current || toTimestamp(postLastmod) > toTimestamp(current)) {
+        categoryLastmod.set(key, postLastmod);
       }
     }
 
     for (const tag of post.tags) {
       const key = slugify(tag);
       const current = tagLastmod.get(key);
-      if (!current || toTimestamp(post.isoDate) > toTimestamp(current)) {
-        tagLastmod.set(key, post.isoDate);
+      const postLastmod = getLastmod(post);
+      if (!current || toTimestamp(postLastmod) > toTimestamp(current)) {
+        tagLastmod.set(key, postLastmod);
       }
     }
   }
@@ -162,10 +167,10 @@ const main = () => {
     });
   }
 
-  for (const post of [...datedPosts].sort((a, b) => toTimestamp(b.isoDate) - toTimestamp(a.isoDate))) {
+  for (const post of [...datedPosts].sort((a, b) => toTimestamp(getLastmod(b)) - toTimestamp(getLastmod(a)))) {
     addUrl({
       loc: `/blog/${post.slug}`,
-      lastmod: post.isoDate,
+      lastmod: getLastmod(post),
       changefreq: "monthly",
       priority: "0.8",
     });

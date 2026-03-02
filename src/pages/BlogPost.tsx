@@ -19,6 +19,7 @@ import {
 import { Calendar, Clock, Facebook, Twitter, Share2, Home } from 'lucide-react';
 import BlogCard from '@/components/BlogCard';
 import { loadBlogPostBySlug } from '@/data/articles/blog-post-loaders';
+import { blogMetaPosts } from '@/data/articles/blog-meta';
 import { categoryToSlug, getBlogList, tagToSlug } from '@/lib/blog';
 import { fixMojibake } from '@/lib/text';
 import { getHistoricalSlugCanonicalNote } from '@/lib/slug-strategy';
@@ -438,7 +439,9 @@ const BlogPost = () => {
   }
 
   const articleDescription = fixMojibake(post.metaDescription || post.excerpt || post.content.substring(0, 155).replace(/<[^>]*>/g, ''));
-  const articleIsoDate = post.isoDate || post.date;
+  const metadataPost = slug ? blogMetaPosts[slug] : undefined;
+  const articlePublishedIsoDate = post.isoDate || metadataPost?.isoDate || post.date;
+  const articleModifiedIsoDate = post.isoModifiedDate || metadataPost?.isoModifiedDate || articlePublishedIsoDate;
   const categorySlug = categoryToSlug(post.category);
   const safeTitle = fixMojibake(post.title);
   const safeCategory = fixMojibake(post.category);
@@ -469,8 +472,8 @@ const BlogPost = () => {
         "url": "https://experiencedoha.com/logo.png"
       }
     },
-    "datePublished": articleIsoDate,
-    "dateModified": articleIsoDate,
+    "datePublished": articlePublishedIsoDate,
+    "dateModified": articleModifiedIsoDate,
     "description": articleDescription,
     "mainEntityOfPage": {
       "@type": "WebPage",
@@ -496,7 +499,8 @@ const BlogPost = () => {
         description={articleDescription}
         image={typeof post.imageUrl === 'string' ? post.imageUrl : undefined}
         type="article"
-        publishedTime={articleIsoDate}
+        publishedTime={articlePublishedIsoDate}
+        modifiedTime={articleModifiedIsoDate}
         jsonLd={[articleJsonLd, breadcrumbJsonLd]}
       />
       <NavBar />

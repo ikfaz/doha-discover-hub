@@ -9,6 +9,8 @@ export interface ArticleData {
   title: string;
   date: string;
   isoDate?: string;
+  modifiedDate?: string;
+  isoModifiedDate?: string;
   author: string;
   readTime: string;
   category: string;

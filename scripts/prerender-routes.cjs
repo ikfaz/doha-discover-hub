@@ -86,6 +86,7 @@ const parseBlogMeta = () => {
 
     const body = match[2];
     const isoDateMatch = body.match(/isoDate:\s*'([^']+)'/);
+    const isoModifiedDateMatch = body.match(/isoModifiedDate:\s*'([^']+)'/);
     const tagsMatch = body.match(/tags:\s*\[([\s\S]*?)\]/);
     const tags = [];
 
@@ -103,6 +104,7 @@ const parseBlogMeta = () => {
       category: getValue(body, "category"),
       author: getValue(body, "author") || "Experience Doha Team",
       isoDate: isoDateMatch ? isoDateMatch[1] : "",
+      isoModifiedDate: isoModifiedDateMatch ? isoModifiedDateMatch[1] : "",
       tags,
     });
   }
@@ -177,6 +179,12 @@ const withSeo = (templateHtml, page) => {
   html = upsertMeta(html, "property", "og:title", page.title);
   html = upsertMeta(html, "property", "og:description", page.description);
   html = upsertMeta(html, "property", "og:image", page.image || DEFAULT_IMAGE);
+  if (page.publishedTime) {
+    html = upsertMeta(html, "property", "article:published_time", page.publishedTime);
+  }
+  if (page.modifiedTime) {
+    html = upsertMeta(html, "property", "article:modified_time", page.modifiedTime);
+  }
   html = upsertMeta(html, "name", "twitter:card", "summary_large_image");
   html = upsertMeta(html, "name", "twitter:url", canonicalUrl);
   html = upsertMeta(html, "name", "twitter:title", page.title);
@@ -305,13 +313,15 @@ const buildPages = (blogPosts, tours) => {
       title: `${post.title} | Doha Guide`,
       description,
       type: "article",
+      publishedTime: post.isoDate || undefined,
+      modifiedTime: post.isoModifiedDate || post.isoDate || undefined,
       bodyHtml: articleBody,
       jsonLd: {
         "@context": "https://schema.org",
         "@type": "Article",
         headline: post.title,
         datePublished: post.isoDate || undefined,
-        dateModified: post.isoDate || undefined,
+        dateModified: post.isoModifiedDate || post.isoDate || undefined,
         author: {
           "@type": "Organization",
           name: post.author || "Experience Doha Team",
