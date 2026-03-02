@@ -64,7 +64,7 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
       readTime: '18 min read',
       category: 'Expat-Tips',
       imageUrl: endOfServiceGratuityImage,
-      tags: ['end of service gratuity Qatar', 'EOSG calculation formula', 'Qatar severance pay', 'gratuity resignation vs termination', 'Qatar labor law benefits 2025', 'how to calculate EOSG Qatar'],
+      tags: ['end of service gratuity Qatar', 'EOSG calculation formula', 'Qatar severance pay', 'gratuity resignation vs termination', 'Qatar labor law benefits 2026', 'how to calculate EOSG Qatar'],
     },
 
     'qatar-labor-law-reforms-2025': {
@@ -78,7 +78,7 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
       readTime: '16 min read',
       category: 'Expat-Tips',
       imageUrl: qatarLaborLawReformsImage,
-      tags: ['Qatar Kafala system abolished', 'NOC removal Qatar 2025', 'Qatar minimum wage', 'worker rights Qatar', 'job change without NOC Qatar', 'Qatar labor reform update'],
+      tags: ['Qatar Kafala system abolished', 'NOC removal Qatar 2026', 'Qatar minimum wage', 'worker rights Qatar', 'job change without NOC Qatar', 'Qatar labor reform update'],
     },
 
     'qatar-work-visa-guide-2025': {
@@ -106,7 +106,7 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
       readTime: '12 min read',
       category: 'Expat-Tips',
       imageUrl: qatarTaxGuideImage,
-      tags: ['is Qatar tax free', 'Qatar income tax expats', 'VAT in Qatar 2025', 'property tax Doha', 'Qatar corporate tax rate', 'tax free salary Qatar'],
+      tags: ['is Qatar tax free', 'Qatar income tax expats', 'VAT in Qatar 2026', 'property tax Doha', 'Qatar corporate tax rate', 'tax free salary Qatar'],
     },
 
     'expat-salaries-doha-2025': {
@@ -120,7 +120,7 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
       readTime: '18 min read',
       category: 'Expat-Tips',
       imageUrl: expatSalariesDohaImage,
-      tags: ['average salary Doha expats', 'Qatar salary guide 2025', 'expat pay package Qatar', 'salary negotiation tips Qatar', 'housing allowance Doha', 'engineer salary Qatar'],
+      tags: ['average salary Doha expats', 'Qatar salary guide 2026', 'expat pay package Qatar', 'salary negotiation tips Qatar', 'housing allowance Doha', 'engineer salary Qatar'],
     },
 
     'job-market-qatar-2025': {
@@ -134,7 +134,7 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
       readTime: '15 min read',
       category: 'Expat-Tips',
       imageUrl: jobMarketQatarImage,
-      tags: ['jobs in Qatar for foreigners', 'Qatar hiring 2025', 'best sectors to work Qatar', 'how to find job Doha', 'Qatar Vision 2030 jobs', 'LinkedIn Qatar job search'],
+      tags: ['jobs in Qatar for foreigners', 'Qatar hiring 2026', 'best sectors to work Qatar', 'how to find job Doha', 'Qatar Vision 2030 jobs', 'LinkedIn Qatar job search'],
     },
 
     'housing-rent-doha-2025': {
@@ -148,7 +148,7 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
       readTime: '16 min read',
       category: 'Expat-Tips',
       imageUrl: housingRentDohaImage,
-      tags: ['rent prices Doha 2025', 'cheapest areas to rent Doha', 'Pearl Qatar rent', 'Lusail apartment prices', 'furnished vs unfurnished Qatar', 'expat housing Doha guide'],
+      tags: ['rent prices Doha 2026', 'cheapest areas to rent Doha', 'Pearl Qatar rent', 'Lusail apartment prices', 'furnished vs unfurnished Qatar', 'expat housing Doha guide'],
     },
 
     'cost-of-living-doha-dubai-riyadh': {
@@ -176,7 +176,7 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
       readTime: '18 min read',
       category: 'Expat-Tips',
       imageUrl: alcoholGuideImage,
-      tags: ['can you drink alcohol in Qatar', 'QDC permit Doha', 'alcohol prices Qatar', 'hotel bars Doha', 'nightlife Doha 2025', 'drinking laws Qatar tourists', 'best bars Doha'],
+      tags: ['can you drink alcohol in Qatar', 'QDC permit Doha', 'alcohol prices Qatar', 'hotel bars Doha', 'nightlife Doha 2026', 'drinking laws Qatar tourists', 'best bars Doha'],
     },
 
     'remote-work-cafes-doha-guide': {
@@ -190,7 +190,7 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
       readTime: '16 min read',
       category: 'Expat-Tips',
       imageUrl: remoteWorkCafesImage,
-      tags: ['best cafes for working Doha', 'coworking spaces Qatar', 'digital nomad Doha', 'wifi cafes Doha', 'remote work Qatar', 'freelancer cafes Doha 2025'],
+      tags: ['best cafes for working Doha', 'coworking spaces Qatar', 'digital nomad Doha', 'wifi cafes Doha', 'remote work Qatar', 'freelancer cafes Doha 2026'],
     },
 
     'gyms-fitness-doha-guide': {
@@ -204,7 +204,7 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
       readTime: '17 min read',
       category: 'Expat-Tips',
       imageUrl: gymsFitnessDohaImage,
-      tags: ['best gyms in Doha', 'gym membership prices Qatar', 'ladies only gym Doha', 'CrossFit Doha', 'fitness centers Qatar 2025', 'personal trainer Doha cost'],
+      tags: ['best gyms in Doha', 'gym membership prices Qatar', 'ladies only gym Doha', 'CrossFit Doha', 'fitness centers Qatar 2026', 'personal trainer Doha cost'],
     },
 
     'hiring-maid-nanny-qatar-guide': {
@@ -218,7 +218,7 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
       readTime: '19 min read',
       category: 'Expat-Tips',
       imageUrl: hiringMaidNannyImage,
-      tags: ['hiring maid Qatar legal process', 'nanny cost Doha', 'domestic worker visa Qatar', 'housemaid salary Qatar 2025', 'nanny agency Doha', 'maid sponsorship Qatar'],
+      tags: ['hiring maid Qatar legal process', 'nanny cost Doha', 'domestic worker visa Qatar', 'housemaid salary Qatar 2026', 'nanny agency Doha', 'maid sponsorship Qatar'],
     },
 
     'pet-import-qatar-guide': {
@@ -246,7 +246,7 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
       readTime: '16 min read',
       category: 'Expat-Tips',
       imageUrl: dohaMetro2025Image,
-      tags: ['Doha metro map 2025', 'metro ticket price Qatar', 'Doha metro stations', 'metro to airport Doha', 'public transport Qatar guide', 'metro card Doha'],
+      tags: ['Doha metro map 2026', 'metro ticket price Qatar', 'Doha metro stations', 'metro to airport Doha', 'public transport Qatar guide', 'metro card Doha'],
     },
 
     'grocery-shopping-doha-guide': {
@@ -344,7 +344,7 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
       readTime: '18 min read',
       category: 'Expat-Tips',
       imageUrl: qatarVisaRulesImage,
-      tags: ['Qatar visa rules 2025', 'family visa Qatar', 'dependent visa Qatar', 'exit permit abolished Qatar', 'Qatar immigration update', 'visa on arrival Qatar'],
+      tags: ['Qatar visa rules 2026', 'family visa Qatar', 'dependent visa Qatar', 'exit permit abolished Qatar', 'Qatar immigration update', 'visa on arrival Qatar'],
     },
 
     'international-schools-qatar-2025': {
@@ -358,7 +358,7 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
       readTime: '16 min read',
       category: 'Expat-Tips',
       imageUrl: internationalSchoolsImage,
-      tags: ['best international schools Qatar', 'school fees Doha 2025', 'British schools Qatar', 'IB schools Doha', 'school admission Qatar', 'education cost Qatar expats'],
+      tags: ['best international schools Qatar', 'school fees Doha 2026', 'British schools Qatar', 'IB schools Doha', 'school admission Qatar', 'education cost Qatar expats'],
     },
 
     'women-safety-dress-code-doha-qatar': {
@@ -386,7 +386,7 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
       readTime: '12 min read',
       category: 'Expat-Tips',
       imageUrl: costOfLivingImage,
-      tags: ['cost of living Doha 2025', 'monthly budget Qatar', 'rent prices Doha', 'is Qatar expensive', 'expat budget Doha', 'utility bills Qatar'],
+      tags: ['cost of living Doha 2026', 'monthly budget Qatar', 'rent prices Doha', 'is Qatar expensive', 'expat budget Doha', 'utility bills Qatar'],
     },
 
     'doha-changing-middle-east': {
