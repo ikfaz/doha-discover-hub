@@ -10,6 +10,7 @@ const TermsOfService = () => {
       <SEOHead 
         title="Terms of Service - Experience Doha"
         description="Read the terms and conditions for using Experience Doha website and services."
+        noindex
       />
       <NavBar />
       <main className="flex-1 container mx-auto px-4 py-12 max-w-4xl">

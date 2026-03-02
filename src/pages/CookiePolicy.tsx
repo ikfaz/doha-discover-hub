@@ -10,6 +10,7 @@ const CookiePolicy = () => {
       <SEOHead 
         title="Cookie Policy - Experience Doha"
         description="Learn about the cookies we use on Experience Doha and how to manage your preferences."
+        noindex
       />
       <NavBar />
       <main className="flex-1 container mx-auto px-4 py-12 max-w-4xl">

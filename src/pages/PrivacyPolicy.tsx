@@ -10,6 +10,7 @@ const PrivacyPolicy = () => {
       <SEOHead 
         title="Privacy Policy - Experience Doha"
         description="Learn how Experience Doha collects, uses, and protects your personal information."
+        noindex
       />
       <NavBar />
       <main className="flex-1 container mx-auto px-4 py-12 max-w-4xl">
