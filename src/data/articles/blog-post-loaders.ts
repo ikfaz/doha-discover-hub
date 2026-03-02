@@ -1,6 +1,7 @@
 import type { ArticleData } from './types';
 
 const postLoaders: Record<string, () => Promise<ArticleData | null>> = {
+  'hamad-international-airport-flight-status-closures': async () => (await import('./chunks/posts-chunk-9')).postsChunk9['hamad-international-airport-flight-status-closures'] ?? null,
   'doha-stopover-guide-12-96-hours': async () => (await import('./chunks/posts-chunk-9')).postsChunk9['doha-stopover-guide-12-96-hours'] ?? null,
   'best-things-to-do-in-doha': async () => (await import('./chunks/posts-chunk-9')).postsChunk9['best-things-to-do-in-doha'] ?? null,
   'end-of-service-gratuity-qatar-2025': async () => (await import('./chunks/posts-chunk-1')).postsChunk1['end-of-service-gratuity-qatar-2025'] ?? null,

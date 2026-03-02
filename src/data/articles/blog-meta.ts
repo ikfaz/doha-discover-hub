@@ -51,10 +51,25 @@ import stopoverProgramImage from '@/assets/stopover-program.jpg';
 import top10AttractionsImage from '@/assets/top-10-attractions.jpg';
 import bestThingsToDoInDohaCoverImage from '@/assets/best-things-to-do-in-doha-cover.svg?url';
 import dohaStopoverGuide1296CoverImage from '@/assets/doha-stopover-guide-12-96-hours-cover.svg?url';
+import hamadFlightStatusClosuresCoverImage from '@/assets/hamad-international-airport-flight-status-closures-cover.svg?url';
 
 export type BlogMetaData = Omit<ArticleData, 'content' | 'tableOfContents'>;
 
 export const blogMetaPosts: Record<string, BlogMetaData> = {
+    'hamad-international-airport-flight-status-closures': {
+      id: '64',
+      title: 'Hamad International Airport Flight Status and Closures',
+      date: 'March 2, 2026',
+      isoDate: '2026-03-02',
+      metaDescription: 'Need live updates for Hamad International Airport (DOH)? This practical guide explains how to check real-time arrivals and departures, what "flight operations suspended" means, and what to do during closures. Includes a first-day action plan, rebooking and refund steps, passenger rights basics (EU and Montreal Convention), airport services (Wi-Fi, medical, transit hotel), and a disruption comparison table.',
+      excerpt: 'Hamad Airport closures are usually triggered by upstream safety decisions such as airspace restrictions, security events, or severe weather. This guide shows where to verify live status, what suspension notices actually mean, and how to handle rebooking, refunds, and rights without wasting hours.',
+      author: 'Experience Doha Team',
+      readTime: '16 min read',
+      category: 'Attractions',
+      imageUrl: hamadFlightStatusClosuresCoverImage,
+      tags: ['hamad international airport flight status', 'doha airport closures', 'DOH arrivals departures', 'qatar airspace closure', 'hamad airport alerts', 'qatar airways flight suspension', 'rebook flight doha', 'doha airport transit hotel', 'doha airport metro', 'passenger rights delayed flight', 'montreal convention delay', 'EU261 rerouting refund'],
+    },
+
     'doha-stopover-guide-12-96-hours': {
       id: '63',
       title: 'Doha Stopover Guide for 12-96 Hours',
