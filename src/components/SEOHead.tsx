@@ -15,6 +15,14 @@ interface SEOHeadProps {
 
 const BASE_URL = 'https://experiencedoha.com';
 
+const normalizeCanonicalPath = (pathname: string) => {
+  const collapsed = pathname.replace(/\/{2,}/g, '/');
+  if (collapsed === '/' || collapsed === '') {
+    return '/';
+  }
+  return collapsed.replace(/\/+$/, '');
+};
+
 export const SEOHead = ({
   title = 'Experience Doha - Qatar Travel & Attractions Guide 2026',
   description = 'Your go-to Doha guide: attractions, layover tips, expat advice, food, and culture. Plan your perfect Qatar trip with 60+ expert articles.',
@@ -27,7 +35,8 @@ export const SEOHead = ({
   noindex = false,
 }: SEOHeadProps) => {
   const location = useLocation();
-  const canonicalUrl = `${BASE_URL}${location.pathname}`;
+  const canonicalPath = normalizeCanonicalPath(location.pathname);
+  const canonicalUrl = `${BASE_URL}${canonicalPath}`;
 
   return (
     <Helmet>

@@ -12,21 +12,43 @@
   RewriteEngine On
   RewriteBase /
 
-  # One-hop canonical redirects for legacy /video paths on www host
+  # One-hop canonical redirects for legacy aliases on www host
+  RewriteCond %{HTTP_HOST} ^www\.experiencedoha\.com$ [NC]
+  RewriteRule ^blogs/?$ https://experiencedoha.com/blog [R=301,L]
+  RewriteCond %{HTTP_HOST} ^www\.experiencedoha\.com$ [NC]
+  RewriteRule ^blogs/([^/]+)/?$ https://experiencedoha.com/blog/$1 [R=301,L]
+  RewriteCond %{HTTP_HOST} ^www\.experiencedoha\.com$ [NC]
+  RewriteRule ^tours/([^/]+)/?$ https://experiencedoha.com/tour/$1 [R=301,L]
+  RewriteCond %{HTTP_HOST} ^www\.experiencedoha\.com$ [NC]
+  RewriteRule ^listings/([^/]+)/?$ https://experiencedoha.com/listing/$1 [R=301,L]
+  RewriteCond %{HTTP_HOST} ^www\.experiencedoha\.com$ [NC]
+  RewriteRule ^privacy/?$ https://experiencedoha.com/privacy-policy [R=301,L]
+  RewriteCond %{HTTP_HOST} ^www\.experiencedoha\.com$ [NC]
+  RewriteRule ^terms/?$ https://experiencedoha.com/terms-of-service [R=301,L]
+  RewriteCond %{HTTP_HOST} ^www\.experiencedoha\.com$ [NC]
+  RewriteRule ^cookies/?$ https://experiencedoha.com/cookie-policy [R=301,L]
+  RewriteCond %{HTTP_HOST} ^www\.experiencedoha\.com$ [NC]
+  RewriteRule ^budget/?$ https://experiencedoha.com/budget-planner [R=301,L]
   RewriteCond %{HTTP_HOST} ^www\.experiencedoha\.com$ [NC]
   RewriteRule ^video/?$ https://experiencedoha.com/blog [R=301,L]
   RewriteCond %{HTTP_HOST} ^www\.experiencedoha\.com$ [NC]
   RewriteRule ^videos/?$ https://experiencedoha.com/blog [R=301,L]
+  RewriteCond %{HTTP_HOST} ^www\.experiencedoha\.com$ [NC]
+  RewriteRule ^photos/?$ https://experiencedoha.com/gallery [R=301,L]
+
+  # Canonical non-root trailing slash normalization on www
+  RewriteCond %{HTTP_HOST} ^www\.experiencedoha\.com$ [NC]
+  RewriteRule ^(.+)/$ https://experiencedoha.com/$1 [R=301,L]
 
   # Canonical host redirect (www -> apex)
   RewriteCond %{HTTP_HOST} ^www\.experiencedoha\.com$ [NC]
   RewriteRule ^(.*)$ https://experiencedoha.com/$1 [R=301,L]
 
   # 301 Redirects: Common typos and old paths
-  RewriteRule ^blogs/(.+)$ /blog/$1 [R=301,L]
   RewriteRule ^blogs/?$ /blog [R=301,L]
-  RewriteRule ^tours/(.+)$ /tour/$1 [R=301,L]
-  RewriteRule ^listings/(.+)$ /listing/$1 [R=301,L]
+  RewriteRule ^blogs/([^/]+)/?$ /blog/$1 [R=301,L]
+  RewriteRule ^tours/([^/]+)/?$ /tour/$1 [R=301,L]
+  RewriteRule ^listings/([^/]+)/?$ /listing/$1 [R=301,L]
   RewriteRule ^privacy/?$ /privacy-policy [R=301,L]
   RewriteRule ^terms/?$ /terms-of-service [R=301,L]
   RewriteRule ^cookies/?$ /cookie-policy [R=301,L]
@@ -34,6 +56,11 @@
   RewriteRule ^video/?$ /blog [R=301,L]
   RewriteRule ^videos/?$ /blog [R=301,L]
   RewriteRule ^photos/?$ /gallery [R=301,L]
+
+  # Canonical non-root trailing slash normalization on apex
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^(.+)/$ /$1 [R=301,L]
 
   # React Router: Redirect all requests to index.html so the app handles routing
   RewriteRule ^index\.html$ - [L]

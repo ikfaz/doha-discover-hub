@@ -1,13 +1,34 @@
+https://www.experiencedoha.com/blogs https://experiencedoha.com/blog 301!
+https://www.experiencedoha.com/blogs/ https://experiencedoha.com/blog 301!
+https://www.experiencedoha.com/blogs/:slug https://experiencedoha.com/blog/:slug 301!
+https://www.experiencedoha.com/blogs/:slug/ https://experiencedoha.com/blog/:slug 301!
+https://www.experiencedoha.com/tours/:slug https://experiencedoha.com/tour/:slug 301!
+https://www.experiencedoha.com/tours/:slug/ https://experiencedoha.com/tour/:slug 301!
+https://www.experiencedoha.com/listings/:slug https://experiencedoha.com/listing/:slug 301!
+https://www.experiencedoha.com/listings/:slug/ https://experiencedoha.com/listing/:slug 301!
+https://www.experiencedoha.com/privacy https://experiencedoha.com/privacy-policy 301!
+https://www.experiencedoha.com/privacy/ https://experiencedoha.com/privacy-policy 301!
+https://www.experiencedoha.com/terms https://experiencedoha.com/terms-of-service 301!
+https://www.experiencedoha.com/terms/ https://experiencedoha.com/terms-of-service 301!
+https://www.experiencedoha.com/cookies https://experiencedoha.com/cookie-policy 301!
+https://www.experiencedoha.com/cookies/ https://experiencedoha.com/cookie-policy 301!
+https://www.experiencedoha.com/budget https://experiencedoha.com/budget-planner 301!
+https://www.experiencedoha.com/budget/ https://experiencedoha.com/budget-planner 301!
 https://www.experiencedoha.com/video https://experiencedoha.com/blog 301!
 https://www.experiencedoha.com/video/ https://experiencedoha.com/blog 301!
 https://www.experiencedoha.com/videos https://experiencedoha.com/blog 301!
 https://www.experiencedoha.com/videos/ https://experiencedoha.com/blog 301!
-https://www.experiencedoha.com/* https://experiencedoha.com/:splat 301!
+https://www.experiencedoha.com/photos https://experiencedoha.com/gallery 301!
+https://www.experiencedoha.com/photos/ https://experiencedoha.com/gallery 301!
 
 /blogs /blog 301
+/blogs/ /blog 301
 /blogs/:slug /blog/:slug 301
+/blogs/:slug/ /blog/:slug 301
 /tours/:slug /tour/:slug 301
+/tours/:slug/ /tour/:slug 301
 /listings/:slug /listing/:slug 301
+/listings/:slug/ /listing/:slug 301
 /privacy /privacy-policy 301
 /privacy/ /privacy-policy 301
 /terms /terms-of-service 301
@@ -22,5 +43,9 @@ https://www.experiencedoha.com/* https://experiencedoha.com/:splat 301!
 /videos/ /blog 301
 /photos /gallery 301
 /photos/ /gallery 301
+
+https://www.experiencedoha.com/*/ https://experiencedoha.com/:splat 301!
+https://experiencedoha.com/*/ https://experiencedoha.com/:splat 301!
+https://www.experiencedoha.com/* https://experiencedoha.com/:splat 301!
 
 /* /index.html 200
