@@ -16,3 +16,4 @@ Disallow: /debug/
 
 # Sitemap location
 Sitemap: https://experiencedoha.com/sitemap.xml
+Sitemap: https://experiencedoha.com/sitemap-images.xml

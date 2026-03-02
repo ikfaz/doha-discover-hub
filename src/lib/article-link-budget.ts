@@ -39,25 +39,10 @@ const byRecencyThenSlug = (a: BlogListItem, b: BlogListItem): number => {
   return a.slug.localeCompare(b.slug);
 };
 
-const countTagOverlap = (leftTags: string[], rightTags: string[]): number => {
-  if (leftTags.length === 0 || rightTags.length === 0) {
-    return 0;
-  }
-
-  const rightTagSet = new Set(rightTags);
-  let overlap = 0;
-  for (const tag of leftTags) {
-    if (rightTagSet.has(tag)) {
-      overlap += 1;
-    }
-  }
-  return overlap;
-};
-
 export const getPrimaryHubForSlug = (slug: string): string | undefined => PRIMARY_HUB_MAP[slug];
 
 export const getSiblingPostsForArticle = (
-  currentPost: Pick<BlogListItem, 'slug' | 'category' | 'tags' | 'isoDate' | 'date'>,
+  currentPost: Pick<BlogListItem, 'slug' | 'category' | 'isoDate' | 'date'>,
   allPosts: BlogListItem[],
   primaryHubSlug?: string,
   limit = 3,
@@ -72,7 +57,6 @@ export const getSiblingPostsForArticle = (
       if (candidate.category === currentPost.category) {
         score += 30;
       }
-      score += 5 * countTagOverlap(currentPost.tags, candidate.tags);
 
       return { post: candidate, score };
     })
@@ -105,7 +89,7 @@ export const getSiblingPostsForArticle = (
 };
 
 export const buildArticleInternalLinkBudget = (
-  currentPost: Pick<BlogListItem, 'slug' | 'category' | 'tags' | 'isoDate' | 'date'>,
+  currentPost: Pick<BlogListItem, 'slug' | 'category' | 'isoDate' | 'date'>,
   allPosts: BlogListItem[],
 ): ArticleInternalLinkBudget => {
   const categorySlug = categoryToSlug(currentPost.category);

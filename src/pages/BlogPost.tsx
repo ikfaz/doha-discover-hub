@@ -20,8 +20,9 @@ import { Calendar, Clock, Facebook, Twitter, Share2, Home } from 'lucide-react';
 import BlogCard from '@/components/BlogCard';
 import { loadBlogPostBySlug } from '@/data/articles/blog-post-loaders';
 import { blogMetaPosts } from '@/data/articles/blog-meta';
-import { categoryToSlug, getBlogList, tagToSlug } from '@/lib/blog';
+import { categoryToSlug, getBlogList } from '@/lib/blog';
 import { buildArticleInternalLinkBudget } from '@/lib/article-link-budget';
+import { getPrimaryTopicMetaForPost } from '@/lib/topic-hubs';
 import { toJsonLdAuthor } from '@/lib/structured-data';
 import { fixMojibake } from '@/lib/text';
 import { getHistoricalSlugCanonicalNote } from '@/lib/slug-strategy';
@@ -449,9 +450,9 @@ const BlogPost = () => {
   const safeCategory = fixMojibake(post.category);
   const safeDate = fixMojibake(post.date);
   const safeAuthor = fixMojibake(post.author);
-  const safeTags = post.tags.map((tag) => fixMojibake(tag));
   const safeContent = fixMojibake(post.content);
   const historicalSlugNote = slug ? getHistoricalSlugCanonicalNote(slug, safeTitle) : null;
+  const primaryTopicMeta = slug ? getPrimaryTopicMetaForPost(slug) : undefined;
 
   const handleCopyLink = () => {
     navigator.clipboard.writeText(window.location.href);
@@ -629,19 +630,16 @@ const BlogPost = () => {
                 {/* Article Content with Component Injection */}
                 {renderArticleContent(slug || 'default', safeContent)}
 
-                {/* Tags */}
-                <div className="mt-12 pt-8 border-t">
-                  <h3 className="text-sm font-medium text-gray-600 mb-4">Tags:</h3>
-                  <div className="flex flex-wrap gap-2">
-                    {safeTags.map((tag: string) => (
-                      <Link key={tag} to={`/blog/tag/${tagToSlug(tag)}`}>
-                        <Badge variant="secondary" className="cursor-pointer hover:bg-secondary/60">
-                          {tag}
-                        </Badge>
-                      </Link>
-                    ))}
+                {primaryTopicMeta && (
+                  <div className="mt-12 pt-8 border-t">
+                    <h3 className="text-sm font-medium text-gray-600 mb-4">Topic:</h3>
+                    <Link to={primaryTopicMeta.href}>
+                      <Badge variant="secondary" className="cursor-pointer hover:bg-secondary/60">
+                        {primaryTopicMeta.name}
+                      </Badge>
+                    </Link>
                   </div>
-                </div>
+                )}
 
                 {internalLinkBudget?.parentHubLink && (
                   <div className="mt-8 rounded-lg border border-qatar-maroon/20 bg-qatar-maroon/5 p-6">

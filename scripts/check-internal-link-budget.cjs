@@ -20,20 +20,11 @@ const parseBlogMeta = () => {
     const body = match[2];
     const isoDateMatch = body.match(/isoDate:\s*'([^']+)'/);
     const categoryMatch = body.match(/category:\s*'([^']+)'/);
-    const tagsMatch = body.match(/tags:\s*\[([\s\S]*?)\]/);
-    const tags = [];
-
-    if (tagsMatch) {
-      for (const tagMatch of tagsMatch[1].matchAll(/'((?:\\'|[^'])*)'/g)) {
-        tags.push(tagMatch[1].replace(/\\'/g, "'"));
-      }
-    }
 
     posts.push({
       slug,
       isoDate: isoDateMatch ? isoDateMatch[1] : "",
       category: categoryMatch ? categoryMatch[1] : "",
-      tags,
     });
   }
 
@@ -77,21 +68,6 @@ const byRecencyThenSlug = (left, right) => {
   return left.slug.localeCompare(right.slug);
 };
 
-const countTagOverlap = (leftTags, rightTags) => {
-  if (!Array.isArray(leftTags) || !Array.isArray(rightTags) || leftTags.length === 0 || rightTags.length === 0) {
-    return 0;
-  }
-
-  const rightSet = new Set(rightTags);
-  let overlap = 0;
-  for (const tag of leftTags) {
-    if (rightSet.has(tag)) {
-      overlap += 1;
-    }
-  }
-  return overlap;
-};
-
 const getSiblingPostsForArticle = (currentPost, allPosts, primaryHubBySlug, limit = 3) => {
   const currentPrimaryHub = primaryHubBySlug[currentPost.slug];
   const scored = allPosts
@@ -104,7 +80,6 @@ const getSiblingPostsForArticle = (currentPost, allPosts, primaryHubBySlug, limi
       if (candidate.category === currentPost.category) {
         score += 30;
       }
-      score += 5 * countTagOverlap(currentPost.tags, candidate.tags);
       return { post: candidate, score };
     })
     .sort((left, right) => {

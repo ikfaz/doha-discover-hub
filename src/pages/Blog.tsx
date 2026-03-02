@@ -8,7 +8,7 @@ import SEOHead from '@/components/SEOHead';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { Search } from 'lucide-react';
-import { categoryToSlug, getBlogList, getCategoryCounts, getTagCounts, tagToSlug } from '@/lib/blog';
+import { categoryToSlug, getBlogList, getCategoryCounts } from '@/lib/blog';
 import { getTopicHubPosts, getTopicHubs } from '@/lib/topic-hubs';
 import { toJsonLdAuthor } from '@/lib/structured-data';
 
@@ -16,7 +16,6 @@ const Blog = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const posts = useMemo(() => getBlogList(), []);
   const categories = useMemo(() => getCategoryCounts(posts), [posts]);
-  const popularTags = useMemo(() => getTagCounts(posts).slice(0, 12), [posts]);
   const topicHubs = useMemo(() => getTopicHubs(), []);
   const topicHubSummaries = useMemo(
     () =>
@@ -41,7 +40,7 @@ const Blog = () => {
           post.title.toLowerCase().includes(queryLower) ||
           post.excerpt.toLowerCase().includes(queryLower) ||
           post.category.toLowerCase().includes(queryLower) ||
-          post.tags.some((tag) => tag.toLowerCase().includes(queryLower))
+          post.primaryTopicName?.toLowerCase().includes(queryLower)
         );
       }),
     [posts, queryLower],
@@ -78,7 +77,7 @@ const Blog = () => {
       {/* Keep query-driven blog search UX; canonical URLs intentionally exclude q to avoid index bloat. */}
       <SEOHead
         title="Experience Doha Blog - Qatar Travel Guide & Expat Tips"
-        description="Browse expert Doha guides, layover itineraries, expat tips, visa updates, and local insights. Search by topic, category, or tag."
+        description="Browse expert Doha guides, layover itineraries, expat tips, visa updates, and local insights. Search by topic or category."
         noindex={Boolean(query)}
         jsonLd={blogJsonLd}
       />
@@ -155,7 +154,7 @@ const Blog = () => {
                 </div>
 
                 <div className="bg-white shadow-md rounded-lg p-6">
-                  <h3 className="text-xl font-bold mb-4 text-qatar-maroon">Topic Hubs</h3>
+                  <h3 className="text-xl font-bold mb-4 text-qatar-maroon">Popular Topics</h3>
                   <div className="space-y-2">
                     {topicHubSummaries.map(({ hub, count }) => (
                       <div key={hub.slug} className="flex justify-between items-center">
@@ -193,19 +192,6 @@ const Blog = () => {
                     </Link>
                   </div>
                 )}
-
-                <div className="bg-white shadow-md rounded-lg p-6">
-                  <h3 className="text-xl font-bold mb-4 text-qatar-maroon">Popular Tags</h3>
-                  <div className="flex flex-wrap gap-2">
-                    {popularTags.map((tag) => (
-                      <Link key={tag.slug} to={`/blog/tag/${tagToSlug(tag.name)}`}>
-                        <Badge variant="secondary" className="cursor-pointer hover:bg-secondary/70">
-                          {tag.name}
-                        </Badge>
-                      </Link>
-                    ))}
-                  </div>
-                </div>
               </div>
             </div>
           </div>

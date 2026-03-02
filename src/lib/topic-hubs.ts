@@ -1,4 +1,5 @@
 import topicHubsData from '@/data/articles/topic-hubs.json';
+import articlePrimaryHubMap from '@/data/articles/article-primary-hub.json';
 import type { BlogListItem } from '@/lib/blog';
 
 export interface TopicHubDefinition {
@@ -15,6 +16,15 @@ export interface TopicHubWithPosts {
   posts: BlogListItem[];
 }
 
+export interface PrimaryTopicMeta {
+  slug: string;
+  name: string;
+  title: string;
+  href: string;
+}
+
+type PrimaryHubMap = Record<string, string>;
+
 const normalizeHub = (value: TopicHubDefinition): TopicHubDefinition => ({
   slug: value.slug.trim(),
   name: value.name.trim(),
@@ -25,6 +35,7 @@ const normalizeHub = (value: TopicHubDefinition): TopicHubDefinition => ({
 });
 
 const topicHubs: TopicHubDefinition[] = (topicHubsData as TopicHubDefinition[]).map(normalizeHub);
+const primaryHubMap: PrimaryHubMap = articlePrimaryHubMap as PrimaryHubMap;
 
 export const getTopicHubs = (): TopicHubDefinition[] => topicHubs;
 
@@ -43,3 +54,24 @@ export const getIndexableTopicHubs = (
   topicHubs
     .map((hub) => ({ hub, posts: getTopicHubPosts(posts, hub) }))
     .filter((entry) => entry.posts.length >= minPostsToIndex);
+
+export const getPrimaryTopicForPost = (slug: string): string | undefined => primaryHubMap[slug];
+
+export const getPrimaryTopicMetaForPost = (slug: string): PrimaryTopicMeta | undefined => {
+  const topicSlug = getPrimaryTopicForPost(slug);
+  if (!topicSlug) {
+    return undefined;
+  }
+
+  const hub = getTopicHubBySlug(topicSlug);
+  if (!hub) {
+    return undefined;
+  }
+
+  return {
+    slug: hub.slug,
+    name: hub.name,
+    title: hub.title,
+    href: `/blog/topic/${hub.slug}`,
+  };
+};

@@ -92,19 +92,6 @@ const CATEGORY_EDITORIAL_INTROS = {
 
 const getArticleLabel = (count) => `${count} article${count === 1 ? "" : "s"}`;
 
-const toCategoryList = (categories) => {
-  if (categories.length === 0) {
-    return "our Doha coverage";
-  }
-  if (categories.length === 1) {
-    return categories[0];
-  }
-  if (categories.length === 2) {
-    return `${categories[0]} and ${categories[1]}`;
-  }
-  return `${categories[0]}, ${categories[1]}, and ${categories[2]}`;
-};
-
 const buildCategoryArchiveIntro = (categoryName, posts) => {
   if (!categoryName) {
     return "Explore Doha blog topics with practical, editorially reviewed guides for planning and daily life.";
@@ -119,22 +106,6 @@ const buildCategoryArchiveIntro = (categoryName, posts) => {
   const leadSentence = leadTitle ? ` Start with "${leadTitle}" for a quick entry point.` : "";
 
   return `${baseIntro} This archive currently includes ${getArticleLabel(count)}.${leadSentence}`;
-};
-
-const buildTagArchiveIntro = (tagName, posts) => {
-  if (!tagName) {
-    return "Browse topic tags to find specific Doha guides, comparisons, and local planning advice.";
-  }
-
-  const count = posts.length;
-  const leadTitle = posts[0] ? posts[0].title : "";
-  const relatedCategories = [...new Set(posts.map((post) => post.category))].slice(0, 3);
-  const categoryContext = toCategoryList(relatedCategories);
-  const leadSentence = leadTitle ? ` Start with "${leadTitle}".` : "";
-
-  return `Focused coverage on ${tagName} in ${categoryContext}. This tag currently includes ${getArticleLabel(
-    count,
-  )}.${leadSentence}`;
 };
 
 const getValue = (body, key) => {
@@ -159,14 +130,6 @@ const parseBlogMeta = () => {
     const body = match[2];
     const isoDateMatch = body.match(/isoDate:\s*'([^']+)'/);
     const isoModifiedDateMatch = body.match(/isoModifiedDate:\s*'([^']+)'/);
-    const tagsMatch = body.match(/tags:\s*\[([\s\S]*?)\]/);
-    const tags = [];
-
-    if (tagsMatch) {
-      for (const tagMatch of tagsMatch[1].matchAll(/'((?:\\'|[^'])*)'/g)) {
-        tags.push(fixMojibake(tagMatch[1].replace(/\\'/g, "'")));
-      }
-    }
 
     items.push({
       slug,
@@ -177,7 +140,6 @@ const parseBlogMeta = () => {
       author: getValue(body, "author") || "Experience Doha Team",
       isoDate: isoDateMatch ? isoDateMatch[1] : "",
       isoModifiedDate: isoModifiedDateMatch ? isoModifiedDateMatch[1] : "",
-      tags,
     });
   }
 
@@ -259,21 +221,6 @@ const byRecencyThenSlug = (left, right) => {
   return left.slug.localeCompare(right.slug);
 };
 
-const countTagOverlap = (leftTags, rightTags) => {
-  if (!Array.isArray(leftTags) || !Array.isArray(rightTags) || leftTags.length === 0 || rightTags.length === 0) {
-    return 0;
-  }
-
-  const rightSet = new Set(rightTags);
-  let overlap = 0;
-  for (const tag of leftTags) {
-    if (rightSet.has(tag)) {
-      overlap += 1;
-    }
-  }
-  return overlap;
-};
-
 const getSiblingPostsForArticle = (currentPost, allPosts, primaryHubBySlug, limit = 3) => {
   const currentPrimaryHub = primaryHubBySlug[currentPost.slug];
   const scored = allPosts
@@ -286,7 +233,6 @@ const getSiblingPostsForArticle = (currentPost, allPosts, primaryHubBySlug, limi
       if (candidate.category === currentPost.category) {
         score += 30;
       }
-      score += 5 * countTagOverlap(currentPost.tags, candidate.tags);
 
       return { post: candidate, score };
     })
@@ -453,7 +399,6 @@ const buildPages = (blogPosts, tours, topicHubs, primaryHubBySlug) => {
   ];
 
   const categoryMap = new Map();
-  const tagMap = new Map();
   const topicHubBySlug = new Map(topicHubs.map((hub) => [hub.slug, hub]));
 
   for (const post of blogPosts) {
@@ -463,14 +408,6 @@ const buildPages = (blogPosts, tours, topicHubs, primaryHubBySlug) => {
         categoryMap.set(categorySlug, { name: post.category, posts: [] });
       }
       categoryMap.get(categorySlug).posts.push(post);
-    }
-
-    for (const tag of post.tags) {
-      const tagSlug = slugify(tag);
-      if (!tagMap.has(tagSlug)) {
-        tagMap.set(tagSlug, { name: tag, posts: [] });
-      }
-      tagMap.get(tagSlug).posts.push(post);
     }
   }
 
@@ -537,21 +474,6 @@ const buildPages = (blogPosts, tours, topicHubs, primaryHubBySlug) => {
       bodyHtml: `<main><h1>${escapeHtml(info.name)}</h1><p>${escapeHtml(
         categoryIntro,
       )}</p><ul>${links}</ul><p><a href="/blog">View all posts</a></p></main>`,
-    });
-  }
-
-  for (const [slug, info] of [...tagMap.entries()].sort((a, b) => a[0].localeCompare(b[0]))) {
-    const tagIntro = buildTagArchiveIntro(info.name, info.posts);
-    const links = info.posts
-      .slice(0, 15)
-      .map((post) => `<li><a href="/blog/${post.slug}">${escapeHtml(post.title)}</a></li>`)
-      .join("");
-    pages.push({
-      path: `/blog/tag/${slug}`,
-      title: `Posts tagged: ${info.name} - Experience Doha Blog`,
-      description: tagIntro,
-      noindex: info.posts.length <= 1,
-      bodyHtml: `<main><h1>${escapeHtml(info.name)}</h1><p>${escapeHtml(tagIntro)}</p><ul>${links}</ul><p><a href="/blog">View all posts</a></p></main>`,
     });
   }
 

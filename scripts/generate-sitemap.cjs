@@ -8,7 +8,6 @@ const TOURS_PATH = path.join(ROOT_DIR, "src", "data", "tours.ts");
 const TOPIC_HUBS_PATH = path.join(ROOT_DIR, "src", "data", "articles", "topic-hubs.json");
 const SITEMAP_PATH = path.join(ROOT_DIR, "public", "sitemap.xml");
 const MIN_POSTS_TO_INDEX_CATEGORY = 2;
-const MIN_POSTS_TO_INDEX_TAG = 2;
 const MIN_POSTS_TO_INDEX_TOPIC = 2;
 
 const MOJIBAKE_PATTERN = /[\u00C2\u00C3\u00D8\u00D9]|Ã¢/;
@@ -59,21 +58,12 @@ const parseBlogMeta = () => {
     const isoDateMatch = body.match(/isoDate:\s*'([^']+)'/);
     const isoModifiedDateMatch = body.match(/isoModifiedDate:\s*'([^']+)'/);
     const categoryMatch = body.match(/category:\s*'([^']+)'/);
-    const tagsMatch = body.match(/tags:\s*\[([\s\S]*?)\]/);
-
-    const tags = [];
-    if (tagsMatch) {
-      for (const tagMatch of tagsMatch[1].matchAll(/'((?:\\'|[^'])*)'/g)) {
-        tags.push(tagMatch[1].replace(/\\'/g, "'"));
-      }
-    }
 
     items.push({
       slug,
       isoDate: isoDateMatch ? isoDateMatch[1] : null,
       isoModifiedDate: isoModifiedDateMatch ? isoModifiedDateMatch[1] : null,
       category: categoryMatch ? categoryMatch[1] : null,
-      tags,
     });
   }
 
@@ -121,8 +111,6 @@ const main = () => {
 
   const categoryLastmod = new Map();
   const categoryPostCounts = new Map();
-  const tagLastmod = new Map();
-  const tagPostCounts = new Map();
 
   for (const post of datedPosts) {
     if (post.category) {
@@ -135,15 +123,6 @@ const main = () => {
       }
     }
 
-    for (const tag of post.tags) {
-      const key = slugify(tag);
-      tagPostCounts.set(key, (tagPostCounts.get(key) || 0) + 1);
-      const current = tagLastmod.get(key);
-      const postLastmod = getLastmod(post);
-      if (!current || toTimestamp(postLastmod) > toTimestamp(current)) {
-        tagLastmod.set(key, postLastmod);
-      }
-    }
   }
 
   const urls = [];
@@ -185,20 +164,6 @@ const main = () => {
       lastmod,
       changefreq: "weekly",
       priority: "0.7",
-    });
-  }
-
-  let includedTagCount = 0;
-  for (const [slug, lastmod] of [...tagLastmod.entries()].sort((a, b) => a[0].localeCompare(b[0]))) {
-    if ((tagPostCounts.get(slug) || 0) < MIN_POSTS_TO_INDEX_TAG) {
-      continue;
-    }
-    includedTagCount += 1;
-    addUrl({
-      loc: `/blog/tag/${slug}`,
-      lastmod,
-      changefreq: "weekly",
-      priority: "0.6",
     });
   }
 
@@ -247,7 +212,6 @@ const main = () => {
   console.log(
     `Categories included: ${includedCategoryCount} (min posts: ${MIN_POSTS_TO_INDEX_CATEGORY})`,
   );
-  console.log(`Tags included: ${includedTagCount} (min posts: ${MIN_POSTS_TO_INDEX_TAG})`);
   console.log(`Topic hubs included: ${includedTopicHubCount} (min posts: ${MIN_POSTS_TO_INDEX_TOPIC})`);
   console.log(`Blog posts included: ${datedPosts.length}`);
 };

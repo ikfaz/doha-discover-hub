@@ -5,11 +5,15 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "tags:map:generate": "node scripts/generate-legacy-tag-mapping.cjs",
+    "redirects:sync:legacy-tags": "node scripts/sync-legacy-tag-redirects.cjs",
+    "taxonomy:check": "node scripts/check-topic-taxonomy.cjs",
     "sitemap:generate": "node scripts/generate-sitemap.cjs",
+    "sitemap:images:generate": "node scripts/generate-image-sitemaps.cjs",
     "prerender:routes": "node scripts/prerender-routes.cjs",
-    "prebuild": "node scripts/check-internal-link-budget.cjs && npm run sitemap:generate",
+    "prebuild": "npm run taxonomy:check && node scripts/check-internal-link-budget.cjs && npm run sitemap:generate",
     "build": "vite build",
-    "postbuild": "npm run prerender:routes",
+    "postbuild": "npm run prerender:routes && npm run sitemap:images:generate",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview"
