@@ -496,7 +496,6 @@ const BlogPost = () => {
         type="article"
         publishedTime={articleIsoDate}
         jsonLd={[articleJsonLd, breadcrumbJsonLd]}
-        keywords={safeTags.join(', ')}
       />
       <NavBar />
       

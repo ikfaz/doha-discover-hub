@@ -17,7 +17,7 @@ const TourDetail = () => {
   const { t } = useTranslation();
   const tour = getTourBySlug(slug || '');
 
-  // Convert USD price to QAR (1 USD ≈ 3.64 QAR)
+  // Convert USD price to QAR (1 USD approx 3.64 QAR)
   const priceQAR = tour ? Math.round(tour.pricePerPerson * 3.64) : 0;
 
   const jsonLd = useMemo(() => {
@@ -99,8 +99,8 @@ const TourDetail = () => {
   return (
     <div className="min-h-screen flex flex-col font-sans">
       <SEOHead
-        title={`${tour.title} – Book from ${priceQAR} QAR | Experience Doha`}
-        description={`${tour.subtitle}. ${tour.duration} tour with ${tour.rating}★ rating from ${tour.reviewCount} reviews. Book now from ${priceQAR} QAR per person.`}
+        title={`${tour.title} - Book from ${priceQAR} QAR | Experience Doha`}
+        description={`${tour.subtitle}. ${tour.duration} tour with ${tour.rating}-star rating from ${tour.reviewCount} reviews. Book now from ${priceQAR} QAR per person.`}
         image={toWebP(tour.heroImage)}
         jsonLd={jsonLd}
       />
@@ -111,7 +111,7 @@ const TourDetail = () => {
         <section className="relative h-[50vh] md:h-[60vh] overflow-hidden">
           <img
             src={toWebP(tour.heroImage)}
-            alt={`${tour.title} – ${tour.category} tour in Doha, Qatar`}
+            alt={`${tour.title} - ${tour.category} tour in Doha, Qatar`}
             className="w-full h-full object-cover"
             loading="eager"
           />
@@ -209,7 +209,7 @@ const TourDetail = () => {
                       <div className="absolute bottom-4 start-4 bg-white/90 backdrop-blur-sm rounded-lg px-4 py-2 shadow-md">
                         <p className="text-sm font-medium text-charcoal flex items-center gap-2">
                           <MapPin className="w-4 h-4 text-sand-gold" aria-hidden="true" />
-                          {tour.itinerary.length} stops · {tour.duration}
+                          {tour.itinerary.length} stops - {tour.duration}
                         </p>
                       </div>
                     </div>
@@ -272,7 +272,7 @@ const TourDetail = () => {
                           </div>
                           <div>
                             <p className="font-medium text-foreground text-sm">{review.name}</p>
-                            <p className="text-xs text-muted-foreground">{review.country} · {review.date}</p>
+                            <p className="text-xs text-muted-foreground">{review.country} - {review.date}</p>
                           </div>
                           <div className="ms-auto flex">
                             {[...Array(5)].map((_, j) => (

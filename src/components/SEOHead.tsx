@@ -10,7 +10,6 @@ interface SEOHeadProps {
   author?: string;
   jsonLd?: Record<string, unknown> | Record<string, unknown>[];
   noindex?: boolean;
-  keywords?: string;
 }
 
 const BASE_URL = 'https://experiencedoha.com';
@@ -24,7 +23,6 @@ export const SEOHead = ({
   author = 'ExperienceDoha.com',
   jsonLd,
   noindex = false,
-  keywords,
 }: SEOHeadProps) => {
   const location = useLocation();
   const canonicalUrl = `${BASE_URL}${location.pathname}`;
@@ -34,7 +32,6 @@ export const SEOHead = ({
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="author" content={author} />
-      {keywords && <meta name="keywords" content={keywords} />}
       <meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow"} />
       <link rel="canonical" href={canonicalUrl} />
 
