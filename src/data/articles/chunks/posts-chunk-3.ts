@@ -10,8 +10,8 @@ export const postsChunk3: Record<string, ArticleData> = {
     'pet-import-qatar-guide': {
       id: '49',
       title: 'Pet Import Rules in Qatar 2025: Guide',
-      date: 'May 29, 2026',
-      isoDate: '2026-05-29',
+      date: 'May 29, 2025',
+      isoDate: '2025-05-29',
       metaDescription: 'Pet import Qatar 2025: required vaccinations, WOAH health certificates, quarantine rules, and best veterinary clinics in Doha for cats and dogs.',
       excerpt: 'Everything you need to know about bringing pets to Qatar — import requirements, vaccination schedules, quarantine procedures, and top veterinary clinics in Doha.',
       author: 'Experience Doha Team',
@@ -367,8 +367,8 @@ export const postsChunk3: Record<string, ArticleData> = {
     'doha-metro-2025-guide': {
       id: '48',
       title: 'Doha Metro Guide 2025: Map & Fares',
-      date: 'May 28, 2026',
-      isoDate: '2026-05-28',
+      date: 'May 28, 2025',
+      isoDate: '2025-05-28',
       metaDescription: 'Doha Metro guide 2025: new Lusail tram, Gold Line expansion, fares, stations, and travel card options. Complete network map and tips.',
       excerpt: 'Navigate Doha by metro — complete guide to routes, new line expansions, fare zones, travel cards, and tips for using Qatar\'s modern rail network.',
       author: 'Experience Doha Team',
@@ -675,8 +675,8 @@ export const postsChunk3: Record<string, ArticleData> = {
     'grocery-shopping-doha-guide': {
       id: '47',
       title: 'Grocery Shopping Doha: Carrefour vs Lulu',
-      date: 'May 27, 2026',
-      isoDate: '2026-05-27',
+      date: 'May 27, 2025',
+      isoDate: '2025-05-27',
       metaDescription: 'Grocery shopping Doha 2026: Carrefour vs Lulu vs Al Meera price comparison, best delivery apps, and money-saving hacks for expats.',
       excerpt: 'Save money on groceries in Doha — compare prices at Carrefour, Lulu, and Al Meera, discover delivery apps, and learn shopping hacks for budget-savvy expats.',
       author: 'Experience Doha Team',
@@ -974,8 +974,8 @@ export const postsChunk3: Record<string, ArticleData> = {
     'mobile-plans-qatar-guide': {
       id: '46',
       title: 'Ooredoo vs Vodafone Qatar 2025: Plans',
-      date: 'May 26, 2026',
-      isoDate: '2026-05-26',
+      date: 'May 26, 2025',
+      isoDate: '2025-05-26',
       metaDescription: 'Ooredoo vs Vodafone Qatar 2025: best mobile plans, data packages, 5G coverage, tourist SIM cards, and roaming costs compared.',
       excerpt: 'Compare Ooredoo and Vodafone mobile plans in Qatar — data packages, 5G speeds, tourist SIM options, and which provider offers the best value for expats.',
       author: 'Experience Doha Team',
@@ -1255,8 +1255,8 @@ export const postsChunk3: Record<string, ArticleData> = {
     'bank-account-qatar-guide': {
       id: '45',
       title: 'Open a Bank Account in Qatar: Guide',
-      date: 'May 25, 2026',
-      isoDate: '2026-05-25',
+      date: 'May 25, 2025',
+      isoDate: '2025-05-25',
       metaDescription: 'Opening a bank account in Qatar 2025: QNB vs HSBC vs Standard Chartered. Required documents, fees, and best banks for expat salary accounts.',
       excerpt: 'Compare Qatar\'s top banks for expats — QNB, HSBC, and Standard Chartered. Learn the documents needed, account types, and which bank suits your needs.',
       author: 'Experience Doha Team',
@@ -1525,8 +1525,8 @@ export const postsChunk3: Record<string, ArticleData> = {
     'lgbtq-experiences-qatar-2025': {
       id: '44',
       title: 'LGBTQ+ in Qatar: What Expats Must Know',
-      date: 'May 24, 2026',
-      isoDate: '2026-05-24',
+      date: 'May 24, 2025',
+      isoDate: '2025-05-24',
       metaDescription: 'LGBTQ+ life in Qatar 2026: laws, safety tips, mental health resources, and what expats and travelers need to know before visiting Doha.',
       excerpt: 'A sensitive, practical guide to LGBTQ+ experiences in Qatar — covering local laws, safety advice, mental health resources, and community support for expats.',
       author: 'Experience Doha Team',
@@ -1861,3 +1861,4 @@ export const postsChunk3: Record<string, ArticleData> = {
       `
     },
 };
+

@@ -10,7 +10,7 @@ export const relatedPosts: RelatedPost[] = [
     excerpt: 'Discover authentic Qatari cuisine from Machboos to Luqaimat. Complete guide to traditional dishes, best restaurants, and cultural food experiences in Doha.',
     imageUrl: qatariCuisineImage,
     category: 'Food',
-    date: 'May 14, 2026',
+    date: 'May 14, 2025',
     slug: 'qatari-dishes-doha-culinary-guide',
   },
   {
@@ -19,7 +19,7 @@ export const relatedPosts: RelatedPost[] = [
     excerpt: "Discover how Doha is transforming the Middle East through innovation, culture, economic strength, and global influence.",
     imageUrl: culturalEventsImage,
     category: 'Culture',
-    date: 'May 16, 2026',
+    date: 'May 16, 2025',
     slug: 'doha-changing-middle-east',
   },
   {
@@ -28,7 +28,8 @@ export const relatedPosts: RelatedPost[] = [
     excerpt: 'Experience the thrill of dune bashing and the serenity of Khor Al Adaid - your complete guide to Qatar\'s quintessential desert safari adventure.',
     imageUrl: miaMuseumImage,
     category: 'Attractions',
-    date: 'May 9, 2026',
+    date: 'May 9, 2025',
     slug: 'desert-safari-inland-sea-khor-al-adaid',
   },
 ];
+

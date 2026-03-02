@@ -10,8 +10,8 @@ export const postsChunk5: Record<string, ArticleData> = {
     'doha-changing-middle-east': {
       id: '37',
       title: 'Doha: The City That\'s Changing the Middle East',
-      date: 'May 16, 2026',
-      isoDate: '2026-05-16',
+      date: 'May 16, 2025',
+      isoDate: '2025-05-16',
       metaDescription: 'How Doha is transforming the Middle East through Vision 2030, innovation hubs, cultural investments, and global diplomacy. Discover Qatar\'s ambitions.',
       excerpt: 'Explore how Doha is reshaping the Middle East — from Vision 2030 mega-projects and cultural institutions to diplomatic influence and smart city innovation.',
       author: 'Experience Doha Team',
@@ -213,8 +213,8 @@ export const postsChunk5: Record<string, ArticleData> = {
     'hamad-international-airport-guide': {
       id: '36',
       title: 'Hamad Airport Guide: Lounges & Tips',
-      date: 'May 15, 2026',
-      isoDate: '2026-05-15',
+      date: 'May 15, 2025',
+      isoDate: '2025-05-15',
       metaDescription: 'Hamad International Airport guide: lounges, dining, duty-free shopping, transit hotel, metro access, and tips for layover travelers in Doha.',
       excerpt: 'Everything you need to know about Hamad International Airport — world-class lounges, dining options, duty-free shopping, sleeping facilities, and transit tips.',
       author: 'Experience Doha Team',
@@ -415,8 +415,8 @@ export const postsChunk5: Record<string, ArticleData> = {
     'qatari-dishes-doha-culinary-guide': {
       id: '35',
       title: 'Qatari Dishes to Try in Doha: Guide',
-      date: 'May 14, 2026',
-      isoDate: '2026-05-14',
+      date: 'May 14, 2025',
+      isoDate: '2025-05-14',
       metaDescription: 'Must-try Qatari dishes in Doha: Machboos, Harees, Luqaimat, and Karak tea. Best traditional restaurants in Souq Waqif and Katara.',
       excerpt: 'Discover the best Qatari dishes — from Machboos and Harees to Luqaimat desserts. Where to eat authentic traditional food in Doha\'s top restaurants.',
       author: 'Experience Doha Team',
@@ -606,8 +606,8 @@ export const postsChunk5: Record<string, ArticleData> = {
     'women-driving-qatar-guide': {
       id: '34',
       title: 'Can Women Drive in Qatar? 2025 Guide',
-      date: 'May 13, 2026',
-      isoDate: '2026-05-13',
+      date: 'May 13, 2025',
+      isoDate: '2025-05-13',
       metaDescription: 'Can women drive in Qatar? Yes — complete 2025 guide for tourists and expats. License rules, rental cars, safety tips, and driving rights for women.',
       excerpt: 'Women can legally drive in Qatar with no restrictions. Learn about license requirements, car rental rules, safety, and practical driving tips for female expats.',
       author: 'Experience Doha Team',
@@ -878,8 +878,8 @@ export const postsChunk5: Record<string, ArticleData> = {
     'doha-safety-guide-tourists-expats': {
       id: '33',
       title: 'Is Doha Safe? Safety Guide for Tourists',
-      date: 'May 12, 2026',
-      isoDate: '2026-05-12',
+      date: 'May 12, 2025',
+      isoDate: '2025-05-12',
       metaDescription: 'Is Doha safe? 2025 safety guide: crime rates, night safety, transport, scams, and tips for solo female travelers, families, and tourists in Qatar.',
       excerpt: 'Doha ranks among the world\'s safest cities. Learn about crime rates, safety for women and families, nightlife security, and essential precautions for visitors.',
       author: 'Experience Doha Team',
@@ -1149,8 +1149,8 @@ export const postsChunk5: Record<string, ArticleData> = {
     'prostitution-laws-doha-qatar-guide': {
       id: '32',
       title: 'Is Prostitution Legal in Qatar? 2026',
-      date: 'May 11, 2026',
-      isoDate: '2026-05-11',
+      date: 'May 11, 2025',
+      isoDate: '2025-05-11',
       metaDescription: 'Is prostitution legal in Qatar? No — complete 2026 guide to laws, penalties, escort scams, and safety tips for tourists visiting Doha.',
       excerpt: 'Prostitution is strictly illegal in Qatar. Understand the laws, severe penalties, common online scams, and how to stay safe as a tourist in Doha.',
       author: 'Experience Doha Team',
@@ -1402,3 +1402,4 @@ export const postsChunk5: Record<string, ArticleData> = {
       tags: ['is prostitution legal Qatar', 'escort laws Doha', 'Qatar criminal law', 'tourist safety Qatar legal', 'online scams Qatar']
     },
 };
+

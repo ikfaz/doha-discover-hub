@@ -10,8 +10,8 @@ export const postsChunk4: Record<string, ArticleData> = {
     'driving-doha-2025-guide': {
       id: '43',
       title: 'Driving in Doha 2025: Rules & Tips',
-      date: 'May 23, 2026',
-      isoDate: '2026-05-23',
+      date: 'May 23, 2025',
+      isoDate: '2025-05-23',
       metaDescription: 'Driving in Doha 2025: traffic rules, license conversion, speed cameras, parking tips, and road safety guide for expats and tourists.',
       excerpt: 'Survive Doha traffic — complete guide to driving rules, license conversion, speed cameras, fuel prices, parking, and road safety tips for Qatar.',
       author: 'Experience Doha Team',
@@ -429,8 +429,8 @@ export const postsChunk4: Record<string, ArticleData> = {
     'renting-doha-west-bay-al-waab-2025': {
       id: '42',
       title: 'West Bay vs Al Waab: Renting in Doha',
-      date: 'May 22, 2026',
-      isoDate: '2026-05-22',
+      date: 'May 22, 2025',
+      isoDate: '2025-05-22',
       metaDescription: 'West Bay vs Al Waab rent comparison 2025: apartment prices, lifestyle, schools, commute times. Which Doha neighborhood is right for you?',
       excerpt: 'Choosing between West Bay and Al Waab? Compare rent prices, lifestyle, proximity to schools, commute times, and amenities in Doha\'s top residential areas.',
       author: 'Experience Doha Team',
@@ -741,8 +741,8 @@ export const postsChunk4: Record<string, ArticleData> = {
     'qatar-visa-rules-expats-2025': {
       id: '41',
       title: 'Qatar Visa Rules for Expats 2026',
-      date: 'May 20, 2026',
-      isoDate: '2026-05-20',
+      date: 'May 20, 2025',
+      isoDate: '2025-05-20',
       metaDescription: 'Qatar visa rules 2026: work permits, family sponsorship, golden visa, tourist visas. Complete immigration guide for expats moving to Doha.',
       excerpt: 'Navigate Qatar\'s updated visa system — work permits, family sponsorship, golden permanent residency, and tourist visa rules explained for expats and visitors.',
       author: 'Experience Doha Team',
@@ -1031,8 +1031,8 @@ export const postsChunk4: Record<string, ArticleData> = {
     'international-schools-qatar-2025': {
       id: '40',
       title: 'International Schools Qatar 2026: Fees',
-      date: 'May 19, 2026',
-      isoDate: '2026-05-19',
+      date: 'May 19, 2025',
+      isoDate: '2025-05-19',
       metaDescription: 'International schools in Qatar 2026: fees, waitlists, curriculum options (IB, British, American), and application tips for expat families in Doha.',
       excerpt: 'Find the right school for your child in Qatar — compare fees, curricula (IB, British, American), waitlist strategies, and application timelines across Doha.',
       author: 'Experience Doha Team',
@@ -1273,8 +1273,8 @@ export const postsChunk4: Record<string, ArticleData> = {
     'women-safety-dress-code-doha-qatar': {
       id: '39',
       title: 'Women\'s Safety & Dress Code in Doha',
-      date: 'May 18, 2026',
-      isoDate: '2026-05-18',
+      date: 'May 18, 2025',
+      isoDate: '2025-05-18',
       metaDescription: 'Women\'s safety in Doha 2026: dress code rules, cultural tips, solo travel advice, and practical safety guide for female tourists and expats in Qatar.',
       excerpt: 'A practical guide for women visiting or living in Doha — dress code expectations, cultural norms, solo travel tips, and why Qatar ranks among the safest countries.',
       author: 'Experience Doha Team',
@@ -1458,8 +1458,8 @@ export const postsChunk4: Record<string, ArticleData> = {
     'cost-of-living-doha-2025': {
       id: '38',
       title: 'Cost of Living in Doha 2026: Budget Guide',
-      date: 'May 17, 2026',
-      isoDate: '2026-05-17',
+      date: 'May 17, 2025',
+      isoDate: '2025-05-17',
       metaDescription: 'Cost of living in Doha 2026: rent, groceries, transport, utilities, and hidden costs. Realistic monthly budget breakdown for expats in Qatar.',
       excerpt: 'A realistic breakdown of living costs in Doha — rent, food, transport, utilities, schooling, and hidden expenses that every expat should budget for in 2026.',
       author: 'Experience Doha Team',
@@ -1648,3 +1648,4 @@ export const postsChunk4: Record<string, ArticleData> = {
       `,
     },
 };
+

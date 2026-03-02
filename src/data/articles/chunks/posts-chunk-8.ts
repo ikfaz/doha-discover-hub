@@ -10,8 +10,8 @@ export const postsChunk8: Record<string, ArticleData> = {
     'five-best-things-doha-layover': {
       id: '19',
       title: 'The Five Best Things to Do on a Layover in Doha',
-      date: 'Jan 18, 2026',
-      isoDate: '2026-01-18',
+      date: 'Jan 18, 2025',
+      isoDate: '2025-01-18',
       metaDescription: 'Top 5 Doha layover activities: Museum of Islamic Art, Souq Waqif, Corniche walk, desert safari, and Katara Cultural Village. Quick guide.',
       excerpt: 'Five essential Doha layover experiences — from the Museum of Islamic Art and Souq Waqif to the Corniche, desert excursions, and Katara Cultural Village.',
       author: 'Experience Doha Team',
@@ -53,8 +53,8 @@ export const postsChunk8: Record<string, ArticleData> = {
     '9-hour-stopover-qatar-worth-it': {
       id: '18',
       title: '9-Hour Stopover in Qatar: Is It Worth Exploring?',
-      date: 'April 27, 2026',
-      isoDate: '2026-04-27',
+      date: 'April 27, 2025',
+      isoDate: '2025-04-27',
       metaDescription: '9-hour Qatar stopover: is it worth exploring Doha? Honest time breakdown, risk assessment, and best activities for short layovers.',
       excerpt: 'Should you leave the airport during a 9-hour Qatar stopover? An honest breakdown of time, logistics, risks, and the best activities for short layovers.',
       author: 'Experience Doha Team',
@@ -112,8 +112,8 @@ export const postsChunk8: Record<string, ArticleData> = {
     'discover-qatar-stopover-guide': {
       id: '17',
       title: 'Stopover in Qatar: Discover Qatar - Why Visit',
-      date: 'April 26, 2026',
-      isoDate: '2026-04-26',
+      date: 'April 26, 2025',
+      isoDate: '2025-04-26',
       metaDescription: 'Discover Qatar stopover guide: visa-free entry, cultural attractions, museums, desert safari, dining, and family-friendly experiences. Why visit Qatar.',
       excerpt: 'Discover why Qatar is worth more than a transit stop — visa-free entry, world-class museums, desert adventures, diverse dining, and unmatched safety.',
       author: 'Experience Doha Team',
@@ -175,8 +175,8 @@ export const postsChunk8: Record<string, ArticleData> = {
     '24-hours-doha-qatar-airways': {
       id: '16',
       title: '24 Hours in Doha: Complete Qatar Airways Itinerary',
-      date: 'April 25, 2026',
-      isoDate: '2026-04-25',
+      date: 'April 25, 2025',
+      isoDate: '2025-04-25',
       metaDescription: '24 hours in Doha itinerary: Corniche sunrise, MIA, Souq Waqif, desert safari, dhow cruise. Complete Qatar Airways-inspired day plan.',
       excerpt: 'Spend 24 hours in Doha like a pro — sunrise at the Corniche, museums, Souq Waqif, optional desert safari, and a magical dhow cruise at night.',
       author: 'Experience Doha Team',
@@ -238,8 +238,8 @@ export const postsChunk8: Record<string, ArticleData> = {
     'doha-layover-time-guide': {
       id: '15',
       title: 'Layover in Doha Guide: What to Do in 2–12 Hours',
-      date: 'Feb 1, 2026',
-      isoDate: '2026-02-01',
+      date: 'Feb 1, 2025',
+      isoDate: '2025-02-01',
       metaDescription: 'Doha layover guide by duration: what to do in 2, 4, 6, 8, 10, or 12 hours. Best activities for every timeframe at Hamad Airport and in the city.',
       excerpt: 'Plan your Doha layover by available time — from 2-hour airport-only stops to 12-hour full-day explorations. The best activities for every timeframe.',
       author: 'Experience Doha Team',
@@ -293,8 +293,8 @@ export const postsChunk8: Record<string, ArticleData> = {
     'perfect-layover-doha-guide': {
       id: '14',
       title: 'How to Spend the Perfect Layover in Doha, Qatar',
-      date: 'Feb 3, 2026',
-      isoDate: '2026-02-03',
+      date: 'Feb 3, 2025',
+      isoDate: '2025-02-03',
       metaDescription: 'Perfect Doha layover guide: preparation tips, timing your airport exit, must-see attractions, and how to pace your stopover for maximum enjoyment.',
       excerpt: 'Craft the perfect Doha layover — pre-arrival prep, optimal timing, the best attractions to prioritize, and pacing tips so you arrive refreshed.',
       author: 'Experience Doha Team',
@@ -349,3 +349,4 @@ export const postsChunk8: Record<string, ArticleData> = {
       tags: ['perfect Doha layover plan', 'best layover itinerary Doha', 'what to do during layover Qatar', 'Doha stopover tips', 'layover packing list']
     },
 };
+

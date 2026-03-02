@@ -10,8 +10,8 @@ export const postsChunk2: Record<string, ArticleData> = {
     'housing-rent-doha-2025': {
       id: '55',
       title: 'Housing & Rent Prices in Doha 2025',
-      date: 'June 4, 2026',
-      isoDate: '2026-06-04',
+      date: 'June 4, 2025',
+      isoDate: '2025-06-04',
       metaDescription: 'Doha rent prices 2025: apartments and villas in West Bay, The Pearl, Al Sadd. Average rents, lease tips, and tenant rights in Qatar.',
       excerpt: 'A detailed look at Doha\'s rental market — average prices by neighborhood, lease negotiation tips, tenant rights, and what to expect when renting in Qatar.',
       author: 'Experience Doha Team',
@@ -135,8 +135,8 @@ export const postsChunk2: Record<string, ArticleData> = {
     'cost-of-living-doha-dubai-riyadh': {
       id: '54',
       title: 'Cost of Living: Doha vs Dubai vs Riyadh',
-      date: 'June 3, 2026',
-      isoDate: '2026-06-03',
+      date: 'June 3, 2025',
+      isoDate: '2025-06-03',
       metaDescription: 'Doha vs Dubai vs Riyadh cost of living 2025: rent, groceries, transport, schools compared. Which Gulf city offers the best value for expats?',
       excerpt: 'Compare the cost of living in Doha, Dubai, and Riyadh — from rent and groceries to schooling and transport — to find which Gulf city suits your budget best.',
       author: 'Experience Doha Team',
@@ -260,8 +260,8 @@ export const postsChunk2: Record<string, ArticleData> = {
     'alcohol-guide-doha': {
       id: '53',
       title: 'Alcohol Rules in Qatar 2026: Full Guide',
-      date: 'June 2, 2026',
-      isoDate: '2026-06-02',
+      date: 'June 2, 2025',
+      isoDate: '2025-06-02',
       metaDescription: 'Qatar alcohol laws 2026: QDC permit guide, hotel bar rules, drinking age, prices, and penalties. Everything expats and tourists need to know.',
       excerpt: 'Complete guide to alcohol in Qatar — QDC liquor permits, legal hotel bars, drinking age, prices, Ramadan rules, and penalties for violations.',
       author: 'Experience Doha Team',
@@ -637,8 +637,8 @@ export const postsChunk2: Record<string, ArticleData> = {
     'remote-work-cafes-doha-guide': {
       id: '52',
       title: 'Best Remote Work Cafes in Doha 2025',
-      date: 'June 1, 2026',
-      isoDate: '2026-06-01',
+      date: 'June 1, 2025',
+      isoDate: '2025-06-01',
       metaDescription: 'Best remote work cafes in Doha 2025: WiFi speeds, power outlets, coffee prices. Top spots for freelancers and digital nomads in Qatar.',
       excerpt: 'Discover the best cafes for remote work in Doha — rated by WiFi speed, seating comfort, coffee quality, and noise level for productive work sessions.',
       author: 'Experience Doha Team',
@@ -995,8 +995,8 @@ export const postsChunk2: Record<string, ArticleData> = {
     'gyms-fitness-doha-guide': {
       id: '51',
       title: 'Gyms & Fitness in Doha 2025: Full Guide',
-      date: 'May 31, 2026',
-      isoDate: '2026-05-31',
+      date: 'May 31, 2025',
+      isoDate: '2025-05-31',
       metaDescription: 'Best gyms in Doha 2025: membership prices, ladies-only facilities, CrossFit, yoga, and outdoor fitness options across Qatar.',
       excerpt: 'Your complete guide to gyms and fitness in Doha — compare memberships, discover ladies-only gyms, CrossFit boxes, yoga studios, and outdoor fitness trends.',
       author: 'Experience Doha Team',
@@ -1398,8 +1398,8 @@ export const postsChunk2: Record<string, ArticleData> = {
     'hiring-maid-nanny-qatar-guide': {
       id: '50',
       title: 'Hiring a Maid or Nanny in Qatar 2026',
-      date: 'May 30, 2026',
-      isoDate: '2026-05-30',
+      date: 'May 30, 2025',
+      isoDate: '2025-05-30',
       metaDescription: 'Hiring a maid or nanny in Qatar 2026: legal requirements, visa costs, salary ranges, contracts, and agency vs direct hire comparison.',
       excerpt: 'Complete legal guide to hiring domestic workers in Qatar — from visa sponsorship and salary benchmarks to contracts, agencies, and your obligations as an employer.',
       author: 'Experience Doha Team',
@@ -1831,3 +1831,4 @@ export const postsChunk2: Record<string, ArticleData> = {
       `,
     },
 };
+
