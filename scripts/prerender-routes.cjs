@@ -353,6 +353,7 @@ const buildPages = (blogPosts, tours) => {
       path: `/blog/category/${slug}`,
       title: `${info.name} in Doha - Experience Doha Blog`,
       description: `Browse ${info.posts.length} article(s) in ${info.name}.`,
+      noindex: info.posts.length <= 1,
       bodyHtml: `<main><h1>${escapeHtml(info.name)}</h1><ul>${links}</ul><p><a href="/blog">View all posts</a></p></main>`,
     });
   }

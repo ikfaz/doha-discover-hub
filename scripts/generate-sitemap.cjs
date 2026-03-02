@@ -6,6 +6,7 @@ const ROOT_DIR = path.resolve(__dirname, "..");
 const BLOG_META_PATH = path.join(ROOT_DIR, "src", "data", "articles", "blog-meta.ts");
 const TOURS_PATH = path.join(ROOT_DIR, "src", "data", "tours.ts");
 const SITEMAP_PATH = path.join(ROOT_DIR, "public", "sitemap.xml");
+const MIN_POSTS_TO_INDEX_CATEGORY = 2;
 const MIN_POSTS_TO_INDEX_TAG = 2;
 
 const MOJIBAKE_PATTERN = /[\u00C2\u00C3\u00D8\u00D9]|Ã¢/;
@@ -100,12 +101,14 @@ const main = () => {
     .sort((a, b) => toTimestamp(b) - toTimestamp(a))[0] || "2026-03-02";
 
   const categoryLastmod = new Map();
+  const categoryPostCounts = new Map();
   const tagLastmod = new Map();
   const tagPostCounts = new Map();
 
   for (const post of datedPosts) {
     if (post.category) {
       const key = slugify(post.category);
+      categoryPostCounts.set(key, (categoryPostCounts.get(key) || 0) + 1);
       const current = categoryLastmod.get(key);
       const postLastmod = getLastmod(post);
       if (!current || toTimestamp(postLastmod) > toTimestamp(current)) {
@@ -150,9 +153,14 @@ const main = () => {
     });
   }
 
+  let includedCategoryCount = 0;
   for (const [slug, lastmod] of [...categoryLastmod.entries()].sort((a, b) =>
     a[0].localeCompare(b[0]),
   )) {
+    if ((categoryPostCounts.get(slug) || 0) < MIN_POSTS_TO_INDEX_CATEGORY) {
+      continue;
+    }
+    includedCategoryCount += 1;
     addUrl({
       loc: `/blog/category/${slug}`,
       lastmod,
@@ -199,7 +207,9 @@ const main = () => {
 
   fs.writeFileSync(SITEMAP_PATH, xml, "utf8");
   console.log(`Generated sitemap with ${urls.length} URLs.`);
-  console.log(`Categories included: ${categoryLastmod.size}`);
+  console.log(
+    `Categories included: ${includedCategoryCount} (min posts: ${MIN_POSTS_TO_INDEX_CATEGORY})`,
+  );
   console.log(`Tags included: ${includedTagCount} (min posts: ${MIN_POSTS_TO_INDEX_TAG})`);
   console.log(`Blog posts included: ${datedPosts.length}`);
 };
