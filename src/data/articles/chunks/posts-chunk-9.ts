@@ -3,6 +3,7 @@ import unmissableThingsImage from '@/assets/10-unmissable-things.jpg';
 import hamadAirportTransfersImage from '@/assets/hamad-airport-transfers.jpg';
 import stopoverProgramImage from '@/assets/stopover-program.jpg';
 import top10AttractionsImage from '@/assets/top-10-attractions.jpg';
+import bestThingsToDoInDohaCoverImage from '@/assets/best-things-to-do-in-doha-cover.svg?url';
 
 export const postsChunk9: Record<string, ArticleData> = {
     'best-things-to-do-in-doha': {
@@ -15,7 +16,7 @@ export const postsChunk9: Record<string, ArticleData> = {
       author: 'Experience Doha Team',
       readTime: '16 min read',
       category: 'Attractions',
-      imageUrl: top10AttractionsImage,
+      imageUrl: bestThingsToDoInDohaCoverImage,
       content: `
         <p><strong>Executive summary:</strong> Doha is built for short, high-impact days - waterfront views, world-class museums, and markets that come alive after dark. This guide prioritizes the attractions that deliver the biggest payoff per hour, with clear timing, transport, and "do not waste your time" tips.</p>
 

@@ -49,6 +49,7 @@ import unmissableThingsImage from '@/assets/10-unmissable-things.jpg';
 import hamadAirportTransfersImage from '@/assets/hamad-airport-transfers.jpg';
 import stopoverProgramImage from '@/assets/stopover-program.jpg';
 import top10AttractionsImage from '@/assets/top-10-attractions.jpg';
+import bestThingsToDoInDohaCoverImage from '@/assets/best-things-to-do-in-doha-cover.svg?url';
 
 export type BlogMetaData = Omit<ArticleData, 'content' | 'tableOfContents'>;
 
@@ -63,7 +64,7 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
       author: 'Experience Doha Team',
       readTime: '16 min read',
       category: 'Attractions',
-      imageUrl: top10AttractionsImage,
+      imageUrl: bestThingsToDoInDohaCoverImage,
       tags: ['things to do in doha', 'best things to do in doha', 'doha itinerary', 'souq waqif', 'museum of islamic art doha', 'national museum of qatar', 'doha corniche', 'katara cultural village', 'the pearl qatar', 'old doha port mina district', 'doha metro', 'khor al adaid inland sea'],
     },
 

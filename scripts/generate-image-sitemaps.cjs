@@ -42,8 +42,18 @@ const collectDistAssets = () => {
 };
 
 const toDistAssetUrl = (sourceName, distAssets) => {
-  const extension = path.extname(sourceName);
-  const baseName = sourceName.slice(0, extension.length * -1);
+  const normalizedSourceName = String(sourceName || "").split("?")[0].split("#")[0];
+  if (!normalizedSourceName) {
+    return null;
+  }
+
+  const directMatch = distAssets.find((fileName) => fileName === normalizedSourceName);
+  if (directMatch) {
+    return `${SITE_URL}/assets/${directMatch}`;
+  }
+
+  const extension = path.extname(normalizedSourceName);
+  const baseName = normalizedSourceName.slice(0, extension.length * -1);
   const prefix = `${baseName}-`;
 
   const matchedFile = distAssets.find(
@@ -59,7 +69,8 @@ const parseAssetImports = (source) => {
   const map = new Map();
   const importRegex = /import\s+([A-Za-z0-9_]+)\s+from\s+['"]@\/assets\/([^'"]+)['"];?/g;
   for (const match of source.matchAll(importRegex)) {
-    map.set(match[1], match[2]);
+    const normalizedAssetPath = String(match[2]).split("?")[0].split("#")[0];
+    map.set(match[1], normalizedAssetPath);
   }
   return map;
 };
