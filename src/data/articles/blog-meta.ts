@@ -53,6 +53,20 @@ import top10AttractionsImage from '@/assets/top-10-attractions.jpg';
 export type BlogMetaData = Omit<ArticleData, 'content' | 'tableOfContents'>;
 
 export const blogMetaPosts: Record<string, BlogMetaData> = {
+    'best-things-to-do-in-doha': {
+      id: '62',
+      title: 'Best Things to Do in Doha',
+      date: 'March 2, 2026',
+      isoDate: '2026-03-02',
+      metaDescription: 'Discover the best things to do in Doha with a practical, traveler-first guide: iconic waterfront walks, must-see museums, Souq Waqif after dark, Katara\'s culture and beach time, The Pearl\'s marina vibes, and the Inland Sea desert escape. Includes visit durations, transport tips, and live-check reminders for visas, event dates, and airport updates.',
+      excerpt: 'Doha is built for short, high-impact days with waterfront views, world-class museums, and markets that come alive after dark. This guide prioritizes attractions with the biggest payoff per hour, plus clear timing, transport, and live-check reminders.',
+      author: 'Experience Doha Team',
+      readTime: '16 min read',
+      category: 'Attractions',
+      imageUrl: top10AttractionsImage,
+      tags: ['things to do in doha', 'best things to do in doha', 'doha itinerary', 'souq waqif', 'museum of islamic art doha', 'national museum of qatar', 'doha corniche', 'katara cultural village', 'the pearl qatar', 'old doha port mina district', 'doha metro', 'khor al adaid inland sea'],
+    },
+
     'end-of-service-gratuity-qatar-2025': {
       id: '61',
       title: 'End-of-Service Gratuity in Qatar 2026',

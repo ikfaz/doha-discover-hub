@@ -5,6 +5,134 @@ import stopoverProgramImage from '@/assets/stopover-program.jpg';
 import top10AttractionsImage from '@/assets/top-10-attractions.jpg';
 
 export const postsChunk9: Record<string, ArticleData> = {
+    'best-things-to-do-in-doha': {
+      id: '62',
+      title: 'Best Things to Do in Doha',
+      date: 'March 2, 2026',
+      isoDate: '2026-03-02',
+      metaDescription: 'Discover the best things to do in Doha with a practical, traveler-first guide: iconic waterfront walks, must-see museums, Souq Waqif after dark, Katara\'s culture and beach time, The Pearl\'s marina vibes, and the Inland Sea desert escape. Includes visit durations, transport tips, and live-check reminders for visas, event dates, and airport updates.',
+      excerpt: 'Doha is built for short, high-impact days with waterfront views, world-class museums, and markets that come alive after dark. This guide prioritizes attractions with the biggest payoff per hour, plus clear timing, transport, and live-check reminders.',
+      author: 'Experience Doha Team',
+      readTime: '16 min read',
+      category: 'Attractions',
+      imageUrl: top10AttractionsImage,
+      content: `
+        <p><strong>Executive summary:</strong> Doha is built for short, high-impact days - waterfront views, world-class museums, and markets that come alive after dark. This guide prioritizes the attractions that deliver the biggest payoff per hour, with clear timing, transport, and "do not waste your time" tips.</p>
+
+        <h2 id="plan-your-days">Plan Your Doha Days</h2>
+        <p>Doha is spread out, but it is not hard: build your days around clusters (Corniche + museums + Souq) and use the metro for the big jumps. If your trip includes a short transit, start with our <a href="/blog/ultimate-doha-layover-24-48-hours">Doha Stopover Guide (24-72 Hours)</a> before locking your day plans.</p>
+        <p>The Doha Metro runs from early until late most days, with a later start on Fridays. If you are staying central, hub near Msheireb where the Red, Gold, and Green lines meet. For transport details, use our <a href="/blog/doha-metro-2025-guide">Doha Metro Guide: Routes, Tickets, and Hours</a>. If you are still choosing a base, review <a href="/blog/renting-doha-west-bay-al-waab-2025">Where to Stay in Doha: Best Neighborhoods + Hotels</a> before you book.</p>
+        <ul>
+          <li><strong>Heat changes everything:</strong> do outdoor walks early morning or sunset, and keep museums and malls for midday.</li>
+          <li><strong>Friday rhythms matter:</strong> many venues pause around Friday prayers or shift opening windows.</li>
+          <li><strong>Cluster efficiently:</strong> Corniche + MIA + NMoQ + Souq Waqif can fit into one high-value day.</li>
+        </ul>
+
+        <h2 id="waterfront-loop">Waterfront Loop for Skyline Views and Photos</h2>
+        <h3 id="doha-corniche">Doha Corniche</h3>
+        <p>If you only do one walk in Doha, do this one. The Corniche is Doha's iconic crescent waterfront promenade, about 7 km, with skyline views, parks, and dhow-filled bay views.</p>
+        <p><strong>Time needed:</strong> 45-120 minutes.</p>
+        <p><strong>Practical tips:</strong> go at sunset for skyline color, or after dark when the bay lights up. If you want a shorter walk, pick one segment near a metro station and keep moving to your next stop.</p>
+        <p><strong>Nearby transit/dining:</strong> nearby metro points vary by segment; common options include West Bay QIC, Corniche, and Al Bidda zones.</p>
+
+        <h3 id="mina-district">Mina District at Old Doha Port</h3>
+        <p>Mina District is one of Doha's most camera-friendly marina areas: colorful lanes, a waterfront promenade, and a market-and-cafes vibe built for easy evenings.</p>
+        <p><strong>Time needed:</strong> 60-120 minutes.</p>
+        <p><strong>Practical tips:</strong> golden hour is best for photos. If seafood is your focus, plan around fish market and nearby restaurant timing.</p>
+        <p><strong>Nearby transit/dining:</strong> many casual cafes and restaurants in the district; pair this stop with Corniche or Souq Waqif in the same day.</p>
+
+        <h2 id="must-see-museums">Two Museums That Define Doha</h2>
+        <h3 id="mia">Museum of Islamic Art</h3>
+        <p>This is a true do-not-skip museum: a landmark building on the waterfront with galleries and park views that feel like part of the visit.</p>
+        <p><strong>Time needed:</strong> 90-150 minutes.</p>
+        <p><strong>Practical tips:</strong> parking can fill quickly on weekends and major event days, so taxi or metro is often faster for first-time visitors.</p>
+        <p><strong>Nearby transit/dining:</strong> easy taxi access, shuttle options, and on-site food ranging from casual cafe stops to full-service dining.</p>
+
+        <h3 id="nmoq">National Museum of Qatar</h3>
+        <p>Doha's best big-picture museum experience. The desert-rose inspired design and visual storytelling make this a high-return cultural stop for most travelers.</p>
+        <p><strong>Time needed:</strong> 2-3 hours.</p>
+        <p><strong>Practical tips:</strong> check closure days and last-entry cutoffs before you go. Arriving too late usually means rushing a museum that deserves real time.</p>
+        <p><strong>Nearby transit/dining:</strong> Gold Line access via National Museum station; easy to pair with Corniche or Souq Waqif afterward.</p>
+
+        <h2 id="markets-and-old-doha">Markets and Old Doha at Its Best</h2>
+        <h3 id="souq-waqif">Souq Waqif</h3>
+        <p>This is where Doha feels most alive: spice stalls, crafts, cafes, and alleyways that reward wandering without a strict checklist.</p>
+        <p><strong>Time needed:</strong> 2-3 hours, longer if you add a full dinner and slow evening walk.</p>
+        <p><strong>Practical tips:</strong> go after dusk. Evening is usually the most vibrant window for atmosphere, photos, and people-watching.</p>
+        <p><strong>Nearby transit/dining:</strong> Gold Line access via Souq Waqif station, with many options from quick snacks to late-night cafes.</p>
+        <p><strong>Live-check note:</strong> Ramadan and event periods can change operating hours sharply, so confirm the latest timing before arrival.</p>
+
+        <h3 id="msheireb">Msheireb Downtown Doha</h3>
+        <p>Msheireb is a modern district designed as a walkable "new old town" next to Souq Waqif, with museums, cafes, and clean urban planning.</p>
+        <p><strong>Time needed:</strong> 60-120 minutes.</p>
+        <p><strong>Practical tips:</strong> use this as a pre- or post-Souq anchor. It is one of the easiest same-evening pairings in central Doha.</p>
+        <p><strong>Nearby transit/dining:</strong> direct metro access at Msheireb station and plenty of al fresco dining choices in the area.</p>
+
+        <h2 id="culture-and-beach">Culture-and-Beach Day Without Leaving the City</h2>
+        <h3 id="katara">Katara Cultural Village</h3>
+        <p>Katara works as a compact culture campus where you can move from architecture to galleries to amphitheatre, then finish with beach time.</p>
+        <p><strong>Time needed:</strong> 2-4 hours.</p>
+        <p><strong>Practical tips:</strong> go earlier for lower crowd density and cleaner photos, or late afternoon into evening for a livelier energy.</p>
+        <p><strong>Nearby transit/dining:</strong> Red Line access via Katara station, with many cafes and restaurants in walking distance.</p>
+
+        <h2 id="marina-evenings">Marina Evenings: Luxury Strolls and Big Malls</h2>
+        <h3 id="the-pearl">The Pearl-Qatar</h3>
+        <p>The Pearl is Doha's marina and lifestyle island for relaxed walking, people-watching, dining, and architecture-focused photo stops.</p>
+        <p><strong>Time needed:</strong> 2-3 hours.</p>
+        <p><strong>Practical tips:</strong> treat it as a neighborhood, not a checklist. Pick one zone (marina, canals, or central plaza) and enjoy it slowly.</p>
+        <p><strong>Nearby transit/dining:</strong> taxi or ride-hail is usually easiest; often paired with Katara or Lusail in one day.</p>
+
+        <h3 id="place-vendome">Place Vendome Mall</h3>
+        <p>If you want a high-impact indoor evening with AC, Place Vendome combines luxury retail with show elements including fountain and laser programming.</p>
+        <p><strong>Time needed:</strong> 2-3 hours.</p>
+        <p><strong>Practical tips:</strong> if fountain timing is your goal, target evening windows and choose canal-side seating for a better view.</p>
+        <p><strong>Nearby transit/dining:</strong> metro to Legtaifiya, then Lusail Tram (Orange Line) to Lusail Central station near the mall.</p>
+
+        <h2 id="desert-escape">Desert Escape That Is Actually Worth the Effort</h2>
+        <h3 id="khor-al-adaid">Khor Al Adaid (Inland Sea)</h3>
+        <p>Qatar's signature nature trip: dunes meeting water in a landscape that feels surreal in person.</p>
+        <p><strong>Time needed:</strong> 6-8 hours.</p>
+        <p><strong>Practical tips:</strong> do not attempt this in a standard car. A 4x4 with an experienced off-road driver is essential, and tire pressure management matters.</p>
+        <p><strong>Nearby transit/dining:</strong> no standard public transit to the site. Book a desert tour or travel with an experienced driver and bring water plus sun protection.</p>
+
+        <h2 id="green-and-indoor-breaks">Green and Indoor Breaks When the Heat Wins</h2>
+        <h3 id="al-bidda-park">Al Bidda Park</h3>
+        <p>A practical central reset stop with skyline views, sports facilities, and fast access from Corniche-adjacent zones.</p>
+        <p><strong>Time needed:</strong> 60-120 minutes.</p>
+        <p><strong>Practical tips:</strong> use it between museums and evening souq plans when you need low-stress open space.</p>
+        <p><strong>Nearby transit/dining:</strong> closest metro is Al Bidda; food options are available in and around the park area.</p>
+
+        <h3 id="aspire-villaggio">Aspire Park + Villaggio Mall</h3>
+        <p>This is one of Doha's best outdoor-indoor combos: big green park time first, then a quick shift to mall entertainment and dinner.</p>
+        <p><strong>Time needed:</strong> 2-4 hours combined.</p>
+        <p><strong>Practical tips:</strong> do the park in late afternoon and move to Villaggio for dinner, rides, cinema, or family activities.</p>
+        <p><strong>Nearby transit/dining:</strong> Gold Line to Al Aziziyah for Aspire Park, with Villaggio accessible by short taxi/metro connection.</p>
+
+        <h2 id="live-check-essentials">Live-Check Essentials Before You Go</h2>
+        <p>These details are high-change and should always be verified close to your travel date, especially after <strong>March 2, 2026</strong>:</p>
+        <ul>
+          <li><strong>Airport status and alerts:</strong> <a href="https://dohahamadairport.com/" target="_blank" rel="noopener noreferrer">Hamad International Airport</a></li>
+          <li><strong>Attraction and transport guidance:</strong> <a href="https://visitqatar.com/" target="_blank" rel="noopener noreferrer">Visit Qatar</a></li>
+          <li><strong>Museum visit planning:</strong> <a href="https://mia.org.qa/en/" target="_blank" rel="noopener noreferrer">Museum of Islamic Art</a></li>
+          <li><strong>Events and dates:</strong> <a href="https://www.qatartourism.com/en/events-calendar" target="_blank" rel="noopener noreferrer">Qatar Tourism Events Calendar</a></li>
+          <li><strong>Traveler timing signals:</strong> <a href="https://www.tripadvisor.com/Tourism-g294008-Doha-Vacations.html" target="_blank" rel="noopener noreferrer">TripAdvisor Doha</a></li>
+        </ul>
+        <p>Also keep your stopover logistics tight with the <a href="/blog/ultimate-doha-layover-24-48-hours">Doha Stopover Guide (24-72 Hours)</a>, and use the <a href="/blog/doha-metro-2025-guide">Doha Metro Guide</a> for route planning on the ground.</p>
+      `,
+      tableOfContents: [
+        { title: 'Plan Your Doha Days', id: 'plan-your-days' },
+        { title: 'Waterfront Loop for Skyline Views and Photos', id: 'waterfront-loop' },
+        { title: 'Two Museums That Define Doha', id: 'must-see-museums' },
+        { title: 'Markets and Old Doha at Its Best', id: 'markets-and-old-doha' },
+        { title: 'Culture-and-Beach Day Without Leaving the City', id: 'culture-and-beach' },
+        { title: 'Marina Evenings: Luxury Strolls and Big Malls', id: 'marina-evenings' },
+        { title: 'Desert Escape That Is Actually Worth the Effort', id: 'desert-escape' },
+        { title: 'Green and Indoor Breaks When the Heat Wins', id: 'green-and-indoor-breaks' },
+        { title: 'Live-Check Essentials Before You Go', id: 'live-check-essentials' }
+      ],
+      tags: ['things to do in doha', 'best things to do in doha', 'doha itinerary', 'souq waqif', 'museum of islamic art doha', 'national museum of qatar', 'doha corniche', 'katara cultural village', 'the pearl qatar', 'old doha port mina district', 'doha metro', 'khor al adaid inland sea']
+    },
+
     'things-to-do-doha-layover': {
       id: '13',
       title: '10 Things To Do in Doha on a Layover',
