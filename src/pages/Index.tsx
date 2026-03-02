@@ -9,7 +9,8 @@ import { categoryToSlug, getBlogList, getCategoryCounts } from '@/lib/blog';
 
 const Index = () => {
   const posts = useMemo(() => getBlogList(), []);
-  const featuredBlogs = useMemo(() => posts.slice(0, 4), [posts]);
+  const latestBlog = posts[0];
+  const featuredBlogs = useMemo(() => posts.slice(1, 5), [posts]);
   const categories = useMemo(() => getCategoryCounts(posts), [posts]);
 
   const structuredData = useMemo(
@@ -66,7 +67,22 @@ const Index = () => {
 
       <section className="featured-blogs py-16">
         <div className="content-container">
-          <h2 className="text-3xl font-bold font-heading mb-8 text-qatar-maroon">Featured Articles</h2>
+          <h2 className="text-3xl font-bold font-heading mb-8 text-qatar-maroon">Latest Article</h2>
+          {latestBlog && (
+            <div className="mb-8">
+              <BlogCard
+                key={latestBlog.id}
+                id={latestBlog.id}
+                title={latestBlog.title}
+                excerpt={latestBlog.excerpt}
+                imageUrl={latestBlog.imageUrl}
+                category={latestBlog.category}
+                date={latestBlog.date}
+                slug={latestBlog.slug}
+              />
+            </div>
+          )}
+          <h3 className="text-2xl font-bold font-heading mb-6 text-qatar-maroon">More Recent Articles</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {featuredBlogs.map((blog) => (
               <BlogCard

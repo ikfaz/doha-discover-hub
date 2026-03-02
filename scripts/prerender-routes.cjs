@@ -343,14 +343,18 @@ const writeRoute = (html, routePath) => {
 };
 
 const buildPages = (blogPosts, tours, topicHubs, primaryHubBySlug) => {
+  const latestPosts = blogPosts.slice(0, 5);
+  const latestLinks = latestPosts
+    .map((post) => `<li><a href="/blog/${post.slug}">${escapeHtml(post.title)}</a></li>`)
+    .join("");
+
   const pages = [
     {
       path: "/",
       title: "Experience Doha - Ultimate Guide to Qatar Travel & Attractions 2026",
       description:
         "Discover the best things to do in Doha, Qatar. Expert guides on attractions, culture, food, layovers, and experiences.",
-      bodyHtml:
-        '<main><h1>Experience Doha</h1><p>Guides for attractions, layovers, expat life, and local experiences in Qatar.</p><p><a href="/blog">Read the latest blog posts</a></p></main>',
+      bodyHtml: `<main><h1>Experience Doha</h1><p>Guides for attractions, layovers, expat life, and local experiences in Qatar.</p><h2>Latest Articles</h2><ul>${latestLinks}</ul><p><a href="/blog">Read all blog posts</a></p></main>`,
       jsonLd: {
         "@context": "https://schema.org",
         "@type": "WebSite",
