@@ -12,6 +12,16 @@
   RewriteEngine On
   RewriteBase /
 
+  # One-hop canonical redirects for legacy /video paths on www host
+  RewriteCond %{HTTP_HOST} ^www\.experiencedoha\.com$ [NC]
+  RewriteRule ^video/?$ https://experiencedoha.com/blog [R=301,L]
+  RewriteCond %{HTTP_HOST} ^www\.experiencedoha\.com$ [NC]
+  RewriteRule ^videos/?$ https://experiencedoha.com/blog [R=301,L]
+
+  # Canonical host redirect (www -> apex)
+  RewriteCond %{HTTP_HOST} ^www\.experiencedoha\.com$ [NC]
+  RewriteRule ^(.*)$ https://experiencedoha.com/$1 [R=301,L]
+
   # 301 Redirects: Common typos and old paths
   RewriteRule ^blogs/(.+)$ /blog/$1 [R=301,L]
   RewriteRule ^blogs/?$ /blog [R=301,L]
@@ -21,7 +31,8 @@
   RewriteRule ^terms/?$ /terms-of-service [R=301,L]
   RewriteRule ^cookies/?$ /cookie-policy [R=301,L]
   RewriteRule ^budget/?$ /budget-planner [R=301,L]
-  RewriteRule ^video/?$ /videos [R=301,L]
+  RewriteRule ^video/?$ /blog [R=301,L]
+  RewriteRule ^videos/?$ /blog [R=301,L]
   RewriteRule ^photos/?$ /gallery [R=301,L]
 
   # React Router: Redirect all requests to index.html so the app handles routing

@@ -3,9 +3,24 @@ https://www.experiencedoha.com/video/ https://experiencedoha.com/blog 301!
 https://www.experiencedoha.com/videos https://experiencedoha.com/blog 301!
 https://www.experiencedoha.com/videos/ https://experiencedoha.com/blog 301!
 https://www.experiencedoha.com/* https://experiencedoha.com/:splat 301!
+
 /blogs /blog 301
 /blogs/:slug /blog/:slug 301
 /tours/:slug /tour/:slug 301
 /listings/:slug /listing/:slug 301
+/privacy /privacy-policy 301
+/privacy/ /privacy-policy 301
+/terms /terms-of-service 301
+/terms/ /terms-of-service 301
+/cookies /cookie-policy 301
+/cookies/ /cookie-policy 301
+/budget /budget-planner 301
+/budget/ /budget-planner 301
 /video /blog 301
+/video/ /blog 301
 /videos /blog 301
+/videos/ /blog 301
+/photos /gallery 301
+/photos/ /gallery 301
+
+/* /index.html 200
