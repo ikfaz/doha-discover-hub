@@ -45,6 +45,25 @@ const escapeHtml = (value) =>
     .replace(/'/g, "&#39;");
 
 const stripHtml = (value) => String(value ?? "").replace(/<[^>]*>/g, "").trim();
+const YEAR_TOKEN_REGEX = /\b(20\d{2})\b/g;
+
+const extractYear = (value) => {
+  const matches = [...String(value ?? "").matchAll(YEAR_TOKEN_REGEX)].map((match) => Number(match[1]));
+  if (matches.length === 0) {
+    return null;
+  }
+  return Math.max(...matches);
+};
+
+const getHistoricalSlugCanonicalNote = (slug, title) => {
+  const slugYear = extractYear(slug);
+  const titleYear = extractYear(title);
+  if (!slugYear || !titleYear || slugYear >= titleYear) {
+    return null;
+  }
+
+  return `This URL keeps its original ${slugYear} slug for link stability. Content is updated for ${titleYear}.`;
+};
 
 const getValue = (body, key) => {
   const match = body.match(new RegExp(`${key}:\\s*'((?:\\\\'|[^'])*)'`));
@@ -270,10 +289,12 @@ const buildPages = (blogPosts, tours) => {
 
   for (const post of blogPosts) {
     const description = stripHtml(post.description || post.excerpt || "");
+    const slugNote = getHistoricalSlugCanonicalNote(post.slug, post.title);
     const articleBody = [
       "<main><article>",
       `<h1>${escapeHtml(post.title)}</h1>`,
       `<p>${escapeHtml(description)}</p>`,
+      slugNote ? `<p><strong>Canonical URL note:</strong> ${escapeHtml(slugNote)}</p>` : "",
       `<p>Category: <a href="/blog/category/${slugify(post.category)}">${escapeHtml(post.category)}</a></p>`,
       `<p><a href="/blog">Back to Blog</a></p>`,
       "</article></main>",

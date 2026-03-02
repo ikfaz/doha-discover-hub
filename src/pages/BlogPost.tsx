@@ -21,6 +21,7 @@ import BlogCard from '@/components/BlogCard';
 import { loadBlogPostBySlug } from '@/data/articles/blog-post-loaders';
 import { categoryToSlug, getBlogList, tagToSlug } from '@/lib/blog';
 import { fixMojibake } from '@/lib/text';
+import { getHistoricalSlugCanonicalNote } from '@/lib/slug-strategy';
 import type { ReactNode } from 'react';
 import type { ArticleData } from '@/data/articles/types';
 
@@ -445,6 +446,7 @@ const BlogPost = () => {
   const safeAuthor = fixMojibake(post.author);
   const safeTags = post.tags.map((tag) => fixMojibake(tag));
   const safeContent = fixMojibake(post.content);
+  const historicalSlugNote = slug ? getHistoricalSlugCanonicalNote(slug, safeTitle) : null;
 
   const handleCopyLink = () => {
     navigator.clipboard.writeText(window.location.href);
@@ -569,6 +571,12 @@ const BlogPost = () => {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
               {/* Main Content */}
               <div className="lg:col-span-2">
+                {historicalSlugNote && (
+                  <div className="mb-8 rounded-lg border border-amber-200 bg-amber-50 p-4 text-sm text-amber-900">
+                    <strong>Canonical URL note:</strong> {historicalSlugNote}
+                  </div>
+                )}
+
                 {/* Table of Contents */}
                 {post.tableOfContents && (
                   <div className="mb-8 p-6 bg-gray-50 rounded-lg border-2 border-qatar-maroon">
