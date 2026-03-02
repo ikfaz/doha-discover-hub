@@ -65,6 +65,7 @@ const Blog = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      {/* Keep query-driven blog search UX; canonical URLs intentionally exclude q to avoid index bloat. */}
       <SEOHead
         title="Experience Doha Blog - Qatar Travel Guide & Expat Tips"
         description="Browse expert Doha guides, layover itineraries, expat tips, visa updates, and local insights. Search by topic, category, or tag."
