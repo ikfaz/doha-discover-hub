@@ -27,7 +27,7 @@ const BlogCategory = () => {
       <SEOHead
         title={`${title} - Experience Doha Blog`}
         description={description}
-        noindex={!currentCategory || currentCategory.count <= 1}
+        noindex
       />
       <NavBar />
 

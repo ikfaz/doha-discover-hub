@@ -38,7 +38,7 @@ export const SEOHead = ({
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="author" content={author} />
-      <meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow"} />
+      <meta name="robots" content={noindex ? "noindex,follow" : "index,follow"} />
       <link rel="canonical" href={canonicalUrl} />
 
       <meta property="og:type" content={type} />

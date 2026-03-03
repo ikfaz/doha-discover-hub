@@ -1,4 +1,4 @@
-import { useParams, Link, Navigate } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { lazy, Suspense, useEffect, useMemo, useState } from 'react';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
@@ -26,6 +26,7 @@ import { getPrimaryTopicMetaForPost } from '@/lib/topic-hubs';
 import { toJsonLdAuthor } from '@/lib/structured-data';
 import { fixMojibake } from '@/lib/text';
 import { getHistoricalSlugCanonicalNote } from '@/lib/slug-strategy';
+import NotFound from '@/pages/NotFound';
 import type { ReactNode } from 'react';
 import type { ArticleData } from '@/data/articles/types';
 
@@ -438,7 +439,7 @@ const BlogPost = () => {
   }
 
   if (!post) {
-    return <Navigate to="/blog" replace />;
+    return <NotFound />;
   }
 
   const articleDescription = fixMojibake(post.metaDescription || post.excerpt || post.content.substring(0, 155).replace(/<[^>]*>/g, ''));

@@ -73,6 +73,11 @@ const TourDetail = () => {
   if (!tour) {
     return (
       <div className="min-h-screen flex flex-col">
+        <SEOHead
+          title="Tour Not Found - Experience Doha"
+          description="The tour you are looking for was not found."
+          noindex
+        />
         <NavBar />
         <div className="flex-grow flex items-center justify-center">
           <div className="text-center px-4">

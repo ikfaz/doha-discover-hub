@@ -8,9 +8,10 @@ import SEOHead from '@/components/SEOHead';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { Search } from 'lucide-react';
-import { categoryToSlug, getBlogList, getCategoryCounts } from '@/lib/blog';
+import { categoryToSlug, getBlogList, getCategoryCounts, type BlogListItem } from '@/lib/blog';
 import { getTopicHubPosts, getTopicHubs } from '@/lib/topic-hubs';
 import { toJsonLdAuthor } from '@/lib/structured-data';
+import { PRIORITY_CRAWLED_NOT_INDEXED_SLUGS } from '@/data/seo-priority-slugs';
 
 const Blog = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -28,6 +29,12 @@ const Blog = () => {
 
   const query = searchParams.get('q')?.trim() ?? '';
   const queryLower = query.toLowerCase();
+  const priorityPosts = useMemo(() => {
+    const postsBySlug = new Map(posts.map((post) => [post.slug, post]));
+    return PRIORITY_CRAWLED_NOT_INDEXED_SLUGS
+      .map((slug) => postsBySlug.get(slug))
+      .filter((post): post is BlogListItem => Boolean(post));
+  }, [posts]);
 
   const filteredPosts = useMemo(
     () =>
@@ -170,6 +177,25 @@ const Blog = () => {
                       </div>
                     ))}
                   </div>
+                </div>
+
+                <div className="bg-white shadow-md rounded-lg p-6">
+                  <h3 className="text-xl font-bold mb-4 text-qatar-maroon">Priority Guides</h3>
+                  <p className="text-sm text-gray-600 mb-4">
+                    Start with these in-depth guides for Doha transit and stopover planning.
+                  </p>
+                  <ul className="space-y-2">
+                    {priorityPosts.map((post) => (
+                      <li key={post.slug}>
+                        <Link
+                          to={`/blog/${post.slug}`}
+                          className="text-gray-700 hover:text-qatar-maroon transition-colors"
+                        >
+                          {post.title}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
 
                 {featuredPost && (

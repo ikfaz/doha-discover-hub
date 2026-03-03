@@ -53,7 +53,7 @@ const BlogTopicHub = () => {
       <SEOHead
         title={`${title} - Experience Doha Blog`}
         description={description}
-        noindex={!currentHub || hubPosts.length <= 1}
+        noindex
         jsonLd={topicJsonLd}
       />
       <NavBar />

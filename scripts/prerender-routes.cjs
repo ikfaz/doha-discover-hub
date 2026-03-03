@@ -327,7 +327,7 @@ const withSeo = (templateHtml, page) => {
   );
 
   html = upsertMeta(html, "name", "description", page.description);
-  html = upsertMeta(html, "name", "robots", page.noindex ? "noindex, nofollow" : "index, follow");
+  html = upsertMeta(html, "name", "robots", page.noindex ? "noindex,follow" : "index,follow");
   html = upsertMeta(html, "property", "og:type", page.type || "website");
   html = upsertMeta(html, "property", "og:url", canonicalUrl);
   html = upsertMeta(html, "property", "og:title", page.title);
@@ -505,7 +505,7 @@ const buildPages = (blogPosts, tours, topicHubs, primaryHubBySlug) => {
       path: `/blog/category/${slug}`,
       title: `${info.name} in Doha - Experience Doha Blog`,
       description: categoryIntro,
-      noindex: info.posts.length <= 1,
+      noindex: true,
       bodyHtml: `<main><h1>${escapeHtml(info.name)}</h1><p>${escapeHtml(
         categoryIntro,
       )}</p><ul>${links}</ul><p><a href="/blog">View all posts</a></p></main>`,
@@ -524,7 +524,7 @@ const buildPages = (blogPosts, tours, topicHubs, primaryHubBySlug) => {
       path: `/blog/topic/${hub.slug}`,
       title: `${hub.title} - Experience Doha Blog`,
       description: hub.metaDescription || hub.intro,
-      noindex: hubPosts.length <= 1,
+      noindex: true,
       bodyHtml: `<main><h1>${escapeHtml(hub.title)}</h1><p>${escapeHtml(hub.intro)}</p><ul>${links}</ul><p><a href="/blog">View all posts</a></p></main>`,
       jsonLd:
         hubPosts.length > 0

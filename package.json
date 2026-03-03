@@ -17,7 +17,10 @@
     "postbuild": "npm run prerender:routes && npm run sitemap:images:generate && npm run sitemap:index:generate",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "links:crawl": "node scripts/crawl-rendered-links.cjs --json reports/link-crawl-report.json",
+    "links:crawl:strict": "node scripts/crawl-rendered-links.cjs --strict --json reports/link-crawl-report.json",
+    "links:crawl:live": "node scripts/crawl-rendered-links.cjs --live --json reports/link-crawl-live-report.json"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",

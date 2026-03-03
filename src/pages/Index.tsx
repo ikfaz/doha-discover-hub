@@ -5,13 +5,20 @@ import Footer from '@/components/Footer';
 import BlogCard from '@/components/BlogCard';
 import Newsletter from '@/components/Newsletter';
 import SEOHead from '@/components/SEOHead';
-import { categoryToSlug, getBlogList, getCategoryCounts } from '@/lib/blog';
+import { categoryToSlug, getBlogList, getCategoryCounts, type BlogListItem } from '@/lib/blog';
+import { PRIORITY_CRAWLED_NOT_INDEXED_SLUGS } from '@/data/seo-priority-slugs';
 
 const Index = () => {
   const posts = useMemo(() => getBlogList(), []);
   const latestBlog = posts[0];
   const featuredBlogs = useMemo(() => posts.slice(1, 5), [posts]);
   const categories = useMemo(() => getCategoryCounts(posts), [posts]);
+  const priorityPosts = useMemo(() => {
+    const postsBySlug = new Map(posts.map((post) => [post.slug, post]));
+    return PRIORITY_CRAWLED_NOT_INDEXED_SLUGS
+      .map((slug) => postsBySlug.get(slug))
+      .filter((post): post is BlogListItem => Boolean(post));
+  }, [posts]);
 
   const structuredData = useMemo(
     () => ({
@@ -114,6 +121,24 @@ const Index = () => {
               </svg>
             </Link>
           </div>
+        </div>
+      </section>
+
+      <section className="py-12">
+        <div className="content-container">
+          <h2 className="text-3xl font-bold font-heading mb-6 text-qatar-maroon">Essential Doha Layover Guides</h2>
+          <p className="text-muted-foreground mb-4">
+            High-priority guides with practical next steps for transit and short-stay planning.
+          </p>
+          <ul className="space-y-2">
+            {priorityPosts.map((post) => (
+              <li key={post.slug}>
+                <Link to={`/blog/${post.slug}`} className="text-qatar-maroon hover:text-qatar-gold transition-colors">
+                  {post.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
