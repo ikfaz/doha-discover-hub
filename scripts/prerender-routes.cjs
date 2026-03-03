@@ -9,6 +9,8 @@ const BLOG_META_PATH = path.join(ROOT_DIR, "src", "data", "articles", "blog-meta
 const TOURS_PATH = path.join(ROOT_DIR, "src", "data", "tours.ts");
 const TOPIC_HUBS_PATH = path.join(ROOT_DIR, "src", "data", "articles", "topic-hubs.json");
 const ARTICLE_PRIMARY_HUB_PATH = path.join(ROOT_DIR, "src", "data", "articles", "article-primary-hub.json");
+const DEFAULT_OG_IMAGE = `${SITE_URL}/og-default.jpg`;
+const DEFAULT_OG_IMAGE_TYPE = "image/jpeg";
 
 const MOJIBAKE_PATTERN = /[\u00C2\u00C3\u00D8\u00D9]|Ã¢/;
 
@@ -292,6 +294,7 @@ const upsertLinkRel = (html, rel, href) => {
 
 const withSeo = (templateHtml, page) => {
   const canonicalUrl = `${SITE_URL}${page.path}`;
+  const ogType = page.path.startsWith("/blog/") || page.path.startsWith("/tour/") ? "article" : "website";
   let html = templateHtml;
 
   html = upsertTag(
@@ -303,6 +306,16 @@ const withSeo = (templateHtml, page) => {
 
   html = upsertMeta(html, "name", "description", page.description);
   html = upsertMeta(html, "name", "robots", page.noindex ? "noindex, nofollow" : "index, follow");
+  html = upsertMeta(html, "property", "og:type", ogType);
+  html = upsertMeta(html, "property", "og:url", canonicalUrl);
+  html = upsertMeta(html, "property", "og:title", page.title);
+  html = upsertMeta(html, "property", "og:description", page.description);
+  html = upsertMeta(html, "property", "og:image", DEFAULT_OG_IMAGE);
+  html = upsertMeta(html, "property", "og:image:secure_url", DEFAULT_OG_IMAGE);
+  html = upsertMeta(html, "property", "og:image:type", DEFAULT_OG_IMAGE_TYPE);
+  html = upsertMeta(html, "property", "og:image:width", "1200");
+  html = upsertMeta(html, "property", "og:image:height", "630");
+  html = upsertMeta(html, "property", "og:site_name", "ExperienceDoha.com");
   html = upsertLinkRel(html, "canonical", canonicalUrl);
 
   const staticBody = page.bodyHtml || "";

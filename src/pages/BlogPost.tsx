@@ -454,6 +454,8 @@ const BlogPost = () => {
       <SEOHead 
         title={`${safeTitle} | Doha Guide`}
         description={articleDescription}
+        image={typeof post.imageUrl === 'string' ? post.imageUrl : undefined}
+        type="article"
       />
       <NavBar />
       

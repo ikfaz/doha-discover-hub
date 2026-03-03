@@ -49,6 +49,8 @@ const TourDetail = () => {
       <SEOHead
         title={`${tour.title} - Book from ${priceQAR} QAR | Experience Doha`}
         description={`${tour.subtitle}. ${tour.duration} tour with ${tour.rating}-star rating from ${tour.reviewCount} reviews. Book now from ${priceQAR} QAR per person.`}
+        image={toWebP(tour.heroImage)}
+        type="article"
       />
       <NavBar />
 
