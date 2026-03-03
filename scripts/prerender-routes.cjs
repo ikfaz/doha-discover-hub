@@ -116,8 +116,35 @@ const getValue = (body, key) => {
   return fixMojibake(match[1].replace(/\\'/g, "'").replace(/\\n/g, "\n"));
 };
 
+const parseImageImports = (source) => {
+  const importRegex = /import\s+(\w+)\s+from\s+['"]@\/assets\/([^'"?]+)(?:\?[^'"]*)?['"]/g;
+  const map = {};
+  for (const match of source.matchAll(importRegex)) {
+    map[match[1]] = match[2]; // variableName -> filename (e.g. "desert-safari-inland-sea.jpg")
+  }
+  return map;
+};
+
+const resolveBuiltAsset = (filename) => {
+  if (!fs.existsSync(path.join(DIST_DIR, "assets"))) {
+    return null;
+  }
+  const baseName = filename.replace(/\.[^.]+$/, "");
+  const files = fs.readdirSync(path.join(DIST_DIR, "assets"));
+  const match = files.find((f) => f.startsWith(baseName + "-") || f.startsWith(baseName + "."));
+  return match ? `${SITE_URL}/assets/${match}` : null;
+};
+
 const parseBlogMeta = () => {
   const source = fs.readFileSync(BLOG_META_PATH, "utf8");
+  const imageImports = parseImageImports(source);
+
+  // Build a cache of resolved asset URLs
+  const resolvedImages = {};
+  for (const [varName, filename] of Object.entries(imageImports)) {
+    resolvedImages[varName] = resolveBuiltAsset(filename);
+  }
+
   const blockRegex = /'([^']+)':\s*\{([\s\S]*?)\n\s*\},/g;
   const items = [];
 
@@ -130,6 +157,8 @@ const parseBlogMeta = () => {
     const body = match[2];
     const isoDateMatch = body.match(/isoDate:\s*'([^']+)'/);
     const isoModifiedDateMatch = body.match(/isoModifiedDate:\s*'([^']+)'/);
+    const imageVarMatch = body.match(/imageUrl:\s*(\w+)/);
+    const imageUrl = imageVarMatch ? resolvedImages[imageVarMatch[1]] || null : null;
 
     items.push({
       slug,
@@ -140,6 +169,7 @@ const parseBlogMeta = () => {
       author: getValue(body, "author") || "Experience Doha Team",
       isoDate: isoDateMatch ? isoDateMatch[1] : "",
       isoModifiedDate: isoModifiedDateMatch ? isoModifiedDateMatch[1] : "",
+      imageUrl,
     });
   }
 
@@ -442,6 +472,7 @@ const buildPages = (blogPosts, tours, topicHubs, primaryHubBySlug) => {
       path: `/blog/${post.slug}`,
       title: `${post.title} | Doha Guide`,
       description,
+      image: post.imageUrl || undefined,
       type: "article",
       publishedTime: post.isoDate || undefined,
       modifiedTime: post.isoModifiedDate || post.isoDate || undefined,
