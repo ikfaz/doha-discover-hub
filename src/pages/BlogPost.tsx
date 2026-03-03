@@ -29,6 +29,29 @@ import { getHistoricalSlugCanonicalNote } from '@/lib/slug-strategy';
 import type { ReactNode } from 'react';
 import type { ArticleData } from '@/data/articles/types';
 
+const SITE_URL = 'https://experiencedoha.com';
+
+const toAbsoluteImageUrl = (value?: string): string | undefined => {
+  if (typeof value !== 'string') {
+    return undefined;
+  }
+
+  const trimmed = value.trim();
+  if (!trimmed) {
+    return undefined;
+  }
+
+  if (/^https?:\/\//i.test(trimmed)) {
+    return trimmed;
+  }
+
+  if (trimmed.startsWith('/')) {
+    return `${SITE_URL}${trimmed}`;
+  }
+
+  return `${SITE_URL}/${trimmed.replace(/^\.?\//, '')}`;
+};
+
 const SchoolComparisonTool = lazy(() => import('@/components/SchoolComparisonTool'));
 const SchoolFeeCalculator = lazy(() => import('@/components/SchoolFeeCalculator'));
 const VisaChecklistGenerator = lazy(() => import('@/components/VisaChecklistGenerator'));
@@ -451,6 +474,7 @@ const BlogPost = () => {
   const safeDate = fixMojibake(post.date);
   const safeAuthor = fixMojibake(post.author);
   const safeContent = fixMojibake(post.content);
+  const seoImage = toAbsoluteImageUrl(typeof post.imageUrl === 'string' ? post.imageUrl : undefined);
   const historicalSlugNote = slug ? getHistoricalSlugCanonicalNote(slug, safeTitle) : null;
   const primaryTopicMeta = slug ? getPrimaryTopicMetaForPost(slug) : undefined;
 
@@ -462,7 +486,7 @@ const BlogPost = () => {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": safeTitle,
-    "image": typeof post.imageUrl === 'string' ? post.imageUrl : undefined,
+    "image": seoImage,
     "author": toJsonLdAuthor(safeAuthor),
     "publisher": {
       "@type": "Organization",
@@ -497,7 +521,7 @@ const BlogPost = () => {
       <SEOHead 
         title={`${safeTitle} | Doha Guide`}
         description={articleDescription}
-        image={typeof post.imageUrl === 'string' ? post.imageUrl : undefined}
+        image={seoImage}
         type="article"
         publishedTime={articlePublishedIsoDate}
         modifiedTime={articleModifiedIsoDate}

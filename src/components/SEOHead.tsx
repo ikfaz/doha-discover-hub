@@ -15,11 +15,33 @@ interface SEOHeadProps {
 }
 
 const BASE_URL = 'https://experiencedoha.com';
+const DEFAULT_IMAGE = `${BASE_URL}/og-default.jpg`;
+
+const toAbsoluteImageUrl = (value?: string): string | undefined => {
+  if (typeof value !== 'string') {
+    return undefined;
+  }
+
+  const trimmed = value.trim();
+  if (!trimmed) {
+    return undefined;
+  }
+
+  if (/^https?:\/\//i.test(trimmed)) {
+    return trimmed;
+  }
+
+  if (trimmed.startsWith('/')) {
+    return `${BASE_URL}${trimmed}`;
+  }
+
+  return `${BASE_URL}/${trimmed.replace(/^\.?\//, '')}`;
+};
 
 export const SEOHead = ({
   title = 'Experience Doha - Qatar Travel & Attractions Guide 2026',
   description = 'Your go-to Doha guide: attractions, layover tips, expat advice, food, and culture. Plan your perfect Qatar trip with 60+ expert articles.',
-  image = 'https://images.unsplash.com/photo-1496307653780-42ee777d4833?q=80&w=2670&auto=format&fit=crop',
+  image = DEFAULT_IMAGE,
   type = 'website',
   publishedTime,
   modifiedTime,
@@ -29,6 +51,7 @@ export const SEOHead = ({
 }: SEOHeadProps) => {
   const location = useLocation();
   const canonicalUrl = buildCanonicalUrl(BASE_URL, location.pathname, location.search);
+  const absoluteImage = toAbsoluteImageUrl(image) || DEFAULT_IMAGE;
 
   return (
     <Helmet>
@@ -42,7 +65,7 @@ export const SEOHead = ({
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
+      <meta property="og:image" content={absoluteImage} />
       <meta property="og:site_name" content="ExperienceDoha.com" />
       {publishedTime && <meta property="article:published_time" content={publishedTime} />}
       {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
@@ -51,7 +74,7 @@ export const SEOHead = ({
       <meta name="twitter:url" content={canonicalUrl} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
+      <meta name="twitter:image" content={absoluteImage} />
       <meta name="twitter:site" content="@experiencedoha" />
 
       {jsonLd && (Array.isArray(jsonLd) ? jsonLd : [jsonLd]).map((ld, i) => (

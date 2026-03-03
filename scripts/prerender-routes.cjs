@@ -9,9 +9,9 @@ const BLOG_META_PATH = path.join(ROOT_DIR, "src", "data", "articles", "blog-meta
 const TOURS_PATH = path.join(ROOT_DIR, "src", "data", "tours.ts");
 const TOPIC_HUBS_PATH = path.join(ROOT_DIR, "src", "data", "articles", "topic-hubs.json");
 const ARTICLE_PRIMARY_HUB_PATH = path.join(ROOT_DIR, "src", "data", "articles", "article-primary-hub.json");
+const DIST_ASSETS_DIR = path.join(DIST_DIR, "assets");
 
-const DEFAULT_IMAGE =
-  "https://images.unsplash.com/photo-1496307653780-42ee777d4833?q=80&w=2670&auto=format&fit=crop";
+const DEFAULT_IMAGE = `${SITE_URL}/og-default.jpg`;
 
 const MOJIBAKE_PATTERN = /[\u00C2\u00C3\u00D8\u00D9]|Ã¢/;
 
@@ -116,8 +116,49 @@ const getValue = (body, key) => {
   return fixMojibake(match[1].replace(/\\'/g, "'").replace(/\\n/g, "\n"));
 };
 
+const parseBlogImageImportMap = (source) => {
+  const map = new Map();
+  const importRegex = /import\s+([A-Za-z0-9_$]+)\s+from\s+['"]@\/assets\/([^'"]+?)(?:\?url)?['"];?/g;
+
+  for (const match of source.matchAll(importRegex)) {
+    const importVar = match[1];
+    const sourceAssetPath = match[2];
+    map.set(importVar, path.basename(sourceAssetPath));
+  }
+
+  return map;
+};
+
+const buildDistAssetUrlMap = () => {
+  const map = new Map();
+  if (!fs.existsSync(DIST_ASSETS_DIR)) {
+    return map;
+  }
+
+  const files = fs.readdirSync(DIST_ASSETS_DIR, { withFileTypes: true });
+  for (const file of files) {
+    if (!file.isFile()) {
+      continue;
+    }
+
+    const distFile = file.name;
+    const extension = path.extname(distFile).toLowerCase();
+    if (!extension) {
+      continue;
+    }
+
+    const stem = distFile.slice(0, -extension.length);
+    const unhashedStem = stem.replace(/-[a-z0-9]{6,}$/i, "");
+    const sourceFileName = `${unhashedStem}${extension}`;
+    map.set(sourceFileName, `${SITE_URL}/assets/${distFile}`);
+  }
+
+  return map;
+};
+
 const parseBlogMeta = () => {
   const source = fs.readFileSync(BLOG_META_PATH, "utf8");
+  const imageImportMap = parseBlogImageImportMap(source);
   const blockRegex = /'([^']+)':\s*\{([\s\S]*?)\n\s*\},/g;
   const items = [];
 
@@ -130,6 +171,9 @@ const parseBlogMeta = () => {
     const body = match[2];
     const isoDateMatch = body.match(/isoDate:\s*'([^']+)'/);
     const isoModifiedDateMatch = body.match(/isoModifiedDate:\s*'([^']+)'/);
+    const imageRefMatch = body.match(/imageUrl:\s*([A-Za-z0-9_$]+)/);
+    const imageImportVar = imageRefMatch ? imageRefMatch[1] : "";
+    const imageFileName = imageImportVar ? imageImportMap.get(imageImportVar) || "" : "";
 
     items.push({
       slug,
@@ -140,6 +184,7 @@ const parseBlogMeta = () => {
       author: getValue(body, "author") || "Experience Doha Team",
       isoDate: isoDateMatch ? isoDateMatch[1] : "",
       isoModifiedDate: isoModifiedDateMatch ? isoModifiedDateMatch[1] : "",
+      imageFileName,
     });
   }
 
@@ -279,6 +324,18 @@ const upsertMeta = (html, attr, key, content) => {
   );
 };
 
+const upsertMetaMany = (html, attr, key, values) => {
+  const nonEmptyValues = values.filter((value) => value && String(value).trim());
+  if (nonEmptyValues.length === 0) {
+    return html;
+  }
+
+  const regex = new RegExp(`<meta\\s+${attr}=["']${key}["'][^>]*>\\s*`, "gi");
+  const withoutExisting = html.replace(regex, "");
+  const tags = nonEmptyValues.map((value) => `<meta ${attr}="${key}" content="${escapeHtml(value)}" />`).join("\n");
+  return withoutExisting.replace("</head>", `${tags}\n</head>`);
+};
+
 const upsertLinkRel = (html, rel, href) => {
   const escaped = escapeHtml(href);
   const regex = new RegExp(`<link\\s+rel=["']${rel}["'][^>]*>`, "i");
@@ -287,6 +344,11 @@ const upsertLinkRel = (html, rel, href) => {
 
 const withSeo = (templateHtml, page) => {
   const canonicalUrl = `${SITE_URL}${page.path}`;
+  const primaryImage = page.image || DEFAULT_IMAGE;
+  const fallbackImage =
+    page.fallbackImage && page.fallbackImage !== primaryImage ? page.fallbackImage : undefined;
+  const ogImages = fallbackImage ? [primaryImage, fallbackImage] : [primaryImage];
+  const twitterImage = fallbackImage || primaryImage;
   let html = templateHtml;
 
   html = upsertTag(
@@ -302,7 +364,7 @@ const withSeo = (templateHtml, page) => {
   html = upsertMeta(html, "property", "og:url", canonicalUrl);
   html = upsertMeta(html, "property", "og:title", page.title);
   html = upsertMeta(html, "property", "og:description", page.description);
-  html = upsertMeta(html, "property", "og:image", page.image || DEFAULT_IMAGE);
+  html = upsertMetaMany(html, "property", "og:image", ogImages);
   if (page.publishedTime) {
     html = upsertMeta(html, "property", "article:published_time", page.publishedTime);
   }
@@ -313,7 +375,7 @@ const withSeo = (templateHtml, page) => {
   html = upsertMeta(html, "name", "twitter:url", canonicalUrl);
   html = upsertMeta(html, "name", "twitter:title", page.title);
   html = upsertMeta(html, "name", "twitter:description", page.description);
-  html = upsertMeta(html, "name", "twitter:image", page.image || DEFAULT_IMAGE);
+  html = upsertMeta(html, "name", "twitter:image", twitterImage);
   html = upsertLinkRel(html, "canonical", canonicalUrl);
 
   const staticBody = page.bodyHtml || "";
@@ -342,7 +404,7 @@ const writeRoute = (html, routePath) => {
   fs.writeFileSync(path.join(targetDir, "index.html"), html, "utf8");
 };
 
-const buildPages = (blogPosts, tours, topicHubs, primaryHubBySlug) => {
+const buildPages = (blogPosts, tours, topicHubs, primaryHubBySlug, distAssetUrlMap) => {
   const latestPosts = blogPosts.slice(0, 5);
   const latestLinks = latestPosts
     .map((post) => `<li><a href="/blog/${post.slug}">${escapeHtml(post.title)}</a></li>`)
@@ -417,6 +479,10 @@ const buildPages = (blogPosts, tours, topicHubs, primaryHubBySlug) => {
 
   for (const post of blogPosts) {
     const description = stripHtml(post.description || post.excerpt || "");
+    const resolvedPostImage = post.imageFileName ? distAssetUrlMap.get(post.imageFileName) : undefined;
+    const postImage = resolvedPostImage || DEFAULT_IMAGE;
+    const isSvgImage = path.extname(post.imageFileName || "").toLowerCase() === ".svg";
+    const fallbackImage = isSvgImage && resolvedPostImage ? DEFAULT_IMAGE : undefined;
     const slugNote = getHistoricalSlugCanonicalNote(post.slug, post.title);
     const parentHubSlug = primaryHubBySlug[post.slug];
     const parentHub = parentHubSlug ? topicHubBySlug.get(parentHubSlug) : null;
@@ -445,11 +511,14 @@ const buildPages = (blogPosts, tours, topicHubs, primaryHubBySlug) => {
       type: "article",
       publishedTime: post.isoDate || undefined,
       modifiedTime: post.isoModifiedDate || post.isoDate || undefined,
+      image: postImage,
+      fallbackImage,
       bodyHtml: articleBody,
       jsonLd: {
         "@context": "https://schema.org",
         "@type": "Article",
         headline: post.title,
+        image: postImage,
         datePublished: post.isoDate || undefined,
         dateModified: post.isoModifiedDate || post.isoDate || undefined,
         author: toJsonLdAuthor(post.author || "Experience Doha Team"),
@@ -549,7 +618,8 @@ const main = () => {
   const tours = parseTours();
   const topicHubs = parseTopicHubs();
   const primaryHubBySlug = parsePrimaryHubMap();
-  const pages = buildPages(blogPosts, tours, topicHubs, primaryHubBySlug);
+  const distAssetUrlMap = buildDistAssetUrlMap();
+  const pages = buildPages(blogPosts, tours, topicHubs, primaryHubBySlug, distAssetUrlMap);
 
   for (const page of pages) {
     const html = withSeo(template, page);
