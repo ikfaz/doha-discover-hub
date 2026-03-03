@@ -5,8 +5,216 @@ import stopoverProgramImage from '@/assets/stopover-program.jpg';
 import top10AttractionsImage from '@/assets/top-10-attractions.jpg';
 import bestThingsToDoInDohaCoverImage from '@/assets/best-things-to-do-in-doha-cover.svg?url';
 import dohaStopoverGuide1296CoverImage from '@/assets/doha-stopover-guide-12-96-hours-cover.svg?url';
+import hamadFlightStatusClosuresUpdate2026CoverImage from '@/assets/hamad-international-airport-flight-status-closures-update-2026-cover.svg?url';
 
 export const postsChunk9: Record<string, ArticleData> = {
+    'hamad-international-airport-flight-status-closures-update-2026': {
+      id: '65',
+      title: 'Hamad International Airport Flight Status and Closures (2026 Update)',
+      date: 'March 3, 2026',
+      isoDate: '2026-03-03',
+      metaDescription: 'Need live updates for Hamad International Airport (DOH)? This practical guide explains how to check real-time arrivals/departures, what "flight operations suspended" means, and what to do during closures. Includes first-day action plan, rebooking/refund steps, passenger rights basics (EU + Montreal Convention), airport services (Wi-Fi, medical, transit hotel), and a disruption comparison table.',
+      excerpt: 'Hamad International Airport closures are usually driven by safety decisions upstream (airspace restrictions, security events, severe weather). This guide shows where to check live status, what suspension notices mean, and how to handle rebooking, refunds, and rights without wasting hours.',
+      author: 'Experience Doha Team',
+      readTime: '17 min read',
+      category: 'Attractions',
+      imageUrl: hamadFlightStatusClosuresUpdate2026CoverImage,
+      content: `
+        <p><strong>Executive summary:</strong> Hamad International Airport closures are usually driven by safety decisions upstream (airspace restrictions, security events, severe weather), and the fastest way to avoid wasting hours is to verify status via official channels before you move. This guide shows exactly where to check live flight status, what "suspended" really means, and how to handle rebooking, refunds, and basic passenger rights without guesswork.</p>
+
+        <h2 id="what-suspended-means">What "Suspended" and "Closure" Really Mean at DOH</h2>
+        <p>When Hamad International Airport posts that all aircraft movements are suspended, it generally means arrivals and departures are halted. It does not mean the terminal instantly empties, and it does not mean your airline is cancelling for convenience.</p>
+        <p>In the most recent major disruption in late February 2026, airport messaging linked the suspension to temporary Qatari airspace closure and emphasized safety first.</p>
+        <ul>
+          <li><strong>Expect knock-on delays after reopening:</strong> aircraft and crews need time to reposition.</li>
+          <li><strong>Do not travel to the airport unless told to:</strong> official advisories may ask passengers not to proceed.</li>
+          <li><strong>Treat status as live data:</strong> conditions can change quickly during disruptions.</li>
+        </ul>
+        <p><strong>Live-check required:</strong> confirm whether DOH is operating normally, partially, or suspended before any ground movement.</p>
+
+        <h2 id="check-live-status">Check Live Status Quickly and Correctly</h2>
+        <h3 id="portal-first">Use the official flight status portal first</h3>
+        <p>Start with Hamad International Airport Arrivals and Departures. Search by flight number, verify date, and verify local time (Qatar Standard Time, GMT+3).</p>
+        <ul>
+          <li><a href="https://dohahamadairport.com/flights/arrivals" target="_blank" rel="noopener noreferrer">Hamad Airport Arrivals</a></li>
+          <li><a href="https://dohahamadairport.com/flights/departures" target="_blank" rel="noopener noreferrer">Hamad Airport Departures</a></li>
+        </ul>
+        <p>If the portal shows no flights found during a known disruption period, treat that as a strong signal and verify through alerts plus your airline.</p>
+
+        <h3 id="alerts-social">Check airport alerts and official social channels</h3>
+        <p>The airport alerts page and official airport social channels are the fastest source of direct operational statements.</p>
+        <ul>
+          <li><a href="https://dohahamadairport.com/airport-guide/alerts" target="_blank" rel="noopener noreferrer">Hamad Airport Alerts</a></li>
+          <li>Official airport channels on X and Instagram</li>
+        </ul>
+
+        <h3 id="airline-verify">Then verify with the operating airline</h3>
+        <p>Airspace decisions come from authorities, but your operating airline controls rebooking windows, fare rules, and refund eligibility.</p>
+
+        <h2 id="first-day-response-plan">First-Day Response Plan When Flights Are Disrupted</h2>
+        <p>When operations are suspended, avoid false moves. Use this timeline:</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Time window</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>0-30 min</td>
+              <td>Confirm status via DOH portal plus airport alerts. Do not travel to the airport without confirmation.</td>
+            </tr>
+            <tr>
+              <td>30-120 min</td>
+              <td>Open airline app/site and request rerouting or refund. Capture screenshots of policy language and timestamps.</td>
+            </tr>
+            <tr>
+              <td>2-6 hours</td>
+              <td>Secure accommodation (airside transit hotel if eligible, or landside if entry is allowed) and keep receipts.</td>
+            </tr>
+            <tr>
+              <td>6-12 hours</td>
+              <td>Recheck every few hours and keep bookings consolidated under one plan.</td>
+            </tr>
+            <tr>
+              <td>12-24 hours</td>
+              <td>Prepare for restart delays, gate changes, and re-sequenced connections after reopening.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3 id="common-actions">Common passenger actions (illustrative)</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Action</th>
+              <th>Illustrative share</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Check official status</td>
+              <td>35%</td>
+            </tr>
+            <tr>
+              <td>Rebook or request refund</td>
+              <td>30%</td>
+            </tr>
+            <tr>
+              <td>Secure hotel or rest plan</td>
+              <td>20%</td>
+            </tr>
+            <tr>
+              <td>Wait and monitor updates</td>
+              <td>15%</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3 id="safety-basics">Safety basics</h3>
+        <p>If staff issue movement restrictions or evacuation instructions, follow airport directions first and handle bookings second.</p>
+
+        <h2 id="rebooking-refunds">Rebooking and Refunds: What to Ask For</h2>
+        <p>Start with what your airline is offering right now. Temporary fee-free windows can close quickly.</p>
+        <ul>
+          <li><strong>If your flight is cancelled:</strong> request rerouting or refund based on your real constraints.</li>
+          <li><strong>If you are on separate tickets:</strong> secure the hardest leg first, usually the long-haul segment.</li>
+          <li><strong>Capture evidence:</strong> keep screenshots of policy pages, submitted requests, and timestamps.</li>
+        </ul>
+        <p><strong>Live-check required:</strong> airline flexibility policies can shift hour to hour during disruption.</p>
+
+        <h2 id="passenger-rights">Passenger Rights and Compensation in Plain English</h2>
+        <h3 id="rights-baseline">Rights differ by jurisdiction and disruption cause</h3>
+        <p>Passenger-rights regimes are not uniform. Care/assistance and compensation often depend on route, carrier, and whether the event was inside airline control.</p>
+
+        <h3 id="eu-context">If your itinerary touches the EU</h3>
+        <p>EU rights guidance generally requires refund or rerouting options after cancellation, and reimbursement rights may apply for long delays at departure.</p>
+
+        <h3 id="montreal-context">Montreal Convention for international flights</h3>
+        <p>The Montreal Convention is the baseline framework for international delay-related claims. Keep records, receipts, and a clear event timeline.</p>
+
+        <h2 id="stuck-at-airport">If You Are Stuck at the Airport: Use These Services</h2>
+        <ul>
+          <li><strong>Wi-Fi and connectivity:</strong> keep access stable so you can continue rebooking and payment actions.</li>
+          <li><strong>Medical support:</strong> ask information desks for nearest 24/7 medical points.</li>
+          <li><strong>Transit rest:</strong> <a href="https://www.oryxairporthotel.com/" target="_blank" rel="noopener noreferrer">Oryx Airport Hotel</a> can help if landside movement is not ideal.</li>
+          <li><strong>Baggage tracking:</strong> use official airline baggage tools with booking reference or bag tag number.</li>
+          <li><strong>Metro:</strong> use metro after operations normalize, not during active advisories telling passengers not to proceed.</li>
+        </ul>
+
+        <h2 id="stuck-outside-airport">If You Are Stuck Outside: Hotels, Stopovers, and Entry Rules</h2>
+        <p>If official messaging says do not proceed to the terminal, follow it. If eligible to enter Qatar, use the delay as a managed stopover.</p>
+        <ul>
+          <li>Check entry pathway on <a href="https://visitqatar.com/" target="_blank" rel="noopener noreferrer">Visit Qatar</a>.</li>
+          <li>Verify visa conditions on official sources before paying non-refundable costs.</li>
+          <li>For transit rules context, read <a href="/blog/qatar-visa-rules-expats-2025">Qatar Visa &amp; Hayya Guide for Transit Travelers</a>.</li>
+          <li>If you can leave the airport safely, use <a href="/blog/doha-stopover-guide-12-96-hours">Doha Stopover Guide for 12-96 Hours</a> and <a href="/blog/best-things-to-do-in-doha">Best Things to Do in Doha</a>.</li>
+        </ul>
+
+        <h2 id="disruption-types-compared">Disruption Types Compared and Best Immediate Action</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Disruption type</th>
+              <th>Typical duration pattern (rule of thumb)</th>
+              <th>Passenger impact</th>
+              <th>Best immediate action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Weather</td>
+              <td>Often hours, sometimes longer</td>
+              <td>Delays, diversions, missed connections</td>
+              <td>Confirm on DOH portal and airline app. Avoid self-cancelling too early.</td>
+            </tr>
+            <tr>
+              <td>Airspace closure or security restrictions</td>
+              <td>Uncertain; may last until authorities reopen airspace</td>
+              <td>Widespread cancellations and long restart delays</td>
+              <td>Follow airport alerts, avoid terminal travel if advised, request reroute/refund early.</td>
+            </tr>
+            <tr>
+              <td>Technical outages (airport/ATC/IT)</td>
+              <td>Often hours, sometimes rolling waves</td>
+              <td>Check-in and baggage delays, gate changes, long queues</td>
+              <td>Use official channels, secure connectivity, keep receipts.</td>
+            </tr>
+            <tr>
+              <td>Strikes</td>
+              <td>One day to multi-day, varies by jurisdiction</td>
+              <td>Cancellations and reduced service capacity</td>
+              <td>Review airline policy quickly and lock alternatives early.</td>
+            </tr>
+          </tbody>
+        </table>
+        <p><strong>Data note:</strong> duration patterns are planning heuristics, not guarantees.</p>
+
+        <h2 id="official-sources">Official Sources to Bookmark</h2>
+        <ul>
+          <li><a href="https://dohahamadairport.com/flights/arrivals" target="_blank" rel="noopener noreferrer">Hamad International Airport Arrivals</a></li>
+          <li><a href="https://dohahamadairport.com/flights/departures" target="_blank" rel="noopener noreferrer">Hamad International Airport Departures</a></li>
+          <li><a href="https://dohahamadairport.com/airport-guide/alerts" target="_blank" rel="noopener noreferrer">Hamad International Airport Alerts</a></li>
+          <li><a href="https://visitqatar.com/" target="_blank" rel="noopener noreferrer">Visit Qatar</a> and <a href="https://www.qatartourism.com/en/events-calendar" target="_blank" rel="noopener noreferrer">Qatar Calendar</a></li>
+          <li><a href="https://www.iata.org/" target="_blank" rel="noopener noreferrer">IATA</a> and <a href="https://www.icao.int/" target="_blank" rel="noopener noreferrer">ICAO</a></li>
+          <li><a href="https://www.reuters.com/" target="_blank" rel="noopener noreferrer">Reuters</a> and <a href="https://thepeninsulaqatar.com/" target="_blank" rel="noopener noreferrer">The Peninsula</a></li>
+        </ul>
+        <p>Bookmark and share this guide. During DOH disruptions, travelers who move based on official status usually recover faster.</p>
+      `,
+      tableOfContents: [
+        { title: 'What "Suspended" and "Closure" Really Mean at DOH', id: 'what-suspended-means' },
+        { title: 'Check Live Status Quickly and Correctly', id: 'check-live-status' },
+        { title: 'First-Day Response Plan When Flights Are Disrupted', id: 'first-day-response-plan' },
+        { title: 'Rebooking and Refunds: What to Ask For', id: 'rebooking-refunds' },
+        { title: 'Passenger Rights and Compensation in Plain English', id: 'passenger-rights' },
+        { title: 'If You Are Stuck at the Airport: Use These Services', id: 'stuck-at-airport' },
+        { title: 'If You Are Stuck Outside: Hotels, Stopovers, and Entry Rules', id: 'stuck-outside-airport' },
+        { title: 'Disruption Types Compared and Best Immediate Action', id: 'disruption-types-compared' },
+        { title: 'Official Sources to Bookmark', id: 'official-sources' }
+      ],
+      tags: ['hamad international airport flight status', 'doha airport closures', 'DOH arrivals departures', 'qatar airspace closure', 'hamad airport alerts', 'qatar airways flight suspension', 'rebook flight doha', 'doha airport transit hotel', 'doha airport metro', 'passenger rights delayed flight', 'montreal convention delay', 'EU261 rerouting refund']
+    },
     'doha-stopover-guide-12-96-hours': {
       id: '63',
       title: 'Doha Stopover Guide for 12-96 Hours',
