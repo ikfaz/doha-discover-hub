@@ -175,7 +175,7 @@ const Blog = () => {
                 {featuredPost && (
                   <div className="bg-white shadow-md rounded-lg p-6">
                     <h3 className="text-xl font-bold mb-4 text-qatar-maroon">Featured Post</h3>
-                    <Link to={`/blog/${featuredPost.slug}`} className="block space-y-4">
+                    <Link to={`/blog/${featuredPost.slug}/index.html`} className="block space-y-4">
                       <div className="aspect-video relative overflow-hidden rounded-md">
                         <img
                           src={featuredPost.imageUrl}

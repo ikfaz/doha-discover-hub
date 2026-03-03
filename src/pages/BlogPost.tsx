@@ -1,4 +1,4 @@
-import { useParams, Link, Navigate } from 'react-router-dom';
+import { useLocation, useNavigate, useParams, Link, Navigate } from 'react-router-dom';
 import { lazy, Suspense, useEffect, useMemo, useState } from 'react';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
@@ -381,6 +381,8 @@ function renderArticleContent(slug: string, content: string) {
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
+  const location = useLocation();
+  const navigate = useNavigate();
   const posts = useMemo(() => getBlogList(), []);
   const [post, setPost] = useState<ArticleData | null>(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -412,6 +414,19 @@ const BlogPost = () => {
       isCancelled = true;
     };
   }, [slug]);
+
+  useEffect(() => {
+    if (!slug) {
+      return;
+    }
+
+    const cleanPath = `/blog/${slug}`;
+    const sharePath = `${cleanPath}/index.html`;
+
+    if (location.pathname === cleanPath) {
+      navigate(`${sharePath}${location.search}${location.hash}`, { replace: true });
+    }
+  }, [slug, location.pathname, location.search, location.hash, navigate]);
 
   const currentListPost = useMemo(() => {
     if (!post || !slug) {
@@ -475,11 +490,13 @@ const BlogPost = () => {
   const safeAuthor = fixMojibake(post.author);
   const safeContent = fixMojibake(post.content);
   const seoImage = toAbsoluteImageUrl(typeof post.imageUrl === 'string' ? post.imageUrl : undefined);
+  const canonicalArticleUrl = slug ? `${SITE_URL}/blog/${slug}` : window.location.href;
+  const shareArticleUrl = slug ? `${SITE_URL}/blog/${slug}/index.html` : window.location.href;
   const historicalSlugNote = slug ? getHistoricalSlugCanonicalNote(slug, safeTitle) : null;
   const primaryTopicMeta = slug ? getPrimaryTopicMetaForPost(slug) : undefined;
 
   const handleCopyLink = () => {
-    navigator.clipboard.writeText(window.location.href);
+    navigator.clipboard.writeText(shareArticleUrl);
   };
 
   const articleJsonLd = {
@@ -501,7 +518,7 @@ const BlogPost = () => {
     "description": articleDescription,
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": `https://experiencedoha.com/blog/${slug}`
+      "@id": canonicalArticleUrl
     }
   };
 
@@ -632,7 +649,12 @@ const BlogPost = () => {
                   <Button
                     variant="outline"
                     size="sm"
-                    onClick={() => window.open(`https://www.facebook.com/sharer/sharer.php?u=${window.location.href}`, '_blank')}
+                    onClick={() =>
+                      window.open(
+                        `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareArticleUrl)}`,
+                        '_blank',
+                      )
+                    }
                   >
                     <Facebook className="h-4 w-4 sm:mr-2" />
                     <span className="hidden sm:inline">Facebook</span>
@@ -640,7 +662,12 @@ const BlogPost = () => {
                   <Button
                     variant="outline"
                     size="sm"
-                    onClick={() => window.open(`https://twitter.com/intent/tweet?url=${window.location.href}&text=${safeTitle}`, '_blank')}
+                    onClick={() =>
+                      window.open(
+                        `https://twitter.com/intent/tweet?url=${encodeURIComponent(shareArticleUrl)}&text=${encodeURIComponent(safeTitle)}`,
+                        '_blank',
+                      )
+                    }
                   >
                     <Twitter className="h-4 w-4 sm:mr-2" />
                     <span className="hidden sm:inline">Twitter</span>

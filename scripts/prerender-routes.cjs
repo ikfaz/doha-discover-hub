@@ -392,36 +392,13 @@ const withSeo = (templateHtml, page) => {
   return html;
 };
 
-const buildBranchRouteSet = (pages) => {
-  const branches = new Set();
-
-  for (const page of pages) {
-    const segments = page.path.split("/").filter(Boolean);
-    for (let i = 1; i < segments.length; i += 1) {
-      branches.add(`/${segments.slice(0, i).join("/")}`);
-    }
-  }
-
-  return branches;
-};
-
-const writeRoute = (html, routePath, branchRoutes) => {
+const writeRoute = (html, routePath) => {
   if (routePath === "/") {
     fs.writeFileSync(DIST_INDEX_PATH, html, "utf8");
     return;
   }
 
   const relative = routePath.replace(/^\/+/, "");
-  const shouldWriteLeafFile = !branchRoutes.has(routePath);
-
-  if (shouldWriteLeafFile) {
-    const targetPath = path.join(DIST_DIR, relative);
-    const targetParent = path.dirname(targetPath);
-    fs.mkdirSync(targetParent, { recursive: true });
-    fs.writeFileSync(targetPath, html, "utf8");
-    return;
-  }
-
   const targetDir = path.join(DIST_DIR, relative);
   fs.mkdirSync(targetDir, { recursive: true });
   fs.writeFileSync(path.join(targetDir, "index.html"), html, "utf8");
@@ -643,11 +620,10 @@ const main = () => {
   const primaryHubBySlug = parsePrimaryHubMap();
   const distAssetUrlMap = buildDistAssetUrlMap();
   const pages = buildPages(blogPosts, tours, topicHubs, primaryHubBySlug, distAssetUrlMap);
-  const branchRoutes = buildBranchRouteSet(pages);
 
   for (const page of pages) {
     const html = withSeo(template, page);
-    writeRoute(html, page.path, branchRoutes);
+    writeRoute(html, page.path);
   }
 
   console.log(`Prerendered ${pages.length} routes.`);

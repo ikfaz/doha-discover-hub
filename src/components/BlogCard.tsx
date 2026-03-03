@@ -34,10 +34,11 @@ const BlogCard: React.FC<BlogCardProps> = ({
   const categoryClass = categoryColors[category.toLowerCase()] || 'bg-gray-100 text-gray-800';
   const fallbackImage = "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=800&auto=format&fit=crop";
   const [imgSrc, setImgSrc] = useState(imageUrl);
+  const articleHref = `/blog/${slug}/index.html`;
 
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden h-full card-hover">
-      <Link to={`/blog/${slug}`}>
+      <Link to={articleHref}>
         <div className="relative w-full h-48 bg-gray-200">
           <img
             src={imgSrc}
@@ -62,12 +63,12 @@ const BlogCard: React.FC<BlogCardProps> = ({
             {date}
           </div>
         </div>
-        <Link to={`/blog/${slug}`}>
+        <Link to={articleHref}>
           <h3 className="text-xl font-bold mb-2 text-qatar-maroon hover:text-qatar-gold transition-colors">{title}</h3>
         </Link>
         <p className="text-gray-600 text-sm mb-4">{excerpt}</p>
         <Link
-          to={`/blog/${slug}`}
+          to={articleHref}
           className="text-qatar-maroon font-medium hover:text-qatar-gold transition-colors inline-flex items-center"
         >
           Read More

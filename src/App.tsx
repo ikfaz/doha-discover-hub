@@ -39,7 +39,7 @@ const PageLoader = () => (
 // Helper components for parameterized redirects
 const NavigateBlogSlug = () => {
   const slug = window.location.pathname.split('/blogs/')[1];
-  return <Navigate to={`/blog/${slug}`} replace />;
+  return <Navigate to={`/blog/${slug}/index.html`} replace />;
 };
 const NavigateTourSlug = () => {
   const slug = window.location.pathname.split('/tours/')[1];
@@ -63,6 +63,8 @@ const AppContent = () => {
           <Route path="/about" element={<About />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
+          <Route path="/blog/index.html" element={<Blog />} />
+          <Route path="/blog/:slug/index.html" element={<BlogPost />} />
           <Route path="/blog/category/:category" element={<BlogCategory />} />
           <Route path="/blog/tag/:tag" element={<BlogTag />} />
           <Route path="/blog/topic/:topic" element={<BlogTopicHub />} />
