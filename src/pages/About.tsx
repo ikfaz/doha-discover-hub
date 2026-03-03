@@ -4,9 +4,15 @@ import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 import Newsletter from '@/components/Newsletter';
 import SEOHead from '@/components/SEOHead';
+import { Button } from '@/components/ui/button';
+import { Mail, Youtube } from 'lucide-react';
 
 const About = () => {
   const { t } = useTranslation();
+
+  const handleContactClick = () => {
+    window.location.href = 'mailto:info@experiencedoha.com';
+  };
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -32,6 +38,24 @@ const About = () => {
                 <p className="text-muted-foreground mb-6">{t('about.storyP1')}</p>
                 <p className="text-muted-foreground mb-6">{t('about.storyP2')}</p>
                 <p className="text-muted-foreground mb-6">{t('about.storyP3')}</p>
+                
+                <div className="flex flex-wrap gap-4 mt-8">
+                  <Button 
+                    className="bg-secondary hover:bg-secondary/90 text-secondary-foreground"
+                    onClick={() => window.open('https://www.youtube.com/@ExperienceDoha', '_blank')}
+                  >
+                    <Youtube className="me-2 h-4 w-4" aria-hidden="true" />
+                    {t('about.youtubeChannel')}
+                  </Button>
+                  <Button 
+                    variant="outline" 
+                    className="border-secondary text-secondary hover:bg-secondary/10"
+                    onClick={handleContactClick}
+                  >
+                    <Mail className="me-2 h-4 w-4" aria-hidden="true" />
+                    {t('about.contactMe')}
+                  </Button>
+                </div>
               </div>
               
               <div className="relative">

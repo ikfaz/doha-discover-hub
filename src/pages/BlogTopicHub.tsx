@@ -25,12 +25,36 @@ const BlogTopicHub = () => {
     ? currentHub.intro
     : 'Explore curated topic clusters to find related posts faster.';
 
+  const topicJsonLd = useMemo(() => {
+    if (!currentHub || hubPosts.length === 0) {
+      return undefined;
+    }
+
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      name: `${currentHub.name} Topic Hub`,
+      description: currentHub.metaDescription,
+      url: `https://experiencedoha.com/blog/topic/${currentHub.slug}`,
+      mainEntity: {
+        '@type': 'ItemList',
+        itemListElement: hubPosts.map((post, index) => ({
+          '@type': 'ListItem',
+          position: index + 1,
+          url: `https://experiencedoha.com/blog/${post.slug}`,
+          name: post.title,
+        })),
+      },
+    };
+  }, [currentHub, hubPosts]);
+
   return (
     <div className="min-h-screen flex flex-col">
       <SEOHead
         title={`${title} - Experience Doha Blog`}
         description={description}
         noindex={!currentHub || hubPosts.length <= 1}
+        jsonLd={topicJsonLd}
       />
       <NavBar />
 

@@ -16,12 +16,14 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from '@/components/ui/breadcrumb';
-import { Calendar, Clock, Home } from 'lucide-react';
+import { Calendar, Clock, Facebook, Twitter, Share2, Home } from 'lucide-react';
 import BlogCard from '@/components/BlogCard';
 import { loadBlogPostBySlug } from '@/data/articles/blog-post-loaders';
+import { blogMetaPosts } from '@/data/articles/blog-meta';
 import { categoryToSlug, getBlogList } from '@/lib/blog';
 import { buildArticleInternalLinkBudget } from '@/lib/article-link-budget';
 import { getPrimaryTopicMetaForPost } from '@/lib/topic-hubs';
+import { toJsonLdAuthor } from '@/lib/structured-data';
 import { fixMojibake } from '@/lib/text';
 import { getHistoricalSlugCanonicalNote } from '@/lib/slug-strategy';
 import type { ReactNode } from 'react';
@@ -440,6 +442,9 @@ const BlogPost = () => {
   }
 
   const articleDescription = fixMojibake(post.metaDescription || post.excerpt || post.content.substring(0, 155).replace(/<[^>]*>/g, ''));
+  const metadataPost = slug ? blogMetaPosts[slug] : undefined;
+  const articlePublishedIsoDate = post.isoDate || metadataPost?.isoDate || post.date;
+  const articleModifiedIsoDate = post.isoModifiedDate || metadataPost?.isoModifiedDate || articlePublishedIsoDate;
   const categorySlug = categoryToSlug(post.category);
   const safeTitle = fixMojibake(post.title);
   const safeCategory = fixMojibake(post.category);
@@ -449,6 +454,44 @@ const BlogPost = () => {
   const historicalSlugNote = slug ? getHistoricalSlugCanonicalNote(slug, safeTitle) : null;
   const primaryTopicMeta = slug ? getPrimaryTopicMetaForPost(slug) : undefined;
 
+  const handleCopyLink = () => {
+    navigator.clipboard.writeText(window.location.href);
+  };
+
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": safeTitle,
+    "image": typeof post.imageUrl === 'string' ? post.imageUrl : undefined,
+    "author": toJsonLdAuthor(safeAuthor),
+    "publisher": {
+      "@type": "Organization",
+      "name": "ExperienceDoha.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://experiencedoha.com/logo.png"
+      }
+    },
+    "datePublished": articlePublishedIsoDate,
+    "dateModified": articleModifiedIsoDate,
+    "description": articleDescription,
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `https://experiencedoha.com/blog/${slug}`
+    }
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://experiencedoha.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://experiencedoha.com/blog" },
+      { "@type": "ListItem", "position": 3, "name": safeCategory, "item": `https://experiencedoha.com/blog/category/${categorySlug}` },
+      { "@type": "ListItem", "position": 4, "name": safeTitle }
+    ]
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
       <SEOHead 
@@ -456,6 +499,9 @@ const BlogPost = () => {
         description={articleDescription}
         image={typeof post.imageUrl === 'string' ? post.imageUrl : undefined}
         type="article"
+        publishedTime={articlePublishedIsoDate}
+        modifiedTime={articleModifiedIsoDate}
+        jsonLd={[articleJsonLd, breadcrumbJsonLd]}
       />
       <NavBar />
       
@@ -555,6 +601,31 @@ const BlogPost = () => {
                     </nav>
                   </div>
                 )}
+
+                {/* Share Buttons */}
+                <div className="flex flex-wrap items-center gap-2 sm:gap-4 mb-8 pb-8 border-b">
+                  <span className="text-sm font-medium text-gray-600">Share this article:</span>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={() => window.open(`https://www.facebook.com/sharer/sharer.php?u=${window.location.href}`, '_blank')}
+                  >
+                    <Facebook className="h-4 w-4 sm:mr-2" />
+                    <span className="hidden sm:inline">Facebook</span>
+                  </Button>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={() => window.open(`https://twitter.com/intent/tweet?url=${window.location.href}&text=${safeTitle}`, '_blank')}
+                  >
+                    <Twitter className="h-4 w-4 sm:mr-2" />
+                    <span className="hidden sm:inline">Twitter</span>
+                  </Button>
+                  <Button variant="outline" size="sm" onClick={handleCopyLink}>
+                    <Share2 className="h-4 w-4 sm:mr-2" />
+                    <span className="hidden sm:inline">Copy Link</span>
+                  </Button>
+                </div>
 
                 {/* Article Content with Component Injection */}
                 {renderArticleContent(slug || 'default', safeContent)}

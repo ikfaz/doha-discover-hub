@@ -13,11 +13,44 @@ const Index = () => {
   const featuredBlogs = useMemo(() => posts.slice(1, 5), [posts]);
   const categories = useMemo(() => getCategoryCounts(posts), [posts]);
 
+  const structuredData = useMemo(
+    () => ({
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      name: 'Experience Doha',
+      url: 'https://experiencedoha.com/',
+      description:
+        'Your guide to exploring Doha, Qatar. Discover attractions, expat tips, layover guides, and local insights.',
+      inLanguage: 'en-US',
+      publisher: {
+        '@type': 'Organization',
+        name: 'Experience Doha',
+        url: 'https://experiencedoha.com/',
+        logo: {
+          '@type': 'ImageObject',
+          url: 'https://experiencedoha.com/logo.png',
+        },
+      },
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: 'https://experiencedoha.com/blog?q={search_term_string}',
+        'query-input': 'required name=search_term_string',
+      },
+      sameAs: [
+        'https://www.facebook.com/Experiencedohaqatar',
+        'https://www.instagram.com/experiencedoha',
+        'https://twitter.com/experiencedoha',
+      ],
+    }),
+    [],
+  );
+
   return (
     <div className="min-h-screen flex flex-col">
       <SEOHead
         title="Experience Doha - Ultimate Guide to Qatar Travel & Living"
         description="Plan your Doha trip or move with confidence. Practical guides on visa rules, cost of living, layovers, and local experiences in Qatar."
+        jsonLd={structuredData}
       />
       <NavBar />
 

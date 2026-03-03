@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { Clock, Users, Globe, MapPin, Star, ChevronLeft, Check, X } from 'lucide-react';
+import { Clock, Users, Globe, MapPin, Star, ChevronLeft, Check, X, Share2 } from 'lucide-react';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 import SEOHead from '@/components/SEOHead';
@@ -10,6 +10,8 @@ import TourItineraryTimeline from '@/components/TourItineraryTimeline';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { getTourBySlug } from '@/data/tours';
 
+const BASE_URL = 'https://experiencedoha.com';
+
 const TourDetail = () => {
   const { slug } = useParams<{ slug: string }>();
   const { t } = useTranslation();
@@ -17,6 +19,56 @@ const TourDetail = () => {
 
   // Convert USD price to QAR (1 USD approx 3.64 QAR)
   const priceQAR = tour ? Math.round(tour.pricePerPerson * 3.64) : 0;
+
+  const jsonLd = useMemo(() => {
+    if (!tour) return undefined;
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'TouristTrip',
+      name: tour.title,
+      description: tour.overview.split('\n\n')[0],
+      image: tour.heroImage,
+      url: `${BASE_URL}/tour/${tour.slug}`,
+      touristType: tour.category,
+      offers: {
+        '@type': 'Offer',
+        price: priceQAR,
+        priceCurrency: 'QAR',
+        availability: 'https://schema.org/InStock',
+        url: tour.viatorUrl,
+        validFrom: '2026-01-01',
+      },
+      aggregateRating: {
+        '@type': 'AggregateRating',
+        ratingValue: tour.rating,
+        reviewCount: tour.reviewCount,
+        bestRating: 5,
+        worstRating: 1,
+      },
+      provider: {
+        '@type': 'Organization',
+        name: 'Experience Doha',
+        url: BASE_URL,
+      },
+      itinerary: {
+        '@type': 'ItemList',
+        numberOfItems: tour.itinerary.length,
+        itemListElement: tour.itinerary.map((stop, i) => ({
+          '@type': 'ListItem',
+          position: i + 1,
+          name: stop.title,
+          description: stop.description,
+        })),
+      },
+      review: tour.reviews.slice(0, 3).map((r) => ({
+        '@type': 'Review',
+        author: { '@type': 'Person', name: r.name },
+        reviewRating: { '@type': 'Rating', ratingValue: r.rating, bestRating: 5 },
+        reviewBody: r.comment,
+        datePublished: r.date,
+      })),
+    };
+  }, [tour, priceQAR]);
 
   if (!tour) {
     return (
@@ -50,7 +102,7 @@ const TourDetail = () => {
         title={`${tour.title} - Book from ${priceQAR} QAR | Experience Doha`}
         description={`${tour.subtitle}. ${tour.duration} tour with ${tour.rating}-star rating from ${tour.reviewCount} reviews. Book now from ${priceQAR} QAR per person.`}
         image={toWebP(tour.heroImage)}
-        type="article"
+        jsonLd={jsonLd}
       />
       <NavBar />
 
@@ -74,6 +126,14 @@ const TourDetail = () => {
               Back to Tours
             </Link>
           </div>
+
+          <button
+            onClick={() => navigator.clipboard?.writeText(window.location.href)}
+            className="absolute top-6 end-6 z-10 text-white/90 hover:text-white bg-charcoal/30 backdrop-blur-sm p-3 rounded-full transition-colors"
+            aria-label="Share tour"
+          >
+            <Share2 className="w-5 h-5" />
+          </button>
 
           <div className="absolute bottom-0 start-0 end-0 p-6 md:p-12 z-10">
             <div className="max-w-4xl">

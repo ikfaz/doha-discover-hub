@@ -80,6 +80,7 @@
     "website": "Website",
     "location": "Location",
     "dohaQatar": "Doha, Qatar",
+    "followUs": "Follow Us",
     "collaboration": "Collaboration Opportunities",
     "collaborationDesc": "We're always open to collaborations with local businesses, tourism organizations, and content creators. If you're interested in working together, please reach out with your proposal.",
     "contactCollaboration": "Contact for Collaborations"
@@ -92,6 +93,7 @@
     "noResults": "No articles found matching your search.",
     "readMore": "Read More",
     "relatedArticles": "Related Articles",
+    "shareArticle": "Share this article",
     "tableOfContents": "Table of Contents"
   },
   "footer": {

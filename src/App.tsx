@@ -41,10 +41,6 @@ const NavigateBlogSlug = () => {
   const slug = window.location.pathname.split('/blogs/')[1];
   return <Navigate to={`/blog/${slug}`} replace />;
 };
-const NavigateBlogIndexHtml = () => {
-  const normalizedPath = window.location.pathname.replace(/\/index\.html$/, '');
-  return <Navigate to={normalizedPath || '/blog'} replace />;
-};
 const NavigateTourSlug = () => {
   const slug = window.location.pathname.split('/tours/')[1];
   return <Navigate to={`/tour/${slug}`} replace />;
@@ -67,8 +63,6 @@ const AppContent = () => {
           <Route path="/about" element={<About />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
-          <Route path="/blog/index.html" element={<Navigate to="/blog" replace />} />
-          <Route path="/blog/:slug/index.html" element={<NavigateBlogIndexHtml />} />
           <Route path="/blog/category/:category" element={<BlogCategory />} />
           <Route path="/blog/tag/:tag" element={<BlogTag />} />
           <Route path="/blog/topic/:topic" element={<BlogTopicHub />} />
