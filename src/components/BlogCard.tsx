@@ -34,7 +34,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
   const categoryClass = categoryColors[category.toLowerCase()] || 'bg-gray-100 text-gray-800';
   const fallbackImage = "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=800&auto=format&fit=crop";
   const [imgSrc, setImgSrc] = useState(imageUrl);
-  const articleHref = `/blog/${slug}/index.html`;
+  const articleHref = `/blog/${slug}`;
 
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden h-full card-hover">

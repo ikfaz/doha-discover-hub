@@ -131,29 +131,55 @@ const parseBlogImageImportMap = (source) => {
 
 const buildDistAssetUrlMap = () => {
   const map = new Map();
+  const files = [];
   if (!fs.existsSync(DIST_ASSETS_DIR)) {
-    return map;
+    return { map, files };
   }
 
-  const files = fs.readdirSync(DIST_ASSETS_DIR, { withFileTypes: true });
-  for (const file of files) {
-    if (!file.isFile()) {
+  const dirEntries = fs.readdirSync(DIST_ASSETS_DIR, { withFileTypes: true });
+  for (const entry of dirEntries) {
+    if (!entry.isFile()) {
       continue;
     }
 
-    const distFile = file.name;
+    const distFile = entry.name;
     const extension = path.extname(distFile).toLowerCase();
     if (!extension) {
       continue;
     }
 
-    const stem = distFile.slice(0, -extension.length);
-    const unhashedStem = stem.replace(/-[a-z0-9]{6,}$/i, "");
-    const sourceFileName = `${unhashedStem}${extension}`;
-    map.set(sourceFileName, `${SITE_URL}/assets/${distFile}`);
+    const normalizedName = distFile.toLowerCase();
+    const distUrl = `${SITE_URL}/assets/${distFile}`;
+    files.push({ distFile, normalizedName, extension, distUrl });
+    map.set(normalizedName, distUrl);
   }
 
-  return map;
+  return { map, files };
+};
+
+const resolveDistAssetUrl = (sourceFileName, distAssetIndex) => {
+  if (!sourceFileName || !distAssetIndex) {
+    return undefined;
+  }
+
+  const normalizedSource = String(sourceFileName).toLowerCase();
+  const directMatch = distAssetIndex.map.get(normalizedSource);
+  if (directMatch) {
+    return directMatch;
+  }
+
+  const extension = path.extname(normalizedSource);
+  if (!extension) {
+    return undefined;
+  }
+
+  const sourceStem = normalizedSource.slice(0, -extension.length);
+  const hashedPrefix = `${sourceStem}-`;
+  const prefixedMatch = distAssetIndex.files.find(
+    (entry) => entry.extension === extension && entry.normalizedName.startsWith(hashedPrefix),
+  );
+
+  return prefixedMatch ? prefixedMatch.distUrl : undefined;
 };
 
 const parseBlogMeta = () => {
@@ -324,18 +350,6 @@ const upsertMeta = (html, attr, key, content) => {
   );
 };
 
-const upsertMetaMany = (html, attr, key, values) => {
-  const nonEmptyValues = values.filter((value) => value && String(value).trim());
-  if (nonEmptyValues.length === 0) {
-    return html;
-  }
-
-  const regex = new RegExp(`<meta\\s+${attr}=["']${key}["'][^>]*>\\s*`, "gi");
-  const withoutExisting = html.replace(regex, "");
-  const tags = nonEmptyValues.map((value) => `<meta ${attr}="${key}" content="${escapeHtml(value)}" />`).join("\n");
-  return withoutExisting.replace("</head>", `${tags}\n</head>`);
-};
-
 const upsertLinkRel = (html, rel, href) => {
   const escaped = escapeHtml(href);
   const regex = new RegExp(`<link\\s+rel=["']${rel}["'][^>]*>`, "i");
@@ -345,10 +359,6 @@ const upsertLinkRel = (html, rel, href) => {
 const withSeo = (templateHtml, page) => {
   const canonicalUrl = `${SITE_URL}${page.path}`;
   const primaryImage = page.image || DEFAULT_IMAGE;
-  const fallbackImage =
-    page.fallbackImage && page.fallbackImage !== primaryImage ? page.fallbackImage : undefined;
-  const ogImages = fallbackImage ? [primaryImage, fallbackImage] : [primaryImage];
-  const twitterImage = fallbackImage || primaryImage;
   let html = templateHtml;
 
   html = upsertTag(
@@ -364,7 +374,7 @@ const withSeo = (templateHtml, page) => {
   html = upsertMeta(html, "property", "og:url", canonicalUrl);
   html = upsertMeta(html, "property", "og:title", page.title);
   html = upsertMeta(html, "property", "og:description", page.description);
-  html = upsertMetaMany(html, "property", "og:image", ogImages);
+  html = upsertMeta(html, "property", "og:image", primaryImage);
   if (page.publishedTime) {
     html = upsertMeta(html, "property", "article:published_time", page.publishedTime);
   }
@@ -375,7 +385,7 @@ const withSeo = (templateHtml, page) => {
   html = upsertMeta(html, "name", "twitter:url", canonicalUrl);
   html = upsertMeta(html, "name", "twitter:title", page.title);
   html = upsertMeta(html, "name", "twitter:description", page.description);
-  html = upsertMeta(html, "name", "twitter:image", twitterImage);
+  html = upsertMeta(html, "name", "twitter:image", primaryImage);
   html = upsertLinkRel(html, "canonical", canonicalUrl);
 
   const staticBody = page.bodyHtml || "";
@@ -404,7 +414,7 @@ const writeRoute = (html, routePath) => {
   fs.writeFileSync(path.join(targetDir, "index.html"), html, "utf8");
 };
 
-const buildPages = (blogPosts, tours, topicHubs, primaryHubBySlug, distAssetUrlMap) => {
+const buildPages = (blogPosts, tours, topicHubs, primaryHubBySlug, distAssetIndex) => {
   const latestPosts = blogPosts.slice(0, 5);
   const latestLinks = latestPosts
     .map((post) => `<li><a href="/blog/${post.slug}">${escapeHtml(post.title)}</a></li>`)
@@ -479,10 +489,9 @@ const buildPages = (blogPosts, tours, topicHubs, primaryHubBySlug, distAssetUrlM
 
   for (const post of blogPosts) {
     const description = stripHtml(post.description || post.excerpt || "");
-    const resolvedPostImage = post.imageFileName ? distAssetUrlMap.get(post.imageFileName) : undefined;
-    const postImage = resolvedPostImage || DEFAULT_IMAGE;
+    const resolvedPostImage = resolveDistAssetUrl(post.imageFileName, distAssetIndex);
     const isSvgImage = path.extname(post.imageFileName || "").toLowerCase() === ".svg";
-    const fallbackImage = isSvgImage && resolvedPostImage ? DEFAULT_IMAGE : undefined;
+    const postImage = !resolvedPostImage || isSvgImage ? DEFAULT_IMAGE : resolvedPostImage;
     const slugNote = getHistoricalSlugCanonicalNote(post.slug, post.title);
     const parentHubSlug = primaryHubBySlug[post.slug];
     const parentHub = parentHubSlug ? topicHubBySlug.get(parentHubSlug) : null;
@@ -512,7 +521,6 @@ const buildPages = (blogPosts, tours, topicHubs, primaryHubBySlug, distAssetUrlM
       publishedTime: post.isoDate || undefined,
       modifiedTime: post.isoModifiedDate || post.isoDate || undefined,
       image: postImage,
-      fallbackImage,
       bodyHtml: articleBody,
       jsonLd: {
         "@context": "https://schema.org",
@@ -618,8 +626,8 @@ const main = () => {
   const tours = parseTours();
   const topicHubs = parseTopicHubs();
   const primaryHubBySlug = parsePrimaryHubMap();
-  const distAssetUrlMap = buildDistAssetUrlMap();
-  const pages = buildPages(blogPosts, tours, topicHubs, primaryHubBySlug, distAssetUrlMap);
+  const distAssetIndex = buildDistAssetUrlMap();
+  const pages = buildPages(blogPosts, tours, topicHubs, primaryHubBySlug, distAssetIndex);
 
   for (const page of pages) {
     const html = withSeo(template, page);

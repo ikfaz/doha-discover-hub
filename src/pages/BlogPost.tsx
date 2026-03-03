@@ -1,4 +1,4 @@
-import { useLocation, useNavigate, useParams, Link, Navigate } from 'react-router-dom';
+import { useParams, Link, Navigate } from 'react-router-dom';
 import { lazy, Suspense, useEffect, useMemo, useState } from 'react';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
@@ -30,6 +30,7 @@ import type { ReactNode } from 'react';
 import type { ArticleData } from '@/data/articles/types';
 
 const SITE_URL = 'https://experiencedoha.com';
+const DEFAULT_SOCIAL_IMAGE = `${SITE_URL}/og-default.jpg`;
 
 const toAbsoluteImageUrl = (value?: string): string | undefined => {
   if (typeof value !== 'string') {
@@ -50,6 +51,24 @@ const toAbsoluteImageUrl = (value?: string): string | undefined => {
   }
 
   return `${SITE_URL}/${trimmed.replace(/^\.?\//, '')}`;
+};
+
+const isSvgImageUrl = (value: string): boolean => {
+  try {
+    const parsed = new URL(value, SITE_URL);
+    return parsed.pathname.toLowerCase().endsWith('.svg');
+  } catch {
+    return value.toLowerCase().split('?')[0].split('#')[0].endsWith('.svg');
+  }
+};
+
+const toSocialImageUrl = (value?: string): string => {
+  const absoluteImage = toAbsoluteImageUrl(value);
+  if (!absoluteImage) {
+    return DEFAULT_SOCIAL_IMAGE;
+  }
+
+  return isSvgImageUrl(absoluteImage) ? DEFAULT_SOCIAL_IMAGE : absoluteImage;
 };
 
 const SchoolComparisonTool = lazy(() => import('@/components/SchoolComparisonTool'));
@@ -381,8 +400,6 @@ function renderArticleContent(slug: string, content: string) {
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
-  const location = useLocation();
-  const navigate = useNavigate();
   const posts = useMemo(() => getBlogList(), []);
   const [post, setPost] = useState<ArticleData | null>(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -414,19 +431,6 @@ const BlogPost = () => {
       isCancelled = true;
     };
   }, [slug]);
-
-  useEffect(() => {
-    if (!slug) {
-      return;
-    }
-
-    const cleanPath = `/blog/${slug}`;
-    const sharePath = `${cleanPath}/index.html`;
-
-    if (location.pathname === cleanPath) {
-      navigate(`${sharePath}${location.search}${location.hash}`, { replace: true });
-    }
-  }, [slug, location.pathname, location.search, location.hash, navigate]);
 
   const currentListPost = useMemo(() => {
     if (!post || !slug) {
@@ -489,9 +493,9 @@ const BlogPost = () => {
   const safeDate = fixMojibake(post.date);
   const safeAuthor = fixMojibake(post.author);
   const safeContent = fixMojibake(post.content);
-  const seoImage = toAbsoluteImageUrl(typeof post.imageUrl === 'string' ? post.imageUrl : undefined);
+  const seoImage = toSocialImageUrl(typeof post.imageUrl === 'string' ? post.imageUrl : undefined);
   const canonicalArticleUrl = slug ? `${SITE_URL}/blog/${slug}` : window.location.href;
-  const shareArticleUrl = slug ? `${SITE_URL}/blog/${slug}/index.html` : window.location.href;
+  const shareArticleUrl = canonicalArticleUrl;
   const historicalSlugNote = slug ? getHistoricalSlugCanonicalNote(slug, safeTitle) : null;
   const primaryTopicMeta = slug ? getPrimaryTopicMetaForPost(slug) : undefined;
 
