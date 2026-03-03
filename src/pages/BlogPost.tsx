@@ -409,7 +409,7 @@ const BlogPost = () => {
       category: post.category,
       date: post.date,
       isoDate: post.isoDate,
-      tags: post.tags,
+      tags: post.tags || [],
     };
   }, [post, posts, slug]);
 

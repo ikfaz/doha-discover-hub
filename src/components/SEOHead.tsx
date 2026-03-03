@@ -30,6 +30,9 @@ export const SEOHead = ({
   const location = useLocation();
   const canonicalUrl = buildCanonicalUrl(BASE_URL, location.pathname, location.search);
 
+  // Ensure absolute URL for social sharing crawlers
+  const absoluteImage = image.startsWith('/') ? `${BASE_URL}${image}` : image;
+
   return (
     <Helmet>
       <title>{title}</title>
@@ -42,7 +45,7 @@ export const SEOHead = ({
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
+      <meta property="og:image" content={absoluteImage} />
       <meta property="og:site_name" content="ExperienceDoha.com" />
       {publishedTime && <meta property="article:published_time" content={publishedTime} />}
       {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
@@ -51,7 +54,7 @@ export const SEOHead = ({
       <meta name="twitter:url" content={canonicalUrl} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
+      <meta name="twitter:image" content={absoluteImage} />
       <meta name="twitter:site" content="@experiencedoha" />
 
       {jsonLd && (Array.isArray(jsonLd) ? jsonLd : [jsonLd]).map((ld, i) => (

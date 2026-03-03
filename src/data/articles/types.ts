@@ -15,7 +15,7 @@ export interface ArticleData {
   readTime: string;
   category: string;
   imageUrl: string;
-  tags: string[];
+  tags?: string[];
   content: string;
   excerpt?: string;
   metaDescription?: string;
