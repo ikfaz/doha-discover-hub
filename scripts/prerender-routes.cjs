@@ -9,9 +9,6 @@ const BLOG_META_PATH = path.join(ROOT_DIR, "src", "data", "articles", "blog-meta
 const TOURS_PATH = path.join(ROOT_DIR, "src", "data", "tours.ts");
 const TOPIC_HUBS_PATH = path.join(ROOT_DIR, "src", "data", "articles", "topic-hubs.json");
 const ARTICLE_PRIMARY_HUB_PATH = path.join(ROOT_DIR, "src", "data", "articles", "article-primary-hub.json");
-const DIST_ASSETS_DIR = path.join(DIST_DIR, "assets");
-
-const DEFAULT_IMAGE = `${SITE_URL}/og-default.jpg`;
 
 const MOJIBAKE_PATTERN = /[\u00C2\u00C3\u00D8\u00D9]|Ã¢/;
 
@@ -67,16 +64,6 @@ const getHistoricalSlugCanonicalNote = (slug, title) => {
   return `This URL keeps its original ${slugYear} slug for link stability. Content is updated for ${titleYear}.`;
 };
 
-const toJsonLdAuthor = (name) => {
-  const normalized = String(name || "Experience Doha Team").trim() || "Experience Doha Team";
-  const organizationAuthorPatterns = [/\bteam\b/i, /experiencedoha/i, /experience doha/i, /\.com$/i];
-  const isOrganization = organizationAuthorPatterns.some((pattern) => pattern.test(normalized));
-  return {
-    "@type": isOrganization ? "Organization" : "Person",
-    name: normalized,
-  };
-};
-
 const CATEGORY_EDITORIAL_INTROS = {
   attractions:
     "Editorial picks for museums, souqs, waterfront walks, and signature Doha sights that are worth your time.",
@@ -127,59 +114,6 @@ const parseBlogImageImportMap = (source) => {
   }
 
   return map;
-};
-
-const buildDistAssetUrlMap = () => {
-  const map = new Map();
-  const files = [];
-  if (!fs.existsSync(DIST_ASSETS_DIR)) {
-    return { map, files };
-  }
-
-  const dirEntries = fs.readdirSync(DIST_ASSETS_DIR, { withFileTypes: true });
-  for (const entry of dirEntries) {
-    if (!entry.isFile()) {
-      continue;
-    }
-
-    const distFile = entry.name;
-    const extension = path.extname(distFile).toLowerCase();
-    if (!extension) {
-      continue;
-    }
-
-    const normalizedName = distFile.toLowerCase();
-    const distUrl = `${SITE_URL}/assets/${distFile}`;
-    files.push({ distFile, normalizedName, extension, distUrl });
-    map.set(normalizedName, distUrl);
-  }
-
-  return { map, files };
-};
-
-const resolveDistAssetUrl = (sourceFileName, distAssetIndex) => {
-  if (!sourceFileName || !distAssetIndex) {
-    return undefined;
-  }
-
-  const normalizedSource = String(sourceFileName).toLowerCase();
-  const directMatch = distAssetIndex.map.get(normalizedSource);
-  if (directMatch) {
-    return directMatch;
-  }
-
-  const extension = path.extname(normalizedSource);
-  if (!extension) {
-    return undefined;
-  }
-
-  const sourceStem = normalizedSource.slice(0, -extension.length);
-  const hashedPrefix = `${sourceStem}-`;
-  const prefixedMatch = distAssetIndex.files.find(
-    (entry) => entry.extension === extension && entry.normalizedName.startsWith(hashedPrefix),
-  );
-
-  return prefixedMatch ? prefixedMatch.distUrl : undefined;
 };
 
 const parseBlogMeta = () => {
@@ -358,7 +292,6 @@ const upsertLinkRel = (html, rel, href) => {
 
 const withSeo = (templateHtml, page) => {
   const canonicalUrl = `${SITE_URL}${page.path}`;
-  const primaryImage = page.image || DEFAULT_IMAGE;
   let html = templateHtml;
 
   html = upsertTag(
@@ -370,34 +303,10 @@ const withSeo = (templateHtml, page) => {
 
   html = upsertMeta(html, "name", "description", page.description);
   html = upsertMeta(html, "name", "robots", page.noindex ? "noindex, nofollow" : "index, follow");
-  html = upsertMeta(html, "property", "og:type", page.type || "website");
-  html = upsertMeta(html, "property", "og:url", canonicalUrl);
-  html = upsertMeta(html, "property", "og:title", page.title);
-  html = upsertMeta(html, "property", "og:description", page.description);
-  html = upsertMeta(html, "property", "og:image", primaryImage);
-  if (page.publishedTime) {
-    html = upsertMeta(html, "property", "article:published_time", page.publishedTime);
-  }
-  if (page.modifiedTime) {
-    html = upsertMeta(html, "property", "article:modified_time", page.modifiedTime);
-  }
-  html = upsertMeta(html, "name", "twitter:card", "summary_large_image");
-  html = upsertMeta(html, "name", "twitter:url", canonicalUrl);
-  html = upsertMeta(html, "name", "twitter:title", page.title);
-  html = upsertMeta(html, "name", "twitter:description", page.description);
-  html = upsertMeta(html, "name", "twitter:image", primaryImage);
   html = upsertLinkRel(html, "canonical", canonicalUrl);
 
   const staticBody = page.bodyHtml || "";
   html = html.replace('<div id="root"></div>', `<div id="root">${staticBody}</div>`);
-
-  if (page.jsonLd) {
-    const entries = Array.isArray(page.jsonLd) ? page.jsonLd : [page.jsonLd];
-    const scripts = entries
-      .map((entry) => `<script type="application/ld+json">${JSON.stringify(entry)}</script>`)
-      .join("\n");
-    html = html.replace("</head>", `${scripts}\n</head>`);
-  }
 
   return html;
 };
@@ -414,7 +323,7 @@ const writeRoute = (html, routePath) => {
   fs.writeFileSync(path.join(targetDir, "index.html"), html, "utf8");
 };
 
-const buildPages = (blogPosts, tours, topicHubs, primaryHubBySlug, distAssetIndex) => {
+const buildPages = (blogPosts, tours, topicHubs, primaryHubBySlug) => {
   const latestPosts = blogPosts.slice(0, 5);
   const latestLinks = latestPosts
     .map((post) => `<li><a href="/blog/${post.slug}">${escapeHtml(post.title)}</a></li>`)
@@ -427,17 +336,6 @@ const buildPages = (blogPosts, tours, topicHubs, primaryHubBySlug, distAssetInde
       description:
         "Discover the best things to do in Doha, Qatar. Expert guides on attractions, culture, food, layovers, and experiences.",
       bodyHtml: `<main><h1>Experience Doha</h1><p>Guides for attractions, layovers, expat life, and local experiences in Qatar.</p><h2>Latest Articles</h2><ul>${latestLinks}</ul><p><a href="/blog">Read all blog posts</a></p></main>`,
-      jsonLd: {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        name: "Experience Doha",
-        url: SITE_URL,
-        potentialAction: {
-          "@type": "SearchAction",
-          target: `${SITE_URL}/blog?q={search_term_string}`,
-          "query-input": "required name=search_term_string",
-        },
-      },
     },
     {
       path: "/blog",
@@ -489,9 +387,6 @@ const buildPages = (blogPosts, tours, topicHubs, primaryHubBySlug, distAssetInde
 
   for (const post of blogPosts) {
     const description = stripHtml(post.description || post.excerpt || "");
-    const resolvedPostImage = resolveDistAssetUrl(post.imageFileName, distAssetIndex);
-    const isSvgImage = path.extname(post.imageFileName || "").toLowerCase() === ".svg";
-    const postImage = !resolvedPostImage || isSvgImage ? DEFAULT_IMAGE : resolvedPostImage;
     const slugNote = getHistoricalSlugCanonicalNote(post.slug, post.title);
     const parentHubSlug = primaryHubBySlug[post.slug];
     const parentHub = parentHubSlug ? topicHubBySlug.get(parentHubSlug) : null;
@@ -517,27 +412,7 @@ const buildPages = (blogPosts, tours, topicHubs, primaryHubBySlug, distAssetInde
       path: `/blog/${post.slug}`,
       title: `${post.title} | Doha Guide`,
       description,
-      type: "article",
-      publishedTime: post.isoDate || undefined,
-      modifiedTime: post.isoModifiedDate || post.isoDate || undefined,
-      image: postImage,
       bodyHtml: articleBody,
-      jsonLd: {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        headline: post.title,
-        image: postImage,
-        datePublished: post.isoDate || undefined,
-        dateModified: post.isoModifiedDate || post.isoDate || undefined,
-        author: toJsonLdAuthor(post.author || "Experience Doha Team"),
-        publisher: {
-          "@type": "Organization",
-          name: "Experience Doha",
-          url: SITE_URL,
-        },
-        mainEntityOfPage: `${SITE_URL}/blog/${post.slug}`,
-        description,
-      },
     });
   }
 
@@ -572,25 +447,6 @@ const buildPages = (blogPosts, tours, topicHubs, primaryHubBySlug, distAssetInde
       description: hub.metaDescription || hub.intro,
       noindex: hubPosts.length <= 1,
       bodyHtml: `<main><h1>${escapeHtml(hub.title)}</h1><p>${escapeHtml(hub.intro)}</p><ul>${links}</ul><p><a href="/blog">View all posts</a></p></main>`,
-      jsonLd:
-        hubPosts.length > 0
-          ? {
-              "@context": "https://schema.org",
-              "@type": "CollectionPage",
-              name: hub.title,
-              description: hub.metaDescription || hub.intro,
-              url: `${SITE_URL}/blog/topic/${hub.slug}`,
-              mainEntity: {
-                "@type": "ItemList",
-                itemListElement: hubPosts.map((post, index) => ({
-                  "@type": "ListItem",
-                  position: index + 1,
-                  url: `${SITE_URL}/blog/${post.slug}`,
-                  name: post.title,
-                })),
-              },
-            }
-          : undefined,
     });
   }
 
@@ -603,13 +459,6 @@ const buildPages = (blogPosts, tours, topicHubs, primaryHubBySlug, distAssetInde
       bodyHtml: `<main><h1>${escapeHtml(tour.title)}</h1><p>${escapeHtml(tour.subtitle || "")}</p><p>${escapeHtml(
         overview,
       )}</p></main>`,
-      jsonLd: {
-        "@context": "https://schema.org",
-        "@type": "TouristTrip",
-        name: tour.title,
-        description: tour.subtitle || overview,
-        url: `${SITE_URL}/tour/${tour.slug}`,
-      },
     });
   }
 
@@ -626,8 +475,7 @@ const main = () => {
   const tours = parseTours();
   const topicHubs = parseTopicHubs();
   const primaryHubBySlug = parsePrimaryHubMap();
-  const distAssetIndex = buildDistAssetUrlMap();
-  const pages = buildPages(blogPosts, tours, topicHubs, primaryHubBySlug, distAssetIndex);
+  const pages = buildPages(blogPosts, tours, topicHubs, primaryHubBySlug);
 
   for (const page of pages) {
     const html = withSeo(template, page);

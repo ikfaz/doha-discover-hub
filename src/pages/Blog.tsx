@@ -10,7 +10,6 @@ import { Badge } from '@/components/ui/badge';
 import { Search } from 'lucide-react';
 import { categoryToSlug, getBlogList, getCategoryCounts } from '@/lib/blog';
 import { getTopicHubPosts, getTopicHubs } from '@/lib/topic-hubs';
-import { toJsonLdAuthor } from '@/lib/structured-data';
 
 const Blog = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -48,30 +47,6 @@ const Blog = () => {
 
   const featuredPost = posts[0];
 
-  const blogJsonLd = useMemo(
-    () => ({
-      '@context': 'https://schema.org',
-      '@type': 'Blog',
-      name: 'Experience Doha Blog',
-      description: 'Insights, guides, and stories about life and travel in Qatar',
-      url: 'https://experiencedoha.com/blog',
-      publisher: {
-        '@type': 'Organization',
-        name: 'ExperienceDoha.com',
-      },
-      blogPost: posts.map((post) => ({
-        '@type': 'BlogPosting',
-        headline: post.title,
-        image: post.imageUrl,
-        datePublished: post.isoDate ?? post.date,
-        author: toJsonLdAuthor('Experience Doha Team'),
-        description: post.excerpt,
-        url: `https://experiencedoha.com/blog/${post.slug}`,
-      })),
-    }),
-    [posts],
-  );
-
   return (
     <div className="min-h-screen flex flex-col">
       {/* Keep query-driven blog search UX; canonical URLs intentionally exclude q to avoid index bloat. */}
@@ -79,7 +54,6 @@ const Blog = () => {
         title="Experience Doha Blog - Qatar Travel Guide & Expat Tips"
         description="Browse expert Doha guides, layover itineraries, expat tips, visa updates, and local insights. Search by topic or category."
         noindex={Boolean(query)}
-        jsonLd={blogJsonLd}
       />
       <NavBar />
 

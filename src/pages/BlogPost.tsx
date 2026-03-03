@@ -16,60 +16,16 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from '@/components/ui/breadcrumb';
-import { Calendar, Clock, Facebook, Twitter, Share2, Home } from 'lucide-react';
+import { Calendar, Clock, Home } from 'lucide-react';
 import BlogCard from '@/components/BlogCard';
 import { loadBlogPostBySlug } from '@/data/articles/blog-post-loaders';
-import { blogMetaPosts } from '@/data/articles/blog-meta';
 import { categoryToSlug, getBlogList } from '@/lib/blog';
 import { buildArticleInternalLinkBudget } from '@/lib/article-link-budget';
 import { getPrimaryTopicMetaForPost } from '@/lib/topic-hubs';
-import { toJsonLdAuthor } from '@/lib/structured-data';
 import { fixMojibake } from '@/lib/text';
 import { getHistoricalSlugCanonicalNote } from '@/lib/slug-strategy';
 import type { ReactNode } from 'react';
 import type { ArticleData } from '@/data/articles/types';
-
-const SITE_URL = 'https://experiencedoha.com';
-const DEFAULT_SOCIAL_IMAGE = `${SITE_URL}/og-default.jpg`;
-
-const toAbsoluteImageUrl = (value?: string): string | undefined => {
-  if (typeof value !== 'string') {
-    return undefined;
-  }
-
-  const trimmed = value.trim();
-  if (!trimmed) {
-    return undefined;
-  }
-
-  if (/^https?:\/\//i.test(trimmed)) {
-    return trimmed;
-  }
-
-  if (trimmed.startsWith('/')) {
-    return `${SITE_URL}${trimmed}`;
-  }
-
-  return `${SITE_URL}/${trimmed.replace(/^\.?\//, '')}`;
-};
-
-const isSvgImageUrl = (value: string): boolean => {
-  try {
-    const parsed = new URL(value, SITE_URL);
-    return parsed.pathname.toLowerCase().endsWith('.svg');
-  } catch {
-    return value.toLowerCase().split('?')[0].split('#')[0].endsWith('.svg');
-  }
-};
-
-const toSocialImageUrl = (value?: string): string => {
-  const absoluteImage = toAbsoluteImageUrl(value);
-  if (!absoluteImage) {
-    return DEFAULT_SOCIAL_IMAGE;
-  }
-
-  return isSvgImageUrl(absoluteImage) ? DEFAULT_SOCIAL_IMAGE : absoluteImage;
-};
 
 const SchoolComparisonTool = lazy(() => import('@/components/SchoolComparisonTool'));
 const SchoolFeeCalculator = lazy(() => import('@/components/SchoolFeeCalculator'));
@@ -484,69 +440,20 @@ const BlogPost = () => {
   }
 
   const articleDescription = fixMojibake(post.metaDescription || post.excerpt || post.content.substring(0, 155).replace(/<[^>]*>/g, ''));
-  const metadataPost = slug ? blogMetaPosts[slug] : undefined;
-  const articlePublishedIsoDate = post.isoDate || metadataPost?.isoDate || post.date;
-  const articleModifiedIsoDate = post.isoModifiedDate || metadataPost?.isoModifiedDate || articlePublishedIsoDate;
   const categorySlug = categoryToSlug(post.category);
   const safeTitle = fixMojibake(post.title);
   const safeCategory = fixMojibake(post.category);
   const safeDate = fixMojibake(post.date);
   const safeAuthor = fixMojibake(post.author);
   const safeContent = fixMojibake(post.content);
-  const seoImage = toSocialImageUrl(typeof post.imageUrl === 'string' ? post.imageUrl : undefined);
-  const canonicalArticleUrl = slug ? `${SITE_URL}/blog/${slug}` : window.location.href;
-  const shareArticleUrl = canonicalArticleUrl;
   const historicalSlugNote = slug ? getHistoricalSlugCanonicalNote(slug, safeTitle) : null;
   const primaryTopicMeta = slug ? getPrimaryTopicMetaForPost(slug) : undefined;
-
-  const handleCopyLink = () => {
-    navigator.clipboard.writeText(shareArticleUrl);
-  };
-
-  const articleJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": safeTitle,
-    "image": seoImage,
-    "author": toJsonLdAuthor(safeAuthor),
-    "publisher": {
-      "@type": "Organization",
-      "name": "ExperienceDoha.com",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://experiencedoha.com/logo.png"
-      }
-    },
-    "datePublished": articlePublishedIsoDate,
-    "dateModified": articleModifiedIsoDate,
-    "description": articleDescription,
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": canonicalArticleUrl
-    }
-  };
-
-  const breadcrumbJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://experiencedoha.com/" },
-      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://experiencedoha.com/blog" },
-      { "@type": "ListItem", "position": 3, "name": safeCategory, "item": `https://experiencedoha.com/blog/category/${categorySlug}` },
-      { "@type": "ListItem", "position": 4, "name": safeTitle }
-    ]
-  };
 
   return (
     <div className="min-h-screen flex flex-col">
       <SEOHead 
         title={`${safeTitle} | Doha Guide`}
         description={articleDescription}
-        image={seoImage}
-        type="article"
-        publishedTime={articlePublishedIsoDate}
-        modifiedTime={articleModifiedIsoDate}
-        jsonLd={[articleJsonLd, breadcrumbJsonLd]}
       />
       <NavBar />
       
@@ -646,41 +553,6 @@ const BlogPost = () => {
                     </nav>
                   </div>
                 )}
-
-                {/* Share Buttons */}
-                <div className="flex flex-wrap items-center gap-2 sm:gap-4 mb-8 pb-8 border-b">
-                  <span className="text-sm font-medium text-gray-600">Share this article:</span>
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    onClick={() =>
-                      window.open(
-                        `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareArticleUrl)}`,
-                        '_blank',
-                      )
-                    }
-                  >
-                    <Facebook className="h-4 w-4 sm:mr-2" />
-                    <span className="hidden sm:inline">Facebook</span>
-                  </Button>
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    onClick={() =>
-                      window.open(
-                        `https://twitter.com/intent/tweet?url=${encodeURIComponent(shareArticleUrl)}&text=${encodeURIComponent(safeTitle)}`,
-                        '_blank',
-                      )
-                    }
-                  >
-                    <Twitter className="h-4 w-4 sm:mr-2" />
-                    <span className="hidden sm:inline">Twitter</span>
-                  </Button>
-                  <Button variant="outline" size="sm" onClick={handleCopyLink}>
-                    <Share2 className="h-4 w-4 sm:mr-2" />
-                    <span className="hidden sm:inline">Copy Link</span>
-                  </Button>
-                </div>
 
                 {/* Article Content with Component Injection */}
                 {renderArticleContent(slug || 'default', safeContent)}

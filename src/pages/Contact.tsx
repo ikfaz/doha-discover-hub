@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { toast } from '@/components/ui/use-toast';
-import { Mail, Globe, MapPin, Instagram, Youtube, Facebook, Twitter } from 'lucide-react';
+import { Mail, Globe, MapPin } from 'lucide-react';
 
 const Contact = () => {
   const { t } = useTranslation();
@@ -128,32 +128,18 @@ const Contact = () => {
                   </div>
                 </div>
                 <div className="mt-8">
-                  <p className="font-medium mb-4">{t('contact.followUs')}</p>
-                  <div className="flex space-x-4">
-                    {[
-                      { href: 'https://www.youtube.com/@ExperienceDoha', icon: Youtube, label: 'YouTube' },
-                      { href: 'https://www.instagram.com/experiencedoha', icon: Instagram, label: 'Instagram' },
-                      { href: 'https://www.facebook.com/Experiencedohaqatar', icon: Facebook, label: 'Facebook' },
-                      { href: 'https://twitter.com/experiencedoha', icon: Twitter, label: 'Twitter' },
-                    ].map((s) => (
-                      <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer" className="bg-white/10 hover:bg-white/20 p-3 rounded-full transition-colors" aria-label={s.label}>
-                        <s.icon className="w-5 h-5 text-sand-gold" aria-hidden="true" />
-                      </a>
-                    ))}
-                  </div>
+                  <p className="text-sm text-secondary-foreground/80">
+                    Use the contact form and we will reply as soon as possible.
+                  </p>
                 </div>
               </div>
               
               <div className="bg-white shadow-md rounded-lg p-8">
                 <h2 className="text-2xl font-bold mb-6 text-secondary">{t('contact.collaboration')}</h2>
                 <p className="text-muted-foreground mb-6">{t('contact.collaborationDesc')}</p>
-                <Button
-                  className="bg-primary hover:bg-primary/90 text-primary-foreground font-medium"
-                  onClick={() => window.open('mailto:info@experiencedoha.com?subject=Collaboration%20Inquiry', '_self')}
-                >
-                  <Mail className="me-2 h-4 w-4" aria-hidden="true" />
-                  {t('contact.contactCollaboration')}
-                </Button>
+                <p className="text-sm text-muted-foreground">
+                  Please submit your proposal through the form above.
+                </p>
               </div>
             </div>
           </div>
