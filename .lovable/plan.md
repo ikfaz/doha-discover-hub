@@ -1,32 +1,22 @@
 
 
-# Improve Crawlability and Indexability
+# Fix Build Errors + Facebook Sharing Preview
 
-Google's two-step process -- crawling (discovering pages via links) and indexing (analyzing and storing content) -- can be improved on this site in several concrete ways.
+## Problem 1: Build Errors (28 entries missing `tags`)
 
-## Current Gaps
+`BlogMetaData` inherits `tags: string[]` as required from `ArticleData`. Many blog-meta entries added before tags were required don't include it.
 
-1. **No breadcrumbs** -- Blog posts have no breadcrumb navigation or BreadcrumbList structured data. Google uses breadcrumbs to understand site hierarchy and displays them in search results.
-2. **No internal link mesh** -- Blog post sidebar only has a "Subscribe" CTA. No related category links, no popular articles, no cross-linking between articles. Googlebot discovers pages by following links -- fewer links means fewer discovered pages.
-3. **Tags are not linked** -- Blog post tags render as static `<Badge>` elements with no `<a>` links. Each tag should link to `/blog/category/{tag}` so Googlebot can discover category pages and related content.
-4. **Table of Contents uses `preventDefault`** -- The ToC anchors call `e.preventDefault()` and use JS scrolling, which means Googlebot cannot follow these links to discover in-page content anchors. The `href` should work natively with JS as progressive enhancement.
-5. **Related articles are static** -- All blog posts show the same 3 `relatedPosts`. They should show contextually relevant articles based on category/tags to create a richer internal link graph.
+**Fix**: Make `tags` optional in `ArticleData` (`tags?: string[]`). Update all consumers that reference `post.tags` to default to `[]` (e.g., `post.tags || []`).
 
-## Changes
+## Problem 2: Facebook OG Image Not Working
 
-### File 1: `src/pages/BlogPost.tsx` -- Add breadcrumbs + link tags + fix ToC
+The `og:image` meta tag receives a Vite-processed asset path like `/assets/image-abc123.jpg` — a relative URL. Facebook's crawler needs an **absolute URL** (e.g., `https://experiencedoha.com/assets/image-abc123.jpg`).
 
-- Add visible breadcrumb navigation: Home > Blog > Category > Article Title
-- Add BreadcrumbList JSON-LD structured data for Google rich results
-- Make tag badges link to `/blog/category/{tag-slug}`
-- Fix ToC anchor links to not prevent default (allow native navigation, enhance with smooth scroll)
-- Show category-relevant related articles instead of static ones
+**Fix**: In `SEOHead.tsx`, normalize the `image` prop to an absolute URL by prepending `BASE_URL` when the image starts with `/`.
 
-### File 2: `src/pages/Blog.tsx` -- Add internal links to categories
+## Files to Edit
 
-- Add a category navigation section with links to all category pages, giving Googlebot paths to discover category listings
-
-### File 3: `src/pages/Index.tsx` -- Add category links section
-
-- Add a "Browse by Category" section with links to blog categories, creating more entry points for the crawler from the homepage
+1. **`src/data/articles/types.ts`** — Change `tags: string[]` to `tags?: string[]`
+2. **`src/components/SEOHead.tsx`** — Prepend `BASE_URL` to relative image URLs before outputting `og:image` and `twitter:image`
+3. **`src/pages/BlogPost.tsx`** — Use `post.tags || []` where tags are referenced
 
