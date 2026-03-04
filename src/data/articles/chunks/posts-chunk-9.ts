@@ -8,8 +8,150 @@ import dohaStopoverGuide1296CoverImage from '@/assets/doha-stopover-guide-12-96-
 import bestHotelsDohaNeighborhoodCoverImage from '@/assets/best-hotels-in-doha-by-neighborhood-cover.svg?url';
 import bestTimeToVisitDohaWeatherCoverImage from '@/assets/best-time-to-visit-doha-weather-cover.svg?url&no-inline';
 import qatarVisaFreeEntryHayyaCoverImage from '@/assets/qatar-visa-free-entry-hayya-e-visa-basics-cover.svg?url&no-inline';
+import dohaMetroGuideStationsLinesTicketsCoverImage from '@/assets/doha-metro-guide-stations-lines-tickets-cover.svg?url&no-inline';
 
 export const postsChunk9: Record<string, ArticleData> = {
+    'doha-metro-guide-stations-lines-tickets': {
+      id: '67',
+      title: 'Doha Metro Guide: Lines, Stations, Tickets, and Timings (2026)',
+      date: 'March 4, 2026',
+      isoDate: '2026-03-04',
+      metaDescription: 'Navigate the Doha Metro with a practical 2026 guide to lines, key stations, fares, travel cards, and operating hours. Learn how to get from Hamad International Airport to major districts, avoid common ticket mistakes, and plan reliable city routes with live-check links before travel day.',
+      excerpt: 'This practical Doha Metro guide covers line-by-line navigation, ticket options, first and last train timing patterns, and airport-to-city route planning so you can move around Doha quickly and with fewer mistakes.',
+      author: 'Experience Doha Team',
+      readTime: '14 min read',
+      category: 'Expat-Tips',
+      imageUrl: dohaMetroGuideStationsLinesTicketsCoverImage,
+      content: `
+        <p><strong>Executive summary:</strong> The Doha Metro is a fast, driverless network that connects Hamad International Airport, downtown interchanges, and major visitor districts. Most travelers can rely on three active lines (Red, Green, Gold), flat fares, and frequent service. This guide focuses on practical route selection, ticket logic, and timing decisions that reduce transfer friction.</p>
+
+        <h2 id="doha-metro-overview">Doha Metro at a Glance</h2>
+        <ul>
+          <li><strong>Three active lines:</strong> Red, Green, and Gold.</li>
+          <li><strong>Main interchange:</strong> Msheireb (all three lines connect).</li>
+          <li><strong>Airport access:</strong> Red Line serves Hamad International Airport Terminal 1.</li>
+          <li><strong>Fare logic:</strong> flat pricing by card type, not by distance.</li>
+          <li><strong>Best for:</strong> airport transfer, city sightseeing, and predictable commute windows.</li>
+        </ul>
+        <p>If you are planning activities after transit, pair this with <a href="/blog/best-things-to-do-in-doha">Best Things to Do in Doha</a>, <a href="/blog/doha-stopover-guide-12-96-hours">Doha Stopover Guide for 12-96 Hours</a>, and <a href="/blog/best-hotels-in-doha-by-neighborhood">Best Hotels in Doha by Neighborhood</a>.</p>
+
+        <h2 id="lines-map">Lines, Interchanges, and Major Stops</h2>
+        <p>The map is color-coded and straightforward once you anchor around the two main transfer points: <strong>Msheireb</strong> (Red/Green/Gold) and <strong>Al Bidda</strong> (Red/Green).</p>
+        <ul>
+          <li><strong>Red Line:</strong> north-south spine with airport, West Bay, Katara, and Lusail-side access.</li>
+          <li><strong>Green Line:</strong> cross-city corridor linking Education City and western districts to central Doha.</li>
+          <li><strong>Gold Line:</strong> east-west route serving historic and cultural zones including Souq Waqif-side access.</li>
+        </ul>
+        <p>Blue Line expansion plans are often referenced in public material, but activation timelines can move. Treat future-line dates as provisional until officially announced.</p>
+
+        <h2 id="ticket-fare-table">Ticket and Fare Comparison</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Option</th>
+              <th>Typical Cost Context</th>
+              <th>Daily Cap Context</th>
+              <th>Best Use Case</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Standard card ride</td>
+              <td>QAR 2 per journey</td>
+              <td>Around QAR 6/day</td>
+              <td>Most tourists and city trips</td>
+            </tr>
+            <tr>
+              <td>Standard day use</td>
+              <td>Effectively near day-cap level</td>
+              <td>Capped in system logic</td>
+              <td>Multi-stop sightseeing days</td>
+            </tr>
+            <tr>
+              <td>Gold Club card ride</td>
+              <td>QAR 10 per journey</td>
+              <td>Around QAR 30/day</td>
+              <td>Premium carriage preference</td>
+            </tr>
+          </tbody>
+        </table>
+        <p><em>Card issuance fees, caps, and fare rules can be revised. Re-check current values before travel.</em></p>
+
+        <h2 id="buying-cards">Buying, Topping Up, and Gate Use</h2>
+        <ul>
+          <li>Buy or top up at station vending machines and staffed counters.</li>
+          <li>Use tap-in and tap-out gates for every trip to avoid fare issues.</li>
+          <li>Keep enough stored balance before entering the network.</li>
+          <li>Keep a screenshot or offline copy of card and route details if mobile signal drops.</li>
+        </ul>
+        <p>For first-time users, the most common mistake is forgetting to tap out, which can trigger incorrect charging behavior.</p>
+
+        <h2 id="airport-connections">Airport to City: Fast Route Planning</h2>
+        <p>Hamad International Airport Terminal 1 connects directly to the Red Line. For many central destinations, the standard pattern is Red Line into Msheireb, then transfer to Green or Gold as needed.</p>
+        <ul>
+          <li><strong>Airport to West Bay:</strong> usually direct on Red Line.</li>
+          <li><strong>Airport to Souq Waqif zone:</strong> Red to Msheireb, then short transfer logic depending on final stop.</li>
+          <li><strong>Airport to museums/cultural stops:</strong> often one transfer via Msheireb for Gold Line destinations.</li>
+        </ul>
+        <p>Pair metro with Metrolink feeders or taxis for last-mile segments when your hotel is outside easy walking range.</p>
+
+        <h2 id="schedule-frequency">Operating Hours and Frequency Patterns</h2>
+        <p>Published timing windows typically follow this pattern:</p>
+        <ul>
+          <li><strong>Sunday to Wednesday:</strong> around 5:30 AM to 11:59 PM.</li>
+          <li><strong>Thursday:</strong> around 5:30 AM to 1:00 AM.</li>
+          <li><strong>Friday:</strong> afternoon start (around 2:00 PM) to late night.</li>
+          <li><strong>Saturday:</strong> around 6:00 AM to 11:59 PM.</li>
+        </ul>
+        <p>Daytime headways are commonly around 5-6 minutes on core segments. Always check live station timings before late-night or Friday transfers.</p>
+
+        <h2 id="accessibility-safety">Accessibility, Family Use, and Safety</h2>
+        <ul>
+          <li>Stations and trains are generally wheelchair-accessible with elevators and level boarding.</li>
+          <li>Family and class sections are marked clearly in stations and carriages.</li>
+          <li>CCTV and staffed stations support a strong baseline safety environment.</li>
+          <li>Large luggage is usually manageable, but avoid peak crowd windows if carrying multiple bags.</li>
+        </ul>
+
+        <h2 id="common-mistakes">Common Mistakes That Slow Travelers Down</h2>
+        <ul>
+          <li><strong>Ignoring Friday start-time differences:</strong> this causes missed morning plans.</li>
+          <li><strong>No transfer plan at Msheireb:</strong> decide platform direction before you arrive.</li>
+          <li><strong>Low card balance at gates:</strong> top up before peak hours.</li>
+          <li><strong>Overpacking at rush times:</strong> use off-peak windows for heavy luggage movement.</li>
+        </ul>
+
+        <h2 id="live-check">Live-Check Flags Before Travel Day</h2>
+        <ul>
+          <li>Service changes for holidays, events, or maintenance windows.</li>
+          <li>Fare cap and card policy updates.</li>
+          <li>First and last train adjustments by specific station.</li>
+          <li>Airport-side transfer routing changes during terminal operations shifts.</li>
+        </ul>
+
+        <h2 id="live-check-sources">Live-Check Sources</h2>
+        <ul>
+          <li><strong>Visit Qatar, Doha Metro overview:</strong> <a href="https://visitqatar.com/intl-en/plan-your-trip/getting-around/doha-metro" target="_blank" rel="noopener noreferrer">https://visitqatar.com/intl-en/plan-your-trip/getting-around/doha-metro</a></li>
+          <li><strong>Qatar Rail official website:</strong> <a href="https://www.qr.com.qa/" target="_blank" rel="noopener noreferrer">https://www.qr.com.qa/</a></li>
+          <li><strong>Qatar Rail network map page:</strong> <a href="https://www.qr.com.qa/network-map" target="_blank" rel="noopener noreferrer">https://www.qr.com.qa/network-map</a></li>
+          <li><strong>Hamad Airport official website:</strong> <a href="https://dohahamadairport.com/" target="_blank" rel="noopener noreferrer">https://dohahamadairport.com/</a></li>
+        </ul>
+      `,
+      tableOfContents: [
+        { title: 'Doha Metro at a Glance', id: 'doha-metro-overview' },
+        { title: 'Lines, Interchanges, and Major Stops', id: 'lines-map' },
+        { title: 'Ticket and Fare Comparison', id: 'ticket-fare-table' },
+        { title: 'Buying, Topping Up, and Gate Use', id: 'buying-cards' },
+        { title: 'Airport to City: Fast Route Planning', id: 'airport-connections' },
+        { title: 'Operating Hours and Frequency Patterns', id: 'schedule-frequency' },
+        { title: 'Accessibility, Family Use, and Safety', id: 'accessibility-safety' },
+        { title: 'Common Mistakes That Slow Travelers Down', id: 'common-mistakes' },
+        { title: 'Live-Check Flags Before Travel Day', id: 'live-check' },
+        { title: 'Live-Check Sources', id: 'live-check-sources' }
+      ],
+      tags: ['doha metro map', 'doha metro lines', 'doha metro tickets', 'doha metro stations', 'qatar travel card', 'doha metro fare', 'hamad airport metro', 'doha metro timings', 'doha travel tips', 'lusail metro', 'qatar rail', 'doha metro accessibility']
+    },
+
     'qatar-visa-free-entry-hayya-e-visa-basics': {
       id: '66',
       title: 'Qatar Visa-Free Entry and Hayya E-Visa Basics (2026 Guide)',

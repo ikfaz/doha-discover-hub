@@ -54,10 +54,25 @@ import dohaStopoverGuide1296CoverImage from '@/assets/doha-stopover-guide-12-96-
 import bestHotelsDohaNeighborhoodCoverImage from '@/assets/best-hotels-in-doha-by-neighborhood-cover.svg?url';
 import bestTimeToVisitDohaWeatherCoverImage from '@/assets/best-time-to-visit-doha-weather-cover.svg?url&no-inline';
 import qatarVisaFreeEntryHayyaCoverImage from '@/assets/qatar-visa-free-entry-hayya-e-visa-basics-cover.svg?url&no-inline';
+import dohaMetroGuideStationsLinesTicketsCoverImage from '@/assets/doha-metro-guide-stations-lines-tickets-cover.svg?url&no-inline';
 
 export type BlogMetaData = Omit<ArticleData, 'content' | 'tableOfContents'>;
 
 export const blogMetaPosts: Record<string, BlogMetaData> = {
+    'doha-metro-guide-stations-lines-tickets': {
+      id: '67',
+      title: 'Doha Metro Guide: Lines, Stations, Tickets, and Timings (2026)',
+      date: 'March 4, 2026',
+      isoDate: '2026-03-04',
+      metaDescription: 'Navigate the Doha Metro with a practical 2026 guide to lines, key stations, fares, travel cards, and operating hours. Learn how to get from Hamad International Airport to major districts, avoid common ticket mistakes, and plan reliable city routes with live-check links before travel day.',
+      excerpt: 'This practical Doha Metro guide covers line-by-line navigation, ticket options, first and last train timing patterns, and airport-to-city route planning so you can move around Doha quickly and with fewer mistakes.',
+      author: 'Experience Doha Team',
+      readTime: '14 min read',
+      category: 'Expat-Tips',
+      imageUrl: dohaMetroGuideStationsLinesTicketsCoverImage,
+      tags: ['doha metro map', 'doha metro lines', 'doha metro tickets', 'doha metro stations', 'qatar travel card', 'doha metro fare', 'hamad airport metro', 'doha metro timings', 'doha travel tips', 'lusail metro', 'qatar rail', 'doha metro accessibility'],
+    },
+
     'qatar-visa-free-entry-hayya-e-visa-basics': {
       id: '66',
       title: 'Qatar Visa-Free Entry and Hayya E-Visa Basics (2026 Guide)',

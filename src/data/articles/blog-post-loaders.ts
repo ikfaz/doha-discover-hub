@@ -1,6 +1,7 @@
 import type { ArticleData } from './types';
 
 const postLoaders: Record<string, () => Promise<ArticleData | null>> = {
+  'doha-metro-guide-stations-lines-tickets': async () => (await import('./chunks/posts-chunk-9')).postsChunk9['doha-metro-guide-stations-lines-tickets'] ?? null,
   'qatar-visa-free-entry-hayya-e-visa-basics': async () => (await import('./chunks/posts-chunk-9')).postsChunk9['qatar-visa-free-entry-hayya-e-visa-basics'] ?? null,
   'best-time-to-visit-doha-weather': async () => (await import('./chunks/posts-chunk-9')).postsChunk9['best-time-to-visit-doha-weather'] ?? null,
   'best-hotels-in-doha-by-neighborhood': async () => (await import('./chunks/posts-chunk-9')).postsChunk9['best-hotels-in-doha-by-neighborhood'] ?? null,
