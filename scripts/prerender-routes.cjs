@@ -10,8 +10,7 @@ const TOURS_PATH = path.join(ROOT_DIR, "src", "data", "tours.ts");
 const TOPIC_HUBS_PATH = path.join(ROOT_DIR, "src", "data", "articles", "topic-hubs.json");
 const ARTICLE_PRIMARY_HUB_PATH = path.join(ROOT_DIR, "src", "data", "articles", "article-primary-hub.json");
 
-const DEFAULT_IMAGE =
-  "https://images.unsplash.com/photo-1496307653780-42ee777d4833?q=80&w=2670&auto=format&fit=crop";
+const DEFAULT_IMAGE = "https://experiencedoha.com/og-default-1200x630.jpg";
 
 const MOJIBAKE_PATTERN = /[\u00C2\u00C3\u00D8\u00D9]|Ã¢/;
 
@@ -481,13 +480,21 @@ const buildPages = (blogPosts, tours, topicHubs, primaryHubBySlug) => {
         "@context": "https://schema.org",
         "@type": "Article",
         headline: post.title,
+        image: post.imageUrl || DEFAULT_IMAGE,
         datePublished: post.isoDate || undefined,
         dateModified: post.isoModifiedDate || post.isoDate || undefined,
+        inLanguage: "en",
+        articleSection: post.category || undefined,
+        isAccessibleForFree: true,
         author: toJsonLdAuthor(post.author || "Experience Doha Team"),
         publisher: {
           "@type": "Organization",
           name: "Experience Doha",
           url: SITE_URL,
+          logo: {
+            "@type": "ImageObject",
+            url: `${SITE_URL}/logo.png`,
+          },
         },
         mainEntityOfPage: `${SITE_URL}/blog/${post.slug}`,
         description,

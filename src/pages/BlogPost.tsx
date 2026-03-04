@@ -30,6 +30,8 @@ import NotFound from '@/pages/NotFound';
 import type { ReactNode } from 'react';
 import type { ArticleData } from '@/data/articles/types';
 
+const BASE_URL = 'https://experiencedoha.com';
+
 const SchoolComparisonTool = lazy(() => import('@/components/SchoolComparisonTool'));
 const SchoolFeeCalculator = lazy(() => import('@/components/SchoolFeeCalculator'));
 const VisaChecklistGenerator = lazy(() => import('@/components/VisaChecklistGenerator'));
@@ -454,6 +456,13 @@ const BlogPost = () => {
   const safeContent = fixMojibake(post.content);
   const historicalSlugNote = slug ? getHistoricalSlugCanonicalNote(slug, safeTitle) : null;
   const primaryTopicMeta = slug ? getPrimaryTopicMetaForPost(slug) : undefined;
+  const articleImageAbsolute =
+    typeof post.imageUrl === 'string'
+      ? post.imageUrl.startsWith('http')
+        ? post.imageUrl
+        : `${BASE_URL}${post.imageUrl.startsWith('/') ? '' : '/'}${post.imageUrl}`
+      : undefined;
+  const canonicalArticleUrl = `${BASE_URL}/blog/${slug}`;
 
   const handleCopyLink = () => {
     navigator.clipboard.writeText(window.location.href);
@@ -463,22 +472,26 @@ const BlogPost = () => {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": safeTitle,
-    "image": typeof post.imageUrl === 'string' ? post.imageUrl : undefined,
+    "image": articleImageAbsolute,
     "author": toJsonLdAuthor(safeAuthor),
     "publisher": {
       "@type": "Organization",
-      "name": "ExperienceDoha.com",
+      "name": "Experience Doha",
+      "url": BASE_URL,
       "logo": {
         "@type": "ImageObject",
-        "url": "https://experiencedoha.com/logo.png"
+        "url": `${BASE_URL}/logo.png`
       }
     },
     "datePublished": articlePublishedIsoDate,
     "dateModified": articleModifiedIsoDate,
     "description": articleDescription,
+    "inLanguage": "en",
+    "articleSection": safeCategory,
+    "isAccessibleForFree": true,
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": `https://experiencedoha.com/blog/${slug}`
+      "@id": canonicalArticleUrl
     }
   };
 
@@ -498,7 +511,7 @@ const BlogPost = () => {
       <SEOHead 
         title={`${safeTitle} | Doha Guide`}
         description={articleDescription}
-        image={typeof post.imageUrl === 'string' ? post.imageUrl : undefined}
+        image={articleImageAbsolute}
         type="article"
         publishedTime={articlePublishedIsoDate}
         modifiedTime={articleModifiedIsoDate}
