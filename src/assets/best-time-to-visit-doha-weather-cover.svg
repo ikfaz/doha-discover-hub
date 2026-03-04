@@ -1,0 +1,73 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sky" x1="800" y1="0" x2="800" y2="900" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1C4E7D"/>
+      <stop offset="0.45" stop-color="#47A9D7"/>
+      <stop offset="1" stop-color="#F2B368"/>
+    </linearGradient>
+    <linearGradient id="sand" x1="800" y1="540" x2="800" y2="900" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F8CF8D"/>
+      <stop offset="1" stop-color="#C17942"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#EAF5FF" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="titleBar" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5A1233"/>
+      <stop offset="1" stop-color="#2E0919"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#sky)"/>
+  <circle cx="1260" cy="172" r="92" fill="#FFE09A" fill-opacity="0.86"/>
+  <circle cx="380" cy="168" r="48" fill="#E4F5FF" fill-opacity="0.9"/>
+
+  <path d="M0 592C190 560 350 628 566 592C760 560 954 632 1176 594C1336 566 1478 582 1600 572V900H0V592Z" fill="url(#sand)"/>
+
+  <g opacity="0.9">
+    <rect x="118" y="324" width="48" height="220" fill="#1B3A5B"/>
+    <rect x="180" y="288" width="60" height="256" fill="#245079"/>
+    <rect x="254" y="310" width="44" height="234" fill="#1A3654"/>
+    <rect x="312" y="266" width="60" height="278" fill="#2E5E8F"/>
+    <rect x="386" y="300" width="44" height="244" fill="#21496F"/>
+    <rect x="444" y="244" width="58" height="300" fill="#3A6C9F"/>
+    <rect x="516" y="286" width="40" height="258" fill="#1B3D61"/>
+    <rect x="568" y="332" width="52" height="212" fill="#29537D"/>
+    <rect x="632" y="292" width="42" height="252" fill="#1F4469"/>
+    <rect x="686" y="256" width="44" height="288" fill="#336896"/>
+    <rect x="742" y="302" width="34" height="242" fill="#1D3E60"/>
+  </g>
+
+  <g>
+    <rect x="870" y="90" width="656" height="130" rx="22" fill="url(#titleBar)"/>
+    <text x="904" y="144" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="44" font-weight="800">Best Time to Visit Doha</text>
+    <text x="904" y="188" fill="#F6D7B4" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="600">Weather and Month-by-Month Guide</text>
+  </g>
+
+  <g>
+    <rect x="866" y="258" width="660" height="278" rx="26" fill="url(#card)"/>
+    <text x="904" y="312" fill="#1A3D64" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="800">Season Snapshot</text>
+    <text x="904" y="362" fill="#264F77" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="700">Nov to Mar: best outdoor comfort</text>
+    <text x="904" y="404" fill="#264F77" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="700">Oct and Apr-May: warm shoulder windows</text>
+    <text x="904" y="446" fill="#264F77" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="700">Jun to Sep: indoor-first planning</text>
+    <text x="904" y="502" fill="#734429" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700">Pick dates by comfort target, not only room price.</text>
+  </g>
+
+  <g>
+    <rect x="872" y="586" width="654" height="182" rx="24" fill="#F3FBFF" fill-opacity="0.92"/>
+    <text x="904" y="634" fill="#1A3D64" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800">Practical Planning Rule</text>
+    <text x="904" y="678" fill="#2A557F" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700">Sightseeing early and late in warm months.</text>
+    <text x="904" y="714" fill="#2A557F" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700">Always live-check weather alerts before outdoor days.</text>
+  </g>
+
+  <g opacity="0.15">
+    <path d="M0 790C230 746 430 756 670 804C930 854 1150 860 1370 812C1482 790 1548 778 1600 782V900H0V790Z" fill="#FFF2DD"/>
+  </g>
+
+  <g opacity="0.01">
+    <text x="12" y="884" fill="#FFFFFF" font-family="monospace" font-size="9">
+      best time to visit doha weather month by month guide cover asset keep as standalone url best time to visit doha weather month by month guide cover asset keep as standalone url best time to visit doha weather month by month guide cover asset keep as standalone url best time to visit doha weather month by month guide cover asset keep as standalone url best time to visit doha weather month by month guide cover asset keep as standalone url best time to visit doha weather month by month guide cover asset keep as standalone url
+    </text>
+  </g>
+</svg>

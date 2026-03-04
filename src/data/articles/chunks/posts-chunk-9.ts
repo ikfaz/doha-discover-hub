@@ -6,8 +6,125 @@ import top10AttractionsImage from '@/assets/top-10-attractions.jpg';
 import bestThingsToDoInDohaCoverImage from '@/assets/best-things-to-do-in-doha-cover.svg?url';
 import dohaStopoverGuide1296CoverImage from '@/assets/doha-stopover-guide-12-96-hours-cover.svg?url';
 import bestHotelsDohaNeighborhoodCoverImage from '@/assets/best-hotels-in-doha-by-neighborhood-cover.svg?url';
+import bestTimeToVisitDohaWeatherCoverImage from '@/assets/best-time-to-visit-doha-weather-cover.svg?url&no-inline';
 
 export const postsChunk9: Record<string, ArticleData> = {
+    'best-time-to-visit-doha-weather': {
+      id: '65',
+      title: 'Best Time to Visit Doha for Weather (Month-by-Month Guide)',
+      date: 'March 4, 2026',
+      isoDate: '2026-03-04',
+      metaDescription: 'Plan the best time to visit Doha with practical month-by-month weather ranges, comfort guidance, and crowd tradeoffs. This guide covers winter peak season, shoulder months, and extreme summer heat so you can schedule beaches, desert trips, city walks, and indoor plans at the right time.',
+      excerpt: 'The best time to visit Doha for weather is usually November through March. This guide breaks down every month with heat, humidity, crowd levels, and activity fit so you can pick dates that match your travel style.',
+      author: 'Experience Doha Team',
+      readTime: '14 min read',
+      category: 'Attractions',
+      imageUrl: bestTimeToVisitDohaWeatherCoverImage,
+      content: `
+        <p><strong>Executive summary:</strong> If weather comfort is your priority, visit Doha between <strong>November and March</strong>. For warmer beach and pool conditions with fewer peak-season crowds, target <strong>late October to late November</strong> or <strong>early April to early May</strong>. June to September is workable only with an indoor-first plan.</p>
+
+        <h2 id="quick-answer">Best Time to Visit Doha at a Glance</h2>
+        <ul>
+          <li><strong>Best overall weather:</strong> November to March.</li>
+          <li><strong>Warm shoulder windows:</strong> late October to late November, and early April to early May.</li>
+          <li><strong>Most difficult heat period:</strong> June to September.</li>
+        </ul>
+        <p>If you are planning your activity list first, use <a href="/blog/best-things-to-do-in-doha">Best Things to Do in Doha</a>. If this is a short transit trip, pair this guide with <a href="/blog/doha-stopover-guide-12-96-hours">Doha Stopover Guide for 12-96 Hours</a>.</p>
+
+        <h2 id="month-by-month">Doha Weather by Month: Quick Comparison Table</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Month</th>
+              <th>Typical Day / Night</th>
+              <th>Comfort Level</th>
+              <th>Crowd Level</th>
+              <th>Best Fit Activities</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>January</td><td>72F / 57F (22C / 14C)</td><td>Cool and very walkable</td><td>High</td><td>Museums, souq nights, long Corniche walks</td></tr>
+            <tr><td>February</td><td>75F / 61F (24C / 16C)</td><td>Prime outdoor comfort</td><td>High</td><td>Outdoor districts, events, desert day trips</td></tr>
+            <tr><td>March</td><td>84F / 64F (29C / 18C)</td><td>Warm but still comfortable</td><td>High</td><td>Markets, walking routes, evening dining</td></tr>
+            <tr><td>April</td><td>93F / 73F (34C / 23C)</td><td>Hot midday, pleasant nights</td><td>Medium</td><td>Pool time, beach evenings, sunset outings</td></tr>
+            <tr><td>May</td><td>104F / 82F (40C / 28C)</td><td>Heat rises quickly</td><td>Medium-Low</td><td>Indoor attractions, late evening plans</td></tr>
+            <tr><td>June</td><td>108F / 86F (42C / 30C)</td><td>Extreme daytime heat</td><td>Low</td><td>Malls, museums, night-only outdoor stops</td></tr>
+            <tr><td>July</td><td>109F / 90F (43C / 32C)</td><td>Peak heat plus humidity</td><td>Low</td><td>Indoor-first itineraries</td></tr>
+            <tr><td>August</td><td>108F / 88F (42C / 31C)</td><td>Very hot and sticky</td><td>Low</td><td>Indoor venues and short night walks</td></tr>
+            <tr><td>September</td><td>102F / 84F (39C / 29C)</td><td>Still hot, slowly easing</td><td>Low-Medium</td><td>Late evening city walks</td></tr>
+            <tr><td>October</td><td>97F / 79F (36C / 26C)</td><td>Transition month</td><td>Medium</td><td>Outdoor photos, beach evenings</td></tr>
+            <tr><td>November</td><td>86F / 72F (30C / 22C)</td><td>Excellent all-day comfort</td><td>High</td><td>Best all-round outdoor month</td></tr>
+            <tr><td>December</td><td>77F / 63F (25C / 17C)</td><td>Mild days, cooler nights</td><td>High</td><td>Markets, museums, outdoor cafes</td></tr>
+          </tbody>
+        </table>
+        <p><em>These are typical monthly patterns, not guarantees for a specific week.</em></p>
+
+        <h2 id="nov-mar">Peak Weather Season: November to March</h2>
+        <p>This is the easiest period for most travelers. You can run longer outdoor days without structuring every hour around air conditioning, and major city events are more active during this window.</p>
+        <ul>
+          <li><strong>Best for:</strong> first-time visitors, outdoor sightseeing, desert trips, and full-day city itineraries.</li>
+          <li><strong>Tradeoff:</strong> higher demand and higher hotel pricing in top zones.</li>
+          <li><strong>Packing:</strong> breathable daytime layers plus a light extra layer for cooler evenings.</li>
+        </ul>
+
+        <h2 id="shoulder">Shoulder Months: October and April to May</h2>
+        <p>Shoulder months can be excellent if you use a heat-aware schedule: outside early and late, indoors at midday.</p>
+        <ul>
+          <li><strong>October:</strong> strong comeback month for outdoor movement after summer intensity.</li>
+          <li><strong>April:</strong> warm, often good for pool and beach plans plus city evenings.</li>
+          <li><strong>May:</strong> treat as transition to summer; prioritize indoor blocks.</li>
+        </ul>
+        <p>For travelers who want warmth without peak summer strain, the sweet spots are usually late October to late November and early April to early May.</p>
+
+        <h2 id="summer">Summer Reality: June to September</h2>
+        <p>Summer in Doha is not just "a bit hot." Daytime temperatures are often extreme, humidity can amplify heat stress, and some days include dust and visibility issues.</p>
+        <ul>
+          <li><strong>Best approach:</strong> indoor-first itinerary with short outdoor windows after sunset.</li>
+          <li><strong>Use summer advantages:</strong> lower crowd pressure and more room-rate promotions.</li>
+          <li><strong>Do not skip:</strong> hydration planning, sun protection, and conservative daytime movement.</li>
+        </ul>
+
+        <h2 id="by-trip-type">Best Months by Trip Type</h2>
+        <ul>
+          <li><strong>First Doha trip:</strong> November, February, or March.</li>
+          <li><strong>Beach and pool priority:</strong> November, March, April, or late October evenings.</li>
+          <li><strong>Short stopover:</strong> November to March for easiest timing and comfort.</li>
+          <li><strong>Budget-first travel:</strong> summer can reduce rates, but plan indoors by default.</li>
+        </ul>
+        <p>For final flight-day checks and airport-side planning, use <a href="/blog/hamad-international-airport-guide">Hamad International Airport Guide</a>.</p>
+
+        <h2 id="live-check">Live-Check Before You Lock Dates</h2>
+        <p>Always re-check these inputs in the final days before travel:</p>
+        <ul>
+          <li><strong>Airport operations and flight status:</strong> disruptions can happen with little warning.</li>
+          <li><strong>Entry and visa requirements:</strong> rules vary by nationality and can change.</li>
+          <li><strong>Event calendar:</strong> conference, sports, and cultural dates can shift.</li>
+          <li><strong>Weather alerts:</strong> dust, strong winds, and reduced visibility can affect plans.</li>
+        </ul>
+
+        <h2 id="live-check-sources">Live-Check Sources</h2>
+        <ul>
+          <li><strong>Visit Qatar weather overview:</strong> <a href="https://visitqatar.com/intl-en/about-qatar/weather" target="_blank" rel="noopener noreferrer">https://visitqatar.com/intl-en/about-qatar/weather</a></li>
+          <li><strong>Qatar Tourism weather page:</strong> <a href="https://www.qatartourism.org/essentials/weather/" target="_blank" rel="noopener noreferrer">https://www.qatartourism.org/essentials/weather/</a></li>
+          <li><strong>QCAA weather information service:</strong> <a href="https://caa.gov.qa/en/weather-information-service" target="_blank" rel="noopener noreferrer">https://caa.gov.qa/en/weather-information-service</a></li>
+          <li><strong>NOAA climate normals context:</strong> <a href="https://www.ncei.noaa.gov/products/wmo-climate-normals" target="_blank" rel="noopener noreferrer">https://www.ncei.noaa.gov/products/wmo-climate-normals</a></li>
+          <li><strong>Lonely Planet seasonality overview:</strong> <a href="https://www.lonelyplanet.com/articles/best-time-to-visit-qatar" target="_blank" rel="noopener noreferrer">https://www.lonelyplanet.com/articles/best-time-to-visit-qatar</a></li>
+          <li><strong>Qatar Tourism events and media:</strong> <a href="https://www.qatartourism.com/en/news-and-media/press-releases" target="_blank" rel="noopener noreferrer">https://www.qatartourism.com/en/news-and-media/press-releases</a></li>
+        </ul>
+      `,
+      tableOfContents: [
+        { title: 'Best Time to Visit Doha at a Glance', id: 'quick-answer' },
+        { title: 'Doha Weather by Month: Quick Comparison Table', id: 'month-by-month' },
+        { title: 'Peak Weather Season: November to March', id: 'nov-mar' },
+        { title: 'Shoulder Months: October and April to May', id: 'shoulder' },
+        { title: 'Summer Reality: June to September', id: 'summer' },
+        { title: 'Best Months by Trip Type', id: 'by-trip-type' },
+        { title: 'Live-Check Before You Lock Dates', id: 'live-check' },
+        { title: 'Live-Check Sources', id: 'live-check-sources' }
+      ],
+      tags: ['best time to visit doha', 'doha weather by month', 'qatar best time to visit', 'doha winter weather', 'doha summer humidity', 'doha in november', 'doha in february', 'doha in april', 'doha in october', 'doha heat index', 'doha desert safari best time', 'doha beach best months']
+    },
+
     'best-hotels-in-doha-by-neighborhood': {
       id: '64',
       title: 'Best Hotels in Doha by Neighborhood (2026 Guide)',

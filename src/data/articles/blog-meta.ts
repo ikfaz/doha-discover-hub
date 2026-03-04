@@ -52,10 +52,25 @@ import top10AttractionsImage from '@/assets/top-10-attractions.jpg';
 import bestThingsToDoInDohaCoverImage from '@/assets/best-things-to-do-in-doha-cover.svg?url';
 import dohaStopoverGuide1296CoverImage from '@/assets/doha-stopover-guide-12-96-hours-cover.svg?url';
 import bestHotelsDohaNeighborhoodCoverImage from '@/assets/best-hotels-in-doha-by-neighborhood-cover.svg?url';
+import bestTimeToVisitDohaWeatherCoverImage from '@/assets/best-time-to-visit-doha-weather-cover.svg?url&no-inline';
 
 export type BlogMetaData = Omit<ArticleData, 'content' | 'tableOfContents'>;
 
 export const blogMetaPosts: Record<string, BlogMetaData> = {
+    'best-time-to-visit-doha-weather': {
+      id: '65',
+      title: 'Best Time to Visit Doha for Weather (Month-by-Month Guide)',
+      date: 'March 4, 2026',
+      isoDate: '2026-03-04',
+      metaDescription: 'Plan the best time to visit Doha with practical month-by-month weather ranges, comfort guidance, and crowd tradeoffs. This guide covers winter peak season, shoulder months, and extreme summer heat so you can schedule beaches, desert trips, city walks, and indoor plans at the right time.',
+      excerpt: 'The best time to visit Doha for weather is usually November through March. This guide breaks down every month with heat, humidity, crowd levels, and activity fit so you can pick dates that match your travel style.',
+      author: 'Experience Doha Team',
+      readTime: '14 min read',
+      category: 'Attractions',
+      imageUrl: bestTimeToVisitDohaWeatherCoverImage,
+      tags: ['best time to visit doha', 'doha weather by month', 'qatar best time to visit', 'doha winter weather', 'doha summer humidity', 'doha in november', 'doha in february', 'doha in april', 'doha in october', 'doha heat index', 'doha desert safari best time', 'doha beach best months'],
+    },
+
     'best-hotels-in-doha-by-neighborhood': {
       id: '64',
       title: 'Best Hotels in Doha by Neighborhood (2026 Guide)',
