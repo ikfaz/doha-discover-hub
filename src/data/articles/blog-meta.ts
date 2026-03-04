@@ -55,10 +55,25 @@ import bestHotelsDohaNeighborhoodCoverImage from '@/assets/best-hotels-in-doha-b
 import bestTimeToVisitDohaWeatherCoverImage from '@/assets/best-time-to-visit-doha-weather-cover.svg?url&no-inline';
 import qatarVisaFreeEntryHayyaCoverImage from '@/assets/qatar-visa-free-entry-hayya-e-visa-basics-cover.svg?url&no-inline';
 import dohaMetroGuideStationsLinesTicketsCoverImage from '@/assets/doha-metro-guide-stations-lines-tickets-cover.svg?url&no-inline';
+import souqWaqifMarketGuideFirstVisitsCoverImage from '@/assets/souq-waqif-market-guide-first-visits-cover.svg?url&no-inline';
 
 export type BlogMetaData = Omit<ArticleData, 'content' | 'tableOfContents'>;
 
 export const blogMetaPosts: Record<string, BlogMetaData> = {
+    'souq-waqif-market-guide-first-visits': {
+      id: '68',
+      title: 'Souq Waqif Market Guide for First Visits (2026)',
+      date: 'March 4, 2026',
+      isoDate: '2026-03-04',
+      metaDescription: 'Plan your first Souq Waqif visit with a practical guide to opening-hour patterns, shopping strategy, bargaining etiquette, metro access, and the best evening atmosphere windows. Includes route planning, what to buy, and live-check links before you go.',
+      excerpt: 'This first-visit Souq Waqif guide helps you time your visit, navigate key sections, shop smarter, and plan metro-friendly evening routes so you get the full market experience without wasting hours.',
+      author: 'Experience Doha Team',
+      readTime: '15 min read',
+      category: 'Attractions',
+      imageUrl: souqWaqifMarketGuideFirstVisitsCoverImage,
+      tags: ['souq waqif guide', 'things to do in souq waqif', 'souq waqif shopping', 'falcon souq doha', 'souq waqif restaurants', 'souq waqif opening hours', 'doha traditional market', 'what to buy in qatar', 'best souvenirs doha', 'souq waqif evening', 'doha metro gold line', 'doha layover guide'],
+    },
+
     'doha-metro-guide-stations-lines-tickets': {
       id: '67',
       title: 'Doha Metro Guide: Lines, Stations, Tickets, and Timings (2026)',

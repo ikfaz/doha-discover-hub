@@ -1,0 +1,72 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="nightSky" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2A0F34"/>
+      <stop offset="0.55" stop-color="#5C1A52"/>
+      <stop offset="1" stop-color="#C56A2B"/>
+    </linearGradient>
+    <linearGradient id="souqGlow" x1="0" y1="620" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#E5A64A"/>
+      <stop offset="1" stop-color="#8A4319"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFF5E9" stop-opacity="0.96"/>
+      <stop offset="1" stop-color="#FFE0B7" stop-opacity="0.92"/>
+    </linearGradient>
+    <filter id="softShadow" x="-100" y="-100" width="1900" height="1200" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#2F0D2B" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#nightSky)"/>
+  <circle cx="1270" cy="148" r="76" fill="#FFD27E" fill-opacity="0.86"/>
+
+  <path d="M0 662C164 620 336 616 526 648C760 690 952 694 1158 646C1328 604 1468 608 1600 632V900H0V662Z" fill="url(#souqGlow)"/>
+
+  <g opacity="0.9">
+    <path d="M94 584V366H156V584H94Z" fill="#7F2E62"/>
+    <path d="M166 584V322H236V584H166Z" fill="#9E3B74"/>
+    <path d="M248 584V286H316V584H248Z" fill="#B84D84"/>
+    <path d="M326 584V352H382V584H326Z" fill="#6F2857"/>
+    <path d="M390 584V312H456V584H390Z" fill="#AF4D84"/>
+    <path d="M468 584V276H530V584H468Z" fill="#D67A37"/>
+    <path d="M542 584V340H604V584H542Z" fill="#8F3367"/>
+  </g>
+
+  <g fill="#FFD98F" opacity="0.92">
+    <circle cx="132" cy="430" r="18"/>
+    <circle cx="202" cy="392" r="18"/>
+    <circle cx="280" cy="362" r="18"/>
+    <circle cx="354" cy="420" r="18"/>
+    <circle cx="424" cy="380" r="18"/>
+    <circle cx="500" cy="346" r="18"/>
+    <circle cx="574" cy="402" r="18"/>
+  </g>
+
+  <g filter="url(#softShadow)">
+    <rect x="640" y="86" width="882" height="190" rx="28" fill="#2D1037" fill-opacity="0.92"/>
+    <text x="680" y="162" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="50" font-weight="800">Souq Waqif Market Guide</text>
+    <text x="680" y="224" fill="#FFD9A0" font-family="Inter, Arial, sans-serif" font-size="33" font-weight="700">First Visits, Navigation, Shopping, and Evening Atmosphere</text>
+  </g>
+
+  <g filter="url(#softShadow)">
+    <rect x="646" y="318" width="872" height="286" rx="24" fill="url(#panel)"/>
+    <text x="688" y="382" fill="#5A213C" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="800">First-Visit Framework</text>
+    <text x="688" y="430" fill="#73314E" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="700">1) Arrive for evening activation, not midday closure</text>
+    <text x="688" y="472" fill="#73314E" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="700">2) Map Falcon, spice, and craft zones early</text>
+    <text x="688" y="514" fill="#73314E" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="700">3) Bargain politely with shortlist discipline</text>
+    <text x="688" y="556" fill="#73314E" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="700">4) End with dining and cafe culture block</text>
+  </g>
+
+  <g filter="url(#softShadow)">
+    <rect x="650" y="652" width="864" height="148" rx="22" fill="#FFF2DD" fill-opacity="0.94"/>
+    <text x="688" y="712" fill="#6D2C4A" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800">Metro + Timing Rule: Gold Line access, evening-first itinerary.</text>
+    <text x="688" y="752" fill="#8A3A5B" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700">Live-check Friday openings, events, and station windows.</text>
+  </g>
+
+  <g opacity="0.01">
+    <text x="10" y="894" fill="#FFFFFF" font-family="monospace" font-size="9">
+      souq waqif market guide first visits doha traditional market navigation shopping evening atmosphere cover asset souq waqif market guide first visits doha traditional market navigation shopping evening atmosphere cover asset souq waqif market guide first visits doha traditional market navigation shopping evening atmosphere cover asset
+    </text>
+  </g>
+</svg>

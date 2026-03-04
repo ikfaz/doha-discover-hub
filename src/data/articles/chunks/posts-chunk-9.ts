@@ -9,8 +9,135 @@ import bestHotelsDohaNeighborhoodCoverImage from '@/assets/best-hotels-in-doha-b
 import bestTimeToVisitDohaWeatherCoverImage from '@/assets/best-time-to-visit-doha-weather-cover.svg?url&no-inline';
 import qatarVisaFreeEntryHayyaCoverImage from '@/assets/qatar-visa-free-entry-hayya-e-visa-basics-cover.svg?url&no-inline';
 import dohaMetroGuideStationsLinesTicketsCoverImage from '@/assets/doha-metro-guide-stations-lines-tickets-cover.svg?url&no-inline';
+import souqWaqifMarketGuideFirstVisitsCoverImage from '@/assets/souq-waqif-market-guide-first-visits-cover.svg?url&no-inline';
 
 export const postsChunk9: Record<string, ArticleData> = {
+    'souq-waqif-market-guide-first-visits': {
+      id: '68',
+      title: 'Souq Waqif Market Guide for First Visits (2026)',
+      date: 'March 4, 2026',
+      isoDate: '2026-03-04',
+      metaDescription: 'Plan your first Souq Waqif visit with a practical guide to opening-hour patterns, shopping strategy, bargaining etiquette, metro access, and the best evening atmosphere windows. Includes route planning, what to buy, and live-check links before you go.',
+      excerpt: 'This first-visit Souq Waqif guide helps you time your visit, navigate key sections, shop smarter, and plan metro-friendly evening routes so you get the full market experience without wasting hours.',
+      author: 'Experience Doha Team',
+      readTime: '15 min read',
+      category: 'Attractions',
+      imageUrl: souqWaqifMarketGuideFirstVisitsCoverImage,
+      content: `
+        <p><strong>Executive summary:</strong> Souq Waqif is one of the highest-value cultural stops in Doha, especially for first-time visitors and short stopovers. The key to a strong visit is timing: avoid dead midday hours, arrive with a simple zone plan, and use metro access to reduce transfer friction. This guide gives you a practical, first-visit framework.</p>
+
+        <h2 id="why-souq-waqif">Why Souq Waqif Is Still the Core Cultural Stop</h2>
+        <p>Souq Waqif offers an experience that modern malls cannot replicate: traditional architecture, active trade alleys, and a layered social atmosphere that shifts from practical daytime shopping to lively evening culture. If you only have one heritage-market window in Doha, this is usually the right choice.</p>
+        <p>For broader trip planning, pair this with <a href="/blog/best-things-to-do-in-doha">Best Things to Do in Doha</a> and <a href="/blog/doha-stopover-guide-12-96-hours">Doha Stopover Guide for 12-96 Hours</a>.</p>
+
+        <h2 id="best-time-to-visit">Best Time to Visit: Split-Shift Reality</h2>
+        <p>The most common first-visit mistake is arriving during mid-afternoon and expecting full activity. Souq Waqif typically follows a split-shift pattern, and Friday timing can differ by vendor.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Time Window</th>
+              <th>What You Will Usually Find</th>
+              <th>Best Use Case</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Morning (around 7:00 AM to 12:30 PM)</td>
+              <td>Lower crowd pressure and practical trade activity</td>
+              <td>Photography, browsing, and calm navigation</td>
+            </tr>
+            <tr>
+              <td>Midday (around 12:30 PM to 4:00 PM)</td>
+              <td>Many shops pause or close</td>
+              <td>Break, transit, or indoor museum slot</td>
+            </tr>
+            <tr>
+              <td>Evening (around 4:00 PM to midnight)</td>
+              <td>Peak atmosphere, food, and social movement</td>
+              <td>Dining, culture, and full sensory experience</td>
+            </tr>
+            <tr>
+              <td>Friday</td>
+              <td>Morning openings may be delayed or limited</td>
+              <td>Plan for afternoon and evening instead</td>
+            </tr>
+          </tbody>
+        </table>
+        <p><em>Exact hours can shift by season, events, and individual vendor policy. Always live-check before locking your schedule.</em></p>
+
+        <h2 id="first-visit-route">A Simple 4-Hour First-Visit Route</h2>
+        <ol>
+          <li>Start with a broad alley loop to map exits and high-interest clusters.</li>
+          <li>Visit Falcon Souq and nearby specialty lanes early before heavier evening density.</li>
+          <li>Move into spice and handicraft sections with a shortlist of target purchases.</li>
+          <li>Break for dinner or street snacks, then finish with cafe and people-watching time.</li>
+        </ol>
+        <p>This sequence avoids repeated backtracking and keeps bargaining decisions focused rather than rushed.</p>
+
+        <h2 id="what-to-buy">What to Buy and How to Bargain Without Friction</h2>
+        <p>Souq Waqif works best when you buy category-first instead of stall-first. Typical high-value categories include spices, oud and bakhoor, traditional coffee pots, textiles, and selected handicrafts.</p>
+        <ul>
+          <li><strong>Ask for quality context:</strong> origin, material, and durability before discussing price.</li>
+          <li><strong>Negotiate respectfully:</strong> a friendly counteroffer can start around 20-30% below asking price.</li>
+          <li><strong>Bundle items:</strong> multi-item purchases often unlock better final pricing.</li>
+          <li><strong>Walk-away discipline:</strong> if numbers do not align, move on politely and compare nearby stalls.</li>
+        </ul>
+
+        <h2 id="food-and-evening">Restaurants, Street Food, and Evening Atmosphere</h2>
+        <p>Evening is when Souq Waqif feels most complete: lights, aromas, and dense social movement across courtyards and cafe rows. The dining mix ranges from quick local snacks to sit-down regional restaurants.</p>
+        <ul>
+          <li><strong>Street-food first strategy:</strong> sample small items early, then commit to a full dinner venue.</li>
+          <li><strong>Cafe culture:</strong> karak and shisha zones are best treated as a slow final block, not a rushed stop.</li>
+          <li><strong>Crowd management:</strong> reserve extra buffer during holidays and major event nights.</li>
+        </ul>
+
+        <h2 id="getting-there">Getting There: Metro, Taxi, and Parking</h2>
+        <p>The easiest transit route for many visitors is the Gold Line station serving Souq Waqif area access. If you are planning a multi-stop day, combine this with the city rail plan in <a href="/blog/doha-metro-guide-stations-lines-tickets">Doha Metro Guide: Lines, Stations, Tickets, and Timings</a>.</p>
+        <ul>
+          <li><strong>Metro:</strong> reliable for avoiding central traffic buildup.</li>
+          <li><strong>Taxi and ride-hail:</strong> practical for late returns or heavy shopping bags.</li>
+          <li><strong>Parking:</strong> underground options exist, but exit times can rise during event peaks.</li>
+        </ul>
+
+        <h2 id="first-time-mistakes">First-Time Mistakes to Avoid</h2>
+        <ul>
+          <li>Arriving at midday and misreading temporary closures as full-day shutdown.</li>
+          <li>Shopping without a shortlist, then overpaying for low-priority items.</li>
+          <li>Skipping hydration and shade breaks in warm months.</li>
+          <li>Ignoring Friday and event timing shifts.</li>
+          <li>Planning no return route after midnight activity blocks.</li>
+        </ul>
+
+        <h2 id="live-check-flags">Live-Check Flags Before You Go</h2>
+        <ul>
+          <li>Vendor opening times and split-shift variations.</li>
+          <li>Metro timing windows, especially Fridays and special periods.</li>
+          <li>Festival and seasonal event calendars that affect crowd density.</li>
+          <li>Airport-side timing if your visit is part of a short layover plan.</li>
+        </ul>
+
+        <h2 id="live-check-sources">Live-Check Sources</h2>
+        <ul>
+          <li><strong>Visit Qatar, Souq Waqif page:</strong> <a href="https://visitqatar.com/intl-en/things-to-do/shopping/souqs/souq-waqif" target="_blank" rel="noopener noreferrer">https://visitqatar.com/intl-en/things-to-do/shopping/souqs/souq-waqif</a></li>
+          <li><strong>Visit Qatar, Doha Metro page:</strong> <a href="https://visitqatar.com/intl-en/plan-your-trip/getting-around/doha-metro" target="_blank" rel="noopener noreferrer">https://visitqatar.com/intl-en/plan-your-trip/getting-around/doha-metro</a></li>
+          <li><strong>Visit Qatar, events calendar:</strong> <a href="https://visitqatar.com/intl-en/events-calendar" target="_blank" rel="noopener noreferrer">https://visitqatar.com/intl-en/events-calendar</a></li>
+          <li><strong>Hamad International Airport:</strong> <a href="https://dohahamadairport.com/" target="_blank" rel="noopener noreferrer">https://dohahamadairport.com/</a></li>
+        </ul>
+      `,
+      tableOfContents: [
+        { title: 'Why Souq Waqif Is Still the Core Cultural Stop', id: 'why-souq-waqif' },
+        { title: 'Best Time to Visit: Split-Shift Reality', id: 'best-time-to-visit' },
+        { title: 'A Simple 4-Hour First-Visit Route', id: 'first-visit-route' },
+        { title: 'What to Buy and How to Bargain Without Friction', id: 'what-to-buy' },
+        { title: 'Restaurants, Street Food, and Evening Atmosphere', id: 'food-and-evening' },
+        { title: 'Getting There: Metro, Taxi, and Parking', id: 'getting-there' },
+        { title: 'First-Time Mistakes to Avoid', id: 'first-time-mistakes' },
+        { title: 'Live-Check Flags Before You Go', id: 'live-check-flags' },
+        { title: 'Live-Check Sources', id: 'live-check-sources' }
+      ],
+      tags: ['souq waqif guide', 'things to do in souq waqif', 'souq waqif shopping', 'falcon souq doha', 'souq waqif restaurants', 'souq waqif opening hours', 'doha traditional market', 'what to buy in qatar', 'best souvenirs doha', 'souq waqif evening', 'doha metro gold line', 'doha layover guide']
+    },
+
     'doha-metro-guide-stations-lines-tickets': {
       id: '67',
       title: 'Doha Metro Guide: Lines, Stations, Tickets, and Timings (2026)',
