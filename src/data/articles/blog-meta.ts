@@ -56,10 +56,25 @@ import bestTimeToVisitDohaWeatherCoverImage from '@/assets/best-time-to-visit-do
 import qatarVisaFreeEntryHayyaCoverImage from '@/assets/qatar-visa-free-entry-hayya-e-visa-basics-cover.svg?url&no-inline';
 import dohaMetroGuideStationsLinesTicketsCoverImage from '@/assets/doha-metro-guide-stations-lines-tickets-cover.svg?url&no-inline';
 import souqWaqifMarketGuideFirstVisitsCoverImage from '@/assets/souq-waqif-market-guide-first-visits-cover.svg?url&no-inline';
+import museumOfIslamicArtDohaExhaustiveGuideCoverImage from '@/assets/museum-of-islamic-art-doha-exhaustive-guide-tickets-corniche-cover.svg?url&no-inline';
 
 export type BlogMetaData = Omit<ArticleData, 'content' | 'tableOfContents'>;
 
 export const blogMetaPosts: Record<string, BlogMetaData> = {
+    'museum-of-islamic-art-doha-exhaustive-guide-tickets-corniche': {
+      id: '69',
+      title: 'Museum of Islamic Art Doha: Architecture, Collections, and Corniche Guide (2026)',
+      date: 'March 4, 2026',
+      isoDate: '2026-03-04',
+      metaDescription: 'Master your visit to the Museum of Islamic Art in Doha with practical guidance on timings, ticket context, architecture, must-see collection highlights, photography rules, and the best way to combine MIA with Corniche walking and sunset dhow planning.',
+      excerpt: 'This definitive MIA guide helps first-time visitors plan the right visit window, follow a high-impact masterpiece route, capture the best photo angles, and connect the museum with Corniche and Souq Waqif plans.',
+      author: 'Experience Doha Team',
+      readTime: '16 min read',
+      category: 'Attractions',
+      imageUrl: museumOfIslamicArtDohaExhaustiveGuideCoverImage,
+      tags: ['museum of islamic art doha', 'mia doha tickets', 'mia doha timings', 'doha corniche walk', 'dhow cruise doha', 'best photo spots doha', 'i m pei architecture', 'mia park', 'islamic art highlights', 'idam alain ducasse', 'doha travel itinerary', 'qatar museums ramadan hours'],
+    },
+
     'souq-waqif-market-guide-first-visits': {
       id: '68',
       title: 'Souq Waqif Market Guide for First Visits (2026)',

@@ -10,8 +10,152 @@ import bestTimeToVisitDohaWeatherCoverImage from '@/assets/best-time-to-visit-do
 import qatarVisaFreeEntryHayyaCoverImage from '@/assets/qatar-visa-free-entry-hayya-e-visa-basics-cover.svg?url&no-inline';
 import dohaMetroGuideStationsLinesTicketsCoverImage from '@/assets/doha-metro-guide-stations-lines-tickets-cover.svg?url&no-inline';
 import souqWaqifMarketGuideFirstVisitsCoverImage from '@/assets/souq-waqif-market-guide-first-visits-cover.svg?url&no-inline';
+import museumOfIslamicArtDohaExhaustiveGuideCoverImage from '@/assets/museum-of-islamic-art-doha-exhaustive-guide-tickets-corniche-cover.svg?url&no-inline';
 
 export const postsChunk9: Record<string, ArticleData> = {
+    'museum-of-islamic-art-doha-exhaustive-guide-tickets-corniche': {
+      id: '69',
+      title: 'Museum of Islamic Art Doha: Architecture, Collections, and Corniche Guide (2026)',
+      date: 'March 4, 2026',
+      isoDate: '2026-03-04',
+      metaDescription: 'Master your visit to the Museum of Islamic Art in Doha with practical guidance on timings, ticket context, architecture, must-see collection highlights, photography rules, and the best way to combine MIA with Corniche walking and sunset dhow planning.',
+      excerpt: 'This definitive MIA guide helps first-time visitors plan the right visit window, follow a high-impact masterpiece route, capture the best photo angles, and connect the museum with Corniche and Souq Waqif plans.',
+      author: 'Experience Doha Team',
+      readTime: '16 min read',
+      category: 'Attractions',
+      imageUrl: museumOfIslamicArtDohaExhaustiveGuideCoverImage,
+      content: `
+        <p><strong>Executive summary:</strong> The Museum of Islamic Art (MIA) is one of Doha's highest-value cultural stops, but the quality of your visit depends on timing, route discipline, and smart integration with nearby waterfront attractions. This guide focuses on practical execution: when to go, what to prioritize, and how to combine MIA with the Corniche and evening plans.</p>
+
+        <h2 id="visit-strategy">How to Pick the Right Visit Strategy Fast</h2>
+        <p>MIA sits at a strategic point on Doha Bay, making it easy to pair with waterfront walking and old-city evening plans. Choose your track before arrival:</p>
+        <ul>
+          <li><strong>Short layover window:</strong> run a strict masterpiece route and keep exterior photography concise.</li>
+          <li><strong>Waterfront leisure:</strong> visit in late afternoon, then continue into the Corniche and dhow harbor zone.</li>
+          <li><strong>Architecture-first:</strong> focus on exterior geometry plus atrium light-and-shadow timing.</li>
+          <li><strong>Culture cluster:</strong> combine MIA with Souq Waqif and museum-adjacent public spaces.</li>
+        </ul>
+        <p>Pair this with <a href="/blog/doha-stopover-guide-12-96-hours">Doha Stopover Guide for 12-96 Hours</a> and <a href="/blog/mia-nmoq-museum-combo-guide">MIA and NMoQ Museum Combo Guide</a> if you are structuring a full culture day.</p>
+
+        <h2 id="integration-options">MIA Integration Options (Quick Comparison)</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Strategy</th>
+              <th>Primary Focus</th>
+              <th>Transit Profile</th>
+              <th>Typical Time Block</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Heritage Axis (MIA + Souq Waqif)</td>
+              <td>Culture, market atmosphere, traditional dining</td>
+              <td>Short transfer via walk, taxi, or metro logic</td>
+              <td>4 to 6 hours</td>
+            </tr>
+            <tr>
+              <td>Waterfront Circuit (MIA + Corniche + Dhow)</td>
+              <td>Skyline views, sunset movement, maritime perspective</td>
+              <td>Strong pedestrian continuity from MIA grounds</td>
+              <td>3 to 5 hours</td>
+            </tr>
+            <tr>
+              <td>Museum Marathon (MIA + NMoQ)</td>
+              <td>Architecture and deep collection immersion</td>
+              <td>Short city transfer between institutions</td>
+              <td>5 to 7 hours</td>
+            </tr>
+            <tr>
+              <td>Transit Sprint (MIA only)</td>
+              <td>High-impact highlights under strict time pressure</td>
+              <td>Airport transfer dependent on live road conditions</td>
+              <td>1.5 to 2.5 hours</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2 id="tickets-hours">Tickets, Timings, and Entry Etiquette</h2>
+        <p>Operating windows can shift by season and special periods, so check official pages before travel day. As a practical baseline, MIA usually runs daytime windows with Friday afternoon starts and Wednesday closure patterns, while Ramadan can introduce split evening-heavy schedules.</p>
+        <ul>
+          <li><strong>Ticket context:</strong> standard access and special exhibition pricing can differ.</li>
+          <li><strong>Dress expectations:</strong> culturally respectful coverage is expected in museum settings.</li>
+          <li><strong>Entry flow:</strong> avoid carrying unnecessary large bags into galleries.</li>
+          <li><strong>Gallery behavior:</strong> food and drinks are not for exhibition spaces.</li>
+        </ul>
+
+        <h2 id="architecture">Architecture: Why the Building Matters</h2>
+        <p>MIA is not just a container for objects; it is a primary artifact in the Doha cultural landscape. I.M. Pei's geometric language is designed to shift with light across the day, and the museum's peninsula placement isolates the form against the bay for maximum visual clarity.</p>
+        <ul>
+          <li><strong>Exterior reading:</strong> stacked geometric masses with changing stone tone through daylight.</li>
+          <li><strong>Atrium impact:</strong> vertical volume, symmetry, and curated skyline framing.</li>
+          <li><strong>Urban logic:</strong> deliberate separation from dense blocks to preserve visual dominance.</li>
+        </ul>
+
+        <h2 id="masterpiece-route">The 60-Minute Masterpiece Route</h2>
+        <p>If time is limited, skip slow meandering and run a priority route focused on historically important objects and architectural vantage points. The goal is depth in fewer rooms, not superficial coverage of every gallery.</p>
+        <ol>
+          <li>Start with upper-level highlights instead of spending your first block in introductory media.</li>
+          <li>Prioritize signature pieces like monumental textiles, scientific instruments, and early ceramics.</li>
+          <li>Reserve the final minutes for atrium and skyline-framing angles before exit.</li>
+          <li>Use your remaining time for MIA Park exterior lines and bay-facing composition.</li>
+        </ol>
+
+        <h2 id="photo-rules">Photography Rules and Best Photo Locations</h2>
+        <p>Photo quality depends as much on legal and cultural awareness as camera settings. Keep your workflow light and compliant.</p>
+        <ul>
+          <li><strong>Inside galleries:</strong> use ambient light and avoid restricted equipment setups.</li>
+          <li><strong>People privacy:</strong> do not photograph individuals without consent, especially in sensitive contexts.</li>
+          <li><strong>Atrium angles:</strong> staircase and geometric floor lines create the strongest architectural frames.</li>
+          <li><strong>MIA Park:</strong> blue-hour and sunset windows produce the most balanced skyline contrast.</li>
+        </ul>
+
+        <h2 id="corniche-dhow">Corniche and Dhow Integration</h2>
+        <p>MIA is an ideal launch point for a late-day Doha sequence. A common flow is museum visit, short Corniche walk, then harbor departure for a sunset dhow loop.</p>
+        <ul>
+          <li>Exit museum grounds around late afternoon for heat-aware walking.</li>
+          <li>Move north toward harbor zones with enough buffer before sunset.</li>
+          <li>Book dhow timing to cover both warm sunset tones and early blue-hour skyline glow.</li>
+          <li>Finish inland at <a href="/blog/souq-waqif-market-guide-first-visits">Souq Waqif Market Guide for First Visits</a> for evening dining and atmosphere.</li>
+        </ul>
+
+        <h2 id="dining">Dining in the MIA Ecosystem</h2>
+        <p>Dining ranges from refined rooftop-style experiences to lighter museum-cafe breaks and park-side casual options. If you are targeting a premium dining slot, reserve in advance and align your gallery route so you are not rushing your final hour.</p>
+
+        <h2 id="live-check-flags">Critical Live-Check Flags (March 2026 Context)</h2>
+        <p>Operational conditions can shift quickly. Before you finalize any itinerary, verify these inputs on official channels:</p>
+        <ul>
+          <li><strong>Museum status:</strong> reopening and special-hour notices.</li>
+          <li><strong>Airport operations:</strong> disruptions were reported between <strong>March 1 and March 4, 2026</strong>, so re-check flight-day conditions.</li>
+          <li><strong>Ramadan shifts:</strong> evening-heavy schedules may replace standard daytime flow.</li>
+          <li><strong>Dhow availability:</strong> harbor operations can vary on high-wind or operational-control days.</li>
+        </ul>
+        <p>For airport-side planning, use <a href="/blog/hamad-international-airport-guide">Hamad International Airport Guide</a>.</p>
+
+        <h2 id="live-check-sources">Live-Check Sources</h2>
+        <ul>
+          <li><strong>MIA official visit page:</strong> <a href="https://mia.org.qa/en/visit/" target="_blank" rel="noopener noreferrer">https://mia.org.qa/en/visit/</a></li>
+          <li><strong>Qatar Museums ticket page:</strong> <a href="https://qm.org.qa/tickets/select-tickets/?exhibition-deeplink=mia-plus-special-exhibitions" target="_blank" rel="noopener noreferrer">https://qm.org.qa/tickets/select-tickets/?exhibition-deeplink=mia-plus-special-exhibitions</a></li>
+          <li><strong>Visit Qatar MIA overview:</strong> <a href="https://visitqatar.com/intl-en/things-to-do/art-culture/museums/museum-of-islamic-art" target="_blank" rel="noopener noreferrer">https://visitqatar.com/intl-en/things-to-do/art-culture/museums/museum-of-islamic-art</a></li>
+          <li><strong>Visit Qatar events calendar:</strong> <a href="https://visitqatar.com/intl-en/events-calendar" target="_blank" rel="noopener noreferrer">https://visitqatar.com/intl-en/events-calendar</a></li>
+          <li><strong>QCAA operational announcement context:</strong> <a href="https://www.caa.gov.qa/en/news/hamad-international-airport-confirms-temporary-suspension-air-traffic" target="_blank" rel="noopener noreferrer">https://www.caa.gov.qa/en/news/hamad-international-airport-confirms-temporary-suspension-air-traffic</a></li>
+        </ul>
+      `,
+      tableOfContents: [
+        { title: 'How to Pick the Right Visit Strategy Fast', id: 'visit-strategy' },
+        { title: 'MIA Integration Options (Quick Comparison)', id: 'integration-options' },
+        { title: 'Tickets, Timings, and Entry Etiquette', id: 'tickets-hours' },
+        { title: 'Architecture: Why the Building Matters', id: 'architecture' },
+        { title: 'The 60-Minute Masterpiece Route', id: 'masterpiece-route' },
+        { title: 'Photography Rules and Best Photo Locations', id: 'photo-rules' },
+        { title: 'Corniche and Dhow Integration', id: 'corniche-dhow' },
+        { title: 'Dining in the MIA Ecosystem', id: 'dining' },
+        { title: 'Critical Live-Check Flags (March 2026 Context)', id: 'live-check-flags' },
+        { title: 'Live-Check Sources', id: 'live-check-sources' }
+      ],
+      tags: ['museum of islamic art doha', 'mia doha tickets', 'mia doha timings', 'doha corniche walk', 'dhow cruise doha', 'best photo spots doha', 'i m pei architecture', 'mia park', 'islamic art highlights', 'idam alain ducasse', 'doha travel itinerary', 'qatar museums ramadan hours']
+    },
+
     'souq-waqif-market-guide-first-visits': {
       id: '68',
       title: 'Souq Waqif Market Guide for First Visits (2026)',

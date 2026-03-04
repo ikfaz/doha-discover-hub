@@ -1,0 +1,71 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="baySky" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0C2D4F"/>
+      <stop offset="0.5" stop-color="#1E5E8F"/>
+      <stop offset="1" stop-color="#F2A85C"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0" y1="560" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2A7FBE"/>
+      <stop offset="1" stop-color="#14426E"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FDF6EA" stop-opacity="0.96"/>
+      <stop offset="1" stop-color="#E9F6FF" stop-opacity="0.92"/>
+    </linearGradient>
+    <filter id="shadow" x="-80" y="-80" width="1900" height="1150" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#0B233E" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#baySky)"/>
+  <circle cx="1280" cy="156" r="82" fill="#FFDFA4" fill-opacity="0.86"/>
+
+  <path d="M0 646C190 598 372 608 560 650C750 692 952 698 1150 652C1330 612 1482 610 1600 630V900H0V646Z" fill="url(#water)"/>
+
+  <g opacity="0.88">
+    <path d="M112 582V314H210V582H112Z" fill="#18416D"/>
+    <path d="M224 582V256H326V582H224Z" fill="#20558A"/>
+    <path d="M338 582V214H446V582H338Z" fill="#2A6AA4"/>
+    <path d="M460 582V286H548V582H460Z" fill="#1A4877"/>
+    <path d="M560 582V332H636V582H560Z" fill="#2D7BB8"/>
+    <path d="M648 582V252H742V582H648Z" fill="#E4B15D"/>
+  </g>
+
+  <g opacity="0.82">
+    <path d="M96 604H770L732 664H138L96 604Z" fill="#E6BE79"/>
+    <path d="M138 664H732L694 706H176L138 664Z" fill="#C58C3F"/>
+  </g>
+
+  <g opacity="0.25">
+    <path d="M788 704C892 674 998 678 1118 712C1244 748 1382 752 1510 720" stroke="#D2ECFF" stroke-width="6" stroke-linecap="round"/>
+    <path d="M786 740C904 712 1010 716 1136 748C1262 782 1384 784 1506 752" stroke="#B3DBF6" stroke-width="5" stroke-linecap="round"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="690" y="88" width="828" height="188" rx="28" fill="#0E2E4D" fill-opacity="0.9"/>
+    <text x="730" y="162" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="49" font-weight="800">Museum of Islamic Art, Doha</text>
+    <text x="730" y="224" fill="#C6E8FF" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="700">Architecture, Collections, and Corniche Integration</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="694" y="320" width="820" height="278" rx="24" fill="url(#card)"/>
+    <text x="736" y="382" fill="#15406A" font-family="Inter, Arial, sans-serif" font-size="31" font-weight="800">Definitive Visit Workflow</text>
+    <text x="736" y="430" fill="#1F5689" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="700">1) Time museum entry around light and crowd flow</text>
+    <text x="736" y="470" fill="#1F5689" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="700">2) Run a strict masterpiece route when schedules are tight</text>
+    <text x="736" y="510" fill="#1F5689" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="700">3) Capture atrium and bay angles with rule-compliant setup</text>
+    <text x="736" y="550" fill="#1F5689" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="700">4) Extend to Corniche and sunset dhow in one sequence</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="698" y="646" width="814" height="148" rx="22" fill="#F4FBFF" fill-opacity="0.94"/>
+    <text x="736" y="706" fill="#1B4E7D" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800">Live-check hours, tickets, and airport operations first.</text>
+    <text x="736" y="746" fill="#2A618F" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700">Then lock museum + waterfront timing.</text>
+  </g>
+
+  <g opacity="0.01">
+    <text x="8" y="894" fill="#FFFFFF" font-family="monospace" font-size="9">
+      museum of islamic art doha exhaustive guide tickets corniche cover asset architecture collections corniche integration museum of islamic art doha exhaustive guide tickets corniche cover asset architecture collections corniche integration
+    </text>
+  </g>
+</svg>
