@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Menu, X, Home, Book, Mail, Image, Calculator } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import logo from '@/assets/logo.svg';
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,7 +23,7 @@ const NavBar = () => {
         <div className="flex justify-between h-20 items-center">
           <div className="flex items-center space-x-3">
             <Link to="/" className="flex-shrink-0 flex items-center space-x-2 group" aria-label="Experience Doha - Home">
-              <img src={logo} alt="" className="h-14 w-14 transition-transform group-hover:scale-105" aria-hidden="true" />
+              <img src="/logo.png" alt="" className="h-14 w-14 transition-transform group-hover:scale-105" aria-hidden="true" />
               <span className="text-charcoal font-semibold text-xl select-none tracking-tight">
                 Experience<span className="text-sand-gold">Doha</span>.com
               </span>
