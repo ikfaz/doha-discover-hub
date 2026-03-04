@@ -51,10 +51,25 @@ import stopoverProgramImage from '@/assets/stopover-program.jpg';
 import top10AttractionsImage from '@/assets/top-10-attractions.jpg';
 import bestThingsToDoInDohaCoverImage from '@/assets/best-things-to-do-in-doha-cover.svg?url';
 import dohaStopoverGuide1296CoverImage from '@/assets/doha-stopover-guide-12-96-hours-cover.svg?url';
+import bestHotelsDohaNeighborhoodCoverImage from '@/assets/best-hotels-in-doha-by-neighborhood-cover.svg?url';
 
 export type BlogMetaData = Omit<ArticleData, 'content' | 'tableOfContents'>;
 
 export const blogMetaPosts: Record<string, BlogMetaData> = {
+    'best-hotels-in-doha-by-neighborhood': {
+      id: '64',
+      title: 'Best Hotels in Doha by Neighborhood (2026 Guide)',
+      date: 'March 4, 2026',
+      isoDate: '2026-03-04',
+      metaDescription: 'Find the best hotels in Doha by neighborhood with practical guidance on West Bay, Msheireb, Souq Waqif/Old Town, The Pearl-Qatar, and Lusail/Katara. Compare vibe, transit access, and realistic nightly ranges, then use a sample 3-day plan to reduce transfer time and booking mistakes. Includes live-check links for airport updates, events, and current rates.',
+      excerpt: 'Choose where to stay in Doha based on transport, trip style, and realistic nightly ranges. This guide compares West Bay, Msheireb, Souq Waqif, The Pearl, and Lusail/Katara with practical hotel picks and planning shortcuts.',
+      author: 'Experience Doha Team',
+      readTime: '15 min read',
+      category: 'Attractions',
+      imageUrl: bestHotelsDohaNeighborhoodCoverImage,
+      tags: ['best hotels in doha', 'where to stay in doha', 'west bay doha hotels', 'msheireb hotels', 'souq waqif hotels', 'old town doha hotels', 'pearl qatar hotels', 'lusail hotels', 'luxury hotels doha', 'family hotels doha', 'doha metro hotels', 'doha hotel price range'],
+    },
+
     'doha-stopover-guide-12-96-hours': {
       id: '63',
       title: 'Doha Stopover Guide for 12-96 Hours',

@@ -1,0 +1,90 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sky" x1="800" y1="0" x2="800" y2="900" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#133A6B"/>
+      <stop offset="0.5" stop-color="#2A6DAA"/>
+      <stop offset="1" stop-color="#E7A86B"/>
+    </linearGradient>
+    <linearGradient id="bay" x1="800" y1="500" x2="800" y2="900" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#4CC3E6" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#0E4F80" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="sand" x1="800" y1="640" x2="800" y2="900" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#EEBC7A"/>
+      <stop offset="1" stop-color="#B76C3E"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#EAF4FF" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="title" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7A1235" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#3E0A1C" stop-opacity="0.9"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#sky)"/>
+  <circle cx="1240" cy="190" r="96" fill="#FFD58A" fill-opacity="0.75"/>
+  <path d="M0 540C190 500 360 575 560 540C770 505 960 595 1180 548C1350 512 1470 540 1600 530V670H0V540Z" fill="url(#bay)"/>
+  <path d="M0 680C260 636 430 740 640 694C835 650 1040 740 1280 694C1405 670 1518 678 1600 668V900H0V680Z" fill="url(#sand)"/>
+
+  <g opacity="0.92">
+    <rect x="132" y="334" width="52" height="206" fill="#1D3D62"/>
+    <rect x="198" y="292" width="68" height="248" fill="#26486F"/>
+    <rect x="280" y="320" width="44" height="220" fill="#1B3758"/>
+    <rect x="336" y="268" width="62" height="272" fill="#2D537E"/>
+    <rect x="412" y="302" width="50" height="238" fill="#214064"/>
+    <rect x="476" y="248" width="60" height="292" fill="#35608D"/>
+    <rect x="550" y="286" width="40" height="254" fill="#1F3A5A"/>
+    <rect x="602" y="332" width="56" height="208" fill="#2A4E76"/>
+    <rect x="672" y="286" width="44" height="254" fill="#214064"/>
+    <rect x="728" y="252" width="48" height="288" fill="#2F5A84"/>
+    <rect x="790" y="298" width="38" height="242" fill="#1A3554"/>
+    <rect x="840" y="322" width="46" height="218" fill="#2A4E76"/>
+  </g>
+
+  <g>
+    <rect x="1006" y="312" width="462" height="102" rx="18" fill="url(#title)"/>
+    <text x="1038" y="357" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="36" font-weight="800">Best Hotels in Doha</text>
+    <text x="1038" y="391" fill="#F8D8B0" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="600">By Neighborhood</text>
+  </g>
+
+  <g>
+    <path d="M960 624H1436" stroke="#8DD9FF" stroke-width="12" stroke-linecap="round"/>
+    <circle cx="1010" cy="624" r="11" fill="#D6F4FF"/>
+    <circle cx="1140" cy="624" r="11" fill="#D6F4FF"/>
+    <circle cx="1268" cy="624" r="11" fill="#D6F4FF"/>
+    <circle cx="1390" cy="624" r="11" fill="#D6F4FF"/>
+    <rect x="1038" y="586" width="100" height="54" rx="12" fill="#ECF8FF"/>
+    <rect x="1168" y="586" width="100" height="54" rx="12" fill="#ECF8FF"/>
+    <rect x="1298" y="586" width="100" height="54" rx="12" fill="#ECF8FF"/>
+    <path d="M980 658H1416" stroke="#8DD9FF" stroke-width="4" stroke-dasharray="10 10"/>
+  </g>
+
+  <g>
+    <rect x="88" y="128" width="474" height="388" rx="24" fill="url(#card)"/>
+    <text x="126" y="186" fill="#183E6B" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="800">Quick Area Fit</text>
+    <text x="126" y="232" fill="#2A4F77" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700">West Bay - business + skyline</text>
+    <text x="126" y="274" fill="#2A4F77" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700">Msheireb - metro + walkability</text>
+    <text x="126" y="316" fill="#2A4F77" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700">Souq/Old Town - atmosphere + value</text>
+    <text x="126" y="358" fill="#2A4F77" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700">The Pearl - resort + family stays</text>
+    <text x="126" y="400" fill="#2A4F77" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700">Lusail/Katara - events + new city</text>
+    <text x="126" y="456" fill="#6C3D25" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700">Compare transit and nightly range before booking.</text>
+  </g>
+
+  <g opacity="0.94">
+    <path d="M1188 724C1252 676 1338 666 1416 702C1484 734 1540 726 1598 694V900H1132L1188 724Z" fill="#D88D48"/>
+    <path d="M1216 736C1268 702 1342 692 1410 722C1472 748 1532 744 1588 716" stroke="#F4C38A" stroke-width="4" opacity="0.75"/>
+    <path d="M1296 720L1308 772H1284L1296 720Z" fill="#7E4D2F"/>
+  </g>
+
+  <g opacity="0.2">
+    <path d="M0 770C170 736 348 742 550 778C790 822 1000 844 1212 796C1386 758 1516 738 1600 746V900H0V770Z" fill="#F4D9B0"/>
+  </g>
+
+  <g opacity="0.01">
+    <text x="12" y="886" fill="#FFFFFF" font-family="monospace" font-size="10">
+      best hotels in doha by neighborhood cover asset keep as standalone url best hotels in doha by neighborhood cover asset keep as standalone url best hotels in doha by neighborhood cover asset keep as standalone url
+    </text>
+  </g>
+</svg>

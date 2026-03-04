@@ -5,8 +5,168 @@ import stopoverProgramImage from '@/assets/stopover-program.jpg';
 import top10AttractionsImage from '@/assets/top-10-attractions.jpg';
 import bestThingsToDoInDohaCoverImage from '@/assets/best-things-to-do-in-doha-cover.svg?url';
 import dohaStopoverGuide1296CoverImage from '@/assets/doha-stopover-guide-12-96-hours-cover.svg?url';
+import bestHotelsDohaNeighborhoodCoverImage from '@/assets/best-hotels-in-doha-by-neighborhood-cover.svg?url';
 
 export const postsChunk9: Record<string, ArticleData> = {
+    'best-hotels-in-doha-by-neighborhood': {
+      id: '64',
+      title: 'Best Hotels in Doha by Neighborhood (2026 Guide)',
+      date: 'March 4, 2026',
+      isoDate: '2026-03-04',
+      metaDescription: 'Find the best hotels in Doha by neighborhood with practical guidance on West Bay, Msheireb, Souq Waqif/Old Town, The Pearl-Qatar, and Lusail/Katara. Compare vibe, transit access, and realistic nightly ranges, then use a sample 3-day plan to reduce transfer time and booking mistakes. Includes live-check links for airport updates, events, and current rates.',
+      excerpt: 'Choose where to stay in Doha based on transport, trip style, and realistic nightly ranges. This guide compares West Bay, Msheireb, Souq Waqif, The Pearl, and Lusail/Katara with practical hotel picks and planning shortcuts.',
+      author: 'Experience Doha Team',
+      readTime: '15 min read',
+      category: 'Attractions',
+      imageUrl: bestHotelsDohaNeighborhoodCoverImage,
+      content: `
+        <p><strong>Executive summary:</strong> Doha's hotel quality is consistently high, but neighborhood selection determines whether your trip feels efficient or exhausting. Pick the wrong base and you lose hours in traffic. Pick the right one and most headline experiences are a short metro hop or quick taxi ride away.</p>
+
+        <h2 id="choose-neighborhood">How to Pick the Right Neighborhood Fast</h2>
+        <p>Use this decision rule first, then narrow to individual hotels:</p>
+        <ul>
+          <li><strong>West Bay:</strong> best for business schedules, skyline views, and premium full-service hotels.</li>
+          <li><strong>Msheireb Downtown:</strong> best one-base option for short stays, walkability, and metro convenience.</li>
+          <li><strong>Souq Waqif / Old Town:</strong> best for atmosphere, evening food walks, and value-focused stays.</li>
+          <li><strong>The Pearl-Qatar:</strong> best for marina vibes, family suites, and resort-style downtime.</li>
+          <li><strong>Lusail / Katara:</strong> best for new-city luxury, event-led trips, and large-mall access.</li>
+        </ul>
+        <p>For activity planning before you lock your hotel, use <a href="/blog/best-things-to-do-in-doha">Best Things to Do in Doha</a>. For short transits, pair this guide with <a href="/blog/doha-stopover-guide-12-96-hours">Doha Stopover Guide for 12-96 Hours</a>.</p>
+
+        <h2 id="comparison-table">Quick Neighborhood Comparison Table</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Neighborhood</th>
+              <th>Vibe</th>
+              <th>Best For</th>
+              <th>Transit Profile</th>
+              <th>Typical Price Band (USD/night)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>West Bay</td>
+              <td>High-rise, polished, business-heavy</td>
+              <td>Corporate travel, first-time premium stays</td>
+              <td>Strong metro + taxi coverage</td>
+              <td>~175-810</td>
+            </tr>
+            <tr>
+              <td>Msheireb Downtown</td>
+              <td>Modern heritage, compact, walkable</td>
+              <td>Short stays, culture + food access</td>
+              <td>Excellent (main metro interchange)</td>
+              <td>~125-1500</td>
+            </tr>
+            <tr>
+              <td>Souq Waqif / Old Town</td>
+              <td>Historic core, busiest at night</td>
+              <td>Atmosphere and value</td>
+              <td>Strong (Gold Line + short taxi legs)</td>
+              <td>~83-346</td>
+            </tr>
+            <tr>
+              <td>The Pearl-Qatar</td>
+              <td>Marina, beach clubs, residential luxury</td>
+              <td>Families and longer relaxed stays</td>
+              <td>Taxi-first with metro connection options</td>
+              <td>~143-1094</td>
+            </tr>
+            <tr>
+              <td>Lusail / Katara</td>
+              <td>New-city, event-oriented, design-heavy</td>
+              <td>Luxury breaks and event calendars</td>
+              <td>Metro + tram combinations</td>
+              <td>~198-790</td>
+            </tr>
+          </tbody>
+        </table>
+        <p><em>Price bands are directional, not fixed. Always live-check your exact dates.</em></p>
+
+        <h2 id="west-bay">West Bay and the Diplomatic Area</h2>
+        <p>West Bay is the safest default if you want premium consistency: large international brands, business infrastructure, and predictable service standards. It is especially efficient for meetings around DECC and City Center corridors.</p>
+        <ul>
+          <li><strong>Best fit:</strong> business travelers, premium first-timers, conference schedules.</li>
+          <li><strong>Watch-out:</strong> evening road congestion can slow short-distance taxi moves.</li>
+          <li><strong>Booking tactic:</strong> prioritize metro-adjacent properties if you have fixed meeting times.</li>
+        </ul>
+
+        <h2 id="msheireb">Msheireb Downtown Doha</h2>
+        <p>Msheireb is the strongest all-round base for short visits because it combines walkability with direct rail access. You can move quickly to Souq Waqif, Corniche, and museum zones without long repositioning overhead.</p>
+        <ul>
+          <li><strong>Best fit:</strong> 2-4 day city breaks, mixed leisure/business trips.</li>
+          <li><strong>Strength:</strong> interchange-level transit access keeps plans resilient.</li>
+          <li><strong>Booking tactic:</strong> request quieter room orientation if nightlife noise matters to you.</li>
+        </ul>
+
+        <h2 id="souq-old-town">Souq Waqif and Old Town</h2>
+        <p>This is the highest atmosphere-per-hour area in Doha. If your priority is evenings in the old market core, local dining, and shorter hotel bills, this zone performs well.</p>
+        <ul>
+          <li><strong>Best fit:</strong> culture-focused itineraries and value-conscious travelers.</li>
+          <li><strong>Strength:</strong> easy access to old-core landmarks and night energy.</li>
+          <li><strong>Booking tactic:</strong> favor properties a short walk from Gold Line access points.</li>
+        </ul>
+
+        <h2 id="pearl">The Pearl-Qatar</h2>
+        <p>The Pearl is built for marina walks, larger suites, and slower-paced resort-style schedules. It feels less like a compact city core and more like a lifestyle district.</p>
+        <ul>
+          <li><strong>Best fit:</strong> families, couples, and longer stays with flexible timing.</li>
+          <li><strong>Strength:</strong> strong leisure environment and high-end serviced inventory.</li>
+          <li><strong>Watch-out:</strong> expect more taxi dependency for rapid citywide hopping.</li>
+        </ul>
+
+        <h2 id="lusail-katara">Lusail and Katara Band</h2>
+        <p>This northern corridor is ideal when your trip is event-led or you want landmark contemporary hotels. It also improves access to Lusail-focused shopping and venue clusters.</p>
+        <ul>
+          <li><strong>Best fit:</strong> event weekends, luxury stays, and new-city exploration.</li>
+          <li><strong>Strength:</strong> metro + tram network combinations for planned movement.</li>
+          <li><strong>Booking tactic:</strong> lock cancellable rates early during peak calendars.</li>
+        </ul>
+
+        <h2 id="sample-plan">Sample 3-Day Multi-Neighborhood Plan</h2>
+        <p>If you want variety without wasting time in transit, use a staged base approach:</p>
+        <ul>
+          <li><strong>Day 1 (Msheireb):</strong> central arrival, old-core walk loops, Souq dinner.</li>
+          <li><strong>Day 2 (West Bay):</strong> skyline district + Corniche + upscale dining.</li>
+          <li><strong>Day 3 (Pearl or Lusail):</strong> marina or mall-led day, relaxed checkout.</li>
+        </ul>
+        <p>If your time window is tighter, skip hotel switching and stay in Msheireb as a central base. For flight-day timing safeguards, use <a href="/blog/hamad-international-airport-guide">Hamad International Airport Guide</a>.</p>
+
+        <h2 id="booking-tips">Booking and Timing Tips That Prevent Mistakes</h2>
+        <ul>
+          <li><strong>Anchor on mobility first:</strong> confirm transit profile before selecting room type.</li>
+          <li><strong>Book event windows early:</strong> major calendar dates can compress inventory fast.</li>
+          <li><strong>Use cancellable rates:</strong> operational changes and schedule shifts happen.</li>
+          <li><strong>Plan Friday timing:</strong> some mobility patterns and venue hours shift.</li>
+          <li><strong>Check final total, not headline rate:</strong> taxes and fees vary by channel.</li>
+        </ul>
+
+        <h2 id="live-check-sources">Live-Check Sources</h2>
+        <p>Use these links shortly before travel to validate operations, dates, and pricing context:</p>
+        <ul>
+          <li><strong>Hamad International Airport:</strong> <a href="https://dohahamadairport.com/" target="_blank" rel="noopener noreferrer">https://dohahamadairport.com/</a></li>
+          <li><strong>Visit Qatar:</strong> <a href="https://visitqatar.com/" target="_blank" rel="noopener noreferrer">https://visitqatar.com/</a></li>
+          <li><strong>Qatar Tourism Events Calendar:</strong> <a href="https://www.qatartourism.com/en/events-calendar" target="_blank" rel="noopener noreferrer">https://www.qatartourism.com/en/events-calendar</a></li>
+          <li><strong>Tripadvisor Doha:</strong> <a href="https://www.tripadvisor.com/Tourism-g294008-Doha-Vacations.html" target="_blank" rel="noopener noreferrer">https://www.tripadvisor.com/Tourism-g294008-Doha-Vacations.html</a></li>
+          <li><strong>Doha Metro info:</strong> <a href="https://visitqatar.com/intl-en/plan-your-trip/getting-around/doha-metro" target="_blank" rel="noopener noreferrer">https://visitqatar.com/intl-en/plan-your-trip/getting-around/doha-metro</a></li>
+        </ul>
+      `,
+      tableOfContents: [
+        { title: 'How to Pick the Right Neighborhood Fast', id: 'choose-neighborhood' },
+        { title: 'Quick Neighborhood Comparison Table', id: 'comparison-table' },
+        { title: 'West Bay and the Diplomatic Area', id: 'west-bay' },
+        { title: 'Msheireb Downtown Doha', id: 'msheireb' },
+        { title: 'Souq Waqif and Old Town', id: 'souq-old-town' },
+        { title: 'The Pearl-Qatar', id: 'pearl' },
+        { title: 'Lusail and Katara Band', id: 'lusail-katara' },
+        { title: 'Sample 3-Day Multi-Neighborhood Plan', id: 'sample-plan' },
+        { title: 'Booking and Timing Tips That Prevent Mistakes', id: 'booking-tips' },
+        { title: 'Live-Check Sources', id: 'live-check-sources' }
+      ],
+      tags: ['best hotels in doha', 'where to stay in doha', 'west bay doha hotels', 'msheireb hotels', 'souq waqif hotels', 'old town doha hotels', 'pearl qatar hotels', 'lusail hotels', 'luxury hotels doha', 'family hotels doha', 'doha metro hotels', 'doha hotel price range']
+    },
+
     'doha-stopover-guide-12-96-hours': {
       id: '63',
       title: 'Doha Stopover Guide for 12-96 Hours',
