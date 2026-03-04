@@ -53,10 +53,25 @@ import bestThingsToDoInDohaCoverImage from '@/assets/best-things-to-do-in-doha-c
 import dohaStopoverGuide1296CoverImage from '@/assets/doha-stopover-guide-12-96-hours-cover.svg?url';
 import bestHotelsDohaNeighborhoodCoverImage from '@/assets/best-hotels-in-doha-by-neighborhood-cover.svg?url';
 import bestTimeToVisitDohaWeatherCoverImage from '@/assets/best-time-to-visit-doha-weather-cover.svg?url&no-inline';
+import qatarVisaFreeEntryHayyaCoverImage from '@/assets/qatar-visa-free-entry-hayya-e-visa-basics-cover.svg?url&no-inline';
 
 export type BlogMetaData = Omit<ArticleData, 'content' | 'tableOfContents'>;
 
 export const blogMetaPosts: Record<string, BlogMetaData> = {
+    'qatar-visa-free-entry-hayya-e-visa-basics': {
+      id: '66',
+      title: 'Qatar Visa-Free Entry and Hayya E-Visa Basics (2026 Guide)',
+      date: 'March 4, 2026',
+      isoDate: '2026-03-04',
+      metaDescription: 'Understand Qatar visa-free entry and Hayya e-visa basics with a practical step-by-step guide. Learn who can enter visa-free, when to use Hayya A1/A2/A3 pathways, what documents to prepare, typical fees, and how to reduce airport check-in and immigration problems.',
+      excerpt: 'This guide explains how to choose between Qatar visa-free entry and Hayya e-visa pathways, prepare the right documents, and avoid common arrival mistakes at Hamad International Airport.',
+      author: 'Experience Doha Team',
+      readTime: '15 min read',
+      category: 'Expat-Tips',
+      imageUrl: qatarVisaFreeEntryHayyaCoverImage,
+      tags: ['qatar visa-free entry', 'qatar visa on arrival', 'hayya e-visa', 'hayya a1 tourist visa', 'hayya a2 gcc resident visa', 'hayya a3 eta visa', 'qatar entry requirements', 'doha immigration', 'qatar visa fee qar 100', 'discover qatar transit visa', 'qatar health insurance entry', 'qatar visa checker'],
+    },
+
     'best-time-to-visit-doha-weather': {
       id: '65',
       title: 'Best Time to Visit Doha for Weather (Month-by-Month Guide)',

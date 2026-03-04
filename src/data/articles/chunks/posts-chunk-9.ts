@@ -7,8 +7,148 @@ import bestThingsToDoInDohaCoverImage from '@/assets/best-things-to-do-in-doha-c
 import dohaStopoverGuide1296CoverImage from '@/assets/doha-stopover-guide-12-96-hours-cover.svg?url';
 import bestHotelsDohaNeighborhoodCoverImage from '@/assets/best-hotels-in-doha-by-neighborhood-cover.svg?url';
 import bestTimeToVisitDohaWeatherCoverImage from '@/assets/best-time-to-visit-doha-weather-cover.svg?url&no-inline';
+import qatarVisaFreeEntryHayyaCoverImage from '@/assets/qatar-visa-free-entry-hayya-e-visa-basics-cover.svg?url&no-inline';
 
 export const postsChunk9: Record<string, ArticleData> = {
+    'qatar-visa-free-entry-hayya-e-visa-basics': {
+      id: '66',
+      title: 'Qatar Visa-Free Entry and Hayya E-Visa Basics (2026 Guide)',
+      date: 'March 4, 2026',
+      isoDate: '2026-03-04',
+      metaDescription: 'Understand Qatar visa-free entry and Hayya e-visa basics with a practical step-by-step guide. Learn who can enter visa-free, when to use Hayya A1/A2/A3 pathways, what documents to prepare, typical fees, and how to reduce airport check-in and immigration problems.',
+      excerpt: 'This guide explains how to choose between Qatar visa-free entry and Hayya e-visa pathways, prepare the right documents, and avoid common arrival mistakes at Hamad International Airport.',
+      author: 'Experience Doha Team',
+      readTime: '15 min read',
+      category: 'Expat-Tips',
+      imageUrl: qatarVisaFreeEntryHayyaCoverImage,
+      content: `
+        <p><strong>Executive summary:</strong> Most travelers enter Qatar through one of two pathways: <strong>visa-free entry at the border</strong> (often still called visa on arrival) or <strong>Hayya e-visa pre-approval</strong>. The right route depends on passport eligibility, supporting documents, and trip profile. This guide helps you choose the correct pathway fast and arrive prepared.</p>
+
+        <h2 id="entry-pathway">Choose Your Entry Pathway in 2 Minutes</h2>
+        <p>Use this simple rule: your airline checks documents before boarding, and immigration checks them again on arrival. Always confirm your route using official sources shortly before travel.</p>
+        <ul>
+          <li><strong>Visa-free eligible:</strong> prepare required documents and complete entry formalities at the border.</li>
+          <li><strong>Visa required:</strong> apply through Hayya in advance and travel with approved permit details.</li>
+          <li><strong>Transit-only (airside):</strong> separate rules can apply if you do not enter Qatar landside.</li>
+        </ul>
+        <p>For trip planning after entry requirements are clear, use <a href="/blog/best-things-to-do-in-doha">Best Things to Do in Doha</a> and <a href="/blog/doha-stopover-guide-12-96-hours">Doha Stopover Guide for 12-96 Hours</a>.</p>
+
+        <h2 id="comparison-table">Visa-Free vs Hayya vs Sponsor-Led Pathways</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Pathway</th>
+              <th>Eligibility (High Level)</th>
+              <th>When Processing Happens</th>
+              <th>Typical Fee Context</th>
+              <th>Best Use Case</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Visa-free entry / visa on arrival</td>
+              <td>Eligible nationalities and GCC nationals under current rules</td>
+              <td>At border (day of travel)</td>
+              <td>Commonly referenced around QAR 100 for some cases</td>
+              <td>Short visits when eligibility is clear and documents are ready</td>
+            </tr>
+            <tr>
+              <td>Hayya e-visa (A1/A2/A3/A4/F1)</td>
+              <td>Travelers requiring pre-approval or category-specific access</td>
+              <td>Before travel via Hayya platform</td>
+              <td>Often referenced around QAR 100 for tourist pathways</td>
+              <td>Lower arrival risk when visa-free eligibility does not apply</td>
+            </tr>
+            <tr>
+              <td>Sponsor-led / non-tourism visas</td>
+              <td>Work, family, or longer-term purpose-specific entries</td>
+              <td>Pre-arranged via sponsor/government channels</td>
+              <td>Variable by pathway</td>
+              <td>Non-tourism and structured sponsor-backed travel</td>
+            </tr>
+          </tbody>
+        </table>
+        <p><em>Fees and exact eligibility can change. Use official checkers before booking non-refundable plans.</em></p>
+
+        <h2 id="visa-free-basics">Visa-Free Entry Basics</h2>
+        <p>Visa-free entry is often the fastest route when your passport qualifies, but the process is still document-driven. Missing one item can cause denial at check-in or on arrival.</p>
+        <ul>
+          <li><strong>Passport validity:</strong> maintain a strong validity buffer before travel.</li>
+          <li><strong>Return or onward proof:</strong> keep confirmed ticket evidence accessible offline.</li>
+          <li><strong>Accommodation evidence:</strong> align booking names exactly with passport details.</li>
+          <li><strong>Insurance readiness:</strong> carry proof or follow the officially allowed purchase path.</li>
+        </ul>
+
+        <h2 id="hayya-categories">Hayya Categories Explained (A1/A2/A3/A4/F1)</h2>
+        <p>Hayya acts as Qatar's digital visitor-entry platform for multiple categories. The exact category used depends on nationality and resident status outputs in official checkers.</p>
+        <ul>
+          <li><strong>A1:</strong> standard tourist route for many pre-approval cases.</li>
+          <li><strong>A2:</strong> GCC resident-specific pathway (not GCC nationals).</li>
+          <li><strong>A3:</strong> ETA-style category where applicable.</li>
+          <li><strong>A4 / F1:</strong> category-specific cases governed by current policy definitions.</li>
+        </ul>
+        <p>Because category privileges can be updated, re-check current category rules during the same week you travel.</p>
+
+        <h2 id="application-steps">Application Checklist and Step-by-Step Flow</h2>
+        <p>Convert the process into a fixed checklist before you click apply:</p>
+        <ol>
+          <li>Run official eligibility check and confirm whether visa-free or Hayya route applies.</li>
+          <li>Create or access Hayya account if pre-approval is required.</li>
+          <li>Upload clear passport image, travel details, accommodation proof, and requested documents.</li>
+          <li>Submit and monitor status; correct mismatches immediately if flagged.</li>
+          <li>After approval, keep permit and booking proofs available for both check-in and immigration.</li>
+        </ol>
+
+        <h2 id="arrival-hamad">Arrival at Hamad: Airside Transit vs Landside Entry</h2>
+        <p>Your process at Hamad International Airport depends on whether you remain airside or enter Qatar landside. Airside transit can have separate document logic from full entry.</p>
+        <ul>
+          <li><strong>Airside transit:</strong> verify transit rules for same-airport onward travel.</li>
+          <li><strong>Landside entry:</strong> prepare full entry document set and approved permit evidence if required.</li>
+          <li><strong>Operational disruptions:</strong> always validate live airport status before leaving for the terminal.</li>
+        </ul>
+        <p>Use <a href="/blog/hamad-international-airport-guide">Hamad International Airport Guide</a> for flight-day planning and airport-side logistics.</p>
+
+        <h2 id="common-issues">Common Delay or Rejection Triggers (and Fixes)</h2>
+        <ul>
+          <li><strong>Passport validity gap:</strong> renew early and keep conservative buffer.</li>
+          <li><strong>Accommodation mismatch:</strong> make sure booking name and passport name are exact matches.</li>
+          <li><strong>Missing return/onward proof:</strong> keep full confirmation details downloadable offline.</li>
+          <li><strong>Insurance uncertainty:</strong> prepare proof before departure when possible.</li>
+          <li><strong>Data inconsistency:</strong> match passport number and DOB exactly across all submissions.</li>
+        </ul>
+
+        <h2 id="live-check-flags">Live-Check Flags Before You Travel</h2>
+        <p>These inputs are volatile and should be rechecked in the final days before departure:</p>
+        <ul>
+          <li><strong>Visa policy outputs:</strong> official portals can update requirements without notice.</li>
+          <li><strong>Hayya category rules:</strong> category conditions may be revised by official announcements.</li>
+          <li><strong>Airport operations:</strong> disruptions occurred around <strong>February 28 to March 2, 2026</strong>, so flight-day checks are mandatory.</li>
+          <li><strong>Airline boarding enforcement:</strong> carriers may apply conservative document checks before departure.</li>
+        </ul>
+
+        <h2 id="live-check-sources">Live-Check Sources</h2>
+        <ul>
+          <li><strong>Visit Qatar visa guidance:</strong> <a href="https://visitqatar.com/intl-en/practical-info/visas" target="_blank" rel="noopener noreferrer">https://visitqatar.com/intl-en/practical-info/visas</a></li>
+          <li><strong>Ministry of Interior visa portal:</strong> <a href="https://portal.moi.gov.qa/qatarvisas/" target="_blank" rel="noopener noreferrer">https://portal.moi.gov.qa/qatarvisas/</a></li>
+          <li><strong>Hayya platform:</strong> <a href="https://hayya.qa/" target="_blank" rel="noopener noreferrer">https://hayya.qa/</a></li>
+          <li><strong>Qatar Tourism Hayya updates:</strong> <a href="https://www.qatartourism.com/en/news-and-media/press-releases/qatar-updates--hayya--features-for-gcc-residents-visa-to-support" target="_blank" rel="noopener noreferrer">https://www.qatartourism.com/en/news-and-media/press-releases/qatar-updates--hayya--features-for-gcc-residents-visa-to-support</a></li>
+          <li><strong>Qatar AIP transit reference:</strong> <a href="https://aim.gov.qa/eaip/2025-02-20-AIRAC/html/eAIP/GEN-1.3-en-GB.html" target="_blank" rel="noopener noreferrer">https://aim.gov.qa/eaip/2025-02-20-AIRAC/html/eAIP/GEN-1.3-en-GB.html</a></li>
+        </ul>
+      `,
+      tableOfContents: [
+        { title: 'Choose Your Entry Pathway in 2 Minutes', id: 'entry-pathway' },
+        { title: 'Visa-Free vs Hayya vs Sponsor-Led Pathways', id: 'comparison-table' },
+        { title: 'Visa-Free Entry Basics', id: 'visa-free-basics' },
+        { title: 'Hayya Categories Explained (A1/A2/A3/A4/F1)', id: 'hayya-categories' },
+        { title: 'Application Checklist and Step-by-Step Flow', id: 'application-steps' },
+        { title: 'Arrival at Hamad: Airside Transit vs Landside Entry', id: 'arrival-hamad' },
+        { title: 'Common Delay or Rejection Triggers (and Fixes)', id: 'common-issues' },
+        { title: 'Live-Check Flags Before You Travel', id: 'live-check-flags' },
+        { title: 'Live-Check Sources', id: 'live-check-sources' }
+      ],
+      tags: ['qatar visa-free entry', 'qatar visa on arrival', 'hayya e-visa', 'hayya a1 tourist visa', 'hayya a2 gcc resident visa', 'hayya a3 eta visa', 'qatar entry requirements', 'doha immigration', 'qatar visa fee qar 100', 'discover qatar transit visa', 'qatar health insurance entry', 'qatar visa checker']
+    },
+
     'best-time-to-visit-doha-weather': {
       id: '65',
       title: 'Best Time to Visit Doha for Weather (Month-by-Month Guide)',
