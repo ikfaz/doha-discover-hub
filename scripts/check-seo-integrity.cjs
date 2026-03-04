@@ -8,6 +8,9 @@ const DIST_ROBOTS_PATH = path.join(DIST_DIR, "robots.txt");
 const DIST_SITEMAP_PATH = path.join(DIST_DIR, "sitemap.xml");
 const DIST_IMAGE_SITEMAP_PATH = path.join(DIST_DIR, "sitemap-images.xml");
 const DIST_SITEMAP_INDEX_PATH = path.join(DIST_DIR, "sitemap-index.xml");
+const DIST_LLMS_PATH = path.join(DIST_DIR, "llms.txt");
+const DIST_REDIRECTS_PATH = path.join(DIST_DIR, "_redirects");
+const PUBLIC_REDIRECTS_PATH = path.join(ROOT_DIR, "public", "_redirects");
 
 const errors = [];
 const warnings = [];
@@ -52,10 +55,13 @@ const parseRobotsSitemaps = (robotsContent) => {
 
 const hasHeadTag = (html, regex) => regex.test(html);
 
-const checkHtmlHeadTags = (filePath) => {
-  const html = fs.readFileSync(filePath, "utf8");
-  const relativePath = path.relative(DIST_DIR, filePath);
+const extractTagContent = (html, regex) => {
+  const match = html.match(regex);
+  return match ? String(match[1] || "").trim() : "";
+};
 
+const checkHtmlHeadTags = (filePath, html) => {
+  const relativePath = path.relative(DIST_DIR, filePath);
   const checks = [
     {
       label: "canonical",
@@ -97,6 +103,68 @@ const checkHtmlHeadTags = (filePath) => {
   }
 };
 
+const collectPageSignals = (filePath, html) => {
+  const relativePath = path.relative(DIST_DIR, filePath);
+  const title = extractTagContent(html, /<title>([\s\S]*?)<\/title>/i);
+  const description = extractTagContent(
+    html,
+    /<meta\s+name=["']description["'][^>]*content=["']([^"']*)["'][^>]*>/i,
+  );
+  const robots = extractTagContent(
+    html,
+    /<meta\s+name=["']robots["'][^>]*content=["']([^"']*)["'][^>]*>/i,
+  ).toLowerCase();
+  const htmlWithoutNoscript = html.replace(/<noscript[\s\S]*?<\/noscript>/gi, "");
+  const h1Count = (htmlWithoutNoscript.match(/<h1\b/gi) || []).length;
+
+  return {
+    relativePath,
+    title,
+    description,
+    robots,
+    h1Count,
+  };
+};
+
+const findDuplicates = (pages, key) => {
+  const grouped = new Map();
+  for (const page of pages) {
+    const value = String(page[key] || "").trim();
+    if (!value) {
+      continue;
+    }
+    const normalized = value.toLowerCase();
+    if (!grouped.has(normalized)) {
+      grouped.set(normalized, { value, pages: [] });
+    }
+    grouped.get(normalized).pages.push(page.relativePath);
+  }
+
+  return [...grouped.values()].filter((entry) => entry.pages.length > 1);
+};
+
+const checkRedirectHygieneRules = () => {
+  const redirectsPath = fs.existsSync(DIST_REDIRECTS_PATH) ? DIST_REDIRECTS_PATH : PUBLIC_REDIRECTS_PATH;
+  assert(fs.existsSync(redirectsPath), "Missing redirect configuration file for hygiene checks (_redirects).");
+  if (!fs.existsSync(redirectsPath)) {
+    return;
+  }
+
+  const redirects = fs.readFileSync(redirectsPath, "utf8");
+  assert(
+    /(^|\r?\n)\s*\/index\.html\s+\/\s+301!?(\s|$)/i.test(redirects),
+    "Missing redirect hygiene rule: /index.html -> / (301)",
+  );
+  assert(
+    /(^|\r?\n)\s*\/:splat\/index\.html\s+\/:splat\s+301!?(\s|$)/i.test(redirects),
+    "Missing redirect hygiene rule: /:splat/index.html -> /:splat (301)",
+  );
+  assert(
+    /(^|\r?\n)\s*\/blog\/tag\/\*\s+\/blog\s+301!?(\s|$)/i.test(redirects),
+    "Missing redirect hygiene rule: /blog/tag/* -> /blog (301)",
+  );
+};
+
 const checkArticleJsonLd = () => {
   const blogDir = path.join(DIST_DIR, "blog");
   if (!fs.existsSync(blogDir)) {
@@ -116,10 +184,7 @@ const checkArticleJsonLd = () => {
   const html = fs.readFileSync(sampleFile, "utf8");
   const relativePath = path.relative(DIST_DIR, sampleFile);
 
-  assert(
-    /"@type":"Article"/.test(html),
-    `Article JSON-LD is missing in ${relativePath}`,
-  );
+  assert(/"@type":"Article"/.test(html), `Article JSON-LD is missing in ${relativePath}`);
   assert(
     /"mainEntityOfPage":"https:\/\/experiencedoha\.com\/blog\//.test(html),
     `Article JSON-LD mainEntityOfPage is not absolute in ${relativePath}`,
@@ -137,7 +202,12 @@ const checkArticleJsonLd = () => {
 };
 
 const main = () => {
-  if (!ensureFile(DIST_ROBOTS_PATH) || !ensureFile(DIST_SITEMAP_PATH) || !ensureFile(DIST_IMAGE_SITEMAP_PATH)) {
+  const requiredFilesPresent =
+    ensureFile(DIST_ROBOTS_PATH) &&
+    ensureFile(DIST_SITEMAP_PATH) &&
+    ensureFile(DIST_IMAGE_SITEMAP_PATH) &&
+    ensureFile(DIST_LLMS_PATH);
+  if (!requiredFilesPresent) {
     console.error("SEO integrity check failed.");
     for (const error of errors) {
       console.error(`- ${error}`);
@@ -148,13 +218,23 @@ const main = () => {
   const robotsContent = fs.readFileSync(DIST_ROBOTS_PATH, "utf8");
   const sitemapXml = fs.readFileSync(DIST_SITEMAP_PATH, "utf8");
   const imageSitemapXml = fs.readFileSync(DIST_IMAGE_SITEMAP_PATH, "utf8");
+  const llmsTxt = fs.readFileSync(DIST_LLMS_PATH, "utf8");
+
+  assert(llmsTxt.includes("https://experiencedoha.com"), "dist/llms.txt is missing canonical site URL.");
+  assert(
+    llmsTxt.includes("https://experiencedoha.com/sitemap.xml"),
+    "dist/llms.txt is missing sitemap URL reference.",
+  );
 
   const sitemapLines = parseRobotsSitemaps(robotsContent);
   assert(sitemapLines.length > 0, "dist/robots.txt has no Sitemap lines.");
 
   const hasIndexLine = sitemapLines.includes(`${SITE_URL}/sitemap-index.xml`);
   if (hasIndexLine) {
-    assert(fs.existsSync(DIST_SITEMAP_INDEX_PATH), "robots references sitemap-index.xml but dist/sitemap-index.xml is missing.");
+    assert(
+      fs.existsSync(DIST_SITEMAP_INDEX_PATH),
+      "robots references sitemap-index.xml but dist/sitemap-index.xml is missing.",
+    );
   } else {
     assert(
       sitemapLines.includes(`${SITE_URL}/sitemap.xml`),
@@ -186,8 +266,31 @@ const main = () => {
 
   const htmlFiles = collectHtmlFiles(DIST_DIR);
   assert(htmlFiles.length > 0, "No HTML files found in dist for head tag verification.");
+
+  const pageSignals = [];
   for (const filePath of htmlFiles) {
-    checkHtmlHeadTags(filePath);
+    const html = fs.readFileSync(filePath, "utf8");
+    checkHtmlHeadTags(filePath, html);
+    pageSignals.push(collectPageSignals(filePath, html));
+  }
+
+  const indexablePages = pageSignals.filter((page) => /\bindex\s*,\s*follow\b/i.test(page.robots));
+  assert(indexablePages.length > 0, "No indexable prerendered pages found for duplicate/H1 checks.");
+
+  const duplicateTitles = findDuplicates(indexablePages, "title");
+  for (const duplicate of duplicateTitles) {
+    errors.push(`Duplicate <title> across indexable pages: "${duplicate.value}" -> ${duplicate.pages.join(", ")}`);
+  }
+
+  const duplicateDescriptions = findDuplicates(indexablePages, "description");
+  for (const duplicate of duplicateDescriptions) {
+    errors.push(
+      `Duplicate meta description across indexable pages: "${duplicate.value}" -> ${duplicate.pages.join(", ")}`,
+    );
+  }
+
+  for (const page of indexablePages) {
+    assert(page.h1Count === 1, `Indexable page must contain exactly one <h1>: ${page.relativePath} (found ${page.h1Count})`);
   }
 
   const homeHtmlPath = path.join(DIST_DIR, "index.html");
@@ -198,6 +301,7 @@ const main = () => {
     }
   }
 
+  checkRedirectHygieneRules();
   checkArticleJsonLd();
 
   if (errors.length > 0) {
@@ -210,6 +314,7 @@ const main = () => {
 
   console.log("SEO integrity check passed.");
   console.log(`- HTML files checked: ${htmlFiles.length}`);
+  console.log(`- Indexable pages checked: ${indexablePages.length}`);
   console.log(`- Sitemap lines in robots: ${sitemapLines.length}`);
   if (warnings.length > 0) {
     console.warn(`Warnings: ${warnings.length}`);

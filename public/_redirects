@@ -1,3 +1,8 @@
+https://www.experiencedoha.com/index.html https://experiencedoha.com/ 301!
+https://experiencedoha.com/index.html https://experiencedoha.com/ 301!
+https://www.experiencedoha.com/:splat/index.html https://experiencedoha.com/:splat 301!
+https://experiencedoha.com/:splat/index.html https://experiencedoha.com/:splat 301!
+
 https://www.experiencedoha.com/blogs https://experiencedoha.com/blog 301!
 https://www.experiencedoha.com/blogs/ https://experiencedoha.com/blog 301!
 https://www.experiencedoha.com/blogs/:slug https://experiencedoha.com/blog/:slug 301!
@@ -43,6 +48,8 @@ https://www.experiencedoha.com/photos/ https://experiencedoha.com/gallery 301!
 /videos/ /blog 301
 /photos /gallery 301
 /photos/ /gallery 301
+/index.html / 301
+/:splat/index.html /:splat 301
 
 # BEGIN LEGACY TAG REDIRECTS
 https://www.experiencedoha.com/blog/tag/5g-coverage-qatar https://experiencedoha.com/blog/topic/cost-of-living 301!
@@ -622,6 +629,10 @@ https://www.experiencedoha.com/blog/tag/worker-rights-qatar/ https://experienced
 /blog/tag/worker-rights-qatar /blog/topic/jobs 301
 /blog/tag/worker-rights-qatar/ /blog/topic/jobs 301
 # END LEGACY TAG REDIRECTS
+
+https://www.experiencedoha.com/blog/tag/* https://experiencedoha.com/blog 301!
+https://experiencedoha.com/blog/tag/* https://experiencedoha.com/blog 301!
+/blog/tag/* /blog 301
 
 
 

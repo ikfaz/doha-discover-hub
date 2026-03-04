@@ -1,0 +1,12 @@
+Experience Doha
+Canonical: https://experiencedoha.com
+Sitemaps:
+- https://experiencedoha.com/sitemap.xml
+- https://experiencedoha.com/sitemap-images.xml
+Preferred content:
+- https://experiencedoha.com/blog
+- https://experiencedoha.com/tour
+- https://experiencedoha.com/gallery
+- https://experiencedoha.com/about
+- https://experiencedoha.com/contact
+Contact: https://experiencedoha.com/contact
