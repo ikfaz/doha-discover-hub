@@ -66,7 +66,7 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
       title: 'Museum of Islamic Art Doha: Architecture, Collections, and Corniche Guide (2026)',
       date: 'March 4, 2026',
       isoDate: '2026-03-04',
-      metaDescription: 'Master your visit to the Museum of Islamic Art in Doha with practical guidance on timings, ticket context, architecture, must-see collection highlights, photography rules, and the best way to combine MIA with Corniche walking and sunset dhow planning.',
+      metaDescription: 'Plan your MIA visit with expert guidance on timings, tickets, architecture highlights, photography rules, and combining with the Corniche and Souq Waqif.',
       excerpt: 'This definitive MIA guide helps first-time visitors plan the right visit window, follow a high-impact masterpiece route, capture the best photo angles, and connect the museum with Corniche and Souq Waqif plans.',
       author: 'Experience Doha Team',
       readTime: '16 min read',
@@ -80,7 +80,7 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
       title: 'Souq Waqif Market Guide for First Visits (2026)',
       date: 'March 4, 2026',
       isoDate: '2026-03-04',
-      metaDescription: 'Plan your first Souq Waqif visit with a practical guide to opening-hour patterns, shopping strategy, bargaining etiquette, metro access, and the best evening atmosphere windows. Includes route planning, what to buy, and live-check links before you go.',
+      metaDescription: 'Plan your first Souq Waqif visit: opening hours, shopping strategy, bargaining etiquette, metro access, and the best evening atmosphere windows.',
       excerpt: 'This first-visit Souq Waqif guide helps you time your visit, navigate key sections, shop smarter, and plan metro-friendly evening routes so you get the full market experience without wasting hours.',
       author: 'Experience Doha Team',
       readTime: '15 min read',
@@ -94,7 +94,7 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
       title: 'Doha Metro Guide: Lines, Stations, Tickets, and Timings (2026)',
       date: 'March 4, 2026',
       isoDate: '2026-03-04',
-      metaDescription: 'Navigate the Doha Metro with a practical 2026 guide to lines, key stations, fares, travel cards, and operating hours. Learn how to get from Hamad International Airport to major districts, avoid common ticket mistakes, and plan reliable city routes with live-check links before travel day.',
+      metaDescription: 'Navigate Doha Metro in 2026: lines, key stations, fares, travel cards, and operating hours. Airport-to-city routes and ticket tips included.',
       excerpt: 'This practical Doha Metro guide covers line-by-line navigation, ticket options, first and last train timing patterns, and airport-to-city route planning so you can move around Doha quickly and with fewer mistakes.',
       author: 'Experience Doha Team',
       readTime: '14 min read',
@@ -108,7 +108,7 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
       title: 'Qatar Visa-Free Entry and Hayya E-Visa Basics (2026 Guide)',
       date: 'March 4, 2026',
       isoDate: '2026-03-04',
-      metaDescription: 'Understand Qatar visa-free entry and Hayya e-visa basics with a practical step-by-step guide. Learn who can enter visa-free, when to use Hayya A1/A2/A3 pathways, what documents to prepare, typical fees, and how to reduce airport check-in and immigration problems.',
+      metaDescription: 'Qatar visa-free entry and Hayya e-visa 2026: who qualifies, Hayya A1/A2/A3 pathways explained, required documents, fees, and immigration tips.',
       excerpt: 'This guide explains how to choose between Qatar visa-free entry and Hayya e-visa pathways, prepare the right documents, and avoid common arrival mistakes at Hamad International Airport.',
       author: 'Experience Doha Team',
       readTime: '15 min read',
@@ -122,7 +122,7 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
       title: 'Best Time to Visit Doha for Weather (Month-by-Month Guide)',
       date: 'March 4, 2026',
       isoDate: '2026-03-04',
-      metaDescription: 'Plan the best time to visit Doha with practical month-by-month weather ranges, comfort guidance, and crowd tradeoffs. This guide covers winter peak season, shoulder months, and extreme summer heat so you can schedule beaches, desert trips, city walks, and indoor plans at the right time.',
+      metaDescription: 'Best time to visit Doha: month-by-month weather, comfort levels, and crowd tradeoffs. Plan beaches, desert trips, and city walks at the right time.',
       excerpt: 'The best time to visit Doha for weather is usually November through March. This guide breaks down every month with heat, humidity, crowd levels, and activity fit so you can pick dates that match your travel style.',
       author: 'Experience Doha Team',
       readTime: '14 min read',
@@ -136,7 +136,7 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
       title: 'Best Hotels in Doha by Neighborhood (2026 Guide)',
       date: 'March 4, 2026',
       isoDate: '2026-03-04',
-      metaDescription: 'Find the best hotels in Doha by neighborhood with practical guidance on West Bay, Msheireb, Souq Waqif/Old Town, The Pearl-Qatar, and Lusail/Katara. Compare vibe, transit access, and realistic nightly ranges, then use a sample 3-day plan to reduce transfer time and booking mistakes. Includes live-check links for airport updates, events, and current rates.',
+      metaDescription: 'Best hotels in Doha by neighborhood: West Bay, Msheireb, Souq Waqif, The Pearl, and Lusail. Compare vibe, transit access, and nightly price ranges.',
       excerpt: 'Choose where to stay in Doha based on transport, trip style, and realistic nightly ranges. This guide compares West Bay, Msheireb, Souq Waqif, The Pearl, and Lusail/Katara with practical hotel picks and planning shortcuts.',
       author: 'Experience Doha Team',
       readTime: '15 min read',
@@ -150,7 +150,7 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
       title: 'Doha Stopover Guide for 12-96 Hours',
       date: 'March 2, 2026',
       isoDate: '2026-03-02',
-      metaDescription: 'Turn your Doha layover into a mini vacation with this practical stopover guide for 12-96 hours. Learn how to use Qatar\'s stopover hotel deals, choose the fastest airport transfer, and follow optimized itineraries for 12-24h, 24-48h, or 48-96h. Includes a comparison table, a 48-hour timeline, and a time-allocation pie chart, plus live-check reminders for flights, visas, and events.',
+      metaDescription: 'Doha stopover guide for 12-96 hours: Qatar stopover hotel deals, airport transfers, and optimized itineraries for 12h, 24h, 48h, and 96h stays.',
       excerpt: 'A Doha stopover can be shockingly efficient: most headline sights are 15-30 minutes from the airport, and the metro links straight into the city. Use this guide\'s ready-to-run itineraries for 12-24h, 24-48h, and 48-96h with transport moves, timing, and live-check reminders before you leave the terminal.',
       author: 'Experience Doha Team',
       readTime: '18 min read',
@@ -164,7 +164,7 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
       title: 'Best Things to Do in Doha',
       date: 'March 2, 2026',
       isoDate: '2026-03-02',
-      metaDescription: 'Discover the best things to do in Doha with a practical, traveler-first guide: iconic waterfront walks, must-see museums, Souq Waqif after dark, Katara\'s culture and beach time, The Pearl\'s marina vibes, and the Inland Sea desert escape. Includes visit durations, transport tips, and live-check reminders for visas, event dates, and airport updates.',
+      metaDescription: 'Best things to do in Doha: waterfront walks, must-see museums, Souq Waqif, Katara, The Pearl, and the Inland Sea desert escape. With transport tips.',
       excerpt: 'Doha is built for short, high-impact days with waterfront views, world-class museums, and markets that come alive after dark. This guide prioritizes attractions with the biggest payoff per hour, plus clear timing, transport, and live-check reminders.',
       author: 'Experience Doha Team',
       readTime: '16 min read',
@@ -556,6 +556,7 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
       readTime: '16 min read',
       category: 'Culture',
       imageUrl: dohaTransformingImage,
+      tags: ['Qatar Vision 2030', 'Doha smart city', 'Qatar cultural development', 'Middle East hub Doha', 'Qatar global influence', 'Qatar economy growth'],
     },
 
     'hamad-international-airport-guide': {
@@ -569,6 +570,7 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
       readTime: '15 min read',
       category: 'Expat-Tips',
       imageUrl: hamadAirportGuideImage,
+      tags: ['Hamad International Airport guide', 'HIA lounge access', 'Al Mourjan lounge review', 'Doha airport duty free', 'transit hotel Doha airport', 'things to do Hamad airport'],
     },
 
     'qatari-dishes-doha-culinary-guide': {
@@ -582,6 +584,7 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
       readTime: '14 min read',
       category: 'Food',
       imageUrl: qatariDishesImage,
+      tags: ['traditional Qatari food', 'Machboos recipe Qatar', 'best restaurants Doha traditional', 'Karak tea Qatar', 'Luqaimat dessert Doha', 'authentic Qatari cuisine'],
     },
 
     'women-driving-qatar-guide': {
@@ -597,6 +600,7 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
       readTime: '12 min read',
       category: 'Expat-Tips',
       imageUrl: womenDrivingImage,
+      tags: ['can women drive in Qatar', 'women driving rights Qatar', 'female car rental Doha', 'women expat driving license Qatar', 'is it safe to drive in Doha women', 'Qatar gender equality driving'],
     },
 
     'doha-safety-guide-tourists-expats': {
@@ -610,6 +614,7 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
       readTime: '13 min read',
       category: 'Expat-Tips',
       imageUrl: dohaSafetyImage,
+      tags: ['is Doha safe for tourists', 'Qatar crime rate 2026', 'solo travel Doha safety', 'is Doha safe for women', 'Qatar safety rating', 'tourist scams Doha to avoid'],
     },
 
     'prostitution-laws-doha-qatar-guide': {
@@ -625,6 +630,7 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
       readTime: '11 min read',
       category: 'Expat-Tips',
       imageUrl: prostitutionLawsImage,
+      tags: ['prostitution laws Qatar', 'is prostitution illegal Qatar', 'Qatar morality laws tourists', 'sex laws Doha penalties', 'escort scams Doha warning', 'Qatar laws for tourists 2026'],
     },
 
     'alcohol-allowed-doha-qatar-guide': {
@@ -638,6 +644,7 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
       readTime: '12 min read',
       category: 'Expat-Tips',
       imageUrl: alcoholGuideImage,
+      tags: ['is alcohol allowed in Doha', 'where to drink in Qatar', 'alcohol laws Qatar tourists', 'Doha hotel bars 2026', 'drinking age Qatar', 'Qatar Ramadan alcohol rules'],
     },
 
     'desert-safari-inland-sea-khor-al-adaid': {
@@ -651,6 +658,7 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
       readTime: '10 min read',
       category: 'Attractions',
       imageUrl: desertSafariImage,
+      tags: ['desert safari Doha', 'Khor Al Adaid Inland Sea', 'dune bashing Qatar', 'camel riding Qatar', 'overnight desert camp Qatar', 'sandboarding Qatar guide'],
     },
 
     'mia-nmoq-museum-combo-guide': {
@@ -664,6 +672,7 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
       readTime: '12 min read',
       category: 'Culture',
       imageUrl: miaNmoqImage,
+      tags: ['museum of islamic art and national museum Qatar', 'Doha museum day trip', 'Discover One Pass Doha', 'NMoQ highlights guide', 'best museums in Doha', 'Qatar cultural attractions'],
     },
 
     'souq-waqif-night-experiences-haggling': {
@@ -677,6 +686,7 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
       readTime: '9 min read',
       category: 'Culture',
       imageUrl: souqWaqifNightImage,
+      tags: ['souq waqif at night', 'haggling tips souq waqif', 'best restaurants souq waqif doha', 'spice shopping Qatar', 'souq waqif evening experience', 'doha nightlife culture'],
     },
 
     'ultimate-doha-layover-24-48-hours': {
@@ -690,6 +700,7 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
       readTime: '12 min read',
       category: 'Expat-Tips',
       imageUrl: dohaLayoverImage,
+      tags: ['24 hour Doha layover itinerary', '48 hours in Doha', 'doha stopover what to do', 'Qatar airways layover guide', 'Doha in one day', 'best attractions doha short visit'],
     },
 
     'qatar-airways-stopover-packages-lounge': {
@@ -703,6 +714,7 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
       readTime: '10 min read',
       category: 'Expat-Tips',
       imageUrl: qatarAirwaysStopoverImage,
+      tags: ['Qatar airways stopover package price', 'Al Mourjan lounge Qatar review', 'Al Safwa first class lounge', 'Doha stopover hotel deal', 'Qatar stopover eligibility', 'HIA business lounge access'],
     },
 
     'doha-global-mediation-hub-congo-peace': {
@@ -716,6 +728,7 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
       readTime: '9 min read',
       category: 'Culture',
       imageUrl: dohaMediationImage,
+      tags: ['Doha peace negotiations', 'Qatar mediation role', 'Qatar foreign policy', 'Doha accord history', 'Qatar diplomatic neutrality', 'Doha as global hub'],
     },
 
     'fifa-u17-world-cup-qatar-2025': {
@@ -731,6 +744,7 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
       readTime: '8 min read',
       category: 'Events',
       imageUrl: fifaU17Image,
+      tags: ['FIFA U17 World Cup Qatar 2026', 'youth world cup Qatar tickets', 'Doha football stadiums 2026', 'Qatar sports events 2026', 'FIFA tournament Doha guide', 'U17 world cup schedule Qatar'],
     },
 
     'corniche-sunset-dhow-cruise-guide': {
@@ -744,6 +758,7 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
       readTime: '8 min read',
       category: 'Attractions',
       imageUrl: cornicheSunsetImage,
+      tags: ['Doha Corniche sunset walk', 'dhow cruise Doha booking', 'best sunset spots Doha', 'dinner cruise Doha Qatar', 'Doha skyline photography', 'Corniche promenade guide'],
     },
 
     'pearl-qatar-luxury-shopping-dining': {
@@ -757,6 +772,7 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
       readTime: '9 min read',
       category: 'Lifestyle',
       imageUrl: pearlQatarImage,
+      tags: ['The Pearl Qatar shopping', 'Porto Arabia restaurants Doha', 'Qanat Quartier guide', 'luxury dining Pearl Qatar', 'best areas to visit Doha', 'Pearl Qatar how to get there'],
     },
 
     'katara-cultural-village-events-2025': {
@@ -772,6 +788,7 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
       readTime: '10 min read',
       category: 'Events',
       imageUrl: kataraImage,
+      tags: ['Katara Cultural Village Doha events', 'Katara Dhow Festival Qatar', 'Katara Jazz Festival Doha', 'things to do Katara Doha', 'Qatar cultural events 2026', 'Katara beach activities'],
     },
 
     'doha-airport-layover-activities': {
@@ -785,6 +802,7 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
       readTime: '8 min read',
       category: 'Expat-Tips',
       imageUrl: hamadAirportInteriorImage,
+      tags: ['things to do Doha airport layover', 'Hamad airport spa', 'HIA indoor garden tropical', 'Doha airport shopping duty free', 'airport sleep pods Doha', 'Hamad airport art installations'],
     },
 
     'five-best-things-doha-layover': {
@@ -798,6 +816,7 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
       readTime: '7 min read',
       category: 'Attractions',
       imageUrl: fiveBestLayoverImage,
+      tags: ['best Doha layover activities', 'must see Doha short visit', 'MIA museum layover visit', 'Souq Waqif layover guide', 'Corniche walk Doha layover', 'quick Doha sightseeing'],
     },
 
     '9-hour-stopover-qatar-worth-it': {
@@ -811,6 +830,7 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
       readTime: '10 min read',
       category: 'Expat-Tips',
       imageUrl: nineHourStopoverImage,
+      tags: ['9 hour stopover Qatar worth it', 'short layover Doha tips', 'leave airport during Qatar layover', 'Doha 8 hour layover', 'transit visa Qatar short stop', 'is Doha airport layover worth leaving'],
     },
 
     'discover-qatar-stopover-guide': {
@@ -824,6 +844,7 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
       readTime: '11 min read',
       category: 'Culture',
       imageUrl: discoverQatarImage,
+      tags: ['why visit Qatar on stopover', 'Discover Qatar program', 'Qatar visa free entry layover', 'reasons to visit Doha', 'Qatar family friendly destination', 'Qatar tourism highlights'],
     },
 
     '24-hours-doha-qatar-airways': {
@@ -837,6 +858,7 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
       readTime: '12 min read',
       category: 'Attractions',
       imageUrl: twentyFourHoursImage,
+      tags: ['24 hours in Doha itinerary', 'one day Doha guide', 'Doha day trip from airport', 'Qatar Airways stopover 24 hours', 'top sights Doha one day', 'sunrise Corniche Doha'],
     },
 
     'doha-layover-time-guide': {
@@ -850,6 +872,7 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
       readTime: '9 min read',
       category: 'Expat-Tips',
       imageUrl: layoverTimeGuideImage,
+      tags: ['Doha layover 2 hours what to do', '6 hour layover Doha', '12 hour Doha stopover', 'layover Doha by duration', 'Hamad airport layover time guide', 'Qatar transit visa short stop'],
     },
 
     'perfect-layover-doha-guide': {
@@ -863,6 +886,7 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
       readTime: '8 min read',
       category: 'Expat-Tips',
       imageUrl: perfectLayoverImage,
+      tags: ['how to plan perfect Doha layover', 'Doha stopover tips preparation', 'when to leave airport Doha layover', 'Doha layover must do attractions', 'Qatar transit tips 2026', 'maximize Doha stopover'],
     },
 
     'things-to-do-doha-layover': {
@@ -876,6 +900,7 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
       readTime: '10 min read',
       category: 'Attractions',
       imageUrl: unmissableThingsImage,
+      tags: ['10 things to do Doha layover', 'unmissable Doha activities', 'Doha layover sightseeing', 'things to do Qatar stopover', 'top Doha attractions for transit', 'Doha in a day guide'],
     },
 
     'hamad-airport-transfers-guide': {
@@ -889,6 +914,7 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
       readTime: '7 min read',
       category: 'Expat-Tips',
       imageUrl: hamadAirportTransfersImage,
+      tags: ['Hamad airport to city center Doha', 'HIA taxi price', 'metro from Doha airport fare', 'Karwa taxi Doha airport', 'Uber at Hamad airport', 'cheapest transfer Doha airport'],
     },
 
     'qatar-stopover-program-guide': {
@@ -902,6 +928,7 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
       readTime: '9 min read',
       category: 'Expat-Tips',
       imageUrl: stopoverProgramImage,
+      tags: ['Qatar stopover program how to book', 'Doha stopover hotel $14', 'Qatar transit hotel package', 'stopover program eligibility Qatar', 'how to use Qatar stopover deal', 'Doha layover hotel free night'],
     },
 
     'default': {
