@@ -16,9 +16,29 @@ const About = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <SEOHead 
+      <SEOHead
         title="About Experience Doha - Your Qatar Travel Guide"
         description="Meet the team behind Experience Doha — expat-tested guides, honest tips, and insider knowledge for tourists and residents in Qatar."
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Experience Doha",
+          "url": "https://experiencedoha.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://experiencedoha.com/logo.png",
+            "width": 512,
+            "height": 512
+          },
+          "description": "Your comprehensive guide to Doha's best attractions, cultural experiences, dining, and travel tips for tourists and expats in Qatar.",
+          "email": "info@experiencedoha.com",
+          "sameAs": [
+            "https://twitter.com/experiencedoha",
+            "https://www.facebook.com/Experiencedohaqatar",
+            "https://www.instagram.com/experiencedoha",
+            "https://www.youtube.com/@ExperienceDoha"
+          ]
+        }}
       />
       <NavBar />
       

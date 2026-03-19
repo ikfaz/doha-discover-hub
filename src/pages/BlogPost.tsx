@@ -483,7 +483,9 @@ const BlogPost = () => {
       "url": BASE_URL,
       "logo": {
         "@type": "ImageObject",
-        "url": `${BASE_URL}/logo.png`
+        "url": `${BASE_URL}/logo.png`,
+        "width": 512,
+        "height": 512
       }
     },
     "datePublished": articlePublishedIsoDate,
@@ -505,19 +507,20 @@ const BlogPost = () => {
       { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://experiencedoha.com/" },
       { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://experiencedoha.com/blog" },
       { "@type": "ListItem", "position": 3, "name": safeCategory, "item": `https://experiencedoha.com/blog/category/${categorySlug}` },
-      { "@type": "ListItem", "position": 4, "name": safeTitle }
+      { "@type": "ListItem", "position": 4, "name": safeTitle, "item": canonicalArticleUrl }
     ]
   };
 
   return (
     <div className="min-h-screen flex flex-col">
-      <SEOHead 
+      <SEOHead
         title={`${safeTitle} | Doha Guide`}
         description={articleDescription}
         image={articleImageAbsolute}
         type="article"
         publishedTime={articlePublishedIsoDate}
         modifiedTime={articleModifiedIsoDate}
+        tags={post.tags}
         jsonLd={[articleJsonLd, breadcrumbJsonLd]}
       />
       <NavBar />

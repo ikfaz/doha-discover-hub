@@ -36,7 +36,7 @@ const TourDetail = () => {
         priceCurrency: 'QAR',
         availability: 'https://schema.org/InStock',
         url: tour.viatorUrl,
-        validFrom: '2026-01-01',
+        validFrom: new Date().toISOString().split('T')[0],
       },
       aggregateRating: {
         '@type': 'AggregateRating',

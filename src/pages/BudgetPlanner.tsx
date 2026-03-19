@@ -160,9 +160,29 @@ const BudgetPlanner = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <SEOHead 
+      <SEOHead
         title="Doha Expat Budget Planner - Calculate Living Costs in Qatar"
         description="Free Doha budget calculator: estimate rent, groceries, transport, and school fees. Plan monthly costs for singles or families in Qatar."
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "name": "Doha Expat Budget Planner",
+          "description": "Free interactive budget calculator for expats in Doha, Qatar. Estimate monthly rent, groceries, transport, school fees and more.",
+          "url": "https://experiencedoha.com/budget-planner",
+          "applicationCategory": "FinanceApplication",
+          "operatingSystem": "Any",
+          "isAccessibleForFree": true,
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          "author": {
+            "@type": "Organization",
+            "name": "Experience Doha",
+            "url": "https://experiencedoha.com"
+          }
+        }}
       />
       <NavBar />
       

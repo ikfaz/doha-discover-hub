@@ -144,9 +144,28 @@ const Gallery = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <SEOHead 
+      <SEOHead
         title="Doha Photo Gallery - Experience Doha"
         description="Stunning Doha photos: skyline views, Souq Waqif nights, desert sunsets, and cultural landmarks. Free to browse and share."
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "ImageGallery",
+          "name": "Doha Photo Gallery",
+          "description": "Stunning photos of Doha, Qatar — skyline views, Souq Waqif nights, desert sunsets, and cultural landmarks.",
+          "url": "https://experiencedoha.com/gallery",
+          "author": {
+            "@type": "Organization",
+            "name": "Experience Doha",
+            "url": "https://experiencedoha.com"
+          },
+          "image": allPhotos.map((photo) => ({
+            "@type": "ImageObject",
+            "contentUrl": typeof photo.url === 'string' ? photo.url : "https://experiencedoha.com/og-default-1200x630.jpg",
+            "name": photo.alt,
+            "description": photo.caption,
+            "keywords": photo.category
+          }))
+        }}
       />
       <NavBar />
       <GalleryHeader />

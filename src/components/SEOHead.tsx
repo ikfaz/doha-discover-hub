@@ -10,6 +10,7 @@ interface SEOHeadProps {
   publishedTime?: string;
   modifiedTime?: string;
   author?: string;
+  tags?: string[];
   jsonLd?: Record<string, unknown> | Record<string, unknown>[];
   noindex?: boolean;
 }
@@ -24,6 +25,7 @@ export const SEOHead = ({
   publishedTime,
   modifiedTime,
   author = 'ExperienceDoha.com',
+  tags,
   jsonLd,
   noindex = false,
 }: SEOHeadProps) => {
@@ -49,6 +51,9 @@ export const SEOHead = ({
       <meta property="og:site_name" content="ExperienceDoha.com" />
       {publishedTime && <meta property="article:published_time" content={publishedTime} />}
       {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
+      {tags && tags.map((tag) => (
+        <meta key={tag} property="article:tag" content={tag} />
+      ))}
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:url" content={canonicalUrl} />

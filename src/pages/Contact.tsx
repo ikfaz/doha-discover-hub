@@ -60,9 +60,29 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <SEOHead 
+      <SEOHead
         title="Contact Us - Experience Doha"
         description="Have a question about Doha or Qatar? Reach out for travel tips, partnership inquiries, or content suggestions. We reply fast."
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Experience Doha",
+          "url": "https://experiencedoha.com",
+          "email": "info@experiencedoha.com",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "info@experiencedoha.com",
+            "contactType": "customer support",
+            "areaServed": "QA",
+            "availableLanguage": ["English", "Arabic"]
+          },
+          "sameAs": [
+            "https://twitter.com/experiencedoha",
+            "https://www.facebook.com/Experiencedohaqatar",
+            "https://www.instagram.com/experiencedoha",
+            "https://www.youtube.com/@ExperienceDoha"
+          ]
+        }}
       />
       <NavBar />
       
