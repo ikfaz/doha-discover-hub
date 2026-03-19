@@ -38,6 +38,12 @@
 
     <!-- Google Analytics (async loader) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-8TYDL7HNV8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-8TYDL7HNV8');
+    </script>
 
     <!-- Organization Structured Data for Google -->
     <script type="application/ld+json">
@@ -48,7 +54,10 @@
       "url": "https://experiencedoha.com",
       "logo": "https://experiencedoha.com/logo.png",
       "sameAs": [
-        "https://twitter.com/experiencedoha"
+        "https://twitter.com/experiencedoha",
+        "https://www.facebook.com/Experiencedohaqatar",
+        "https://www.instagram.com/experiencedoha",
+        "https://www.youtube.com/@ExperienceDoha"
       ],
       "description": "Your comprehensive guide to Doha's best attractions, cultural experiences, dining, and travel tips."
     }
@@ -82,14 +91,6 @@
         <a href="/contact">Contact</a>
       </nav>
     </noscript>
-    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
-    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
     <script type="module" src="/src/main.tsx"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-8TYDL7HNV8');
-    </script>
   </body>
 </html>

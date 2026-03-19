@@ -32,7 +32,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
   };
 
   const categoryClass = categoryColors[category.toLowerCase()] || 'bg-gray-100 text-gray-800';
-  const fallbackImage = "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=800&auto=format&fit=crop";
+  const fallbackImage = "/og-default-1200x630.jpg";
   const [imgSrc, setImgSrc] = useState(imageUrl);
   const articleHref = `/blog/${slug}`;
 
@@ -69,7 +69,6 @@ const BlogCard: React.FC<BlogCardProps> = ({
         <p className="text-gray-600 text-sm mb-4">{excerpt}</p>
         <Link
           to={articleHref}
-          aria-label={`Read article: ${title}`}
           className="text-qatar-maroon font-medium hover:text-qatar-gold transition-colors inline-flex items-center"
         >
           Read article: {title}

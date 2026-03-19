@@ -1,3 +1,4 @@
+import DOMPurify from 'dompurify';
 import { useParams, Link } from 'react-router-dom';
 import { lazy, Suspense, useEffect, useMemo, useState } from 'react';
 import NavBar from '@/components/NavBar';
@@ -254,6 +255,8 @@ const slugComponents: Record<string, { splitAt: string; component: ReactNode; sp
 // Extra component for end-of-service article
 const endOfServiceExtra = withLazyTool(<ContractNegotiationChecklist />);
 
+const sanitize = (html: string) => DOMPurify.sanitize(html);
+
 function renderArticleContent(slug: string, content: string) {
   // Special case: end-of-service has an extra component at the end
   if (slug === 'end-of-service-gratuity-qatar-2025') {
@@ -263,9 +266,9 @@ function renderArticleContent(slug: string, content: string) {
       const parts = content.split(splitAt);
       return (
         <div className="prose prose-lg max-w-none space-y-8">
-          <div dangerouslySetInnerHTML={{ __html: parts[0] }} />
+          <div dangerouslySetInnerHTML={{ __html: sanitize(parts[0]) }} />
           <div className="not-prose my-12">{withLazyTool(<EOSGCalculator />)}</div>
-          <div dangerouslySetInnerHTML={{ __html: splitAt + parts[1] }} />
+          <div dangerouslySetInnerHTML={{ __html: sanitize(splitAt + parts[1]) }} />
           <div className="not-prose my-12">{endOfServiceExtra}</div>
         </div>
       );
@@ -279,12 +282,12 @@ function renderArticleContent(slug: string, content: string) {
     const budgetParts = (waitlistParts[1] || '').split('<h2 id="budget">');
     return (
       <div className="prose prose-lg max-w-none space-y-8">
-        <div dangerouslySetInnerHTML={{ __html: feeParts[0] }} />
+        <div dangerouslySetInnerHTML={{ __html: sanitize(feeParts[0]) }} />
         <div className="not-prose my-12">{withLazyTool(<SchoolFeeCalculator />)}</div>
-        <div dangerouslySetInnerHTML={{ __html: '<h2 id="fees">' + waitlistParts[0] }} />
-        <div dangerouslySetInnerHTML={{ __html: '<h2 id="waitlists">' + budgetParts[0] }} />
+        <div dangerouslySetInnerHTML={{ __html: sanitize('<h2 id="fees">' + waitlistParts[0]) }} />
+        <div dangerouslySetInnerHTML={{ __html: sanitize('<h2 id="waitlists">' + budgetParts[0]) }} />
         <div className="not-prose my-12">{withLazyTool(<SchoolComparisonTool />)}</div>
-        <div dangerouslySetInnerHTML={{ __html: '<h2 id="budget">' + budgetParts[1] }} />
+        <div dangerouslySetInnerHTML={{ __html: sanitize('<h2 id="budget">' + budgetParts[1]) }} />
       </div>
     );
   }
@@ -295,11 +298,11 @@ function renderArticleContent(slug: string, content: string) {
     const pkgParts = (benchParts[1] || '').split('<h2 id="package">');
     return (
       <div className="prose prose-lg max-w-none space-y-8">
-        <div dangerouslySetInnerHTML={{ __html: benchParts[0] }} />
+        <div dangerouslySetInnerHTML={{ __html: sanitize(benchParts[0]) }} />
         <div className="not-prose my-12">{withLazyTool(<TaxSavingsCalculator />)}</div>
-        <div dangerouslySetInnerHTML={{ __html: '<h2 id="benchmarks">' + pkgParts[0] }} />
+        <div dangerouslySetInnerHTML={{ __html: sanitize('<h2 id="benchmarks">' + pkgParts[0]) }} />
         <div className="not-prose my-12">{withLazyTool(<SalaryCalculator />)}</div>
-        <div dangerouslySetInnerHTML={{ __html: '<h2 id="package">' + pkgParts[1] }} />
+        <div dangerouslySetInnerHTML={{ __html: sanitize('<h2 id="package">' + pkgParts[1]) }} />
       </div>
     );
   }
@@ -309,29 +312,29 @@ function renderArticleContent(slug: string, content: string) {
   if (injections && injections.length > 0) {
     const injection = injections[0];
     const { splitAt, component, splitAt2, component2 } = injection;
-    
+
     if (splitAt2 && component2) {
       // Two injection points
       const parts1 = content.split(splitAt);
       const parts2 = (parts1[1] || '').split(splitAt2);
       return (
         <div className="prose prose-lg max-w-none space-y-8">
-          <div dangerouslySetInnerHTML={{ __html: parts1[0] }} />
+          <div dangerouslySetInnerHTML={{ __html: sanitize(parts1[0]) }} />
           <div className="not-prose my-12">{component}</div>
-          <div dangerouslySetInnerHTML={{ __html: splitAt + parts2[0] }} />
+          <div dangerouslySetInnerHTML={{ __html: sanitize(splitAt + parts2[0]) }} />
           <div className="not-prose my-12">{component2}</div>
-          <div dangerouslySetInnerHTML={{ __html: splitAt2 + parts2[1] }} />
+          <div dangerouslySetInnerHTML={{ __html: sanitize(splitAt2 + parts2[1]) }} />
         </div>
       );
     }
-    
+
     // Single injection point
     const parts = content.split(splitAt);
     return (
       <div className="prose prose-lg max-w-none space-y-8">
-        <div dangerouslySetInnerHTML={{ __html: parts[0] }} />
+        <div dangerouslySetInnerHTML={{ __html: sanitize(parts[0]) }} />
         <div className="not-prose my-12">{component}</div>
-        <div dangerouslySetInnerHTML={{ __html: splitAt + parts[1] }} />
+        <div dangerouslySetInnerHTML={{ __html: sanitize(splitAt + parts[1]) }} />
       </div>
     );
   }
@@ -343,18 +346,18 @@ function renderArticleContent(slug: string, content: string) {
     const splitPos = h2Matches[midIndex].index!;
     return (
       <div className="prose prose-lg max-w-none">
-        <div dangerouslySetInnerHTML={{ __html: content.substring(0, splitPos) }} />
+        <div dangerouslySetInnerHTML={{ __html: sanitize(content.substring(0, splitPos)) }} />
         <ViatorArticleBanner />
-        <div dangerouslySetInnerHTML={{ __html: content.substring(splitPos) }} />
+        <div dangerouslySetInnerHTML={{ __html: sanitize(content.substring(splitPos)) }} />
       </div>
     );
   }
 
   return (
     <div className="prose prose-lg max-w-none">
-      <div dangerouslySetInnerHTML={{ __html: content.substring(0, Math.floor(content.length / 2)) }} />
+      <div dangerouslySetInnerHTML={{ __html: sanitize(content.substring(0, Math.floor(content.length / 2))) }} />
       <ViatorArticleBanner />
-      <div dangerouslySetInnerHTML={{ __html: content.substring(Math.floor(content.length / 2)) }} />
+      <div dangerouslySetInnerHTML={{ __html: sanitize(content.substring(Math.floor(content.length / 2))) }} />
     </div>
   );
 }
