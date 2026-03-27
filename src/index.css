@@ -1,0 +1,220 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 99.2%; /* Pearl White #FDFDFD */
+    --foreground: 207 22% 26%; /* Charcoal #36454F */
+
+    --card: 0 0% 100%;
+    --card-foreground: 207 22% 26%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 207 22% 26%;
+
+    --primary: 42 30% 63%; /* Sand Gold #C2B280 */
+    --primary-foreground: 207 22% 20%;
+
+    --secondary: 207 22% 26%; /* Charcoal */
+    --secondary-foreground: 0 0% 99%;
+
+    --muted: 40 20% 93%;
+    --muted-foreground: 207 10% 46%;
+
+    --accent: 42 30% 90%;
+    --accent-foreground: 207 22% 20%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 99%;
+
+    --border: 40 15% 88%;
+    --input: 40 15% 88%;
+    --ring: 42 30% 63%;
+
+    --radius: 0.5rem;
+
+    --sand-gold: 42 30% 63%;
+    --pearl-white: 0 0% 99.2%;
+    --charcoal: 207 22% 26%;
+    --charcoal-light: 207 15% 40%;
+    --sand-light: 42 35% 95%;
+    --sand-warm: 38 40% 70%;
+  }
+}
+
+/* RTL Support */
+[dir="rtl"] {
+  text-align: right;
+}
+
+[dir="rtl"] .flex-row {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .space-x-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 1;
+}
+
+[dir="rtl"] .space-x-3 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 1;
+}
+
+[dir="rtl"] .space-x-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 1;
+}
+
+[dir="rtl"] .space-x-6 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 1;
+}
+
+[dir="rtl"] .space-x-8 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 1;
+}
+
+[dir="rtl"] .ml-1 { margin-left: 0; margin-right: 0.25rem; }
+[dir="rtl"] .ml-2 { margin-left: 0; margin-right: 0.5rem; }
+[dir="rtl"] .mr-1 { margin-right: 0; margin-left: 0.25rem; }
+[dir="rtl"] .mr-2 { margin-right: 0; margin-left: 0.5rem; }
+[dir="rtl"] .mr-3 { margin-right: 0; margin-left: 0.75rem; }
+
+[dir="rtl"] .text-left { text-align: right; }
+[dir="rtl"] .text-right { text-align: left; }
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold font-heading text-secondary mb-6 relative inline-block;
+  }
+  
+  .section-title::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-1/2 h-1 bg-primary;
+  }
+
+  [dir="rtl"] .section-title::after {
+    left: auto;
+    right: 0;
+  }
+  
+  .content-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12;
+  }
+
+  .card-hover {
+    @apply transition duration-300 transform hover:shadow-lg hover:-translate-y-1;
+  }
+
+  /* Article content styling */
+  .prose h2 {
+    @apply text-secondary font-bold text-2xl md:text-3xl mt-12 mb-5 pb-3 pl-5 relative;
+    border-left: 4px solid hsl(var(--primary));
+    border-bottom: 1px solid hsl(var(--border));
+  }
+
+  .prose h3 {
+    @apply text-secondary font-semibold text-xl md:text-2xl mt-8 mb-4 pl-4 relative;
+    border-left: 2px solid hsl(var(--primary) / 0.5);
+  }
+
+  .prose h4 {
+    @apply text-secondary font-semibold text-lg mt-6 mb-3;
+  }
+
+  .prose p {
+    @apply text-foreground leading-relaxed mb-5;
+  }
+
+  .prose p.lead,
+  .prose .lead {
+    @apply text-xl leading-relaxed mb-6 pb-6;
+    color: hsl(var(--muted-foreground));
+    border-bottom: 1px solid hsl(var(--border));
+  }
+
+  .prose strong {
+    @apply text-foreground font-semibold;
+  }
+
+  .prose a {
+    @apply underline transition-colors duration-200;
+    color: hsl(var(--primary));
+  }
+  .prose a:hover {
+    color: hsl(var(--sand-warm));
+  }
+
+  .prose ul {
+    @apply list-disc pl-6 mb-5 space-y-2;
+  }
+
+  .prose ol {
+    @apply list-decimal pl-6 mb-5 space-y-2;
+  }
+
+  .prose li {
+    @apply text-foreground leading-relaxed;
+  }
+
+  .prose blockquote {
+    @apply italic pl-5 py-4 my-6 rounded-r-md;
+    border-left: 4px solid hsl(var(--primary));
+    background: hsl(var(--sand-light));
+    color: hsl(var(--charcoal-light));
+  }
+
+  .prose hr {
+    @apply my-10;
+    border-color: hsl(var(--border));
+  }
+
+  .prose img {
+    @apply rounded-lg shadow-md my-8;
+  }
+
+  .prose table {
+    @apply w-full mb-6 text-sm;
+    border-collapse: collapse;
+  }
+  .prose th {
+    @apply text-left font-semibold p-3;
+    background: hsl(var(--muted));
+    border-bottom: 2px solid hsl(var(--border));
+  }
+  .prose td {
+    @apply p-3;
+    border-bottom: 1px solid hsl(var(--border));
+  }
+
+  /* Drop cap for first paragraph after lead */
+  .prose .drop-cap::first-letter {
+    @apply font-heading font-bold float-left mr-3 leading-none;
+    font-size: 3.5rem;
+    color: hsl(var(--primary));
+  }
+}
+
+/* Glassmorphism utility */
+.glass {
+  background: rgba(253, 253, 253, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(194, 178, 128, 0.2);
+}
+
+.glass-dark {
+  background: rgba(54, 69, 79, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}

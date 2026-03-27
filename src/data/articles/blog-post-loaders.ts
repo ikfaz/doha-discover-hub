@@ -1,0 +1,75 @@
+import type { ArticleData } from './types';
+
+const postLoaders: Record<string, () => Promise<ArticleData | null>> = {
+  'museum-of-islamic-art-doha-exhaustive-guide-tickets-corniche': async () => (await import('./chunks/posts-chunk-9')).postsChunk9['museum-of-islamic-art-doha-exhaustive-guide-tickets-corniche'] ?? null,
+  'souq-waqif-market-guide-first-visits': async () => (await import('./chunks/posts-chunk-9')).postsChunk9['souq-waqif-market-guide-first-visits'] ?? null,
+  'doha-metro-guide-stations-lines-tickets': async () => (await import('./chunks/posts-chunk-9')).postsChunk9['doha-metro-guide-stations-lines-tickets'] ?? null,
+  'qatar-visa-free-entry-hayya-e-visa-basics': async () => (await import('./chunks/posts-chunk-9')).postsChunk9['qatar-visa-free-entry-hayya-e-visa-basics'] ?? null,
+  'best-time-to-visit-doha-weather': async () => (await import('./chunks/posts-chunk-9')).postsChunk9['best-time-to-visit-doha-weather'] ?? null,
+  'best-hotels-in-doha-by-neighborhood': async () => (await import('./chunks/posts-chunk-9')).postsChunk9['best-hotels-in-doha-by-neighborhood'] ?? null,
+  'doha-stopover-guide-12-96-hours': async () => (await import('./chunks/posts-chunk-9')).postsChunk9['doha-stopover-guide-12-96-hours'] ?? null,
+  'best-things-to-do-in-doha': async () => (await import('./chunks/posts-chunk-9')).postsChunk9['best-things-to-do-in-doha'] ?? null,
+  'end-of-service-gratuity-qatar-2025': async () => (await import('./chunks/posts-chunk-1')).postsChunk1['end-of-service-gratuity-qatar-2025'] ?? null,
+  'qatar-labor-law-reforms-2025': async () => (await import('./chunks/posts-chunk-1')).postsChunk1['qatar-labor-law-reforms-2025'] ?? null,
+  'qatar-work-visa-guide-2025': async () => (await import('./chunks/posts-chunk-1')).postsChunk1['qatar-work-visa-guide-2025'] ?? null,
+  'qatar-tax-guide-2025': async () => (await import('./chunks/posts-chunk-1')).postsChunk1['qatar-tax-guide-2025'] ?? null,
+  'expat-salaries-doha-2025': async () => (await import('./chunks/posts-chunk-1')).postsChunk1['expat-salaries-doha-2025'] ?? null,
+  'job-market-qatar-2025': async () => (await import('./chunks/posts-chunk-1')).postsChunk1['job-market-qatar-2025'] ?? null,
+  'housing-rent-doha-2025': async () => (await import('./chunks/posts-chunk-2')).postsChunk2['housing-rent-doha-2025'] ?? null,
+  'cost-of-living-doha-dubai-riyadh': async () => (await import('./chunks/posts-chunk-2')).postsChunk2['cost-of-living-doha-dubai-riyadh'] ?? null,
+  'alcohol-guide-doha': async () => (await import('./chunks/posts-chunk-2')).postsChunk2['alcohol-guide-doha'] ?? null,
+  'remote-work-cafes-doha-guide': async () => (await import('./chunks/posts-chunk-2')).postsChunk2['remote-work-cafes-doha-guide'] ?? null,
+  'gyms-fitness-doha-guide': async () => (await import('./chunks/posts-chunk-2')).postsChunk2['gyms-fitness-doha-guide'] ?? null,
+  'hiring-maid-nanny-qatar-guide': async () => (await import('./chunks/posts-chunk-2')).postsChunk2['hiring-maid-nanny-qatar-guide'] ?? null,
+  'pet-import-qatar-guide': async () => (await import('./chunks/posts-chunk-3')).postsChunk3['pet-import-qatar-guide'] ?? null,
+  'doha-metro-2025-guide': async () => (await import('./chunks/posts-chunk-3')).postsChunk3['doha-metro-2025-guide'] ?? null,
+  'grocery-shopping-doha-guide': async () => (await import('./chunks/posts-chunk-3')).postsChunk3['grocery-shopping-doha-guide'] ?? null,
+  'mobile-plans-qatar-guide': async () => (await import('./chunks/posts-chunk-3')).postsChunk3['mobile-plans-qatar-guide'] ?? null,
+  'bank-account-qatar-guide': async () => (await import('./chunks/posts-chunk-3')).postsChunk3['bank-account-qatar-guide'] ?? null,
+  'lgbtq-experiences-qatar-2025': async () => (await import('./chunks/posts-chunk-3')).postsChunk3['lgbtq-experiences-qatar-2025'] ?? null,
+  'driving-doha-2025-guide': async () => (await import('./chunks/posts-chunk-4')).postsChunk4['driving-doha-2025-guide'] ?? null,
+  'renting-doha-west-bay-al-waab-2025': async () => (await import('./chunks/posts-chunk-4')).postsChunk4['renting-doha-west-bay-al-waab-2025'] ?? null,
+  'qatar-visa-rules-expats-2025': async () => (await import('./chunks/posts-chunk-4')).postsChunk4['qatar-visa-rules-expats-2025'] ?? null,
+  'international-schools-qatar-2025': async () => (await import('./chunks/posts-chunk-4')).postsChunk4['international-schools-qatar-2025'] ?? null,
+  'women-safety-dress-code-doha-qatar': async () => (await import('./chunks/posts-chunk-4')).postsChunk4['women-safety-dress-code-doha-qatar'] ?? null,
+  'cost-of-living-doha-2025': async () => (await import('./chunks/posts-chunk-4')).postsChunk4['cost-of-living-doha-2025'] ?? null,
+  'doha-changing-middle-east': async () => (await import('./chunks/posts-chunk-5')).postsChunk5['doha-changing-middle-east'] ?? null,
+  'hamad-international-airport-guide': async () => (await import('./chunks/posts-chunk-5')).postsChunk5['hamad-international-airport-guide'] ?? null,
+  'qatari-dishes-doha-culinary-guide': async () => (await import('./chunks/posts-chunk-5')).postsChunk5['qatari-dishes-doha-culinary-guide'] ?? null,
+  'women-driving-qatar-guide': async () => (await import('./chunks/posts-chunk-5')).postsChunk5['women-driving-qatar-guide'] ?? null,
+  'doha-safety-guide-tourists-expats': async () => (await import('./chunks/posts-chunk-5')).postsChunk5['doha-safety-guide-tourists-expats'] ?? null,
+  'prostitution-laws-doha-qatar-guide': async () => (await import('./chunks/posts-chunk-5')).postsChunk5['prostitution-laws-doha-qatar-guide'] ?? null,
+  'alcohol-allowed-doha-qatar-guide': async () => (await import('./chunks/posts-chunk-6')).postsChunk6['alcohol-allowed-doha-qatar-guide'] ?? null,
+  'desert-safari-inland-sea-khor-al-adaid': async () => (await import('./chunks/posts-chunk-6')).postsChunk6['desert-safari-inland-sea-khor-al-adaid'] ?? null,
+  'mia-nmoq-museum-combo-guide': async () => (await import('./chunks/posts-chunk-6')).postsChunk6['mia-nmoq-museum-combo-guide'] ?? null,
+  'souq-waqif-night-experiences-haggling': async () => (await import('./chunks/posts-chunk-6')).postsChunk6['souq-waqif-night-experiences-haggling'] ?? null,
+  'ultimate-doha-layover-24-48-hours': async () => (await import('./chunks/posts-chunk-6')).postsChunk6['ultimate-doha-layover-24-48-hours'] ?? null,
+  'qatar-airways-stopover-packages-lounge': async () => (await import('./chunks/posts-chunk-6')).postsChunk6['qatar-airways-stopover-packages-lounge'] ?? null,
+  'doha-global-mediation-hub-congo-peace': async () => (await import('./chunks/posts-chunk-7')).postsChunk7['doha-global-mediation-hub-congo-peace'] ?? null,
+  'fifa-u17-world-cup-qatar-2025': async () => (await import('./chunks/posts-chunk-7')).postsChunk7['fifa-u17-world-cup-qatar-2025'] ?? null,
+  'corniche-sunset-dhow-cruise-guide': async () => (await import('./chunks/posts-chunk-7')).postsChunk7['corniche-sunset-dhow-cruise-guide'] ?? null,
+  'pearl-qatar-luxury-shopping-dining': async () => (await import('./chunks/posts-chunk-7')).postsChunk7['pearl-qatar-luxury-shopping-dining'] ?? null,
+  'katara-cultural-village-events-2025': async () => (await import('./chunks/posts-chunk-7')).postsChunk7['katara-cultural-village-events-2025'] ?? null,
+  'doha-airport-layover-activities': async () => (await import('./chunks/posts-chunk-7')).postsChunk7['doha-airport-layover-activities'] ?? null,
+  'five-best-things-doha-layover': async () => (await import('./chunks/posts-chunk-8')).postsChunk8['five-best-things-doha-layover'] ?? null,
+  '9-hour-stopover-qatar-worth-it': async () => (await import('./chunks/posts-chunk-8')).postsChunk8['9-hour-stopover-qatar-worth-it'] ?? null,
+  'discover-qatar-stopover-guide': async () => (await import('./chunks/posts-chunk-8')).postsChunk8['discover-qatar-stopover-guide'] ?? null,
+  '24-hours-doha-qatar-airways': async () => (await import('./chunks/posts-chunk-8')).postsChunk8['24-hours-doha-qatar-airways'] ?? null,
+  'doha-layover-time-guide': async () => (await import('./chunks/posts-chunk-8')).postsChunk8['doha-layover-time-guide'] ?? null,
+  'perfect-layover-doha-guide': async () => (await import('./chunks/posts-chunk-8')).postsChunk8['perfect-layover-doha-guide'] ?? null,
+  'things-to-do-doha-layover': async () => (await import('./chunks/posts-chunk-9')).postsChunk9['things-to-do-doha-layover'] ?? null,
+  'hamad-airport-transfers-guide': async () => (await import('./chunks/posts-chunk-9')).postsChunk9['hamad-airport-transfers-guide'] ?? null,
+  'qatar-stopover-program-guide': async () => (await import('./chunks/posts-chunk-9')).postsChunk9['qatar-stopover-program-guide'] ?? null,
+  'default': async () => (await import('./chunks/posts-chunk-9')).postsChunk9['default'] ?? null,
+};
+
+export const loadBlogPostBySlug = async (slug: string): Promise<ArticleData | null> => {
+  const loader = postLoaders[slug];
+  if (!loader) {
+    return null;
+  }
+
+  return loader();
+};
+
+export const hasBlogPostSlug = (slug: string): boolean => Object.prototype.hasOwnProperty.call(postLoaders, slug);

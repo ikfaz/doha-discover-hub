@@ -1,0 +1,23 @@
+# Allow all search engines to crawl the site
+User-agent: *
+Allow: /
+Allow: /tour/
+Allow: /blog/
+Allow: /gallery
+Allow: /about
+Allow: /contact
+Allow: /budget-planner
+
+# Block administrative and utility routes
+Disallow: /admin
+Disallow: /api/
+Disallow: /_internal/
+Disallow: /debug/
+
+# Block thin archive pages (noindexed in code, save crawl budget)
+Disallow: /blog/tag/
+Disallow: /blog/topic/
+
+# Sitemap location
+Sitemap: https://experiencedoha.com/sitemap.xml
+Sitemap: https://experiencedoha.com/sitemap-images.xml

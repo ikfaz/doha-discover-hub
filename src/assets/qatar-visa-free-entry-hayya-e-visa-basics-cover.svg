@@ -1,0 +1,66 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#113A69"/>
+      <stop offset="0.45" stop-color="#1F6BA3"/>
+      <stop offset="1" stop-color="#E6B070"/>
+    </linearGradient>
+    <linearGradient id="cardLeft" x1="220" y1="220" x2="760" y2="760" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#EAF7FF"/>
+      <stop offset="1" stop-color="#D6EEF9"/>
+    </linearGradient>
+    <linearGradient id="cardRight" x1="860" y1="220" x2="1400" y2="760" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFF4E6"/>
+      <stop offset="1" stop-color="#FDE8CF"/>
+    </linearGradient>
+    <linearGradient id="titleBar" x1="300" y1="74" x2="1300" y2="230" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5E1636"/>
+      <stop offset="1" stop-color="#2D0C1B"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1292" cy="128" r="84" fill="#FFD88E" fill-opacity="0.78"/>
+  <path d="M0 702C196 666 382 742 608 708C836 674 1034 748 1268 706C1434 676 1518 680 1600 674V900H0V702Z" fill="#D6945A" fill-opacity="0.95"/>
+
+  <rect x="298" y="76" width="1004" height="146" rx="24" fill="url(#titleBar)"/>
+  <text x="338" y="140" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="46" font-weight="800">Qatar Visa-Free Entry vs Hayya E-Visa</text>
+  <text x="338" y="190" fill="#F9D8B9" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="600">Basics for smoother travel planning</text>
+
+  <rect x="170" y="246" width="604" height="464" rx="28" fill="url(#cardLeft)"/>
+  <rect x="826" y="246" width="604" height="464" rx="28" fill="url(#cardRight)"/>
+
+  <text x="220" y="304" fill="#1E4771" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800">Visa-Free Path</text>
+  <text x="220" y="346" fill="#2E5F8D" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700">Check eligibility, then fly with documents ready.</text>
+  <text x="220" y="398" fill="#2A5278" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700">1) Passport validity buffer</text>
+  <text x="220" y="434" fill="#2A5278" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700">2) Return/onward ticket</text>
+  <text x="220" y="470" fill="#2A5278" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700">3) Hotel proof and insurance plan</text>
+  <text x="220" y="530" fill="#684126" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700">Best for eligible short visits.</text>
+
+  <text x="876" y="304" fill="#8A421B" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800">Hayya E-Visa Path</text>
+  <text x="876" y="346" fill="#9C562A" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700">Apply online first when pre-approval is required.</text>
+  <text x="876" y="398" fill="#8E4A21" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700">1) Choose category (A1/A2/A3/A4/F1)</text>
+  <text x="876" y="434" fill="#8E4A21" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700">2) Upload passport and trip details</text>
+  <text x="876" y="470" fill="#8E4A21" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700">3) Submit, monitor, and present permit</text>
+  <text x="876" y="530" fill="#684126" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700">Best for non-eligible passports.</text>
+
+  <path d="M706 584C758 620 836 620 888 584" stroke="#E8F4FF" stroke-width="10" stroke-linecap="round"/>
+  <polygon points="884,560 928,584 884,608" fill="#E8F4FF"/>
+
+  <g opacity="0.94">
+    <rect x="276" y="580" width="144" height="92" rx="16" fill="#F2FBFF"/>
+    <rect x="444" y="580" width="144" height="92" rx="16" fill="#F2FBFF"/>
+    <rect x="1014" y="580" width="144" height="92" rx="16" fill="#FFF8EE"/>
+    <rect x="1182" y="580" width="144" height="92" rx="16" fill="#FFF8EE"/>
+    <text x="300" y="635" fill="#356389" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">Passport</text>
+    <text x="474" y="635" fill="#356389" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">Ticket</text>
+    <text x="1030" y="635" fill="#9A5A2E" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">Hayya</text>
+    <text x="1200" y="635" fill="#9A5A2E" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">Permit</text>
+  </g>
+
+  <g opacity="0.01">
+    <text x="10" y="892" fill="#FFFFFF" font-family="monospace" font-size="9">
+      qatar visa free entry hayya e visa basics cover asset keep as standalone url qatar visa free entry hayya e visa basics cover asset keep as standalone url qatar visa free entry hayya e visa basics cover asset keep as standalone url qatar visa free entry hayya e visa basics cover asset keep as standalone url qatar visa free entry hayya e visa basics cover asset keep as standalone url qatar visa free entry hayya e visa basics cover asset keep as standalone url
+    </text>
+  </g>
+</svg>

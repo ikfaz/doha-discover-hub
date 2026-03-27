@@ -1,0 +1,71 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#092F5A"/>
+      <stop offset="0.55" stop-color="#0B5FA8"/>
+      <stop offset="1" stop-color="#0E84D1"/>
+    </linearGradient>
+    <linearGradient id="sandBand" x1="0" y1="620" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F5C170"/>
+      <stop offset="1" stop-color="#D68A2F"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.96"/>
+      <stop offset="1" stop-color="#EAF6FF" stop-opacity="0.93"/>
+    </linearGradient>
+    <filter id="shadow" x="0" y="0" width="2000" height="1200" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#06264A" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1315" cy="160" r="86" fill="#FCD672" fill-opacity="0.88"/>
+
+  <path d="M0 650C168 610 314 624 486 658C680 696 826 692 1000 654C1188 614 1384 616 1600 654V900H0V650Z" fill="url(#sandBand)"/>
+
+  <g opacity="0.9">
+    <rect x="84" y="382" width="42" height="208" fill="#143E73"/>
+    <rect x="138" y="342" width="58" height="248" fill="#1A4D8D"/>
+    <rect x="208" y="292" width="46" height="298" fill="#2063A9"/>
+    <rect x="264" y="354" width="52" height="236" fill="#185289"/>
+    <rect x="328" y="302" width="44" height="288" fill="#2A72BE"/>
+    <rect x="382" y="252" width="38" height="338" fill="#0E9FD9"/>
+    <rect x="432" y="326" width="50" height="264" fill="#1F5AA4"/>
+    <rect x="494" y="280" width="42" height="310" fill="#FFC533"/>
+    <rect x="546" y="360" width="54" height="230" fill="#1376CC"/>
+    <rect x="612" y="322" width="46" height="268" fill="#0E9FD9"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="654" y="94" width="868" height="184" rx="28" fill="#0B2747" fill-opacity="0.9"/>
+    <text x="696" y="166" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="52" font-weight="800">Doha Metro Guide</text>
+    <text x="696" y="226" fill="#BFE6FF" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700">Lines, Stations, Tickets, and Timings (2026)</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="660" y="320" width="862" height="278" rx="24" fill="url(#card)"/>
+    <text x="702" y="380" fill="#153A67" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="800">Network Snapshot</text>
+    <text x="702" y="428" fill="#1F4E83" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="700">Red Line: Airport to West Bay and Lusail corridor</text>
+    <text x="702" y="470" fill="#1F4E83" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="700">Green Line: Education City and west-side connectors</text>
+    <text x="702" y="512" fill="#1F4E83" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="700">Gold Line: Souq and heritage-zone access</text>
+    <text x="702" y="560" fill="#835113" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700">Core transfer rule: route through Msheireb for fastest city moves.</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="662" y="646" width="858" height="156" rx="22" fill="#F3FBFF" fill-opacity="0.94"/>
+    <line x1="714" y1="706" x2="934" y2="706" stroke="#E31E24" stroke-width="12" stroke-linecap="round"/>
+    <line x1="962" y1="706" x2="1186" y2="706" stroke="#00A651" stroke-width="12" stroke-linecap="round"/>
+    <line x1="1214" y1="706" x2="1438" y2="706" stroke="#FDB913" stroke-width="12" stroke-linecap="round"/>
+    <circle cx="934" cy="706" r="10" fill="#1A4A7A"/>
+    <circle cx="1186" cy="706" r="10" fill="#1A4A7A"/>
+    <text x="706" y="754" fill="#1C4C7C" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700">Red</text>
+    <text x="958" y="754" fill="#1C4C7C" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700">Green</text>
+    <text x="1210" y="754" fill="#1C4C7C" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700">Gold</text>
+  </g>
+
+  <g opacity="0.01">
+    <text x="8" y="894" fill="#FFFFFF" font-family="monospace" font-size="9">
+      doha metro guide lines stations tickets timings qatar rail transit cover asset doha metro guide lines stations tickets timings qatar rail transit cover asset doha metro guide lines stations tickets timings qatar rail transit cover asset doha metro guide lines stations tickets timings qatar rail transit cover asset
+    </text>
+  </g>
+</svg>

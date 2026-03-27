@@ -1,0 +1,79 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!--
+    Editorial cover illustration for "Best Things to Do in Doha".
+    Intentional visual motifs: Corniche skyline silhouette, Museum of Islamic Art geometry,
+    Souq-inspired arch, dhow on the bay, and Inland Sea dunes.
+    This comment also keeps the source SVG over the inline threshold so the asset
+    is emitted as a standalone file for social cards and image sitemap discoverability.
+  -->
+  <defs>
+    <linearGradient id="sky" x1="800" y1="0" x2="800" y2="900" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1B4D8C"/>
+      <stop offset="0.45" stop-color="#2D7BBE"/>
+      <stop offset="1" stop-color="#F0A35D"/>
+    </linearGradient>
+    <linearGradient id="sea" x1="800" y1="470" x2="800" y2="650" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#4FC3E6" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#1576A8" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="sand" x1="800" y1="620" x2="800" y2="900" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#E8B06B"/>
+      <stop offset="1" stop-color="#C87B3A"/>
+    </linearGradient>
+    <linearGradient id="sun" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFE39A"/>
+      <stop offset="1" stop-color="#FFB84C"/>
+    </linearGradient>
+    <linearGradient id="titleBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7A1235" stop-opacity="0.88"/>
+      <stop offset="1" stop-color="#3E0A1C" stop-opacity="0.88"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#sky)"/>
+  <circle cx="1225" cy="180" r="92" fill="url(#sun)" opacity="0.88"/>
+
+  <path d="M0 530C210 485 350 565 560 530C790 490 930 585 1165 540C1330 510 1460 540 1600 525V640H0V530Z" fill="url(#sea)"/>
+  <path d="M0 650C250 608 390 728 610 670C815 615 1060 730 1305 675C1435 645 1525 658 1600 648V900H0V650Z" fill="url(#sand)"/>
+
+  <g opacity="0.92">
+    <rect x="180" y="308" width="54" height="182" fill="#1F3B5A"/>
+    <rect x="248" y="264" width="72" height="226" fill="#29476A"/>
+    <rect x="336" y="292" width="46" height="198" fill="#1F3B5A"/>
+    <rect x="394" y="238" width="65" height="252" fill="#355982"/>
+    <rect x="474" y="276" width="51" height="214" fill="#2A4A70"/>
+    <rect x="537" y="212" width="62" height="278" fill="#416991"/>
+    <rect x="612" y="256" width="44" height="234" fill="#2A4A70"/>
+    <rect x="668" y="286" width="39" height="204" fill="#203D5D"/>
+    <rect x="717" y="232" width="56" height="258" fill="#31557D"/>
+    <rect x="788" y="274" width="41" height="216" fill="#223F60"/>
+    <rect x="840" y="246" width="50" height="244" fill="#2D5078"/>
+    <rect x="902" y="294" width="38" height="196" fill="#1E3A58"/>
+    <rect x="952" y="258" width="47" height="232" fill="#27486E"/>
+  </g>
+
+  <g>
+    <path d="M1032 490L1112 332L1192 490H1032Z" fill="#EFE3D0" fill-opacity="0.96"/>
+    <rect x="1064" y="420" width="96" height="70" fill="#DBCEB9"/>
+    <rect x="1098" y="446" width="28" height="44" fill="#B79F82"/>
+  </g>
+
+  <g>
+    <path d="M1248 490C1248 439 1290 398 1342 398C1393 398 1435 439 1435 490H1403C1403 456 1376 429 1342 429C1307 429 1280 456 1280 490H1248Z" fill="#C8A77D"/>
+    <rect x="1294" y="446" width="95" height="44" fill="#B78E62"/>
+    <rect x="1330" y="458" width="22" height="32" fill="#8E6B48"/>
+  </g>
+
+  <g>
+    <path d="M252 586H428L396 604H230L252 586Z" fill="#5C3A2A"/>
+    <path d="M266 586H380L330 546L266 586Z" fill="#F0E4CE"/>
+    <rect x="327" y="515" width="6" height="32" fill="#3D2A1F"/>
+    <path d="M333 515L364 536H333V515Z" fill="#8A2142"/>
+  </g>
+
+  <path d="M1120 680C1188 626 1262 665 1330 640C1388 619 1460 640 1528 600L1600 632V900H1046C1080 844 1095 742 1120 680Z" fill="#D38C4C" fill-opacity="0.82"/>
+
+  <rect x="88" y="84" width="760" height="214" rx="26" fill="url(#titleBg)"/>
+  <text x="128" y="168" font-family="Inter, Arial, sans-serif" font-size="74" font-weight="800" fill="#FFFFFF">Best Things to Do in Doha</text>
+  <text x="128" y="226" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="500" fill="#FADCB9">Waterfront, Museums, Souq Waqif, Katara, The Pearl, and Inland Sea</text>
+</svg>
