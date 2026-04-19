@@ -467,6 +467,12 @@ const BlogPost = () => {
     navigator.clipboard.writeText(window.location.href);
   };
 
+  // Approximate word count from HTML content (strip tags, count words)
+  const wordCount = useMemo(() => {
+    const text = safeContent.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
+    return text ? text.split(' ').length : undefined;
+  }, [safeContent]);
+
   const articleJsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -488,6 +494,12 @@ const BlogPost = () => {
     "inLanguage": "en",
     "articleSection": safeCategory,
     "isAccessibleForFree": true,
+    ...(wordCount ? { "wordCount": wordCount } : {}),
+    ...(post.tags && post.tags.length > 0 ? { "keywords": post.tags.join(', ') } : {}),
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": ["h1", ".article-lead", "h2"]
+    },
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": canonicalArticleUrl
@@ -507,7 +519,7 @@ const BlogPost = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <SEOHead 
+      <SEOHead
         title={`${safeTitle} | Doha Guide`}
         description={articleDescription}
         image={articleImageAbsolute}
@@ -515,6 +527,7 @@ const BlogPost = () => {
         publishedTime={articlePublishedIsoDate}
         modifiedTime={articleModifiedIsoDate}
         jsonLd={[articleJsonLd, breadcrumbJsonLd]}
+        faqs={post.faqs}
       />
       <NavBar />
       

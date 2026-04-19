@@ -57,6 +57,10 @@ import qatarVisaFreeEntryHayyaCoverImage from '@/assets/gallery-corniche.jpg';
 import dohaMetroGuideStationsLinesTicketsCoverImage from '@/assets/gallery-skyline.jpg';
 import souqWaqifMarketGuideFirstVisitsCoverImage from '@/assets/gallery-souq.jpg';
 import museumOfIslamicArtDohaExhaustiveGuideCoverImage from '@/assets/gallery-mia.jpg';
+import nightlifeGuideNewImage from '@/assets/nightlife-guide.jpg';
+import shoppingGuideNewImage from '@/assets/shopping-guide.jpg';
+import hamadAirportInteriorNewImage from '@/assets/hamad-airport-interior.jpg';
+import galleryQatariFoodNewImage from '@/assets/gallery-qatari-food.jpg';
 
 export type BlogMetaData = Omit<ArticleData, 'content' | 'tableOfContents'>;
 
@@ -961,6 +965,96 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
       category: 'Expat-Tips',
       imageUrl: stopoverProgramImage,
       ogImage: '/assets/stopover-program.jpg',
+    },
+
+    'qdc-price-list-doha-2026': {
+      id: '70',
+      title: 'QDC Price List 2026: Alcohol Prices at Qatar Distribution Company',
+      date: 'April 19, 2026',
+      isoDate: '2026-04-19',
+      metaDescription: 'Complete QDC price list 2026 — beer, wine, spirits, and liquor prices at Qatar Distribution Company stores in Doha. Plus how to get a QDC permit.',
+      excerpt: 'Up-to-date QDC alcohol prices for 2026, including beer, wine, whisky, vodka, and more. Learn how the permit system works and what to expect at QDC stores in Doha.',
+      author: 'Experience Doha Team',
+      readTime: '10 min read',
+      category: 'Expat-Tips',
+      imageUrl: alcoholGuideImage,
+      ogImage: '/assets/alcohol-guide-doha.jpg',
+      tags: ['qdc price list 2026', 'qdc alcohol prices qatar', 'qatar distribution company', 'qdc permit doha', 'beer prices qatar', 'wine prices doha', 'alcohol prices qatar 2026', 'qdc doha', 'qdc abu hamour'],
+    },
+
+    'drinking-age-qatar-guide': {
+      id: '71',
+      title: 'Drinking Age in Qatar 2026: Legal Age, Rules & Everything You Need to Know',
+      date: 'April 19, 2026',
+      isoDate: '2026-04-19',
+      metaDescription: 'What is the legal drinking age in Qatar? 21 years old. Full guide to Qatar\'s alcohol age laws, where tourists can drink, and penalties for underage drinking in 2026.',
+      excerpt: 'The legal drinking age in Qatar is 21. Learn about Qatar alcohol age rules, where tourists can legally drink, how ID checks work, and what penalties apply for violations.',
+      author: 'Experience Doha Team',
+      readTime: '8 min read',
+      category: 'Expat-Tips',
+      imageUrl: alcoholGuideImage,
+      ogImage: '/assets/alcohol-guide-doha.jpg',
+      tags: ['drinking age in qatar', 'legal drinking age qatar', 'qatar alcohol age limit', 'minimum drinking age qatar', 'can you drink at 18 in qatar', 'qatar alcohol laws tourists', 'alcohol age doha'],
+    },
+
+    'best-restaurants-doha-2026': {
+      id: '72',
+      title: 'Best Restaurants in Doha 2026: Where to Eat in Qatar\'s Capital',
+      date: 'April 19, 2026',
+      isoDate: '2026-04-19',
+      metaDescription: 'Best restaurants in Doha 2026 — from fine dining at The Pearl and West Bay to local Qatari food at Souq Waqif. Top picks for every budget and cuisine.',
+      excerpt: 'A curated guide to the best restaurants in Doha covering fine dining, casual eats, Qatari cuisine, and international food — with recommendations for every budget.',
+      author: 'Experience Doha Team',
+      readTime: '14 min read',
+      category: 'Food',
+      imageUrl: galleryQatariFoodNewImage,
+      ogImage: '/assets/gallery-qatari-food.jpg',
+      tags: ['best restaurants doha 2026', 'where to eat doha', 'doha restaurant guide', 'fine dining doha', 'qatari food restaurants', 'restaurants pearl qatar', 'cheap eats doha', 'west bay restaurants doha', 'halal restaurants doha'],
+    },
+
+    'doha-shopping-guide-2026': {
+      id: '73',
+      title: 'Doha Shopping Guide 2026: Best Malls, Souqs & Markets in Qatar',
+      date: 'April 19, 2026',
+      isoDate: '2026-04-19',
+      metaDescription: 'Complete Doha shopping guide 2026 — best malls (Mall of Qatar, Villaggio, City Centre), traditional souqs, The Pearl luxury shopping, and tips for bargaining.',
+      excerpt: 'Your guide to shopping in Doha — from world-class malls and The Pearl\'s luxury boutiques to Souq Waqif\'s traditional markets. Includes shopping tips, opening hours, and what to buy.',
+      author: 'Experience Doha Team',
+      readTime: '12 min read',
+      category: 'Attractions',
+      imageUrl: shoppingGuideNewImage,
+      ogImage: '/assets/shopping-guide.jpg',
+      tags: ['doha shopping guide', 'best malls doha', 'mall of qatar', 'villaggio mall doha', 'souq waqif shopping', 'the pearl shopping doha', 'luxury shopping doha', 'what to buy in qatar', 'doha shopping 2026'],
+    },
+
+    'qatar-duty-free-guide-2026': {
+      id: '74',
+      title: 'Qatar Duty Free 2026: Hamad Airport Duty Free Shopping Guide',
+      date: 'April 19, 2026',
+      isoDate: '2026-04-19',
+      metaDescription: 'Complete guide to Qatar Duty Free at Hamad International Airport 2026 — alcohol prices, perfume, electronics, opening hours, and tips for transit passengers.',
+      excerpt: 'Everything you need to know about Qatar Duty Free at Hamad International Airport — what\'s available, alcohol and perfume prices, allowances, and tips for transit shoppers.',
+      author: 'Experience Doha Team',
+      readTime: '9 min read',
+      category: 'Travel-Practical',
+      imageUrl: hamadAirportInteriorNewImage,
+      ogImage: '/assets/hamad-airport-interior.jpg',
+      tags: ['qatar duty free', 'hamad airport duty free', 'qatar airport duty free liquor price list', 'qatar duty free alcohol prices', 'doha airport duty free', 'HIA duty free 2026', 'transit shopping doha airport'],
+    },
+
+    'doha-nightlife-guide-2026': {
+      id: '75',
+      title: 'Doha Nightlife Guide 2026: Best Bars, Clubs & Evening Entertainment',
+      date: 'April 19, 2026',
+      isoDate: '2026-04-19',
+      metaDescription: 'Doha nightlife guide 2026 — best hotel bars, rooftop lounges, nightclubs, and alcohol-free evening entertainment. Where to go out in Qatar\'s capital.',
+      excerpt: 'Discover Doha\'s vibrant nightlife — rooftop sky bars, DJ clubs, Arabic shisha cafes at Souq Waqif, and cultural evening experiences. The complete 2026 guide.',
+      author: 'Experience Doha Team',
+      readTime: '11 min read',
+      category: 'Attractions',
+      imageUrl: nightlifeGuideNewImage,
+      ogImage: '/assets/nightlife-guide.jpg',
+      tags: ['doha nightlife 2026', 'best bars doha', 'nightclubs doha', 'rooftop bars doha', 'doha evening entertainment', 'shisha bars doha', 'where to go out doha', 'alcohol bars doha hotels'],
     },
 
     'default': {

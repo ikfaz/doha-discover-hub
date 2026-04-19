@@ -1453,6 +1453,28 @@ export const postsChunk4: Record<string, ArticleData> = {
         <h3>Can single women rent apartments alone?</h3>
         <p>Yes. Single women can rent apartments, though some landlords prefer families. International compounds are most accommodating.</p>
       `,
+      faqs: [
+        {
+          question: 'Is Doha safe for solo female travelers?',
+          answer: 'Yes, Doha is extremely safe for solo female travelers. Qatar has one of the lowest crime rates in the world. Women can walk around freely, use public transport, and explore the city alone day or night. Street harassment is very uncommon and culturally unacceptable.',
+        },
+        {
+          question: 'What is the dress code for women in Qatar?',
+          answer: 'Women in Qatar should dress modestly in public areas — covering shoulders and knees is recommended. Swimwear is acceptable at hotel pools and beaches. There is no law requiring non-Muslim women to wear a hijab. Inside malls, restaurants, and attractions, smart casual clothing is fine. In mosques, full modest covering including a headscarf is required.',
+        },
+        {
+          question: 'Can women drive in Qatar?',
+          answer: 'Yes, women can freely drive in Qatar. There are no restrictions on women driving. Women can rent cars, hold Qatar driving licenses, and drive anywhere. Qatar has had no restrictions on women driving historically.',
+        },
+        {
+          question: 'Can unmarried women travel to Qatar?',
+          answer: 'Yes, unmarried women can travel to Qatar freely. There is no requirement to travel with a male guardian (mahram). You do not need to be married to visit or live in Qatar. Hotels accommodate single female guests without any issues.',
+        },
+        {
+          question: 'What should female tourists wear in Doha malls?',
+          answer: 'Smart casual clothing is perfectly acceptable in Doha malls — jeans, t-shirts, and dresses above the knee are commonly worn without issue. Very revealing clothing (extremely short skirts, very low-cut tops) may attract stares. Most major malls have signs requesting modest dress out of cultural respect.',
+        },
+      ],
     },
 
     'cost-of-living-doha-2025': {
@@ -1646,6 +1668,28 @@ export const postsChunk4: Record<string, ArticleData> = {
         <h3>What's the biggest expense for families in Doha?</h3>
         <p>School fees, ranging QAR 30,000-120,000 annually per child, represent the largest expense after housing.</p>
       `,
+      faqs: [
+        {
+          question: 'How much does it cost to live in Doha per month?',
+          answer: 'A single expat in Doha typically needs QAR 12,000–20,000 per month (approximately $3,300–$5,500 USD) for a comfortable lifestyle including rent, food, transport, and leisure. Families with children in international schools need QAR 35,000–60,000+ per month due to high school fees (QAR 30,000–120,000 per year per child).',
+        },
+        {
+          question: 'Is Qatar expensive to live in?',
+          answer: 'Qatar is relatively expensive compared to most countries, particularly for housing and international school fees. However, Qatar has zero personal income tax, meaning your gross salary is your take-home pay. Many expats find they save more in Qatar than in their home countries despite higher living costs.',
+        },
+        {
+          question: 'How much is rent in Doha in 2026?',
+          answer: 'Rent in Doha in 2026 ranges from QAR 4,000–7,000/month for a 1-bedroom apartment and QAR 7,000–14,000/month for a 2-bedroom. Luxury compounds and West Bay can cost QAR 10,000–20,000+ for a 2-bedroom. Prices have risen significantly since the 2022 World Cup.',
+        },
+        {
+          question: 'Do expats pay income tax in Qatar?',
+          answer: 'No. Qatar has no personal income tax. All salary earned in Qatar is completely tax-free regardless of nationality. There is also no capital gains tax, wealth tax, or inheritance tax for individuals in Qatar.',
+        },
+        {
+          question: 'Is food expensive in Doha?',
+          answer: 'Food costs in Doha are moderate to high. Eating at a local restaurant costs QAR 25–60 per meal. International restaurant dining runs QAR 80–200+ per person. Grocery shopping for home cooking at Lulu Hypermarket costs QAR 500–1,000/month for one person. Imported items (cheese, wine-free alcohol substitutes, branded goods) are more expensive.',
+        },
+      ],
     },
 };
 

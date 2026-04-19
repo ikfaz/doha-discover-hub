@@ -632,6 +632,32 @@ export const postsChunk2: Record<string, ArticleData> = {
         <h3>Is drinking at home completely legal?</h3>
         <p>Yes, for non-Muslims with legally purchased alcohol (QDC). Must be private consumption. Cannot provide to Muslims. Discrete behavior expected.</p>
       `,
+      faqs: [
+        {
+          question: 'Can tourists drink alcohol in Qatar?',
+          answer: 'Yes. Tourists can drink alcohol at licensed hotel bars, restaurants, and clubs in Qatar. You do not need a permit — only residents do. Alcohol is not available in supermarkets; it is sold only at designated hotel venues and the QDC (Qatar Distribution Company) for permit holders.',
+        },
+        {
+          question: 'What is the drinking age in Qatar?',
+          answer: 'The legal drinking age in Qatar is 21 years old. This applies to both tourists and residents. Hotels and bars will check ID for anyone who looks underage.',
+        },
+        {
+          question: 'What is the QDC and how do I get a permit?',
+          answer: 'QDC (Qatar Distribution Company) is the government-licensed retailer for take-home alcohol purchases. To get a QDC permit, you must be a non-Muslim resident of Qatar, have a QID (Qatar ID), earn above a minimum salary (typically QAR 3,000+), and apply in person at a QDC store. Monthly purchase limits apply based on your salary.',
+        },
+        {
+          question: 'Can I bring alcohol into Qatar in my luggage?',
+          answer: 'No. Personal importation of alcohol into Qatar is completely prohibited. Any alcohol in your luggage when arriving at Hamad International Airport will be confiscated. You cannot bring duty-free alcohol from other countries into Qatar.',
+        },
+        {
+          question: 'Is alcohol allowed during Ramadan in Qatar?',
+          answer: 'Yes, but with significant restrictions during Ramadan. Hotel bars remain open but usually only after Iftar (sunset) and with reduced hours. Public drinking is completely prohibited. Non-Muslims are expected to be discreet. QDC stores operate with restricted hours during Ramadan.',
+        },
+        {
+          question: 'Where can I buy alcohol in Doha?',
+          answer: 'Alcohol in Doha can be purchased at licensed hotel bars and restaurants (open to everyone), and at QDC stores (Qatar Distribution Company) for residents with a valid permit. There are no supermarket alcohol sales in Qatar.',
+        },
+      ],
     },
 
     'remote-work-cafes-doha-guide': {

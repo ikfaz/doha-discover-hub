@@ -3,6 +3,11 @@ import { useLocation } from 'react-router-dom';
 import { buildCanonicalUrl } from '@/lib/canonical-url';
 import { BASE_URL } from '@/lib/constants';
 
+export interface FaqItem {
+  question: string;
+  answer: string;
+}
+
 interface SEOHeadProps {
   title?: string;
   description?: string;
@@ -12,6 +17,7 @@ interface SEOHeadProps {
   modifiedTime?: string;
   author?: string;
   jsonLd?: Record<string, unknown> | Record<string, unknown>[];
+  faqs?: FaqItem[];
   noindex?: boolean;
 }
 
@@ -24,10 +30,26 @@ export const SEOHead = ({
   modifiedTime,
   author = 'ExperienceDoha.com',
   jsonLd,
+  faqs,
   noindex = false,
 }: SEOHeadProps) => {
   const location = useLocation();
   const canonicalUrl = buildCanonicalUrl(BASE_URL, location.pathname, location.search);
+
+  const faqJsonLd = faqs && faqs.length > 0
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: faqs.map((faq) => ({
+          '@type': 'Question',
+          name: faq.question,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: faq.answer,
+          },
+        })),
+      }
+    : null;
 
   // Ensure absolute URL for social sharing crawlers
   const absoluteImage = image.startsWith('/') ? `${BASE_URL}${image}` : image;
@@ -46,9 +68,16 @@ export const SEOHead = ({
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={absoluteImage} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
       <meta property="og:site_name" content="ExperienceDoha.com" />
+      <meta property="og:locale" content="en_US" />
       {publishedTime && <meta property="article:published_time" content={publishedTime} />}
       {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
+
+      {/* hreflang for international SEO */}
+      <link rel="alternate" hrefLang="en" href={canonicalUrl} />
+      <link rel="alternate" hrefLang="x-default" href={canonicalUrl} />
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:url" content={canonicalUrl} />
@@ -62,6 +91,11 @@ export const SEOHead = ({
           {JSON.stringify(ld)}
         </script>
       ))}
+      {faqJsonLd && (
+        <script type="application/ld+json">
+          {JSON.stringify(faqJsonLd)}
+        </script>
+      )}
     </Helmet>
   );
 };

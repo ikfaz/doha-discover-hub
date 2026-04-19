@@ -4,6 +4,11 @@ export interface TableOfContentsItem {
   level?: number;
 }
 
+export interface FaqItem {
+  question: string;
+  answer: string;
+}
+
 export interface ArticleData {
   id: string;
   title: string;
@@ -21,6 +26,7 @@ export interface ArticleData {
   excerpt?: string;
   metaDescription?: string;
   tableOfContents?: TableOfContentsItem[];
+  faqs?: FaqItem[];
 }
 
 export interface RelatedPost {

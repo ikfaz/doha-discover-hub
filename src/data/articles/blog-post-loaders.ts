@@ -61,6 +61,12 @@ const postLoaders: Record<string, () => Promise<ArticleData | null>> = {
   'hamad-airport-transfers-guide': async () => (await import('./chunks/posts-chunk-9')).postsChunk9['hamad-airport-transfers-guide'] ?? null,
   'qatar-stopover-program-guide': async () => (await import('./chunks/posts-chunk-9')).postsChunk9['qatar-stopover-program-guide'] ?? null,
   'default': async () => (await import('./chunks/posts-chunk-9')).postsChunk9['default'] ?? null,
+  'qdc-price-list-doha-2026': async () => (await import('./chunks/posts-chunk-10')).postsChunk10['qdc-price-list-doha-2026'] ?? null,
+  'drinking-age-qatar-guide': async () => (await import('./chunks/posts-chunk-10')).postsChunk10['drinking-age-qatar-guide'] ?? null,
+  'best-restaurants-doha-2026': async () => (await import('./chunks/posts-chunk-10')).postsChunk10['best-restaurants-doha-2026'] ?? null,
+  'doha-shopping-guide-2026': async () => (await import('./chunks/posts-chunk-10')).postsChunk10['doha-shopping-guide-2026'] ?? null,
+  'qatar-duty-free-guide-2026': async () => (await import('./chunks/posts-chunk-10')).postsChunk10['qatar-duty-free-guide-2026'] ?? null,
+  'doha-nightlife-guide-2026': async () => (await import('./chunks/posts-chunk-10')).postsChunk10['doha-nightlife-guide-2026'] ?? null,
 };
 
 export const loadBlogPostBySlug = async (slug: string): Promise<ArticleData | null> => {

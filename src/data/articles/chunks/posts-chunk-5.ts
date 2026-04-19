@@ -1143,7 +1143,29 @@ export const postsChunk5: Record<string, ArticleData> = {
         
         <p>If you follow local laws and respect Qatar's culture, you will have a smooth, enjoyable, and safe trip.</p>
       `,
-      tags: ['is Doha safe for tourists', 'Qatar crime rate', 'safety tips Qatar', 'solo travel Doha', 'safest cities Middle East', 'emergency numbers Qatar']
+      tags: ['is Doha safe for tourists', 'Qatar crime rate', 'safety tips Qatar', 'solo travel Doha', 'safest cities Middle East', 'emergency numbers Qatar'],
+      faqs: [
+        {
+          question: 'Is Doha safe for tourists?',
+          answer: 'Yes, Doha is one of the safest cities in the world for tourists. Qatar consistently ranks in the global top 10 for safety, with extremely low crime rates, a strong police presence, and a culture that is very respectful of visitors. Violent crime against tourists is virtually unheard of.',
+        },
+        {
+          question: 'Is Doha safe for solo female travelers?',
+          answer: 'Yes. Doha is widely considered very safe for solo female travelers. Street harassment is uncommon and socially unacceptable. Women can move around freely, use taxis and the metro, eat alone in restaurants, and explore the city independently. Modest dress (covering shoulders and knees in public) is recommended but not strictly enforced for tourists.',
+        },
+        {
+          question: 'What are the emergency numbers in Qatar?',
+          answer: 'In Qatar, dial 999 for police, 998 for ambulance and medical emergencies, and 997 for fire. The tourist police hotline is +974 4444 1744. All emergency services are available 24/7.',
+        },
+        {
+          question: 'Is it safe to walk around Doha at night?',
+          answer: 'Yes, Doha is safe to walk at night. The Corniche, Souq Waqif, The Pearl, and Katara are all popular evening destinations that are well-lit and patrolled. The streets are very safe after dark by global standards.',
+        },
+        {
+          question: 'What should I not do in Qatar as a tourist?',
+          answer: 'Tourists should avoid: public displays of affection, drinking alcohol in non-licensed venues, wearing revealing clothing in public areas (malls, markets), photographing government buildings or people without permission, and importing pork or alcohol. Respecting local customs and Islamic culture ensures a trouble-free visit.',
+        },
+      ],
     },
 
     'prostitution-laws-doha-qatar-guide': {
