@@ -503,7 +503,15 @@
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule ^(.+)/$ /$1 [R=301,L]
 
-  # React Router: Redirect all requests to index.html so the app handles routing
+  # SSG: serve prerendered index.html for clean URL routes
+  # /path/ -> check DOCUMENT_ROOT/path/index.html
+  RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI}index.html -f
+  RewriteRule ^ %{REQUEST_URI}index.html [L]
+  # /path -> check DOCUMENT_ROOT/path/index.html
+  RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI}/index.html -f
+  RewriteRule ^(.+[^/])$ %{REQUEST_URI}/index.html [L]
+
+  # React Router: serve index.html for all other routes (SPA fallback)
   RewriteRule ^index\.html$ - [L]
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
