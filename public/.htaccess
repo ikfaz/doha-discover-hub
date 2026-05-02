@@ -498,24 +498,35 @@
   RewriteRule ^videos/?$ /blog [R=301,L]
   RewriteRule ^photos/?$ /gallery [R=301,L]
 
-  # Canonical non-root trailing slash normalization on apex
-  # NOTE: Only strip trailing slash from asset/static paths (not prerendered routes)
-  # %{REQUEST_FILENAME} -d is unreliable on this host; we use URI patterns instead.
-  # All app routes are prerendered, so trailing-slash URLs are served by mod_dir below.
+  # ============================================================
+  # SSG + SPA Routing — cPanel/Namecheap-compatible
+  # ============================================================
+  # IMPORTANT: %{REQUEST_FILENAME} filesystem checks (-f, -d) are
+  # unreliable on Namecheap shared hosting due to cPanel's path
+  # mapping. We use explicit URL-pattern matching instead.
+  #
+  # All routes are prerendered as dist/{route}/index.html by the
+  # postbuild script. Each rule below routes /{path}[/] → /{path}/index.html.
 
-  # SSG: serve prerendered index.html for clean URL routes
-  # Handles both /path/ and /path (with or without trailing slash)
-  # Uses REQUEST_FILENAME which is always the real filesystem path
-  RewriteCond %{REQUEST_FILENAME}index.html -f [OR]
-  RewriteCond %{REQUEST_FILENAME}/index.html -f
-  RewriteRule ^(.+?)/?$ /$1/index.html [L]
+  # Topic hub pages: /blog/topic/{slug}[/]
+  RewriteRule ^blog/topic/([^/]+)/?$ /blog/topic/$1/index.html [L]
 
-  # React Router: serve index.html for all other routes (SPA fallback)
-  # IMPORTANT: Exclude trailing-slash URLs (%{REQUEST_URI} !/$)
-  # Trailing-slash requests go to Apache mod_dir, which serves the prerendered
-  # DirectoryIndex (index.html) for every SSG route automatically.
+  # Blog article pages: /blog/{slug}[/]
+  RewriteRule ^blog/([^/]+)/?$ /blog/$1/index.html [L]
+
+  # Blog listing: /blog[/]
+  RewriteRule ^blog/?$ /blog/index.html [L]
+
+  # Static app pages
+  RewriteRule ^about/?$ /about/index.html [L]
+  RewriteRule ^gallery/?$ /gallery/index.html [L]
+  RewriteRule ^contact/?$ /contact/index.html [L]
+  RewriteRule ^budget-planner/?$ /budget-planner/index.html [L]
+
+  # React Router SPA fallback: serve root index.html for any other non-file route
+  # (privacy-policy, terms-of-service, etc. that aren't explicitly prerendered)
+  # Note: %{REQUEST_FILENAME} !-d removed — unreliable on cPanel hosting
   RewriteRule ^index\.html$ - [L]
   RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_URI} !/$
   RewriteRule . /index.html [L]
 </IfModule>
