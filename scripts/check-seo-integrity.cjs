@@ -173,7 +173,7 @@ const checkArticleJsonLd = () => {
   }
 
   const articleHtmlFiles = collectHtmlFiles(blogDir).filter((filePath) =>
-    /\\blog\\[^\\]+\\index\.html$/i.test(filePath),
+    /[/\\\\]blog[/\\\\][^/\\\\]+[/\\\\]index\.html$/i.test(filePath),
   );
   if (articleHtmlFiles.length === 0) {
     errors.push("No prerendered article HTML files found in dist/blog.");
