@@ -1,5 +1,5 @@
+# Deployment is now handled by GitHub Actions (.github/workflows/deploy.yml)
+# This file is intentionally disabled.
 ---
 deployment:
-  tasks:
-    - export DEPLOYPATH=/home/expeyjhw/public_html/
-    - /bin/cp -R * $DEPLOYPATH
+  tasks: []
