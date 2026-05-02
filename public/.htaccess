@@ -499,9 +499,9 @@
   RewriteRule ^photos/?$ /gallery [R=301,L]
 
   # Canonical non-root trailing slash normalization on apex
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule ^(.+)/$ /$1 [R=301,L]
+  # NOTE: Only strip trailing slash from asset/static paths (not prerendered routes)
+  # %{REQUEST_FILENAME} -d is unreliable on this host; we use URI patterns instead.
+  # All app routes are prerendered, so trailing-slash URLs are served by mod_dir below.
 
   # SSG: serve prerendered index.html for clean URL routes
   # Handles both /path/ and /path (with or without trailing slash)
@@ -511,8 +511,11 @@
   RewriteRule ^(.+?)/?$ /$1/index.html [L]
 
   # React Router: serve index.html for all other routes (SPA fallback)
+  # IMPORTANT: Exclude trailing-slash URLs (%{REQUEST_URI} !/$)
+  # Trailing-slash requests go to Apache mod_dir, which serves the prerendered
+  # DirectoryIndex (index.html) for every SSG route automatically.
   RewriteRule ^index\.html$ - [L]
   RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_URI} !/$
   RewriteRule . /index.html [L]
 </IfModule>
