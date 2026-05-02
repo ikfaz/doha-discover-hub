@@ -9,6 +9,7 @@ const BLOG_META_PATH = path.join(ROOT_DIR, "src", "data", "articles", "blog-meta
 const TOURS_PATH = path.join(ROOT_DIR, "src", "data", "tours.ts");
 const TOPIC_HUBS_PATH = path.join(ROOT_DIR, "src", "data", "articles", "topic-hubs.json");
 const ARTICLE_PRIMARY_HUB_PATH = path.join(ROOT_DIR, "src", "data", "articles", "article-primary-hub.json");
+const ARTICLE_FAQS_PATH = path.join(ROOT_DIR, "src", "data", "articles", "article-faqs.json");
 
 const DEFAULT_IMAGE = "https://experiencedoha.com/og-default-1200x630.jpg";
 
@@ -371,7 +372,12 @@ const writeRoute = (html, routePath) => {
   fs.writeFileSync(path.join(targetDir, "index.html"), html, "utf8");
 };
 
-const buildPages = (blogPosts, tours, topicHubs, primaryHubBySlug) => {
+const parseFaqMap = () => {
+  if (!fs.existsSync(ARTICLE_FAQS_PATH)) return {};
+  return JSON.parse(fs.readFileSync(ARTICLE_FAQS_PATH, "utf8"));
+};
+
+const buildPages = (blogPosts, tours, topicHubs, primaryHubBySlug, faqMap) => {
   const latestPosts = blogPosts.slice(0, 5);
   const latestLinks = latestPosts
     .map((post) => `<li><a href="/blog/${post.slug}">${escapeHtml(post.title)}</a></li>`)
@@ -510,6 +516,18 @@ const buildPages = (blogPosts, tours, topicHubs, primaryHubBySlug) => {
           mainEntityOfPage: `${SITE_URL}/blog/${post.slug}`,
           description,
         },
+        ...(faqMap[post.slug] && faqMap[post.slug].length > 0 ? [{
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: faqMap[post.slug].map((faq) => ({
+            "@type": "Question",
+            name: faq.question,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: faq.answer,
+            },
+          })),
+        }] : []),
       ],
     });
   }
@@ -610,7 +628,8 @@ const main = () => {
   const tours = parseTours();
   const topicHubs = parseTopicHubs();
   const primaryHubBySlug = parsePrimaryHubMap();
-  const pages = buildPages(blogPosts, tours, topicHubs, primaryHubBySlug);
+  const faqMap = parseFaqMap();
+  const pages = buildPages(blogPosts, tours, topicHubs, primaryHubBySlug, faqMap);
 
   for (const page of pages) {
     const html = withSeo(template, page);
