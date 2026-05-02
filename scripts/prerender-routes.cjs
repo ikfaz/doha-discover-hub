@@ -469,36 +469,48 @@ const buildPages = (blogPosts, tours, topicHubs, primaryHubBySlug) => {
 
     pages.push({
       path: `/blog/${post.slug}`,
-      title: `${post.title} | Doha Guide`,
+      title: `${post.title} | Experience Doha`,
       description,
       image: post.imageUrl || undefined,
       type: "article",
       publishedTime: post.isoDate || undefined,
       modifiedTime: post.isoModifiedDate || post.isoDate || undefined,
       bodyHtml: articleBody,
-      jsonLd: {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        headline: post.title,
-        image: post.imageUrl || DEFAULT_IMAGE,
-        datePublished: post.isoDate || undefined,
-        dateModified: post.isoModifiedDate || post.isoDate || undefined,
-        inLanguage: "en",
-        articleSection: post.category || undefined,
-        isAccessibleForFree: true,
-        author: toJsonLdAuthor(post.author || "Experience Doha Team"),
-        publisher: {
-          "@type": "Organization",
-          name: "Experience Doha",
-          url: SITE_URL,
-          logo: {
-            "@type": "ImageObject",
-            url: `${SITE_URL}/logo.png`,
-          },
+      jsonLd: [
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+            { "@type": "ListItem", position: 2, name: "Blog", item: `${SITE_URL}/blog` },
+            ...(post.category ? [{ "@type": "ListItem", position: 3, name: post.category, item: `${SITE_URL}/blog/category/${slugify(post.category)}` }] : []),
+            { "@type": "ListItem", position: post.category ? 4 : 3, name: post.title, item: `${SITE_URL}/blog/${post.slug}` },
+          ],
         },
-        mainEntityOfPage: `${SITE_URL}/blog/${post.slug}`,
-        description,
-      },
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          headline: post.title,
+          image: post.imageUrl || DEFAULT_IMAGE,
+          datePublished: post.isoDate || undefined,
+          dateModified: post.isoModifiedDate || post.isoDate || undefined,
+          inLanguage: "en",
+          articleSection: post.category || undefined,
+          isAccessibleForFree: true,
+          author: toJsonLdAuthor(post.author || "Experience Doha Team"),
+          publisher: {
+            "@type": "Organization",
+            name: "Experience Doha",
+            url: SITE_URL,
+            logo: {
+              "@type": "ImageObject",
+              url: `${SITE_URL}/logo.png`,
+            },
+          },
+          mainEntityOfPage: `${SITE_URL}/blog/${post.slug}`,
+          description,
+        },
+      ],
     });
   }
 
@@ -564,13 +576,24 @@ const buildPages = (blogPosts, tours, topicHubs, primaryHubBySlug) => {
       bodyHtml: `<main><h1>${escapeHtml(tour.title)}</h1><p>${escapeHtml(tour.subtitle || "")}</p><p>${escapeHtml(
         overview,
       )}</p></main>`,
-      jsonLd: {
-        "@context": "https://schema.org",
-        "@type": "TouristTrip",
-        name: tour.title,
-        description: tour.subtitle || overview,
-        url: `${SITE_URL}/tour/${tour.slug}`,
-      },
+      jsonLd: [
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+            { "@type": "ListItem", position: 2, name: "Tours", item: `${SITE_URL}/tour` },
+            { "@type": "ListItem", position: 3, name: tour.title, item: `${SITE_URL}/tour/${tour.slug}` },
+          ],
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "TouristTrip",
+          name: tour.title,
+          description: tour.subtitle || overview,
+          url: `${SITE_URL}/tour/${tour.slug}`,
+        },
+      ],
     });
   }
 
