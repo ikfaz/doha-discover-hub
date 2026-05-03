@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
 import { useEffect, lazy, Suspense } from "react";
@@ -36,13 +36,32 @@ const PageLoader = () => (
   </div>
 );
 
-// Helper components for parameterized redirects
+// GA4 SPA page_view tracker — fires on every React Router navigation.
+// Without this, GA4 only records the first page load and misattributes
+// all subsequent views as Direct traffic instead of their real source.
+const GAPageTracker = () => {
+  const location = useLocation();
+  useEffect(() => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const gtag = (window as any).gtag;
+    if (typeof gtag === "function") {
+      gtag("event", "page_view", {
+        page_path: location.pathname + location.search,
+        page_location: window.location.href,
+        page_title: document.title,
+      });
+    }
+  }, [location]);
+  return null;
+};
+
+// Helper components for parameterised redirects
 const NavigateBlogSlug = () => {
-  const slug = window.location.pathname.split('/blogs/')[1];
+  const slug = window.location.pathname.split("/blogs/")[1];
   return <Navigate to={`/blog/${slug}`} replace />;
 };
 const NavigateTourSlug = () => {
-  const slug = window.location.pathname.split('/tours/')[1];
+  const slug = window.location.pathname.split("/tours/")[1];
   return <Navigate to={`/tour/${slug}`} replace />;
 };
 
@@ -50,13 +69,15 @@ const AppContent = () => {
   const { i18n } = useTranslation();
 
   useEffect(() => {
-    const dir = i18n.language === 'ar' ? 'rtl' : 'ltr';
+    const dir = i18n.language === "ar" ? "rtl" : "ltr";
     document.documentElement.dir = dir;
     document.documentElement.lang = i18n.language;
   }, [i18n.language]);
 
   return (
     <BrowserRouter>
+      {/* GAPageTracker must be inside BrowserRouter to access useLocation */}
+      <GAPageTracker />
       <Suspense fallback={<PageLoader />}>
         <Routes>
           <Route path="/" element={<Index />} />
