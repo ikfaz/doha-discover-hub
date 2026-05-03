@@ -280,7 +280,7 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
 
     'job-market-qatar-2025': {
       id: '56',
-      title: 'Qatar Job Market for Foreigners 2026',
+      title: 'Qatar Job Market 2026: Top Sectors, Salaries & How to Get Hired',
       date: 'June 5, 2025',
       isoDate: '2025-06-05',
       modifiedDate: 'March 2, 2026',
@@ -297,12 +297,12 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
 
     'housing-rent-doha-2025': {
       id: '55',
-      title: 'Housing & Rent Prices in Doha 2026',
+      title: 'Doha Rent Prices 2026: What Apartments Cost by Neighborhood',
       date: 'June 4, 2025',
       isoDate: '2025-06-04',
       modifiedDate: 'March 2, 2026',
       isoModifiedDate: '2026-05-03',
-      metaDescription: 'Doha rent prices 2026: apartments and villas in West Bay, The Pearl, Al Sadd. Average rents, lease tips, and tenant rights in Qatar.',
+      metaDescription: 'West Bay, The Pearl, Lusail, Al Sadd — see exactly what you\'ll pay for a Doha apartment in 2026. Updated 1BR, 2BR, and villa prices.',
       excerpt: 'A detailed look at Doha\'s rental market — average prices by neighborhood, lease negotiation tips, tenant rights, and what to expect when renting in Qatar.',
       author: 'Experience Doha Team',
       readTime: '16 min read',
@@ -314,11 +314,11 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
 
     'cost-of-living-doha-dubai-riyadh': {
       id: '54',
-      title: 'Cost of Living: Doha vs Dubai vs Riyadh',
+      title: 'Cost of Living in Doha 2026 vs Dubai & Riyadh: Full Comparison',
       date: 'June 3, 2025',
       isoDate: '2025-06-03',
       isoModifiedDate: '2026-05-03',
-      metaDescription: 'Doha vs Dubai vs Riyadh cost of living 2026: rent, groceries, transport, schools compared. Which Gulf city offers the best value for expats?',
+      metaDescription: 'How much does it cost to live in Doha in 2026? Compare rent, food, transport and schools vs Dubai and Riyadh — real numbers for Qatar expats.',
       excerpt: 'Compare the cost of living in Doha, Dubai, and Riyadh — from rent and groceries to schooling and transport — to find which Gulf city suits your budget best.',
       author: 'Experience Doha Team',
       readTime: '14 min read',
@@ -330,12 +330,12 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
 
     'alcohol-guide-doha': {
       id: '53',
-      title: 'Alcohol Rules in Qatar 2026: Full Guide',
+      title: 'Qatar Alcohol Guide 2026: QDC Price List, Permits & Rules',
       date: 'June 2, 2025',
       isoDate: '2025-06-02',
       modifiedDate: 'March 2, 2026',
       isoModifiedDate: '2026-05-03',
-      metaDescription: 'Qatar alcohol laws 2026: QDC permit guide, hotel bar rules, drinking age, prices, and penalties. Everything expats and tourists need to know.',
+      metaDescription: 'Full QDC price list 2026, alcohol permit steps, drinking age, hotel bars, and penalties. Complete Qatar alcohol guide for expats and visitors.',
       excerpt: 'Complete guide to alcohol in Qatar — QDC liquor permits, legal hotel bars, drinking age, prices, Ramadan rules, and penalties for violations.',
       author: 'Experience Doha Team',
       readTime: '18 min read',
@@ -364,7 +364,7 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
 
     'gyms-fitness-doha-guide': {
       id: '51',
-      title: 'Gyms & Fitness in Doha 2026: Full Guide',
+      title: 'Best Gyms in Doha 2026: Prices, Locations & Ladies-Only Options',
       date: 'May 31, 2025',
       isoDate: '2025-05-31',
       modifiedDate: 'March 2, 2026',
@@ -564,7 +564,7 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
 
     'women-safety-dress-code-doha-qatar': {
       id: '39',
-      title: 'Women\'s Safety & Dress Code in Doha',
+      title: 'Is Doha Safe for Women? Dress Code, Rules & Tips 2026',
       date: 'May 18, 2025',
       isoDate: '2025-05-18',
       isoModifiedDate: '2026-05-03',
