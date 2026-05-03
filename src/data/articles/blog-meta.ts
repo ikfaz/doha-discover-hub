@@ -147,11 +147,11 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
 
     'best-hotels-in-doha-by-neighborhood': {
       id: '64',
-      title: 'Best Hotels in Doha by Neighborhood (2026 Guide)',
+      title: 'Best Hotels in Doha 2026: Where to Stay by Neighborhood',
       date: 'March 4, 2026',
       isoDate: '2026-03-04',
       isoModifiedDate: '2026-05-03',
-      metaDescription: 'Find the best hotels in Doha by neighborhood with practical guidance on West Bay, Msheireb, Souq Waqif/Old Town, The Pearl-Qatar, and Lusail/Katara. Compare vibe, transit access, and realistic nightly ranges, then use a sample 3-day plan to reduce transfer time and booking mistakes. Includes live-check links for airport updates, events, and current rates.',
+      metaDescription: 'West Bay, Souq Waqif, The Pearl, Lusail — find the right Doha hotel for your trip type and budget. Neighborhood-by-neighborhood breakdown with 2026 nightly rates.',
       excerpt: 'Choose where to stay in Doha based on transport, trip style, and realistic nightly ranges. This guide compares West Bay, Msheireb, Souq Waqif, The Pearl, and Lusail/Katara with practical hotel picks and planning shortcuts.',
       author: 'Experience Doha Team',
       readTime: '15 min read',
@@ -212,12 +212,12 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
 
     'qatar-labor-law-reforms-2025': {
       id: '60',
-      title: 'Qatar Kafala & Labor Law Reforms 2026',
+      title: 'Qatar Kafala System 2026: Labor Reforms, Worker Rights & Job Mobility',
       date: 'June 9, 2025',
       isoDate: '2025-06-09',
       modifiedDate: 'March 2, 2026',
       isoModifiedDate: '2026-05-03',
-      metaDescription: 'Qatar Kafala reforms 2026: new labor mobility rules, contract switching, exit permits abolished. Complete guide for expat workers in Doha.',
+      metaDescription: 'Qatar abolished exit permits, expanded job mobility, and set minimum wages. Full breakdown of Kafala reforms, worker rights, and what changed for expats in 2026.',
       excerpt: 'Explore Qatar\'s landmark labor law reforms including the abolition of the Kafala sponsorship system, new contract-switching rules, and enhanced worker protections.',
       author: 'Experience Doha Team',
       readTime: '16 min read',
@@ -415,12 +415,12 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
 
     'doha-metro-2025-guide': {
       id: '48',
-      title: 'Doha Metro Guide 2026: Map & Fares',
+      title: 'Doha Metro 2026: Lines, Fares, Stations & Travel Card Guide',
       date: 'May 28, 2025',
       isoDate: '2025-05-28',
       modifiedDate: 'March 2, 2026',
       isoModifiedDate: '2026-05-03',
-      metaDescription: 'Doha Metro guide 2026: new Lusail tram, Gold Line expansion, fares, stations, and travel card options. Complete network map and tips.',
+      metaDescription: 'How to use the Doha Metro in 2026 — Red, Green & Gold Line routes, station maps, fares, travel card top-up, and Lusail tram connections. Full network guide.',
       excerpt: 'Navigate Doha by metro — complete guide to routes, new line expansions, fare zones, travel cards, and tips for using Qatar\'s modern rail network.',
       author: 'Experience Doha Team',
       readTime: '16 min read',
@@ -514,11 +514,11 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
 
     'renting-doha-west-bay-al-waab-2025': {
       id: '42',
-      title: 'West Bay vs Al Waab: Renting in Doha',
+      title: 'West Bay vs Al Waab 2026: Doha Neighborhood Rent & Lifestyle Guide',
       date: 'May 22, 2025',
       isoDate: '2025-05-22',
       isoModifiedDate: '2026-05-03',
-      metaDescription: 'West Bay vs Al Waab rent comparison 2025: apartment prices, lifestyle, schools, commute times. Which Doha neighborhood is right for you?',
+      metaDescription: 'West Bay vs Al Waab 2026 — compare rent prices, commute times, schools, and lifestyle to find the right Doha neighborhood for your family or budget.',
       excerpt: 'Choosing between West Bay and Al Waab? Compare rent prices, lifestyle, proximity to schools, commute times, and amenities in Doha\'s top residential areas.',
       author: 'Experience Doha Team',
       readTime: '15 min read',
@@ -580,12 +580,12 @@ export const blogMetaPosts: Record<string, BlogMetaData> = {
 
     'cost-of-living-doha-2025': {
       id: '38',
-      title: 'Cost of Living in Doha 2026: Budget Guide',
+      title: 'Cost of Living in Doha 2026: Real Monthly Budget for Expats',
       date: 'May 17, 2025',
       isoDate: '2025-05-17',
       modifiedDate: 'March 2, 2026',
       isoModifiedDate: '2026-05-03',
-      metaDescription: 'Cost of living in Doha 2026: rent, groceries, transport, utilities, and hidden costs. Realistic monthly budget breakdown for expats in Qatar.',
+      metaDescription: 'Real 2026 cost of living in Doha: rent, groceries, school fees, transport, and dining out — broken down by budget tier. What expats actually spend in Qatar.',
       excerpt: 'A realistic breakdown of living costs in Doha — rent, food, transport, utilities, schooling, and hidden expenses that every expat should budget for in 2026.',
       author: 'Experience Doha Team',
       readTime: '12 min read',
