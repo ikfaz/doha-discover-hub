@@ -1654,7 +1654,78 @@ export const postsChunk4: Record<string, ArticleData> = {
         
         <p><strong>Key takeaway:</strong> Request detailed cost-of-living data during job negotiations and ensure housing allowances reflect current market rates, not outdated figures.</p>
         
-        <h2 id="faq">FAQ: Cost of Living Doha</h2>
+        
+        <h2 id="school-fees">International School Fees in Doha 2026</h2>
+        <p>School fees are one of the biggest costs for expat families and a key factor in whether Doha works financially. International schools charge <strong>QAR 18,000 to QAR 90,000 per child per year</strong>, depending on the curriculum and tier.</p>
+        <div class="overflow-x-auto mb-6">
+          <table class="w-full border-collapse text-sm">
+            <thead class="bg-gray-100">
+              <tr>
+                <th class="border p-3 text-left">School Tier</th>
+                <th class="border p-3 text-left">Curriculum</th>
+                <th class="border p-3 text-left">Annual Fees (2026)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="border p-3">Budget</td><td class="border p-3">Indian CBSE / Pakistani</td><td class="border p-3">QAR 18,000–30,000</td></tr>
+              <tr><td class="border p-3">Mid-range</td><td class="border p-3">British / American</td><td class="border p-3">QAR 45,000–65,000</td></tr>
+              <tr><td class="border p-3">Premium</td><td class="border p-3">IB / Top British</td><td class="border p-3">QAR 70,000–90,000</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Many employers in oil &amp; gas, government, and finance include a <strong>school fee allowance</strong> in expat packages. Always negotiate this before signing a contract — it can save QAR 50,000+ per year per child.</p>
+
+        <h2 id="healthcare">Healthcare Costs in Doha 2026</h2>
+        <p>Qatar requires all employers to provide health insurance for workers. Most expats on company plans pay little out of pocket for standard care, but private specialist visits, dental, and optical add up.</p>
+        <ul>
+          <li><strong>GP visit (private clinic):</strong> QAR 200–400</li>
+          <li><strong>Specialist consultation:</strong> QAR 350–600</li>
+          <li><strong>Dental cleaning:</strong> QAR 200–350</li>
+          <li><strong>Health insurance (self-paying, per adult/month):</strong> QAR 300–800</li>
+        </ul>
+        <p>Hamad Medical Corporation and Sidra Medicine provide public hospital care to residents with a Hamad Health Card, which significantly reduces costs for non-emergency treatment.</p>
+
+        <h2 id="transport-costs">Car vs Metro: Getting Around Doha in 2026</h2>
+        <p>Most expats own a car — Doha's layout makes it near-essential outside the metro corridor. Fuel is among the cheapest globally at <strong>QAR 1.85–2.10 per litre</strong>. Here's what to budget monthly:</p>
+        <div class="overflow-x-auto mb-6">
+          <table class="w-full border-collapse text-sm">
+            <thead class="bg-gray-100">
+              <tr>
+                <th class="border p-3 text-left">Transport Option</th>
+                <th class="border p-3 text-left">Monthly Cost (QAR)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="border p-3">Car ownership (fuel + insurance + registration)</td><td class="border p-3">1,500–2,500</td></tr>
+              <tr><td class="border p-3">Car loan repayment (mid-range vehicle)</td><td class="border p-3">1,500–2,000</td></tr>
+              <tr><td class="border p-3">Uber/Karwa (regular use)</td><td class="border p-3">1,500–3,000</td></tr>
+              <tr><td class="border p-3">Metro unlimited monthly pass</td><td class="border p-3">100</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 id="salary-needed">What Salary Do You Need to Live in Doha in 2026?</h2>
+        <p>The right number depends on your lifestyle and family size. Qatar has <strong>zero income tax</strong>, so every riyal goes further than the equivalent in Europe, Australia, or North America.</p>
+        <div class="overflow-x-auto mb-6">
+          <table class="w-full border-collapse text-sm">
+            <thead class="bg-gray-100">
+              <tr>
+                <th class="border p-3 text-left">Lifestyle</th>
+                <th class="border p-3 text-left">Monthly Budget (QAR)</th>
+                <th class="border p-3 text-left">Approx. USD</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="border p-3">Single, budget</td><td class="border p-3">8,000–10,000</td><td class="border p-3">~$2,200–2,750</td></tr>
+              <tr><td class="border p-3">Single, comfortable</td><td class="border p-3">12,000–16,000</td><td class="border p-3">~$3,300–4,400</td></tr>
+              <tr><td class="border p-3">Couple, no children</td><td class="border p-3">18,000–25,000</td><td class="border p-3">~$4,950–6,850</td></tr>
+              <tr><td class="border p-3">Family (2 children, school fees included)</td><td class="border p-3">35,000–55,000</td><td class="border p-3">~$9,600–15,100</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>A QAR 20,000 tax-free salary in Doha is equivalent to roughly $100,000–$130,000 gross in a high-tax country — context that matters when evaluating whether a Qatar package is competitive.</p>
+
+<h2 id="faq">FAQ: Cost of Living Doha</h2>
         
         <h3>How much salary do I need to live comfortably in Doha?</h3>
         <p>Singles need minimum QAR 15,000-20,000/month; families require QAR 35,000-50,000/month for comfortable lifestyles including school fees.</p>
