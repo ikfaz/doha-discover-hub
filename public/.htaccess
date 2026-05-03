@@ -532,5 +532,6 @@
   # Note: %{REQUEST_FILENAME} !-d removed — unreliable on cPanel hosting
   RewriteRule ^index\.html$ - [L]
   RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_URI} !\.html$
   RewriteRule . /index.html [L]
 </IfModule>
