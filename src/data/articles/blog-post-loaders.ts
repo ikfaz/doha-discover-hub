@@ -77,6 +77,11 @@ const postLoaders: Record<string, () => Promise<ArticleData | null>> = {
   'doha-shopping-guide-2026': async () => (await import('./chunks/posts-chunk-10')).postsChunk10['doha-shopping-guide-2026'] ?? null,
   'qatar-duty-free-guide-2026': async () => (await import('./chunks/posts-chunk-10')).postsChunk10['qatar-duty-free-guide-2026'] ?? null,
   'doha-nightlife-guide-2026': async () => (await import('./chunks/posts-chunk-10')).postsChunk10['doha-nightlife-guide-2026'] ?? null,
+  'lusail-city-guide-2026': async () => (await import('./chunks/posts-chunk-11')).postsChunk11['lusail-city-guide-2026'] ?? null,
+  'doha-day-trips-2026': async () => (await import('./chunks/posts-chunk-11')).postsChunk11['doha-day-trips-2026'] ?? null,
+  'healthcare-hospitals-qatar-2026': async () => (await import('./chunks/posts-chunk-11')).postsChunk11['healthcare-hospitals-qatar-2026'] ?? null,
+  'doha-spa-wellness-guide-2026': async () => (await import('./chunks/posts-chunk-11')).postsChunk11['doha-spa-wellness-guide-2026'] ?? null,
+  'doha-photography-spots-2026': async () => (await import('./chunks/posts-chunk-11')).postsChunk11['doha-photography-spots-2026'] ?? null,
 };
 
 export const loadBlogPostBySlug = async (slug: string): Promise<ArticleData | null> => {
